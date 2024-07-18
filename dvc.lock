@@ -1,0 +1,171 @@
+schema: '2.0'
+stages:
+  telecharger@2012-presidentielle:
+    cmd: curl https://www.data.gouv.fr/fr/datasets/r/206b1668-2b31-46da-b957-9857f94fe85c
+      -o build/sources/2012-presidentielle.csv --progress-bar --location
+    outs:
+    - path: build/sources/2012-presidentielle.csv
+      hash: md5
+      md5: c12faa2e574d4844ed8686d17519a9e4
+      size: 58668586
+  telecharger@2017-presidentielle-1:
+    cmd: curl https://www.data.gouv.fr/fr/datasets/r/8fdb0926-ea9d-4fb4-a136-7767cd97e30b
+      -o build/sources/2017-presidentielle-1.csv --progress-bar --location
+    outs:
+    - path: build/sources/2017-presidentielle-1.csv
+      hash: md5
+      md5: 1fc04aa0a22b83172876987f6146b0ea
+      size: 34748748
+  telecharger@2017-presidentielle-2:
+    cmd: curl https://www.data.gouv.fr/fr/datasets/r/2e3e44de-e584-4aa2-8148-670daf5617e1
+      -o build/sources/2017-presidentielle-2.csv --progress-bar --location
+    outs:
+    - path: build/sources/2017-presidentielle-2.csv
+      hash: md5
+      md5: 7f2883a04e3243222ac800d1d73f01eb
+      size: 13463989
+  telecharger@2022-presidentielle-1:
+    cmd: curl https://www.data.gouv.fr/fr/datasets/r/79b5cac4-4957-486b-bbda-322d80868224
+      -o build/sources/2022-presidentielle-1.csv --progress-bar --location
+    outs:
+    - path: build/sources/2022-presidentielle-1.csv
+      hash: md5
+      md5: 863143ce55ac2e71541972bd68ff9365
+      size: 36463842
+  telecharger@2022-presidentielle-2:
+    cmd: curl https://www.data.gouv.fr/fr/datasets/r/4dfd05a9-094e-4043-8a19-43b6b6bbe086
+      -o build/sources/2022-presidentielle-2.csv --progress-bar --location
+    outs:
+    - path: build/sources/2022-presidentielle-2.csv
+      hash: md5
+      md5: c5e0a26fe52ed824208649d15628b528
+      size: 13530843
+  telecharger@2017-legislatives-1:
+    cmd: curl https://www.data.gouv.fr/fr/datasets/r/80cb1309-9147-4bae-b6e2-79877d549b50
+      -o build/sources/2017-legislatives-1.csv --progress-bar --location
+    outs:
+    - path: build/sources/2017-legislatives-1.csv
+      hash: md5
+      md5: 3eaa57f0825abafeeb38dcf81d3f80aa
+      size: 42454602
+  telecharger@2017-legislatives-2:
+    cmd: curl https://www.data.gouv.fr/fr/datasets/r/8eb61f3e-dfdf-496e-85af-2859cd7383c3
+      -o build/sources/2017-legislatives-2.csv --progress-bar --location
+    outs:
+    - path: build/sources/2017-legislatives-2.csv
+      hash: md5
+      md5: f7488f6de8dc80bc650c19c36aab6b4d
+      size: 14067818
+  telecharger@2022-legislatives-1:
+    cmd: curl https://www.data.gouv.fr/fr/datasets/r/a1f73b85-8194-44f4-a2b7-c343edb47d32
+      -o build/sources/2022-legislatives-1.csv --progress-bar --location
+    outs:
+    - path: build/sources/2022-legislatives-1.csv
+      hash: md5
+      md5: ab8e9e02c1253a44a9ec7547851842ad
+      size: 36290423
+  telecharger@2022-legislatives-2:
+    cmd: curl https://www.data.gouv.fr/fr/datasets/r/cada247a-6528-44e7-8308-30c0c335a4b2
+      -o build/sources/2022-legislatives-2.csv --progress-bar --location
+    outs:
+    - path: build/sources/2022-legislatives-2.csv
+      hash: md5
+      md5: 02e9bcfb3e506d7d4ada0a141315c61c
+      size: 14215650
+  telecharger@2024-legislatives-1:
+    cmd: curl https://www.data.gouv.fr/fr/datasets/r/6813fb28-7ec0-42ff-a528-2bc3d82d7dcd
+      -o build/sources/2024-legislatives-1.csv --progress-bar --location
+    outs:
+    - path: build/sources/2024-legislatives-1.csv
+      hash: md5
+      md5: 92547431feb455ad1065815e72c40d8e
+      size: 37476376
+  telecharger@2024-legislatives-2:
+    cmd: curl https://www.data.gouv.fr/fr/datasets/r/ca974f04-cfd9-4da8-8554-4a868a09c6c2
+      -o build/sources/2024-legislatives-2.csv --progress-bar --location
+    outs:
+    - path: build/sources/2024-legislatives-2.csv
+      hash: md5
+      md5: 063dfce8aa81153f6b535b7ecdb49d6f
+      size: 16652378
+  telecharger@2014-europeenne:
+    cmd: curl https://www.data.gouv.fr/fr/datasets/r/c5af18ce-b673-4019-a9c3-07ee6209668c
+      -o build/sources/2014-europeenne.csv --progress-bar --location
+    outs:
+    - path: build/sources/2014-europeenne.csv
+      hash: md5
+      md5: 21aecbfcb6e0caf8eb09a3b573170623
+      size: 108205025
+  telecharger@2019-europeenne:
+    cmd: curl https://www.data.gouv.fr/fr/datasets/r/77c4450b-7fa7-425c-84da-4f7bf4b97820
+      -o build/sources/2019-europeenne.csv --progress-bar --location
+    outs:
+    - path: build/sources/2019-europeenne.csv
+      hash: md5
+      md5: 41122a5230f18ab9736f5a07828b1221
+      size: 217110330
+  telecharger@2024-europeenne:
+    cmd: curl https://www.data.gouv.fr/fr/datasets/r/cc1883d9-1265-4365-b754-fb6aef22d82e
+      -o build/sources/2024-europeenne.csv --progress-bar --location
+    outs:
+    - path: build/sources/2024-europeenne.csv
+      hash: md5
+      md5: b3a9085acb27df6669ac04d5aca2e5da
+      size: 254095448
+  telecharger@2020-municipales-1:
+    cmd: curl https://www.data.gouv.fr/fr/datasets/r/248f6f21-68ad-45f3-82f5-53fffabce5f3
+      -o build/sources/2020-municipales-1.csv --progress-bar --location
+    outs:
+    - path: build/sources/2020-municipales-1.csv
+      hash: md5
+      md5: d5ed37c4abd7a4952826ead2ca11a408
+      size: 66948003
+  telecharger@2020-municipales-2:
+    cmd: curl https://www.data.gouv.fr/fr/datasets/r/7e641d2e-e017-43d4-9434-49d5acd44b4b
+      -o build/sources/2020-municipales-2.csv --progress-bar --location
+    outs:
+    - path: build/sources/2020-municipales-2.csv
+      hash: md5
+      md5: fa88d768c4ce3098a7f883dd9e7b03e7
+      size: 6773003
+  telecharger@2021-regionales-1:
+    cmd: curl https://www.data.gouv.fr/fr/datasets/r/52c3e6f1-2faa-4295-9f76-5b0e9cb9f7b0
+      -o build/sources/2021-regionales-1.csv --progress-bar --location
+    outs:
+    - path: build/sources/2021-regionales-1.csv
+      hash: md5
+      md5: b0e0383c1c736cc49867f05c662ed50f
+      size: 65487496
+  telecharger@2021-regionales-2:
+    cmd: curl https://www.data.gouv.fr/fr/datasets/r/75221ab0-2066-4a11-bc42-b0f76d201dfe
+      -o build/sources/2021-regionales-2.csv --progress-bar --location
+    outs:
+    - path: build/sources/2021-regionales-2.csv
+      hash: md5
+      md5: 436df1e7dcbe2ac545c537195e0a7299
+      size: 33614226
+  telecharger@2021-departementales-1:
+    cmd: curl https://www.data.gouv.fr/fr/datasets/r/57370a9b-7fa1-465c-a051-c984fc21321f
+      -o build/sources/2021-departementales-1.csv --progress-bar --location
+    outs:
+    - path: build/sources/2021-departementales-1.csv
+      hash: md5
+      md5: 779c9e5cefb35ef7b91379a6a761a1a0
+      size: 24572024
+  telecharger@2021-departementales-2:
+    cmd: curl https://www.data.gouv.fr/fr/datasets/r/b34b36d9-e416-4144-8384-d101b140afaf
+      -o build/sources/2021-departementales-2.csv --progress-bar --location
+    outs:
+    - path: build/sources/2021-departementales-2.csv
+      hash: md5
+      md5: bccfd795640a1f2684e1c1a921d065d0
+      size: 15501944
+  telecharger@2005-referendum:
+    cmd: curl 
+      https://www.data.gouv.fr/s/resources/referendum-de-2005-resultats-par-bureaux-de-vote/20150925-112918/RF05_BVot.ttx
+      -o build/sources/2005-referendum.csv --progress-bar --location
+    outs:
+    - path: build/sources/2005-referendum.csv
+      hash: md5
+      md5: 8eec510e57f5f732fd2cce73df7b73ef
+      size: 146

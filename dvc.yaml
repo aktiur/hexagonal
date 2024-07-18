@@ -1,0 +1,10 @@
+params:
+  - params.yaml
+
+stages:
+  telecharger:
+    foreach: ${scrutins}
+    do:
+      cmd: curl ${item.url} -o build/sources/${key}.csv --progress-bar --location
+      outs:
+        - build/sources/${key}.csv
