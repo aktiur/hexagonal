@@ -1,0 +1,12 @@
+md5: 5919b994982c24d775487f7ccb58af53
+frozen: true
+deps:
+- checksum: '"668ec188-23bd818"'
+  size: 37476376
+  hash: md5
+  path: https://www.data.gouv.fr/fr/datasets/r/6813fb28-7ec0-42ff-a528-2bc3d82d7dcd
+outs:
+- md5: 92547431feb455ad1065815e72c40d8e
+  size: 37476376
+  hash: md5
+  path: 2024-legislatives-1.csv

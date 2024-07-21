@@ -1,0 +1,12 @@
+md5: a16af6ec3c0ecb592ae07a88259621a6
+frozen: true
+deps:
+- checksum: '"60ed49b9-3e74288"'
+  size: 65487496
+  hash: md5
+  path: https://www.data.gouv.fr/fr/datasets/r/52c3e6f1-2faa-4295-9f76-5b0e9cb9f7b0
+outs:
+- md5: b0e0383c1c736cc49867f05c662ed50f
+  size: 65487496
+  hash: md5
+  path: 2021-regionales-1.csv

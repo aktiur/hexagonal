@@ -1,4 +1,4 @@
 [core]
     remote = data
 ['remote "data"']
-    url = s3://hexagonal-data/
+    url = s3://hexagonal-data/cache/

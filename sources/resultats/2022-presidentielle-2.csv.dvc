@@ -1,0 +1,12 @@
+md5: 0de3b64d176642b62b38ffd7c531f5ac
+frozen: true
+deps:
+- checksum: '"626a870e-ce76db"'
+  size: 13530843
+  hash: md5
+  path: https://www.data.gouv.fr/fr/datasets/r/4dfd05a9-094e-4043-8a19-43b6b6bbe086
+outs:
+- md5: c5e0a26fe52ed824208649d15628b528
+  size: 13530843
+  hash: md5
+  path: 2022-presidentielle-2.csv

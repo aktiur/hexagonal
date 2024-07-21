@@ -1,0 +1,12 @@
+md5: e8aeb15787b3e585c2f8cc9615de9712
+frozen: true
+deps:
+- checksum: '"5efa23d7-67590b"'
+  size: 6773003
+  hash: md5
+  path: https://www.data.gouv.fr/fr/datasets/r/7e641d2e-e017-43d4-9434-49d5acd44b4b
+outs:
+- md5: fa88d768c4ce3098a7f883dd9e7b03e7
+  size: 6773003
+  hash: md5
+  path: 2020-municipales-2.csv

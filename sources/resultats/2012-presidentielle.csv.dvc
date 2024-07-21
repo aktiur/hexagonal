@@ -1,0 +1,12 @@
+md5: df92bd177a7f527e9e97423636ae41d2
+frozen: true
+deps:
+- checksum: '"5605058e-37f362a"'
+  size: 58668586
+  hash: md5
+  path: https://www.data.gouv.fr/fr/datasets/r/206b1668-2b31-46da-b957-9857f94fe85c
+outs:
+- md5: c12faa2e574d4844ed8686d17519a9e4
+  size: 58668586
+  hash: md5
+  path: 2012-presidentielle.csv

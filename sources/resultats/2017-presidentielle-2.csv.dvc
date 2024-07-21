@@ -1,0 +1,12 @@
+md5: b838e81a4ff5ccb41a5eab1c14139042
+frozen: true
+deps:
+- checksum: '"5914144e-cd71b5"'
+  size: 13463989
+  hash: md5
+  path: https://www.data.gouv.fr/fr/datasets/r/2e3e44de-e584-4aa2-8148-670daf5617e1
+outs:
+- md5: 7f2883a04e3243222ac800d1d73f01eb
+  size: 13463989
+  hash: md5
+  path: 2017-presidentielle-2.csv

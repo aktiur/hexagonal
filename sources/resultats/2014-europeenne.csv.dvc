@@ -1,0 +1,12 @@
+md5: 595917696b1fe9d2f49ce97e65904f6a
+frozen: true
+deps:
+- checksum: '"56051220-67313e1"'
+  size: 108205025
+  hash: md5
+  path: https://www.data.gouv.fr/fr/datasets/r/c5af18ce-b673-4019-a9c3-07ee6209668c
+outs:
+- md5: 21aecbfcb6e0caf8eb09a3b573170623
+  size: 108205025
+  hash: md5
+  path: 2014-europeenne.csv

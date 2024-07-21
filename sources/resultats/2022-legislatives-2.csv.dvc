@@ -1,0 +1,12 @@
+md5: 595e469e5cb752f6a39ae224453adc28
+frozen: true
+deps:
+- checksum: '"62b021f4-d8e9e2"'
+  size: 14215650
+  hash: md5
+  path: https://www.data.gouv.fr/fr/datasets/r/cada247a-6528-44e7-8308-30c0c335a4b2
+outs:
+- md5: 02e9bcfb3e506d7d4ada0a141315c61c
+  size: 14215650
+  hash: md5
+  path: 2022-legislatives-2.csv

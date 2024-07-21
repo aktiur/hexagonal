@@ -1,0 +1,13 @@
+md5: 208d9dd149cf985a6f03eddd9b9f516b
+frozen: true
+deps:
+- checksum: '"560513ef-8309e1"'
+  size: 8587745
+  hash: md5
+  path: 
+    https://www.data.gouv.fr/s/resources/referendum-de-2005-resultats-par-bureaux-de-vote/20150925-112918/RF05_BVot.txt
+outs:
+- md5: 960334973bf05499070429ba154a833a
+  size: 8587745
+  hash: md5
+  path: 2005-referendum.csv

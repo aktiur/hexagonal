@@ -1,0 +1,12 @@
+md5: 3c7a499a81c7e2c73eb4679dbf88294d
+frozen: true
+deps:
+- checksum: '"60ed4ae3-ec8a78"'
+  size: 15501944
+  hash: md5
+  path: https://www.data.gouv.fr/fr/datasets/r/b34b36d9-e416-4144-8384-d101b140afaf
+outs:
+- md5: bccfd795640a1f2684e1c1a921d065d0
+  size: 15501944
+  hash: md5
+  path: 2021-departementales-2.csv
