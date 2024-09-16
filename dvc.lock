@@ -169,3 +169,46 @@ stages:
       hash: md5
       md5: 8eec510e57f5f732fd2cce73df7b73ef
       size: 146
+  nettoyer_bdv@2024-europeenne:
+    cmd: poetry run format_2017 sources/ministere_interieur/resultats/2024-europeenne-bdv.csv
+      build/resultats/2024-europeenne-bdv.csv utf8
+    deps:
+    - path: sources/ministere_interieur/resultats/2024-europeenne-bdv.csv
+      hash: md5
+      md5: b3a9085acb27df6669ac04d5aca2e5da
+      size: 254095448
+    outs:
+    - path: build/resultats/2024-europeenne-bdv.csv
+      hash: md5
+      md5: d57bde045463a969398010c1126d689a
+      size: 267490086
+  nettoyer_bdv@2017-presidentielle-1:
+    cmd: poetry run format_2017 sources/ministere_interieur/resultats/2017-presidentielle-1-bdv.csv
+      build/resultats/2017-presidentielle-1-bdv.csv latin1
+    deps:
+    - path: sources/ministere_interieur/resultats/2017-presidentielle-1-bdv.csv
+      hash: md5
+      md5: 1fc04aa0a22b83172876987f6146b0ea
+      size: 34748748
+    outs:
+    - path: build/resultats/2017-presidentielle-1-bdv.csv
+      hash: md5
+      md5: efaf3c9066905f2cf1d2f57de7a59609
+      size: 42695487
+  nettoyer_circos@2024-legislatives-1:
+    cmd: poetry run format_2017 sources/ministere_interieur/resultats/2024-legislatives-1-circos.csv
+      build/resultats/2024-legislatives-1-circos.csv utf8
+    deps:
+    - path: sources/ministere_interieur/resultats/2024-legislatives-1-circos.csv
+      hash: md5
+      md5: 1d424007d37d7cf2d24d799403d6af00
+      size: 337917
+    - path: src/backend/resultats/format_2017.py
+      hash: md5
+      md5: cae19fb018018f97b24962d3d905ac0c
+      size: 7034
+    outs:
+    - path: build/resultats/2024-legislatives-1-circos.csv
+      hash: md5
+      md5: af6a1560478f7c8527d86a9847440a5d
+      size: 236128

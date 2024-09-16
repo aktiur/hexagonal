@@ -1,2 +1,34 @@
 params:
   - params.yaml
+
+vars:
+  - resultats: "sources/ministere_interieur/resultats"
+
+stages:
+  nettoyer_bdv:
+    foreach: ${scrutins}
+    do:
+      cmd: >-
+        poetry run format_${item.format}
+        ${resultats}/${key}-bdv.csv
+        build/resultats/${key}-bdv.csv
+        ${item.encoding}
+      deps:
+        - ${resultats}/${key}-bdv.csv
+        - src/backend/resultats/format_${item.format}.py
+      outs:
+        - build/resultats/${key}-bdv.csv
+
+  nettoyer_circos:
+    foreach: ${scrutins}
+    do:
+      cmd: >-
+        poetry run format_${item.format}
+        ${resultats}/${key}-circos.csv
+        build/resultats/${key}-circos.csv
+        ${item.encoding}
+      deps:
+        - ${resultats}/${key}-circos.csv
+        - src/backend/resultats/format_${item.format}.py
+      outs:
+        - build/resultats/${key}-circos.csv

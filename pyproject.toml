@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "hexagonal"
+version = "0.1.0"
+description = ""
+authors = ["Salomé Cheysson <salome@cheysson.fr>"]
+readme = "README.md"
+packages = [
+  { include = "backend", from = "src" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pandas = "^2.2.2"
+
+[tool.poetry.group.dev.dependencies]
+ipython = "^8.26.0"
+black = "^24.8.0"
+dvc = "^3.55.2"
+
+[tool.poetry.scripts]
+format_2017 = "backend.resultats.format_2017:run"
+format_2014 = "backend.resultats.format_2014:run"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
