@@ -212,3 +212,37 @@ stages:
       hash: md5
       md5: af6a1560478f7c8527d86a9847440a5d
       size: 236128
+  nettoyer_circos@2024-europeenne:
+    cmd: poetry run format_2017 sources/ministere_interieur/resultats/2024-europeenne-circos.csv
+      build/resultats/2024-europeenne-circos.csv utf8
+    deps:
+    - path: sources/ministere_interieur/resultats/2024-europeenne-circos.csv
+      hash: md5
+      md5: 8a9a6ca76b17b2ce3600c400ce800187
+      size: 2118726
+    - path: src/backend/resultats/format_2017.py
+      hash: md5
+      md5: cae19fb018018f97b24962d3d905ac0c
+      size: 7034
+    outs:
+    - path: build/resultats/2024-europeenne-circos.csv
+      hash: md5
+      md5: b72736ffb12a3aee04ae584ef0674fb0
+      size: 2066284
+  nettoyer_circos@2024-legislatives-2:
+    cmd: poetry run format_2017 sources/ministere_interieur/resultats/2024-legislatives-2-circos.csv
+      build/resultats/2024-legislatives-2-circos.csv utf8
+    deps:
+    - path: sources/ministere_interieur/resultats/2024-legislatives-2-circos.csv
+      hash: md5
+      md5: 5232b0951ce8ca92573ea3b35d5d62a0
+      size: 147285
+    - path: src/backend/resultats/format_2017.py
+      hash: md5
+      md5: cae19fb018018f97b24962d3d905ac0c
+      size: 7034
+    outs:
+    - path: build/resultats/2024-legislatives-2-circos.csv
+      hash: md5
+      md5: 6c3ed955f0dd11f646834b86cf2ee8f8
+      size: 65496
