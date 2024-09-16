@@ -1,0 +1,12 @@
+md5: fcc07cb45ece4002579bde2f446e4195
+frozen: true
+deps:
+- checksum: '"668ebfd0-23f55"'
+  size: 147285
+  hash: md5
+  path: https://www.data.gouv.fr/fr/datasets/r/41ed46cd-77c2-4ecc-b8eb-374aa953ca39
+outs:
+- md5: 5232b0951ce8ca92573ea3b35d5d62a0
+  size: 147285
+  hash: md5
+  path: 2024-legislatives-2-circos.csv
