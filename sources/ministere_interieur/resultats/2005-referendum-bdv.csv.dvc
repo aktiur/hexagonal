@@ -1,4 +1,3 @@
-md5: 208d9dd149cf985a6f03eddd9b9f516b
 frozen: true
 deps:
 - checksum: '"560513ef-8309e1"'
@@ -10,4 +9,5 @@ outs:
 - md5: 960334973bf05499070429ba154a833a
   size: 8587745
   hash: md5
-  path: 2005-referendum.csv
+  path: 2005-referendum-bdv.csv
+md5: 505060fdf0c4e42558d1d34348fee20f

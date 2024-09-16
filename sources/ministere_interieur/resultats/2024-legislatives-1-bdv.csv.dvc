@@ -1,4 +1,3 @@
-md5: 5919b994982c24d775487f7ccb58af53
 frozen: true
 deps:
 - checksum: '"668ec188-23bd818"'
@@ -9,4 +8,5 @@ outs:
 - md5: 92547431feb455ad1065815e72c40d8e
   size: 37476376
   hash: md5
-  path: 2024-legislatives-1.csv
+  path: 2024-legislatives-1-bdv.csv
+md5: 861155a84ce874b3b7d78573e9b9250e

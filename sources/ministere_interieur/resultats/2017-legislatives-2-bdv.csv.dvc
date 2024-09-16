@@ -1,4 +1,3 @@
-md5: 29722d8cf0aedef7cea005523205175d
 frozen: true
 deps:
 - checksum: '"5948d3a3-d6a86a"'
@@ -9,4 +8,5 @@ outs:
 - md5: f7488f6de8dc80bc650c19c36aab6b4d
   size: 14067818
   hash: md5
-  path: 2017-legislatives-2.csv
+  path: 2017-legislatives-2-bdv.csv
+md5: 5b65ed5ea22dbf52b138ed2de330f096

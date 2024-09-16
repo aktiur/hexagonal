@@ -1,4 +1,3 @@
-md5: 648d58215f11328ec509b29b19564aa2
 frozen: true
 deps:
 - checksum: '"666b14ca-f253058"'
@@ -9,4 +8,5 @@ outs:
 - md5: b3a9085acb27df6669ac04d5aca2e5da
   size: 254095448
   hash: md5
-  path: 2024-europeenne.csv
+  path: 2024-europeenne-bdv.csv
+md5: 485213a748d933126789649691175c5c
