@@ -225,3 +225,7 @@ def clean_results(src, dest, delimiter=";", encoding="utf-8"):
 def run():
     src, dest, encoding = sys.argv[1:]
     clean_results(src, dest, encoding=encoding)
+
+
+if __name__ == "__main__":
+    run()
