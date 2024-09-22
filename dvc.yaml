@@ -1,34 +1,19 @@
 params:
-  - params.yaml
+- params.yaml
 
 vars:
-  - resultats: "sources/ministere_interieur/resultats"
+- raw: "data/01_raw"
+- clean: "data/02_clean"
+- main: "data/03_main"
 
 stages:
-  nettoyer_bdv:
+  clean_bureau_de_vote:
     foreach: ${scrutins}
     do:
       cmd: >-
-        poetry run format_${item.format}
-        ${resultats}/${key}-bdv.csv
-        build/resultats/${key}-bdv.csv
-        ${item.encoding}
+        mkdir -p ${clean} && python -m src.backend.resultats.format_${item.format} ${raw}/${key}-bureau_de_vote.csv ${clean}/${key}-bureau_de_vote.csv ${item.encoding} "${item.delimiter}"
       deps:
-        - ${resultats}/${key}-bdv.csv
-        - src/backend/resultats/format_${item.format}.py
+      - ${raw}/${key}-bureau_de_vote.csv
+      - src/backend/resultats/format_${item.format}.py
       outs:
-        - build/resultats/${key}-bdv.csv
-
-  nettoyer_circos:
-    foreach: ${scrutins}
-    do:
-      cmd: >-
-        poetry run format_${item.format}
-        ${resultats}/${key}-circos.csv
-        build/resultats/${key}-circos.csv
-        ${item.encoding}
-      deps:
-        - ${resultats}/${key}-circos.csv
-        - src/backend/resultats/format_${item.format}.py
-      outs:
-        - build/resultats/${key}-circos.csv
+      - ${clean}/${key}-bureau_de_vote.csv

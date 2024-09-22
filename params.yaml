@@ -2,36 +2,36 @@ scrutins:
   # 2005-referendum-bureau_de_vote:
   #   encoding: latin1
   #   format: 2014
-  #   delimiter: "';'"
+  #   delimiter: ";"
   # NOTE: this file is buggy. Lines from 15337 to 15452 have 17 fields instead of 16.
   2012-presidentielles:
     encoding: latin1
     format: 2014
-    delimiter: "';'"
+    delimiter: ";"
   2014-europeennes:
     encoding: latin1
     format: 2014
-    delimiter: "';'"
+    delimiter: ";"
   2017-legislatives_1:
     encoding: latin1
     format: 2017
-    delimiter: "';'"
+    delimiter: ";"
   2017-legislatives_2:
     encoding: latin1
     format: 2017
-    delimiter: "';'"
+    delimiter: ";"
   2017-presidentielles_1:
     encoding: latin1
     format: 2017
-    delimiter: "';'"
+    delimiter: ";"
   2017-presidentielles_2:
     encoding: latin1
     format: 2017
-    delimiter: "';'"
+    delimiter: ";"
   2019-europeennes:
     encoding: latin1
     format: 2017
-    delimiter: "';'"
+    delimiter: ";"
   2020-municipales_1:
     encoding: utf8
     format: 2017
@@ -39,48 +39,48 @@ scrutins:
   2020-municipales_2:
     encoding: latin1
     format: 2017
-    delimiter: "';'"
+    delimiter: ";"
   2021-departementales_1:
     encoding: latin1
     format: 2017
-    delimiter: "';'"
+    delimiter: ";"
   2021-departementales_2:
     encoding: latin1
     format: 2017
-    delimiter: "';'"
+    delimiter: ";"
   2021-regionales_1:
     encoding: latin1
     format: 2017
-    delimiter: "';'"
+    delimiter: ";"
   2021-regionales_2:
     encoding: latin1
     format: 2017
-    delimiter: "';'"
+    delimiter: ";"
   2022-legislatives_1:
     encoding: latin1
     format: 2017
-    delimiter: "';'"
+    delimiter: ";"
   2022-legislatives_2:
     encoding: latin1
     format: 2017
-    delimiter: "';'"
+    delimiter: ";"
   2022-presidentielles_1:
     encoding: latin1
     format: 2017
-    delimiter: "';'"
+    delimiter: ";"
   2022-presidentielles_2:
     encoding: latin1
     format: 2017
-    delimiter: "';'"
+    delimiter: ";"
   2024-europeennes:
     encoding: utf8
     format: 2017
-    delimiter: "';'"
+    delimiter: ";"
   2024-legislatives_1:
     encoding: utf8
     format: 2017
-    delimiter: "';'"
+    delimiter: ";"
   2024-legislatives_2:
     encoding: utf8
     format: 2017
-    delimiter: "';'"
+    delimiter: ";"
