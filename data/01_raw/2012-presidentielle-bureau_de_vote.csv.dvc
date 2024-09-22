@@ -8,5 +8,5 @@ outs:
 - md5: c12faa2e574d4844ed8686d17519a9e4
   size: 58668586
   hash: md5
-  path: 2012-presidentielle-bdv.csv
-md5: a7a08dc2cbce4b7442554a809352df97
+  path: 2012-presidentielle-bureau_de_vote.csv
+md5: 2f338b88c4f272cbdc75076a310a0e50

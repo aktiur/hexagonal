@@ -8,5 +8,5 @@ outs:
 - md5: fa88d768c4ce3098a7f883dd9e7b03e7
   size: 6773003
   hash: md5
-  path: 2020-municipales-2-bdv.csv
-md5: 6c94f39d44ad5b68fa6af535c8dc54d8
+  path: 2020-municipales-2-bureau_de_vote.csv
+md5: 0da335cceac9cb3cedeb93e264976c3b

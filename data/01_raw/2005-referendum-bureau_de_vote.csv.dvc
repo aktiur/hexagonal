@@ -9,5 +9,5 @@ outs:
 - md5: 960334973bf05499070429ba154a833a
   size: 8587745
   hash: md5
-  path: 2005-referendum-bdv.csv
-md5: 505060fdf0c4e42558d1d34348fee20f
+  path: 2005-referendum-bureau_de_vote.csv
+md5: 7ca4420e97f7cc8ad6cda77b557f22cd

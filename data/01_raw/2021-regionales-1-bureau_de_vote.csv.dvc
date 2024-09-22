@@ -8,5 +8,5 @@ outs:
 - md5: b0e0383c1c736cc49867f05c662ed50f
   size: 65487496
   hash: md5
-  path: 2021-regionales-1-bdv.csv
-md5: 77d8d18f066e3bc099cf94b9ce46fb92
+  path: 2021-regionales-1-bureau_de_vote.csv
+md5: 94610a157c031a4b58d6044ab614199a

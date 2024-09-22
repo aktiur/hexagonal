@@ -8,5 +8,5 @@ outs:
 - md5: b3a9085acb27df6669ac04d5aca2e5da
   size: 254095448
   hash: md5
-  path: 2024-europeenne-bdv.csv
-md5: 485213a748d933126789649691175c5c
+  path: 2024-europeenne-bureau_de_vote.csv
+md5: ccc0aed437de908dc67b101bc6e496ce

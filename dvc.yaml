@@ -6,14 +6,14 @@ vars:
 - clean: "data/02_clean"
 - main: "data/03_main"
 
-stages:
-  clean_bureau_de_vote:
-    foreach: ${scrutins}
-    do:
-      cmd: >-
-        mkdir -p ${clean} && python -m src.backend.resultats.format_${item.format} ${raw}/${key}-bureau_de_vote.csv ${clean}/${key}-bureau_de_vote.csv ${item.encoding} "${item.delimiter}"
-      deps:
-      - ${raw}/${key}-bureau_de_vote.csv
-      - src/backend/resultats/format_${item.format}.py
-      outs:
-      - ${clean}/${key}-bureau_de_vote.csv
+# stages:
+#   clean_bureau_de_vote:
+#     foreach: ${scrutins}
+#     do:
+#       cmd: >-
+#         mkdir -p ${clean} && python -m src.backend.resultats.format_${item.format} ${raw}/${key}-bureau_de_vote.csv ${clean}/${key}-bureau_de_vote.csv ${item.encoding} "${item.delimiter}"
+#       deps:
+#       - ${raw}/${key}-bureau_de_vote.csv
+#       - src/backend/resultats/format_${item.format}.py
+#       outs:
+#       - ${clean}/${key}-bureau_de_vote.csv

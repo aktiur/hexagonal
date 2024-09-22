@@ -35,7 +35,7 @@ scrutins:
   2020-municipales_1:
     encoding: utf8
     format: 2017
-    delimiter: "','"
+    delimiter: ","
   2020-municipales_2:
     encoding: latin1
     format: 2017
