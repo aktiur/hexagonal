@@ -32,7 +32,6 @@ fixed_headers = {
     "Libellé circonscription législative": None,
     "Code du canton": "canton",
     "Libellé du canton": None,
-    "Libellé du canton": None,
     "Code de la commune": "commune",
     "Code commune": "code_commune",
     "Libellé de la commune": None,
@@ -195,7 +194,7 @@ def read_file(src, delimiter=";", encoding="utf-8"):
         try:
             if field in df.columns:
                 df[field] = df[field].astype(transform)
-        except ValueError as e:
+        except ValueError as _:
             print(f"global_fields: {common_fields!r}")
             print(f"repeated_fields: {candidate_specific_fields!r}")
             raise ValueError(f"Echec transformation {transform} sur {field}")
