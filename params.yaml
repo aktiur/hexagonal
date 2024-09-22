@@ -1,64 +1,122 @@
 scrutins:
-#  2012-presidentielle:
-#    encoding: latin1
-#    format: 2014
-  2017-presidentielle-1:
+  # 2005-referendum-bureau_de_vote:
+  #   url: https://www.data.gouv.fr/fr/datasets/r/8b1f3e0e-001f-414c-9bf0-7b5a9219e26a
+  #   encoding: latin1
+  #   format: 2014
+  #   delimiter: "';'"
+  # NOTE: this file is buggy. Lines from 15337 to 15452 have 17 fields instead of 16.
+  2012-presidentielles-bureau_de_vote:
+    url: https://www.data.gouv.fr/fr/datasets/r/206b1668-2b31-46da-b957-9857f94fe85c
+    encoding: latin1
+    format: 2014
+    delimiter: "';'"
+  2014-europeennes-bureau_de_vote:
+    url: https://www.data.gouv.fr/fr/datasets/r/c5af18ce-b673-4019-a9c3-07ee6209668c
+    encoding: latin1
+    format: 2014
+    delimiter: "';'"
+  2017-legislatives_1-bureau_de_vote:
+    url: https://www.data.gouv.fr/fr/datasets/r/80cb1309-9147-4bae-b6e2-79877d549b50
     encoding: latin1
     format: 2017
-  2017-presidentielle-2:
+    delimiter: "';'"
+  2017-legislatives_2-bureau_de_vote:
+    url: https://www.data.gouv.fr/fr/datasets/r/8eb61f3e-dfdf-496e-85af-2859cd7383c3
     encoding: latin1
     format: 2017
-  2022-presidentielle-1:
+    delimiter: "';'"
+  2017-presidentielles_1-bureau_de_vote:
+    url: https://www.data.gouv.fr/fr/datasets/r/8fdb0926-ea9d-4fb4-a136-7767cd97e30b
     encoding: latin1
     format: 2017
-  2022-presidentielle-2:
+    delimiter: "';'"
+  2017-presidentielles_2-bureau_de_vote:
+    url: https://www.data.gouv.fr/fr/datasets/r/2e3e44de-e584-4aa2-8148-670daf5617e1
     encoding: latin1
     format: 2017
-  2017-legislatives-1:
+    delimiter: "';'"
+  2019-europeennes-bureau_de_vote:
+    url: https://www.data.gouv.fr/fr/datasets/r/77c4450b-7fa7-425c-84da-4f7bf4b97820
     encoding: latin1
     format: 2017
-  2017-legislatives-2:
-    encoding: latin1
-    format: 2017
-  2022-legislatives-1:
-    encoding: latin1
-    format: 2017
-  2022-legislatives-2:
-    encoding: latin1
-    format: 2017
-  2024-legislatives-1:
+    delimiter: "';'"
+  2020-municipales_1-bureau_de_vote:
+    url: https://www.data.gouv.fr/fr/datasets/r/466903fd-0ba9-4f0a-a4a5-73b0b76b7d13
     encoding: utf8
     format: 2017
-  2024-legislatives-2:
+    delimiter: "','"
+  2020-municipales_2-bureau_de_vote:
+    url: https://www.data.gouv.fr/fr/datasets/r/7e641d2e-e017-43d4-9434-49d5acd44b4b
+    encoding: latin1
+    format: 2017
+    delimiter: "';'"
+  2021-departementales_1-bureau_de_vote:
+    url: https://www.data.gouv.fr/fr/datasets/r/57370a9b-7fa1-465c-a051-c984fc21321f
+    encoding: latin1
+    format: 2017
+    delimiter: "';'"
+  2021-departementales_2-bureau_de_vote:
+    url: https://www.data.gouv.fr/fr/datasets/r/b34b36d9-e416-4144-8384-d101b140afaf
+    encoding: latin1
+    format: 2017
+    delimiter: "';'"
+  2021-regionales_1-bureau_de_vote:
+    url: https://www.data.gouv.fr/fr/datasets/r/52c3e6f1-2faa-4295-9f76-5b0e9cb9f7b0
+    encoding: latin1
+    format: 2017
+    delimiter: "';'"
+  2021-regionales_2-bureau_de_vote:
+    url: https://www.data.gouv.fr/fr/datasets/r/75221ab0-2066-4a11-bc42-b0f76d201dfe
+    encoding: latin1
+    format: 2017
+    delimiter: "';'"
+  2022-legislatives_1-bureau_de_vote:
+    url: https://www.data.gouv.fr/fr/datasets/r/a1f73b85-8194-44f4-a2b7-c343edb47d32
+    encoding: latin1
+    format: 2017
+    delimiter: "';'"
+  2022-legislatives_2-bureau_de_vote:
+    url: https://www.data.gouv.fr/fr/datasets/r/cada247a-6528-44e7-8308-30c0c335a4b2
+    encoding: latin1
+    format: 2017
+    delimiter: "';'"
+  2022-presidentielles_1-bureau_de_vote:
+    url: https://www.data.gouv.fr/fr/datasets/r/79b5cac4-4957-486b-bbda-322d80868224
+    encoding: latin1
+    format: 2017
+    delimiter: "';'"
+  2022-presidentielles_2-bureau_de_vote:
+    url: https://www.data.gouv.fr/fr/datasets/r/4dfd05a9-094e-4043-8a19-43b6b6bbe086
+    encoding: latin1
+    format: 2017
+    delimiter: "';'"
+  2024-europeennes-bureau_de_vote:
+    url: https://www.data.gouv.fr/fr/datasets/r/cc1883d9-1265-4365-b754-fb6aef22d82e
     encoding: utf8
     format: 2017
-#  2014-europeenne:
-#    encoding: latin1
-#    format: 2014
-  2019-europeenne:
-    encoding: latin1
-    format: 2017
-  2024-europeenne:
+    delimiter: "';'"
+  2024-europeenne-circonscription:
+    url: https://www.data.gouv.fr/fr/datasets/r/ee37cbef-3d2a-4efe-a395-530b85a63028
     encoding: utf8
     format: 2017
-  2020-municipales-1:
-    encoding: latin1
+    delimiter: "';'"
+  2024-legislatives_1-bureau_de_vote:
+    url: https://www.data.gouv.fr/fr/datasets/r/6813fb28-7ec0-42ff-a528-2bc3d82d7dcd
+    encoding: utf8
     format: 2017
-  2020-municipales-2:
-    encoding: latin1
+    delimiter: "';'"
+  2024-legislatives-1-circonscription:
+    url: https://www.data.gouv.fr/fr/datasets/r/5163f2e3-1362-4c35-89a0-1934bb74f2d9
+    encoding: utf8
     format: 2017
-  2021-regionales-1:
-    encoding: latin1
+    delimiter: "';'"
+  2024-legislatives_2-bureau_de_vote:
+    url: https://www.data.gouv.fr/fr/datasets/r/ca974f04-cfd9-4da8-8554-4a868a09c6c2
+    encoding: utf8
     format: 2017
-  2021-regionales-2:
-    encoding: latin1
+    delimiter: "';'"
+  2024-legislatives-2-circonscription:
+    url: https://www.data.gouv.fr/fr/datasets/r/41ed46cd-77c2-4ecc-b8eb-374aa953ca39
+    encoding: utf8
     format: 2017
-  2021-departementales-1:
-    encoding: latin1
-    format: 2017
-  2021-departementales-2:
-    encoding: latin1
-    format: 2017
-#  2005-referendum:
-#    encoding: latin1
-#    format: 2014
+    delimiter: "';'"
