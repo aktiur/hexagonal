@@ -1,34 +1,27 @@
 params:
-  - params.yaml
+- params.yaml
 
 vars:
-  - resultats: "sources/ministere_interieur/resultats"
+- raw: "data/01_raw"
+- clean: "data/02_clean"
+- main: "data/03_main"
 
 stages:
-  nettoyer_bdv:
+  raw:
     foreach: ${scrutins}
     do:
       cmd: >-
-        poetry run format_${item.format}
-        ${resultats}/${key}-bdv.csv
-        build/resultats/${key}-bdv.csv
-        ${item.encoding}
-      deps:
-        - ${resultats}/${key}-bdv.csv
-        - src/backend/resultats/format_${item.format}.py
+        mkdir -p ${raw} && curl ${item.url} -o ${raw}/${key}.csv --progress-bar --location
       outs:
-        - build/resultats/${key}-bdv.csv
+      - ${raw}/${key}.csv
 
-  nettoyer_circos:
+  clean:
     foreach: ${scrutins}
     do:
       cmd: >-
-        poetry run format_${item.format}
-        ${resultats}/${key}-circos.csv
-        build/resultats/${key}-circos.csv
-        ${item.encoding}
+        mkdir -p ${clean} && python -m src.backend.resultats.format_${item.format} ${raw}/${key}.csv ${clean}/${key}.csv ${item.encoding} ${item.delimiter}
       deps:
-        - ${resultats}/${key}-circos.csv
-        - src/backend/resultats/format_${item.format}.py
+      - ${raw}/${key}.csv
+      - src/backend/resultats/format_${item.format}.py
       outs:
-        - build/resultats/${key}-circos.csv
+      - ${clean}/${key}.csv

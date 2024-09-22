@@ -1,5 +1,7 @@
+import sys
 from itertools import chain
 from pathlib import Path
+from typing import Literal
 
 import pandas as pd
 
@@ -25,7 +27,7 @@ partie_bureau = [
 ]
 
 
-transforms = {
+transforms: dict[str, Literal["int", "category"]] = {
     "circonscription": "int",
     "numero_tour": "int",
     "numero_panneau": "int",
@@ -36,7 +38,14 @@ transforms = {
     "voix": "int",
 }
 
-population = ["circonscription", "canton", "inscrits", "votants", "exprimes"]
+population = [
+    "circonscription",
+    "numero_tour",
+    "canton",
+    "inscrits",
+    "votants",
+    "exprimes",
+]
 par_candidat = ["numero_panneau", "nom", "prenom", "nuance", "voix"]
 
 
@@ -48,20 +57,18 @@ types_par_colonne = {
 
 def clean_results(
     src,
-    base_filenames,
-    delimiter,
+    dest,
+    delimiter=";",
+    encoding="latin1",
 ):
-    if isinstance(base_filenames, (str, Path)):
-        base_filenames = [base_filenames]
-
     # trouver la première ligne
-    with open(src, "r", encoding="latin1") as f:
+    with open(src, "r", encoding=encoding) as f:
         for i, line in enumerate(f):
             if delimiter in line:
                 nb_champs = len(line.split(delimiter))
                 break
         else:
-            raise ValueError(f"Impossible de trouver la première ligne")
+            raise ValueError("Impossible de trouver la première ligne")
 
     nb_communs = nb_champs - len(partie_bureau)
     names = partie_commune[:nb_communs] + partie_bureau
@@ -73,7 +80,7 @@ def clean_results(
         names=names,
         header=None,
         dtype=types_par_colonne,  # type: ignore
-        encoding="latin1",
+        encoding=encoding,
     )
 
     for field, transform in transforms.items():
@@ -84,15 +91,28 @@ def clean_results(
         df["nom"] = df["nom"].astype("category")
         df["prenom"] = df["prenom"].astype("category")
 
-    df["code"] = (
+    df["bureau_de_vote"] = (
         df["departement"].str.zfill(2)
         + df["commune"].str.zfill(3)
         + "-"
         + df["bureau"].str.zfill(4)
     )
 
-    for tour, base_filename in zip(sorted(df["numero_tour"].unique()), base_filenames):
-        df.loc[
-            df["numero_tour"] == tour,
-            ["code", *(c for c in (population + par_candidat) if c in df.columns)],
-        ].reset_index(drop=True).to_csv(f"{base_filename}.csv")
+    if "circonscription" in df.columns:
+        df["circonscription"] = df["circonscription"].astype(str).str.zfill(4)
+
+    clean_columns = [
+        "bureau_de_vote",
+        *(c for c in (population + par_candidat) if c in df.columns),
+    ]
+    df_clean = df.loc[:, clean_columns].reset_index(drop=True)
+    df_clean.to_csv(f"{dest}", index=False)
+
+
+def run():
+    src, dest, encoding, delimiter = sys.argv[1:]
+    clean_results(src, dest, delimiter=delimiter, encoding=encoding)
+
+
+if __name__ == "__main__":
+    run()
