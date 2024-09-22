@@ -1,5 +1,7 @@
+import sys
 from itertools import chain
 from pathlib import Path
+from typing import Literal
 
 import pandas as pd
 
@@ -25,7 +27,7 @@ partie_bureau = [
 ]
 
 
-transforms = {
+transforms: dict[str, Literal["int", "category"]] = {
     "circonscription": "int",
     "numero_tour": "int",
     "numero_panneau": "int",
@@ -49,19 +51,20 @@ types_par_colonne = {
 def clean_results(
     src,
     base_filenames,
-    delimiter,
+    delimiter=";",
+    encoding="latin1",
 ):
     if isinstance(base_filenames, (str, Path)):
         base_filenames = [base_filenames]
 
     # trouver la première ligne
-    with open(src, "r", encoding="latin1") as f:
+    with open(src, "r", encoding=encoding) as f:
         for i, line in enumerate(f):
             if delimiter in line:
                 nb_champs = len(line.split(delimiter))
                 break
         else:
-            raise ValueError(f"Impossible de trouver la première ligne")
+            raise ValueError("Impossible de trouver la première ligne")
 
     nb_communs = nb_champs - len(partie_bureau)
     names = partie_commune[:nb_communs] + partie_bureau
@@ -73,7 +76,7 @@ def clean_results(
         names=names,
         header=None,
         dtype=types_par_colonne,  # type: ignore
-        encoding="latin1",
+        encoding=encoding,
     )
 
     for field, transform in transforms.items():
@@ -95,4 +98,13 @@ def clean_results(
         df.loc[
             df["numero_tour"] == tour,
             ["code", *(c for c in (population + par_candidat) if c in df.columns)],
-        ].reset_index(drop=True).to_csv(f"{base_filename}.csv")
+        ].reset_index(drop=True).to_csv(f"{base_filename}")
+
+
+def run():
+    src, dest, encoding = sys.argv[1:]
+    clean_results(src, dest, encoding=encoding)
+
+
+if __name__ == "__main__":
+    run()
