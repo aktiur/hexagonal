@@ -6,14 +6,23 @@ vars:
 - clean: "data/02_clean"
 - main: "data/03_main"
 
-# stages:
-#   clean_bureau_de_vote:
-#     foreach: ${scrutins}
-#     do:
-#       cmd: >-
-#         mkdir -p ${clean} && python -m src.backend.resultats.format_${item.format} ${raw}/${key}-bureau_de_vote.csv ${clean}/${key}-bureau_de_vote.csv ${item.encoding} "${item.delimiter}"
-#       deps:
-#       - ${raw}/${key}-bureau_de_vote.csv
-#       - src/backend/resultats/format_${item.format}.py
-#       outs:
-#       - ${clean}/${key}-bureau_de_vote.csv
+stages:
+  nettoyer-2020-municipales-1:
+    cmd: >-
+      sed '13751,13752s/ \t / / ; 16921s/ \t / /'
+      < ${raw}/2020-municipales-1-bureau_de_vote_avant_correction.csv
+      > ${raw}/2020-municipales-1-bureau_de_vote.csv
+    deps:
+      - ${raw}/2020-municipales-1-bureau_de_vote_avant_correction.csv
+    outs:
+      - ${raw}/2020-municipales-1-bureau_de_vote.csv
+  clean-bureau-de-vote:
+    foreach: ${scrutins}
+    do:
+      cmd: >-
+        mkdir -p ${clean} && python -m src.backend.resultats.format_${item.format} ${raw}/${key}-bureau_de_vote.csv ${clean}/${key}-bureau_de_vote.csv ${item.encoding} "${item.delimiter}"
+      deps:
+      - ${raw}/${key}-bureau_de_vote.csv
+      - src/backend/resultats/format_${item.format}.py
+      outs:
+      - ${clean}/${key}-bureau_de_vote.csv
