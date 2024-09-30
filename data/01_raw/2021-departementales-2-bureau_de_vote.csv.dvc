@@ -8,5 +8,5 @@ outs:
 - md5: bccfd795640a1f2684e1c1a921d065d0
   size: 15501944
   hash: md5
-  path: 2021-departementales-2-bdv.csv
-md5: 7bcb5aef08425c102b236518d00a5210
+  path: 2021-departementales-2-bureau_de_vote.csv
+md5: 574d2670b88c0330ce113acb509c5d35

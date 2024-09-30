@@ -8,5 +8,5 @@ outs:
 - md5: 063dfce8aa81153f6b535b7ecdb49d6f
   size: 16652378
   hash: md5
-  path: 2024-legislatives-2-bdv.csv
-md5: c118734667482a5e2d41990e8a80a9d3
+  path: 2024-legislatives-2-bureau_de_vote.csv
+md5: 62c6a5dec4d0567e696f9e4921a02584

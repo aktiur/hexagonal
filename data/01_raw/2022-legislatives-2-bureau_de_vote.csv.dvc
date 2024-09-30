@@ -8,5 +8,5 @@ outs:
 - md5: 02e9bcfb3e506d7d4ada0a141315c61c
   size: 14215650
   hash: md5
-  path: 2022-legislatives-2-bdv.csv
-md5: 946eb104260ab8bfbc40b72845000888
+  path: 2022-legislatives-2-bureau_de_vote.csv
+md5: 69bc67f3403aa60f151afc0c13fe0b05

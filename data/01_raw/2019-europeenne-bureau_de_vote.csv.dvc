@@ -8,5 +8,5 @@ outs:
 - md5: 41122a5230f18ab9736f5a07828b1221
   size: 217110330
   hash: md5
-  path: 2019-europeenne-bdv.csv
-md5: cdd12355170dd76e45997cd05e8a39e9
+  path: 2019-europeenne-bureau_de_vote.csv
+md5: be09a5b586b954f3a155e274dec1b276

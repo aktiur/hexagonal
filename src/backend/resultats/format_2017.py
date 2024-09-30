@@ -32,14 +32,13 @@ fixed_headers = {
     "Libellé circonscription législative": None,
     "Code du canton": "canton",
     "Libellé du canton": None,
-    "Libellé du canton": None,
     "Code de la commune": "commune",
     "Code commune": "code_commune",
     "Libellé de la commune": None,
     "Libellé commune": None,
-    "Code du b.vote": "bureau",
-    "Code B.Vote": "bureau",
-    "Code BV": "bureau",
+    "Code du b.vote": "bureau_in_commune",
+    "Code B.Vote": "bureau_in_commune",
+    "Code BV": "bureau_in_commune",
     "Inscrits": "inscrits",
     "Abstentions": None,
     "% Abs/Ins": None,
@@ -121,7 +120,7 @@ transforms = {
     "tete_liste": "category",
 }
 
-identifiants = ["code_bureau", "circonscription"]
+identifiants = ["bureau_de_vote", "circonscription"]
 population = ["inscrits", "votants", "exprimes"]
 par_candidat = [
     "numero_panneau",
@@ -195,7 +194,7 @@ def read_file(src, delimiter=";", encoding="utf-8"):
         try:
             if field in df.columns:
                 df[field] = df[field].astype(transform)
-        except ValueError as e:
+        except ValueError as _:
             print(f"global_fields: {common_fields!r}")
             print(f"repeated_fields: {candidate_specific_fields!r}")
             raise ValueError(f"Echec transformation {transform} sur {field}")
@@ -206,23 +205,32 @@ def read_file(src, delimiter=";", encoding="utf-8"):
 def clean_results(src, dest, delimiter=";", encoding="utf-8"):
     df = read_file(src, delimiter, encoding=encoding)
 
+    if "circonscription" in df.columns:
+        df["circonscription"] = df["circonscription"].str.zfill(4)
+
     if "code_commune" in df.columns:
-        df["code_bureau"] = (
-            df["code_commune"].str.zfill(5) + "-" + df["bureau"].str.zfill(4)
+        df["bureau_de_vote"] = (
+            df["code_commune"].str.zfill(5) + "-" + df["bureau_in_commune"].str.zfill(4)
         )
     elif "commune" in df.columns:
-        df["code_bureau"] = (
+        df["bureau_de_vote"] = (
             df["departement"].str.zfill(2)
             + df["commune"].str.zfill(3)
             + "-"
-            + df["bureau"].str.zfill(4)
+            + df["bureau_in_commune"].str.zfill(4)
         )
 
-    df[
-        [c for c in (identifiants + population + par_candidat) if c in df.columns]
-    ].to_csv(dest, index=False)
+    clean_columns = [
+        c for c in (identifiants + population + par_candidat) if c in df.columns
+    ]
+    df_clean = df.loc[:, clean_columns]
+    df_clean.to_csv(dest, index=False)
 
 
 def run():
-    src, dest, encoding = sys.argv[1:]
-    clean_results(src, dest, encoding=encoding)
+    src, dest, encoding, delimiter = sys.argv[1:]
+    clean_results(src, dest, delimiter=delimiter, encoding=encoding)
+
+
+if __name__ == "__main__":
+    run()

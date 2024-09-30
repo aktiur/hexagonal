@@ -8,5 +8,5 @@ outs:
 - md5: 1fc04aa0a22b83172876987f6146b0ea
   size: 34748748
   hash: md5
-  path: 2017-presidentielle-1-bdv.csv
-md5: 938e2d7474716914390a41c306c7e044
+  path: 2017-presidentielle-1-bureau_de_vote.csv
+md5: 328d443356bc8c37373f3a0f9bbb4570

@@ -8,5 +8,5 @@ outs:
 - md5: f7488f6de8dc80bc650c19c36aab6b4d
   size: 14067818
   hash: md5
-  path: 2017-legislatives-2-bdv.csv
-md5: 5b65ed5ea22dbf52b138ed2de330f096
+  path: 2017-legislatives-2-bureau_de_vote.csv
+md5: cb16b2a5a3042124120ef4930801312d
