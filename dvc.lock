@@ -404,3 +404,71 @@ stages:
       hash: md5
       md5: 134a9746d44fbccabb9136992975c355
       size: 66947997
+  clean@2022-presidentielle-1-circonscription:
+    cmd: mkdir -p data/02_clean && python -m src.backend.resultats.format_2017 data/01_raw/2022-presidentielle-1-circonscription.csv
+      data/02_clean/2022-presidentielle-1-circonscription.csv latin1 ";"
+    deps:
+    - path: data/01_raw/2022-presidentielle-1-circonscription.csv
+      hash: md5
+      md5: fb5e45dd6a5ae43c93d3be0969d6c0d0
+      size: 317249
+    - path: src/backend/resultats/format_2017.py
+      hash: md5
+      md5: ff373153ae1847c392e825d7e5b80b19
+      size: 7310
+    outs:
+    - path: data/02_clean/2022-presidentielle-1-circonscription.csv
+      hash: md5
+      md5: 87dd93c30caf72344b68622092c85be0
+      size: 335645
+  clean@2022-presidentielle-2-circonscription:
+    cmd: mkdir -p data/02_clean && python -m src.backend.resultats.format_2017 data/01_raw/2022-presidentielle-2-circonscription.csv
+      data/02_clean/2022-presidentielle-2-circonscription.csv latin1 ";"
+    deps:
+    - path: data/01_raw/2022-presidentielle-2-circonscription.csv
+      hash: md5
+      md5: 292bc96162d5cde4d3cc7c98eeed4e00
+      size: 114954
+    - path: src/backend/resultats/format_2017.py
+      hash: md5
+      md5: ff373153ae1847c392e825d7e5b80b19
+      size: 7310
+    outs:
+    - path: data/02_clean/2022-presidentielle-2-circonscription.csv
+      hash: md5
+      md5: 6e81c91b2c19fbab3de16e9129a232c1
+      size: 55555
+  clean@2022-legislatives-1-circonscription:
+    cmd: mkdir -p data/02_clean && python -m src.backend.resultats.format_2017 data/01_raw/2022-legislatives-1-circonscription.csv
+      data/02_clean/2022-legislatives-1-circonscription.csv latin1 ";"
+    deps:
+    - path: data/01_raw/2022-legislatives-1-circonscription.csv
+      hash: md5
+      md5: 4986d461320a1ab758e4af374464c09c
+      size: 325756
+    - path: src/backend/resultats/format_2017.py
+      hash: md5
+      md5: ff373153ae1847c392e825d7e5b80b19
+      size: 7310
+    outs:
+    - path: data/02_clean/2022-legislatives-1-circonscription.csv
+      hash: md5
+      md5: c1f7c7a59d08aa7ca0fc89c4ac0443fc
+      size: 329486
+  clean@2022-legislatives-2-circonscription:
+    cmd: mkdir -p data/02_clean && python -m src.backend.resultats.format_2017 data/01_raw/2022-legislatives-2-circonscription.csv
+      data/02_clean/2022-legislatives-2-circonscription.csv latin1 ";"
+    deps:
+    - path: data/01_raw/2022-legislatives-2-circonscription.csv
+      hash: md5
+      md5: c827e0066aed7e3fa15557e785d1eb27
+      size: 122973
+    - path: src/backend/resultats/format_2017.py
+      hash: md5
+      md5: ff373153ae1847c392e825d7e5b80b19
+      size: 7310
+    outs:
+    - path: data/02_clean/2022-legislatives-2-circonscription.csv
+      hash: md5
+      md5: f26d28408b01f7520ea0071d63d60fc8
+      size: 61851

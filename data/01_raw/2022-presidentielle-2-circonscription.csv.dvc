@@ -1,0 +1,12 @@
+md5: 4bdb978b55a800acd1d602f727e5a2df
+frozen: true
+deps:
+- checksum: '"626a86ed-1c10a"'
+  size: 114954
+  hash: md5
+  path: https://www.data.gouv.fr/fr/datasets/r/eefff73d-1b17-4695-8ec6-6671916e3af8
+outs:
+- md5: 292bc96162d5cde4d3cc7c98eeed4e00
+  size: 114954
+  hash: md5
+  path: 2022-presidentielle-2-circonscription.csv

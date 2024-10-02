@@ -1,0 +1,12 @@
+md5: 7c79acdccac0082e95cc51e55f9625d0
+frozen: true
+deps:
+- checksum: '"62a8c477-4f87c"'
+  size: 325756
+  hash: md5
+  path: https://www.data.gouv.fr/fr/datasets/r/114b13e8-7ff9-437f-9ec8-7a29258a80e3
+outs:
+- md5: 4986d461320a1ab758e4af374464c09c
+  size: 325756
+  hash: md5
+  path: 2022-legislatives-1-circonscription.csv
