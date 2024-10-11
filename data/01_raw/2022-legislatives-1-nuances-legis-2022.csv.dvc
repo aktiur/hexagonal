@@ -1,0 +1,12 @@
+md5: 588ecdb7cd244c77e9674951a05c11f0
+frozen: true
+deps:
+- checksum: '"62bab80e-19904d"'
+  size: 1675341
+  hash: md5
+  path: https://www.data.gouv.fr/fr/datasets/r/67d3987a-3f9d-464c-a678-116c25186f66
+outs:
+- md5: 40277717333ff3a1e20113d5fd249219
+  size: 1675341
+  hash: md5
+  path: 2022-legislatives-1-nuances-legis-2022.csv

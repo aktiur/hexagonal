@@ -1,0 +1,12 @@
+md5: 18dd497e6786276606aab6f5ca3c7349
+frozen: true
+deps:
+- checksum: '"62a23514-e8d06"'
+  size: 953606
+  hash: md5
+  path: https://www.data.gouv.fr/fr/datasets/r/c79af2f3-1733-4df3-be37-caebacbc1321
+outs:
+- md5: f3376d549226719ce0d499493996b753
+  size: 953606
+  hash: md5
+  path: 2022-legislatives-1-candidats.csv

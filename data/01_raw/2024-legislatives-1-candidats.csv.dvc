@@ -1,0 +1,12 @@
+md5: 43ab7422bb89bfbaa8fd2c744e775179
+frozen: true
+deps:
+- checksum: '"667ef1d8-98189"'
+  size: 622985
+  hash: md5
+  path: https://www.data.gouv.fr/fr/datasets/r/cd5b39e6-5feb-4864-b274-3431ed81442c
+outs:
+- md5: c840bd309348cbe6cd728cc96bf550d0
+  size: 622985
+  hash: md5
+  path: 2024-legislatives-1-candidats.csv

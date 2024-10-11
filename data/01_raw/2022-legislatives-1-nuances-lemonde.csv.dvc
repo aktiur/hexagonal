@@ -1,0 +1,13 @@
+md5: 30ebf6396b754fc30e147eec32c300b2
+frozen: true
+deps:
+- checksum: '"a1f8ad9352c14eeeb4ff8fd530747eab"'
+  size: 348542
+  hash: md5
+  path: 
+    https://assets-decodeurs.lemonde.fr/decodeurs/elections_2022_snippets/legislatives/tour1/candidats_legislatives_lemonde.csv
+outs:
+- md5: a1f8ad9352c14eeeb4ff8fd530747eab
+  size: 348542
+  hash: md5
+  path: 2022-legislatives-1-nuances-lemonde.csv
