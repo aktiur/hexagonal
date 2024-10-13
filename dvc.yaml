@@ -2,6 +2,7 @@ params:
 - params.yaml
 
 vars:
+- src: "src/"
 - raw: "data/01_raw"
 - clean: "data/02_clean"
 - main: "data/03_main"
@@ -20,7 +21,9 @@ stages:
     foreach: ${scrutins}
     do:
       cmd: >-
-        mkdir -p ${clean} && python -m src.backend.resultats.format_${item.format} ${raw}/${key}.csv ${clean}/${key}.csv ${item.encoding} "${item.delimiter}"
+        PYTHONPATH=${src}
+        python -m hexagonal.resultats.format_${item.format}
+        ${raw}/${key}.csv ${clean}/${key}.csv ${item.encoding} "${item.delimiter}"
       deps:
       - ${raw}/${key}.csv
       - src/backend/resultats/format_${item.format}.py

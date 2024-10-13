@@ -17,6 +17,21 @@ import sys
 
 import pandas as pd
 
+from hexagonal.codes import normaliser_code_circonscription, normaliser_code_departement
+
+# convertit les codes départements utilisés par le ministère de l'intérieur avant 2024
+correspondance_departements = {
+    "ZA": "971",
+    "ZB": "972",
+    "ZC": "973",
+    "ZD": "974",
+    "ZM": "976",
+    "ZN": "988",
+    "ZP": "987",
+    "ZS": "975",
+    "ZW": "986",
+}
+
 # la variété des noms d'entête utilisés donne le tournis
 fixed_headers = {
     "Code localisation": None,
@@ -26,7 +41,7 @@ fixed_headers = {
     "Libellé du département": None,
     "Libellé département": None,
     "Libellé de la section électorale": None,
-    "Code de la circonscription": "circonscription",
+    "Code de la circonscription": "numero_circonscription",
     "Code circonscription législative": "circonscription",
     "Libellé de la circonscription": None,
     "Libellé circonscription législative": None,
@@ -206,7 +221,12 @@ def clean_results(src, dest, delimiter=";", encoding="utf-8"):
     df = read_file(src, delimiter, encoding=encoding)
 
     if "circonscription" in df.columns:
-        df["circonscription"] = df["circonscription"].str.zfill(4)
+        df["circonscription"] = normaliser_code_circonscription(df["circonscription"])
+    if "numero_circonscription" in df.columns:
+        departement = normaliser_code_departement(df["departement"])
+        df["circonscription"] = (
+            departement + "-" + df["numero_circonscription"].str.zfill(2)
+        )
 
     if "code_commune" in df.columns:
         df["bureau_de_vote"] = (

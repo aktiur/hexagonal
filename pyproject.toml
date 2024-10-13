@@ -5,7 +5,7 @@ description = ""
 authors = ["Salomé Cheysson <salome@cheysson.fr>"]
 readme = "README.md"
 packages = [
-  { include = "backend", from = "src" }
+  { include = "hexagonal", from = "src" }
 ]
 
 [tool.poetry.dependencies]
@@ -18,8 +18,8 @@ black = "^24.8.0"
 dvc = "^3.55.2"
 
 [tool.poetry.scripts]
-format_2017 = "backend.resultats.format_2017:run"
-format_2014 = "backend.resultats.format_2014:run"
+format_2017 = "hexagonal.resultats.format_2017:run"
+format_2014 = "hexagonal.resultats.format_2014:run"
 
 [build-system]
 requires = ["poetry-core"]

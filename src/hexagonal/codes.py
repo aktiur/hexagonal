@@ -1,0 +1,104 @@
+from dataclasses import dataclass
+
+import pandas as pd
+
+
+@dataclass
+class Outremer:
+    code_insee: str
+    code_interieur: str
+
+
+outremers = [
+    Outremer("971", "ZA"),
+    Outremer("972", "ZB"),
+    Outremer("973", "ZC"),
+    Outremer("974", "ZD"),
+    Outremer("976", "ZM"),
+    Outremer("988", "ZN"),
+    Outremer("987", "ZP"),
+    Outremer("975", "ZS"),
+    Outremer("986", "ZW"),
+    Outremer("977", "ZX"),
+    Outremer("978", "ZX"),
+]
+
+CORRESPONDANCE_CODE_DEPARTEMENT = {
+    o.code_interieur: o.code_insee for o in outremers if o.code_interieur != "ZX"
+}
+
+
+def normaliser_code_departement(departement: pd.Series) -> pd.Series:
+    """Normalise une série de codes de département.
+
+    hexagonal reprend la convention du ministère de l'intérieur utilisée en 2024 pour la codification des départements :
+    - les départements de métropole ont un numéro de département sur 2 chiffres (avec un zéro initial pour les
+      départements numérotés de 1 à 9)
+    - les deux départements corses ont pour codes respectifs 2A et 2B
+    - les départements et collectivités d'outre-mer ont un numéro à 3 chiffres commençant par 97 (départements
+      d'Outremer et la collectivité d'Outremer de Saint-Pierre-et-Miquelon) ou par 98
+      (collectivités d'Outremer de Polynésie française, de Nouvelle-Calédonie et de Wallis-et-Futuna)
+    - Saint-Barthélémy et Saint-Martin reçoivent un code département commun de ZX
+    - ZZ pour les français de l'étranger
+
+
+    Jusqu'en 2014, le ministère de l'intérieur n'utilisait pas les codes à trois chiffres de l'INSEE (par exemple
+    971 pour la Guadeloupe, 987 pour la Polynésie française, etc.) mais un code sur deux lettres (ZA pour la Guadeloupe,
+    ZP pour la Polynésie française, etc.) Cela pose un problème particulier pour Saint-Barthélémy et Saint-Martin pour
+    lesquels le code département ZX est utilisé, ce qui ne permet pas de les différencier à partir du seul numéro de
+    département.
+
+    À partir de 2024, le ministère de l'intérieur utilise bien les codes à 3 chiffres.
+
+    :param departement: la série pandas de codes département à normaliser
+    :return: une série pandas de codes département normalisés
+    """
+    return departement.map(CORRESPONDANCE_CODE_DEPARTEMENT).fillna(
+        departement.str.zfill(2)
+    )
+
+
+def normaliser_code_circonscription(circonscription: pd.Series) -> pd.Series:
+    """Normalise une série de codes de circonscription législative.
+
+    hexagonal reprend la convention du ministère de l'intérieur de 2024 pour la codification des départements, mais
+    ajoute un tiret simple entre le numéro de département et le numéro de circonscription sur deux chiffres.
+
+    La convention pour les départements est donc celle décrite en documentation de `normaliser_code_departement`.
+
+    :param departement: la série pandas de codes circonscription à normaliser
+    :return: une série pandas de codes circonscription normalisés
+    """
+    departement = normaliser_code_departement(circonscription.str.slice(0, -2))
+    numero = circonscription.str.slice(-2)
+    return departement + "-" + numero
+
+
+def normaliser_code_commune(commune: pd.Series) -> pd.Series:
+    """Normalise une série de codes de commune.
+
+    hexagonal suit la codification du Code Officiel Géographique (COG) de l'INSEE. Chaque commune est identifié par un
+    code à cinq chiffres (le deuxième chiffre pouvant être en réalité la lettre A ou B pour les communes corses).
+
+    Cette fonction traite notamment le cas des communes des départements et collectivités d'outre-mer pour lesquelles le
+    code utilisé par le ministère de l'intérieur n'a pas toujours suivi la codification de l'INSEE, et comporte même
+    des erreurs étranges.
+
+    :param commune: la série pandas de codes commune à normaliser
+    :return: une série pandas de codes commune normalisés
+    """
+    # identification du département
+    partie_departement = commune.str.slice(0, 2)
+
+    # on identifie les cas d'outremer hors Saint-Barthélémy
+    codes_outremers = (
+        partie_departement.map(CORRESPONDANCE_CODE_DEPARTEMENT) + commune.str.slice(3)
+    ).where(
+        partie_departement != "ZX",
+        "97"
+        + commune.str.slice(
+            2,
+        ),
+    )
+
+    return codes_outremers.fillna(commune)
