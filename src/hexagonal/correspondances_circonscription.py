@@ -1,26 +1,33 @@
+import sys
+
 import pandas as pd
 
-from hexagonal.codes import normaliser_code_circonscription
 
-
-def etablir_correspondances(resultats_bdv, candidats_t1, destination):
+def etablir_correspondances(resultats, candidats, destination):
     resultats = pd.read_csv(
-        resultats_bdv,
+        resultats,
         usecols=["bureau_de_vote", "numero_panneau", "nom", "prenom"],
+        dtype=str,
     )
-    candidats = pd.read_csv(candidats_t1, sep=";").rename(
-        columns={
-            "Nom du candidat": "nom",
-            "Prénom du candidat": "prenom",
-            "Numéro de panneau": "numero_panneau",
-            "Code circonscription": "circonscription",
-        }
-    )
-    candidats["circonscription"] = normaliser_code_circonscription(
-        candidats["circonscription"]
+    candidats = pd.read_csv(
+        candidats,
+        usecols=["circonscription", "numero_panneau", "nom", "prenom"],
+        dtype=str,
     )
 
     correspondance = pd.merge(
         resultats,
         candidats,
-    )
+    )[["bureau_de_vote", "circonscription"]].drop_duplicates()
+
+    assert correspondance.duplicated(["bureau_de_vote"], keep=False).sum() == 0
+
+    correspondance.to_csv(destination, index=False)
+
+
+def run():
+    etablir_correspondances(*sys.argv[1:])
+
+
+if __name__ == "__main__":
+    run()
