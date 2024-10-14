@@ -88,6 +88,7 @@ def normaliser_code_commune(commune: pd.Series) -> pd.Series:
     :return: une série pandas de codes commune normalisés
     """
     # identification du département
+    commune = commune.str.zfill(5)
     partie_departement = commune.str.slice(0, 2)
 
     # on identifie les cas d'outremer hors Saint-Barthélémy

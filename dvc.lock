@@ -8,6 +8,10 @@ stages:
       hash: md5
       md5: c12faa2e574d4844ed8686d17519a9e4
       size: 58668586
+    - path: src/hexagonal/codes.py
+      hash: md5
+      md5: 2f422c10be5c39bd1bf41ec8b7822950
+      size: 4383
     - path: src/hexagonal/resultats/format_2014.py
       hash: md5
       md5: 99df45d880e343c97ca66576175af972
@@ -25,6 +29,10 @@ stages:
       hash: md5
       md5: 21aecbfcb6e0caf8eb09a3b573170623
       size: 108205025
+    - path: src/hexagonal/codes.py
+      hash: md5
+      md5: 2f422c10be5c39bd1bf41ec8b7822950
+      size: 4383
     - path: src/hexagonal/resultats/format_2014.py
       hash: md5
       md5: 99df45d880e343c97ca66576175af972
@@ -42,6 +50,10 @@ stages:
       hash: md5
       md5: 3eaa57f0825abafeeb38dcf81d3f80aa
       size: 42454602
+    - path: src/hexagonal/codes.py
+      hash: md5
+      md5: 2f422c10be5c39bd1bf41ec8b7822950
+      size: 4383
     - path: src/hexagonal/resultats/format_2017.py
       hash: md5
       md5: 30b97e8db7298b518eecc51a8b425665
@@ -59,6 +71,10 @@ stages:
       hash: md5
       md5: f7488f6de8dc80bc650c19c36aab6b4d
       size: 14067818
+    - path: src/hexagonal/codes.py
+      hash: md5
+      md5: 2f422c10be5c39bd1bf41ec8b7822950
+      size: 4383
     - path: src/hexagonal/resultats/format_2017.py
       hash: md5
       md5: 30b97e8db7298b518eecc51a8b425665
@@ -76,6 +92,10 @@ stages:
       hash: md5
       md5: 1fc04aa0a22b83172876987f6146b0ea
       size: 34748748
+    - path: src/hexagonal/codes.py
+      hash: md5
+      md5: 2f422c10be5c39bd1bf41ec8b7822950
+      size: 4383
     - path: src/hexagonal/resultats/format_2017.py
       hash: md5
       md5: 30b97e8db7298b518eecc51a8b425665
@@ -93,6 +113,10 @@ stages:
       hash: md5
       md5: 7f2883a04e3243222ac800d1d73f01eb
       size: 13463989
+    - path: src/hexagonal/codes.py
+      hash: md5
+      md5: 2f422c10be5c39bd1bf41ec8b7822950
+      size: 4383
     - path: src/hexagonal/resultats/format_2017.py
       hash: md5
       md5: 30b97e8db7298b518eecc51a8b425665
@@ -110,6 +134,10 @@ stages:
       hash: md5
       md5: 41122a5230f18ab9736f5a07828b1221
       size: 217110330
+    - path: src/hexagonal/codes.py
+      hash: md5
+      md5: 2f422c10be5c39bd1bf41ec8b7822950
+      size: 4383
     - path: src/hexagonal/resultats/format_2017.py
       hash: md5
       md5: 30b97e8db7298b518eecc51a8b425665
@@ -127,6 +155,10 @@ stages:
       hash: md5
       md5: 134a9746d44fbccabb9136992975c355
       size: 66947997
+    - path: src/hexagonal/codes.py
+      hash: md5
+      md5: 2f422c10be5c39bd1bf41ec8b7822950
+      size: 4383
     - path: src/hexagonal/resultats/format_2017.py
       hash: md5
       md5: 30b97e8db7298b518eecc51a8b425665
@@ -144,6 +176,10 @@ stages:
       hash: md5
       md5: fa88d768c4ce3098a7f883dd9e7b03e7
       size: 6773003
+    - path: src/hexagonal/codes.py
+      hash: md5
+      md5: 2f422c10be5c39bd1bf41ec8b7822950
+      size: 4383
     - path: src/hexagonal/resultats/format_2017.py
       hash: md5
       md5: 30b97e8db7298b518eecc51a8b425665
@@ -161,6 +197,10 @@ stages:
       hash: md5
       md5: 779c9e5cefb35ef7b91379a6a761a1a0
       size: 24572024
+    - path: src/hexagonal/codes.py
+      hash: md5
+      md5: 2f422c10be5c39bd1bf41ec8b7822950
+      size: 4383
     - path: src/hexagonal/resultats/format_2017.py
       hash: md5
       md5: 30b97e8db7298b518eecc51a8b425665
@@ -178,6 +218,10 @@ stages:
       hash: md5
       md5: bccfd795640a1f2684e1c1a921d065d0
       size: 15501944
+    - path: src/hexagonal/codes.py
+      hash: md5
+      md5: 2f422c10be5c39bd1bf41ec8b7822950
+      size: 4383
     - path: src/hexagonal/resultats/format_2017.py
       hash: md5
       md5: 30b97e8db7298b518eecc51a8b425665
@@ -195,6 +239,10 @@ stages:
       hash: md5
       md5: b0e0383c1c736cc49867f05c662ed50f
       size: 65487496
+    - path: src/hexagonal/codes.py
+      hash: md5
+      md5: 2f422c10be5c39bd1bf41ec8b7822950
+      size: 4383
     - path: src/hexagonal/resultats/format_2017.py
       hash: md5
       md5: 30b97e8db7298b518eecc51a8b425665
@@ -212,6 +260,10 @@ stages:
       hash: md5
       md5: 436df1e7dcbe2ac545c537195e0a7299
       size: 33614226
+    - path: src/hexagonal/codes.py
+      hash: md5
+      md5: 2f422c10be5c39bd1bf41ec8b7822950
+      size: 4383
     - path: src/hexagonal/resultats/format_2017.py
       hash: md5
       md5: 30b97e8db7298b518eecc51a8b425665
@@ -229,6 +281,10 @@ stages:
       hash: md5
       md5: ab8e9e02c1253a44a9ec7547851842ad
       size: 36290423
+    - path: src/hexagonal/codes.py
+      hash: md5
+      md5: 2f422c10be5c39bd1bf41ec8b7822950
+      size: 4383
     - path: src/hexagonal/resultats/format_2017.py
       hash: md5
       md5: 30b97e8db7298b518eecc51a8b425665
@@ -246,6 +302,10 @@ stages:
       hash: md5
       md5: 02e9bcfb3e506d7d4ada0a141315c61c
       size: 14215650
+    - path: src/hexagonal/codes.py
+      hash: md5
+      md5: 2f422c10be5c39bd1bf41ec8b7822950
+      size: 4383
     - path: src/hexagonal/resultats/format_2017.py
       hash: md5
       md5: 30b97e8db7298b518eecc51a8b425665
@@ -263,6 +323,10 @@ stages:
       hash: md5
       md5: 863143ce55ac2e71541972bd68ff9365
       size: 36463842
+    - path: src/hexagonal/codes.py
+      hash: md5
+      md5: 2f422c10be5c39bd1bf41ec8b7822950
+      size: 4383
     - path: src/hexagonal/resultats/format_2017.py
       hash: md5
       md5: 30b97e8db7298b518eecc51a8b425665
@@ -280,6 +344,10 @@ stages:
       hash: md5
       md5: c5e0a26fe52ed824208649d15628b528
       size: 13530843
+    - path: src/hexagonal/codes.py
+      hash: md5
+      md5: 2f422c10be5c39bd1bf41ec8b7822950
+      size: 4383
     - path: src/hexagonal/resultats/format_2017.py
       hash: md5
       md5: 30b97e8db7298b518eecc51a8b425665
@@ -297,6 +365,10 @@ stages:
       hash: md5
       md5: b3a9085acb27df6669ac04d5aca2e5da
       size: 254095448
+    - path: src/hexagonal/codes.py
+      hash: md5
+      md5: 2f422c10be5c39bd1bf41ec8b7822950
+      size: 4383
     - path: src/hexagonal/resultats/format_2017.py
       hash: md5
       md5: 30b97e8db7298b518eecc51a8b425665
@@ -314,6 +386,10 @@ stages:
       hash: md5
       md5: 8a9a6ca76b17b2ce3600c400ce800187
       size: 2118726
+    - path: src/hexagonal/codes.py
+      hash: md5
+      md5: 2f422c10be5c39bd1bf41ec8b7822950
+      size: 4383
     - path: src/hexagonal/resultats/format_2017.py
       hash: md5
       md5: 30b97e8db7298b518eecc51a8b425665
@@ -331,6 +407,10 @@ stages:
       hash: md5
       md5: 92547431feb455ad1065815e72c40d8e
       size: 37476376
+    - path: src/hexagonal/codes.py
+      hash: md5
+      md5: 2f422c10be5c39bd1bf41ec8b7822950
+      size: 4383
     - path: src/hexagonal/resultats/format_2017.py
       hash: md5
       md5: 30b97e8db7298b518eecc51a8b425665
@@ -338,8 +418,8 @@ stages:
     outs:
     - path: data/02_clean/2024-legislatives-1-bureau_de_vote.csv
       hash: md5
-      md5: b268fe2d2410ae18d9e2599aceadddc4
-      size: 26331379
+      md5: e84ceea11f11d2ca3064189a5d719a90
+      size: 26361771
   clean@2024-legislatives-1-circonscription:
     cmd: PYTHONPATH=src python -m hexagonal.resultats.format_2017 data/01_raw/2024-legislatives-1-circonscription.csv
       data/02_clean/2024-legislatives-1-circonscription.csv utf8 ";"
@@ -348,6 +428,10 @@ stages:
       hash: md5
       md5: 1d424007d37d7cf2d24d799403d6af00
       size: 337917
+    - path: src/hexagonal/codes.py
+      hash: md5
+      md5: 2f422c10be5c39bd1bf41ec8b7822950
+      size: 4383
     - path: src/hexagonal/resultats/format_2017.py
       hash: md5
       md5: 30b97e8db7298b518eecc51a8b425665
@@ -365,6 +449,10 @@ stages:
       hash: md5
       md5: 063dfce8aa81153f6b535b7ecdb49d6f
       size: 16652378
+    - path: src/hexagonal/codes.py
+      hash: md5
+      md5: 2f422c10be5c39bd1bf41ec8b7822950
+      size: 4383
     - path: src/hexagonal/resultats/format_2017.py
       hash: md5
       md5: 30b97e8db7298b518eecc51a8b425665
@@ -382,6 +470,10 @@ stages:
       hash: md5
       md5: 5232b0951ce8ca92573ea3b35d5d62a0
       size: 147285
+    - path: src/hexagonal/codes.py
+      hash: md5
+      md5: 2f422c10be5c39bd1bf41ec8b7822950
+      size: 4383
     - path: src/hexagonal/resultats/format_2017.py
       hash: md5
       md5: 30b97e8db7298b518eecc51a8b425665
@@ -412,6 +504,10 @@ stages:
       hash: md5
       md5: fb5e45dd6a5ae43c93d3be0969d6c0d0
       size: 317249
+    - path: src/hexagonal/codes.py
+      hash: md5
+      md5: 2f422c10be5c39bd1bf41ec8b7822950
+      size: 4383
     - path: src/hexagonal/resultats/format_2017.py
       hash: md5
       md5: 30b97e8db7298b518eecc51a8b425665
@@ -429,6 +525,10 @@ stages:
       hash: md5
       md5: 292bc96162d5cde4d3cc7c98eeed4e00
       size: 114954
+    - path: src/hexagonal/codes.py
+      hash: md5
+      md5: 2f422c10be5c39bd1bf41ec8b7822950
+      size: 4383
     - path: src/hexagonal/resultats/format_2017.py
       hash: md5
       md5: 30b97e8db7298b518eecc51a8b425665
@@ -446,6 +546,10 @@ stages:
       hash: md5
       md5: 4986d461320a1ab758e4af374464c09c
       size: 325756
+    - path: src/hexagonal/codes.py
+      hash: md5
+      md5: 2f422c10be5c39bd1bf41ec8b7822950
+      size: 4383
     - path: src/hexagonal/resultats/format_2017.py
       hash: md5
       md5: 30b97e8db7298b518eecc51a8b425665
@@ -463,6 +567,10 @@ stages:
       hash: md5
       md5: c827e0066aed7e3fa15557e785d1eb27
       size: 122973
+    - path: src/hexagonal/codes.py
+      hash: md5
+      md5: 2f422c10be5c39bd1bf41ec8b7822950
+      size: 4383
     - path: src/hexagonal/resultats/format_2017.py
       hash: md5
       md5: 30b97e8db7298b518eecc51a8b425665
@@ -524,3 +632,26 @@ stages:
       hash: md5
       md5: 5dc7dc1b36ed7e4f15bf4dd8b2ed27d2
       size: 103043
+  correspondances_bureau_de_vote_circonscription@2024:
+    cmd: PYTHONPATH=src python -m  hexagonal.correspondances_circonscription data/02_clean/2024-legislatives-1-bureau_de_vote.csv
+      data/02_clean/2024-legislatives-1-candidats.csv 
+      data/02_clean/2024-legislatives-correspondances-bureau_de_vote-circonscription.csv
+    deps:
+    - path: data/02_clean/2024-legislatives-1-bureau_de_vote.csv
+      hash: md5
+      md5: e84ceea11f11d2ca3064189a5d719a90
+      size: 26361771
+    - path: data/02_clean/2024-legislatives-1-candidats.csv
+      hash: md5
+      md5: ad8eaee9ac50795b6bfd3e6edea36336
+      size: 384726
+    - path: src/hexagonal/correspondances_circonscription.py
+      hash: md5
+      md5: e14ea7818ce23f34282231e4b85f1ec1
+      size: 749
+    outs:
+    - path: 
+        data/02_clean/2024-legislatives-correspondances-bureau_de_vote-circonscription.csv
+      hash: md5
+      md5: 6726f0c1acf391480bce453c8911e82b
+      size: 1194300

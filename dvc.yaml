@@ -1,11 +1,11 @@
 params:
-- params.yaml
+  - params.yaml
 
 vars:
-- src: "src"
-- raw: "data/01_raw"
-- clean: "data/02_clean"
-- main: "data/03_main"
+  - src: "src"
+  - raw: "data/01_raw"
+  - clean: "data/02_clean"
+  - main: "data/03_main"
 
 stages:
   nettoyer-2020-municipales-1:
@@ -17,6 +17,7 @@ stages:
       - ${raw}/2020-municipales-1-bureau_de_vote_avant_correction.csv
     outs:
       - ${raw}/2020-municipales-1-bureau_de_vote.csv
+
   clean:
     foreach: ${scrutins}
     do:
@@ -25,10 +26,11 @@ stages:
         python -m hexagonal.resultats.format_${item.format}
         ${raw}/${key}.csv ${clean}/${key}.csv ${item.encoding} "${item.delimiter}"
       deps:
-      - ${raw}/${key}.csv
-      - src/hexagonal/resultats/format_${item.format}.py
+        - ${raw}/${key}.csv
+        - ${src}/hexagonal/resultats/format_${item.format}.py
+        - ${src}/hexagonal/codes.py
       outs:
-      - ${clean}/${key}.csv
+        - ${clean}/${key}.csv
 
   2024-legislatives-candidats:
     foreach:
@@ -49,3 +51,20 @@ stages:
         - ${src}/hexagonal/candidatures/2024_legislatives.py
       outs:
         - ${clean}/2024-legislatives-${item}-candidats.csv
+
+  correspondances_bureau_de_vote_circonscription:
+    foreach:
+      - 2024
+    do:
+      cmd: >-
+        PYTHONPATH=${src}
+        python -m  hexagonal.correspondances_circonscription
+        ${clean}/${item}-legislatives-1-bureau_de_vote.csv
+        ${clean}/${item}-legislatives-1-candidats.csv
+        ${clean}/${item}-legislatives-correspondances-bureau_de_vote-circonscription.csv
+      deps:
+        - ${clean}/${item}-legislatives-1-bureau_de_vote.csv
+        - ${clean}/${item}-legislatives-1-candidats.csv
+        - ${src}/hexagonal/correspondances_circonscription.py
+      outs:
+        - ${clean}/${item}-legislatives-correspondances-bureau_de_vote-circonscription.csv
