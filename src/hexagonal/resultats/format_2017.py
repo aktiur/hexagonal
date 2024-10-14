@@ -17,7 +17,11 @@ import sys
 
 import pandas as pd
 
-from hexagonal.codes import normaliser_code_circonscription, normaliser_code_departement
+from hexagonal.codes import (
+    normaliser_code_circonscription,
+    normaliser_code_departement,
+    normaliser_code_commune,
+)
 
 # convertit les codes départements utilisés par le ministère de l'intérieur avant 2024
 correspondance_departements = {
@@ -228,16 +232,14 @@ def clean_results(src, dest, delimiter=";", encoding="utf-8"):
             departement + "-" + df["numero_circonscription"].str.zfill(2)
         )
 
+    if "commune" in df.columns:
+        df["code_commune"] = df["departement"].str.zfill(2) + df["commune"].str.zfill(3)
+
     if "code_commune" in df.columns:
+        df["code_commune"] = normaliser_code_commune(df["code_commune"])
+
         df["bureau_de_vote"] = (
-            df["code_commune"].str.zfill(5) + "-" + df["bureau_in_commune"].str.zfill(4)
-        )
-    elif "commune" in df.columns:
-        df["bureau_de_vote"] = (
-            df["departement"].str.zfill(2)
-            + df["commune"].str.zfill(3)
-            + "-"
-            + df["bureau_in_commune"].str.zfill(4)
+            df["code_commune"] + "-" + df["bureau_in_commune"].str.zfill(4)
         )
 
     clean_columns = [

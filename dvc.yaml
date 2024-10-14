@@ -2,7 +2,7 @@ params:
 - params.yaml
 
 vars:
-- src: "src/"
+- src: "src"
 - raw: "data/01_raw"
 - clean: "data/02_clean"
 - main: "data/03_main"
@@ -26,6 +26,26 @@ stages:
         ${raw}/${key}.csv ${clean}/${key}.csv ${item.encoding} "${item.delimiter}"
       deps:
       - ${raw}/${key}.csv
-      - src/backend/resultats/format_${item.format}.py
+      - src/hexagonal/resultats/format_${item.format}.py
       outs:
       - ${clean}/${key}.csv
+
+  2024-legislatives-candidats:
+    foreach:
+      - 1
+      - 2
+    do:
+      cmd: >-
+        PYTHONPATH=${src}
+        python -m hexagonal.candidatures.2024_legislatives
+        ${raw}/2024-legislatives-${item}-candidats.csv
+        ${raw}/2024-legislatives-nfp-sensibilites.csv
+        ${raw}/2024-legislatives-nuances-lfi.csv
+        ${clean}/2024-legislatives-${item}-candidats.csv
+      deps:
+        - ${raw}/2024-legislatives-${item}-candidats.csv
+        - ${raw}/2024-legislatives-nfp-sensibilites.csv
+        - ${raw}/2024-legislatives-nuances-lfi.csv
+        - ${src}/hexagonal/candidatures/2024_legislatives.py
+      outs:
+        - ${clean}/2024-legislatives-${item}-candidats.csv
