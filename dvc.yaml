@@ -82,7 +82,7 @@ stages:
     do:
       cmd: >-
         PYTHONPATH=${src}
-        python -m  hexagonal.correspondances_circonscription
+        python -m hexagonal.correspondances_circonscription
         ${clean}/${item}-legislatives-1-bureau_de_vote.csv
         ${clean}/${item}-legislatives-1-candidats.csv
         ${clean}/${item}-legislatives-correspondances-bureau_de_vote-circonscription.csv
@@ -93,3 +93,16 @@ stages:
         - ${src}/hexagonal/codes.py
       outs:
         - ${clean}/${item}-legislatives-correspondances-bureau_de_vote-circonscription.csv
+
+  liste_deputees:
+    deps:
+      - ${raw}/assemblee-nationale.zip
+      - ${src}/hexagonal/assemblee_nationale/liste.py
+      - ${src}/hexagonal/assemblee_nationale/utils.py
+    outs:
+      - ${clean}/liste-deputees.csv
+    cmd: >-
+      PYTHONPATH=${src}
+      python -m hexagonal.assemblee_nationale.liste
+      ${raw}/assemblee-nationale.zip
+      ${clean}/liste-deputees.csv

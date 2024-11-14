@@ -1,3 +1,5 @@
 *.csv
 *.parquet
 *.pyc
+*.xlsx
+*.zip

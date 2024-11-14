@@ -641,7 +641,7 @@ stages:
       md5: 5dc7dc1b36ed7e4f15bf4dd8b2ed27d2
       size: 103043
   correspondances_bureau_de_vote_circonscription@2024:
-    cmd: PYTHONPATH=src python -m  hexagonal.correspondances_circonscription data/02_clean/2024-legislatives-1-bureau_de_vote.csv
+    cmd: PYTHONPATH=src python -m hexagonal.correspondances_circonscription data/02_clean/2024-legislatives-1-bureau_de_vote.csv
       data/02_clean/2024-legislatives-1-candidats.csv 
       data/02_clean/2024-legislatives-correspondances-bureau_de_vote-circonscription.csv
     deps:
@@ -735,3 +735,24 @@ stages:
       hash: md5
       md5: 9810fec257c44c821537636eb105e8b9
       size: 204232
+  liste_deputees:
+    cmd: PYTHONPATH=src python -m hexagonal.assemblee_nationale.liste data/01_raw/assemblee-nationale.zip
+      data/02_clean/liste-deputees.csv
+    deps:
+    - path: data/01_raw/assemblee-nationale.zip
+      hash: md5
+      md5: 481301a30bd9167620e7374a8ac6ebf5
+      size: 12677393
+    - path: src/hexagonal/assemblee_nationale/liste.py
+      hash: md5
+      md5: c2e5a4fca12f9e920055534b9d366457
+      size: 3850
+    - path: src/hexagonal/assemblee_nationale/utils.py
+      hash: md5
+      md5: d41d8cd98f00b204e9800998ecf8427e
+      size: 0
+    outs:
+    - path: data/02_clean/liste-deputees.csv
+      hash: md5
+      md5: c991617f0e90b7ec1d70c39ae1a9bced
+      size: 252986
