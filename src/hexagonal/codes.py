@@ -26,6 +26,7 @@ outremers = [
 CORRESPONDANCE_CODE_DEPARTEMENT = {
     o.code_interieur: o.code_insee for o in outremers if o.code_interieur != "ZX"
 }
+CORRESPONDANCE_CODE_DEPARTEMENT["99"] = "ZZ"
 
 
 def normaliser_code_departement(departement: pd.Series) -> pd.Series:
@@ -39,7 +40,8 @@ def normaliser_code_departement(departement: pd.Series) -> pd.Series:
       d'Outremer et la collectivité d'Outremer de Saint-Pierre-et-Miquelon) ou par 98
       (collectivités d'Outremer de Polynésie française, de Nouvelle-Calédonie et de Wallis-et-Futuna)
     - Saint-Barthélémy et Saint-Martin reçoivent un code département commun de ZX
-    - ZZ pour les français de l'étranger
+    - ZZ pour les français de l'étranger (plutôt que le 99 employé par l'INSEE, car codes « communes » utilisés par le
+      ministère de l'intérieur ne correspondent pas aux codes pays étrangers du COG)
 
 
     Jusqu'en 2014, le ministère de l'intérieur n'utilisait pas les codes à trois chiffres de l'INSEE (par exemple
@@ -70,6 +72,7 @@ def normaliser_code_circonscription(circonscription: pd.Series) -> pd.Series:
     :return: une série pandas de codes circonscription normalisés
     """
     departement = normaliser_code_departement(circonscription.str.slice(0, -2))
+    departement = departement.where(~departement.isin(["977", "978"]), "ZX")
     numero = circonscription.str.slice(-2)
     return departement + "-" + numero
 
@@ -92,14 +95,10 @@ def normaliser_code_commune(commune: pd.Series) -> pd.Series:
     partie_departement = commune.str.slice(0, 2)
 
     # on identifie les cas d'outremer hors Saint-Barthélémy
-    codes_outremers = (
-        partie_departement.map(CORRESPONDANCE_CODE_DEPARTEMENT) + commune.str.slice(3)
-    ).where(
-        partie_departement != "ZX",
-        "97"
-        + commune.str.slice(
-            2,
-        ),
+    codes_outremers_fe = (
+        (partie_departement.map(CORRESPONDANCE_CODE_DEPARTEMENT) + commune.str.slice(3))
+        .where(partie_departement != "ZX", "97" + commune.str.slice(2))
+        .where(partie_departement != "99", "ZZ" + commune.str.slice(2))
     )
 
-    return codes_outremers.fillna(commune)
+    return codes_outremers_fe.fillna(commune)

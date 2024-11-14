@@ -49,8 +49,32 @@ stages:
         - ${raw}/2024-legislatives-nfp-sensibilites.csv
         - ${raw}/2024-legislatives-nuances-lfi.csv
         - ${src}/hexagonal/candidatures/2024_legislatives.py
+        - ${src}/hexagonal/codes.py
       outs:
         - ${clean}/2024-legislatives-${item}-candidats.csv
+
+
+  2022-legislatives-candidats:
+    foreach:
+      - 1
+      - 2
+    do:
+      cmd: >-
+        PYTHONPATH=${src}
+        python -m hexagonal.candidatures.2022_legislatives
+        ${raw}/2022-legislatives-${item}-candidats.csv
+        ${raw}/2022-legislatives-nuances-lemonde.csv
+        ${raw}/2022-legislatives-nuances-legis-2022.csv
+        ${clean}/2022-legislatives-${item}-candidats.csv
+      deps:
+        - ${raw}/2022-legislatives-${item}-candidats.csv
+        - ${raw}/2022-legislatives-nuances-lemonde.csv
+        - ${raw}/2022-legislatives-nuances-legis-2022.csv
+        - ${src}/hexagonal/candidatures/2022_legislatives.py
+        - ${src}/hexagonal/codes.py
+        - ${src}/hexagonal/codes.py
+      outs:
+        - ${clean}/2022-legislatives-${item}-candidats.csv
 
   correspondances_bureau_de_vote_circonscription:
     foreach:
@@ -66,5 +90,6 @@ stages:
         - ${clean}/${item}-legislatives-1-bureau_de_vote.csv
         - ${clean}/${item}-legislatives-1-candidats.csv
         - ${src}/hexagonal/correspondances_circonscription.py
+        - ${src}/hexagonal/codes.py
       outs:
         - ${clean}/${item}-legislatives-correspondances-bureau_de_vote-circonscription.csv
