@@ -22,6 +22,7 @@ dvc = "^3.55.2"
 format_2017 = "hexagonal.resultats.format_2017:run"
 format_2014 = "hexagonal.resultats.format_2014:run"
 liste_deputees = "hexagonal.assemblee_nationale.liste:run"
+mandats_deputees = "hexagonal.assemblee_nationale.mandats:run"
 
 [build-system]
 requires = ["poetry-core"]

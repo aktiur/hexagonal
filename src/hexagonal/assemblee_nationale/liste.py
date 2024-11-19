@@ -1,12 +1,11 @@
 import csv
-import json
-import re
 import sys
 from operator import itemgetter
-from zipfile import ZipFile, Path
+from zipfile import ZipFile
 
 from glom import glom, Coalesce, Invoke, T
 
+from hexagonal.assemblee_nationale.utils import possiblement_nul, json_deputees
 
 PCS_FAM = {
     "Agriculteurs exploitants": "1",
@@ -49,14 +48,6 @@ PCS_CAT = {
 }
 
 
-def possiblement_nul(d):
-    if isinstance(d, dict):
-        if "@xsi:nil" in d and d["@xsi:nil"] == "true":
-            return ""
-        raise ValueError(f"Valeur incorrecte: {d!r}")
-    return d
-
-
 def legislatures_depute(depute):
     if not isinstance((mandats := depute["mandats"]["mandat"]), list):
         mandats = [mandats]
@@ -86,12 +77,6 @@ spec_extraction_liste_deputee = {
         Invoke(PCS_CAT.get).specs(T).constants(""),
     ),
 }
-
-
-def json_deputees(archive):
-    for deputee_file in (Path(archive) / "json" / "acteur").iterdir():
-        with deputee_file.open() as fd:
-            yield json.load(fd)["acteur"]
 
 
 def extraire_liste_deputes(archive, out_file):
