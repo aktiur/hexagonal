@@ -787,8 +787,8 @@ stages:
       size: 12677393
     - path: src/hexagonal/assemblee_nationale/mandats.py
       hash: md5
-      md5: d414e9d13ad2093d3412a0f37ee89e7d
-      size: 3317
+      md5: 79d2cfa38c306dde5a304426ed2a664a
+      size: 3397
     - path: src/hexagonal/assemblee_nationale/utils.py
       hash: md5
       md5: faa2b59c4d09e635004eda3991f0b32d
@@ -796,8 +796,8 @@ stages:
     outs:
     - path: data/02_clean/an_mandats.csv
       hash: md5
-      md5: 21c04ecbab051060fd1159f583029a34
-      size: 400351
+      md5: 365b608d2857cce85fc4732e3b424012
+      size: 403741
   an_groupes:
     cmd: PYTHONPATH=src python -m hexagonal.assemblee_nationale.groupes data/01_raw/assemblee-nationale.zip
       data/02_clean/an_groupes.csv data/02_clean/an_affiliations.csv

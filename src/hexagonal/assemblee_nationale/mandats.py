@@ -29,8 +29,17 @@ CAUSES_MANDATS = {
 def circonscription(d):
     lieu = d.get("election", {}).get("lieu", {})
 
-    if (dep := lieu.get("numDepartement")) and (numero := lieu.get("numCirco")):
-        return f"{dep}-{numero}"
+    SUBS = {
+        "099": "ZZ",
+        "977": "ZX",
+    }
+
+    dep = lieu["numDepartement"]
+    numero = lieu["numCirco"].zfill(2)
+
+    dep = SUBS.get(dep, dep)
+
+    return f"{dep}-{numero}"
 
 
 spec_extraction_mandat = {
