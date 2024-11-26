@@ -11,26 +11,26 @@ stages:
   nettoyer-2020-municipales-1:
     cmd: >-
       sed '13751,13752s/ \t / / ; 16921s/ \t / /'
-      < ${raw}/2020-municipales-1-bureau_de_vote_avant_correction.csv
-      > ${raw}/2020-municipales-1-bureau_de_vote.csv
+      < ${raw}/elections/2020-municipales-1-bureau_de_vote_avant_correction.csv
+      > ${raw}/elections/2020-municipales-1-bureau_de_vote.csv
     deps:
-      - ${raw}/2020-municipales-1-bureau_de_vote_avant_correction.csv
+      - ${raw}/elections/2020-municipales-1-bureau_de_vote_avant_correction.csv
     outs:
-      - ${raw}/2020-municipales-1-bureau_de_vote.csv
+      - ${raw}/elections/2020-municipales-1-bureau_de_vote.csv
 
-  clean:
+  normaliser-format-elections:
     foreach: ${scrutins}
     do:
       cmd: >-
         PYTHONPATH=${src}
         python -m hexagonal.resultats.format_${item.format}
-        ${raw}/${key}.csv ${clean}/${key}.csv ${item.encoding} "${item.delimiter}"
+        ${raw}/elections/${key}.csv ${clean}/elections/${key}.csv ${item.encoding} "${item.delimiter}"
       deps:
-        - ${raw}/${key}.csv
+        - ${raw}/elections/${key}.csv
         - ${src}/hexagonal/resultats/format_${item.format}.py
         - ${src}/hexagonal/codes.py
       outs:
-        - ${clean}/${key}.csv
+        - ${clean}/elections/${key}.csv
 
   2024-legislatives-candidats:
     foreach:
@@ -40,19 +40,18 @@ stages:
       cmd: >-
         PYTHONPATH=${src}
         python -m hexagonal.candidatures.2024_legislatives
-        ${raw}/2024-legislatives-${item}-candidats.csv
-        ${raw}/2024-legislatives-nfp-sensibilites.csv
-        ${raw}/2024-legislatives-nuances-lfi.csv
-        ${clean}/2024-legislatives-${item}-candidats.csv
+        ${raw}/elections/2024-legislatives-${item}-candidats.csv
+        ${raw}/elections/2024-legislatives-nfp-sensibilites.csv
+        ${raw}/elections/2024-legislatives-nuances-lfi.csv
+        ${clean}/elections/2024-legislatives-${item}-candidats.csv
       deps:
-        - ${raw}/2024-legislatives-${item}-candidats.csv
-        - ${raw}/2024-legislatives-nfp-sensibilites.csv
-        - ${raw}/2024-legislatives-nuances-lfi.csv
+        - ${raw}/elections/2024-legislatives-${item}-candidats.csv
+        - ${raw}/elections/2024-legislatives-nfp-sensibilites.csv
+        - ${raw}/elections/2024-legislatives-nuances-lfi.csv
         - ${src}/hexagonal/candidatures/2024_legislatives.py
         - ${src}/hexagonal/codes.py
       outs:
-        - ${clean}/2024-legislatives-${item}-candidats.csv
-
+        - ${clean}/elections/2024-legislatives-${item}-candidats.csv
 
   2022-legislatives-candidats:
     foreach:
@@ -62,19 +61,19 @@ stages:
       cmd: >-
         PYTHONPATH=${src}
         python -m hexagonal.candidatures.2022_legislatives
-        ${raw}/2022-legislatives-${item}-candidats.csv
-        ${raw}/2022-legislatives-nuances-lemonde.csv
-        ${raw}/2022-legislatives-nuances-legis-2022.csv
-        ${clean}/2022-legislatives-${item}-candidats.csv
+        ${raw}/elections/2022-legislatives-${item}-candidats.csv
+        ${raw}/elections/2022-legislatives-nuances-lemonde.csv
+        ${raw}/elections/2022-legislatives-nuances-legis-2022.csv
+        ${clean}/elections/2022-legislatives-${item}-candidats.csv
       deps:
-        - ${raw}/2022-legislatives-${item}-candidats.csv
-        - ${raw}/2022-legislatives-nuances-lemonde.csv
-        - ${raw}/2022-legislatives-nuances-legis-2022.csv
+        - ${raw}/elections/2022-legislatives-${item}-candidats.csv
+        - ${raw}/elections/2022-legislatives-nuances-lemonde.csv
+        - ${raw}/elections/2022-legislatives-nuances-legis-2022.csv
         - ${src}/hexagonal/candidatures/2022_legislatives.py
         - ${src}/hexagonal/codes.py
         - ${src}/hexagonal/codes.py
       outs:
-        - ${clean}/2022-legislatives-${item}-candidats.csv
+        - ${clean}/elections/2022-legislatives-${item}-candidats.csv
 
   correspondances_bureau_de_vote_circonscription:
     foreach:
@@ -83,54 +82,54 @@ stages:
       cmd: >-
         PYTHONPATH=${src}
         python -m hexagonal.correspondances_circonscription
-        ${clean}/${item}-legislatives-1-bureau_de_vote.csv
-        ${clean}/${item}-legislatives-1-candidats.csv
-        ${clean}/${item}-legislatives-correspondances-bureau_de_vote-circonscription.csv
+        ${clean}/elections/${item}-legislatives-1-bureau_de_vote.csv
+        ${clean}/elections/${item}-legislatives-1-candidats.csv
+        ${clean}/elections/${item}-legislatives-correspondances-bureau_de_vote-circonscription.csv
       deps:
-        - ${clean}/${item}-legislatives-1-bureau_de_vote.csv
-        - ${clean}/${item}-legislatives-1-candidats.csv
+        - ${clean}/elections/${item}-legislatives-1-bureau_de_vote.csv
+        - ${clean}/elections/${item}-legislatives-1-candidats.csv
         - ${src}/hexagonal/correspondances_circonscription.py
         - ${src}/hexagonal/codes.py
       outs:
-        - ${clean}/${item}-legislatives-correspondances-bureau_de_vote-circonscription.csv
+        - ${clean}/elections/${item}-legislatives-correspondances-bureau_de_vote-circonscription.csv
 
-  an_deputees:
+  assemblee_nationale_deputees:
     deps:
       - ${raw}/assemblee-nationale.zip
       - ${src}/hexagonal/assemblee_nationale/liste.py
       - ${src}/hexagonal/assemblee_nationale/utils.py
     outs:
-      - ${clean}/an_deputes.csv
+      - ${clean}/assemblee_nationale/deputes.csv
     cmd: >-
       PYTHONPATH=${src}
       python -m hexagonal.assemblee_nationale.liste
       ${raw}/assemblee-nationale.zip
-      ${clean}/an_deputes.csv
+      ${clean}/assemblee_nationale/deputes.csv
 
-  an_mandats:
+  assemblee_nationale_mandats:
     deps:
       - ${raw}/assemblee-nationale.zip
       - ${src}/hexagonal/assemblee_nationale/mandats.py
       - ${src}/hexagonal/assemblee_nationale/utils.py
     outs:
-      - ${clean}/an_mandats.csv
+      - ${clean}/assemblee_nationale/mandats.csv
     cmd: >-
       PYTHONPATH=${src}
       python -m hexagonal.assemblee_nationale.mandats
       ${raw}/assemblee-nationale.zip
-      ${clean}/an_mandats.csv
+      ${clean}/assemblee_nationale/mandats.csv
 
-  an_groupes:
+  assemblee_nationale_groupes:
     deps:
       - ${raw}/assemblee-nationale.zip
       - ${src}/hexagonal/assemblee_nationale/groupes.py
       - ${src}/hexagonal/assemblee_nationale/utils.py
     outs:
-      - ${clean}/an_groupes.csv
-      - ${clean}/an_affiliations.csv
+      - ${clean}/assemblee_nationale/groupes.csv
+      - ${clean}/assemblee_nationale/affiliations.csv
     cmd: >-
       PYTHONPATH=${src}
       python -m hexagonal.assemblee_nationale.groupes
       ${raw}/assemblee-nationale.zip
-      ${clean}/an_groupes.csv
-      ${clean}/an_affiliations.csv
+      ${clean}/assemblee_nationale/groupes.csv
+      ${clean}/assemblee_nationale/affiliations.csv
