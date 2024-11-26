@@ -3,10 +3,9 @@ import sys
 from operator import itemgetter
 from zipfile import ZipFile
 
-from glom import S, Flatten, glom, Iter, Check, SKIP, Spec, Coalesce, Invoke, T
+from glom import S, Flatten, glom, Iter, Check, SKIP, Spec, Coalesce
 
-from hexagonal.assemblee_nationale.utils import json_deputees, possiblement_nul
-
+from hexagonal.assemblee_nationale.utils import json_deputees, possiblement_nul, to_list
 
 CAUSES_MANDATS = {
     "élections générales": "GENERAL",
@@ -34,14 +33,9 @@ def circonscription(d):
         return f"{dep}-{numero}"
 
 
-def to_list(v):
-    if isinstance(v, list):
-        return v
-    return [v]
-
-
 spec_extraction_mandat = {
-    "identifiant_an": S.uid,
+    "id_mandat": "uid",
+    "id_personne": S.uid,
     "prenom": S.prenom,
     "nom": S.nom,
     "legislature": "legislature",
@@ -74,8 +68,11 @@ def extraire_mandats(archive, out_file):
     writer.writeheader()
 
     mandats = sorted(
-        glom(json_deputees(archive), (Iter(spec_deputees), Flatten())),
-        key=itemgetter("date_debut", "identifiant_an"),
+        glom(
+            json_deputees(archive),
+            (Iter(spec_deputees), Flatten()),
+        ),
+        key=itemgetter("date_debut", "id_mandat"),
     )
     writer.writerows(mandats)
 

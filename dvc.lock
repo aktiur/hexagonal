@@ -756,3 +756,70 @@ stages:
       hash: md5
       md5: c991617f0e90b7ec1d70c39ae1a9bced
       size: 252986
+  an_deputees:
+    cmd: PYTHONPATH=src python -m hexagonal.assemblee_nationale.liste data/01_raw/assemblee-nationale.zip
+      data/02_clean/an_deputes.csv
+    deps:
+    - path: data/01_raw/assemblee-nationale.zip
+      hash: md5
+      md5: 481301a30bd9167620e7374a8ac6ebf5
+      size: 12677393
+    - path: src/hexagonal/assemblee_nationale/liste.py
+      hash: md5
+      md5: ba537f557170afc705f03da9727b57d5
+      size: 3513
+    - path: src/hexagonal/assemblee_nationale/utils.py
+      hash: md5
+      md5: faa2b59c4d09e635004eda3991f0b32d
+      size: 894
+    outs:
+    - path: data/02_clean/an_deputes.csv
+      hash: md5
+      md5: 32b6e1a65c5538e951d8f5f3722649b4
+      size: 252983
+  an_mandats:
+    cmd: PYTHONPATH=src python -m hexagonal.assemblee_nationale.mandats data/01_raw/assemblee-nationale.zip
+      data/02_clean/an_mandats.csv
+    deps:
+    - path: data/01_raw/assemblee-nationale.zip
+      hash: md5
+      md5: 481301a30bd9167620e7374a8ac6ebf5
+      size: 12677393
+    - path: src/hexagonal/assemblee_nationale/mandats.py
+      hash: md5
+      md5: d414e9d13ad2093d3412a0f37ee89e7d
+      size: 3317
+    - path: src/hexagonal/assemblee_nationale/utils.py
+      hash: md5
+      md5: faa2b59c4d09e635004eda3991f0b32d
+      size: 894
+    outs:
+    - path: data/02_clean/an_mandats.csv
+      hash: md5
+      md5: 21c04ecbab051060fd1159f583029a34
+      size: 400351
+  an_groupes:
+    cmd: PYTHONPATH=src python -m hexagonal.assemblee_nationale.groupes data/01_raw/assemblee-nationale.zip
+      data/02_clean/an_groupes.csv data/02_clean/an_affiliations.csv
+    deps:
+    - path: data/01_raw/assemblee-nationale.zip
+      hash: md5
+      md5: 481301a30bd9167620e7374a8ac6ebf5
+      size: 12677393
+    - path: src/hexagonal/assemblee_nationale/groupes.py
+      hash: md5
+      md5: 55db34fac127b5810b814e23408af53a
+      size: 2864
+    - path: src/hexagonal/assemblee_nationale/utils.py
+      hash: md5
+      md5: faa2b59c4d09e635004eda3991f0b32d
+      size: 894
+    outs:
+    - path: data/02_clean/an_affiliations.csv
+      hash: md5
+      md5: 04eec8cb5ed026b8d1b49753fe1f7338
+      size: 315898
+    - path: data/02_clean/an_groupes.csv
+      hash: md5
+      md5: 3c3b5cdbb812161dee7ae3a72b59b05f
+      size: 4826

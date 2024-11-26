@@ -1,3 +1,4 @@
+import csv
 import json
 from zipfile import Path
 
@@ -20,3 +21,16 @@ def json_organes(archive):
     for organe_file in (Path(archive) / "json" / "organe").iterdir():
         with organe_file.open() as fd:
             yield json.load(fd)["organe"]
+
+
+def ecrire_csv(rows, fields, out_file):
+    with open(out_file, "w", newline="") as fd:
+        writer = csv.DictWriter(fd, fieldnames=fields)
+        writer.writeheader()
+        writer.writerows(rows)
+
+
+def to_list(v):
+    if isinstance(v, list):
+        return v
+    return [v]

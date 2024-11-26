@@ -57,7 +57,7 @@ def legislatures_depute(depute):
 
 
 spec_extraction_liste_deputee = {
-    "identifiant_an": Coalesce("uid.#text", "uid"),
+    "id_personne": Coalesce("uid.#text", "uid"),
     "civilite": "etatCivil.ident.civ",
     "prenom": "etatCivil.ident.prenom",
     "nom": "etatCivil.ident.nom",
@@ -87,7 +87,7 @@ def extraire_liste_deputes(archive, out_file):
     deputes = glom(json_deputees(archive), [spec_extraction_liste_deputee])
 
     # noinspection PyTypeChecker
-    writer.writerows(sorted(deputes, key=itemgetter("identifiant_an")))
+    writer.writerows(sorted(deputes, key=itemgetter("id_personne")))
 
 
 def run():
