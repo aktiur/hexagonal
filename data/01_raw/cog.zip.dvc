@@ -1,0 +1,11 @@
+md5: dc3026e4a58b16eec0ac3109eb6ab1d9
+frozen: true
+deps:
+- checksum: '132485229163028514067923878084112093288'
+  hash: md5
+  path: https://www.insee.fr/fr/statistiques/fichier/7766585/cog_ensemble_2024_csv.zip
+outs:
+- md5: 05b4046e254c75d9f558c0f3d4ba3c60
+  size: 1879699
+  hash: md5
+  path: cog.zip
