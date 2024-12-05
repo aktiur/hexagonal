@@ -145,3 +145,19 @@ stages:
       python -m hexagonal.rne.extraire
       ${raw}/rne
       ${clean}/rne
+
+  annuaire_organismes:
+    deps:
+      - ${raw}/annuaire/annuaire.tar.bz2
+      - ${src}/hexagonal/annuaire/extraire_organismes.py
+    outs:
+      - ${raw}/annuaire/mairies.json
+      - ${raw}/annuaire/epcis.json
+      - ${raw}/annuaire/conseils_departementaux.json
+      - ${raw}/annuaire/conseils_regionaux.json
+      - ${raw}/annuaire/prefectures.json
+    cmd: >-
+      PYTHONPATH=${src}
+      python -m hexagonal.annuaire.extraire_organismes
+      ${raw}/annuaire/annuaire.tar.bz2
+      ${raw}/annuaire/

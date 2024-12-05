@@ -12,18 +12,13 @@ packages = [
 python = "^3.12"
 pandas = "^2.2.2"
 glom = "^24.11.0"
+json-stream = "^2.3.2"
 
 [tool.poetry.group.dev.dependencies]
 ipython = "^8.26.0"
 black = "^24.8.0"
 dvc = "^3.55.2"
 dvc-s3 = "^3.2.0"
-
-[tool.poetry.scripts]
-format_2017 = "hexagonal.resultats.format_2017:run"
-format_2014 = "hexagonal.resultats.format_2014:run"
-liste_deputees = "hexagonal.assemblee_nationale.liste:run"
-mandats_deputees = "hexagonal.assemblee_nationale.mandats:run"
 
 [build-system]
 requires = ["poetry-core"]

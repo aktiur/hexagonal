@@ -802,6 +802,39 @@ stages:
       hash: md5
       md5: 3c3b5cdbb812161dee7ae3a72b59b05f
       size: 4826
+  annuaire_organismes:
+    cmd: PYTHONPATH=src python -m hexagonal.annuaire.extraire_organismes data/01_raw/annuaire/annuaire.tar.bz2
+      data/01_raw/annuaire/
+    deps:
+    - path: data/01_raw/annuaire/annuaire.tar.bz2
+      hash: md5
+      md5: 99c58ee799f98341a2650fdfcfe653e5
+      size: 170914484
+    - path: src/hexagonal/annuaire/extraire_organismes.py
+      hash: md5
+      md5: 631cccc74d79b18d1e91b4995621bc28
+      size: 1841
+    outs:
+    - path: data/01_raw/annuaire/conseils_departementaux.json
+      hash: md5
+      md5: 1ae09b76ec79562b45cc7db5774ee198
+      size: 477079
+    - path: data/01_raw/annuaire/conseils_regionaux.json
+      hash: md5
+      md5: a2a1f4d0a7a1fab329844ba4e3eaef84
+      size: 75151
+    - path: data/01_raw/annuaire/epcis.json
+      hash: md5
+      md5: edfe12bad1113a482c9a3b1a098dd9f3
+      size: 3003660
+    - path: data/01_raw/annuaire/mairies.json
+      hash: md5
+      md5: bf11c627119c09d75bc88be433d996d5
+      size: 80808204
+    - path: data/01_raw/annuaire/prefectures.json
+      hash: md5
+      md5: f7e71bfc0c1beff22dbb905e1cf76401
+      size: 1547039
   rne:
     cmd: PYTHONPATH=src python -m hexagonal.rne.extraire data/01_raw/rne data/02_clean/rne
     deps:
