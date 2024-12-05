@@ -802,3 +802,19 @@ stages:
       hash: md5
       md5: 3c3b5cdbb812161dee7ae3a72b59b05f
       size: 4826
+  rne:
+    cmd: PYTHONPATH=src python -m hexagonal.rne.extraire data/01_raw/rne data/02_clean/rne
+    deps:
+    - path: data/01_raw/rne/conseillers_municipaux.csv
+      hash: md5
+      md5: ba04a3782f9cbb41b4487a0a6c048873
+      size: 62375762
+    - path: src/hexagonal/rne/extraire.py
+      hash: md5
+      md5: 3f4152a9e7d1e164d2c508b8e26388a3
+      size: 1358
+    outs:
+    - path: data/02_clean/rne/conseillers_municipaux.csv
+      hash: md5
+      md5: 061c1abd3b043b8254ba638d3499c3df
+      size: 33348251

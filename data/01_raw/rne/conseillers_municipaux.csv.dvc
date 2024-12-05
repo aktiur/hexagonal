@@ -1,0 +1,12 @@
+md5: 283b462776822f4c761c4001b4c7729b
+frozen: true
+deps:
+- checksum: '"67235335-3b7c752"'
+  size: 62375762
+  hash: md5
+  path: https://www.data.gouv.fr/fr/datasets/r/d5f400de-ae3f-4966-8cb6-a85c70c6c24a
+outs:
+- md5: ba04a3782f9cbb41b4487a0a6c048873
+  size: 62375762
+  hash: md5
+  path: conseillers_municipaux.csv

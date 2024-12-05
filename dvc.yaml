@@ -133,3 +133,15 @@ stages:
       ${raw}/assemblee-nationale.zip
       ${clean}/assemblee_nationale/groupes.csv
       ${clean}/assemblee_nationale/affiliations.csv
+
+  rne:
+    deps:
+      - ${raw}/rne/conseillers_municipaux.csv
+      - ${src}/hexagonal/rne/extraire.py
+    outs:
+      - ${clean}/rne/conseillers_municipaux.csv
+    cmd: >-
+      PYTHONPATH=${src}
+      python -m hexagonal.rne.extraire
+      ${raw}/rne
+      ${clean}/rne
