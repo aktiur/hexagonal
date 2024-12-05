@@ -1,5 +1,18 @@
 schema: '2.0'
 stages:
+  nettoyer-2020-municipales-1:
+    cmd: sed '13751,13752s/ \t / / ; 16921s/ \t / /' < data/01_raw/elections/2020-municipales-1-bureau_de_vote_avant_correction.csv
+      > data/01_raw/elections/2020-municipales-1-bureau_de_vote.csv
+    deps:
+    - path: data/01_raw/elections/2020-municipales-1-bureau_de_vote_avant_correction.csv
+      hash: md5
+      md5: d5ed37c4abd7a4952826ead2ca11a408
+      size: 66948003
+    outs:
+    - path: data/01_raw/elections/2020-municipales-1-bureau_de_vote.csv
+      hash: md5
+      md5: 134a9746d44fbccabb9136992975c355
+      size: 66947997
   normaliser-format-elections@2012-presidentielle-bureau_de_vote:
     cmd: PYTHONPATH=src python -m hexagonal.resultats.format_2014 data/01_raw/elections/2012-presidentielle-bureau_de_vote.csv
       data/02_clean/elections/2012-presidentielle-bureau_de_vote.csv latin1 ";"
