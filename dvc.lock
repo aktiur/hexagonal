@@ -851,3 +851,20 @@ stages:
       hash: md5
       md5: 061c1abd3b043b8254ba638d3499c3df
       size: 33348251
+  annuaires_mairies:
+    cmd: PYTHONPATH=src python -m hexagonal.annuaire.nettoyer data/01_raw/annuaire/mairies.json
+      data/02_clean/annuaire/mairies.csv
+    deps:
+    - path: data/01_raw/annuaire/mairies.json
+      hash: md5
+      md5: bf11c627119c09d75bc88be433d996d5
+      size: 80808204
+    - path: src/hexagonal/annuaire/nettoyer.py
+      hash: md5
+      md5: c7d468202f4c9448a1124a0dde950087
+      size: 3356
+    outs:
+    - path: data/02_clean/annuaire/mairies.csv
+      hash: md5
+      md5: 31bbaaa0911e0e19822083d06ccd1e67
+      size: 10444551

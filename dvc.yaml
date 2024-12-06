@@ -161,3 +161,15 @@ stages:
       python -m hexagonal.annuaire.extraire_organismes
       ${raw}/annuaire/annuaire.tar.bz2
       ${raw}/annuaire/
+
+  annuaires_mairies:
+    deps:
+      - ${raw}/annuaire/mairies.json
+      - ${src}/hexagonal/annuaire/nettoyer.py
+    outs:
+      - ${clean}/annuaire/mairies.csv
+    cmd: >-
+      PYTHONPATH=${src}
+      python -m hexagonal.annuaire.nettoyer
+      ${raw}/annuaire/mairies.json
+      ${clean}/annuaire/mairies.csv
