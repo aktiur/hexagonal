@@ -20,3 +20,8 @@ TYPES_NOMS = [
     TypeNom(7, "las ", "de las "),
     TypeNom(8, "los ", "de los"),
 ]
+
+
+def nom_complet_commune(nom, type_nom):
+    article = TYPES_NOMS[type_nom].article.title()
+    return f"{article}{nom}"

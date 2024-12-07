@@ -1,4 +1,5 @@
 import json
+import re
 import sys
 import tarfile
 from contextlib import contextmanager
@@ -7,7 +8,7 @@ from pathlib import Path
 import json_stream
 from json_stream.dump import JSONStreamEncoder
 
-PATH = "./2024-12-04_060019-data.gouv_local.json"
+PATH_RE = re.compile(r"\./\d{4}-\d{2}-\d{2}_\d{6}-data.gouv_local.json")
 
 ORGANISMES = {
     "mairies": [
@@ -46,7 +47,13 @@ def ouvrir_pour_ecrire(out_dir: Path):
 
 
 def extraire(archive: tarfile.TarFile, out_path):
-    with archive.extractfile(PATH) as organismes_fd, ouvrir_pour_ecrire(
+    while info := archive.next():
+        if PATH_RE.match(info.path):
+            break
+    else:
+        raise FileNotFoundError("Pas possible de trouver le fichier.")
+
+    with archive.extractfile(info) as organismes_fd, ouvrir_pour_ecrire(
         out_path
     ) as out_fds:
         service = json_stream.load(organismes_fd)["service"]

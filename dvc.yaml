@@ -90,6 +90,24 @@ stages:
         ${raw}/elections/${item}-presidentielle-parrainages.csv
         ${clean}/elections/${item}-presidentielle-parrainages.csv
 
+  qualifier-parrainages:
+    foreach:
+      - 2022
+    do:
+      deps:
+        - ${clean}/elections/${item}-presidentielle-parrainages.csv
+        - ${clean}/cog/departements.csv
+        - ${clean}/cog/communes.csv
+        - ${src}/hexagonal/parrainages/qualifier.py
+      outs:
+        - ${main}/elections/${item}-presidentielle-parrainages.csv
+      cmd: >-
+        ${python} hexagonal.parrainages.qualifier
+        ${clean}/elections/${item}-presidentielle-parrainages.csv
+        ${clean}/cog/departements.csv
+        ${clean}/cog/communes.csv
+        ${main}/elections/${item}-presidentielle-parrainages.csv
+
   correspondances_bureau_de_vote_circonscription:
     foreach:
       - 2024

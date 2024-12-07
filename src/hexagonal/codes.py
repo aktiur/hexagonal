@@ -7,20 +7,21 @@ import pandas as pd
 class Outremer:
     code_insee: str
     code_interieur: str
+    nom: str
 
 
 outremers = [
-    Outremer("971", "ZA"),
-    Outremer("972", "ZB"),
-    Outremer("973", "ZC"),
-    Outremer("974", "ZD"),
-    Outremer("976", "ZM"),
-    Outremer("988", "ZN"),
-    Outremer("987", "ZP"),
-    Outremer("975", "ZS"),
-    Outremer("986", "ZW"),
-    Outremer("977", "ZX"),
-    Outremer("978", "ZX"),
+    Outremer("971", "ZA", "Guadeloupe"),
+    Outremer("972", "ZB", "Martinique"),
+    Outremer("973", "ZC", "Guyane"),
+    Outremer("974", "ZD", "La Réunion"),
+    Outremer("976", "ZM", "Mayotte"),
+    Outremer("988", "ZN", "Nouvelle-Calédonie"),
+    Outremer("987", "ZP", "Polynésie française"),
+    Outremer("975", "ZS", "Saint-Pierre-et-Miquelon"),
+    Outremer("986", "ZW", "Wallis-et-Futuna"),
+    Outremer("977", "ZX", "Saint-Barthélemy"),
+    Outremer("978", "ZX", "Saint-Martin"),
 ]
 
 CORRESPONDANCE_CODE_DEPARTEMENT = {
