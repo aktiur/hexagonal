@@ -1,0 +1,13 @@
+frozen: true
+deps:
+- checksum: '"6278c9a0-11df23"'
+  size: 1171235
+  hash: md5
+  path: 
+    https://presidentielle2022.conseil-constitutionnel.fr/telechargement/parrainagestotal.csv
+outs:
+- md5: 62595a6af02961ae4f2f2a7b0ebccddb
+  size: 1171235
+  hash: md5
+  path: 2022-presidentielle-parrainages.csv
+md5: 1ea19b39a1816d0cc4a96ad1318e5029

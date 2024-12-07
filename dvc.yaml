@@ -6,6 +6,7 @@ vars:
   - raw: "data/01_raw"
   - clean: "data/02_clean"
   - main: "data/03_main"
+  - python: PYTHONPATH=src python -m
 
 stages:
   nettoyer-2020-municipales-1:
@@ -74,6 +75,20 @@ stages:
         - ${src}/hexagonal/codes.py
       outs:
         - ${clean}/elections/2022-legislatives-${item}-candidats.csv
+
+  nettoyer-parrainages:
+    foreach:
+      - 2022
+    do:
+      deps:
+        - ${raw}/elections/${item}-presidentielle-parrainages.csv
+        - ${src}/hexagonal/parrainages/nettoyer.py
+      outs:
+        - ${clean}/elections/${item}-presidentielle-parrainages.csv
+      cmd: >-
+        ${python} hexagonal.parrainages.nettoyer
+        ${raw}/elections/${item}-presidentielle-parrainages.csv
+        ${clean}/elections/${item}-presidentielle-parrainages.csv
 
   correspondances_bureau_de_vote_circonscription:
     foreach:
