@@ -70,7 +70,7 @@ spec_mairies = (
     (
         S(
             adresse_physique=selection_adresse("Adresse"),
-            adresse_postale=selection_adresse("Adresse Postale"),
+            adresse_postale=selection_adresse("Adresse postale"),
         )
     ),
     {

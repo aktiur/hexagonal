@@ -787,8 +787,8 @@ stages:
       size: 12677393
     - path: src/hexagonal/assemblee_nationale/groupes.py
       hash: md5
-      md5: 55db34fac127b5810b814e23408af53a
-      size: 2864
+      md5: aa0a6cb3349481ba5a77d882102a0312
+      size: 2783
     - path: src/hexagonal/assemblee_nationale/utils.py
       hash: md5
       md5: faa2b59c4d09e635004eda3991f0b32d
@@ -796,8 +796,8 @@ stages:
     outs:
     - path: data/02_clean/assemblee_nationale/affiliations.csv
       hash: md5
-      md5: 04eec8cb5ed026b8d1b49753fe1f7338
-      size: 315898
+      md5: 6eeeafc819047e1f7092573e7fc6ed21
+      size: 311012
     - path: data/02_clean/assemblee_nationale/groupes.csv
       hash: md5
       md5: 3c3b5cdbb812161dee7ae3a72b59b05f
@@ -861,13 +861,13 @@ stages:
       size: 80808204
     - path: src/hexagonal/annuaire/nettoyer.py
       hash: md5
-      md5: c7d468202f4c9448a1124a0dde950087
+      md5: fe222e4127f063f278f8f5a61fce8b9e
       size: 3356
     outs:
     - path: data/02_clean/annuaire/mairies.csv
       hash: md5
-      md5: 31bbaaa0911e0e19822083d06ccd1e67
-      size: 10444551
+      md5: 555315a657f8644a2e2d171d6d8853d8
+      size: 10479083
   nettoyer-parrainages@2022:
     cmd: PYTHONPATH=src python -m hexagonal.parrainages.nettoyer data/01_raw/elections/2022-presidentielle-parrainages.csv
       data/02_clean/elections/2022-presidentielle-parrainages.csv

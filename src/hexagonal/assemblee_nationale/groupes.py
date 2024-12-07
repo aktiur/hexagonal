@@ -54,7 +54,6 @@ def liste_affiliations(archive, groupe_map):
         "nom": S.nom,
         "abreviation_groupe": ("organes.organeRef", groupe_map.get),
         "legislature": "legislature",
-        "suppleante": Coalesce("suppleants.suppleant.suppleantRef", default=""),
         "date_debut": "dateDebut",
         "date_fin": ("dateFin", possiblement_nul),
     }
