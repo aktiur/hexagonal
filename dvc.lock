@@ -861,8 +861,8 @@ stages:
       size: 80808204
     - path: src/hexagonal/annuaire/nettoyer.py
       hash: md5
-      md5: fe222e4127f063f278f8f5a61fce8b9e
-      size: 3356
+      md5: f408d5dbc04b785c50617e112f33c0e8
+      size: 3353
     outs:
     - path: data/02_clean/annuaire/mairies.csv
       hash: md5

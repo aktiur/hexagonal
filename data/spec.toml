@@ -1,0 +1,2827 @@
+["data/02_clean/assemblee_nationale/mandats.csv"]
+nom = "Liste des mandats des député·es"
+description = """
+Ce fichier liste l'ensemble des mandats de député·es depuis la 12ème législature.
+
+Chaque mandat correspond à une période uninterrompue pendant laquelle une personne est restée députée, pour une
+législature donnée. La réélection d'un·e député·e correspond donc à un nouveau mandat.
+
+De la même façon, le cas d'une personne qui perd son statut de député·e avant de le récupérer sera matérialisé
+par deux mandats différents.
+"""
+type = "csv"
+
+["data/02_clean/assemblee_nationale/mandats.csv".colonnes.id_mandat]
+nom = "Identifiant du mandat"
+description = """
+L'identifiant unique du mandat.
+Il débute par le préfixe "PM".
+"""
+type = "str"
+
+["data/02_clean/assemblee_nationale/mandats.csv".colonnes.id_personne]
+nom = "Identifiant de la personne"
+description = """
+L'identifiant unique de la personne dépositaire du mandat.
+Il débute par le préfixe "PA".
+"""
+type = "str"
+
+["data/02_clean/assemblee_nationale/mandats.csv".colonnes.prenom]
+nom = "Prénom de la personne"
+description = """
+Le prénom de la personne dépositaire du mandat
+"""
+type = "str"
+
+["data/02_clean/assemblee_nationale/mandats.csv".colonnes.nom]
+nom = "Nom de famille de la personne"
+description = """
+Le nom de famille de la personne dépositaire du mandat.
+"""
+type = "str"
+
+["data/02_clean/assemblee_nationale/mandats.csv".colonnes.legislature]
+nom = "legislature"
+description = """
+Le numéro de la législature dans le cadre de laquelle se déroule le mandat.
+"""
+type = "int"
+
+["data/02_clean/assemblee_nationale/mandats.csv".colonnes.circonscription]
+nom = "circonscription"
+description = """
+"""
+type = "str"
+
+["data/02_clean/assemblee_nationale/mandats.csv".colonnes.suppleante]
+nom = "suppleante"
+description = """
+"""
+type = "str"
+
+["data/02_clean/assemblee_nationale/mandats.csv".colonnes.date_debut]
+nom = "date_debut"
+description = """
+"""
+type = "str"
+
+["data/02_clean/assemblee_nationale/mandats.csv".colonnes.date_fin]
+nom = "date_fin"
+description = """
+"""
+type = "str"
+
+["data/02_clean/assemblee_nationale/mandats.csv".colonnes.cause_debut_mandat]
+nom = "cause_debut_mandat"
+description = """
+"""
+type = "str"
+
+["data/02_clean/assemblee_nationale/mandats.csv".colonnes.cause_fin_mandat]
+nom = "cause_fin_mandat"
+description = """
+"""
+type = "str"
+
+["data/02_clean/assemblee_nationale/mandats.csv".colonnes.place]
+nom = "place"
+description = """
+"""
+type = "str"
+
+["data/02_clean/assemblee_nationale/groupes.csv"]
+nom = "groupes"
+description = """
+"""
+type = "csv"
+
+["data/02_clean/assemblee_nationale/groupes.csv".colonnes.id_groupe]
+nom = "id_groupe"
+description = """
+"""
+type = "str"
+
+["data/02_clean/assemblee_nationale/groupes.csv".colonnes.legislature]
+nom = "legislature"
+description = """
+"""
+type = "str"
+
+["data/02_clean/assemblee_nationale/groupes.csv".colonnes.nom]
+nom = "nom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/assemblee_nationale/groupes.csv".colonnes.abrege]
+nom = "abrege"
+description = """
+"""
+type = "str"
+
+["data/02_clean/assemblee_nationale/groupes.csv".colonnes.abreviation]
+nom = "abreviation"
+description = """
+"""
+type = "str"
+
+["data/02_clean/assemblee_nationale/groupes.csv".colonnes.date_debut]
+nom = "date_debut"
+description = """
+"""
+type = "str"
+
+["data/02_clean/assemblee_nationale/groupes.csv".colonnes.date_fin]
+nom = "date_fin"
+description = """
+"""
+type = "str"
+
+["data/02_clean/assemblee_nationale/groupes.csv".colonnes.position]
+nom = "position"
+description = """
+"""
+type = "str"
+
+["data/02_clean/assemblee_nationale/groupes.csv".colonnes.preseance]
+nom = "preseance"
+description = """
+"""
+type = "str"
+
+["data/02_clean/assemblee_nationale/affiliations.csv"]
+nom = "affiliations"
+description = """
+"""
+type = "csv"
+
+["data/02_clean/assemblee_nationale/affiliations.csv".colonnes.id_personne]
+nom = "id_personne"
+description = """
+"""
+type = "str"
+
+["data/02_clean/assemblee_nationale/affiliations.csv".colonnes.id_groupe]
+nom = "id_groupe"
+description = """
+"""
+type = "str"
+
+["data/02_clean/assemblee_nationale/affiliations.csv".colonnes.prenom]
+nom = "prenom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/assemblee_nationale/affiliations.csv".colonnes.nom]
+nom = "nom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/assemblee_nationale/affiliations.csv".colonnes.abreviation_groupe]
+nom = "abreviation_groupe"
+description = """
+"""
+type = "str"
+
+["data/02_clean/assemblee_nationale/affiliations.csv".colonnes.legislature]
+nom = "legislature"
+description = """
+"""
+type = "str"
+
+["data/02_clean/assemblee_nationale/affiliations.csv".colonnes.date_debut]
+nom = "date_debut"
+description = """
+"""
+type = "str"
+
+["data/02_clean/assemblee_nationale/affiliations.csv".colonnes.date_fin]
+nom = "date_fin"
+description = """
+"""
+type = "str"
+
+["data/02_clean/assemblee_nationale/deputes.csv"]
+nom = "deputes"
+description = """
+"""
+type = "csv"
+
+["data/02_clean/assemblee_nationale/deputes.csv".colonnes.id_personne]
+nom = "id_personne"
+description = """
+"""
+type = "str"
+
+["data/02_clean/assemblee_nationale/deputes.csv".colonnes.civilite]
+nom = "civilite"
+description = """
+"""
+type = "str"
+
+["data/02_clean/assemblee_nationale/deputes.csv".colonnes.prenom]
+nom = "prenom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/assemblee_nationale/deputes.csv".colonnes.nom]
+nom = "nom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/assemblee_nationale/deputes.csv".colonnes.date_naissance]
+nom = "date_naissance"
+description = """
+"""
+type = "str"
+
+["data/02_clean/assemblee_nationale/deputes.csv".colonnes.ville_naissance]
+nom = "ville_naissance"
+description = """
+"""
+type = "str"
+
+["data/02_clean/assemblee_nationale/deputes.csv".colonnes.departement_naissance]
+nom = "departement_naissance"
+description = """
+"""
+type = "str"
+
+["data/02_clean/assemblee_nationale/deputes.csv".colonnes.legislatures]
+nom = "legislatures"
+description = """
+"""
+type = "str"
+
+["data/02_clean/assemblee_nationale/deputes.csv".colonnes.profession]
+nom = "profession"
+description = """
+"""
+type = "str"
+
+["data/02_clean/assemblee_nationale/deputes.csv".colonnes.csp_agregee]
+nom = "csp_agregee"
+description = """
+"""
+type = "str"
+
+["data/02_clean/assemblee_nationale/deputes.csv".colonnes.csp]
+nom = "csp"
+description = """
+"""
+type = "str"
+
+["data/02_clean/annuaire/mairies.csv"]
+nom = "mairies"
+description = """
+"""
+type = "csv"
+
+["data/02_clean/annuaire/mairies.csv".colonnes.id]
+nom = "id"
+description = """
+"""
+type = "str"
+
+["data/02_clean/annuaire/mairies.csv".colonnes.code_commune]
+nom = "code_commune"
+description = """
+"""
+type = "str"
+
+["data/02_clean/annuaire/mairies.csv".colonnes.siret]
+nom = "siret"
+description = """
+"""
+type = "str"
+
+["data/02_clean/annuaire/mairies.csv".colonnes.nom]
+nom = "nom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/annuaire/mairies.csv".colonnes.emails]
+nom = "emails"
+description = """
+"""
+type = "str"
+
+["data/02_clean/annuaire/mairies.csv".colonnes.adresse_physique]
+nom = "adresse_physique"
+description = """
+"""
+type = "str"
+
+["data/02_clean/annuaire/mairies.csv".colonnes.adresse_postale]
+nom = "adresse_postale"
+description = """
+"""
+type = "str"
+
+["data/02_clean/annuaire/mairies.csv".colonnes.telephone]
+nom = "telephone"
+description = """
+"""
+type = "str"
+
+["data/02_clean/annuaire/mairies.csv".colonnes.coordonnees]
+nom = "coordonnees"
+description = """
+"""
+type = "str"
+
+["data/02_clean/annuaire/mairies.csv".colonnes.type_accessibilite]
+nom = "type_accessibilite"
+description = """
+"""
+type = "str"
+
+["data/02_clean/annuaire/mairies.csv".colonnes.details_accessibilite]
+nom = "details_accessibilite"
+description = """
+"""
+type = "str"
+
+["data/02_clean/annuaire/mairies.csv".colonnes.ouverture]
+nom = "ouverture"
+description = """
+"""
+type = "str"
+
+["data/02_clean/rne/conseillers_municipaux.csv"]
+nom = "conseillers_municipaux"
+description = """
+"""
+type = "csv"
+
+["data/02_clean/rne/conseillers_municipaux.csv".colonnes.code_departement]
+nom = "code_departement"
+description = """
+"""
+type = "str"
+
+["data/02_clean/rne/conseillers_municipaux.csv".colonnes.code_collectivite_sp]
+nom = "code_collectivite_sp"
+description = """
+"""
+type = "str"
+
+["data/02_clean/rne/conseillers_municipaux.csv".colonnes.code_commune]
+nom = "code_commune"
+description = """
+"""
+type = "str"
+
+["data/02_clean/rne/conseillers_municipaux.csv".colonnes.nom]
+nom = "nom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/rne/conseillers_municipaux.csv".colonnes.prenom]
+nom = "prenom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/rne/conseillers_municipaux.csv".colonnes.sexe]
+nom = "sexe"
+description = """
+"""
+type = "str"
+
+["data/02_clean/rne/conseillers_municipaux.csv".colonnes.date_naissance]
+nom = "date_naissance"
+description = """
+"""
+type = "str"
+
+["data/02_clean/rne/conseillers_municipaux.csv".colonnes.csp]
+nom = "csp"
+description = """
+"""
+type = "str"
+
+["data/02_clean/rne/conseillers_municipaux.csv".colonnes.date_debut_mandat]
+nom = "date_debut_mandat"
+description = """
+"""
+type = "str"
+
+["data/02_clean/rne/conseillers_municipaux.csv".colonnes.fonction]
+nom = "fonction"
+description = """
+"""
+type = "str"
+
+["data/02_clean/rne/conseillers_municipaux.csv".colonnes.date_debut_fonction]
+nom = "date_debut_fonction"
+description = """
+"""
+type = "str"
+
+["data/02_clean/rne/conseillers_municipaux.csv".colonnes.nationalite]
+nom = "nationalite"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-1-circonscription.csv"]
+nom = "2022-legislatives-1-circonscription"
+description = """
+"""
+type = "csv"
+
+["data/02_clean/elections/2022-legislatives-1-circonscription.csv".colonnes.circonscription]
+nom = "circonscription"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-1-circonscription.csv".colonnes.inscrits]
+nom = "inscrits"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-1-circonscription.csv".colonnes.votants]
+nom = "votants"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-1-circonscription.csv".colonnes.exprimes]
+nom = "exprimes"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-1-circonscription.csv".colonnes.numero_panneau]
+nom = "numero_panneau"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-1-circonscription.csv".colonnes.nuance]
+nom = "nuance"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-1-circonscription.csv".colonnes.nom]
+nom = "nom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-1-circonscription.csv".colonnes.prenom]
+nom = "prenom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-1-circonscription.csv".colonnes.sexe]
+nom = "sexe"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-1-circonscription.csv".colonnes.voix]
+nom = "voix"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-2-circonscription.csv"]
+nom = "2022-legislatives-2-circonscription"
+description = """
+"""
+type = "csv"
+
+["data/02_clean/elections/2022-legislatives-2-circonscription.csv".colonnes.circonscription]
+nom = "circonscription"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-2-circonscription.csv".colonnes.inscrits]
+nom = "inscrits"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-2-circonscription.csv".colonnes.votants]
+nom = "votants"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-2-circonscription.csv".colonnes.exprimes]
+nom = "exprimes"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-2-circonscription.csv".colonnes.numero_panneau]
+nom = "numero_panneau"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-2-circonscription.csv".colonnes.nuance]
+nom = "nuance"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-2-circonscription.csv".colonnes.nom]
+nom = "nom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-2-circonscription.csv".colonnes.prenom]
+nom = "prenom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-2-circonscription.csv".colonnes.sexe]
+nom = "sexe"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-2-circonscription.csv".colonnes.voix]
+nom = "voix"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2021-departementales-1-bureau_de_vote.csv"]
+nom = "2021-departementales-1-bureau_de_vote"
+description = """
+"""
+type = "csv"
+
+["data/02_clean/elections/2021-departementales-1-bureau_de_vote.csv".colonnes.bureau_de_vote]
+nom = "bureau_de_vote"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2021-departementales-1-bureau_de_vote.csv".colonnes.inscrits]
+nom = "inscrits"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2021-departementales-1-bureau_de_vote.csv".colonnes.votants]
+nom = "votants"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2021-departementales-1-bureau_de_vote.csv".colonnes.exprimes]
+nom = "exprimes"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2021-departementales-1-bureau_de_vote.csv".colonnes.numero_panneau]
+nom = "numero_panneau"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2021-departementales-1-bureau_de_vote.csv".colonnes.nuance]
+nom = "nuance"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2021-departementales-1-bureau_de_vote.csv".colonnes.voix]
+nom = "voix"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-presidentielle-1-circonscription.csv"]
+nom = "2022-presidentielle-1-circonscription"
+description = """
+"""
+type = "csv"
+
+["data/02_clean/elections/2022-presidentielle-1-circonscription.csv".colonnes.circonscription]
+nom = "circonscription"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-presidentielle-1-circonscription.csv".colonnes.inscrits]
+nom = "inscrits"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-presidentielle-1-circonscription.csv".colonnes.votants]
+nom = "votants"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-presidentielle-1-circonscription.csv".colonnes.exprimes]
+nom = "exprimes"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-presidentielle-1-circonscription.csv".colonnes.numero_panneau]
+nom = "numero_panneau"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-presidentielle-1-circonscription.csv".colonnes.nom]
+nom = "nom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-presidentielle-1-circonscription.csv".colonnes.prenom]
+nom = "prenom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-presidentielle-1-circonscription.csv".colonnes.sexe]
+nom = "sexe"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-presidentielle-1-circonscription.csv".colonnes.voix]
+nom = "voix"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-presidentielle-2-circonscription.csv"]
+nom = "2022-presidentielle-2-circonscription"
+description = """
+"""
+type = "csv"
+
+["data/02_clean/elections/2022-presidentielle-2-circonscription.csv".colonnes.circonscription]
+nom = "circonscription"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-presidentielle-2-circonscription.csv".colonnes.inscrits]
+nom = "inscrits"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-presidentielle-2-circonscription.csv".colonnes.votants]
+nom = "votants"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-presidentielle-2-circonscription.csv".colonnes.exprimes]
+nom = "exprimes"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-presidentielle-2-circonscription.csv".colonnes.numero_panneau]
+nom = "numero_panneau"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-presidentielle-2-circonscription.csv".colonnes.nom]
+nom = "nom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-presidentielle-2-circonscription.csv".colonnes.prenom]
+nom = "prenom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-presidentielle-2-circonscription.csv".colonnes.sexe]
+nom = "sexe"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-presidentielle-2-circonscription.csv".colonnes.voix]
+nom = "voix"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2021-regionales-2-bureau_de_vote.csv"]
+nom = "2021-regionales-2-bureau_de_vote"
+description = """
+"""
+type = "csv"
+
+["data/02_clean/elections/2021-regionales-2-bureau_de_vote.csv".colonnes.bureau_de_vote]
+nom = "bureau_de_vote"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2021-regionales-2-bureau_de_vote.csv".colonnes.inscrits]
+nom = "inscrits"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2021-regionales-2-bureau_de_vote.csv".colonnes.votants]
+nom = "votants"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2021-regionales-2-bureau_de_vote.csv".colonnes.exprimes]
+nom = "exprimes"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2021-regionales-2-bureau_de_vote.csv".colonnes.numero_panneau]
+nom = "numero_panneau"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2021-regionales-2-bureau_de_vote.csv".colonnes.nuance]
+nom = "nuance"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2021-regionales-2-bureau_de_vote.csv".colonnes.liste_court]
+nom = "liste_court"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2021-regionales-2-bureau_de_vote.csv".colonnes.liste_long]
+nom = "liste_long"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2021-regionales-2-bureau_de_vote.csv".colonnes.voix]
+nom = "voix"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-europeenne-bureau_de_vote.csv"]
+nom = "2024-europeenne-bureau_de_vote"
+description = """
+"""
+type = "csv"
+
+["data/02_clean/elections/2024-europeenne-bureau_de_vote.csv".colonnes.bureau_de_vote]
+nom = "bureau_de_vote"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-europeenne-bureau_de_vote.csv".colonnes.inscrits]
+nom = "inscrits"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-europeenne-bureau_de_vote.csv".colonnes.votants]
+nom = "votants"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-europeenne-bureau_de_vote.csv".colonnes.exprimes]
+nom = "exprimes"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-europeenne-bureau_de_vote.csv".colonnes.numero_panneau]
+nom = "numero_panneau"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-europeenne-bureau_de_vote.csv".colonnes.nuance]
+nom = "nuance"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-europeenne-bureau_de_vote.csv".colonnes.liste_court]
+nom = "liste_court"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-europeenne-bureau_de_vote.csv".colonnes.liste_long]
+nom = "liste_long"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-europeenne-bureau_de_vote.csv".colonnes.voix]
+nom = "voix"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-1-bureau_de_vote.csv"]
+nom = "2022-legislatives-1-bureau_de_vote"
+description = """
+"""
+type = "csv"
+
+["data/02_clean/elections/2022-legislatives-1-bureau_de_vote.csv".colonnes.bureau_de_vote]
+nom = "bureau_de_vote"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-1-bureau_de_vote.csv".colonnes.circonscription]
+nom = "circonscription"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-1-bureau_de_vote.csv".colonnes.inscrits]
+nom = "inscrits"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-1-bureau_de_vote.csv".colonnes.votants]
+nom = "votants"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-1-bureau_de_vote.csv".colonnes.exprimes]
+nom = "exprimes"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-1-bureau_de_vote.csv".colonnes.numero_panneau]
+nom = "numero_panneau"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-1-bureau_de_vote.csv".colonnes.nuance]
+nom = "nuance"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-1-bureau_de_vote.csv".colonnes.nom]
+nom = "nom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-1-bureau_de_vote.csv".colonnes.prenom]
+nom = "prenom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-1-bureau_de_vote.csv".colonnes.sexe]
+nom = "sexe"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-1-bureau_de_vote.csv".colonnes.voix]
+nom = "voix"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-europeenne-circonscription.csv"]
+nom = "2024-europeenne-circonscription"
+description = """
+"""
+type = "csv"
+
+["data/02_clean/elections/2024-europeenne-circonscription.csv".colonnes.circonscription]
+nom = "circonscription"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-europeenne-circonscription.csv".colonnes.inscrits]
+nom = "inscrits"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-europeenne-circonscription.csv".colonnes.votants]
+nom = "votants"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-europeenne-circonscription.csv".colonnes.exprimes]
+nom = "exprimes"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-europeenne-circonscription.csv".colonnes.numero_panneau]
+nom = "numero_panneau"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-europeenne-circonscription.csv".colonnes.nuance]
+nom = "nuance"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-europeenne-circonscription.csv".colonnes.liste_court]
+nom = "liste_court"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-europeenne-circonscription.csv".colonnes.liste_long]
+nom = "liste_long"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-europeenne-circonscription.csv".colonnes.voix]
+nom = "voix"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-2-bureau_de_vote.csv"]
+nom = "2022-legislatives-2-bureau_de_vote"
+description = """
+"""
+type = "csv"
+
+["data/02_clean/elections/2022-legislatives-2-bureau_de_vote.csv".colonnes.bureau_de_vote]
+nom = "bureau_de_vote"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-2-bureau_de_vote.csv".colonnes.circonscription]
+nom = "circonscription"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-2-bureau_de_vote.csv".colonnes.inscrits]
+nom = "inscrits"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-2-bureau_de_vote.csv".colonnes.votants]
+nom = "votants"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-2-bureau_de_vote.csv".colonnes.exprimes]
+nom = "exprimes"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-2-bureau_de_vote.csv".colonnes.numero_panneau]
+nom = "numero_panneau"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-2-bureau_de_vote.csv".colonnes.nuance]
+nom = "nuance"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-2-bureau_de_vote.csv".colonnes.nom]
+nom = "nom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-2-bureau_de_vote.csv".colonnes.prenom]
+nom = "prenom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-2-bureau_de_vote.csv".colonnes.sexe]
+nom = "sexe"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-2-bureau_de_vote.csv".colonnes.voix]
+nom = "voix"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2012-presidentielle-bureau_de_vote.csv"]
+nom = "2012-presidentielle-bureau_de_vote"
+description = """
+"""
+type = "csv"
+
+["data/02_clean/elections/2012-presidentielle-bureau_de_vote.csv".colonnes.bureau_de_vote]
+nom = "bureau_de_vote"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2012-presidentielle-bureau_de_vote.csv".colonnes.circonscription]
+nom = "circonscription"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2012-presidentielle-bureau_de_vote.csv".colonnes.numero_tour]
+nom = "numero_tour"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2012-presidentielle-bureau_de_vote.csv".colonnes.canton]
+nom = "canton"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2012-presidentielle-bureau_de_vote.csv".colonnes.inscrits]
+nom = "inscrits"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2012-presidentielle-bureau_de_vote.csv".colonnes.votants]
+nom = "votants"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2012-presidentielle-bureau_de_vote.csv".colonnes.exprimes]
+nom = "exprimes"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2012-presidentielle-bureau_de_vote.csv".colonnes.numero_panneau]
+nom = "numero_panneau"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2012-presidentielle-bureau_de_vote.csv".colonnes.nom]
+nom = "nom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2012-presidentielle-bureau_de_vote.csv".colonnes.prenom]
+nom = "prenom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2012-presidentielle-bureau_de_vote.csv".colonnes.nuance]
+nom = "nuance"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2012-presidentielle-bureau_de_vote.csv".colonnes.voix]
+nom = "voix"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-2-circonscription.csv"]
+nom = "2024-legislatives-2-circonscription"
+description = """
+"""
+type = "csv"
+
+["data/02_clean/elections/2024-legislatives-2-circonscription.csv".colonnes.circonscription]
+nom = "circonscription"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-2-circonscription.csv".colonnes.inscrits]
+nom = "inscrits"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-2-circonscription.csv".colonnes.votants]
+nom = "votants"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-2-circonscription.csv".colonnes.exprimes]
+nom = "exprimes"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-2-circonscription.csv".colonnes.numero_panneau]
+nom = "numero_panneau"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-2-circonscription.csv".colonnes.nuance]
+nom = "nuance"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-2-circonscription.csv".colonnes.nom]
+nom = "nom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-2-circonscription.csv".colonnes.prenom]
+nom = "prenom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-2-circonscription.csv".colonnes.sexe]
+nom = "sexe"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-2-circonscription.csv".colonnes.voix]
+nom = "voix"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-1-bureau_de_vote.csv"]
+nom = "2024-legislatives-1-bureau_de_vote"
+description = """
+"""
+type = "csv"
+
+["data/02_clean/elections/2024-legislatives-1-bureau_de_vote.csv".colonnes.bureau_de_vote]
+nom = "bureau_de_vote"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-1-bureau_de_vote.csv".colonnes.inscrits]
+nom = "inscrits"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-1-bureau_de_vote.csv".colonnes.votants]
+nom = "votants"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-1-bureau_de_vote.csv".colonnes.exprimes]
+nom = "exprimes"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-1-bureau_de_vote.csv".colonnes.numero_panneau]
+nom = "numero_panneau"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-1-bureau_de_vote.csv".colonnes.nuance]
+nom = "nuance"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-1-bureau_de_vote.csv".colonnes.nom]
+nom = "nom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-1-bureau_de_vote.csv".colonnes.prenom]
+nom = "prenom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-1-bureau_de_vote.csv".colonnes.sexe]
+nom = "sexe"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-1-bureau_de_vote.csv".colonnes.voix]
+nom = "voix"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-presidentielle-parrainages.csv"]
+nom = "2022-presidentielle-parrainages"
+description = """
+"""
+type = "csv"
+
+["data/02_clean/elections/2022-presidentielle-parrainages.csv".colonnes.mandat]
+nom = "mandat"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-presidentielle-parrainages.csv".colonnes.nom]
+nom = "nom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-presidentielle-parrainages.csv".colonnes.prenom]
+nom = "prenom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-presidentielle-parrainages.csv".colonnes.sexe]
+nom = "sexe"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-presidentielle-parrainages.csv".colonnes.circonscription_mandat]
+nom = "circonscription_mandat"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-presidentielle-parrainages.csv".colonnes.departement_mandat]
+nom = "departement_mandat"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-presidentielle-parrainages.csv".colonnes.candidat]
+nom = "candidat"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-presidentielle-parrainages.csv".colonnes.date_publication]
+nom = "date_publication"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-1-candidats.csv"]
+nom = "2022-legislatives-1-candidats"
+description = """
+"""
+type = "csv"
+
+["data/02_clean/elections/2022-legislatives-1-candidats.csv".colonnes.circonscription]
+nom = "circonscription"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-1-candidats.csv".colonnes.numero_panneau]
+nom = "numero_panneau"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-1-candidats.csv".colonnes.numero_depot]
+nom = "numero_depot"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-1-candidats.csv".colonnes.sexe]
+nom = "sexe"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-1-candidats.csv".colonnes.nom]
+nom = "nom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-1-candidats.csv".colonnes.prenom]
+nom = "prenom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-1-candidats.csv".colonnes.date_naissance]
+nom = "date_naissance"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-1-candidats.csv".colonnes.nuance]
+nom = "nuance"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-1-candidats.csv".colonnes.profession]
+nom = "profession"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-1-candidats.csv".colonnes.sortant]
+nom = "sortant"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-1-candidats.csv".colonnes.sexe_suppleant]
+nom = "sexe_suppleant"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-1-candidats.csv".colonnes.nom_suppleant]
+nom = "nom_suppleant"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-1-candidats.csv".colonnes.prenom_suppleant]
+nom = "prenom_suppleant"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-1-candidats.csv".colonnes.date_naissance_suppleant]
+nom = "date_naissance_suppleant"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-1-candidats.csv".colonnes.sortant_suppleant]
+nom = "sortant_suppleant"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-1-candidats.csv".colonnes.nom_lemonde]
+nom = "nom_lemonde"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-1-candidats.csv".colonnes.nuance_lemonde]
+nom = "nuance_lemonde"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-1-candidats.csv".colonnes.parti_lemonde]
+nom = "parti_lemonde"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-1-candidats.csv".colonnes.nuance_legis_2022]
+nom = "nuance_legis_2022"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-1-candidats.csv".colonnes.regroupement_om_legis_2022]
+nom = "regroupement_om_legis_2022"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2020-municipales-1-bureau_de_vote.csv"]
+nom = "2020-municipales-1-bureau_de_vote"
+description = """
+"""
+type = "csv"
+
+["data/02_clean/elections/2020-municipales-1-bureau_de_vote.csv".colonnes.bureau_de_vote]
+nom = "bureau_de_vote"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2020-municipales-1-bureau_de_vote.csv".colonnes.inscrits]
+nom = "inscrits"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2020-municipales-1-bureau_de_vote.csv".colonnes.votants]
+nom = "votants"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2020-municipales-1-bureau_de_vote.csv".colonnes.exprimes]
+nom = "exprimes"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2020-municipales-1-bureau_de_vote.csv".colonnes.numero_panneau]
+nom = "numero_panneau"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2020-municipales-1-bureau_de_vote.csv".colonnes.nuance]
+nom = "nuance"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2020-municipales-1-bureau_de_vote.csv".colonnes.nom]
+nom = "nom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2020-municipales-1-bureau_de_vote.csv".colonnes.prenom]
+nom = "prenom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2020-municipales-1-bureau_de_vote.csv".colonnes.sexe]
+nom = "sexe"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2020-municipales-1-bureau_de_vote.csv".colonnes.liste_long]
+nom = "liste_long"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2020-municipales-1-bureau_de_vote.csv".colonnes.voix]
+nom = "voix"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2017-legislatives-2-bureau_de_vote.csv"]
+nom = "2017-legislatives-2-bureau_de_vote"
+description = """
+"""
+type = "csv"
+
+["data/02_clean/elections/2017-legislatives-2-bureau_de_vote.csv".colonnes.bureau_de_vote]
+nom = "bureau_de_vote"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2017-legislatives-2-bureau_de_vote.csv".colonnes.circonscription]
+nom = "circonscription"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2017-legislatives-2-bureau_de_vote.csv".colonnes.inscrits]
+nom = "inscrits"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2017-legislatives-2-bureau_de_vote.csv".colonnes.votants]
+nom = "votants"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2017-legislatives-2-bureau_de_vote.csv".colonnes.exprimes]
+nom = "exprimes"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2017-legislatives-2-bureau_de_vote.csv".colonnes.numero_panneau]
+nom = "numero_panneau"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2017-legislatives-2-bureau_de_vote.csv".colonnes.nuance]
+nom = "nuance"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2017-legislatives-2-bureau_de_vote.csv".colonnes.nom]
+nom = "nom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2017-legislatives-2-bureau_de_vote.csv".colonnes.prenom]
+nom = "prenom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2017-legislatives-2-bureau_de_vote.csv".colonnes.sexe]
+nom = "sexe"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2017-legislatives-2-bureau_de_vote.csv".colonnes.voix]
+nom = "voix"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-presidentielle-2-bureau_de_vote.csv"]
+nom = "2022-presidentielle-2-bureau_de_vote"
+description = """
+"""
+type = "csv"
+
+["data/02_clean/elections/2022-presidentielle-2-bureau_de_vote.csv".colonnes.bureau_de_vote]
+nom = "bureau_de_vote"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-presidentielle-2-bureau_de_vote.csv".colonnes.circonscription]
+nom = "circonscription"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-presidentielle-2-bureau_de_vote.csv".colonnes.inscrits]
+nom = "inscrits"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-presidentielle-2-bureau_de_vote.csv".colonnes.votants]
+nom = "votants"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-presidentielle-2-bureau_de_vote.csv".colonnes.exprimes]
+nom = "exprimes"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-presidentielle-2-bureau_de_vote.csv".colonnes.numero_panneau]
+nom = "numero_panneau"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-presidentielle-2-bureau_de_vote.csv".colonnes.nom]
+nom = "nom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-presidentielle-2-bureau_de_vote.csv".colonnes.prenom]
+nom = "prenom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-presidentielle-2-bureau_de_vote.csv".colonnes.sexe]
+nom = "sexe"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-presidentielle-2-bureau_de_vote.csv".colonnes.voix]
+nom = "voix"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2021-departementales-2-bureau_de_vote.csv"]
+nom = "2021-departementales-2-bureau_de_vote"
+description = """
+"""
+type = "csv"
+
+["data/02_clean/elections/2021-departementales-2-bureau_de_vote.csv".colonnes.bureau_de_vote]
+nom = "bureau_de_vote"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2021-departementales-2-bureau_de_vote.csv".colonnes.inscrits]
+nom = "inscrits"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2021-departementales-2-bureau_de_vote.csv".colonnes.votants]
+nom = "votants"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2021-departementales-2-bureau_de_vote.csv".colonnes.exprimes]
+nom = "exprimes"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2021-departementales-2-bureau_de_vote.csv".colonnes.numero_panneau]
+nom = "numero_panneau"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2021-departementales-2-bureau_de_vote.csv".colonnes.nuance]
+nom = "nuance"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2021-departementales-2-bureau_de_vote.csv".colonnes.voix]
+nom = "voix"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2019-europeenne-bureau_de_vote.csv"]
+nom = "2019-europeenne-bureau_de_vote"
+description = """
+"""
+type = "csv"
+
+["data/02_clean/elections/2019-europeenne-bureau_de_vote.csv".colonnes.bureau_de_vote]
+nom = "bureau_de_vote"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2019-europeenne-bureau_de_vote.csv".colonnes.inscrits]
+nom = "inscrits"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2019-europeenne-bureau_de_vote.csv".colonnes.votants]
+nom = "votants"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2019-europeenne-bureau_de_vote.csv".colonnes.exprimes]
+nom = "exprimes"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2019-europeenne-bureau_de_vote.csv".colonnes.numero_panneau]
+nom = "numero_panneau"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2019-europeenne-bureau_de_vote.csv".colonnes.liste_court]
+nom = "liste_court"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2019-europeenne-bureau_de_vote.csv".colonnes.liste_long]
+nom = "liste_long"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2019-europeenne-bureau_de_vote.csv".colonnes.voix]
+nom = "voix"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2017-legislatives-1-bureau_de_vote.csv"]
+nom = "2017-legislatives-1-bureau_de_vote"
+description = """
+"""
+type = "csv"
+
+["data/02_clean/elections/2017-legislatives-1-bureau_de_vote.csv".colonnes.bureau_de_vote]
+nom = "bureau_de_vote"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2017-legislatives-1-bureau_de_vote.csv".colonnes.circonscription]
+nom = "circonscription"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2017-legislatives-1-bureau_de_vote.csv".colonnes.inscrits]
+nom = "inscrits"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2017-legislatives-1-bureau_de_vote.csv".colonnes.votants]
+nom = "votants"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2017-legislatives-1-bureau_de_vote.csv".colonnes.exprimes]
+nom = "exprimes"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2017-legislatives-1-bureau_de_vote.csv".colonnes.numero_panneau]
+nom = "numero_panneau"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2017-legislatives-1-bureau_de_vote.csv".colonnes.nuance]
+nom = "nuance"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2017-legislatives-1-bureau_de_vote.csv".colonnes.nom]
+nom = "nom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2017-legislatives-1-bureau_de_vote.csv".colonnes.prenom]
+nom = "prenom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2017-legislatives-1-bureau_de_vote.csv".colonnes.sexe]
+nom = "sexe"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2017-legislatives-1-bureau_de_vote.csv".colonnes.voix]
+nom = "voix"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2021-regionales-1-bureau_de_vote.csv"]
+nom = "2021-regionales-1-bureau_de_vote"
+description = """
+"""
+type = "csv"
+
+["data/02_clean/elections/2021-regionales-1-bureau_de_vote.csv".colonnes.bureau_de_vote]
+nom = "bureau_de_vote"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2021-regionales-1-bureau_de_vote.csv".colonnes.inscrits]
+nom = "inscrits"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2021-regionales-1-bureau_de_vote.csv".colonnes.votants]
+nom = "votants"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2021-regionales-1-bureau_de_vote.csv".colonnes.exprimes]
+nom = "exprimes"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2021-regionales-1-bureau_de_vote.csv".colonnes.numero_panneau]
+nom = "numero_panneau"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2021-regionales-1-bureau_de_vote.csv".colonnes.nuance]
+nom = "nuance"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2021-regionales-1-bureau_de_vote.csv".colonnes.liste_court]
+nom = "liste_court"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2021-regionales-1-bureau_de_vote.csv".colonnes.liste_long]
+nom = "liste_long"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2021-regionales-1-bureau_de_vote.csv".colonnes.voix]
+nom = "voix"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-2-candidats.csv"]
+nom = "2022-legislatives-2-candidats"
+description = """
+"""
+type = "csv"
+
+["data/02_clean/elections/2022-legislatives-2-candidats.csv".colonnes.circonscription]
+nom = "circonscription"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-2-candidats.csv".colonnes.numero_panneau]
+nom = "numero_panneau"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-2-candidats.csv".colonnes.numero_depot]
+nom = "numero_depot"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-2-candidats.csv".colonnes.sexe]
+nom = "sexe"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-2-candidats.csv".colonnes.nom]
+nom = "nom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-2-candidats.csv".colonnes.prenom]
+nom = "prenom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-2-candidats.csv".colonnes.date_naissance]
+nom = "date_naissance"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-2-candidats.csv".colonnes.nuance]
+nom = "nuance"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-2-candidats.csv".colonnes.profession]
+nom = "profession"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-2-candidats.csv".colonnes.sortant]
+nom = "sortant"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-2-candidats.csv".colonnes.sexe_suppleant]
+nom = "sexe_suppleant"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-2-candidats.csv".colonnes.nom_suppleant]
+nom = "nom_suppleant"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-2-candidats.csv".colonnes.prenom_suppleant]
+nom = "prenom_suppleant"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-2-candidats.csv".colonnes.date_naissance_suppleant]
+nom = "date_naissance_suppleant"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-2-candidats.csv".colonnes.sortant_suppleant]
+nom = "sortant_suppleant"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-2-candidats.csv".colonnes.nom_lemonde]
+nom = "nom_lemonde"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-2-candidats.csv".colonnes.nuance_lemonde]
+nom = "nuance_lemonde"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-2-candidats.csv".colonnes.parti_lemonde]
+nom = "parti_lemonde"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-2-candidats.csv".colonnes.nuance_legis_2022]
+nom = "nuance_legis_2022"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-legislatives-2-candidats.csv".colonnes.regroupement_om_legis_2022]
+nom = "regroupement_om_legis_2022"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-1-candidats.csv"]
+nom = "2024-legislatives-1-candidats"
+description = """
+"""
+type = "csv"
+
+["data/02_clean/elections/2024-legislatives-1-candidats.csv".colonnes.circonscription]
+nom = "circonscription"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-1-candidats.csv".colonnes.numero_panneau]
+nom = "numero_panneau"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-1-candidats.csv".colonnes.numero_depot]
+nom = "numero_depot"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-1-candidats.csv".colonnes.sexe]
+nom = "sexe"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-1-candidats.csv".colonnes.nom]
+nom = "nom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-1-candidats.csv".colonnes.prenom]
+nom = "prenom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-1-candidats.csv".colonnes.date_naissance]
+nom = "date_naissance"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-1-candidats.csv".colonnes.nuance]
+nom = "nuance"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-1-candidats.csv".colonnes.profession]
+nom = "profession"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-1-candidats.csv".colonnes.sortant]
+nom = "sortant"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-1-candidats.csv".colonnes.sexe_suppleant]
+nom = "sexe_suppleant"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-1-candidats.csv".colonnes.nom_suppleant]
+nom = "nom_suppleant"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-1-candidats.csv".colonnes.prenom_suppleant]
+nom = "prenom_suppleant"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-1-candidats.csv".colonnes.date_naissance_suppleant]
+nom = "date_naissance_suppleant"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-1-candidats.csv".colonnes.sortant_suppleant]
+nom = "sortant_suppleant"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-1-candidats.csv".colonnes.nuance_lfi]
+nom = "nuance_lfi"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-1-candidats.csv".colonnes.sensibilite]
+nom = "sensibilite"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2020-municipales-2-bureau_de_vote.csv"]
+nom = "2020-municipales-2-bureau_de_vote"
+description = """
+"""
+type = "csv"
+
+["data/02_clean/elections/2020-municipales-2-bureau_de_vote.csv".colonnes.bureau_de_vote]
+nom = "bureau_de_vote"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2020-municipales-2-bureau_de_vote.csv".colonnes.inscrits]
+nom = "inscrits"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2020-municipales-2-bureau_de_vote.csv".colonnes.votants]
+nom = "votants"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2020-municipales-2-bureau_de_vote.csv".colonnes.exprimes]
+nom = "exprimes"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2020-municipales-2-bureau_de_vote.csv".colonnes.numero_panneau]
+nom = "numero_panneau"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2020-municipales-2-bureau_de_vote.csv".colonnes.nuance]
+nom = "nuance"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2020-municipales-2-bureau_de_vote.csv".colonnes.nom]
+nom = "nom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2020-municipales-2-bureau_de_vote.csv".colonnes.prenom]
+nom = "prenom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2020-municipales-2-bureau_de_vote.csv".colonnes.sexe]
+nom = "sexe"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2020-municipales-2-bureau_de_vote.csv".colonnes.liste_long]
+nom = "liste_long"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2020-municipales-2-bureau_de_vote.csv".colonnes.voix]
+nom = "voix"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2017-presidentielle-1-bureau_de_vote.csv"]
+nom = "2017-presidentielle-1-bureau_de_vote"
+description = """
+"""
+type = "csv"
+
+["data/02_clean/elections/2017-presidentielle-1-bureau_de_vote.csv".colonnes.bureau_de_vote]
+nom = "bureau_de_vote"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2017-presidentielle-1-bureau_de_vote.csv".colonnes.circonscription]
+nom = "circonscription"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2017-presidentielle-1-bureau_de_vote.csv".colonnes.inscrits]
+nom = "inscrits"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2017-presidentielle-1-bureau_de_vote.csv".colonnes.votants]
+nom = "votants"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2017-presidentielle-1-bureau_de_vote.csv".colonnes.exprimes]
+nom = "exprimes"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2017-presidentielle-1-bureau_de_vote.csv".colonnes.numero_panneau]
+nom = "numero_panneau"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2017-presidentielle-1-bureau_de_vote.csv".colonnes.nom]
+nom = "nom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2017-presidentielle-1-bureau_de_vote.csv".colonnes.prenom]
+nom = "prenom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2017-presidentielle-1-bureau_de_vote.csv".colonnes.sexe]
+nom = "sexe"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2017-presidentielle-1-bureau_de_vote.csv".colonnes.voix]
+nom = "voix"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-2-candidats.csv"]
+nom = "2024-legislatives-2-candidats"
+description = """
+"""
+type = "csv"
+
+["data/02_clean/elections/2024-legislatives-2-candidats.csv".colonnes.circonscription]
+nom = "circonscription"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-2-candidats.csv".colonnes.numero_panneau]
+nom = "numero_panneau"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-2-candidats.csv".colonnes.numero_depot]
+nom = "numero_depot"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-2-candidats.csv".colonnes.sexe]
+nom = "sexe"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-2-candidats.csv".colonnes.nom]
+nom = "nom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-2-candidats.csv".colonnes.prenom]
+nom = "prenom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-2-candidats.csv".colonnes.date_naissance]
+nom = "date_naissance"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-2-candidats.csv".colonnes.nuance]
+nom = "nuance"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-2-candidats.csv".colonnes.profession]
+nom = "profession"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-2-candidats.csv".colonnes.sortant]
+nom = "sortant"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-2-candidats.csv".colonnes.sexe_suppleant]
+nom = "sexe_suppleant"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-2-candidats.csv".colonnes.nom_suppleant]
+nom = "nom_suppleant"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-2-candidats.csv".colonnes.prenom_suppleant]
+nom = "prenom_suppleant"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-2-candidats.csv".colonnes.date_naissance_suppleant]
+nom = "date_naissance_suppleant"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-2-candidats.csv".colonnes.sortant_suppleant]
+nom = "sortant_suppleant"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-2-candidats.csv".colonnes.nuance_lfi]
+nom = "nuance_lfi"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-2-candidats.csv".colonnes.sensibilite]
+nom = "sensibilite"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2014-europeenne-bureau_de_vote.csv"]
+nom = "2014-europeenne-bureau_de_vote"
+description = """
+"""
+type = "csv"
+
+["data/02_clean/elections/2014-europeenne-bureau_de_vote.csv".colonnes.bureau_de_vote]
+nom = "bureau_de_vote"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2014-europeenne-bureau_de_vote.csv".colonnes.numero_tour]
+nom = "numero_tour"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2014-europeenne-bureau_de_vote.csv".colonnes.inscrits]
+nom = "inscrits"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2014-europeenne-bureau_de_vote.csv".colonnes.votants]
+nom = "votants"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2014-europeenne-bureau_de_vote.csv".colonnes.exprimes]
+nom = "exprimes"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2014-europeenne-bureau_de_vote.csv".colonnes.numero_panneau]
+nom = "numero_panneau"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2014-europeenne-bureau_de_vote.csv".colonnes.nom]
+nom = "nom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2014-europeenne-bureau_de_vote.csv".colonnes.prenom]
+nom = "prenom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2014-europeenne-bureau_de_vote.csv".colonnes.nuance]
+nom = "nuance"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2014-europeenne-bureau_de_vote.csv".colonnes.voix]
+nom = "voix"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-2-bureau_de_vote.csv"]
+nom = "2024-legislatives-2-bureau_de_vote"
+description = """
+"""
+type = "csv"
+
+["data/02_clean/elections/2024-legislatives-2-bureau_de_vote.csv".colonnes.bureau_de_vote]
+nom = "bureau_de_vote"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-2-bureau_de_vote.csv".colonnes.inscrits]
+nom = "inscrits"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-2-bureau_de_vote.csv".colonnes.votants]
+nom = "votants"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-2-bureau_de_vote.csv".colonnes.exprimes]
+nom = "exprimes"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-2-bureau_de_vote.csv".colonnes.numero_panneau]
+nom = "numero_panneau"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-2-bureau_de_vote.csv".colonnes.nuance]
+nom = "nuance"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-2-bureau_de_vote.csv".colonnes.nom]
+nom = "nom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-2-bureau_de_vote.csv".colonnes.prenom]
+nom = "prenom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-2-bureau_de_vote.csv".colonnes.sexe]
+nom = "sexe"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-2-bureau_de_vote.csv".colonnes.voix]
+nom = "voix"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2017-presidentielle-2-bureau_de_vote.csv"]
+nom = "2017-presidentielle-2-bureau_de_vote"
+description = """
+"""
+type = "csv"
+
+["data/02_clean/elections/2017-presidentielle-2-bureau_de_vote.csv".colonnes.bureau_de_vote]
+nom = "bureau_de_vote"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2017-presidentielle-2-bureau_de_vote.csv".colonnes.circonscription]
+nom = "circonscription"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2017-presidentielle-2-bureau_de_vote.csv".colonnes.inscrits]
+nom = "inscrits"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2017-presidentielle-2-bureau_de_vote.csv".colonnes.votants]
+nom = "votants"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2017-presidentielle-2-bureau_de_vote.csv".colonnes.exprimes]
+nom = "exprimes"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2017-presidentielle-2-bureau_de_vote.csv".colonnes.numero_panneau]
+nom = "numero_panneau"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2017-presidentielle-2-bureau_de_vote.csv".colonnes.nom]
+nom = "nom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2017-presidentielle-2-bureau_de_vote.csv".colonnes.prenom]
+nom = "prenom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2017-presidentielle-2-bureau_de_vote.csv".colonnes.sexe]
+nom = "sexe"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2017-presidentielle-2-bureau_de_vote.csv".colonnes.voix]
+nom = "voix"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-correspondances-bureau_de_vote-circonscription.csv"]
+nom = "2024-legislatives-correspondances-bureau_de_vote-circonscription"
+description = """
+"""
+type = "csv"
+
+["data/02_clean/elections/2024-legislatives-correspondances-bureau_de_vote-circonscription.csv".colonnes.bureau_de_vote]
+nom = "bureau_de_vote"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-correspondances-bureau_de_vote-circonscription.csv".colonnes.circonscription]
+nom = "circonscription"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-presidentielle-1-bureau_de_vote.csv"]
+nom = "2022-presidentielle-1-bureau_de_vote"
+description = """
+"""
+type = "csv"
+
+["data/02_clean/elections/2022-presidentielle-1-bureau_de_vote.csv".colonnes.bureau_de_vote]
+nom = "bureau_de_vote"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-presidentielle-1-bureau_de_vote.csv".colonnes.circonscription]
+nom = "circonscription"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-presidentielle-1-bureau_de_vote.csv".colonnes.inscrits]
+nom = "inscrits"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-presidentielle-1-bureau_de_vote.csv".colonnes.votants]
+nom = "votants"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-presidentielle-1-bureau_de_vote.csv".colonnes.exprimes]
+nom = "exprimes"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-presidentielle-1-bureau_de_vote.csv".colonnes.numero_panneau]
+nom = "numero_panneau"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-presidentielle-1-bureau_de_vote.csv".colonnes.nom]
+nom = "nom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-presidentielle-1-bureau_de_vote.csv".colonnes.prenom]
+nom = "prenom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-presidentielle-1-bureau_de_vote.csv".colonnes.sexe]
+nom = "sexe"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2022-presidentielle-1-bureau_de_vote.csv".colonnes.voix]
+nom = "voix"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-1-circonscription.csv"]
+nom = "2024-legislatives-1-circonscription"
+description = """
+"""
+type = "csv"
+
+["data/02_clean/elections/2024-legislatives-1-circonscription.csv".colonnes.circonscription]
+nom = "circonscription"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-1-circonscription.csv".colonnes.inscrits]
+nom = "inscrits"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-1-circonscription.csv".colonnes.votants]
+nom = "votants"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-1-circonscription.csv".colonnes.exprimes]
+nom = "exprimes"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-1-circonscription.csv".colonnes.numero_panneau]
+nom = "numero_panneau"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-1-circonscription.csv".colonnes.nuance]
+nom = "nuance"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-1-circonscription.csv".colonnes.nom]
+nom = "nom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-1-circonscription.csv".colonnes.prenom]
+nom = "prenom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-1-circonscription.csv".colonnes.sexe]
+nom = "sexe"
+description = """
+"""
+type = "str"
+
+["data/02_clean/elections/2024-legislatives-1-circonscription.csv".colonnes.voix]
+nom = "voix"
+description = """
+"""
+type = "str"
+
+["data/02_clean/cog/departements.csv"]
+nom = "departements"
+description = """
+"""
+type = "csv"
+
+["data/02_clean/cog/departements.csv".colonnes.code_departement]
+nom = "code_departement"
+description = """
+"""
+type = "str"
+
+["data/02_clean/cog/departements.csv".colonnes.code_region]
+nom = "code_region"
+description = """
+"""
+type = "str"
+
+["data/02_clean/cog/departements.csv".colonnes.code_chef_lieu]
+nom = "code_chef_lieu"
+description = """
+"""
+type = "str"
+
+["data/02_clean/cog/departements.csv".colonnes.type_nom]
+nom = "type_nom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/cog/departements.csv".colonnes.nom]
+nom = "nom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/cog/communes.csv"]
+nom = "communes"
+description = """
+"""
+type = "csv"
+
+["data/02_clean/cog/communes.csv".colonnes.code_commune]
+nom = "code_commune"
+description = """
+"""
+type = "str"
+
+["data/02_clean/cog/communes.csv".colonnes.type_commune]
+nom = "type_commune"
+description = """
+"""
+type = "str"
+
+["data/02_clean/cog/communes.csv".colonnes.code_region]
+nom = "code_region"
+description = """
+"""
+type = "str"
+
+["data/02_clean/cog/communes.csv".colonnes.code_departement]
+nom = "code_departement"
+description = """
+"""
+type = "str"
+
+["data/02_clean/cog/communes.csv".colonnes.code_collectivite_departementale]
+nom = "code_collectivite_departementale"
+description = """
+"""
+type = "str"
+
+["data/02_clean/cog/communes.csv".colonnes.code_arrondissement]
+nom = "code_arrondissement"
+description = """
+"""
+type = "str"
+
+["data/02_clean/cog/communes.csv".colonnes.type_nom]
+nom = "type_nom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/cog/communes.csv".colonnes.nom]
+nom = "nom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/cog/communes.csv".colonnes.libelle]
+nom = "libelle"
+description = """
+"""
+type = "str"
+
+["data/02_clean/cog/communes.csv".colonnes.code_canton]
+nom = "code_canton"
+description = """
+"""
+type = "str"
+
+["data/02_clean/cog/communes.csv".colonnes.code_commune_parent]
+nom = "code_commune_parent"
+description = """
+"""
+type = "str"

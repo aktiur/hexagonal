@@ -88,7 +88,7 @@ spec_mairies = (
         ),
         "adresse_postale": (
             Coalesce(
-                (S.adresse_postale,),
+                S.adresse_postale,
                 default="",
             ),
             extraire_adresse,
