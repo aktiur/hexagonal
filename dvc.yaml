@@ -188,3 +188,15 @@ stages:
       python -m hexagonal.annuaire.nettoyer
       ${raw}/annuaire/mairies.json
       ${clean}/annuaire/mairies.csv
+      
+  nettoyer_cog:
+    deps:
+      - ${raw}/cog.zip
+      - ${src}/hexagonal/cog/extraire.py
+    outs:
+      - ${clean}/cog/communes.csv
+      - ${clean}/cog/departements.csv
+    cmd: >-
+      ${python} hexagonal.cog.extraire
+      ${raw}/cog.zip
+      ${clean}/cog

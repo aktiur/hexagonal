@@ -4,7 +4,6 @@ from pathlib import Path
 from zipfile import Path as ZPath, ZipFile
 
 from glom import glom
-from markdown_it.rules_inline import newline
 
 ANNEE = 2024
 
