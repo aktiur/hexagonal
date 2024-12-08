@@ -23,8 +23,7 @@ stages:
     foreach: ${scrutins}
     do:
       cmd: >-
-        PYTHONPATH=${src}
-        python -m hexagonal.resultats.format_${item.format}
+        ${python} hexagonal.resultats.format_${item.format}
         ${raw}/elections/${key}.csv ${clean}/elections/${key}.csv ${item.encoding} "${item.delimiter}"
       deps:
         - ${raw}/elections/${key}.csv
@@ -39,8 +38,7 @@ stages:
       - 2
     do:
       cmd: >-
-        PYTHONPATH=${src}
-        python -m hexagonal.candidatures.2024_legislatives
+        ${python} hexagonal.candidatures.2024_legislatives
         ${raw}/elections/2024-legislatives-${item}-candidats.csv
         ${raw}/elections/2024-legislatives-nfp-sensibilites.csv
         ${raw}/elections/2024-legislatives-nuances-lfi.csv
@@ -60,8 +58,7 @@ stages:
       - 2
     do:
       cmd: >-
-        PYTHONPATH=${src}
-        python -m hexagonal.candidatures.2022_legislatives
+        ${python} hexagonal.candidatures.2022_legislatives
         ${raw}/elections/2022-legislatives-${item}-candidats.csv
         ${raw}/elections/2022-legislatives-nuances-lemonde.csv
         ${raw}/elections/2022-legislatives-nuances-legis-2022.csv
@@ -113,8 +110,7 @@ stages:
       - 2024
     do:
       cmd: >-
-        PYTHONPATH=${src}
-        python -m hexagonal.correspondances_circonscription
+        ${python} hexagonal.correspondances_circonscription
         ${clean}/elections/${item}-legislatives-1-bureau_de_vote.csv
         ${clean}/elections/${item}-legislatives-1-candidats.csv
         ${clean}/elections/${item}-legislatives-correspondances-bureau_de_vote-circonscription.csv
@@ -134,8 +130,7 @@ stages:
     outs:
       - ${clean}/assemblee_nationale/deputes.csv
     cmd: >-
-      PYTHONPATH=${src}
-      python -m hexagonal.assemblee_nationale.liste
+      ${python} hexagonal.assemblee_nationale.liste
       ${raw}/assemblee-nationale.zip
       ${clean}/assemblee_nationale/deputes.csv
 
@@ -147,8 +142,7 @@ stages:
     outs:
       - ${clean}/assemblee_nationale/mandats.csv
     cmd: >-
-      PYTHONPATH=${src}
-      python -m hexagonal.assemblee_nationale.mandats
+      ${python} hexagonal.assemblee_nationale.mandats
       ${raw}/assemblee-nationale.zip
       ${clean}/assemblee_nationale/mandats.csv
 
@@ -161,8 +155,7 @@ stages:
       - ${clean}/assemblee_nationale/groupes.csv
       - ${clean}/assemblee_nationale/affiliations.csv
     cmd: >-
-      PYTHONPATH=${src}
-      python -m hexagonal.assemblee_nationale.groupes
+      ${python} hexagonal.assemblee_nationale.groupes
       ${raw}/assemblee-nationale.zip
       ${clean}/assemblee_nationale/groupes.csv
       ${clean}/assemblee_nationale/affiliations.csv
@@ -174,8 +167,7 @@ stages:
     outs:
       - ${clean}/rne/conseillers_municipaux.csv
     cmd: >-
-      PYTHONPATH=${src}
-      python -m hexagonal.rne.extraire
+      ${python} hexagonal.rne.extraire
       ${raw}/rne
       ${clean}/rne
 
@@ -190,8 +182,7 @@ stages:
       - ${raw}/annuaire/conseils_regionaux.json
       - ${raw}/annuaire/prefectures.json
     cmd: >-
-      PYTHONPATH=${src}
-      python -m hexagonal.annuaire.extraire_organismes
+      ${python} hexagonal.annuaire.extraire_organismes
       ${raw}/annuaire/annuaire.tar.bz2
       ${raw}/annuaire/
 
@@ -202,8 +193,7 @@ stages:
     outs:
       - ${clean}/annuaire/mairies.csv
     cmd: >-
-      PYTHONPATH=${src}
-      python -m hexagonal.annuaire.nettoyer
+      ${python} hexagonal.annuaire.nettoyer
       ${raw}/annuaire/mairies.json
       ${clean}/annuaire/mairies.csv
       

@@ -116,6 +116,7 @@ def qualifier_parrainages(
     with open(clean_parrainages_path, "r") as in_fd, open(dest_path, "w") as out_fd:
         r = csv.DictReader(in_fd)
         w = csv.DictWriter(out_fd, fieldnames=list(spec))
+        w.writeheader()
         w.writerows(glom(r, Iter(spec)))
 
 

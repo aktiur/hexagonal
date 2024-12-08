@@ -923,10 +923,10 @@ stages:
       size: 1079423
     - path: src/hexagonal/parrainages/qualifier.py
       hash: md5
-      md5: 84f10a29cbc3e4dddb061a81f9213ed5
-      size: 4156
+      md5: 4fd5f940a50ab47fbe2a20d977347ebe
+      size: 4180
     outs:
     - path: data/03_main/elections/2022-presidentielle-parrainages.csv
       hash: md5
-      md5: a84935d922d4d14fd2fa71b68b9ce71e
-      size: 1046645
+      md5: fc8f43b348ec0b6fe13565c0a86984c5
+      size: 1046742
