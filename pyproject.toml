@@ -1,5 +1,9 @@
-[tool.hexagonal.remotes]
-hexagonal-data = "https://hexagonal-data.s3.eu-west-3.amazonaws.com"
+[tool.hexagonal]
+s3_root = "s3://hexagonal-data/"
+http_root = "https://hexagonal-data.s3.eu-west-3.amazonaws.com"
+
+[project]
+name = "hexagonal"
 
 
 [tool.poetry]
