@@ -2,7 +2,7 @@ import csv
 
 import tomlkit
 
-from hexagonal.files.dvc_files import get_data_files, OUTPUT_TYPES
+from hexagonal.files.dvc_files import get_dvc_files, OUTPUT_TYPES
 
 FIELDS_ORDER = [
     "nom",
@@ -25,7 +25,7 @@ def update_spec():
 
     new_doc = tomlkit.table()
 
-    data_files = sorted(get_data_files())
+    data_files = sorted(get_dvc_files())
 
     for file in sorted(data_files):
         orig_table = orig_doc.get(str(file), {})
@@ -41,6 +41,12 @@ def update_spec():
             "url": file.http_url,
             "s3_url": file.s3_url,
         }
+
+        data_deps = tomlkit.array()
+        data_deps.extend(str(p) for p in file.data_deps)
+        if data_deps:
+            overwrites["deps"] = data_deps.multiline(len(data_deps) > 1)
+
         if file.source_url:
             overwrites["source_url"] = file.source_url
 

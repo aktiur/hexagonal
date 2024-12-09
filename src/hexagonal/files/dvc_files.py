@@ -1,5 +1,6 @@
 from dataclasses import dataclass
 from pathlib import Path
+from typing import Generator
 from urllib.parse import urljoin
 
 from dvc.api import DVCFileSystem
@@ -44,11 +45,11 @@ class DVCFile:
 
     @property
     def data_deps(self):
-        return [p for p in self.deps if DATA_DIR in p.parents]
+        return [p for p in self.deps if Path("data") in p.parents]
 
     @property
     def source_deps(self):
-        return [p for p in self.deps if SRC_DIR in p.parents]
+        return [p for p in self.deps if Path("src") in p.parents]
 
     @property
     def s3_url(self):
@@ -76,7 +77,7 @@ class DVCFile:
         return str(self.path)
 
 
-def get_data_files():
+def get_dvc_files() -> Generator[DVCFile, None, None]:
     fs = DVCFileSystem(".")
     index = fs.repo.index
 
