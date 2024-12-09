@@ -28,7 +28,7 @@ spec_departement = {
 }
 
 spec_com = {
-    "code_com": "COMER",
+    "code_departement": "COMER",
     "type_nom": "TNCC",
     "nom": "NCCENR",
     "article": article,
@@ -52,8 +52,8 @@ spec_commune = {
 
 spec_commune_com = {
     "code_commune": "COM_COMER",
-    "code_com": "COMER",
-    "nature_zonage": "NATURE_ZONAGE",
+    "type_commune": "NATURE_ZONAGE",
+    "code_departement": "COMER",
     "type_nom": "TNCC",
     "nom": "NCCENR",
     "article": article,

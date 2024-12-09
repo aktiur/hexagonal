@@ -902,21 +902,21 @@ stages:
       size: 1879699
     - path: src/hexagonal/cog/extraire.py
       hash: md5
-      md5: 539fbc1ebea17edecbec6b7044b5cd52
-      size: 2690
+      md5: ed3eb46b9ed9db7e2b21279190ea2041
+      size: 2705
     outs:
     - path: data/02_clean/cog/com.csv
       hash: md5
-      md5: e34ca0a5c1d5049fb7f47cb8d401b3b9
-      size: 324
+      md5: eb6adcfa64aec45b1de8aa99714ba201
+      size: 332
     - path: data/02_clean/cog/communes.csv
       hash: md5
       md5: 00a2dc59d3571339c3c6fffbc5ec881d
       size: 1897852
     - path: data/02_clean/cog/communes_com.csv
       hash: md5
-      md5: 9e4844dec2ab4216ce9afa23bd0d51ca
-      size: 3043
+      md5: c7ff14be8f5a8d3737c343146cd27a27
+      size: 3050
     - path: data/02_clean/cog/communes_historiques.csv
       hash: md5
       md5: 2b61bf920c2ecae8c56bf84a2cdfefca
