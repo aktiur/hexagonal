@@ -4,6 +4,8 @@ from pathlib import Path
 
 from glom import glom, Iter
 
+from hexagonal.utils import date_francaise_vers_iso
+
 spec_conseiller_municipal = {
     "code_departement": "Code du département",
     "code_collectivite_sp": "Code de la collectivité à statut particulier",
@@ -11,11 +13,11 @@ spec_conseiller_municipal = {
     "nom": "Nom de l'élu",
     "prenom": "Prénom de l'élu",
     "sexe": "Code sexe",
-    "date_naissance": "Date de naissance",
+    "date_naissance": ("Date de naissance", date_francaise_vers_iso),
     "csp": "Code de la catégorie socio-professionnelle",
-    "date_debut_mandat": "Date de début du mandat",
+    "date_debut_mandat": ("Date de début du mandat", date_francaise_vers_iso),
     "fonction": "Libellé de la fonction",
-    "date_debut_fonction": "Date de début de la fonction",
+    "date_debut_fonction": ("Date de début de la fonction", date_francaise_vers_iso),
     "nationalite": "Code nationalité",
 }
 

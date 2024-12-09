@@ -4,6 +4,8 @@ import sys
 
 from glom import glom, Iter
 
+from hexagonal.utils import date_francaise_vers_iso
+
 MANDATS = {
     "député": "Députée?",
     "sénateur": "Sénat(eur|rice)",
@@ -40,7 +42,7 @@ spec_parrainages = {
     "circonscription_mandat": "Circonscription",
     "departement_mandat": "Département",
     "candidat": "Candidat",
-    "date_publication": "Date de publication",
+    "date_publication": ("Date de publication", date_francaise_vers_iso),
 }
 
 

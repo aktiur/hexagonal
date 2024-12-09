@@ -79,7 +79,7 @@ spec_mairies = (
         "code_commune": "code_insee_commune",
         "siret": "siret",
         "nom": "nom",
-        "emails": ("adresse_courriel", ",".join),
+        "emails": ("adresse_courriel", "\n".join),
         "adresse_physique": (
             Coalesce(
                 S.adresse_physique,
@@ -121,7 +121,7 @@ spec_conseils_departementaux = (
         "code_commune": "code_insee_commune",
         "siret": "siret",
         "nom": "nom",
-        "emails": ("adresse_courriel", ",".join),
+        "emails": ("adresse_courriel", "\n".join),
         "adresse_physique": (
             Coalesce(
                 S.adresse_physique,

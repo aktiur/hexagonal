@@ -65,6 +65,11 @@ def extraire_candidats(candidats, nuances_lemonde, nuances_legis_2022, destinati
     )
     del candidats["departement"]
 
+    for c in ["date_naissance", "date_naissance_suppleant"]:
+        candidats[c] = pd.to_datetime(candidats[c], format="%d/%m/%Y").dt.strftime(
+            "%Y-%m-%d"
+        )
+
     nuances_lemonde = pd.read_csv(
         nuances_lemonde,
         usecols=list(COLONNES_LEMONDE),

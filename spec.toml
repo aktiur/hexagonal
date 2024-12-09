@@ -26,6 +26,7 @@ ligne (format dit ndjson)
 format = "ndjson"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/d0/79eaee7e513be6acde1d9bdfaf0002"
 s3_url = "cache/files/md5/d0/79eaee7e513be6acde1d9bdfaf0002"
+deps = ["data/01_raw/annuaire/annuaire.tar.bz2"]
 
 ["data/01_raw/annuaire/conseils_regionaux.json"]
 nom = "Annuaire de l'administration — conseils régionaux"
@@ -38,6 +39,7 @@ ligne (format dit ndjson)
 format = "ndjson"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/a2/a1f4d0a7a1fab329844ba4e3eaef84"
 s3_url = "cache/files/md5/a2/a1f4d0a7a1fab329844ba4e3eaef84"
+deps = ["data/01_raw/annuaire/annuaire.tar.bz2"]
 
 ["data/01_raw/annuaire/epcis.json"]
 nom = "Annuaire de l'administration — EPCI"
@@ -49,6 +51,7 @@ EPCI, chacun au format JSON, séparé par une nouvelleligne (format dit ndjson)
 format = "ndjson"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/5f/fdaca257899a799b34169664804658"
 s3_url = "cache/files/md5/5f/fdaca257899a799b34169664804658"
+deps = ["data/01_raw/annuaire/annuaire.tar.bz2"]
 
 ["data/01_raw/annuaire/mairies.json"]
 nom = "Annuaire de l'administration — Mairies"
@@ -60,15 +63,17 @@ mairies, chacun au format JSON, séparé par une nouvelleligne (format dit ndjso
 format = "ndjson"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/b9/5de50790673feae76c1f7d5f7765d8"
 s3_url = "cache/files/md5/b9/5de50790673feae76c1f7d5f7765d8"
+deps = ["data/01_raw/annuaire/annuaire.tar.bz2"]
 
 ["data/01_raw/annuaire/prefectures.json"]
 nom = "Annuaire de l'administration — Préfectures"
-type = "clean"
+type = "intermediaire"
 description = """
 """
 format = "ndjson"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/f7/e71bfc0c1beff22dbb905e1cf76401"
 s3_url = "cache/files/md5/f7/e71bfc0c1beff22dbb905e1cf76401"
+deps = ["data/01_raw/annuaire/annuaire.tar.bz2"]
 
 ["data/01_raw/assemblee-nationale.zip"]
 nom = "Historique des députés"
@@ -206,13 +211,14 @@ source_url = "https://www.data.gouv.fr/fr/datasets/r/77c4450b-7fa7-425c-84da-4f7
 editeur = "Ministère de l'intérieur"
 
 ["data/01_raw/elections/2020-municipales-1-bureau_de_vote.csv"]
-nom = "2020-municipales-1-bureau_de_vote"
-type = "clean"
+nom = "Résultats du premier tour des municipales 2020 par bureau de vote — corrigés"
+type = "intermediaire"
 description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/13/4a9746d44fbccabb9136992975c355"
 s3_url = "cache/files/md5/13/4a9746d44fbccabb9136992975c355"
+deps = ["data/01_raw/elections/2020-municipales-1-bureau_de_vote_avant_correction.csv"]
 
 ["data/01_raw/elections/2020-municipales-1-bureau_de_vote_avant_correction.csv"]
 nom = "Résultats du premier tour des municipales 2020 par bureau de vote"
@@ -371,18 +377,23 @@ source_url = "https://www.data.gouv.fr/fr/datasets/r/67d3987a-3f9d-464c-a678-116
 editeur = "Legis 2022"
 
 ["data/01_raw/elections/2022-legislatives-nuances-lemonde.csv"]
-nom = "2022-legislatives-nuances-lemonde"
+nom = "Le Monde — Liste des candidats et leur nuance politique"
 type = "source"
 description = """
+Le Monde a décidé de réétiqueter chacun des quelque 6 300 candidats et candidates aux élections législatives 2022 pour
+mieux représenter les tendances politiques et la future Assemblée nationale. Les données des candidatures contenant à
+la fois la nuance attribuée par le ministère de l’intérieur et celle du Monde, celles-ci comportent quelques divergences
+ et peuvent évoluer. Elles sont désormais disponibles en open data.
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/a1/f8ad9352c14eeeb4ff8fd530747eab"
 s3_url = "cache/files/md5/a1/f8ad9352c14eeeb4ff8fd530747eab"
 source_url = "https://assets-decodeurs.lemonde.fr/decodeurs/elections_2022_snippets/legislatives/tour1/candidats_legislatives_lemonde.csv"
 info_url = "https://www.lemonde.fr/les-decodeurs/article/2022/06/15/legislatives-2022-le-monde-met-a-disposition-la-liste-des-candidats-et-leur-nuance-politique-en-open-data_6130475_4355770.html"
+editeur = "Le Monde"
 
 ["data/01_raw/elections/2022-presidentielle-1-bureau_de_vote.csv"]
-nom = "2022-presidentielle-1-bureau_de_vote"
+nom = "Résultats du premier tour de l'élection présidentielle 2022 par bureau de vote"
 type = "source"
 description = """
 """
@@ -391,9 +402,10 @@ url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/86/3143
 s3_url = "cache/files/md5/86/3143ce55ac2e71541972bd68ff9365"
 source_url = "https://www.data.gouv.fr/fr/datasets/r/79b5cac4-4957-486b-bbda-322d80868224"
 info_url = "https://www.data.gouv.fr/fr/datasets/election-presidentielle-des-10-et-24-avril-2022-resultats-definitifs-du-1er-tour/"
+editeur = "Ministère de l'intérieur"
 
 ["data/01_raw/elections/2022-presidentielle-1-circonscription.csv"]
-nom = "2022-presidentielle-1-circonscription"
+nom = "Résultats du premier tour de l'élection présidentielle 2022 par circonscription législative"
 type = "source"
 description = """
 """
@@ -402,9 +414,10 @@ url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/fb/5e45
 s3_url = "cache/files/md5/fb/5e45dd6a5ae43c93d3be0969d6c0d0"
 source_url = "https://www.data.gouv.fr/fr/datasets/r/056c3d1e-87ef-42b2-ae9c-57ad9d81b563"
 info_url = "https://www.data.gouv.fr/fr/datasets/election-presidentielle-des-10-et-24-avril-2022-resultats-definitifs-du-1er-tour/"
+editeur = "Ministère de l'intérieur"
 
 ["data/01_raw/elections/2022-presidentielle-2-bureau_de_vote.csv"]
-nom = "2022-presidentielle-2-bureau_de_vote"
+nom = "Résultats du deuxième tour de l'élection présidentielle 2022 par bureau de vote"
 type = "source"
 description = """
 """
@@ -413,9 +426,10 @@ url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/c5/e0a2
 s3_url = "cache/files/md5/c5/e0a26fe52ed824208649d15628b528"
 source_url = "https://www.data.gouv.fr/fr/datasets/r/4dfd05a9-094e-4043-8a19-43b6b6bbe086"
 info_url = "https://www.data.gouv.fr/fr/datasets/election-presidentielle-des-10-et-24-avril-2022-resultats-definitifs-du-2nd-tour/"
+editeur = "Ministère de l'intérieur"
 
 ["data/01_raw/elections/2022-presidentielle-2-circonscription.csv"]
-nom = "2022-presidentielle-2-circonscription"
+nom = "Résultats du deuxième tour de l'élection présidentielle 2022 par circonscription législative"
 type = "source"
 description = """
 """
@@ -424,20 +438,24 @@ url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/29/2bc9
 s3_url = "cache/files/md5/29/2bc96162d5cde4d3cc7c98eeed4e00"
 source_url = "https://www.data.gouv.fr/fr/datasets/r/eefff73d-1b17-4695-8ec6-6671916e3af8"
 info_url = "https://www.data.gouv.fr/fr/datasets/election-presidentielle-des-10-et-24-avril-2022-resultats-definitifs-du-2nd-tour/"
+editeur = "Ministère de l'intérieur"
 
 ["data/01_raw/elections/2022-presidentielle-parrainages.csv"]
-nom = "2022-presidentielle-parrainages"
+nom = "Liste des parrainages validés par le Conseil constitutionnel"
 type = "source"
 description = """
+Le tableau ci-dessous récapitule l’ensemble des parrainages signés par des élus habilités à soutenir un candidat et
+validés par le Conseil constitutionnel.
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/62/595a6af02961ae4f2f2a7b0ebccddb"
 s3_url = "cache/files/md5/62/595a6af02961ae4f2f2a7b0ebccddb"
 source_url = "https://presidentielle2022.conseil-constitutionnel.fr/telechargement/parrainagestotal.csv"
+info_url = "https://presidentielle2022.conseil-constitutionnel.fr/les-parrainages/tous-les-parrainages-valides.html"
 editeur = "Conseil constitutionnel"
 
 ["data/01_raw/elections/2024-europeenne-bureau_de_vote.csv"]
-nom = "2024-europeenne-bureau_de_vote"
+nom = "Résultats des élections européennes 2024 par bureau de vote"
 type = "source"
 description = """
 """
@@ -447,7 +465,7 @@ s3_url = "cache/files/md5/b3/a9085acb27df6669ac04d5aca2e5da"
 source_url = "https://www.data.gouv.fr/fr/datasets/r/cc1883d9-1265-4365-b754-fb6aef22d82e"
 
 ["data/01_raw/elections/2024-europeenne-circonscription.csv"]
-nom = "2024-europeenne-circonscription"
+nom = "Résultats des élections européennes 2024 par circonscription législative"
 type = "source"
 description = """
 """
@@ -457,7 +475,7 @@ s3_url = "cache/files/md5/8a/9a6ca76b17b2ce3600c400ce800187"
 source_url = "https://www.data.gouv.fr/fr/datasets/r/ee37cbef-3d2a-4efe-a395-530b85a63028"
 
 ["data/01_raw/elections/2024-legislatives-1-bureau_de_vote.csv"]
-nom = "2024-legislatives-1-bureau_de_vote"
+nom = "Résultats du premier tour des élections législatives 2024 par bureau de vote"
 type = "source"
 description = """
 """
@@ -467,7 +485,7 @@ s3_url = "cache/files/md5/92/547431feb455ad1065815e72c40d8e"
 source_url = "https://www.data.gouv.fr/fr/datasets/r/6813fb28-7ec0-42ff-a528-2bc3d82d7dcd"
 
 ["data/01_raw/elections/2024-legislatives-1-candidats.csv"]
-nom = "2024-legislatives-1-candidats"
+nom = "Liste des candidats au premier tour des élections législatives 2024"
 type = "source"
 description = """
 """
@@ -477,7 +495,7 @@ s3_url = "cache/files/md5/c8/40bd309348cbe6cd728cc96bf550d0"
 source_url = "https://www.data.gouv.fr/fr/datasets/r/cd5b39e6-5feb-4864-b274-3431ed81442c"
 
 ["data/01_raw/elections/2024-legislatives-1-circonscription.csv"]
-nom = "2024-legislatives-1-circonscription"
+nom = "Résultats du premier tour des élections législatives 2024 par circonscription législative"
 type = "source"
 description = """
 """
@@ -487,7 +505,7 @@ s3_url = "cache/files/md5/1d/424007d37d7cf2d24d799403d6af00"
 source_url = "https://www.data.gouv.fr/fr/datasets/r/5163f2e3-1362-4c35-89a0-1934bb74f2d9"
 
 ["data/01_raw/elections/2024-legislatives-2-bureau_de_vote.csv"]
-nom = "2024-legislatives-2-bureau_de_vote"
+nom = "Résultats du deuxième tour des élections législatives 2024 par bureau de vote"
 type = "source"
 description = """
 """
@@ -497,7 +515,7 @@ s3_url = "cache/files/md5/06/3dfce8aa81153f6b535b7ecdb49d6f"
 source_url = "https://www.data.gouv.fr/fr/datasets/r/ca974f04-cfd9-4da8-8554-4a868a09c6c2"
 
 ["data/01_raw/elections/2024-legislatives-2-candidats.csv"]
-nom = "2024-legislatives-2-candidats"
+nom = "Liste des candidats au deuxième tour des élections législatives de 2024"
 type = "source"
 description = """
 """
@@ -507,7 +525,7 @@ s3_url = "cache/files/md5/c6/e6f33721554d0a1260d81775c0fd22"
 source_url = "https://www.data.gouv.fr/fr/datasets/r/f04605b8-4c02-4496-8a26-2bc02b17f739"
 
 ["data/01_raw/elections/2024-legislatives-2-circonscription.csv"]
-nom = "2024-legislatives-2-circonscription"
+nom = "Résultats du deuxième tour des élections législatives 2024 par circonscription législative"
 type = "source"
 description = """
 """
@@ -517,9 +535,15 @@ s3_url = "cache/files/md5/52/32b0951ce8ca92573ea3b35d5d62a0"
 source_url = "https://www.data.gouv.fr/fr/datasets/r/41ed46cd-77c2-4ecc-b8eb-374aa953ca39"
 
 ["data/01_raw/elections/2024-legislatives-nfp-sensibilites.csv"]
-nom = "2024-legislatives-nfp-sensibilites"
+nom = "Liste des candidats du Nouveau Front populaire et de leur sensibilité par circonscription législative"
 type = "source"
 description = """
+L'accord signé entre la France insoumise, les Verts, le Parti communiste français et le Parti socialiste prévoyait une
+répartition des circonscriptions entre les 4 sensibilités. Ce fichier indique, pour chaque circonscription incluse dans
+le périmètre de l'accord, la sensibilité à laquelle elle a été attribuée et le candidat que cette dernière y a investi.
+
+Ce fichier n'indique pas la présence d'éventuelles dissidences, investies ou non par une des quatre sensibilités de
+l'accord.
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/51/564d56f7bea8c6fc1abf14f540a073"
@@ -527,9 +551,11 @@ s3_url = "cache/files/md5/51/564d56f7bea8c6fc1abf14f540a073"
 editeur = "La France insoumise"
 
 ["data/01_raw/elections/2024-legislatives-nuances-lfi.csv"]
-nom = "2024-legislatives-nuances-lfi"
+nom = "La France insoumise — Nuançage des candidats des élections législatives 2024"
 type = "source"
 description = """
+Ce nuançage a été réalisé par les équipes de la France insoumise pour permettre une analyse plus fine que celle
+qu'autorisait le nuançage retenu par le Ministère de l'intérieur.
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/24/a9e931e2d43373ecddd42a2434eba6"
@@ -573,14 +599,106 @@ s3_url = "cache/files/md5/ba/04a3782f9cbb41b4487a0a6c048873"
 source_url = "https://www.data.gouv.fr/fr/datasets/r/d5f400de-ae3f-4966-8cb6-a85c70c6c24a"
 info_url = "https://www.data.gouv.fr/fr/datasets/repertoire-national-des-elus-1/"
 
+["data/02_clean/annuaire/conseils_departementaux.csv"]
+nom = "conseils_departementaux"
+type = "intermediaire"
+description = """
+"""
+format = "csv"
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/53/09c03e311afead3d83056b4b8688f5"
+s3_url = "cache/files/md5/53/09c03e311afead3d83056b4b8688f5"
+deps = [
+    "data/01_raw/annuaire/mairies.json",
+    "data/01_raw/annuaire/conseils_departementaux.json",
+]
+
+["data/02_clean/annuaire/conseils_departementaux.csv".colonnes.id]
+nom = "id"
+description = """
+Un identifiant interne utilisé par l'annuaire de l'administration.
+"""
+type = "str"
+
+["data/02_clean/annuaire/conseils_departementaux.csv".colonnes.code_commune]
+nom = "code_commune"
+description = """
+"""
+type = "code_commune"
+
+["data/02_clean/annuaire/conseils_departementaux.csv".colonnes.siret]
+nom = "siret"
+description = """
+"""
+type = "str"
+
+["data/02_clean/annuaire/conseils_departementaux.csv".colonnes.nom]
+nom = "nom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/annuaire/conseils_departementaux.csv".colonnes.emails]
+nom = "emails"
+description = """
+Les adresses emails indiquées dans l'annuaire, séparées par un saut de ligne simple.
+"""
+type = "str"
+
+["data/02_clean/annuaire/conseils_departementaux.csv".colonnes.adresse_physique]
+nom = "adresse_physique"
+description = """
+Adresse physique complète
+"""
+type = "str"
+
+["data/02_clean/annuaire/conseils_departementaux.csv".colonnes.adresse_postale]
+nom = "adresse_postale"
+description = """
+"""
+type = "str"
+
+["data/02_clean/annuaire/conseils_departementaux.csv".colonnes.telephone]
+nom = "telephone"
+description = """
+"""
+type = "str"
+
+["data/02_clean/annuaire/conseils_departementaux.csv".colonnes.coordonnees]
+nom = "coordonnees"
+description = """
+"""
+type = "str"
+
+["data/02_clean/annuaire/conseils_departementaux.csv".colonnes.type_accessibilite]
+nom = "type_accessibilite"
+description = """
+"""
+type = "str"
+
+["data/02_clean/annuaire/conseils_departementaux.csv".colonnes.details_accessibilite]
+nom = "details_accessibilite"
+description = """
+"""
+type = "str"
+
+["data/02_clean/annuaire/conseils_departementaux.csv".colonnes.ouverture]
+nom = "ouverture"
+description = """
+"""
+type = "str"
+
 ["data/02_clean/annuaire/mairies.csv"]
 nom = "mairies"
 type = "clean"
 description = """
 """
 format = "csv"
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/a7/2229344f12c8fdc871a9e35ebf9650"
-s3_url = "cache/files/md5/a7/2229344f12c8fdc871a9e35ebf9650"
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/b8/6ed082ddc5e2897e5fefc593380e34"
+s3_url = "cache/files/md5/b8/6ed082ddc5e2897e5fefc593380e34"
+deps = [
+    "data/01_raw/annuaire/mairies.json",
+    "data/01_raw/annuaire/conseils_departementaux.json",
+]
 
 ["data/02_clean/annuaire/mairies.csv".colonnes.id]
 nom = "id"
@@ -658,6 +776,7 @@ type = "str"
 
 
 
+
 ["data/02_clean/assemblee_nationale/affiliations.csv"]
 nom = "affiliations"
 type = "clean"
@@ -666,6 +785,7 @@ description = """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/6f/f8030680e92e49af80135ef63208e5"
 s3_url = "cache/files/md5/6f/f8030680e92e49af80135ef63208e5"
+deps = ["data/01_raw/assemblee-nationale.zip"]
 
 ["data/02_clean/assemblee_nationale/affiliations.csv".colonnes.id_personne]
 nom = "id_personne"
@@ -707,17 +827,13 @@ type = "str"
 nom = "date_debut"
 description = """
 """
-type = "str"
+type = "date"
 
 ["data/02_clean/assemblee_nationale/affiliations.csv".colonnes.date_fin]
 nom = "date_fin"
 description = """
 """
-type = "str"
-
-
-
-
+type = "date"
 
 ["data/02_clean/assemblee_nationale/deputes.csv"]
 nom = "deputes"
@@ -727,6 +843,7 @@ description = """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/71/e5e846805211992d03976a5dcd2af2"
 s3_url = "cache/files/md5/71/e5e846805211992d03976a5dcd2af2"
+deps = ["data/01_raw/assemblee-nationale.zip"]
 
 ["data/02_clean/assemblee_nationale/deputes.csv".colonnes.id_personne]
 nom = "id_personne"
@@ -756,7 +873,7 @@ type = "str"
 nom = "date_naissance"
 description = """
 """
-type = "str"
+type = "date"
 
 ["data/02_clean/assemblee_nationale/deputes.csv".colonnes.ville_naissance]
 nom = "ville_naissance"
@@ -798,6 +915,7 @@ type = "str"
 
 
 
+
 ["data/02_clean/assemblee_nationale/groupes.csv"]
 nom = "groupes"
 type = "clean"
@@ -806,6 +924,7 @@ description = """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/3c/3b5cdbb812161dee7ae3a72b59b05f"
 s3_url = "cache/files/md5/3c/3b5cdbb812161dee7ae3a72b59b05f"
+deps = ["data/01_raw/assemblee-nationale.zip"]
 
 ["data/02_clean/assemblee_nationale/groupes.csv".colonnes.id_groupe]
 nom = "id_groupe"
@@ -841,13 +960,13 @@ type = "str"
 nom = "date_debut"
 description = """
 """
-type = "str"
+type = "date"
 
 ["data/02_clean/assemblee_nationale/groupes.csv".colonnes.date_fin]
 nom = "date_fin"
 description = """
 """
-type = "str"
+type = "date"
 
 ["data/02_clean/assemblee_nationale/groupes.csv".colonnes.position]
 nom = "position"
@@ -860,6 +979,7 @@ nom = "preseance"
 description = """
 """
 type = "str"
+
 
 
 
@@ -880,6 +1000,7 @@ par deux mandats différents.
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/fe/9e69d85766d7ba0dfb3af30d46358b"
 s3_url = "cache/files/md5/fe/9e69d85766d7ba0dfb3af30d46358b"
+deps = ["data/01_raw/assemblee-nationale.zip"]
 
 ["data/02_clean/assemblee_nationale/mandats.csv".colonnes.id_mandat]
 nom = "Identifiant du mandat"
@@ -934,13 +1055,13 @@ type = "str"
 nom = "date_debut"
 description = """
 """
-type = "str"
+type = "date"
 
 ["data/02_clean/assemblee_nationale/mandats.csv".colonnes.date_fin]
 nom = "date_fin"
 description = """
 """
-type = "str"
+type = "date"
 
 ["data/02_clean/assemblee_nationale/mandats.csv".colonnes.cause_debut_mandat]
 nom = "cause_debut_mandat"
@@ -964,14 +1085,56 @@ type = "str"
 
 
 
+
+["data/02_clean/cog/com.csv"]
+nom = "com"
+type = "clean"
+description = """
+"""
+format = "csv"
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/eb/6adcfa64aec45b1de8aa99714ba201"
+s3_url = "cache/files/md5/eb/6adcfa64aec45b1de8aa99714ba201"
+deps = ["data/01_raw/cog.zip"]
+
+["data/02_clean/cog/com.csv".colonnes.code_departement]
+nom = "code_departement"
+description = """
+"""
+type = "str"
+
+["data/02_clean/cog/com.csv".colonnes.type_nom]
+nom = "type_nom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/cog/com.csv".colonnes.nom]
+nom = "nom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/cog/com.csv".colonnes.article]
+nom = "article"
+description = """
+"""
+type = "str"
+
+["data/02_clean/cog/com.csv".colonnes.charniere]
+nom = "charniere"
+description = """
+"""
+type = "str"
+
 ["data/02_clean/cog/communes.csv"]
 nom = "communes"
 type = "clean"
 description = """
 """
 format = "csv"
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/df/e31086cdf374f1a0152afc32e49681"
-s3_url = "cache/files/md5/df/e31086cdf374f1a0152afc32e49681"
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/00/a2dc59d3571339c3c6fffbc5ec881d"
+s3_url = "cache/files/md5/00/a2dc59d3571339c3c6fffbc5ec881d"
+deps = ["data/01_raw/cog.zip"]
 
 ["data/02_clean/cog/communes.csv".colonnes.code_commune]
 nom = "code_commune"
@@ -1035,6 +1198,122 @@ type = "str"
 
 
 
+["data/02_clean/cog/communes.csv".colonnes.article]
+nom = "article"
+description = """
+"""
+type = "str"
+
+["data/02_clean/cog/communes.csv".colonnes.charniere]
+nom = "charniere"
+description = """
+"""
+type = "str"
+
+["data/02_clean/cog/communes_com.csv"]
+nom = "communes_com"
+type = "clean"
+description = """
+"""
+format = "csv"
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/c7/ff14be8f5a8d3737c343146cd27a27"
+s3_url = "cache/files/md5/c7/ff14be8f5a8d3737c343146cd27a27"
+deps = ["data/01_raw/cog.zip"]
+
+["data/02_clean/cog/communes_com.csv".colonnes.code_commune]
+nom = "code_commune"
+description = """
+"""
+type = "str"
+
+["data/02_clean/cog/communes_com.csv".colonnes.type_commune]
+nom = "type_commune"
+description = """
+"""
+type = "str"
+
+["data/02_clean/cog/communes_com.csv".colonnes.code_departement]
+nom = "code_departement"
+description = """
+"""
+type = "str"
+
+["data/02_clean/cog/communes_com.csv".colonnes.type_nom]
+nom = "type_nom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/cog/communes_com.csv".colonnes.nom]
+nom = "nom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/cog/communes_com.csv".colonnes.article]
+nom = "article"
+description = """
+"""
+type = "str"
+
+["data/02_clean/cog/communes_com.csv".colonnes.charniere]
+nom = "charniere"
+description = """
+"""
+type = "str"
+
+["data/02_clean/cog/communes_historiques.csv"]
+nom = "communes_historiques"
+type = "clean"
+description = """
+"""
+format = "csv"
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/2b/61bf920c2ecae8c56bf84a2cdfefca"
+s3_url = "cache/files/md5/2b/61bf920c2ecae8c56bf84a2cdfefca"
+deps = ["data/01_raw/cog.zip"]
+
+["data/02_clean/cog/communes_historiques.csv".colonnes.code_commune]
+nom = "code_commune"
+description = """
+"""
+type = "str"
+
+["data/02_clean/cog/communes_historiques.csv".colonnes.type_nom]
+nom = "type_nom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/cog/communes_historiques.csv".colonnes.nom]
+nom = "nom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/cog/communes_historiques.csv".colonnes.article]
+nom = "article"
+description = """
+"""
+type = "str"
+
+["data/02_clean/cog/communes_historiques.csv".colonnes.charniere]
+nom = "charniere"
+description = """
+"""
+type = "str"
+
+["data/02_clean/cog/communes_historiques.csv".colonnes.date_debut]
+nom = "date_debut"
+description = """
+"""
+type = "date"
+
+["data/02_clean/cog/communes_historiques.csv".colonnes.date_fin]
+nom = "date_fin"
+description = """
+"""
+type = "date"
+
 ["data/02_clean/cog/departements.csv"]
 nom = "departements"
 type = "clean"
@@ -1043,6 +1322,7 @@ description = """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/ac/09c997f36bf573bcd937ba62cc3768"
 s3_url = "cache/files/md5/ac/09c997f36bf573bcd937ba62cc3768"
+deps = ["data/01_raw/cog.zip"]
 
 ["data/02_clean/cog/departements.csv".colonnes.code_departement]
 nom = "code_departement"
@@ -1078,6 +1358,7 @@ type = "str"
 
 
 
+
 ["data/02_clean/elections/2012-presidentielle-bureau_de_vote.csv"]
 nom = "2012-presidentielle-bureau_de_vote"
 type = "clean"
@@ -1086,6 +1367,7 @@ description = """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/dd/1602eeb3aef940be98b633715f98c0"
 s3_url = "cache/files/md5/dd/1602eeb3aef940be98b633715f98c0"
+deps = ["data/01_raw/elections/2012-presidentielle-bureau_de_vote.csv"]
 
 ["data/02_clean/elections/2012-presidentielle-bureau_de_vote.csv".colonnes.bureau_de_vote]
 nom = "bureau_de_vote"
@@ -1163,6 +1445,7 @@ type = "str"
 
 
 
+
 ["data/02_clean/elections/2014-europeenne-bureau_de_vote.csv"]
 nom = "2014-europeenne-bureau_de_vote"
 type = "clean"
@@ -1171,6 +1454,7 @@ description = """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/86/a735fc59b31007870567dceaa7fc80"
 s3_url = "cache/files/md5/86/a735fc59b31007870567dceaa7fc80"
+deps = ["data/01_raw/elections/2014-europeenne-bureau_de_vote.csv"]
 
 ["data/02_clean/elections/2014-europeenne-bureau_de_vote.csv".colonnes.bureau_de_vote]
 nom = "bureau_de_vote"
@@ -1236,6 +1520,7 @@ type = "str"
 
 
 
+
 ["data/02_clean/elections/2017-legislatives-1-bureau_de_vote.csv"]
 nom = "2017-legislatives-1-bureau_de_vote"
 type = "clean"
@@ -1244,6 +1529,7 @@ description = """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/d5/c03e199a19ce3fae248e724c51015c"
 s3_url = "cache/files/md5/d5/c03e199a19ce3fae248e724c51015c"
+deps = ["data/01_raw/elections/2017-legislatives-1-bureau_de_vote.csv"]
 
 ["data/02_clean/elections/2017-legislatives-1-bureau_de_vote.csv".colonnes.bureau_de_vote]
 nom = "bureau_de_vote"
@@ -1315,6 +1601,7 @@ type = "str"
 
 
 
+
 ["data/02_clean/elections/2017-legislatives-2-bureau_de_vote.csv"]
 nom = "2017-legislatives-2-bureau_de_vote"
 type = "clean"
@@ -1323,6 +1610,7 @@ description = """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/62/41616b484fc40fc433485de522348e"
 s3_url = "cache/files/md5/62/41616b484fc40fc433485de522348e"
+deps = ["data/01_raw/elections/2017-legislatives-2-bureau_de_vote.csv"]
 
 ["data/02_clean/elections/2017-legislatives-2-bureau_de_vote.csv".colonnes.bureau_de_vote]
 nom = "bureau_de_vote"
@@ -1394,6 +1682,7 @@ type = "str"
 
 
 
+
 ["data/02_clean/elections/2017-presidentielle-1-bureau_de_vote.csv"]
 nom = "2017-presidentielle-1-bureau_de_vote"
 type = "clean"
@@ -1402,6 +1691,7 @@ description = """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/34/16fd57375d7f99c435b0dcb104dfcc"
 s3_url = "cache/files/md5/34/16fd57375d7f99c435b0dcb104dfcc"
+deps = ["data/01_raw/elections/2017-presidentielle-1-bureau_de_vote.csv"]
 
 ["data/02_clean/elections/2017-presidentielle-1-bureau_de_vote.csv".colonnes.bureau_de_vote]
 nom = "bureau_de_vote"
@@ -1467,6 +1757,7 @@ type = "str"
 
 
 
+
 ["data/02_clean/elections/2017-presidentielle-2-bureau_de_vote.csv"]
 nom = "2017-presidentielle-2-bureau_de_vote"
 type = "clean"
@@ -1475,6 +1766,7 @@ description = """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/77/a8f040c5aa96fd0eff112314a5b611"
 s3_url = "cache/files/md5/77/a8f040c5aa96fd0eff112314a5b611"
+deps = ["data/01_raw/elections/2017-presidentielle-2-bureau_de_vote.csv"]
 
 ["data/02_clean/elections/2017-presidentielle-2-bureau_de_vote.csv".colonnes.bureau_de_vote]
 nom = "bureau_de_vote"
@@ -1540,6 +1832,7 @@ type = "str"
 
 
 
+
 ["data/02_clean/elections/2019-europeenne-bureau_de_vote.csv"]
 nom = "2019-europeenne-bureau_de_vote"
 type = "clean"
@@ -1548,6 +1841,7 @@ description = """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/de/7bd1fc201314a1c62b74d026e960e3"
 s3_url = "cache/files/md5/de/7bd1fc201314a1c62b74d026e960e3"
+deps = ["data/01_raw/elections/2019-europeenne-bureau_de_vote.csv"]
 
 ["data/02_clean/elections/2019-europeenne-bureau_de_vote.csv".colonnes.bureau_de_vote]
 nom = "bureau_de_vote"
@@ -1601,6 +1895,7 @@ type = "str"
 
 
 
+
 ["data/02_clean/elections/2020-municipales-1-bureau_de_vote.csv"]
 nom = "2020-municipales-1-bureau_de_vote"
 type = "clean"
@@ -1609,6 +1904,7 @@ description = """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/90/c03f20ba4e73fd7f5df4ca7fab2fa9"
 s3_url = "cache/files/md5/90/c03f20ba4e73fd7f5df4ca7fab2fa9"
+deps = ["data/01_raw/elections/2020-municipales-1-bureau_de_vote.csv"]
 
 ["data/02_clean/elections/2020-municipales-1-bureau_de_vote.csv".colonnes.bureau_de_vote]
 nom = "bureau_de_vote"
@@ -1680,6 +1976,7 @@ type = "str"
 
 
 
+
 ["data/02_clean/elections/2020-municipales-2-bureau_de_vote.csv"]
 nom = "2020-municipales-2-bureau_de_vote"
 type = "clean"
@@ -1688,6 +1985,7 @@ description = """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/73/fec91deb9763538a41cfd4f09c1c61"
 s3_url = "cache/files/md5/73/fec91deb9763538a41cfd4f09c1c61"
+deps = ["data/01_raw/elections/2020-municipales-2-bureau_de_vote.csv"]
 
 ["data/02_clean/elections/2020-municipales-2-bureau_de_vote.csv".colonnes.bureau_de_vote]
 nom = "bureau_de_vote"
@@ -1759,6 +2057,7 @@ type = "str"
 
 
 
+
 ["data/02_clean/elections/2021-departementales-1-bureau_de_vote.csv"]
 nom = "2021-departementales-1-bureau_de_vote"
 type = "clean"
@@ -1767,6 +2066,7 @@ description = """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/00/8adcda97cc2def4029909c41ff91ce"
 s3_url = "cache/files/md5/00/8adcda97cc2def4029909c41ff91ce"
+deps = ["data/01_raw/elections/2021-departementales-1-bureau_de_vote.csv"]
 
 ["data/02_clean/elections/2021-departementales-1-bureau_de_vote.csv".colonnes.bureau_de_vote]
 nom = "bureau_de_vote"
@@ -1814,6 +2114,7 @@ type = "str"
 
 
 
+
 ["data/02_clean/elections/2021-departementales-2-bureau_de_vote.csv"]
 nom = "2021-departementales-2-bureau_de_vote"
 type = "clean"
@@ -1822,6 +2123,7 @@ description = """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/c9/ceef10e419a0c0cda2fcb5a1203a9f"
 s3_url = "cache/files/md5/c9/ceef10e419a0c0cda2fcb5a1203a9f"
+deps = ["data/01_raw/elections/2021-departementales-2-bureau_de_vote.csv"]
 
 ["data/02_clean/elections/2021-departementales-2-bureau_de_vote.csv".colonnes.bureau_de_vote]
 nom = "bureau_de_vote"
@@ -1869,6 +2171,7 @@ type = "str"
 
 
 
+
 ["data/02_clean/elections/2021-regionales-1-bureau_de_vote.csv"]
 nom = "2021-regionales-1-bureau_de_vote"
 type = "clean"
@@ -1877,6 +2180,7 @@ description = """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/f6/abf9e73855205186c075c143261ad8"
 s3_url = "cache/files/md5/f6/abf9e73855205186c075c143261ad8"
+deps = ["data/01_raw/elections/2021-regionales-1-bureau_de_vote.csv"]
 
 ["data/02_clean/elections/2021-regionales-1-bureau_de_vote.csv".colonnes.bureau_de_vote]
 nom = "bureau_de_vote"
@@ -1936,6 +2240,7 @@ type = "str"
 
 
 
+
 ["data/02_clean/elections/2021-regionales-2-bureau_de_vote.csv"]
 nom = "2021-regionales-2-bureau_de_vote"
 type = "clean"
@@ -1944,6 +2249,7 @@ description = """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/a9/ce190eac00088f2d08512d368dfe8a"
 s3_url = "cache/files/md5/a9/ce190eac00088f2d08512d368dfe8a"
+deps = ["data/01_raw/elections/2021-regionales-2-bureau_de_vote.csv"]
 
 ["data/02_clean/elections/2021-regionales-2-bureau_de_vote.csv".colonnes.bureau_de_vote]
 nom = "bureau_de_vote"
@@ -2003,6 +2309,7 @@ type = "str"
 
 
 
+
 ["data/02_clean/elections/2022-legislatives-1-bureau_de_vote.csv"]
 nom = "2022-legislatives-1-bureau_de_vote"
 type = "clean"
@@ -2011,6 +2318,7 @@ description = """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/f3/4b36691d23b2f1d4644a0d80fa2870"
 s3_url = "cache/files/md5/f3/4b36691d23b2f1d4644a0d80fa2870"
+deps = ["data/01_raw/elections/2022-legislatives-1-bureau_de_vote.csv"]
 
 ["data/02_clean/elections/2022-legislatives-1-bureau_de_vote.csv".colonnes.bureau_de_vote]
 nom = "bureau_de_vote"
@@ -2082,14 +2390,20 @@ type = "str"
 
 
 
+
 ["data/02_clean/elections/2022-legislatives-1-candidats.csv"]
 nom = "2022-legislatives-1-candidats"
 type = "clean"
 description = """
 """
 format = "csv"
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/6a/59c34eb838014f51a0a7fab0e27258"
-s3_url = "cache/files/md5/6a/59c34eb838014f51a0a7fab0e27258"
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/88/9400dc852d825436e365d6d2d2f025"
+s3_url = "cache/files/md5/88/9400dc852d825436e365d6d2d2f025"
+deps = [
+    "data/01_raw/elections/2022-legislatives-1-candidats.csv",
+    "data/01_raw/elections/2022-legislatives-nuances-lemonde.csv",
+    "data/01_raw/elections/2022-legislatives-nuances-legis-2022.csv",
+]
 
 ["data/02_clean/elections/2022-legislatives-1-candidats.csv".colonnes.circonscription]
 nom = "circonscription"
@@ -2131,7 +2445,7 @@ type = "str"
 nom = "date_naissance"
 description = """
 """
-type = "str"
+type = "date"
 
 ["data/02_clean/elections/2022-legislatives-1-candidats.csv".colonnes.nuance]
 nom = "nuance"
@@ -2173,7 +2487,7 @@ type = "str"
 nom = "date_naissance_suppleant"
 description = """
 """
-type = "str"
+type = "date"
 
 ["data/02_clean/elections/2022-legislatives-1-candidats.csv".colonnes.sortant_suppleant]
 nom = "sortant_suppleant"
@@ -2215,6 +2529,7 @@ type = "str"
 
 
 
+
 ["data/02_clean/elections/2022-legislatives-1-circonscription.csv"]
 nom = "2022-legislatives-1-circonscription"
 type = "clean"
@@ -2223,6 +2538,7 @@ description = """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/8f/ee40705cb4d868b49095ad8b269abd"
 s3_url = "cache/files/md5/8f/ee40705cb4d868b49095ad8b269abd"
+deps = ["data/01_raw/elections/2022-legislatives-1-circonscription.csv"]
 
 ["data/02_clean/elections/2022-legislatives-1-circonscription.csv".colonnes.circonscription]
 nom = "circonscription"
@@ -2288,6 +2604,7 @@ type = "str"
 
 
 
+
 ["data/02_clean/elections/2022-legislatives-2-bureau_de_vote.csv"]
 nom = "2022-legislatives-2-bureau_de_vote"
 type = "clean"
@@ -2296,6 +2613,7 @@ description = """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/5c/1a2bc94cdcd65377fd0eab32bc62d1"
 s3_url = "cache/files/md5/5c/1a2bc94cdcd65377fd0eab32bc62d1"
+deps = ["data/01_raw/elections/2022-legislatives-2-bureau_de_vote.csv"]
 
 ["data/02_clean/elections/2022-legislatives-2-bureau_de_vote.csv".colonnes.bureau_de_vote]
 nom = "bureau_de_vote"
@@ -2367,14 +2685,20 @@ type = "str"
 
 
 
+
 ["data/02_clean/elections/2022-legislatives-2-candidats.csv"]
 nom = "2022-legislatives-2-candidats"
 type = "clean"
 description = """
 """
 format = "csv"
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/98/10fec257c44c821537636eb105e8b9"
-s3_url = "cache/files/md5/98/10fec257c44c821537636eb105e8b9"
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/dd/9c912a3b89e7bb3d5214f747b9e02d"
+s3_url = "cache/files/md5/dd/9c912a3b89e7bb3d5214f747b9e02d"
+deps = [
+    "data/01_raw/elections/2022-legislatives-2-candidats.csv",
+    "data/01_raw/elections/2022-legislatives-nuances-lemonde.csv",
+    "data/01_raw/elections/2022-legislatives-nuances-legis-2022.csv",
+]
 
 ["data/02_clean/elections/2022-legislatives-2-candidats.csv".colonnes.circonscription]
 nom = "circonscription"
@@ -2416,7 +2740,7 @@ type = "str"
 nom = "date_naissance"
 description = """
 """
-type = "str"
+type = "date"
 
 ["data/02_clean/elections/2022-legislatives-2-candidats.csv".colonnes.nuance]
 nom = "nuance"
@@ -2458,7 +2782,7 @@ type = "str"
 nom = "date_naissance_suppleant"
 description = """
 """
-type = "str"
+type = "date"
 
 ["data/02_clean/elections/2022-legislatives-2-candidats.csv".colonnes.sortant_suppleant]
 nom = "sortant_suppleant"
@@ -2500,6 +2824,7 @@ type = "str"
 
 
 
+
 ["data/02_clean/elections/2022-legislatives-2-circonscription.csv"]
 nom = "2022-legislatives-2-circonscription"
 type = "clean"
@@ -2508,6 +2833,7 @@ description = """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/c8/7a80ab75c40d53824137394a34ddb2"
 s3_url = "cache/files/md5/c8/7a80ab75c40d53824137394a34ddb2"
+deps = ["data/01_raw/elections/2022-legislatives-2-circonscription.csv"]
 
 ["data/02_clean/elections/2022-legislatives-2-circonscription.csv".colonnes.circonscription]
 nom = "circonscription"
@@ -2573,6 +2899,7 @@ type = "str"
 
 
 
+
 ["data/02_clean/elections/2022-presidentielle-1-bureau_de_vote.csv"]
 nom = "2022-presidentielle-1-bureau_de_vote"
 type = "clean"
@@ -2581,6 +2908,7 @@ description = """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/14/dfa90d1a3b3099cb01817dabc28228"
 s3_url = "cache/files/md5/14/dfa90d1a3b3099cb01817dabc28228"
+deps = ["data/01_raw/elections/2022-presidentielle-1-bureau_de_vote.csv"]
 
 ["data/02_clean/elections/2022-presidentielle-1-bureau_de_vote.csv".colonnes.bureau_de_vote]
 nom = "bureau_de_vote"
@@ -2646,6 +2974,7 @@ type = "str"
 
 
 
+
 ["data/02_clean/elections/2022-presidentielle-1-circonscription.csv"]
 nom = "2022-presidentielle-1-circonscription"
 type = "clean"
@@ -2654,6 +2983,7 @@ description = """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/89/56622be06f89a7ae975a292aad6a16"
 s3_url = "cache/files/md5/89/56622be06f89a7ae975a292aad6a16"
+deps = ["data/01_raw/elections/2022-presidentielle-1-circonscription.csv"]
 
 ["data/02_clean/elections/2022-presidentielle-1-circonscription.csv".colonnes.circonscription]
 nom = "circonscription"
@@ -2713,6 +3043,7 @@ type = "str"
 
 
 
+
 ["data/02_clean/elections/2022-presidentielle-2-bureau_de_vote.csv"]
 nom = "2022-presidentielle-2-bureau_de_vote"
 type = "clean"
@@ -2721,6 +3052,7 @@ description = """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/67/2d58404e5c7fd088c0a172e089ba34"
 s3_url = "cache/files/md5/67/2d58404e5c7fd088c0a172e089ba34"
+deps = ["data/01_raw/elections/2022-presidentielle-2-bureau_de_vote.csv"]
 
 ["data/02_clean/elections/2022-presidentielle-2-bureau_de_vote.csv".colonnes.bureau_de_vote]
 nom = "bureau_de_vote"
@@ -2786,6 +3118,7 @@ type = "str"
 
 
 
+
 ["data/02_clean/elections/2022-presidentielle-2-circonscription.csv"]
 nom = "2022-presidentielle-2-circonscription"
 type = "clean"
@@ -2794,6 +3127,7 @@ description = """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/c3/763d2f15d06df46858af5d74ebd310"
 s3_url = "cache/files/md5/c3/763d2f15d06df46858af5d74ebd310"
+deps = ["data/01_raw/elections/2022-presidentielle-2-circonscription.csv"]
 
 ["data/02_clean/elections/2022-presidentielle-2-circonscription.csv".colonnes.circonscription]
 nom = "circonscription"
@@ -2853,14 +3187,16 @@ type = "str"
 
 
 
+
 ["data/02_clean/elections/2022-presidentielle-parrainages.csv"]
 nom = "2022-presidentielle-parrainages"
 type = "clean"
 description = """
 """
 format = "csv"
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/a8/d38f412e28391369cd4c93cb89c937"
-s3_url = "cache/files/md5/a8/d38f412e28391369cd4c93cb89c937"
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/c1/b409e872d55b1ca3ea1e547862bd2a"
+s3_url = "cache/files/md5/c1/b409e872d55b1ca3ea1e547862bd2a"
+deps = ["data/01_raw/elections/2022-presidentielle-parrainages.csv"]
 
 ["data/02_clean/elections/2022-presidentielle-parrainages.csv".colonnes.mandat]
 nom = "mandat"
@@ -2908,7 +3244,8 @@ type = "str"
 nom = "date_publication"
 description = """
 """
-type = "str"
+type = "date"
+
 
 
 
@@ -2922,6 +3259,7 @@ description = """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/a8/8ff891a256710c3facdb42fa931630"
 s3_url = "cache/files/md5/a8/8ff891a256710c3facdb42fa931630"
+deps = ["data/01_raw/elections/2024-europeenne-bureau_de_vote.csv"]
 
 ["data/02_clean/elections/2024-europeenne-bureau_de_vote.csv".colonnes.bureau_de_vote]
 nom = "bureau_de_vote"
@@ -2981,6 +3319,7 @@ type = "str"
 
 
 
+
 ["data/02_clean/elections/2024-europeenne-circonscription.csv"]
 nom = "2024-europeenne-circonscription"
 type = "clean"
@@ -2989,6 +3328,7 @@ description = """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/0e/85b5bd51c38919008d4a92f0155a61"
 s3_url = "cache/files/md5/0e/85b5bd51c38919008d4a92f0155a61"
+deps = ["data/01_raw/elections/2024-europeenne-circonscription.csv"]
 
 ["data/02_clean/elections/2024-europeenne-circonscription.csv".colonnes.circonscription]
 nom = "circonscription"
@@ -3048,6 +3388,7 @@ type = "str"
 
 
 
+
 ["data/02_clean/elections/2024-legislatives-1-bureau_de_vote.csv"]
 nom = "2024-legislatives-1-bureau_de_vote"
 type = "clean"
@@ -3056,6 +3397,7 @@ description = """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/e8/4ceea11f11d2ca3064189a5d719a90"
 s3_url = "cache/files/md5/e8/4ceea11f11d2ca3064189a5d719a90"
+deps = ["data/01_raw/elections/2024-legislatives-1-bureau_de_vote.csv"]
 
 ["data/02_clean/elections/2024-legislatives-1-bureau_de_vote.csv".colonnes.bureau_de_vote]
 nom = "bureau_de_vote"
@@ -3121,6 +3463,7 @@ type = "str"
 
 
 
+
 ["data/02_clean/elections/2024-legislatives-1-candidats.csv"]
 nom = "2024-legislatives-1-candidats"
 type = "clean"
@@ -3129,6 +3472,11 @@ description = """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/ad/8eaee9ac50795b6bfd3e6edea36336"
 s3_url = "cache/files/md5/ad/8eaee9ac50795b6bfd3e6edea36336"
+deps = [
+    "data/01_raw/elections/2024-legislatives-1-candidats.csv",
+    "data/01_raw/elections/2024-legislatives-nfp-sensibilites.csv",
+    "data/01_raw/elections/2024-legislatives-nuances-lfi.csv",
+]
 
 ["data/02_clean/elections/2024-legislatives-1-candidats.csv".colonnes.circonscription]
 nom = "circonscription"
@@ -3170,7 +3518,7 @@ type = "str"
 nom = "date_naissance"
 description = """
 """
-type = "str"
+type = "date"
 
 ["data/02_clean/elections/2024-legislatives-1-candidats.csv".colonnes.nuance]
 nom = "nuance"
@@ -3212,7 +3560,7 @@ type = "str"
 nom = "date_naissance_suppleant"
 description = """
 """
-type = "str"
+type = "date"
 
 ["data/02_clean/elections/2024-legislatives-1-candidats.csv".colonnes.sortant_suppleant]
 nom = "sortant_suppleant"
@@ -3236,6 +3584,7 @@ type = "str"
 
 
 
+
 ["data/02_clean/elections/2024-legislatives-1-circonscription.csv"]
 nom = "2024-legislatives-1-circonscription"
 type = "clean"
@@ -3244,6 +3593,7 @@ description = """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/da/7b4a29378ec8de4691fee6ade31ef3"
 s3_url = "cache/files/md5/da/7b4a29378ec8de4691fee6ade31ef3"
+deps = ["data/01_raw/elections/2024-legislatives-1-circonscription.csv"]
 
 ["data/02_clean/elections/2024-legislatives-1-circonscription.csv".colonnes.circonscription]
 nom = "circonscription"
@@ -3309,6 +3659,7 @@ type = "str"
 
 
 
+
 ["data/02_clean/elections/2024-legislatives-2-bureau_de_vote.csv"]
 nom = "2024-legislatives-2-bureau_de_vote"
 type = "clean"
@@ -3317,6 +3668,7 @@ description = """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/0d/775128e516a561291b20e900c6377b"
 s3_url = "cache/files/md5/0d/775128e516a561291b20e900c6377b"
+deps = ["data/01_raw/elections/2024-legislatives-2-bureau_de_vote.csv"]
 
 ["data/02_clean/elections/2024-legislatives-2-bureau_de_vote.csv".colonnes.bureau_de_vote]
 nom = "bureau_de_vote"
@@ -3382,6 +3734,7 @@ type = "str"
 
 
 
+
 ["data/02_clean/elections/2024-legislatives-2-candidats.csv"]
 nom = "2024-legislatives-2-candidats"
 type = "clean"
@@ -3390,6 +3743,11 @@ description = """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/5d/c7dc1b36ed7e4f15bf4dd8b2ed27d2"
 s3_url = "cache/files/md5/5d/c7dc1b36ed7e4f15bf4dd8b2ed27d2"
+deps = [
+    "data/01_raw/elections/2024-legislatives-2-candidats.csv",
+    "data/01_raw/elections/2024-legislatives-nfp-sensibilites.csv",
+    "data/01_raw/elections/2024-legislatives-nuances-lfi.csv",
+]
 
 ["data/02_clean/elections/2024-legislatives-2-candidats.csv".colonnes.circonscription]
 nom = "circonscription"
@@ -3431,7 +3789,7 @@ type = "str"
 nom = "date_naissance"
 description = """
 """
-type = "str"
+type = "date"
 
 ["data/02_clean/elections/2024-legislatives-2-candidats.csv".colonnes.nuance]
 nom = "nuance"
@@ -3473,7 +3831,7 @@ type = "str"
 nom = "date_naissance_suppleant"
 description = """
 """
-type = "str"
+type = "date"
 
 ["data/02_clean/elections/2024-legislatives-2-candidats.csv".colonnes.sortant_suppleant]
 nom = "sortant_suppleant"
@@ -3497,6 +3855,7 @@ type = "str"
 
 
 
+
 ["data/02_clean/elections/2024-legislatives-2-circonscription.csv"]
 nom = "2024-legislatives-2-circonscription"
 type = "clean"
@@ -3505,6 +3864,7 @@ description = """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/c6/cdb9206fcf5986baae64bb036ac19b"
 s3_url = "cache/files/md5/c6/cdb9206fcf5986baae64bb036ac19b"
+deps = ["data/01_raw/elections/2024-legislatives-2-circonscription.csv"]
 
 ["data/02_clean/elections/2024-legislatives-2-circonscription.csv".colonnes.circonscription]
 nom = "circonscription"
@@ -3567,6 +3927,7 @@ description = """
 type = "str"
 
 
+
 ["data/02_clean/elections/2024-legislatives-correspondances-bureau_de_vote-circonscription.csv"]
 nom = "2024-legislatives-correspondances-bureau_de_vote-circonscription"
 type = "clean"
@@ -3575,6 +3936,10 @@ description = """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/67/26f0c1acf391480bce453c8911e82b"
 s3_url = "cache/files/md5/67/26f0c1acf391480bce453c8911e82b"
+deps = [
+    "data/02_clean/elections/2024-legislatives-1-bureau_de_vote.csv",
+    "data/02_clean/elections/2024-legislatives-1-candidats.csv",
+]
 
 ["data/02_clean/elections/2024-legislatives-correspondances-bureau_de_vote-circonscription.csv".colonnes.bureau_de_vote]
 nom = "bureau_de_vote"
@@ -3589,14 +3954,16 @@ description = """
 type = "str"
 
 
+
 ["data/02_clean/rne/conseillers_municipaux.csv"]
 nom = "conseillers_municipaux"
 type = "clean"
 description = """
 """
 format = "csv"
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/06/1c1abd3b043b8254ba638d3499c3df"
-s3_url = "cache/files/md5/06/1c1abd3b043b8254ba638d3499c3df"
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/88/54fa2e0575ee65ba1d0fab7d15ab18"
+s3_url = "cache/files/md5/88/54fa2e0575ee65ba1d0fab7d15ab18"
+deps = ["data/01_raw/rne/conseillers_municipaux.csv"]
 
 ["data/02_clean/rne/conseillers_municipaux.csv".colonnes.code_departement]
 nom = "code_departement"
@@ -3638,7 +4005,7 @@ type = "str"
 nom = "date_naissance"
 description = """
 """
-type = "str"
+type = "date"
 
 ["data/02_clean/rne/conseillers_municipaux.csv".colonnes.csp]
 nom = "csp"
@@ -3650,7 +4017,7 @@ type = "str"
 nom = "date_debut_mandat"
 description = """
 """
-type = "str"
+type = "date"
 
 ["data/02_clean/rne/conseillers_municipaux.csv".colonnes.fonction]
 nom = "fonction"
@@ -3662,7 +4029,7 @@ type = "str"
 nom = "date_debut_fonction"
 description = """
 """
-type = "str"
+type = "date"
 
 ["data/02_clean/rne/conseillers_municipaux.csv".colonnes.nationalite]
 nom = "nationalite"
@@ -3670,18 +4037,19 @@ description = """
 """
 type = "str"
 
-
-
-
-
 ["data/03_main/elections/2022-presidentielle-parrainages.csv"]
 nom = "2022-presidentielle-parrainages"
 type = "clean"
 description = """
 """
 format = "csv"
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/fc/8f43b348ec0b6fe13565c0a86984c5"
-s3_url = "cache/files/md5/fc/8f43b348ec0b6fe13565c0a86984c5"
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/af/2f45460d4570dd60a8445dd1b8115d"
+s3_url = "cache/files/md5/af/2f45460d4570dd60a8445dd1b8115d"
+deps = [
+    "data/02_clean/elections/2022-presidentielle-parrainages.csv",
+    "data/02_clean/cog/departements.csv",
+    "data/02_clean/cog/communes.csv",
+]
 
 ["data/03_main/elections/2022-presidentielle-parrainages.csv".colonnes.mandat]
 nom = "mandat"
@@ -3729,4 +4097,4 @@ type = "str"
 nom = "date_publication"
 description = """
 """
-type = "str"
+type = "date"
