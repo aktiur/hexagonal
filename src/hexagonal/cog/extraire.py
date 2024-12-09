@@ -3,9 +3,20 @@ import sys
 from pathlib import Path
 from zipfile import Path as ZPath, ZipFile
 
+import click
 from glom import glom
 
+from hexagonal.cog.type_nom import TYPES_NOMS
+
 ANNEE = 2024
+
+
+def article(entite):
+    return TYPES_NOMS[int(entite["TNCC"])].article
+
+
+def charniere(entite):
+    return TYPES_NOMS[int(entite["TNCC"])].charniere
 
 
 spec_departement = {
@@ -14,6 +25,14 @@ spec_departement = {
     "code_chef_lieu": "CHEFLIEU",
     "type_nom": "TNCC",
     "nom": "NCCENR",
+}
+
+spec_com = {
+    "code_com": "COMER",
+    "type_nom": "TNCC",
+    "nom": "NCCENR",
+    "article": article,
+    "charniere": charniere,
 }
 
 spec_commune = {
@@ -27,13 +46,38 @@ spec_commune = {
     "code_commune_parent": "COMPARENT",
     "type_nom": "TNCC",
     "nom": "NCCENR",
+    "article": article,
+    "charniere": charniere,
+}
+
+spec_commune_com = {
+    "code_commune": "COM_COMER",
+    "code_com": "COMER",
+    "nature_zonage": "NATURE_ZONAGE",
+    "type_nom": "TNCC",
+    "nom": "NCCENR",
+    "article": article,
+    "charniere": charniere,
+}
+
+spec_commune_historique = {
+    "code_commune": "COM",
+    "type_nom": "TNCC",
+    "nom": "NCCENR",
+    "article": article,
+    "charniere": charniere,
+    "date_debut": "DATE_DEBUT",
+    "date_fin": "DATE_FIN",
 }
 
 
-entites = {
-    "departement": spec_departement,
-    "commune": spec_commune,
-}
+fichiers_cog = [
+    (f"v_commune_{ANNEE}", "communes", spec_commune),
+    (f"v_commune_comer_{ANNEE}", "communes_com", spec_commune_com),
+    (f"v_departement_{ANNEE}", "departements", spec_departement),
+    (f"v_comer_{ANNEE}", "com", spec_com),
+    (f"v_commune_depuis_1943", "communes_historiques", spec_commune_historique),
+]
 
 
 def extraire(in_path, out_path, spec):
@@ -47,29 +91,23 @@ def extraire(in_path, out_path, spec):
         w.writerows(elems)
 
 
-def extraire_departements(archive, out_path):
-    with (ZPath(archive) / "v_departement_2024.csv").open("r") as fd:
-        r = csv.DictReader(fd)
-
-        departements = glom(r, [spec_departement])
-
-    with open(out_path, "w", newline="") as fd:
-        w = csv.DictWriter(fd, departements[0].keys())
-        w.writeheader()
-        w.writerows(departements)
-
-
-def run():
-    archive_path, out_path = sys.argv[1:]
-    out_path = Path(out_path)
+@click.command()
+@click.argument(
+    "archive_path", type=click.Path(exists=True, dir_okay=False, path_type=Path)
+)
+@click.argument(
+    "dest_dir", type=click.Path(file_okay=False, dir_okay=True, path_type=Path)
+)
+def run(archive_path, dest_dir):
+    dest_dir.mkdir(exist_ok=True, parents=True)
 
     with ZipFile(archive_path) as archive:
         archive_root = ZPath(archive)
 
-        for entite, spec in entites.items():
+        for src, dest, spec in fichiers_cog:
             extraire(
-                archive_root / f"v_{entite}_{ANNEE}.csv",
-                out_path / f"{entite}s.csv",
+                archive_root / f"{src}.csv",
+                dest_dir / f"{dest}.csv",
                 spec,
             )
 

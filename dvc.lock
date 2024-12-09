@@ -802,7 +802,7 @@ stages:
       hash: md5
       md5: 3c3b5cdbb812161dee7ae3a72b59b05f
       size: 4826
-  annuaire_organismes:
+  annuaire_extraire:
     cmd: PYTHONPATH=src python -m hexagonal.annuaire.extraire_organismes data/01_raw/annuaire/annuaire.tar.bz2
       data/01_raw/annuaire/
     deps:
@@ -851,19 +851,27 @@ stages:
       hash: md5
       md5: 061c1abd3b043b8254ba638d3499c3df
       size: 33348251
-  annuaires_mairies:
-    cmd: PYTHONPATH=src python -m hexagonal.annuaire.nettoyer data/01_raw/annuaire/mairies.json
-      data/02_clean/annuaire/mairies.csv
+  annuaires_nettoyer:
+    cmd: PYTHONPATH=src python -m hexagonal.annuaire.nettoyer data/01_raw/annuaire
+      data/02_clean/annuaire
     deps:
+    - path: data/01_raw/annuaire/conseils_departementaux.json
+      hash: md5
+      md5: d079eaee7e513be6acde1d9bdfaf0002
+      size: 476832
     - path: data/01_raw/annuaire/mairies.json
       hash: md5
       md5: b95de50790673feae76c1f7d5f7765d8
       size: 80815137
     - path: src/hexagonal/annuaire/nettoyer.py
       hash: md5
-      md5: f408d5dbc04b785c50617e112f33c0e8
-      size: 3353
+      md5: d604f50a2fc74eec32499e23038111ce
+      size: 5063
     outs:
+    - path: data/02_clean/annuaire/conseils_departementaux.csv
+      hash: md5
+      md5: 5309c03e311afead3d83056b4b8688f5
+      size: 26668
     - path: data/02_clean/annuaire/mairies.csv
       hash: md5
       md5: a72229344f12c8fdc871a9e35ebf9650
@@ -885,7 +893,7 @@ stages:
       hash: md5
       md5: a8d38f412e28391369cd4c93cb89c937
       size: 1079423
-  nettoyer_cog:
+  cog_nettoyer:
     cmd: PYTHONPATH=src python -m hexagonal.cog.extraire data/01_raw/cog.zip data/02_clean/cog
     deps:
     - path: data/01_raw/cog.zip
@@ -894,13 +902,25 @@ stages:
       size: 1879699
     - path: src/hexagonal/cog/extraire.py
       hash: md5
-      md5: 8efec8ccb25e6e327b89d8b1c5f2dc9a
-      size: 1770
+      md5: 539fbc1ebea17edecbec6b7044b5cd52
+      size: 2690
     outs:
+    - path: data/02_clean/cog/com.csv
+      hash: md5
+      md5: e34ca0a5c1d5049fb7f47cb8d401b3b9
+      size: 324
     - path: data/02_clean/cog/communes.csv
       hash: md5
-      md5: dfe31086cdf374f1a0152afc32e49681
-      size: 1702543
+      md5: 00a2dc59d3571339c3c6fffbc5ec881d
+      size: 1897852
+    - path: data/02_clean/cog/communes_com.csv
+      hash: md5
+      md5: 9e4844dec2ab4216ce9afa23bd0d51ca
+      size: 3043
+    - path: data/02_clean/cog/communes_historiques.csv
+      hash: md5
+      md5: 2b61bf920c2ecae8c56bf84a2cdfefca
+      size: 1720424
     - path: data/02_clean/cog/departements.csv
       hash: md5
       md5: ac09c997f36bf573bcd937ba62cc3768
@@ -911,8 +931,8 @@ stages:
     deps:
     - path: data/02_clean/cog/communes.csv
       hash: md5
-      md5: dfe31086cdf374f1a0152afc32e49681
-      size: 1702543
+      md5: 00a2dc59d3571339c3c6fffbc5ec881d
+      size: 1897852
     - path: data/02_clean/cog/departements.csv
       hash: md5
       md5: ac09c997f36bf573bcd937ba62cc3768

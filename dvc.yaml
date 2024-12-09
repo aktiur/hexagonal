@@ -171,7 +171,7 @@ stages:
       ${raw}/rne
       ${clean}/rne
 
-  annuaire_organismes:
+  annuaire_extraire:
     deps:
       - ${raw}/annuaire/annuaire.tar.bz2
       - ${src}/hexagonal/annuaire/extraire_organismes.py
@@ -186,24 +186,29 @@ stages:
       ${raw}/annuaire/annuaire.tar.bz2
       ${raw}/annuaire/
 
-  annuaires_mairies:
+  annuaires_nettoyer:
     deps:
       - ${raw}/annuaire/mairies.json
+      - ${raw}/annuaire/conseils_departementaux.json
       - ${src}/hexagonal/annuaire/nettoyer.py
     outs:
       - ${clean}/annuaire/mairies.csv
+      - ${clean}/annuaire/conseils_departementaux.csv
     cmd: >-
       ${python} hexagonal.annuaire.nettoyer
-      ${raw}/annuaire/mairies.json
-      ${clean}/annuaire/mairies.csv
+      ${raw}/annuaire
+      ${clean}/annuaire
       
-  nettoyer_cog:
+  cog_nettoyer:
     deps:
       - ${raw}/cog.zip
       - ${src}/hexagonal/cog/extraire.py
     outs:
       - ${clean}/cog/communes.csv
+      - ${clean}/cog/communes_com.csv
+      - ${clean}/cog/communes_historiques.csv
       - ${clean}/cog/departements.csv
+      - ${clean}/cog/com.csv
     cmd: >-
       ${python} hexagonal.cog.extraire
       ${raw}/cog.zip

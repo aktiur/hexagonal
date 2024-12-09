@@ -1,7 +1,8 @@
 import csv
 import json
-import sys
+from pathlib import Path
 
+import click
 from glom import glom, S, T, Spec, Iter, Coalesce
 
 
@@ -108,18 +109,80 @@ spec_mairies = (
 )
 
 
-def nettoyer_mairies(in_path, out_path):
+spec_conseils_departementaux = (
+    (
+        S(
+            adresse_physique=selection_adresse("Adresse"),
+            adresse_postale=selection_adresse("Adresse postale"),
+        )
+    ),
+    {
+        "id": "id",
+        "code_commune": "code_insee_commune",
+        "siret": "siret",
+        "nom": "nom",
+        "emails": ("adresse_courriel", ",".join),
+        "adresse_physique": (
+            Coalesce(
+                S.adresse_physique,
+                default=None,
+            ),
+            extraire_adresse,
+        ),
+        "adresse_postale": (
+            Coalesce(
+                S.adresse_postale,
+                default="",
+            ),
+            extraire_adresse,
+        ),
+        "telephone": ("telephone", extraire_telephone),
+        "coordonnees": (Coalesce((S.adresse_physique,), default=None), coordonnees),
+        "type_accessibilite": Coalesce(
+            S.adresse_physique["accessibilite"],
+            default="",
+        ),
+        "details_accessibilite": Coalesce(
+            S.adresse_physique["note_accessibilite"],
+            default="",
+        ),
+        "ouverture": ouverture,
+    },
+)
+
+FICHIERS = [
+    ("mairies", spec_mairies),
+    ("conseils_departementaux", spec_conseils_departementaux),
+]
+
+
+def nettoyer(in_path, out_path, spec):
     with open(in_path, "r") as in_f, open(out_path, "w", newline="") as out_f:
-        w = csv.DictWriter(out_f, fieldnames=spec_mairies[1].keys())
+        w = csv.DictWriter(out_f, fieldnames=spec[1].keys())
         w.writeheader()
 
         mairies = (json.loads(line) for line in in_f)
-        w.writerows(glom(mairies, Iter(spec_mairies)))
+        w.writerows(glom(mairies, Iter(spec)))
 
 
-def run():
-    in_path, out_path = sys.argv[1:]
-    nettoyer_mairies(in_path, out_path)
+@click.command()
+@click.argument(
+    "src_directory",
+    type=click.Path(exists=True, file_okay=False, dir_okay=True, path_type=Path),
+)
+@click.argument(
+    "dest_directory",
+    type=click.Path(exists=False, file_okay=False, dir_okay=True, path_type=Path),
+)
+def run(src_directory, dest_directory):
+    dest_directory.mkdir(exist_ok=True, parents=True)
+
+    for fichier, spec in FICHIERS:
+        nettoyer(
+            src_directory / f"{fichier}.json",
+            dest_directory / f"{fichier}.csv",
+            spec,
+        )
 
 
 if __name__ == "__main__":
