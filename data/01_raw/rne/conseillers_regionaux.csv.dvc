@@ -1,0 +1,12 @@
+md5: 763318fd0f6dbbfc930eadd204456cb7
+frozen: true
+deps:
+- checksum: '"67235364-35d77"'
+  size: 220535
+  hash: md5
+  path: https://www.data.gouv.fr/fr/datasets/r/430e13f9-834b-4411-a1a8-da0b4b6e715c
+outs:
+- md5: 14fa5e59eee9f3095a38596459a5c149
+  size: 220535
+  hash: md5
+  path: conseillers_regionaux.csv

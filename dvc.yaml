@@ -73,7 +73,7 @@ stages:
       outs:
         - ${clean}/elections/2022-legislatives-${item}-candidats.csv
 
-  nettoyer-parrainages:
+  parrainages_nettoyer:
     foreach:
       - 2022
     do:
@@ -87,7 +87,7 @@ stages:
         ${raw}/elections/${item}-presidentielle-parrainages.csv
         ${clean}/elections/${item}-presidentielle-parrainages.csv
 
-  qualifier-parrainages:
+  parrainages_qualifier:
     foreach:
       - 2022
     do:
@@ -160,16 +160,23 @@ stages:
       ${clean}/assemblee_nationale/groupes.csv
       ${clean}/assemblee_nationale/affiliations.csv
 
-  rne:
-    deps:
-      - ${raw}/rne/conseillers_municipaux.csv
-      - ${src}/hexagonal/rne/extraire.py
-    outs:
-      - ${clean}/rne/conseillers_municipaux.csv
-    cmd: >-
-      ${python} hexagonal.rne.extraire
-      ${raw}/rne
-      ${clean}/rne
+  rne_nettoyer:
+    foreach:
+      - conseillers_arrondissement
+      - conseillers_municipaux
+      - conseillers_departementaux
+      - conseillers_regionaux
+    do:
+      deps:
+        - ${raw}/rne/${item}.csv
+        - ${src}/hexagonal/rne/extraire.py
+      outs:
+        - ${clean}/rne/${item}.csv
+      cmd: >-
+        ${python} hexagonal.rne.extraire
+        ${raw}/rne
+        ${clean}/rne
+        ${item}
 
   annuaire_extraire:
     deps:

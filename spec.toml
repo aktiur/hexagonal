@@ -581,6 +581,36 @@ source_url = "https://www.insee.fr/fr/statistiques/fichier/3698339/base-pop-hist
 editeur = "INSEE"
 date = "2023-12-28"
 
+["data/01_raw/rne/conseillers_arrondissement.csv"]
+nom = "conseillers_arrondissement"
+type = "source"
+description = """
+"""
+format = "csv"
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/bd/d0e9cc134bd9c122bff812a72620af"
+s3_url = "cache/files/md5/bd/d0e9cc134bd9c122bff812a72620af"
+source_url = "https://www.data.gouv.fr/fr/datasets/r/3b6b2281-b9d9-4959-ae9d-c2c166dff118"
+
+["data/01_raw/rne/conseillers_departementaux.csv"]
+nom = "conseillers_departementaux"
+type = "source"
+description = """
+"""
+format = "csv"
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/d0/8158a4f34f09a515333778d34a6e45"
+s3_url = "cache/files/md5/d0/8158a4f34f09a515333778d34a6e45"
+source_url = "https://www.data.gouv.fr/fr/datasets/r/601ef073-d986-4582-8e1a-ed14dc857fba"
+
+["data/01_raw/rne/conseillers_epci.csv"]
+nom = "conseillers_epci"
+type = "source"
+description = """
+"""
+format = "csv"
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/e4/ffddb7d7d7504d13e80ccbbb2a0b1b"
+s3_url = "cache/files/md5/e4/ffddb7d7d7504d13e80ccbbb2a0b1b"
+source_url = "https://www.data.gouv.fr/fr/datasets/r/41d95d7d-b172-4636-ac44-32656367cdc7"
+
 ["data/01_raw/rne/conseillers_municipaux.csv"]
 nom = "Répertoire national des élus — conseillers municipaux"
 type = "source"
@@ -598,6 +628,16 @@ url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/ba/04a3
 s3_url = "cache/files/md5/ba/04a3782f9cbb41b4487a0a6c048873"
 source_url = "https://www.data.gouv.fr/fr/datasets/r/d5f400de-ae3f-4966-8cb6-a85c70c6c24a"
 info_url = "https://www.data.gouv.fr/fr/datasets/repertoire-national-des-elus-1/"
+
+["data/01_raw/rne/conseillers_regionaux.csv"]
+nom = "conseillers_regionaux"
+type = "source"
+description = """
+"""
+format = "csv"
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/14/fa5e59eee9f3095a38596459a5c149"
+s3_url = "cache/files/md5/14/fa5e59eee9f3095a38596459a5c149"
+source_url = "https://www.data.gouv.fr/fr/datasets/r/430e13f9-834b-4411-a1a8-da0b4b6e715c"
 
 ["data/02_clean/annuaire/conseils_departementaux.csv"]
 nom = "conseils_departementaux"
@@ -3955,14 +3995,167 @@ type = "str"
 
 
 
+
+["data/02_clean/rne/conseillers_arrondissement.csv"]
+nom = "conseillers_arrondissement"
+type = "clean"
+description = """
+"""
+format = "csv"
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/20/7b6bb44a9b6e7f48da5282e4783ced"
+s3_url = "cache/files/md5/20/7b6bb44a9b6e7f48da5282e4783ced"
+deps = ["data/01_raw/rne/conseillers_arrondissement.csv"]
+
+["data/02_clean/rne/conseillers_arrondissement.csv".colonnes.code_commune]
+nom = "code_commune"
+description = """
+"""
+type = "str"
+
+["data/02_clean/rne/conseillers_arrondissement.csv".colonnes.code_secteur]
+nom = "code_secteur"
+description = """
+"""
+type = "str"
+
+["data/02_clean/rne/conseillers_arrondissement.csv".colonnes.nom]
+nom = "nom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/rne/conseillers_arrondissement.csv".colonnes.prenom]
+nom = "prenom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/rne/conseillers_arrondissement.csv".colonnes.sexe]
+nom = "sexe"
+description = """
+"""
+type = "str"
+
+["data/02_clean/rne/conseillers_arrondissement.csv".colonnes.date_naissance]
+nom = "date_naissance"
+description = """
+"""
+type = "str"
+
+["data/02_clean/rne/conseillers_arrondissement.csv".colonnes.lieu_naissance]
+nom = "lieu_naissance"
+description = """
+"""
+type = "str"
+
+["data/02_clean/rne/conseillers_arrondissement.csv".colonnes.csp]
+nom = "csp"
+description = """
+"""
+type = "str"
+
+["data/02_clean/rne/conseillers_arrondissement.csv".colonnes.date_debut_mandat]
+nom = "date_debut_mandat"
+description = """
+"""
+type = "str"
+
+["data/02_clean/rne/conseillers_arrondissement.csv".colonnes.fonction]
+nom = "fonction"
+description = """
+"""
+type = "str"
+
+["data/02_clean/rne/conseillers_arrondissement.csv".colonnes.date_debut_fonction]
+nom = "date_debut_fonction"
+description = """
+"""
+type = "str"
+
+["data/02_clean/rne/conseillers_arrondissement.csv".colonnes.nuance]
+nom = "nuance"
+description = """
+"""
+type = "str"
+
+["data/02_clean/rne/conseillers_departementaux.csv"]
+nom = "conseillers_departementaux"
+type = "clean"
+description = """
+"""
+format = "csv"
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/eb/0f98834c64625ec9fbad9081c60fea"
+s3_url = "cache/files/md5/eb/0f98834c64625ec9fbad9081c60fea"
+deps = ["data/01_raw/rne/conseillers_departementaux.csv"]
+
+["data/02_clean/rne/conseillers_departementaux.csv".colonnes.code_departement]
+nom = "code_departement"
+description = """
+"""
+type = "str"
+
+["data/02_clean/rne/conseillers_departementaux.csv".colonnes.code_canton]
+nom = "code_canton"
+description = """
+"""
+type = "str"
+
+["data/02_clean/rne/conseillers_departementaux.csv".colonnes.nom]
+nom = "nom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/rne/conseillers_departementaux.csv".colonnes.prenom]
+nom = "prenom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/rne/conseillers_departementaux.csv".colonnes.sexe]
+nom = "sexe"
+description = """
+"""
+type = "str"
+
+["data/02_clean/rne/conseillers_departementaux.csv".colonnes.date_naissance]
+nom = "date_naissance"
+description = """
+"""
+type = "str"
+
+["data/02_clean/rne/conseillers_departementaux.csv".colonnes.csp]
+nom = "csp"
+description = """
+"""
+type = "str"
+
+["data/02_clean/rne/conseillers_departementaux.csv".colonnes.date_debut_mandat]
+nom = "date_debut_mandat"
+description = """
+"""
+type = "str"
+
+["data/02_clean/rne/conseillers_departementaux.csv".colonnes.fonction]
+nom = "fonction"
+description = """
+"""
+type = "str"
+
+["data/02_clean/rne/conseillers_departementaux.csv".colonnes.date_debut_fonction]
+nom = "date_debut_fonction"
+description = """
+"""
+type = "str"
+
 ["data/02_clean/rne/conseillers_municipaux.csv"]
 nom = "conseillers_municipaux"
 type = "clean"
 description = """
 """
 format = "csv"
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/88/54fa2e0575ee65ba1d0fab7d15ab18"
-s3_url = "cache/files/md5/88/54fa2e0575ee65ba1d0fab7d15ab18"
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/c9/b454a863c2bafe3b5daa2e7a069abb"
+s3_url = "cache/files/md5/c9/b454a863c2bafe3b5daa2e7a069abb"
 deps = ["data/01_raw/rne/conseillers_municipaux.csv"]
 
 ["data/02_clean/rne/conseillers_municipaux.csv".colonnes.code_departement]
@@ -4033,6 +4226,77 @@ type = "date"
 
 ["data/02_clean/rne/conseillers_municipaux.csv".colonnes.nationalite]
 nom = "nationalite"
+description = """
+"""
+type = "str"
+
+
+["data/02_clean/rne/conseillers_regionaux.csv"]
+nom = "conseillers_regionaux"
+type = "clean"
+description = """
+"""
+format = "csv"
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/4d/a0677287a350d68b75a2fb22e4b756"
+s3_url = "cache/files/md5/4d/a0677287a350d68b75a2fb22e4b756"
+deps = ["data/01_raw/rne/conseillers_regionaux.csv"]
+
+["data/02_clean/rne/conseillers_regionaux.csv".colonnes.code_region]
+nom = "code_region"
+description = """
+"""
+type = "str"
+
+["data/02_clean/rne/conseillers_regionaux.csv".colonnes.code_departement]
+nom = "code_departement"
+description = """
+"""
+type = "str"
+
+["data/02_clean/rne/conseillers_regionaux.csv".colonnes.nom]
+nom = "nom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/rne/conseillers_regionaux.csv".colonnes.prenom]
+nom = "prenom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/rne/conseillers_regionaux.csv".colonnes.sexe]
+nom = "sexe"
+description = """
+"""
+type = "str"
+
+["data/02_clean/rne/conseillers_regionaux.csv".colonnes.date_naissance]
+nom = "date_naissance"
+description = """
+"""
+type = "str"
+
+["data/02_clean/rne/conseillers_regionaux.csv".colonnes.csp]
+nom = "csp"
+description = """
+"""
+type = "str"
+
+["data/02_clean/rne/conseillers_regionaux.csv".colonnes.date_debut_mandat]
+nom = "date_debut_mandat"
+description = """
+"""
+type = "str"
+
+["data/02_clean/rne/conseillers_regionaux.csv".colonnes.fonction]
+nom = "fonction"
+description = """
+"""
+type = "str"
+
+["data/02_clean/rne/conseillers_regionaux.csv".colonnes.date_debut_fonction]
+nom = "date_debut_fonction"
 description = """
 """
 type = "str"
