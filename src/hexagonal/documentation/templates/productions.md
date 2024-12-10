@@ -26,9 +26,9 @@
 <tbody>
 {% for id, c in production.colonnes.items() -%}
   <tr>
-    <th>`{{ id }}`</th>
+    <td><code>{{ id }}</code></td>
     <td>{{ c.nom }}</td>
-    <td>`{{ c.type }}`</td>
+    <td><code>{{ c.type }}</code></td>
     <td>{{ c.description }}</td>
   </tr>
 {% endfor %}

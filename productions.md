@@ -24,75 +24,75 @@
 </thead>
 <tbody>
 <tr>
-    <th>`id`</th>
+    <td><code>id</code></td>
     <td>id</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`code_commune`</th>
+    <td><code>code_commune</code></td>
     <td>code_commune</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`siret`</th>
+    <td><code>siret</code></td>
     <td>siret</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nom`</th>
+    <td><code>nom</code></td>
     <td>nom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`emails`</th>
+    <td><code>emails</code></td>
     <td>emails</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`adresse_physique`</th>
+    <td><code>adresse_physique</code></td>
     <td>adresse_physique</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`adresse_postale`</th>
+    <td><code>adresse_postale</code></td>
     <td>adresse_postale</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`telephone`</th>
+    <td><code>telephone</code></td>
     <td>telephone</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`coordonnees`</th>
+    <td><code>coordonnees</code></td>
     <td>coordonnees</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`type_accessibilite`</th>
+    <td><code>type_accessibilite</code></td>
     <td>type_accessibilite</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`details_accessibilite`</th>
+    <td><code>details_accessibilite</code></td>
     <td>details_accessibilite</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`ouverture`</th>
+    <td><code>ouverture</code></td>
     <td>ouverture</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 
@@ -128,51 +128,51 @@ Cette production dépend des sources suivantes :
 </thead>
 <tbody>
 <tr>
-    <th>`id_personne`</th>
+    <td><code>id_personne</code></td>
     <td>id_personne</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`id_groupe`</th>
+    <td><code>id_groupe</code></td>
     <td>id_groupe</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`prenom`</th>
+    <td><code>prenom</code></td>
     <td>prenom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nom`</th>
+    <td><code>nom</code></td>
     <td>nom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`abreviation_groupe`</th>
+    <td><code>abreviation_groupe</code></td>
     <td>abreviation_groupe</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`legislature`</th>
+    <td><code>legislature</code></td>
     <td>legislature</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`date_debut`</th>
+    <td><code>date_debut</code></td>
     <td>date_debut</td>
-    <td>`date`</td>
+    <td><code>date</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`date_fin`</th>
+    <td><code>date_fin</code></td>
     <td>date_fin</td>
-    <td>`date`</td>
+    <td><code>date</code></td>
     <td></td>
   </tr>
 
@@ -208,69 +208,69 @@ Cette production dépend des sources suivantes :
 </thead>
 <tbody>
 <tr>
-    <th>`id_personne`</th>
+    <td><code>id_personne</code></td>
     <td>id_personne</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`civilite`</th>
+    <td><code>civilite</code></td>
     <td>civilite</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`prenom`</th>
+    <td><code>prenom</code></td>
     <td>prenom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nom`</th>
+    <td><code>nom</code></td>
     <td>nom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`date_naissance`</th>
+    <td><code>date_naissance</code></td>
     <td>date_naissance</td>
-    <td>`date`</td>
+    <td><code>date</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`ville_naissance`</th>
+    <td><code>ville_naissance</code></td>
     <td>ville_naissance</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`departement_naissance`</th>
+    <td><code>departement_naissance</code></td>
     <td>departement_naissance</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`legislatures`</th>
+    <td><code>legislatures</code></td>
     <td>legislatures</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`profession`</th>
+    <td><code>profession</code></td>
     <td>profession</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`csp_agregee`</th>
+    <td><code>csp_agregee</code></td>
     <td>csp_agregee</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`csp`</th>
+    <td><code>csp</code></td>
     <td>csp</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 
@@ -306,57 +306,57 @@ Cette production dépend des sources suivantes :
 </thead>
 <tbody>
 <tr>
-    <th>`id_groupe`</th>
+    <td><code>id_groupe</code></td>
     <td>id_groupe</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`legislature`</th>
+    <td><code>legislature</code></td>
     <td>legislature</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nom`</th>
+    <td><code>nom</code></td>
     <td>nom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`abrege`</th>
+    <td><code>abrege</code></td>
     <td>abrege</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`abreviation`</th>
+    <td><code>abreviation</code></td>
     <td>abreviation</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`date_debut`</th>
+    <td><code>date_debut</code></td>
     <td>date_debut</td>
-    <td>`date`</td>
+    <td><code>date</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`date_fin`</th>
+    <td><code>date_fin</code></td>
     <td>date_fin</td>
-    <td>`date`</td>
+    <td><code>date</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`position`</th>
+    <td><code>position</code></td>
     <td>position</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`preseance`</th>
+    <td><code>preseance</code></td>
     <td>preseance</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 
@@ -399,82 +399,82 @@ par deux mandats différents.
 </thead>
 <tbody>
 <tr>
-    <th>`id_mandat`</th>
+    <td><code>id_mandat</code></td>
     <td>Identifiant du mandat</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td>L&#39;identifiant unique du mandat.
 Il débute par le préfixe &#34;PM&#34;.
 </td>
   </tr>
 <tr>
-    <th>`id_personne`</th>
+    <td><code>id_personne</code></td>
     <td>Identifiant de la personne</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td>L&#39;identifiant unique de la personne dépositaire du mandat.
 Il débute par le préfixe &#34;PA&#34;.
 </td>
   </tr>
 <tr>
-    <th>`prenom`</th>
+    <td><code>prenom</code></td>
     <td>Prénom de la personne</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td>Le prénom de la personne dépositaire du mandat
 </td>
   </tr>
 <tr>
-    <th>`nom`</th>
+    <td><code>nom</code></td>
     <td>Nom de famille de la personne</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td>Le nom de famille de la personne dépositaire du mandat.
 </td>
   </tr>
 <tr>
-    <th>`legislature`</th>
+    <td><code>legislature</code></td>
     <td>legislature</td>
-    <td>`int`</td>
+    <td><code>int</code></td>
     <td>Le numéro de la législature dans le cadre de laquelle se déroule le mandat.
 </td>
   </tr>
 <tr>
-    <th>`circonscription`</th>
+    <td><code>circonscription</code></td>
     <td>circonscription</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`suppleante`</th>
+    <td><code>suppleante</code></td>
     <td>suppleante</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`date_debut`</th>
+    <td><code>date_debut</code></td>
     <td>date_debut</td>
-    <td>`date`</td>
+    <td><code>date</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`date_fin`</th>
+    <td><code>date_fin</code></td>
     <td>date_fin</td>
-    <td>`date`</td>
+    <td><code>date</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`cause_debut_mandat`</th>
+    <td><code>cause_debut_mandat</code></td>
     <td>cause_debut_mandat</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`cause_fin_mandat`</th>
+    <td><code>cause_fin_mandat</code></td>
     <td>cause_fin_mandat</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`place`</th>
+    <td><code>place</code></td>
     <td>place</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 
@@ -510,33 +510,33 @@ Cette production dépend des sources suivantes :
 </thead>
 <tbody>
 <tr>
-    <th>`code_departement`</th>
+    <td><code>code_departement</code></td>
     <td>code_departement</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`type_nom`</th>
+    <td><code>type_nom</code></td>
     <td>type_nom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nom`</th>
+    <td><code>nom</code></td>
     <td>nom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`article`</th>
+    <td><code>article</code></td>
     <td>article</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`charniere`</th>
+    <td><code>charniere</code></td>
     <td>charniere</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 
@@ -572,75 +572,75 @@ Cette production dépend des sources suivantes :
 </thead>
 <tbody>
 <tr>
-    <th>`code_commune`</th>
+    <td><code>code_commune</code></td>
     <td>code_commune</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`type_commune`</th>
+    <td><code>type_commune</code></td>
     <td>type_commune</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`code_region`</th>
+    <td><code>code_region</code></td>
     <td>code_region</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`code_departement`</th>
+    <td><code>code_departement</code></td>
     <td>code_departement</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`code_collectivite_departementale`</th>
+    <td><code>code_collectivite_departementale</code></td>
     <td>code_collectivite_departementale</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`code_arrondissement`</th>
+    <td><code>code_arrondissement</code></td>
     <td>code_arrondissement</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`code_canton`</th>
+    <td><code>code_canton</code></td>
     <td>code_canton</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`code_commune_parent`</th>
+    <td><code>code_commune_parent</code></td>
     <td>code_commune_parent</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`type_nom`</th>
+    <td><code>type_nom</code></td>
     <td>type_nom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nom`</th>
+    <td><code>nom</code></td>
     <td>nom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`article`</th>
+    <td><code>article</code></td>
     <td>article</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`charniere`</th>
+    <td><code>charniere</code></td>
     <td>charniere</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 
@@ -676,45 +676,45 @@ Cette production dépend des sources suivantes :
 </thead>
 <tbody>
 <tr>
-    <th>`code_commune`</th>
+    <td><code>code_commune</code></td>
     <td>code_commune</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`type_commune`</th>
+    <td><code>type_commune</code></td>
     <td>type_commune</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`code_departement`</th>
+    <td><code>code_departement</code></td>
     <td>code_departement</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`type_nom`</th>
+    <td><code>type_nom</code></td>
     <td>type_nom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nom`</th>
+    <td><code>nom</code></td>
     <td>nom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`article`</th>
+    <td><code>article</code></td>
     <td>article</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`charniere`</th>
+    <td><code>charniere</code></td>
     <td>charniere</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 
@@ -750,45 +750,45 @@ Cette production dépend des sources suivantes :
 </thead>
 <tbody>
 <tr>
-    <th>`code_commune`</th>
+    <td><code>code_commune</code></td>
     <td>code_commune</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`type_nom`</th>
+    <td><code>type_nom</code></td>
     <td>type_nom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nom`</th>
+    <td><code>nom</code></td>
     <td>nom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`article`</th>
+    <td><code>article</code></td>
     <td>article</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`charniere`</th>
+    <td><code>charniere</code></td>
     <td>charniere</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`date_debut`</th>
+    <td><code>date_debut</code></td>
     <td>date_debut</td>
-    <td>`date`</td>
+    <td><code>date</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`date_fin`</th>
+    <td><code>date_fin</code></td>
     <td>date_fin</td>
-    <td>`date`</td>
+    <td><code>date</code></td>
     <td></td>
   </tr>
 
@@ -824,33 +824,33 @@ Cette production dépend des sources suivantes :
 </thead>
 <tbody>
 <tr>
-    <th>`code_departement`</th>
+    <td><code>code_departement</code></td>
     <td>code_departement</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`code_region`</th>
+    <td><code>code_region</code></td>
     <td>code_region</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`code_chef_lieu`</th>
+    <td><code>code_chef_lieu</code></td>
     <td>code_chef_lieu</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`type_nom`</th>
+    <td><code>type_nom</code></td>
     <td>type_nom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nom`</th>
+    <td><code>nom</code></td>
     <td>nom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 
@@ -886,75 +886,75 @@ Cette production dépend des sources suivantes :
 </thead>
 <tbody>
 <tr>
-    <th>`bureau_de_vote`</th>
+    <td><code>bureau_de_vote</code></td>
     <td>bureau_de_vote</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`circonscription`</th>
+    <td><code>circonscription</code></td>
     <td>circonscription</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`numero_tour`</th>
+    <td><code>numero_tour</code></td>
     <td>numero_tour</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`canton`</th>
+    <td><code>canton</code></td>
     <td>canton</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`inscrits`</th>
+    <td><code>inscrits</code></td>
     <td>inscrits</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`votants`</th>
+    <td><code>votants</code></td>
     <td>votants</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`exprimes`</th>
+    <td><code>exprimes</code></td>
     <td>exprimes</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`numero_panneau`</th>
+    <td><code>numero_panneau</code></td>
     <td>numero_panneau</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nom`</th>
+    <td><code>nom</code></td>
     <td>nom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`prenom`</th>
+    <td><code>prenom</code></td>
     <td>prenom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nuance`</th>
+    <td><code>nuance</code></td>
     <td>nuance</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`voix`</th>
+    <td><code>voix</code></td>
     <td>voix</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 
@@ -990,63 +990,63 @@ Cette production dépend des sources suivantes :
 </thead>
 <tbody>
 <tr>
-    <th>`bureau_de_vote`</th>
+    <td><code>bureau_de_vote</code></td>
     <td>bureau_de_vote</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`numero_tour`</th>
+    <td><code>numero_tour</code></td>
     <td>numero_tour</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`inscrits`</th>
+    <td><code>inscrits</code></td>
     <td>inscrits</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`votants`</th>
+    <td><code>votants</code></td>
     <td>votants</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`exprimes`</th>
+    <td><code>exprimes</code></td>
     <td>exprimes</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`numero_panneau`</th>
+    <td><code>numero_panneau</code></td>
     <td>numero_panneau</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nom`</th>
+    <td><code>nom</code></td>
     <td>nom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`prenom`</th>
+    <td><code>prenom</code></td>
     <td>prenom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nuance`</th>
+    <td><code>nuance</code></td>
     <td>nuance</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`voix`</th>
+    <td><code>voix</code></td>
     <td>voix</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 
@@ -1082,69 +1082,69 @@ Cette production dépend des sources suivantes :
 </thead>
 <tbody>
 <tr>
-    <th>`bureau_de_vote`</th>
+    <td><code>bureau_de_vote</code></td>
     <td>bureau_de_vote</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`circonscription`</th>
+    <td><code>circonscription</code></td>
     <td>circonscription</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`inscrits`</th>
+    <td><code>inscrits</code></td>
     <td>inscrits</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`votants`</th>
+    <td><code>votants</code></td>
     <td>votants</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`exprimes`</th>
+    <td><code>exprimes</code></td>
     <td>exprimes</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`numero_panneau`</th>
+    <td><code>numero_panneau</code></td>
     <td>numero_panneau</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nuance`</th>
+    <td><code>nuance</code></td>
     <td>nuance</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nom`</th>
+    <td><code>nom</code></td>
     <td>nom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`prenom`</th>
+    <td><code>prenom</code></td>
     <td>prenom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`sexe`</th>
+    <td><code>sexe</code></td>
     <td>sexe</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`voix`</th>
+    <td><code>voix</code></td>
     <td>voix</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 
@@ -1180,69 +1180,69 @@ Cette production dépend des sources suivantes :
 </thead>
 <tbody>
 <tr>
-    <th>`bureau_de_vote`</th>
+    <td><code>bureau_de_vote</code></td>
     <td>bureau_de_vote</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`circonscription`</th>
+    <td><code>circonscription</code></td>
     <td>circonscription</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`inscrits`</th>
+    <td><code>inscrits</code></td>
     <td>inscrits</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`votants`</th>
+    <td><code>votants</code></td>
     <td>votants</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`exprimes`</th>
+    <td><code>exprimes</code></td>
     <td>exprimes</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`numero_panneau`</th>
+    <td><code>numero_panneau</code></td>
     <td>numero_panneau</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nuance`</th>
+    <td><code>nuance</code></td>
     <td>nuance</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nom`</th>
+    <td><code>nom</code></td>
     <td>nom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`prenom`</th>
+    <td><code>prenom</code></td>
     <td>prenom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`sexe`</th>
+    <td><code>sexe</code></td>
     <td>sexe</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`voix`</th>
+    <td><code>voix</code></td>
     <td>voix</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 
@@ -1278,63 +1278,63 @@ Cette production dépend des sources suivantes :
 </thead>
 <tbody>
 <tr>
-    <th>`bureau_de_vote`</th>
+    <td><code>bureau_de_vote</code></td>
     <td>bureau_de_vote</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`circonscription`</th>
+    <td><code>circonscription</code></td>
     <td>circonscription</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`inscrits`</th>
+    <td><code>inscrits</code></td>
     <td>inscrits</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`votants`</th>
+    <td><code>votants</code></td>
     <td>votants</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`exprimes`</th>
+    <td><code>exprimes</code></td>
     <td>exprimes</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`numero_panneau`</th>
+    <td><code>numero_panneau</code></td>
     <td>numero_panneau</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nom`</th>
+    <td><code>nom</code></td>
     <td>nom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`prenom`</th>
+    <td><code>prenom</code></td>
     <td>prenom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`sexe`</th>
+    <td><code>sexe</code></td>
     <td>sexe</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`voix`</th>
+    <td><code>voix</code></td>
     <td>voix</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 
@@ -1370,63 +1370,63 @@ Cette production dépend des sources suivantes :
 </thead>
 <tbody>
 <tr>
-    <th>`bureau_de_vote`</th>
+    <td><code>bureau_de_vote</code></td>
     <td>bureau_de_vote</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`circonscription`</th>
+    <td><code>circonscription</code></td>
     <td>circonscription</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`inscrits`</th>
+    <td><code>inscrits</code></td>
     <td>inscrits</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`votants`</th>
+    <td><code>votants</code></td>
     <td>votants</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`exprimes`</th>
+    <td><code>exprimes</code></td>
     <td>exprimes</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`numero_panneau`</th>
+    <td><code>numero_panneau</code></td>
     <td>numero_panneau</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nom`</th>
+    <td><code>nom</code></td>
     <td>nom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`prenom`</th>
+    <td><code>prenom</code></td>
     <td>prenom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`sexe`</th>
+    <td><code>sexe</code></td>
     <td>sexe</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`voix`</th>
+    <td><code>voix</code></td>
     <td>voix</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 
@@ -1462,51 +1462,51 @@ Cette production dépend des sources suivantes :
 </thead>
 <tbody>
 <tr>
-    <th>`bureau_de_vote`</th>
+    <td><code>bureau_de_vote</code></td>
     <td>bureau_de_vote</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`inscrits`</th>
+    <td><code>inscrits</code></td>
     <td>inscrits</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`votants`</th>
+    <td><code>votants</code></td>
     <td>votants</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`exprimes`</th>
+    <td><code>exprimes</code></td>
     <td>exprimes</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`numero_panneau`</th>
+    <td><code>numero_panneau</code></td>
     <td>numero_panneau</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`liste_court`</th>
+    <td><code>liste_court</code></td>
     <td>liste_court</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`liste_long`</th>
+    <td><code>liste_long</code></td>
     <td>liste_long</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`voix`</th>
+    <td><code>voix</code></td>
     <td>voix</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 
@@ -1542,69 +1542,69 @@ Cette production dépend des sources suivantes :
 </thead>
 <tbody>
 <tr>
-    <th>`bureau_de_vote`</th>
+    <td><code>bureau_de_vote</code></td>
     <td>bureau_de_vote</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`inscrits`</th>
+    <td><code>inscrits</code></td>
     <td>inscrits</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`votants`</th>
+    <td><code>votants</code></td>
     <td>votants</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`exprimes`</th>
+    <td><code>exprimes</code></td>
     <td>exprimes</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`numero_panneau`</th>
+    <td><code>numero_panneau</code></td>
     <td>numero_panneau</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nuance`</th>
+    <td><code>nuance</code></td>
     <td>nuance</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nom`</th>
+    <td><code>nom</code></td>
     <td>nom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`prenom`</th>
+    <td><code>prenom</code></td>
     <td>prenom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`sexe`</th>
+    <td><code>sexe</code></td>
     <td>sexe</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`liste_long`</th>
+    <td><code>liste_long</code></td>
     <td>liste_long</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`voix`</th>
+    <td><code>voix</code></td>
     <td>voix</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 
@@ -1640,69 +1640,69 @@ Cette production dépend des sources suivantes :
 </thead>
 <tbody>
 <tr>
-    <th>`bureau_de_vote`</th>
+    <td><code>bureau_de_vote</code></td>
     <td>bureau_de_vote</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`inscrits`</th>
+    <td><code>inscrits</code></td>
     <td>inscrits</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`votants`</th>
+    <td><code>votants</code></td>
     <td>votants</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`exprimes`</th>
+    <td><code>exprimes</code></td>
     <td>exprimes</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`numero_panneau`</th>
+    <td><code>numero_panneau</code></td>
     <td>numero_panneau</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nuance`</th>
+    <td><code>nuance</code></td>
     <td>nuance</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nom`</th>
+    <td><code>nom</code></td>
     <td>nom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`prenom`</th>
+    <td><code>prenom</code></td>
     <td>prenom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`sexe`</th>
+    <td><code>sexe</code></td>
     <td>sexe</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`liste_long`</th>
+    <td><code>liste_long</code></td>
     <td>liste_long</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`voix`</th>
+    <td><code>voix</code></td>
     <td>voix</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 
@@ -1738,45 +1738,45 @@ Cette production dépend des sources suivantes :
 </thead>
 <tbody>
 <tr>
-    <th>`bureau_de_vote`</th>
+    <td><code>bureau_de_vote</code></td>
     <td>bureau_de_vote</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`inscrits`</th>
+    <td><code>inscrits</code></td>
     <td>inscrits</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`votants`</th>
+    <td><code>votants</code></td>
     <td>votants</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`exprimes`</th>
+    <td><code>exprimes</code></td>
     <td>exprimes</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`numero_panneau`</th>
+    <td><code>numero_panneau</code></td>
     <td>numero_panneau</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nuance`</th>
+    <td><code>nuance</code></td>
     <td>nuance</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`voix`</th>
+    <td><code>voix</code></td>
     <td>voix</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 
@@ -1812,45 +1812,45 @@ Cette production dépend des sources suivantes :
 </thead>
 <tbody>
 <tr>
-    <th>`bureau_de_vote`</th>
+    <td><code>bureau_de_vote</code></td>
     <td>bureau_de_vote</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`inscrits`</th>
+    <td><code>inscrits</code></td>
     <td>inscrits</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`votants`</th>
+    <td><code>votants</code></td>
     <td>votants</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`exprimes`</th>
+    <td><code>exprimes</code></td>
     <td>exprimes</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`numero_panneau`</th>
+    <td><code>numero_panneau</code></td>
     <td>numero_panneau</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nuance`</th>
+    <td><code>nuance</code></td>
     <td>nuance</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`voix`</th>
+    <td><code>voix</code></td>
     <td>voix</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 
@@ -1886,57 +1886,57 @@ Cette production dépend des sources suivantes :
 </thead>
 <tbody>
 <tr>
-    <th>`bureau_de_vote`</th>
+    <td><code>bureau_de_vote</code></td>
     <td>bureau_de_vote</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`inscrits`</th>
+    <td><code>inscrits</code></td>
     <td>inscrits</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`votants`</th>
+    <td><code>votants</code></td>
     <td>votants</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`exprimes`</th>
+    <td><code>exprimes</code></td>
     <td>exprimes</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`numero_panneau`</th>
+    <td><code>numero_panneau</code></td>
     <td>numero_panneau</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nuance`</th>
+    <td><code>nuance</code></td>
     <td>nuance</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`liste_court`</th>
+    <td><code>liste_court</code></td>
     <td>liste_court</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`liste_long`</th>
+    <td><code>liste_long</code></td>
     <td>liste_long</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`voix`</th>
+    <td><code>voix</code></td>
     <td>voix</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 
@@ -1972,57 +1972,57 @@ Cette production dépend des sources suivantes :
 </thead>
 <tbody>
 <tr>
-    <th>`bureau_de_vote`</th>
+    <td><code>bureau_de_vote</code></td>
     <td>bureau_de_vote</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`inscrits`</th>
+    <td><code>inscrits</code></td>
     <td>inscrits</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`votants`</th>
+    <td><code>votants</code></td>
     <td>votants</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`exprimes`</th>
+    <td><code>exprimes</code></td>
     <td>exprimes</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`numero_panneau`</th>
+    <td><code>numero_panneau</code></td>
     <td>numero_panneau</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nuance`</th>
+    <td><code>nuance</code></td>
     <td>nuance</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`liste_court`</th>
+    <td><code>liste_court</code></td>
     <td>liste_court</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`liste_long`</th>
+    <td><code>liste_long</code></td>
     <td>liste_long</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`voix`</th>
+    <td><code>voix</code></td>
     <td>voix</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 
@@ -2058,69 +2058,69 @@ Cette production dépend des sources suivantes :
 </thead>
 <tbody>
 <tr>
-    <th>`bureau_de_vote`</th>
+    <td><code>bureau_de_vote</code></td>
     <td>bureau_de_vote</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`circonscription`</th>
+    <td><code>circonscription</code></td>
     <td>circonscription</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`inscrits`</th>
+    <td><code>inscrits</code></td>
     <td>inscrits</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`votants`</th>
+    <td><code>votants</code></td>
     <td>votants</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`exprimes`</th>
+    <td><code>exprimes</code></td>
     <td>exprimes</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`numero_panneau`</th>
+    <td><code>numero_panneau</code></td>
     <td>numero_panneau</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nuance`</th>
+    <td><code>nuance</code></td>
     <td>nuance</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nom`</th>
+    <td><code>nom</code></td>
     <td>nom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`prenom`</th>
+    <td><code>prenom</code></td>
     <td>prenom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`sexe`</th>
+    <td><code>sexe</code></td>
     <td>sexe</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`voix`</th>
+    <td><code>voix</code></td>
     <td>voix</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 
@@ -2156,123 +2156,123 @@ Cette production dépend des sources suivantes :
 </thead>
 <tbody>
 <tr>
-    <th>`circonscription`</th>
+    <td><code>circonscription</code></td>
     <td>circonscription</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`numero_panneau`</th>
+    <td><code>numero_panneau</code></td>
     <td>numero_panneau</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`numero_depot`</th>
+    <td><code>numero_depot</code></td>
     <td>numero_depot</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`sexe`</th>
+    <td><code>sexe</code></td>
     <td>sexe</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nom`</th>
+    <td><code>nom</code></td>
     <td>nom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`prenom`</th>
+    <td><code>prenom</code></td>
     <td>prenom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`date_naissance`</th>
+    <td><code>date_naissance</code></td>
     <td>date_naissance</td>
-    <td>`date`</td>
+    <td><code>date</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nuance`</th>
+    <td><code>nuance</code></td>
     <td>nuance</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`profession`</th>
+    <td><code>profession</code></td>
     <td>profession</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`sortant`</th>
+    <td><code>sortant</code></td>
     <td>sortant</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`sexe_suppleant`</th>
+    <td><code>sexe_suppleant</code></td>
     <td>sexe_suppleant</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nom_suppleant`</th>
+    <td><code>nom_suppleant</code></td>
     <td>nom_suppleant</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`prenom_suppleant`</th>
+    <td><code>prenom_suppleant</code></td>
     <td>prenom_suppleant</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`date_naissance_suppleant`</th>
+    <td><code>date_naissance_suppleant</code></td>
     <td>date_naissance_suppleant</td>
-    <td>`date`</td>
+    <td><code>date</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`sortant_suppleant`</th>
+    <td><code>sortant_suppleant</code></td>
     <td>sortant_suppleant</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nom_lemonde`</th>
+    <td><code>nom_lemonde</code></td>
     <td>nom_lemonde</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nuance_lemonde`</th>
+    <td><code>nuance_lemonde</code></td>
     <td>nuance_lemonde</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`parti_lemonde`</th>
+    <td><code>parti_lemonde</code></td>
     <td>parti_lemonde</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nuance_legis_2022`</th>
+    <td><code>nuance_legis_2022</code></td>
     <td>nuance_legis_2022</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`regroupement_om_legis_2022`</th>
+    <td><code>regroupement_om_legis_2022</code></td>
     <td>regroupement_om_legis_2022</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 
@@ -2310,63 +2310,63 @@ Cette production dépend des sources suivantes :
 </thead>
 <tbody>
 <tr>
-    <th>`circonscription`</th>
+    <td><code>circonscription</code></td>
     <td>circonscription</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`inscrits`</th>
+    <td><code>inscrits</code></td>
     <td>inscrits</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`votants`</th>
+    <td><code>votants</code></td>
     <td>votants</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`exprimes`</th>
+    <td><code>exprimes</code></td>
     <td>exprimes</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`numero_panneau`</th>
+    <td><code>numero_panneau</code></td>
     <td>numero_panneau</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nuance`</th>
+    <td><code>nuance</code></td>
     <td>nuance</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nom`</th>
+    <td><code>nom</code></td>
     <td>nom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`prenom`</th>
+    <td><code>prenom</code></td>
     <td>prenom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`sexe`</th>
+    <td><code>sexe</code></td>
     <td>sexe</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`voix`</th>
+    <td><code>voix</code></td>
     <td>voix</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 
@@ -2402,69 +2402,69 @@ Cette production dépend des sources suivantes :
 </thead>
 <tbody>
 <tr>
-    <th>`bureau_de_vote`</th>
+    <td><code>bureau_de_vote</code></td>
     <td>bureau_de_vote</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`circonscription`</th>
+    <td><code>circonscription</code></td>
     <td>circonscription</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`inscrits`</th>
+    <td><code>inscrits</code></td>
     <td>inscrits</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`votants`</th>
+    <td><code>votants</code></td>
     <td>votants</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`exprimes`</th>
+    <td><code>exprimes</code></td>
     <td>exprimes</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`numero_panneau`</th>
+    <td><code>numero_panneau</code></td>
     <td>numero_panneau</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nuance`</th>
+    <td><code>nuance</code></td>
     <td>nuance</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nom`</th>
+    <td><code>nom</code></td>
     <td>nom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`prenom`</th>
+    <td><code>prenom</code></td>
     <td>prenom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`sexe`</th>
+    <td><code>sexe</code></td>
     <td>sexe</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`voix`</th>
+    <td><code>voix</code></td>
     <td>voix</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 
@@ -2500,123 +2500,123 @@ Cette production dépend des sources suivantes :
 </thead>
 <tbody>
 <tr>
-    <th>`circonscription`</th>
+    <td><code>circonscription</code></td>
     <td>circonscription</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`numero_panneau`</th>
+    <td><code>numero_panneau</code></td>
     <td>numero_panneau</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`numero_depot`</th>
+    <td><code>numero_depot</code></td>
     <td>numero_depot</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`sexe`</th>
+    <td><code>sexe</code></td>
     <td>sexe</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nom`</th>
+    <td><code>nom</code></td>
     <td>nom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`prenom`</th>
+    <td><code>prenom</code></td>
     <td>prenom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`date_naissance`</th>
+    <td><code>date_naissance</code></td>
     <td>date_naissance</td>
-    <td>`date`</td>
+    <td><code>date</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nuance`</th>
+    <td><code>nuance</code></td>
     <td>nuance</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`profession`</th>
+    <td><code>profession</code></td>
     <td>profession</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`sortant`</th>
+    <td><code>sortant</code></td>
     <td>sortant</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`sexe_suppleant`</th>
+    <td><code>sexe_suppleant</code></td>
     <td>sexe_suppleant</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nom_suppleant`</th>
+    <td><code>nom_suppleant</code></td>
     <td>nom_suppleant</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`prenom_suppleant`</th>
+    <td><code>prenom_suppleant</code></td>
     <td>prenom_suppleant</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`date_naissance_suppleant`</th>
+    <td><code>date_naissance_suppleant</code></td>
     <td>date_naissance_suppleant</td>
-    <td>`date`</td>
+    <td><code>date</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`sortant_suppleant`</th>
+    <td><code>sortant_suppleant</code></td>
     <td>sortant_suppleant</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nom_lemonde`</th>
+    <td><code>nom_lemonde</code></td>
     <td>nom_lemonde</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nuance_lemonde`</th>
+    <td><code>nuance_lemonde</code></td>
     <td>nuance_lemonde</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`parti_lemonde`</th>
+    <td><code>parti_lemonde</code></td>
     <td>parti_lemonde</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nuance_legis_2022`</th>
+    <td><code>nuance_legis_2022</code></td>
     <td>nuance_legis_2022</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`regroupement_om_legis_2022`</th>
+    <td><code>regroupement_om_legis_2022</code></td>
     <td>regroupement_om_legis_2022</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 
@@ -2654,63 +2654,63 @@ Cette production dépend des sources suivantes :
 </thead>
 <tbody>
 <tr>
-    <th>`circonscription`</th>
+    <td><code>circonscription</code></td>
     <td>circonscription</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`inscrits`</th>
+    <td><code>inscrits</code></td>
     <td>inscrits</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`votants`</th>
+    <td><code>votants</code></td>
     <td>votants</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`exprimes`</th>
+    <td><code>exprimes</code></td>
     <td>exprimes</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`numero_panneau`</th>
+    <td><code>numero_panneau</code></td>
     <td>numero_panneau</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nuance`</th>
+    <td><code>nuance</code></td>
     <td>nuance</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nom`</th>
+    <td><code>nom</code></td>
     <td>nom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`prenom`</th>
+    <td><code>prenom</code></td>
     <td>prenom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`sexe`</th>
+    <td><code>sexe</code></td>
     <td>sexe</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`voix`</th>
+    <td><code>voix</code></td>
     <td>voix</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 
@@ -2746,63 +2746,63 @@ Cette production dépend des sources suivantes :
 </thead>
 <tbody>
 <tr>
-    <th>`bureau_de_vote`</th>
+    <td><code>bureau_de_vote</code></td>
     <td>bureau_de_vote</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`circonscription`</th>
+    <td><code>circonscription</code></td>
     <td>circonscription</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`inscrits`</th>
+    <td><code>inscrits</code></td>
     <td>inscrits</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`votants`</th>
+    <td><code>votants</code></td>
     <td>votants</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`exprimes`</th>
+    <td><code>exprimes</code></td>
     <td>exprimes</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`numero_panneau`</th>
+    <td><code>numero_panneau</code></td>
     <td>numero_panneau</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nom`</th>
+    <td><code>nom</code></td>
     <td>nom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`prenom`</th>
+    <td><code>prenom</code></td>
     <td>prenom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`sexe`</th>
+    <td><code>sexe</code></td>
     <td>sexe</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`voix`</th>
+    <td><code>voix</code></td>
     <td>voix</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 
@@ -2838,57 +2838,57 @@ Cette production dépend des sources suivantes :
 </thead>
 <tbody>
 <tr>
-    <th>`circonscription`</th>
+    <td><code>circonscription</code></td>
     <td>circonscription</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`inscrits`</th>
+    <td><code>inscrits</code></td>
     <td>inscrits</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`votants`</th>
+    <td><code>votants</code></td>
     <td>votants</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`exprimes`</th>
+    <td><code>exprimes</code></td>
     <td>exprimes</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`numero_panneau`</th>
+    <td><code>numero_panneau</code></td>
     <td>numero_panneau</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nom`</th>
+    <td><code>nom</code></td>
     <td>nom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`prenom`</th>
+    <td><code>prenom</code></td>
     <td>prenom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`sexe`</th>
+    <td><code>sexe</code></td>
     <td>sexe</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`voix`</th>
+    <td><code>voix</code></td>
     <td>voix</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 
@@ -2924,63 +2924,63 @@ Cette production dépend des sources suivantes :
 </thead>
 <tbody>
 <tr>
-    <th>`bureau_de_vote`</th>
+    <td><code>bureau_de_vote</code></td>
     <td>bureau_de_vote</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`circonscription`</th>
+    <td><code>circonscription</code></td>
     <td>circonscription</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`inscrits`</th>
+    <td><code>inscrits</code></td>
     <td>inscrits</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`votants`</th>
+    <td><code>votants</code></td>
     <td>votants</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`exprimes`</th>
+    <td><code>exprimes</code></td>
     <td>exprimes</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`numero_panneau`</th>
+    <td><code>numero_panneau</code></td>
     <td>numero_panneau</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nom`</th>
+    <td><code>nom</code></td>
     <td>nom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`prenom`</th>
+    <td><code>prenom</code></td>
     <td>prenom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`sexe`</th>
+    <td><code>sexe</code></td>
     <td>sexe</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`voix`</th>
+    <td><code>voix</code></td>
     <td>voix</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 
@@ -3016,57 +3016,57 @@ Cette production dépend des sources suivantes :
 </thead>
 <tbody>
 <tr>
-    <th>`circonscription`</th>
+    <td><code>circonscription</code></td>
     <td>circonscription</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`inscrits`</th>
+    <td><code>inscrits</code></td>
     <td>inscrits</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`votants`</th>
+    <td><code>votants</code></td>
     <td>votants</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`exprimes`</th>
+    <td><code>exprimes</code></td>
     <td>exprimes</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`numero_panneau`</th>
+    <td><code>numero_panneau</code></td>
     <td>numero_panneau</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nom`</th>
+    <td><code>nom</code></td>
     <td>nom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`prenom`</th>
+    <td><code>prenom</code></td>
     <td>prenom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`sexe`</th>
+    <td><code>sexe</code></td>
     <td>sexe</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`voix`</th>
+    <td><code>voix</code></td>
     <td>voix</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 
@@ -3102,51 +3102,51 @@ Cette production dépend des sources suivantes :
 </thead>
 <tbody>
 <tr>
-    <th>`mandat`</th>
+    <td><code>mandat</code></td>
     <td>mandat</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nom`</th>
+    <td><code>nom</code></td>
     <td>nom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`prenom`</th>
+    <td><code>prenom</code></td>
     <td>prenom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`sexe`</th>
+    <td><code>sexe</code></td>
     <td>sexe</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`circonscription_mandat`</th>
+    <td><code>circonscription_mandat</code></td>
     <td>circonscription_mandat</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`departement_mandat`</th>
+    <td><code>departement_mandat</code></td>
     <td>departement_mandat</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`candidat`</th>
+    <td><code>candidat</code></td>
     <td>candidat</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`date_publication`</th>
+    <td><code>date_publication</code></td>
     <td>date_publication</td>
-    <td>`date`</td>
+    <td><code>date</code></td>
     <td></td>
   </tr>
 
@@ -3182,57 +3182,57 @@ Cette production dépend des sources suivantes :
 </thead>
 <tbody>
 <tr>
-    <th>`bureau_de_vote`</th>
+    <td><code>bureau_de_vote</code></td>
     <td>bureau_de_vote</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`inscrits`</th>
+    <td><code>inscrits</code></td>
     <td>inscrits</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`votants`</th>
+    <td><code>votants</code></td>
     <td>votants</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`exprimes`</th>
+    <td><code>exprimes</code></td>
     <td>exprimes</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`numero_panneau`</th>
+    <td><code>numero_panneau</code></td>
     <td>numero_panneau</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nuance`</th>
+    <td><code>nuance</code></td>
     <td>nuance</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`liste_court`</th>
+    <td><code>liste_court</code></td>
     <td>liste_court</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`liste_long`</th>
+    <td><code>liste_long</code></td>
     <td>liste_long</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`voix`</th>
+    <td><code>voix</code></td>
     <td>voix</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 
@@ -3268,57 +3268,57 @@ Cette production dépend des sources suivantes :
 </thead>
 <tbody>
 <tr>
-    <th>`circonscription`</th>
+    <td><code>circonscription</code></td>
     <td>circonscription</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`inscrits`</th>
+    <td><code>inscrits</code></td>
     <td>inscrits</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`votants`</th>
+    <td><code>votants</code></td>
     <td>votants</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`exprimes`</th>
+    <td><code>exprimes</code></td>
     <td>exprimes</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`numero_panneau`</th>
+    <td><code>numero_panneau</code></td>
     <td>numero_panneau</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nuance`</th>
+    <td><code>nuance</code></td>
     <td>nuance</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`liste_court`</th>
+    <td><code>liste_court</code></td>
     <td>liste_court</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`liste_long`</th>
+    <td><code>liste_long</code></td>
     <td>liste_long</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`voix`</th>
+    <td><code>voix</code></td>
     <td>voix</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 
@@ -3354,63 +3354,63 @@ Cette production dépend des sources suivantes :
 </thead>
 <tbody>
 <tr>
-    <th>`bureau_de_vote`</th>
+    <td><code>bureau_de_vote</code></td>
     <td>bureau_de_vote</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`inscrits`</th>
+    <td><code>inscrits</code></td>
     <td>inscrits</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`votants`</th>
+    <td><code>votants</code></td>
     <td>votants</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`exprimes`</th>
+    <td><code>exprimes</code></td>
     <td>exprimes</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`numero_panneau`</th>
+    <td><code>numero_panneau</code></td>
     <td>numero_panneau</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nuance`</th>
+    <td><code>nuance</code></td>
     <td>nuance</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nom`</th>
+    <td><code>nom</code></td>
     <td>nom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`prenom`</th>
+    <td><code>prenom</code></td>
     <td>prenom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`sexe`</th>
+    <td><code>sexe</code></td>
     <td>sexe</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`voix`</th>
+    <td><code>voix</code></td>
     <td>voix</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 
@@ -3446,105 +3446,105 @@ Cette production dépend des sources suivantes :
 </thead>
 <tbody>
 <tr>
-    <th>`circonscription`</th>
+    <td><code>circonscription</code></td>
     <td>circonscription</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`numero_panneau`</th>
+    <td><code>numero_panneau</code></td>
     <td>numero_panneau</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`numero_depot`</th>
+    <td><code>numero_depot</code></td>
     <td>numero_depot</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`sexe`</th>
+    <td><code>sexe</code></td>
     <td>sexe</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nom`</th>
+    <td><code>nom</code></td>
     <td>nom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`prenom`</th>
+    <td><code>prenom</code></td>
     <td>prenom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`date_naissance`</th>
+    <td><code>date_naissance</code></td>
     <td>date_naissance</td>
-    <td>`date`</td>
+    <td><code>date</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nuance`</th>
+    <td><code>nuance</code></td>
     <td>nuance</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`profession`</th>
+    <td><code>profession</code></td>
     <td>profession</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`sortant`</th>
+    <td><code>sortant</code></td>
     <td>sortant</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`sexe_suppleant`</th>
+    <td><code>sexe_suppleant</code></td>
     <td>sexe_suppleant</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nom_suppleant`</th>
+    <td><code>nom_suppleant</code></td>
     <td>nom_suppleant</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`prenom_suppleant`</th>
+    <td><code>prenom_suppleant</code></td>
     <td>prenom_suppleant</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`date_naissance_suppleant`</th>
+    <td><code>date_naissance_suppleant</code></td>
     <td>date_naissance_suppleant</td>
-    <td>`date`</td>
+    <td><code>date</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`sortant_suppleant`</th>
+    <td><code>sortant_suppleant</code></td>
     <td>sortant_suppleant</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nuance_lfi`</th>
+    <td><code>nuance_lfi</code></td>
     <td>nuance_lfi</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`sensibilite`</th>
+    <td><code>sensibilite</code></td>
     <td>sensibilite</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 
@@ -3582,63 +3582,63 @@ Cette production dépend des sources suivantes :
 </thead>
 <tbody>
 <tr>
-    <th>`circonscription`</th>
+    <td><code>circonscription</code></td>
     <td>circonscription</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`inscrits`</th>
+    <td><code>inscrits</code></td>
     <td>inscrits</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`votants`</th>
+    <td><code>votants</code></td>
     <td>votants</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`exprimes`</th>
+    <td><code>exprimes</code></td>
     <td>exprimes</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`numero_panneau`</th>
+    <td><code>numero_panneau</code></td>
     <td>numero_panneau</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nuance`</th>
+    <td><code>nuance</code></td>
     <td>nuance</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nom`</th>
+    <td><code>nom</code></td>
     <td>nom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`prenom`</th>
+    <td><code>prenom</code></td>
     <td>prenom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`sexe`</th>
+    <td><code>sexe</code></td>
     <td>sexe</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`voix`</th>
+    <td><code>voix</code></td>
     <td>voix</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 
@@ -3674,63 +3674,63 @@ Cette production dépend des sources suivantes :
 </thead>
 <tbody>
 <tr>
-    <th>`bureau_de_vote`</th>
+    <td><code>bureau_de_vote</code></td>
     <td>bureau_de_vote</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`inscrits`</th>
+    <td><code>inscrits</code></td>
     <td>inscrits</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`votants`</th>
+    <td><code>votants</code></td>
     <td>votants</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`exprimes`</th>
+    <td><code>exprimes</code></td>
     <td>exprimes</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`numero_panneau`</th>
+    <td><code>numero_panneau</code></td>
     <td>numero_panneau</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nuance`</th>
+    <td><code>nuance</code></td>
     <td>nuance</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nom`</th>
+    <td><code>nom</code></td>
     <td>nom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`prenom`</th>
+    <td><code>prenom</code></td>
     <td>prenom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`sexe`</th>
+    <td><code>sexe</code></td>
     <td>sexe</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`voix`</th>
+    <td><code>voix</code></td>
     <td>voix</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 
@@ -3766,105 +3766,105 @@ Cette production dépend des sources suivantes :
 </thead>
 <tbody>
 <tr>
-    <th>`circonscription`</th>
+    <td><code>circonscription</code></td>
     <td>circonscription</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`numero_panneau`</th>
+    <td><code>numero_panneau</code></td>
     <td>numero_panneau</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`numero_depot`</th>
+    <td><code>numero_depot</code></td>
     <td>numero_depot</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`sexe`</th>
+    <td><code>sexe</code></td>
     <td>sexe</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nom`</th>
+    <td><code>nom</code></td>
     <td>nom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`prenom`</th>
+    <td><code>prenom</code></td>
     <td>prenom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`date_naissance`</th>
+    <td><code>date_naissance</code></td>
     <td>date_naissance</td>
-    <td>`date`</td>
+    <td><code>date</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nuance`</th>
+    <td><code>nuance</code></td>
     <td>nuance</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`profession`</th>
+    <td><code>profession</code></td>
     <td>profession</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`sortant`</th>
+    <td><code>sortant</code></td>
     <td>sortant</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`sexe_suppleant`</th>
+    <td><code>sexe_suppleant</code></td>
     <td>sexe_suppleant</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nom_suppleant`</th>
+    <td><code>nom_suppleant</code></td>
     <td>nom_suppleant</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`prenom_suppleant`</th>
+    <td><code>prenom_suppleant</code></td>
     <td>prenom_suppleant</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`date_naissance_suppleant`</th>
+    <td><code>date_naissance_suppleant</code></td>
     <td>date_naissance_suppleant</td>
-    <td>`date`</td>
+    <td><code>date</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`sortant_suppleant`</th>
+    <td><code>sortant_suppleant</code></td>
     <td>sortant_suppleant</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nuance_lfi`</th>
+    <td><code>nuance_lfi</code></td>
     <td>nuance_lfi</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`sensibilite`</th>
+    <td><code>sensibilite</code></td>
     <td>sensibilite</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 
@@ -3902,63 +3902,63 @@ Cette production dépend des sources suivantes :
 </thead>
 <tbody>
 <tr>
-    <th>`circonscription`</th>
+    <td><code>circonscription</code></td>
     <td>circonscription</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`inscrits`</th>
+    <td><code>inscrits</code></td>
     <td>inscrits</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`votants`</th>
+    <td><code>votants</code></td>
     <td>votants</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`exprimes`</th>
+    <td><code>exprimes</code></td>
     <td>exprimes</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`numero_panneau`</th>
+    <td><code>numero_panneau</code></td>
     <td>numero_panneau</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nuance`</th>
+    <td><code>nuance</code></td>
     <td>nuance</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nom`</th>
+    <td><code>nom</code></td>
     <td>nom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`prenom`</th>
+    <td><code>prenom</code></td>
     <td>prenom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`sexe`</th>
+    <td><code>sexe</code></td>
     <td>sexe</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`voix`</th>
+    <td><code>voix</code></td>
     <td>voix</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 
@@ -3994,15 +3994,15 @@ Cette production dépend des sources suivantes :
 </thead>
 <tbody>
 <tr>
-    <th>`bureau_de_vote`</th>
+    <td><code>bureau_de_vote</code></td>
     <td>bureau_de_vote</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`circonscription`</th>
+    <td><code>circonscription</code></td>
     <td>circonscription</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 
@@ -4041,75 +4041,75 @@ Cette production dépend des sources suivantes :
 </thead>
 <tbody>
 <tr>
-    <th>`code_commune`</th>
+    <td><code>code_commune</code></td>
     <td>code_commune</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`code_secteur`</th>
+    <td><code>code_secteur</code></td>
     <td>code_secteur</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nom`</th>
+    <td><code>nom</code></td>
     <td>nom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`prenom`</th>
+    <td><code>prenom</code></td>
     <td>prenom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`sexe`</th>
+    <td><code>sexe</code></td>
     <td>sexe</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`date_naissance`</th>
+    <td><code>date_naissance</code></td>
     <td>date_naissance</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`lieu_naissance`</th>
+    <td><code>lieu_naissance</code></td>
     <td>lieu_naissance</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`csp`</th>
+    <td><code>csp</code></td>
     <td>csp</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`date_debut_mandat`</th>
+    <td><code>date_debut_mandat</code></td>
     <td>date_debut_mandat</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`fonction`</th>
+    <td><code>fonction</code></td>
     <td>fonction</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`date_debut_fonction`</th>
+    <td><code>date_debut_fonction</code></td>
     <td>date_debut_fonction</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nuance`</th>
+    <td><code>nuance</code></td>
     <td>nuance</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 
@@ -4145,69 +4145,69 @@ Cette production dépend des sources suivantes :
 </thead>
 <tbody>
 <tr>
-    <th>`type_csp`</th>
+    <td><code>type_csp</code></td>
     <td>type_csp</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`code_csp`</th>
+    <td><code>code_csp</code></td>
     <td>code_csp</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`code_section`</th>
+    <td><code>code_section</code></td>
     <td>code_section</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nom`</th>
+    <td><code>nom</code></td>
     <td>nom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`prenom`</th>
+    <td><code>prenom</code></td>
     <td>prenom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`sexe`</th>
+    <td><code>sexe</code></td>
     <td>sexe</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`date_naissance`</th>
+    <td><code>date_naissance</code></td>
     <td>date_naissance</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`csp`</th>
+    <td><code>csp</code></td>
     <td>csp</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`date_debut_mandat`</th>
+    <td><code>date_debut_mandat</code></td>
     <td>date_debut_mandat</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`fonction`</th>
+    <td><code>fonction</code></td>
     <td>fonction</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`date_debut_fonction`</th>
+    <td><code>date_debut_fonction</code></td>
     <td>date_debut_fonction</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 
@@ -4243,63 +4243,63 @@ Cette production dépend des sources suivantes :
 </thead>
 <tbody>
 <tr>
-    <th>`code_departement`</th>
+    <td><code>code_departement</code></td>
     <td>code_departement</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`code_canton`</th>
+    <td><code>code_canton</code></td>
     <td>code_canton</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nom`</th>
+    <td><code>nom</code></td>
     <td>nom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`prenom`</th>
+    <td><code>prenom</code></td>
     <td>prenom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`sexe`</th>
+    <td><code>sexe</code></td>
     <td>sexe</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`date_naissance`</th>
+    <td><code>date_naissance</code></td>
     <td>date_naissance</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`csp`</th>
+    <td><code>csp</code></td>
     <td>csp</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`date_debut_mandat`</th>
+    <td><code>date_debut_mandat</code></td>
     <td>date_debut_mandat</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`fonction`</th>
+    <td><code>fonction</code></td>
     <td>fonction</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`date_debut_fonction`</th>
+    <td><code>date_debut_fonction</code></td>
     <td>date_debut_fonction</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 
@@ -4335,75 +4335,75 @@ Cette production dépend des sources suivantes :
 </thead>
 <tbody>
 <tr>
-    <th>`code_departement`</th>
+    <td><code>code_departement</code></td>
     <td>code_departement</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`code_collectivite_sp`</th>
+    <td><code>code_collectivite_sp</code></td>
     <td>code_collectivite_sp</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`code_commune`</th>
+    <td><code>code_commune</code></td>
     <td>code_commune</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nom`</th>
+    <td><code>nom</code></td>
     <td>nom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`prenom`</th>
+    <td><code>prenom</code></td>
     <td>prenom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`sexe`</th>
+    <td><code>sexe</code></td>
     <td>sexe</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`date_naissance`</th>
+    <td><code>date_naissance</code></td>
     <td>date_naissance</td>
-    <td>`date`</td>
+    <td><code>date</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`csp`</th>
+    <td><code>csp</code></td>
     <td>csp</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`date_debut_mandat`</th>
+    <td><code>date_debut_mandat</code></td>
     <td>date_debut_mandat</td>
-    <td>`date`</td>
+    <td><code>date</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`fonction`</th>
+    <td><code>fonction</code></td>
     <td>fonction</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`date_debut_fonction`</th>
+    <td><code>date_debut_fonction</code></td>
     <td>date_debut_fonction</td>
-    <td>`date`</td>
+    <td><code>date</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nationalite`</th>
+    <td><code>nationalite</code></td>
     <td>nationalite</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 
@@ -4439,63 +4439,63 @@ Cette production dépend des sources suivantes :
 </thead>
 <tbody>
 <tr>
-    <th>`code_region`</th>
+    <td><code>code_region</code></td>
     <td>code_region</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`code_departement`</th>
+    <td><code>code_departement</code></td>
     <td>code_departement</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nom`</th>
+    <td><code>nom</code></td>
     <td>nom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`prenom`</th>
+    <td><code>prenom</code></td>
     <td>prenom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`sexe`</th>
+    <td><code>sexe</code></td>
     <td>sexe</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`date_naissance`</th>
+    <td><code>date_naissance</code></td>
     <td>date_naissance</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`csp`</th>
+    <td><code>csp</code></td>
     <td>csp</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`date_debut_mandat`</th>
+    <td><code>date_debut_mandat</code></td>
     <td>date_debut_mandat</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`fonction`</th>
+    <td><code>fonction</code></td>
     <td>fonction</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`date_debut_fonction`</th>
+    <td><code>date_debut_fonction</code></td>
     <td>date_debut_fonction</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 
@@ -4531,51 +4531,51 @@ Cette production dépend des sources suivantes :
 </thead>
 <tbody>
 <tr>
-    <th>`mandat`</th>
+    <td><code>mandat</code></td>
     <td>mandat</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`nom`</th>
+    <td><code>nom</code></td>
     <td>nom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`prenom`</th>
+    <td><code>prenom</code></td>
     <td>prenom</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`sexe`</th>
+    <td><code>sexe</code></td>
     <td>sexe</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`type_code_circonscription`</th>
+    <td><code>type_code_circonscription</code></td>
     <td>type_code_circonscription</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`code_circonscription`</th>
+    <td><code>code_circonscription</code></td>
     <td>code_circonscription</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`candidat`</th>
+    <td><code>candidat</code></td>
     <td>candidat</td>
-    <td>`str`</td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <th>`date_publication`</th>
+    <td><code>date_publication</code></td>
     <td>date_publication</td>
-    <td>`date`</td>
+    <td><code>date</code></td>
     <td></td>
   </tr>
 
