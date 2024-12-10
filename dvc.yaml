@@ -166,6 +166,7 @@ stages:
       - conseillers_municipaux
       - conseillers_departementaux
       - conseillers_regionaux
+      - conseillers_csp
     do:
       deps:
         - ${raw}/rne/${item}.csv

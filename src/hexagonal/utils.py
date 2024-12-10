@@ -15,3 +15,8 @@ def date_francaise_vers_iso(d):
     else:
         logger.warning(f"Date non valide: {d}")
         return ""
+
+
+def serie_dates_usuel_vers_iso(d):
+    parts = d.str.extract(DATE_FRANCAISE_RE)
+    return parts["annee"] + "-" + parts["mois"] + "-" + parts["jour"]

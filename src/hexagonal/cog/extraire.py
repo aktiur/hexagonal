@@ -27,6 +27,14 @@ spec_departement = {
     "nom": "NCCENR",
 }
 
+spec_ctcd = {
+    "code_ctcd": "CTCD",
+    "code_region": "REG",
+    "code_chef_lieu": "CHEFLIEU",
+    "type_nom": "TNCC",
+    "nom": "NCCENR",
+}
+
 spec_com = {
     "code_departement": "COMER",
     "type_nom": "TNCC",
@@ -75,6 +83,7 @@ fichiers_cog = [
     (f"v_commune_{ANNEE}", "communes", spec_commune),
     (f"v_commune_comer_{ANNEE}", "communes_com", spec_commune_com),
     (f"v_departement_{ANNEE}", "departements", spec_departement),
+    (f"v_ctcd_{ANNEE}", "ctcd", spec_ctcd),
     (f"v_comer_{ANNEE}", "com", spec_com),
     (f"v_commune_depuis_1943", "communes_historiques", spec_commune_historique),
 ]

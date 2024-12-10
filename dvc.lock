@@ -886,8 +886,8 @@ stages:
       size: 1879699
     - path: src/hexagonal/cog/extraire.py
       hash: md5
-      md5: ed3eb46b9ed9db7e2b21279190ea2041
-      size: 2705
+      md5: 0c7ad9eac511e0444fde39707a5c8fdc
+      size: 2896
     outs:
     - path: data/02_clean/cog/com.csv
       hash: md5
@@ -944,13 +944,13 @@ stages:
       size: 185893
     - path: src/hexagonal/rne/extraire.py
       hash: md5
-      md5: 77c7c91247d132114f5f1c51be7abf03
-      size: 4046
+      md5: bfd305a902cb5ac56e7c395912288f27
+      size: 5066
     outs:
     - path: data/02_clean/rne/conseillers_arrondissement.csv
       hash: md5
-      md5: 207b6bb44a9b6e7f48da5282e4783ced
-      size: 97831
+      md5: f77731f0195164866a3cd370b21dc58c
+      size: 96805
   rne_nettoyer@conseillers_municipaux:
     cmd: PYTHONPATH=src python -m hexagonal.rne.extraire data/01_raw/rne data/02_clean/rne
       conseillers_municipaux
@@ -961,13 +961,13 @@ stages:
       size: 62375762
     - path: src/hexagonal/rne/extraire.py
       hash: md5
-      md5: 77c7c91247d132114f5f1c51be7abf03
-      size: 4046
+      md5: bfd305a902cb5ac56e7c395912288f27
+      size: 5066
     outs:
     - path: data/02_clean/rne/conseillers_municipaux.csv
       hash: md5
-      md5: c9b454a863c2bafe3b5daa2e7a069abb
-      size: 33433214
+      md5: a5ec3670f065e61ed75e0c2c987795e3
+      size: 32936575
   rne_nettoyer@conseillers_departementaux:
     cmd: PYTHONPATH=src python -m hexagonal.rne.extraire data/01_raw/rne data/02_clean/rne
       conseillers_departementaux
@@ -978,13 +978,13 @@ stages:
       size: 538921
     - path: src/hexagonal/rne/extraire.py
       hash: md5
-      md5: 77c7c91247d132114f5f1c51be7abf03
-      size: 4046
+      md5: bfd305a902cb5ac56e7c395912288f27
+      size: 5066
     outs:
     - path: data/02_clean/rne/conseillers_departementaux.csv
       hash: md5
-      md5: eb0f98834c64625ec9fbad9081c60fea
-      size: 288500
+      md5: 97f614566d1df5966b4e31ef28bc4103
+      size: 284449
   rne_nettoyer@conseillers_regionaux:
     cmd: PYTHONPATH=src python -m hexagonal.rne.extraire data/01_raw/rne data/02_clean/rne
       conseillers_regionaux
@@ -995,10 +995,27 @@ stages:
       size: 220535
     - path: src/hexagonal/rne/extraire.py
       hash: md5
-      md5: 77c7c91247d132114f5f1c51be7abf03
-      size: 4046
+      md5: bfd305a902cb5ac56e7c395912288f27
+      size: 5066
     outs:
     - path: data/02_clean/rne/conseillers_regionaux.csv
       hash: md5
-      md5: 4da0677287a350d68b75a2fb22e4b756
-      size: 103100
+      md5: 0dbc7593a8b8ea36bb392873f7d2b675
+      size: 101349
+  rne_nettoyer@conseillers_csp:
+    cmd: PYTHONPATH=src python -m hexagonal.rne.extraire data/01_raw/rne data/02_clean/rne
+      conseillers_csp
+    deps:
+    - path: data/01_raw/rne/conseillers_csp.csv
+      hash: md5
+      md5: 7650260d596109c66acbd2e83423c5f1
+      size: 86413
+    - path: src/hexagonal/rne/extraire.py
+      hash: md5
+      md5: bfd305a902cb5ac56e7c395912288f27
+      size: 5066
+    outs:
+    - path: data/02_clean/rne/conseillers_csp.csv
+      hash: md5
+      md5: 8e673f7e70a13fab98d760bae1bec662
+      size: 41436

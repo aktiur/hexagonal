@@ -591,6 +591,16 @@ url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/bd/d0e9
 s3_url = "cache/files/md5/bd/d0e9cc134bd9c122bff812a72620af"
 source_url = "https://www.data.gouv.fr/fr/datasets/r/3b6b2281-b9d9-4959-ae9d-c2c166dff118"
 
+["data/01_raw/rne/conseillers_csp.csv"]
+nom = "conseillers_csp"
+type = "source"
+description = """
+"""
+format = "csv"
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/76/50260d596109c66acbd2e83423c5f1"
+s3_url = "cache/files/md5/76/50260d596109c66acbd2e83423c5f1"
+source_url = "https://static.data.gouv.fr/resources/repertoire-national-des-elus-1/20241031-095248/elus-membres-assemblee-ma.csv"
+
 ["data/01_raw/rne/conseillers_departementaux.csv"]
 nom = "conseillers_departementaux"
 type = "source"
@@ -4002,8 +4012,8 @@ type = "clean"
 description = """
 """
 format = "csv"
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/20/7b6bb44a9b6e7f48da5282e4783ced"
-s3_url = "cache/files/md5/20/7b6bb44a9b6e7f48da5282e4783ced"
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/f7/7731f0195164866a3cd370b21dc58c"
+s3_url = "cache/files/md5/f7/7731f0195164866a3cd370b21dc58c"
 deps = ["data/01_raw/rne/conseillers_arrondissement.csv"]
 
 ["data/02_clean/rne/conseillers_arrondissement.csv".colonnes.code_commune]
@@ -4078,14 +4088,91 @@ description = """
 """
 type = "str"
 
+
+["data/02_clean/rne/conseillers_csp.csv"]
+nom = "conseillers_csp"
+type = "clean"
+description = """
+"""
+format = "csv"
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/8e/673f7e70a13fab98d760bae1bec662"
+s3_url = "cache/files/md5/8e/673f7e70a13fab98d760bae1bec662"
+deps = ["data/01_raw/rne/conseillers_csp.csv"]
+
+["data/02_clean/rne/conseillers_csp.csv".colonnes.type_csp]
+nom = "type_csp"
+description = """
+"""
+type = "str"
+
+["data/02_clean/rne/conseillers_csp.csv".colonnes.code_csp]
+nom = "code_csp"
+description = """
+"""
+type = "str"
+
+["data/02_clean/rne/conseillers_csp.csv".colonnes.code_section]
+nom = "code_section"
+description = """
+"""
+type = "str"
+
+["data/02_clean/rne/conseillers_csp.csv".colonnes.nom]
+nom = "nom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/rne/conseillers_csp.csv".colonnes.prenom]
+nom = "prenom"
+description = """
+"""
+type = "str"
+
+["data/02_clean/rne/conseillers_csp.csv".colonnes.sexe]
+nom = "sexe"
+description = """
+"""
+type = "str"
+
+["data/02_clean/rne/conseillers_csp.csv".colonnes.date_naissance]
+nom = "date_naissance"
+description = """
+"""
+type = "str"
+
+["data/02_clean/rne/conseillers_csp.csv".colonnes.csp]
+nom = "csp"
+description = """
+"""
+type = "str"
+
+["data/02_clean/rne/conseillers_csp.csv".colonnes.date_debut_mandat]
+nom = "date_debut_mandat"
+description = """
+"""
+type = "str"
+
+["data/02_clean/rne/conseillers_csp.csv".colonnes.fonction]
+nom = "fonction"
+description = """
+"""
+type = "str"
+
+["data/02_clean/rne/conseillers_csp.csv".colonnes.date_debut_fonction]
+nom = "date_debut_fonction"
+description = """
+"""
+type = "str"
+
 ["data/02_clean/rne/conseillers_departementaux.csv"]
 nom = "conseillers_departementaux"
 type = "clean"
 description = """
 """
 format = "csv"
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/eb/0f98834c64625ec9fbad9081c60fea"
-s3_url = "cache/files/md5/eb/0f98834c64625ec9fbad9081c60fea"
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/97/f614566d1df5966b4e31ef28bc4103"
+s3_url = "cache/files/md5/97/f614566d1df5966b4e31ef28bc4103"
 deps = ["data/01_raw/rne/conseillers_departementaux.csv"]
 
 ["data/02_clean/rne/conseillers_departementaux.csv".colonnes.code_departement]
@@ -4154,8 +4241,8 @@ type = "clean"
 description = """
 """
 format = "csv"
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/c9/b454a863c2bafe3b5daa2e7a069abb"
-s3_url = "cache/files/md5/c9/b454a863c2bafe3b5daa2e7a069abb"
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/a5/ec3670f065e61ed75e0c2c987795e3"
+s3_url = "cache/files/md5/a5/ec3670f065e61ed75e0c2c987795e3"
 deps = ["data/01_raw/rne/conseillers_municipaux.csv"]
 
 ["data/02_clean/rne/conseillers_municipaux.csv".colonnes.code_departement]
@@ -4237,8 +4324,8 @@ type = "clean"
 description = """
 """
 format = "csv"
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/4d/a0677287a350d68b75a2fb22e4b756"
-s3_url = "cache/files/md5/4d/a0677287a350d68b75a2fb22e4b756"
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/0d/bc7593a8b8ea36bb392873f7d2b675"
+s3_url = "cache/files/md5/0d/bc7593a8b8ea36bb392873f7d2b675"
 deps = ["data/01_raw/rne/conseillers_regionaux.csv"]
 
 ["data/02_clean/rne/conseillers_regionaux.csv".colonnes.code_region]
