@@ -1,13 +1,13 @@
 # Productions
 
-<a name="data/02_clean/annuaire/mairies.csv"></a>
-## mairies
+<a name="data/02_clean/annuaire/conseils_departementaux.csv"></a>
+## Conseils départementaux
 
 | Propriété | Valeur |
 | --------- | ------ |
-| Chemin interne | `data/02_clean/annuaire/mairies.csv` |
+| Chemin interne | `data/02_clean/annuaire/conseils_departementaux.csv` |
 | Format de fichier | csv |
-| URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/b8/6ed082ddc5e2897e5fefc593380e34> |
+| URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/53/09c03e311afead3d83056b4b8688f5> |
 
 
 
@@ -25,21 +25,24 @@
 <tbody>
 <tr>
     <td><code>id</code></td>
-    <td>id</td>
+    <td>Identifiant unique</td>
     <td><code>str</code></td>
-    <td></td>
+    <td>Un identifiant interne utilisé par l&#39;annuaire de l&#39;administration.
+</td>
   </tr>
 <tr>
     <td><code>code_commune</code></td>
-    <td>code_commune</td>
-    <td><code>str</code></td>
-    <td></td>
+    <td>Code commune</td>
+    <td><code>code_commune</code></td>
+    <td>Le code INSEE de la commune où se trouve le conseil départemental.
+</td>
   </tr>
 <tr>
     <td><code>siret</code></td>
-    <td>siret</td>
+    <td>SIRET</td>
     <td><code>str</code></td>
-    <td></td>
+    <td>Le code SIRET du Conseil départemental
+</td>
   </tr>
 <tr>
     <td><code>nom</code></td>
@@ -51,19 +54,22 @@
     <td><code>emails</code></td>
     <td>emails</td>
     <td><code>str</code></td>
-    <td></td>
+    <td>Les adresses emails indiquées dans l&#39;annuaire, séparées par un saut de ligne simple.
+</td>
   </tr>
 <tr>
     <td><code>adresse_physique</code></td>
-    <td>adresse_physique</td>
+    <td>Adresse</td>
     <td><code>str</code></td>
-    <td></td>
+    <td>Adresse physique complète
+</td>
   </tr>
 <tr>
     <td><code>adresse_postale</code></td>
-    <td>adresse_postale</td>
+    <td>Adresse postale</td>
     <td><code>str</code></td>
-    <td></td>
+    <td>L&#39;adresse postale, si elle est différente de l&#39;adresse physique (boîte postale, par exemple).
+</td>
   </tr>
 <tr>
     <td><code>telephone</code></td>
@@ -104,8 +110,122 @@
 Cette production dépend des sources suivantes :
 
 - [Base de données locales de l&#39;annuaire de l&#39;administration](sources.md#data/01_raw/annuaire/annuaire.tar.bz2)
+<a name="data/02_clean/annuaire/mairies.csv"></a>
+## Liste des mairies
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | `data/02_clean/annuaire/mairies.csv` |
+| Format de fichier | csv |
+| URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/b8/6ed082ddc5e2897e5fefc593380e34> |
+
+Ce jeu de données extraits de l&#39;annuaire administratif comporte une entrée pour chaque mairie
+française.
+
+
+### Colonnes
+
+<table>
+<thead>
+  <tr>
+    <th>id</th>
+    <th>nom</th>
+    <th>type</th>
+    <th>description</th>
+  </tr>
+</thead>
+<tbody>
+<tr>
+    <td><code>id</code></td>
+    <td>id</td>
+    <td><code>str</code></td>
+    <td>Un identifiant interne à l&#39;annuaire de l&#39;administration
+</td>
+  </tr>
+<tr>
+    <td><code>code_commune</code></td>
+    <td>code_commune</td>
+    <td><code>code_commune</code></td>
+    <td>Le code INSEE de la commune à laquelle appartient la mairie
+</td>
+  </tr>
+<tr>
+    <td><code>siret</code></td>
+    <td>siret</td>
+    <td><code>str</code></td>
+    <td>Le numéro de SIRET de cette mairie
+</td>
+  </tr>
+<tr>
+    <td><code>nom</code></td>
+    <td>nom</td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>emails</code></td>
+    <td>emails</td>
+    <td><code>str</code></td>
+    <td>Les adresse emails de contact pour cette mairie
+</td>
+  </tr>
+<tr>
+    <td><code>adresse_physique</code></td>
+    <td>adresse_physique</td>
+    <td><code>str</code></td>
+    <td>L&#39;adresse physique de la mairie.
+</td>
+  </tr>
+<tr>
+    <td><code>adresse_postale</code></td>
+    <td>adresse_postale</td>
+    <td><code>str</code></td>
+    <td>L&#39;adresse postale de la mairie, si elle est différente de l&#39;adresse physique (par exemple boîte postale)
+</td>
+  </tr>
+<tr>
+    <td><code>telephone</code></td>
+    <td>telephone</td>
+    <td><code>str</code></td>
+    <td>Numéros de téléphone de contact pour cette mairie.
+</td>
+  </tr>
+<tr>
+    <td><code>coordonnees</code></td>
+    <td>coordonnees</td>
+    <td><code>str</code></td>
+    <td>Coordonnées géographiques de cette mairie, selon le système WGS84, au format &lt;code&gt;longitude,latitude&lt;/code&gt;
+</td>
+  </tr>
+<tr>
+    <td><code>type_accessibilite</code></td>
+    <td>type_accessibilite</td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>details_accessibilite</code></td>
+    <td>details_accessibilite</td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>ouverture</code></td>
+    <td>ouverture</td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+
+</tbody>
+</table>
+
+### Sources
+
+Cette production dépend des sources suivantes :
+
+- [Base de données locales de l&#39;annuaire de l&#39;administration](sources.md#data/01_raw/annuaire/annuaire.tar.bz2)
 <a name="data/02_clean/assemblee_nationale/affiliations.csv"></a>
-## affiliations
+## Affiliation des députés à un groupe parlementaire
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -113,6 +233,8 @@ Cette production dépend des sources suivantes :
 | Format de fichier | csv |
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/6f/f8030680e92e49af80135ef63208e5> |
 
+Ce fichier comporte une ligne pour chaque affiliation d&#39;un député à un groupe parlementaire, à partir de la
+XIème législature.
 
 
 ### Colonnes
@@ -129,27 +251,31 @@ Cette production dépend des sources suivantes :
 <tbody>
 <tr>
     <td><code>id_personne</code></td>
-    <td>id_personne</td>
+    <td>Identifiant député·e</td>
     <td><code>str</code></td>
-    <td></td>
+    <td>L&#39;identifiant unique de la personne utilisé par l&#39;Assemblée nationale
+</td>
   </tr>
 <tr>
     <td><code>id_groupe</code></td>
-    <td>id_groupe</td>
+    <td>Identifiant groupe parlementaire</td>
     <td><code>str</code></td>
-    <td></td>
+    <td>L&#39;identifiant unique du groupe parlementaire concerné.
+</td>
   </tr>
 <tr>
     <td><code>prenom</code></td>
     <td>prenom</td>
     <td><code>str</code></td>
-    <td></td>
+    <td>Le prénom de la personne concernée.
+</td>
   </tr>
 <tr>
     <td><code>nom</code></td>
     <td>nom</td>
     <td><code>str</code></td>
-    <td></td>
+    <td>L
+</td>
   </tr>
 <tr>
     <td><code>abreviation_groupe</code></td>

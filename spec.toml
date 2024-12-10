@@ -1,3 +1,13 @@
+["data/01_raw/admin_express/admin_express_cog.7z"]
+nom = "admin_express_cog"
+type = "source"
+description = """
+"""
+format = "7z"
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/82/20f6d8b3447d1f10e2950276332c62"
+s3_url = "cache/files/md5/82/20f6d8b3447d1f10e2950276332c62"
+source_url = "https://data.geopf.fr/telechargement/download/ADMIN-EXPRESS-COG/ADMIN-EXPRESS-COG_3-2__SHP_WGS84G_FRA_2024-02-22/ADMIN-EXPRESS-COG_3-2__SHP_WGS84G_FRA_2024-02-22.7z"
+
 ["data/01_raw/annuaire/annuaire.tar.bz2"]
 nom = "Base de données locales de l'annuaire de l'administration"
 type = "source"
@@ -649,8 +659,8 @@ s3_url = "cache/files/md5/14/fa5e59eee9f3095a38596459a5c149"
 source_url = "https://www.data.gouv.fr/fr/datasets/r/430e13f9-834b-4411-a1a8-da0b4b6e715c"
 
 ["data/02_clean/annuaire/conseils_departementaux.csv"]
-nom = "conseils_departementaux"
-type = "intermediaire"
+nom = "Conseils départementaux"
+type = "clean"
 description = """
 """
 format = "csv"
@@ -662,21 +672,23 @@ deps = [
 ]
 
 ["data/02_clean/annuaire/conseils_departementaux.csv".colonnes.id]
-nom = "id"
+nom = "Identifiant unique"
 description = """
 Un identifiant interne utilisé par l'annuaire de l'administration.
 """
 type = "str"
 
 ["data/02_clean/annuaire/conseils_departementaux.csv".colonnes.code_commune]
-nom = "code_commune"
+nom = "Code commune"
 description = """
+Le code INSEE de la commune où se trouve le conseil départemental.
 """
 type = "code_commune"
 
 ["data/02_clean/annuaire/conseils_departementaux.csv".colonnes.siret]
-nom = "siret"
+nom = "SIRET"
 description = """
+Le code SIRET du Conseil départemental
 """
 type = "str"
 
@@ -694,15 +706,16 @@ Les adresses emails indiquées dans l'annuaire, séparées par un saut de ligne 
 type = "str"
 
 ["data/02_clean/annuaire/conseils_departementaux.csv".colonnes.adresse_physique]
-nom = "adresse_physique"
+nom = "Adresse"
 description = """
 Adresse physique complète
 """
 type = "str"
 
 ["data/02_clean/annuaire/conseils_departementaux.csv".colonnes.adresse_postale]
-nom = "adresse_postale"
+nom = "Adresse postale"
 description = """
+L'adresse postale, si elle est différente de l'adresse physique (boîte postale, par exemple).
 """
 type = "str"
 
@@ -737,9 +750,11 @@ description = """
 type = "str"
 
 ["data/02_clean/annuaire/mairies.csv"]
-nom = "mairies"
+nom = "Liste des mairies"
 type = "clean"
 description = """
+Ce jeu de données extraits de l'annuaire administratif comporte une entrée pour chaque mairie
+française.
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/b8/6ed082ddc5e2897e5fefc593380e34"
@@ -752,18 +767,21 @@ deps = [
 ["data/02_clean/annuaire/mairies.csv".colonnes.id]
 nom = "id"
 description = """
+Un identifiant interne à l'annuaire de l'administration
 """
 type = "str"
 
 ["data/02_clean/annuaire/mairies.csv".colonnes.code_commune]
 nom = "code_commune"
 description = """
+Le code INSEE de la commune à laquelle appartient la mairie
 """
-type = "str"
+type = "code_commune"
 
 ["data/02_clean/annuaire/mairies.csv".colonnes.siret]
 nom = "siret"
 description = """
+Le numéro de SIRET de cette mairie
 """
 type = "str"
 
@@ -776,30 +794,35 @@ type = "str"
 ["data/02_clean/annuaire/mairies.csv".colonnes.emails]
 nom = "emails"
 description = """
+Les adresse emails de contact pour cette mairie
 """
 type = "str"
 
 ["data/02_clean/annuaire/mairies.csv".colonnes.adresse_physique]
 nom = "adresse_physique"
 description = """
+L'adresse physique de la mairie.
 """
 type = "str"
 
 ["data/02_clean/annuaire/mairies.csv".colonnes.adresse_postale]
 nom = "adresse_postale"
 description = """
+L'adresse postale de la mairie, si elle est différente de l'adresse physique (par exemple boîte postale)
 """
 type = "str"
 
 ["data/02_clean/annuaire/mairies.csv".colonnes.telephone]
 nom = "telephone"
 description = """
+Numéros de téléphone de contact pour cette mairie.
 """
 type = "str"
 
 ["data/02_clean/annuaire/mairies.csv".colonnes.coordonnees]
 nom = "coordonnees"
 description = """
+Coordonnées géographiques de cette mairie, selon le système WGS84, au format <code>longitude,latitude</code>
 """
 type = "str"
 
@@ -821,15 +844,12 @@ description = """
 """
 type = "str"
 
-
-
-
-
-
 ["data/02_clean/assemblee_nationale/affiliations.csv"]
-nom = "affiliations"
+nom = "Affiliation des députés à un groupe parlementaire"
 type = "clean"
 description = """
+Ce fichier comporte une ligne pour chaque affiliation d'un député à un groupe parlementaire, à partir de la
+XIème législature.
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/6f/f8030680e92e49af80135ef63208e5"
@@ -837,26 +857,30 @@ s3_url = "cache/files/md5/6f/f8030680e92e49af80135ef63208e5"
 deps = ["data/01_raw/assemblee-nationale.zip"]
 
 ["data/02_clean/assemblee_nationale/affiliations.csv".colonnes.id_personne]
-nom = "id_personne"
+nom = "Identifiant député·e"
 description = """
+L'identifiant unique de la personne utilisé par l'Assemblée nationale
 """
 type = "str"
 
 ["data/02_clean/assemblee_nationale/affiliations.csv".colonnes.id_groupe]
-nom = "id_groupe"
+nom = "Identifiant groupe parlementaire"
 description = """
+L'identifiant unique du groupe parlementaire concerné.
 """
 type = "str"
 
 ["data/02_clean/assemblee_nationale/affiliations.csv".colonnes.prenom]
 nom = "prenom"
 description = """
+Le prénom de la personne concernée.
 """
 type = "str"
 
 ["data/02_clean/assemblee_nationale/affiliations.csv".colonnes.nom]
 nom = "nom"
 description = """
+L
 """
 type = "str"
 
@@ -3243,8 +3267,8 @@ type = "clean"
 description = """
 """
 format = "csv"
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/c1/b409e872d55b1ca3ea1e547862bd2a"
-s3_url = "cache/files/md5/c1/b409e872d55b1ca3ea1e547862bd2a"
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/c4/b7e16894b409e0c810750c4967afec"
+s3_url = "cache/files/md5/c4/b7e16894b409e0c810750c4967afec"
 deps = ["data/01_raw/elections/2022-presidentielle-parrainages.csv"]
 
 ["data/02_clean/elections/2022-presidentielle-parrainages.csv".colonnes.mandat]
@@ -4393,8 +4417,8 @@ type = "clean"
 description = """
 """
 format = "csv"
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/af/2f45460d4570dd60a8445dd1b8115d"
-s3_url = "cache/files/md5/af/2f45460d4570dd60a8445dd1b8115d"
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/a2/0d751b4254ca57aef3dc426c1e328a"
+s3_url = "cache/files/md5/a2/0d751b4254ca57aef3dc426c1e328a"
 deps = [
     "data/02_clean/elections/2022-presidentielle-parrainages.csv",
     "data/02_clean/cog/departements.csv",
