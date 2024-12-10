@@ -1,7 +1,7 @@
 from dataclasses import dataclass
+from os.path import join
 from pathlib import Path
 from typing import Generator
-from urllib.parse import urljoin
 
 from dvc.api import DVCFileSystem
 from dvc.stage import Stage
@@ -57,12 +57,12 @@ class DVCFile:
     @property
     def s3_url(self):
         hash_part = f"{URL_PREFIX}/{self.hash[:2]}/{self.hash[2:]}"
-        return urljoin(CONFIG["s3_root"], hash_part)
+        return join(CONFIG["s3_root"], hash_part)
 
     @property
     def http_url(self):
         hash_part = f"{URL_PREFIX}/{self.hash[:2]}/{self.hash[2:]}"
-        return urljoin(CONFIG["http_root"], hash_part)
+        return join(CONFIG["http_root"], hash_part)
 
     @property
     def source_url(self):

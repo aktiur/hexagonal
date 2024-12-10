@@ -5,7 +5,7 @@ description = """
 """
 format = "7z"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/82/20f6d8b3447d1f10e2950276332c62"
-s3_url = "cache/files/md5/82/20f6d8b3447d1f10e2950276332c62"
+s3_url = "s3://hexagonal-data/cache/files/md5/82/20f6d8b3447d1f10e2950276332c62"
 source_url = "https://data.geopf.fr/telechargement/download/ADMIN-EXPRESS-COG/ADMIN-EXPRESS-COG_3-2__SHP_WGS84G_FRA_2024-02-22/ADMIN-EXPRESS-COG_3-2__SHP_WGS84G_FRA_2024-02-22.7z"
 
 ["data/01_raw/annuaire/annuaire.tar.bz2"]
@@ -21,7 +21,7 @@ précisant la compétence géographique des guichets.
 """
 format = "tar.bz2"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/df/f4276a47b217d1ab1897817523e9c9"
-s3_url = "cache/files/md5/df/f4276a47b217d1ab1897817523e9c9"
+s3_url = "s3://hexagonal-data/cache/files/md5/df/f4276a47b217d1ab1897817523e9c9"
 source_url = "https://lecomarquage.service-public.fr/donnees_locales_v4/all_latest.tar.bz2"
 editeur = "Premier ministre"
 
@@ -35,7 +35,7 @@ ligne (format dit ndjson)
 """
 format = "ndjson"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/d0/79eaee7e513be6acde1d9bdfaf0002"
-s3_url = "cache/files/md5/d0/79eaee7e513be6acde1d9bdfaf0002"
+s3_url = "s3://hexagonal-data/cache/files/md5/d0/79eaee7e513be6acde1d9bdfaf0002"
 deps = ["data/01_raw/annuaire/annuaire.tar.bz2"]
 
 ["data/01_raw/annuaire/conseils_regionaux.json"]
@@ -48,7 +48,7 @@ ligne (format dit ndjson)
 """
 format = "ndjson"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/a2/a1f4d0a7a1fab329844ba4e3eaef84"
-s3_url = "cache/files/md5/a2/a1f4d0a7a1fab329844ba4e3eaef84"
+s3_url = "s3://hexagonal-data/cache/files/md5/a2/a1f4d0a7a1fab329844ba4e3eaef84"
 deps = ["data/01_raw/annuaire/annuaire.tar.bz2"]
 
 ["data/01_raw/annuaire/epcis.json"]
@@ -60,7 +60,7 @@ EPCI, chacun au format JSON, séparé par une nouvelleligne (format dit ndjson)
 """
 format = "ndjson"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/5f/fdaca257899a799b34169664804658"
-s3_url = "cache/files/md5/5f/fdaca257899a799b34169664804658"
+s3_url = "s3://hexagonal-data/cache/files/md5/5f/fdaca257899a799b34169664804658"
 deps = ["data/01_raw/annuaire/annuaire.tar.bz2"]
 
 ["data/01_raw/annuaire/mairies.json"]
@@ -72,7 +72,7 @@ mairies, chacun au format JSON, séparé par une nouvelleligne (format dit ndjso
 """
 format = "ndjson"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/b9/5de50790673feae76c1f7d5f7765d8"
-s3_url = "cache/files/md5/b9/5de50790673feae76c1f7d5f7765d8"
+s3_url = "s3://hexagonal-data/cache/files/md5/b9/5de50790673feae76c1f7d5f7765d8"
 deps = ["data/01_raw/annuaire/annuaire.tar.bz2"]
 
 ["data/01_raw/annuaire/prefectures.json"]
@@ -82,7 +82,7 @@ description = """
 """
 format = "ndjson"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/f7/e71bfc0c1beff22dbb905e1cf76401"
-s3_url = "cache/files/md5/f7/e71bfc0c1beff22dbb905e1cf76401"
+s3_url = "s3://hexagonal-data/cache/files/md5/f7/e71bfc0c1beff22dbb905e1cf76401"
 deps = ["data/01_raw/annuaire/annuaire.tar.bz2"]
 
 ["data/01_raw/assemblee-nationale.zip"]
@@ -98,7 +98,7 @@ ou entités internes à l'assemblée nationale).
 """
 format = "zip"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/aa/aa2511e0ae29fd3173e7894bedca13"
-s3_url = "cache/files/md5/aa/aa2511e0ae29fd3173e7894bedca13"
+s3_url = "s3://hexagonal-data/cache/files/md5/aa/aa2511e0ae29fd3173e7894bedca13"
 source_url = "https://data.assemblee-nationale.fr/static/openData/repository/17/amo/tous_acteurs_mandats_organes_xi_legislature/AMO30_tous_acteurs_tous_mandats_tous_organes_historique.json.zip"
 editeur = "Assemblée nationale de la République française"
 licence = "Licence Ouverte / Open Licence"
@@ -123,7 +123,7 @@ rattachement (commune ou pays).
 """
 format = "zip"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/05/b4046e254c75d9f558c0f3d4ba3c60"
-s3_url = "cache/files/md5/05/b4046e254c75d9f558c0f3d4ba3c60"
+s3_url = "s3://hexagonal-data/cache/files/md5/05/b4046e254c75d9f558c0f3d4ba3c60"
 source_url = "https://www.insee.fr/fr/statistiques/fichier/7766585/cog_ensemble_2024_csv.zip"
 info_url = "https://www.insee.fr/fr/information/2560452"
 editeur = "INSEE"
@@ -136,7 +136,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/96/0334973bf05499070429ba154a833a"
-s3_url = "cache/files/md5/96/0334973bf05499070429ba154a833a"
+s3_url = "s3://hexagonal-data/cache/files/md5/96/0334973bf05499070429ba154a833a"
 source_url = "https://www.data.gouv.fr/s/resources/referendum-de-2005-resultats-par-bureaux-de-vote/20150925-112918/RF05_BVot.txt"
 editeur = "Ministère de l'intérieur"
 
@@ -147,7 +147,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/c1/2faa2e574d4844ed8686d17519a9e4"
-s3_url = "cache/files/md5/c1/2faa2e574d4844ed8686d17519a9e4"
+s3_url = "s3://hexagonal-data/cache/files/md5/c1/2faa2e574d4844ed8686d17519a9e4"
 source_url = "https://www.data.gouv.fr/fr/datasets/r/206b1668-2b31-46da-b957-9857f94fe85c"
 editeur = "Ministère de l'intérieur"
 
@@ -158,7 +158,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/21/aecbfcb6e0caf8eb09a3b573170623"
-s3_url = "cache/files/md5/21/aecbfcb6e0caf8eb09a3b573170623"
+s3_url = "s3://hexagonal-data/cache/files/md5/21/aecbfcb6e0caf8eb09a3b573170623"
 source_url = "https://www.data.gouv.fr/fr/datasets/r/c5af18ce-b673-4019-a9c3-07ee6209668c"
 editeur = "Ministère de l'intérieur"
 
@@ -169,7 +169,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/3e/aa57f0825abafeeb38dcf81d3f80aa"
-s3_url = "cache/files/md5/3e/aa57f0825abafeeb38dcf81d3f80aa"
+s3_url = "s3://hexagonal-data/cache/files/md5/3e/aa57f0825abafeeb38dcf81d3f80aa"
 source_url = "https://www.data.gouv.fr/fr/datasets/r/80cb1309-9147-4bae-b6e2-79877d549b50"
 editeur = "Ministère de l'intérieur"
 
@@ -180,7 +180,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/f7/488f6de8dc80bc650c19c36aab6b4d"
-s3_url = "cache/files/md5/f7/488f6de8dc80bc650c19c36aab6b4d"
+s3_url = "s3://hexagonal-data/cache/files/md5/f7/488f6de8dc80bc650c19c36aab6b4d"
 source_url = "https://www.data.gouv.fr/fr/datasets/r/8eb61f3e-dfdf-496e-85af-2859cd7383c3"
 editeur = "Ministère de l'intérieur"
 
@@ -191,7 +191,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/1f/c04aa0a22b83172876987f6146b0ea"
-s3_url = "cache/files/md5/1f/c04aa0a22b83172876987f6146b0ea"
+s3_url = "s3://hexagonal-data/cache/files/md5/1f/c04aa0a22b83172876987f6146b0ea"
 source_url = "https://www.data.gouv.fr/fr/datasets/r/8fdb0926-ea9d-4fb4-a136-7767cd97e30b"
 info_url = "https://www.data.gouv.fr/fr/datasets/election-presidentielle-des-23-avril-et-7-mai-2017-resultats-definitifs-du-1er-tour-par-bureaux-de-vote/"
 editeur = "Ministère de l'intérieur"
@@ -203,7 +203,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/7f/2883a04e3243222ac800d1d73f01eb"
-s3_url = "cache/files/md5/7f/2883a04e3243222ac800d1d73f01eb"
+s3_url = "s3://hexagonal-data/cache/files/md5/7f/2883a04e3243222ac800d1d73f01eb"
 source_url = "https://www.data.gouv.fr/fr/datasets/r/2e3e44de-e584-4aa2-8148-670daf5617e1"
 info_url = "https://www.data.gouv.fr/fr/datasets/election-presidentielle-des-23-avril-et-7-mai-2017-resultats-definitifs-du-2nd-tour-par-bureaux-de-vote/"
 editeur = "Ministère de l'intérieur"
@@ -215,7 +215,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/41/122a5230f18ab9736f5a07828b1221"
-s3_url = "cache/files/md5/41/122a5230f18ab9736f5a07828b1221"
+s3_url = "s3://hexagonal-data/cache/files/md5/41/122a5230f18ab9736f5a07828b1221"
 source_url = "https://www.data.gouv.fr/fr/datasets/r/77c4450b-7fa7-425c-84da-4f7bf4b97820"
 editeur = "Ministère de l'intérieur"
 
@@ -226,7 +226,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/13/4a9746d44fbccabb9136992975c355"
-s3_url = "cache/files/md5/13/4a9746d44fbccabb9136992975c355"
+s3_url = "s3://hexagonal-data/cache/files/md5/13/4a9746d44fbccabb9136992975c355"
 deps = ["data/01_raw/elections/2020-municipales-1-bureau_de_vote_avant_correction.csv"]
 
 ["data/01_raw/elections/2020-municipales-1-bureau_de_vote_avant_correction.csv"]
@@ -238,7 +238,7 @@ et 16921.
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/d5/ed37c4abd7a4952826ead2ca11a408"
-s3_url = "cache/files/md5/d5/ed37c4abd7a4952826ead2ca11a408"
+s3_url = "s3://hexagonal-data/cache/files/md5/d5/ed37c4abd7a4952826ead2ca11a408"
 source_url = "https://www.data.gouv.fr/fr/datasets/r/248f6f21-68ad-45f3-82f5-53fffabce5f3"
 editeur = "Ministère de l'intérieur"
 
@@ -249,7 +249,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/fa/88d768c4ce3098a7f883dd9e7b03e7"
-s3_url = "cache/files/md5/fa/88d768c4ce3098a7f883dd9e7b03e7"
+s3_url = "s3://hexagonal-data/cache/files/md5/fa/88d768c4ce3098a7f883dd9e7b03e7"
 source_url = "https://www.data.gouv.fr/fr/datasets/r/7e641d2e-e017-43d4-9434-49d5acd44b4b"
 editeur = "Ministère de l'intérieur"
 
@@ -260,7 +260,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/77/9c9e5cefb35ef7b91379a6a761a1a0"
-s3_url = "cache/files/md5/77/9c9e5cefb35ef7b91379a6a761a1a0"
+s3_url = "s3://hexagonal-data/cache/files/md5/77/9c9e5cefb35ef7b91379a6a761a1a0"
 source_url = "https://www.data.gouv.fr/fr/datasets/r/57370a9b-7fa1-465c-a051-c984fc21321f"
 editeur = "Ministère de l'intérieur"
 
@@ -271,7 +271,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/bc/cfd795640a1f2684e1c1a921d065d0"
-s3_url = "cache/files/md5/bc/cfd795640a1f2684e1c1a921d065d0"
+s3_url = "s3://hexagonal-data/cache/files/md5/bc/cfd795640a1f2684e1c1a921d065d0"
 source_url = "https://www.data.gouv.fr/fr/datasets/r/b34b36d9-e416-4144-8384-d101b140afaf"
 editeur = "Ministère de l'intérieur"
 
@@ -282,7 +282,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/b0/e0383c1c736cc49867f05c662ed50f"
-s3_url = "cache/files/md5/b0/e0383c1c736cc49867f05c662ed50f"
+s3_url = "s3://hexagonal-data/cache/files/md5/b0/e0383c1c736cc49867f05c662ed50f"
 source_url = "https://www.data.gouv.fr/fr/datasets/r/52c3e6f1-2faa-4295-9f76-5b0e9cb9f7b0"
 editeur = "Ministère de l'intérieur"
 
@@ -293,7 +293,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/43/6df1e7dcbe2ac545c537195e0a7299"
-s3_url = "cache/files/md5/43/6df1e7dcbe2ac545c537195e0a7299"
+s3_url = "s3://hexagonal-data/cache/files/md5/43/6df1e7dcbe2ac545c537195e0a7299"
 source_url = "https://www.data.gouv.fr/fr/datasets/r/75221ab0-2066-4a11-bc42-b0f76d201dfe"
 editeur = "Ministère de l'intérieur"
 
@@ -304,7 +304,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/ab/8e9e02c1253a44a9ec7547851842ad"
-s3_url = "cache/files/md5/ab/8e9e02c1253a44a9ec7547851842ad"
+s3_url = "s3://hexagonal-data/cache/files/md5/ab/8e9e02c1253a44a9ec7547851842ad"
 source_url = "https://www.data.gouv.fr/fr/datasets/r/a1f73b85-8194-44f4-a2b7-c343edb47d32"
 editeur = "Ministère de l'intérieur"
 
@@ -315,7 +315,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/f3/376d549226719ce0d499493996b753"
-s3_url = "cache/files/md5/f3/376d549226719ce0d499493996b753"
+s3_url = "s3://hexagonal-data/cache/files/md5/f3/376d549226719ce0d499493996b753"
 source_url = "https://www.data.gouv.fr/fr/datasets/r/c79af2f3-1733-4df3-be37-caebacbc1321"
 editeur = "Ministère de l'intérieur"
 
@@ -326,7 +326,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/49/86d461320a1ab758e4af374464c09c"
-s3_url = "cache/files/md5/49/86d461320a1ab758e4af374464c09c"
+s3_url = "s3://hexagonal-data/cache/files/md5/49/86d461320a1ab758e4af374464c09c"
 source_url = "https://www.data.gouv.fr/fr/datasets/r/114b13e8-7ff9-437f-9ec8-7a29258a80e3"
 editeur = "Ministère de l'intérieur"
 
@@ -337,7 +337,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/02/e9bcfb3e506d7d4ada0a141315c61c"
-s3_url = "cache/files/md5/02/e9bcfb3e506d7d4ada0a141315c61c"
+s3_url = "s3://hexagonal-data/cache/files/md5/02/e9bcfb3e506d7d4ada0a141315c61c"
 source_url = "https://www.data.gouv.fr/fr/datasets/r/cada247a-6528-44e7-8308-30c0c335a4b2"
 editeur = "Ministère de l'intérieur"
 
@@ -348,7 +348,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/6a/bd2abe7e78e547b7401d0f8938cd47"
-s3_url = "cache/files/md5/6a/bd2abe7e78e547b7401d0f8938cd47"
+s3_url = "s3://hexagonal-data/cache/files/md5/6a/bd2abe7e78e547b7401d0f8938cd47"
 source_url = "https://www.data.gouv.fr/fr/datasets/r/49172b79-a152-434d-b63a-bff926892b26"
 editeur = "Ministère de l'intérieur"
 
@@ -359,7 +359,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/c8/27e0066aed7e3fa15557e785d1eb27"
-s3_url = "cache/files/md5/c8/27e0066aed7e3fa15557e785d1eb27"
+s3_url = "s3://hexagonal-data/cache/files/md5/c8/27e0066aed7e3fa15557e785d1eb27"
 source_url = "https://www.data.gouv.fr/fr/datasets/r/a84f1483-a191-4187-ad40-404105bb9bf0"
 editeur = "Ministère de l'intérieur"
 
@@ -381,7 +381,7 @@ dans notre pays.
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/40/277717333ff3a1e20113d5fd249219"
-s3_url = "cache/files/md5/40/277717333ff3a1e20113d5fd249219"
+s3_url = "s3://hexagonal-data/cache/files/md5/40/277717333ff3a1e20113d5fd249219"
 source_url = "https://www.data.gouv.fr/fr/datasets/r/67d3987a-3f9d-464c-a678-116c25186f66"
 editeur = "Legis 2022"
 
@@ -396,7 +396,7 @@ la fois la nuance attribuée par le ministère de l’intérieur et celle du Mon
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/a1/f8ad9352c14eeeb4ff8fd530747eab"
-s3_url = "cache/files/md5/a1/f8ad9352c14eeeb4ff8fd530747eab"
+s3_url = "s3://hexagonal-data/cache/files/md5/a1/f8ad9352c14eeeb4ff8fd530747eab"
 source_url = "https://assets-decodeurs.lemonde.fr/decodeurs/elections_2022_snippets/legislatives/tour1/candidats_legislatives_lemonde.csv"
 info_url = "https://www.lemonde.fr/les-decodeurs/article/2022/06/15/legislatives-2022-le-monde-met-a-disposition-la-liste-des-candidats-et-leur-nuance-politique-en-open-data_6130475_4355770.html"
 editeur = "Le Monde"
@@ -408,7 +408,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/86/3143ce55ac2e71541972bd68ff9365"
-s3_url = "cache/files/md5/86/3143ce55ac2e71541972bd68ff9365"
+s3_url = "s3://hexagonal-data/cache/files/md5/86/3143ce55ac2e71541972bd68ff9365"
 source_url = "https://www.data.gouv.fr/fr/datasets/r/79b5cac4-4957-486b-bbda-322d80868224"
 info_url = "https://www.data.gouv.fr/fr/datasets/election-presidentielle-des-10-et-24-avril-2022-resultats-definitifs-du-1er-tour/"
 editeur = "Ministère de l'intérieur"
@@ -420,7 +420,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/fb/5e45dd6a5ae43c93d3be0969d6c0d0"
-s3_url = "cache/files/md5/fb/5e45dd6a5ae43c93d3be0969d6c0d0"
+s3_url = "s3://hexagonal-data/cache/files/md5/fb/5e45dd6a5ae43c93d3be0969d6c0d0"
 source_url = "https://www.data.gouv.fr/fr/datasets/r/056c3d1e-87ef-42b2-ae9c-57ad9d81b563"
 info_url = "https://www.data.gouv.fr/fr/datasets/election-presidentielle-des-10-et-24-avril-2022-resultats-definitifs-du-1er-tour/"
 editeur = "Ministère de l'intérieur"
@@ -432,7 +432,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/c5/e0a26fe52ed824208649d15628b528"
-s3_url = "cache/files/md5/c5/e0a26fe52ed824208649d15628b528"
+s3_url = "s3://hexagonal-data/cache/files/md5/c5/e0a26fe52ed824208649d15628b528"
 source_url = "https://www.data.gouv.fr/fr/datasets/r/4dfd05a9-094e-4043-8a19-43b6b6bbe086"
 info_url = "https://www.data.gouv.fr/fr/datasets/election-presidentielle-des-10-et-24-avril-2022-resultats-definitifs-du-2nd-tour/"
 editeur = "Ministère de l'intérieur"
@@ -444,7 +444,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/29/2bc96162d5cde4d3cc7c98eeed4e00"
-s3_url = "cache/files/md5/29/2bc96162d5cde4d3cc7c98eeed4e00"
+s3_url = "s3://hexagonal-data/cache/files/md5/29/2bc96162d5cde4d3cc7c98eeed4e00"
 source_url = "https://www.data.gouv.fr/fr/datasets/r/eefff73d-1b17-4695-8ec6-6671916e3af8"
 info_url = "https://www.data.gouv.fr/fr/datasets/election-presidentielle-des-10-et-24-avril-2022-resultats-definitifs-du-2nd-tour/"
 editeur = "Ministère de l'intérieur"
@@ -458,7 +458,7 @@ validés par le Conseil constitutionnel.
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/62/595a6af02961ae4f2f2a7b0ebccddb"
-s3_url = "cache/files/md5/62/595a6af02961ae4f2f2a7b0ebccddb"
+s3_url = "s3://hexagonal-data/cache/files/md5/62/595a6af02961ae4f2f2a7b0ebccddb"
 source_url = "https://presidentielle2022.conseil-constitutionnel.fr/telechargement/parrainagestotal.csv"
 info_url = "https://presidentielle2022.conseil-constitutionnel.fr/les-parrainages/tous-les-parrainages-valides.html"
 editeur = "Conseil constitutionnel"
@@ -470,7 +470,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/b3/a9085acb27df6669ac04d5aca2e5da"
-s3_url = "cache/files/md5/b3/a9085acb27df6669ac04d5aca2e5da"
+s3_url = "s3://hexagonal-data/cache/files/md5/b3/a9085acb27df6669ac04d5aca2e5da"
 source_url = "https://www.data.gouv.fr/fr/datasets/r/cc1883d9-1265-4365-b754-fb6aef22d82e"
 
 ["data/01_raw/elections/2024-europeenne-circonscription.csv"]
@@ -480,7 +480,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/8a/9a6ca76b17b2ce3600c400ce800187"
-s3_url = "cache/files/md5/8a/9a6ca76b17b2ce3600c400ce800187"
+s3_url = "s3://hexagonal-data/cache/files/md5/8a/9a6ca76b17b2ce3600c400ce800187"
 source_url = "https://www.data.gouv.fr/fr/datasets/r/ee37cbef-3d2a-4efe-a395-530b85a63028"
 
 ["data/01_raw/elections/2024-legislatives-1-bureau_de_vote.csv"]
@@ -490,7 +490,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/92/547431feb455ad1065815e72c40d8e"
-s3_url = "cache/files/md5/92/547431feb455ad1065815e72c40d8e"
+s3_url = "s3://hexagonal-data/cache/files/md5/92/547431feb455ad1065815e72c40d8e"
 source_url = "https://www.data.gouv.fr/fr/datasets/r/6813fb28-7ec0-42ff-a528-2bc3d82d7dcd"
 
 ["data/01_raw/elections/2024-legislatives-1-candidats.csv"]
@@ -500,7 +500,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/c8/40bd309348cbe6cd728cc96bf550d0"
-s3_url = "cache/files/md5/c8/40bd309348cbe6cd728cc96bf550d0"
+s3_url = "s3://hexagonal-data/cache/files/md5/c8/40bd309348cbe6cd728cc96bf550d0"
 source_url = "https://www.data.gouv.fr/fr/datasets/r/cd5b39e6-5feb-4864-b274-3431ed81442c"
 
 ["data/01_raw/elections/2024-legislatives-1-circonscription.csv"]
@@ -510,7 +510,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/1d/424007d37d7cf2d24d799403d6af00"
-s3_url = "cache/files/md5/1d/424007d37d7cf2d24d799403d6af00"
+s3_url = "s3://hexagonal-data/cache/files/md5/1d/424007d37d7cf2d24d799403d6af00"
 source_url = "https://www.data.gouv.fr/fr/datasets/r/5163f2e3-1362-4c35-89a0-1934bb74f2d9"
 
 ["data/01_raw/elections/2024-legislatives-2-bureau_de_vote.csv"]
@@ -520,7 +520,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/06/3dfce8aa81153f6b535b7ecdb49d6f"
-s3_url = "cache/files/md5/06/3dfce8aa81153f6b535b7ecdb49d6f"
+s3_url = "s3://hexagonal-data/cache/files/md5/06/3dfce8aa81153f6b535b7ecdb49d6f"
 source_url = "https://www.data.gouv.fr/fr/datasets/r/ca974f04-cfd9-4da8-8554-4a868a09c6c2"
 
 ["data/01_raw/elections/2024-legislatives-2-candidats.csv"]
@@ -530,7 +530,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/c6/e6f33721554d0a1260d81775c0fd22"
-s3_url = "cache/files/md5/c6/e6f33721554d0a1260d81775c0fd22"
+s3_url = "s3://hexagonal-data/cache/files/md5/c6/e6f33721554d0a1260d81775c0fd22"
 source_url = "https://www.data.gouv.fr/fr/datasets/r/f04605b8-4c02-4496-8a26-2bc02b17f739"
 
 ["data/01_raw/elections/2024-legislatives-2-circonscription.csv"]
@@ -540,7 +540,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/52/32b0951ce8ca92573ea3b35d5d62a0"
-s3_url = "cache/files/md5/52/32b0951ce8ca92573ea3b35d5d62a0"
+s3_url = "s3://hexagonal-data/cache/files/md5/52/32b0951ce8ca92573ea3b35d5d62a0"
 source_url = "https://www.data.gouv.fr/fr/datasets/r/41ed46cd-77c2-4ecc-b8eb-374aa953ca39"
 
 ["data/01_raw/elections/2024-legislatives-nfp-sensibilites.csv"]
@@ -556,7 +556,7 @@ l'accord.
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/51/564d56f7bea8c6fc1abf14f540a073"
-s3_url = "cache/files/md5/51/564d56f7bea8c6fc1abf14f540a073"
+s3_url = "s3://hexagonal-data/cache/files/md5/51/564d56f7bea8c6fc1abf14f540a073"
 editeur = "La France insoumise"
 
 ["data/01_raw/elections/2024-legislatives-nuances-lfi.csv"]
@@ -568,7 +568,7 @@ qu'autorisait le nuançage retenu par le Ministère de l'intérieur.
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/24/a9e931e2d43373ecddd42a2434eba6"
-s3_url = "cache/files/md5/24/a9e931e2d43373ecddd42a2434eba6"
+s3_url = "s3://hexagonal-data/cache/files/md5/24/a9e931e2d43373ecddd42a2434eba6"
 editeur = "La France insoumise"
 
 ["data/01_raw/population-municipale.xlsx"]
@@ -585,7 +585,7 @@ Ce tableau indique :
 """
 format = "xlsx"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/80/00453dd82685619c7f5b405222449c"
-s3_url = "cache/files/md5/80/00453dd82685619c7f5b405222449c"
+s3_url = "s3://hexagonal-data/cache/files/md5/80/00453dd82685619c7f5b405222449c"
 source_url = "https://www.insee.fr/fr/statistiques/fichier/3698339/base-pop-historiques-1876-2021.xlsx"
 editeur = "INSEE"
 date = "2023-12-28"
@@ -597,7 +597,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/bd/d0e9cc134bd9c122bff812a72620af"
-s3_url = "cache/files/md5/bd/d0e9cc134bd9c122bff812a72620af"
+s3_url = "s3://hexagonal-data/cache/files/md5/bd/d0e9cc134bd9c122bff812a72620af"
 source_url = "https://www.data.gouv.fr/fr/datasets/r/3b6b2281-b9d9-4959-ae9d-c2c166dff118"
 
 ["data/01_raw/rne/conseillers_csp.csv"]
@@ -607,7 +607,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/76/50260d596109c66acbd2e83423c5f1"
-s3_url = "cache/files/md5/76/50260d596109c66acbd2e83423c5f1"
+s3_url = "s3://hexagonal-data/cache/files/md5/76/50260d596109c66acbd2e83423c5f1"
 source_url = "https://static.data.gouv.fr/resources/repertoire-national-des-elus-1/20241031-095248/elus-membres-assemblee-ma.csv"
 
 ["data/01_raw/rne/conseillers_departementaux.csv"]
@@ -617,7 +617,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/d0/8158a4f34f09a515333778d34a6e45"
-s3_url = "cache/files/md5/d0/8158a4f34f09a515333778d34a6e45"
+s3_url = "s3://hexagonal-data/cache/files/md5/d0/8158a4f34f09a515333778d34a6e45"
 source_url = "https://www.data.gouv.fr/fr/datasets/r/601ef073-d986-4582-8e1a-ed14dc857fba"
 
 ["data/01_raw/rne/conseillers_epci.csv"]
@@ -627,7 +627,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/e4/ffddb7d7d7504d13e80ccbbb2a0b1b"
-s3_url = "cache/files/md5/e4/ffddb7d7d7504d13e80ccbbb2a0b1b"
+s3_url = "s3://hexagonal-data/cache/files/md5/e4/ffddb7d7d7504d13e80ccbbb2a0b1b"
 source_url = "https://www.data.gouv.fr/fr/datasets/r/41d95d7d-b172-4636-ac44-32656367cdc7"
 
 ["data/01_raw/rne/conseillers_municipaux.csv"]
@@ -644,7 +644,7 @@ Ce fichier comporte la liste des conseillers municipaux.
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/ba/04a3782f9cbb41b4487a0a6c048873"
-s3_url = "cache/files/md5/ba/04a3782f9cbb41b4487a0a6c048873"
+s3_url = "s3://hexagonal-data/cache/files/md5/ba/04a3782f9cbb41b4487a0a6c048873"
 source_url = "https://www.data.gouv.fr/fr/datasets/r/d5f400de-ae3f-4966-8cb6-a85c70c6c24a"
 info_url = "https://www.data.gouv.fr/fr/datasets/repertoire-national-des-elus-1/"
 
@@ -655,7 +655,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/14/fa5e59eee9f3095a38596459a5c149"
-s3_url = "cache/files/md5/14/fa5e59eee9f3095a38596459a5c149"
+s3_url = "s3://hexagonal-data/cache/files/md5/14/fa5e59eee9f3095a38596459a5c149"
 source_url = "https://www.data.gouv.fr/fr/datasets/r/430e13f9-834b-4411-a1a8-da0b4b6e715c"
 
 ["data/02_clean/annuaire/conseils_departementaux.csv"]
@@ -665,7 +665,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/53/09c03e311afead3d83056b4b8688f5"
-s3_url = "cache/files/md5/53/09c03e311afead3d83056b4b8688f5"
+s3_url = "s3://hexagonal-data/cache/files/md5/53/09c03e311afead3d83056b4b8688f5"
 deps = [
     "data/01_raw/annuaire/mairies.json",
     "data/01_raw/annuaire/conseils_departementaux.json",
@@ -758,7 +758,7 @@ française.
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/b8/6ed082ddc5e2897e5fefc593380e34"
-s3_url = "cache/files/md5/b8/6ed082ddc5e2897e5fefc593380e34"
+s3_url = "s3://hexagonal-data/cache/files/md5/b8/6ed082ddc5e2897e5fefc593380e34"
 deps = [
     "data/01_raw/annuaire/mairies.json",
     "data/01_raw/annuaire/conseils_departementaux.json",
@@ -853,7 +853,7 @@ XIème législature.
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/6f/f8030680e92e49af80135ef63208e5"
-s3_url = "cache/files/md5/6f/f8030680e92e49af80135ef63208e5"
+s3_url = "s3://hexagonal-data/cache/files/md5/6f/f8030680e92e49af80135ef63208e5"
 deps = ["data/01_raw/assemblee-nationale.zip"]
 
 ["data/02_clean/assemblee_nationale/affiliations.csv".colonnes.id_personne]
@@ -915,7 +915,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/71/e5e846805211992d03976a5dcd2af2"
-s3_url = "cache/files/md5/71/e5e846805211992d03976a5dcd2af2"
+s3_url = "s3://hexagonal-data/cache/files/md5/71/e5e846805211992d03976a5dcd2af2"
 deps = ["data/01_raw/assemblee-nationale.zip"]
 
 ["data/02_clean/assemblee_nationale/deputes.csv".colonnes.id_personne]
@@ -996,7 +996,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/3c/3b5cdbb812161dee7ae3a72b59b05f"
-s3_url = "cache/files/md5/3c/3b5cdbb812161dee7ae3a72b59b05f"
+s3_url = "s3://hexagonal-data/cache/files/md5/3c/3b5cdbb812161dee7ae3a72b59b05f"
 deps = ["data/01_raw/assemblee-nationale.zip"]
 
 ["data/02_clean/assemblee_nationale/groupes.csv".colonnes.id_groupe]
@@ -1072,7 +1072,7 @@ par deux mandats différents.
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/fe/9e69d85766d7ba0dfb3af30d46358b"
-s3_url = "cache/files/md5/fe/9e69d85766d7ba0dfb3af30d46358b"
+s3_url = "s3://hexagonal-data/cache/files/md5/fe/9e69d85766d7ba0dfb3af30d46358b"
 deps = ["data/01_raw/assemblee-nationale.zip"]
 
 ["data/02_clean/assemblee_nationale/mandats.csv".colonnes.id_mandat]
@@ -1166,7 +1166,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/eb/6adcfa64aec45b1de8aa99714ba201"
-s3_url = "cache/files/md5/eb/6adcfa64aec45b1de8aa99714ba201"
+s3_url = "s3://hexagonal-data/cache/files/md5/eb/6adcfa64aec45b1de8aa99714ba201"
 deps = ["data/01_raw/cog.zip"]
 
 ["data/02_clean/cog/com.csv".colonnes.code_departement]
@@ -1206,7 +1206,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/00/a2dc59d3571339c3c6fffbc5ec881d"
-s3_url = "cache/files/md5/00/a2dc59d3571339c3c6fffbc5ec881d"
+s3_url = "s3://hexagonal-data/cache/files/md5/00/a2dc59d3571339c3c6fffbc5ec881d"
 deps = ["data/01_raw/cog.zip"]
 
 ["data/02_clean/cog/communes.csv".colonnes.code_commune]
@@ -1290,7 +1290,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/c7/ff14be8f5a8d3737c343146cd27a27"
-s3_url = "cache/files/md5/c7/ff14be8f5a8d3737c343146cd27a27"
+s3_url = "s3://hexagonal-data/cache/files/md5/c7/ff14be8f5a8d3737c343146cd27a27"
 deps = ["data/01_raw/cog.zip"]
 
 ["data/02_clean/cog/communes_com.csv".colonnes.code_commune]
@@ -1342,7 +1342,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/2b/61bf920c2ecae8c56bf84a2cdfefca"
-s3_url = "cache/files/md5/2b/61bf920c2ecae8c56bf84a2cdfefca"
+s3_url = "s3://hexagonal-data/cache/files/md5/2b/61bf920c2ecae8c56bf84a2cdfefca"
 deps = ["data/01_raw/cog.zip"]
 
 ["data/02_clean/cog/communes_historiques.csv".colonnes.code_commune]
@@ -1394,7 +1394,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/ac/09c997f36bf573bcd937ba62cc3768"
-s3_url = "cache/files/md5/ac/09c997f36bf573bcd937ba62cc3768"
+s3_url = "s3://hexagonal-data/cache/files/md5/ac/09c997f36bf573bcd937ba62cc3768"
 deps = ["data/01_raw/cog.zip"]
 
 ["data/02_clean/cog/departements.csv".colonnes.code_departement]
@@ -1439,7 +1439,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/dd/1602eeb3aef940be98b633715f98c0"
-s3_url = "cache/files/md5/dd/1602eeb3aef940be98b633715f98c0"
+s3_url = "s3://hexagonal-data/cache/files/md5/dd/1602eeb3aef940be98b633715f98c0"
 deps = ["data/01_raw/elections/2012-presidentielle-bureau_de_vote.csv"]
 
 ["data/02_clean/elections/2012-presidentielle-bureau_de_vote.csv".colonnes.bureau_de_vote]
@@ -1526,7 +1526,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/86/a735fc59b31007870567dceaa7fc80"
-s3_url = "cache/files/md5/86/a735fc59b31007870567dceaa7fc80"
+s3_url = "s3://hexagonal-data/cache/files/md5/86/a735fc59b31007870567dceaa7fc80"
 deps = ["data/01_raw/elections/2014-europeenne-bureau_de_vote.csv"]
 
 ["data/02_clean/elections/2014-europeenne-bureau_de_vote.csv".colonnes.bureau_de_vote]
@@ -1601,7 +1601,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/d5/c03e199a19ce3fae248e724c51015c"
-s3_url = "cache/files/md5/d5/c03e199a19ce3fae248e724c51015c"
+s3_url = "s3://hexagonal-data/cache/files/md5/d5/c03e199a19ce3fae248e724c51015c"
 deps = ["data/01_raw/elections/2017-legislatives-1-bureau_de_vote.csv"]
 
 ["data/02_clean/elections/2017-legislatives-1-bureau_de_vote.csv".colonnes.bureau_de_vote]
@@ -1682,7 +1682,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/62/41616b484fc40fc433485de522348e"
-s3_url = "cache/files/md5/62/41616b484fc40fc433485de522348e"
+s3_url = "s3://hexagonal-data/cache/files/md5/62/41616b484fc40fc433485de522348e"
 deps = ["data/01_raw/elections/2017-legislatives-2-bureau_de_vote.csv"]
 
 ["data/02_clean/elections/2017-legislatives-2-bureau_de_vote.csv".colonnes.bureau_de_vote]
@@ -1763,7 +1763,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/34/16fd57375d7f99c435b0dcb104dfcc"
-s3_url = "cache/files/md5/34/16fd57375d7f99c435b0dcb104dfcc"
+s3_url = "s3://hexagonal-data/cache/files/md5/34/16fd57375d7f99c435b0dcb104dfcc"
 deps = ["data/01_raw/elections/2017-presidentielle-1-bureau_de_vote.csv"]
 
 ["data/02_clean/elections/2017-presidentielle-1-bureau_de_vote.csv".colonnes.bureau_de_vote]
@@ -1838,7 +1838,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/77/a8f040c5aa96fd0eff112314a5b611"
-s3_url = "cache/files/md5/77/a8f040c5aa96fd0eff112314a5b611"
+s3_url = "s3://hexagonal-data/cache/files/md5/77/a8f040c5aa96fd0eff112314a5b611"
 deps = ["data/01_raw/elections/2017-presidentielle-2-bureau_de_vote.csv"]
 
 ["data/02_clean/elections/2017-presidentielle-2-bureau_de_vote.csv".colonnes.bureau_de_vote]
@@ -1913,7 +1913,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/de/7bd1fc201314a1c62b74d026e960e3"
-s3_url = "cache/files/md5/de/7bd1fc201314a1c62b74d026e960e3"
+s3_url = "s3://hexagonal-data/cache/files/md5/de/7bd1fc201314a1c62b74d026e960e3"
 deps = ["data/01_raw/elections/2019-europeenne-bureau_de_vote.csv"]
 
 ["data/02_clean/elections/2019-europeenne-bureau_de_vote.csv".colonnes.bureau_de_vote]
@@ -1976,7 +1976,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/90/c03f20ba4e73fd7f5df4ca7fab2fa9"
-s3_url = "cache/files/md5/90/c03f20ba4e73fd7f5df4ca7fab2fa9"
+s3_url = "s3://hexagonal-data/cache/files/md5/90/c03f20ba4e73fd7f5df4ca7fab2fa9"
 deps = ["data/01_raw/elections/2020-municipales-1-bureau_de_vote.csv"]
 
 ["data/02_clean/elections/2020-municipales-1-bureau_de_vote.csv".colonnes.bureau_de_vote]
@@ -2057,7 +2057,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/73/fec91deb9763538a41cfd4f09c1c61"
-s3_url = "cache/files/md5/73/fec91deb9763538a41cfd4f09c1c61"
+s3_url = "s3://hexagonal-data/cache/files/md5/73/fec91deb9763538a41cfd4f09c1c61"
 deps = ["data/01_raw/elections/2020-municipales-2-bureau_de_vote.csv"]
 
 ["data/02_clean/elections/2020-municipales-2-bureau_de_vote.csv".colonnes.bureau_de_vote]
@@ -2138,7 +2138,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/00/8adcda97cc2def4029909c41ff91ce"
-s3_url = "cache/files/md5/00/8adcda97cc2def4029909c41ff91ce"
+s3_url = "s3://hexagonal-data/cache/files/md5/00/8adcda97cc2def4029909c41ff91ce"
 deps = ["data/01_raw/elections/2021-departementales-1-bureau_de_vote.csv"]
 
 ["data/02_clean/elections/2021-departementales-1-bureau_de_vote.csv".colonnes.bureau_de_vote]
@@ -2195,7 +2195,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/c9/ceef10e419a0c0cda2fcb5a1203a9f"
-s3_url = "cache/files/md5/c9/ceef10e419a0c0cda2fcb5a1203a9f"
+s3_url = "s3://hexagonal-data/cache/files/md5/c9/ceef10e419a0c0cda2fcb5a1203a9f"
 deps = ["data/01_raw/elections/2021-departementales-2-bureau_de_vote.csv"]
 
 ["data/02_clean/elections/2021-departementales-2-bureau_de_vote.csv".colonnes.bureau_de_vote]
@@ -2252,7 +2252,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/f6/abf9e73855205186c075c143261ad8"
-s3_url = "cache/files/md5/f6/abf9e73855205186c075c143261ad8"
+s3_url = "s3://hexagonal-data/cache/files/md5/f6/abf9e73855205186c075c143261ad8"
 deps = ["data/01_raw/elections/2021-regionales-1-bureau_de_vote.csv"]
 
 ["data/02_clean/elections/2021-regionales-1-bureau_de_vote.csv".colonnes.bureau_de_vote]
@@ -2321,7 +2321,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/a9/ce190eac00088f2d08512d368dfe8a"
-s3_url = "cache/files/md5/a9/ce190eac00088f2d08512d368dfe8a"
+s3_url = "s3://hexagonal-data/cache/files/md5/a9/ce190eac00088f2d08512d368dfe8a"
 deps = ["data/01_raw/elections/2021-regionales-2-bureau_de_vote.csv"]
 
 ["data/02_clean/elections/2021-regionales-2-bureau_de_vote.csv".colonnes.bureau_de_vote]
@@ -2390,7 +2390,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/f3/4b36691d23b2f1d4644a0d80fa2870"
-s3_url = "cache/files/md5/f3/4b36691d23b2f1d4644a0d80fa2870"
+s3_url = "s3://hexagonal-data/cache/files/md5/f3/4b36691d23b2f1d4644a0d80fa2870"
 deps = ["data/01_raw/elections/2022-legislatives-1-bureau_de_vote.csv"]
 
 ["data/02_clean/elections/2022-legislatives-1-bureau_de_vote.csv".colonnes.bureau_de_vote]
@@ -2471,7 +2471,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/88/9400dc852d825436e365d6d2d2f025"
-s3_url = "cache/files/md5/88/9400dc852d825436e365d6d2d2f025"
+s3_url = "s3://hexagonal-data/cache/files/md5/88/9400dc852d825436e365d6d2d2f025"
 deps = [
     "data/01_raw/elections/2022-legislatives-1-candidats.csv",
     "data/01_raw/elections/2022-legislatives-nuances-lemonde.csv",
@@ -2610,7 +2610,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/8f/ee40705cb4d868b49095ad8b269abd"
-s3_url = "cache/files/md5/8f/ee40705cb4d868b49095ad8b269abd"
+s3_url = "s3://hexagonal-data/cache/files/md5/8f/ee40705cb4d868b49095ad8b269abd"
 deps = ["data/01_raw/elections/2022-legislatives-1-circonscription.csv"]
 
 ["data/02_clean/elections/2022-legislatives-1-circonscription.csv".colonnes.circonscription]
@@ -2685,7 +2685,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/5c/1a2bc94cdcd65377fd0eab32bc62d1"
-s3_url = "cache/files/md5/5c/1a2bc94cdcd65377fd0eab32bc62d1"
+s3_url = "s3://hexagonal-data/cache/files/md5/5c/1a2bc94cdcd65377fd0eab32bc62d1"
 deps = ["data/01_raw/elections/2022-legislatives-2-bureau_de_vote.csv"]
 
 ["data/02_clean/elections/2022-legislatives-2-bureau_de_vote.csv".colonnes.bureau_de_vote]
@@ -2766,7 +2766,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/dd/9c912a3b89e7bb3d5214f747b9e02d"
-s3_url = "cache/files/md5/dd/9c912a3b89e7bb3d5214f747b9e02d"
+s3_url = "s3://hexagonal-data/cache/files/md5/dd/9c912a3b89e7bb3d5214f747b9e02d"
 deps = [
     "data/01_raw/elections/2022-legislatives-2-candidats.csv",
     "data/01_raw/elections/2022-legislatives-nuances-lemonde.csv",
@@ -2905,7 +2905,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/c8/7a80ab75c40d53824137394a34ddb2"
-s3_url = "cache/files/md5/c8/7a80ab75c40d53824137394a34ddb2"
+s3_url = "s3://hexagonal-data/cache/files/md5/c8/7a80ab75c40d53824137394a34ddb2"
 deps = ["data/01_raw/elections/2022-legislatives-2-circonscription.csv"]
 
 ["data/02_clean/elections/2022-legislatives-2-circonscription.csv".colonnes.circonscription]
@@ -2980,7 +2980,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/14/dfa90d1a3b3099cb01817dabc28228"
-s3_url = "cache/files/md5/14/dfa90d1a3b3099cb01817dabc28228"
+s3_url = "s3://hexagonal-data/cache/files/md5/14/dfa90d1a3b3099cb01817dabc28228"
 deps = ["data/01_raw/elections/2022-presidentielle-1-bureau_de_vote.csv"]
 
 ["data/02_clean/elections/2022-presidentielle-1-bureau_de_vote.csv".colonnes.bureau_de_vote]
@@ -3055,7 +3055,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/89/56622be06f89a7ae975a292aad6a16"
-s3_url = "cache/files/md5/89/56622be06f89a7ae975a292aad6a16"
+s3_url = "s3://hexagonal-data/cache/files/md5/89/56622be06f89a7ae975a292aad6a16"
 deps = ["data/01_raw/elections/2022-presidentielle-1-circonscription.csv"]
 
 ["data/02_clean/elections/2022-presidentielle-1-circonscription.csv".colonnes.circonscription]
@@ -3124,7 +3124,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/67/2d58404e5c7fd088c0a172e089ba34"
-s3_url = "cache/files/md5/67/2d58404e5c7fd088c0a172e089ba34"
+s3_url = "s3://hexagonal-data/cache/files/md5/67/2d58404e5c7fd088c0a172e089ba34"
 deps = ["data/01_raw/elections/2022-presidentielle-2-bureau_de_vote.csv"]
 
 ["data/02_clean/elections/2022-presidentielle-2-bureau_de_vote.csv".colonnes.bureau_de_vote]
@@ -3199,7 +3199,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/c3/763d2f15d06df46858af5d74ebd310"
-s3_url = "cache/files/md5/c3/763d2f15d06df46858af5d74ebd310"
+s3_url = "s3://hexagonal-data/cache/files/md5/c3/763d2f15d06df46858af5d74ebd310"
 deps = ["data/01_raw/elections/2022-presidentielle-2-circonscription.csv"]
 
 ["data/02_clean/elections/2022-presidentielle-2-circonscription.csv".colonnes.circonscription]
@@ -3268,7 +3268,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/c4/b7e16894b409e0c810750c4967afec"
-s3_url = "cache/files/md5/c4/b7e16894b409e0c810750c4967afec"
+s3_url = "s3://hexagonal-data/cache/files/md5/c4/b7e16894b409e0c810750c4967afec"
 deps = ["data/01_raw/elections/2022-presidentielle-parrainages.csv"]
 
 ["data/02_clean/elections/2022-presidentielle-parrainages.csv".colonnes.mandat]
@@ -3331,7 +3331,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/a8/8ff891a256710c3facdb42fa931630"
-s3_url = "cache/files/md5/a8/8ff891a256710c3facdb42fa931630"
+s3_url = "s3://hexagonal-data/cache/files/md5/a8/8ff891a256710c3facdb42fa931630"
 deps = ["data/01_raw/elections/2024-europeenne-bureau_de_vote.csv"]
 
 ["data/02_clean/elections/2024-europeenne-bureau_de_vote.csv".colonnes.bureau_de_vote]
@@ -3400,7 +3400,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/0e/85b5bd51c38919008d4a92f0155a61"
-s3_url = "cache/files/md5/0e/85b5bd51c38919008d4a92f0155a61"
+s3_url = "s3://hexagonal-data/cache/files/md5/0e/85b5bd51c38919008d4a92f0155a61"
 deps = ["data/01_raw/elections/2024-europeenne-circonscription.csv"]
 
 ["data/02_clean/elections/2024-europeenne-circonscription.csv".colonnes.circonscription]
@@ -3469,7 +3469,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/e8/4ceea11f11d2ca3064189a5d719a90"
-s3_url = "cache/files/md5/e8/4ceea11f11d2ca3064189a5d719a90"
+s3_url = "s3://hexagonal-data/cache/files/md5/e8/4ceea11f11d2ca3064189a5d719a90"
 deps = ["data/01_raw/elections/2024-legislatives-1-bureau_de_vote.csv"]
 
 ["data/02_clean/elections/2024-legislatives-1-bureau_de_vote.csv".colonnes.bureau_de_vote]
@@ -3544,7 +3544,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/ad/8eaee9ac50795b6bfd3e6edea36336"
-s3_url = "cache/files/md5/ad/8eaee9ac50795b6bfd3e6edea36336"
+s3_url = "s3://hexagonal-data/cache/files/md5/ad/8eaee9ac50795b6bfd3e6edea36336"
 deps = [
     "data/01_raw/elections/2024-legislatives-1-candidats.csv",
     "data/01_raw/elections/2024-legislatives-nfp-sensibilites.csv",
@@ -3665,7 +3665,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/da/7b4a29378ec8de4691fee6ade31ef3"
-s3_url = "cache/files/md5/da/7b4a29378ec8de4691fee6ade31ef3"
+s3_url = "s3://hexagonal-data/cache/files/md5/da/7b4a29378ec8de4691fee6ade31ef3"
 deps = ["data/01_raw/elections/2024-legislatives-1-circonscription.csv"]
 
 ["data/02_clean/elections/2024-legislatives-1-circonscription.csv".colonnes.circonscription]
@@ -3740,7 +3740,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/0d/775128e516a561291b20e900c6377b"
-s3_url = "cache/files/md5/0d/775128e516a561291b20e900c6377b"
+s3_url = "s3://hexagonal-data/cache/files/md5/0d/775128e516a561291b20e900c6377b"
 deps = ["data/01_raw/elections/2024-legislatives-2-bureau_de_vote.csv"]
 
 ["data/02_clean/elections/2024-legislatives-2-bureau_de_vote.csv".colonnes.bureau_de_vote]
@@ -3815,7 +3815,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/5d/c7dc1b36ed7e4f15bf4dd8b2ed27d2"
-s3_url = "cache/files/md5/5d/c7dc1b36ed7e4f15bf4dd8b2ed27d2"
+s3_url = "s3://hexagonal-data/cache/files/md5/5d/c7dc1b36ed7e4f15bf4dd8b2ed27d2"
 deps = [
     "data/01_raw/elections/2024-legislatives-2-candidats.csv",
     "data/01_raw/elections/2024-legislatives-nfp-sensibilites.csv",
@@ -3936,7 +3936,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/c6/cdb9206fcf5986baae64bb036ac19b"
-s3_url = "cache/files/md5/c6/cdb9206fcf5986baae64bb036ac19b"
+s3_url = "s3://hexagonal-data/cache/files/md5/c6/cdb9206fcf5986baae64bb036ac19b"
 deps = ["data/01_raw/elections/2024-legislatives-2-circonscription.csv"]
 
 ["data/02_clean/elections/2024-legislatives-2-circonscription.csv".colonnes.circonscription]
@@ -4008,7 +4008,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/67/26f0c1acf391480bce453c8911e82b"
-s3_url = "cache/files/md5/67/26f0c1acf391480bce453c8911e82b"
+s3_url = "s3://hexagonal-data/cache/files/md5/67/26f0c1acf391480bce453c8911e82b"
 deps = [
     "data/02_clean/elections/2024-legislatives-1-bureau_de_vote.csv",
     "data/02_clean/elections/2024-legislatives-1-candidats.csv",
@@ -4036,7 +4036,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/f7/7731f0195164866a3cd370b21dc58c"
-s3_url = "cache/files/md5/f7/7731f0195164866a3cd370b21dc58c"
+s3_url = "s3://hexagonal-data/cache/files/md5/f7/7731f0195164866a3cd370b21dc58c"
 deps = ["data/01_raw/rne/conseillers_arrondissement.csv"]
 
 ["data/02_clean/rne/conseillers_arrondissement.csv".colonnes.code_commune]
@@ -4119,7 +4119,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/8e/673f7e70a13fab98d760bae1bec662"
-s3_url = "cache/files/md5/8e/673f7e70a13fab98d760bae1bec662"
+s3_url = "s3://hexagonal-data/cache/files/md5/8e/673f7e70a13fab98d760bae1bec662"
 deps = ["data/01_raw/rne/conseillers_csp.csv"]
 
 ["data/02_clean/rne/conseillers_csp.csv".colonnes.type_csp]
@@ -4195,7 +4195,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/97/f614566d1df5966b4e31ef28bc4103"
-s3_url = "cache/files/md5/97/f614566d1df5966b4e31ef28bc4103"
+s3_url = "s3://hexagonal-data/cache/files/md5/97/f614566d1df5966b4e31ef28bc4103"
 deps = ["data/01_raw/rne/conseillers_departementaux.csv"]
 
 ["data/02_clean/rne/conseillers_departementaux.csv".colonnes.code_departement]
@@ -4265,7 +4265,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/a5/ec3670f065e61ed75e0c2c987795e3"
-s3_url = "cache/files/md5/a5/ec3670f065e61ed75e0c2c987795e3"
+s3_url = "s3://hexagonal-data/cache/files/md5/a5/ec3670f065e61ed75e0c2c987795e3"
 deps = ["data/01_raw/rne/conseillers_municipaux.csv"]
 
 ["data/02_clean/rne/conseillers_municipaux.csv".colonnes.code_departement]
@@ -4348,7 +4348,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/0d/bc7593a8b8ea36bb392873f7d2b675"
-s3_url = "cache/files/md5/0d/bc7593a8b8ea36bb392873f7d2b675"
+s3_url = "s3://hexagonal-data/cache/files/md5/0d/bc7593a8b8ea36bb392873f7d2b675"
 deps = ["data/01_raw/rne/conseillers_regionaux.csv"]
 
 ["data/02_clean/rne/conseillers_regionaux.csv".colonnes.code_region]
@@ -4418,7 +4418,7 @@ description = """
 """
 format = "csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/a2/0d751b4254ca57aef3dc426c1e328a"
-s3_url = "cache/files/md5/a2/0d751b4254ca57aef3dc426c1e328a"
+s3_url = "s3://hexagonal-data/cache/files/md5/a2/0d751b4254ca57aef3dc426c1e328a"
 deps = [
     "data/02_clean/elections/2022-presidentielle-parrainages.csv",
     "data/02_clean/cog/departements.csv",
