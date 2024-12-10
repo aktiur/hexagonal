@@ -6,13 +6,16 @@ from urllib.parse import urljoin
 from dvc.api import DVCFileSystem
 from dvc.stage import Stage
 
-from hexagonal.files import ROOT_DIR, DATA_DIR, SRC_DIR, CONFIG
-
+from hexagonal.files import ROOT_DIR, DATA_DIR, CONFIG
+from hexagonal.files.spec import DatasetType, Dataset
 
 URL_PREFIX = "cache/files/md5"
 
-DEFAULT_TYPES = {"01_raw": "source", "02_clean": "clean", "03_main": "main"}
-OUTPUT_TYPES = ["clean", "main"]
+DEFAULT_TYPES = {
+    "01_raw": DatasetType.SOURCE,
+    "02_clean": DatasetType.CLEAN,
+    "03_main": DatasetType.MAIN,
+}
 
 
 @dataclass(order=True, frozen=True)

@@ -2,7 +2,8 @@ import csv
 
 import tomlkit
 
-from hexagonal.files.dvc_files import get_dvc_files, OUTPUT_TYPES
+from hexagonal.files.dvc_files import get_dvc_files
+from hexagonal.files.spec import PRODUCTION_TYPES
 
 FIELDS_ORDER = [
     "nom",
@@ -57,7 +58,7 @@ def update_spec():
             **overwrites,
         }
 
-        if values["format"] == "csv" and values["type"] in OUTPUT_TYPES:
+        if values["format"] == "csv" and values["type"] in PRODUCTION_TYPES:
             try:
                 with open(file.path, "r", newline="") as fd:
                     r = csv.reader(fd)
