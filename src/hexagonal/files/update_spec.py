@@ -1,15 +1,18 @@
 import csv
+import tomllib
+from mimetypes import guess_type
 
-import tomlkit
+import tomli_w
 
 from hexagonal.files.dvc_files import get_dvc_files
-from hexagonal.files.spec import PRODUCTION_TYPES
+from hexagonal.files.spec import PRODUCTION_TYPES, SPEC, ColonneType
 
 FIELDS_ORDER = [
     "nom",
     "type",
     "description",
-    "format",
+    "mimetype",
+    "encoding",
     "url",
     "s3_url",
     "source_url",
@@ -20,21 +23,19 @@ FIELDS_ORDER = [
 
 
 def update_spec():
+    new_spec = {}
 
-    with open("spec.toml") as fd:
-        orig_doc = tomlkit.load(fd)
-
-    new_doc = tomlkit.table()
+    with open("spec.toml", "rb") as fd:
+        old_spec = tomllib.load(fd)
 
     data_files = sorted(get_dvc_files())
 
-    for file in sorted(data_files):
-        orig_table = orig_doc.get(str(file), {})
+    for file in data_files:
+        orig_spec = old_spec.get(str(file.path), {})
 
         defaults = {
             "nom": file.path.stem,
-            "description": tomlkit.string("\n", multiline=True),
-            "format": file.default_format,
+            "description": "\n",
             "type": file.default_type,
         }
 
@@ -42,23 +43,15 @@ def update_spec():
             "url": file.http_url,
             "s3_url": file.s3_url,
         }
+        mimetype, encoding = guess_type(file.path)
+        if mimetype:
+            overwrites["mimetype"] = mimetype
+        if encoding:
+            overwrites["encoding"] = encoding
 
-        data_deps = tomlkit.array()
-        data_deps.extend(str(p) for p in file.data_deps)
-        if data_deps:
-            overwrites["deps"] = data_deps.multiline(len(data_deps) > 1)
+        file_spec = {**defaults, **orig_spec, **overwrites}
 
-        if file.source_url:
-            overwrites["source_url"] = file.source_url
-
-        # l'ordre est essentiel
-        values = {
-            **defaults,
-            **orig_table,
-            **overwrites,
-        }
-
-        if values["format"] == "csv" and values["type"] in PRODUCTION_TYPES:
+        if file_spec["format"] == "csv" and file_spec["type"] in PRODUCTION_TYPES:
             try:
                 with open(file.path, "r", newline="") as fd:
                     r = csv.reader(fd)
@@ -66,37 +59,30 @@ def update_spec():
             except (csv.Error, UnicodeDecodeError):
                 pass
             else:
-                original_colonnes = orig_table.get("colonnes", {})
-                colonnes_table = tomlkit.table()
+                original_colonnes = file_spec.get("colonnes", {})
+                colonnes_table = {}
                 for colonne in colonnes:
-                    colonnes_table[colonne] = original_colonnes.get(
-                        colonne, tomlkit.table()
-                    )
+                    colonnes_table[colonne] = original_colonnes.get(colonne, {})
 
                     colonnes_defaults = {
                         "nom": colonne,
-                        "description": tomlkit.string("\n", multiline=True),
-                        "type": "str",
+                        "description": "",
+                        "type": ColonneType.STR,
                     }
 
                     for k, v in colonnes_defaults.items():
                         colonnes_table[colonne].setdefault(k, v)
 
-                values["colonnes"] = colonnes_table
+                file_spec["colonnes"] = colonnes_table
 
         fields = [
-            *[f for f in FIELDS_ORDER if f in values],
-            *[f for f in values if f not in FIELDS_ORDER],
+            *[f for f in FIELDS_ORDER if f in file_spec],
+            *[f for f in file_spec if f not in FIELDS_ORDER],
         ]
+        new_spec[str(file.path)] = {f: file_spec[f] for f in fields}
 
-        table = tomlkit.table()
-        table.update(
-            {**{f: None for f in fields}, **values}  # pour les champs dans l'ordre
-        )
-        new_doc[str(file)] = table
-
-    with open("spec.toml", "w") as fd:
-        tomlkit.dump(new_doc, fd)
+    with open("spec.toml", "wb") as fd:
+        tomli_w.dump(new_spec, fd, multiline_strings=True)
 
 
 if __name__ == "__main__":

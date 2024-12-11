@@ -3167,6 +3167,17 @@ files = [
 widechars = ["wcwidth"]
 
 [[package]]
+name = "tomli-w"
+version = "1.1.0"
+description = "A lil' TOML writer"
+optional = false
+python-versions = ">=3.9"
+files = [
+    {file = "tomli_w-1.1.0-py3-none-any.whl", hash = "sha256:1403179c78193e3184bfaade390ddbd071cba48a32a2e62ba11aae47490c63f7"},
+    {file = "tomli_w-1.1.0.tar.gz", hash = "sha256:49e847a3a304d516a169a601184932ef0f6b61623fe680f836a2aa7128ed0d33"},
+]
+
+[[package]]
 name = "tomlkit"
 version = "0.13.2"
 description = "Style preserving TOML library"
@@ -3492,4 +3503,4 @@ test = ["zope.testing"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "8afeaa42071ccbdfc0448d95b9194d54fe2217bf03aafa6e5a87216f2df6f815"
+content-hash = "dbc30bc86316130a0bc09ad47317434e26b69ffa282d7ebbae822dc2e94e79d5"
