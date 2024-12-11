@@ -39,19 +39,24 @@ def update_spec():
             "type": file.default_type,
         }
 
+        mimetype, encoding = guess_type(file.path)
+        if mimetype and encoding:
+            mimetype = f"{mimetype}+{encoding}"
+        elif encoding:
+            mimetype = f"application/x-{encoding}"
+
         overwrites = {
             "url": file.http_url,
             "s3_url": file.s3_url,
+            "mimetype": mimetype or "",
         }
-        mimetype, encoding = guess_type(file.path)
-        if mimetype:
-            overwrites["mimetype"] = mimetype
-        if encoding:
-            overwrites["encoding"] = encoding
 
         file_spec = {**defaults, **orig_spec, **overwrites}
 
-        if file_spec["format"] == "csv" and file_spec["type"] in PRODUCTION_TYPES:
+        if (
+            file_spec["mimetype"] == "text/csv"
+            and file_spec["type"] in PRODUCTION_TYPES
+        ):
             try:
                 with open(file.path, "r", newline="") as fd:
                     r = csv.reader(fd)

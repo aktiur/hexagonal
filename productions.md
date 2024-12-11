@@ -6,7 +6,7 @@
 | Propriété | Valeur |
 | --------- | ------ |
 | Chemin interne | `data/02_clean/annuaire/conseils_departementaux.csv` |
-| Format de fichier | csv |
+| Format de fichier | text/csv |
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/53/09c03e311afead3d83056b4b8688f5> |
 
 
@@ -116,7 +116,7 @@ Cette production dépend des sources suivantes :
 | Propriété | Valeur |
 | --------- | ------ |
 | Chemin interne | `data/02_clean/annuaire/mairies.csv` |
-| Format de fichier | csv |
+| Format de fichier | text/csv |
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/b8/6ed082ddc5e2897e5fefc593380e34> |
 
 Ce jeu de données extraits de l&#39;annuaire administratif comporte une entrée pour chaque mairie
@@ -230,7 +230,7 @@ Cette production dépend des sources suivantes :
 | Propriété | Valeur |
 | --------- | ------ |
 | Chemin interne | `data/02_clean/assemblee_nationale/affiliations.csv` |
-| Format de fichier | csv |
+| Format de fichier | text/csv |
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/6f/f8030680e92e49af80135ef63208e5> |
 
 Ce fichier comporte une ligne pour chaque affiliation d&#39;un député à un groupe parlementaire, à partir de la
@@ -316,7 +316,7 @@ Cette production dépend des sources suivantes :
 | Propriété | Valeur |
 | --------- | ------ |
 | Chemin interne | `data/02_clean/assemblee_nationale/deputes.csv` |
-| Format de fichier | csv |
+| Format de fichier | text/csv |
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/71/e5e846805211992d03976a5dcd2af2> |
 
 
@@ -414,7 +414,7 @@ Cette production dépend des sources suivantes :
 | Propriété | Valeur |
 | --------- | ------ |
 | Chemin interne | `data/02_clean/assemblee_nationale/groupes.csv` |
-| Format de fichier | csv |
+| Format de fichier | text/csv |
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/3c/3b5cdbb812161dee7ae3a72b59b05f> |
 
 
@@ -500,7 +500,7 @@ Cette production dépend des sources suivantes :
 | Propriété | Valeur |
 | --------- | ------ |
 | Chemin interne | `data/02_clean/assemblee_nationale/mandats.csv` |
-| Format de fichier | csv |
+| Format de fichier | text/csv |
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/fe/9e69d85766d7ba0dfb3af30d46358b> |
 
 Ce fichier liste l&#39;ensemble des mandats de député·es depuis la 12ème législature.
@@ -618,7 +618,7 @@ Cette production dépend des sources suivantes :
 | Propriété | Valeur |
 | --------- | ------ |
 | Chemin interne | `data/02_clean/cog/com.csv` |
-| Format de fichier | csv |
+| Format de fichier | text/csv |
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/eb/6adcfa64aec45b1de8aa99714ba201> |
 
 
@@ -680,7 +680,7 @@ Cette production dépend des sources suivantes :
 | Propriété | Valeur |
 | --------- | ------ |
 | Chemin interne | `data/02_clean/cog/communes.csv` |
-| Format de fichier | csv |
+| Format de fichier | text/csv |
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/00/a2dc59d3571339c3c6fffbc5ec881d> |
 
 
@@ -784,7 +784,7 @@ Cette production dépend des sources suivantes :
 | Propriété | Valeur |
 | --------- | ------ |
 | Chemin interne | `data/02_clean/cog/communes_com.csv` |
-| Format de fichier | csv |
+| Format de fichier | text/csv |
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/c7/ff14be8f5a8d3737c343146cd27a27> |
 
 
@@ -858,7 +858,7 @@ Cette production dépend des sources suivantes :
 | Propriété | Valeur |
 | --------- | ------ |
 | Chemin interne | `data/02_clean/cog/communes_historiques.csv` |
-| Format de fichier | csv |
+| Format de fichier | text/csv |
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/2b/61bf920c2ecae8c56bf84a2cdfefca> |
 
 
@@ -932,7 +932,7 @@ Cette production dépend des sources suivantes :
 | Propriété | Valeur |
 | --------- | ------ |
 | Chemin interne | `data/02_clean/cog/departements.csv` |
-| Format de fichier | csv |
+| Format de fichier | text/csv |
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/ac/09c997f36bf573bcd937ba62cc3768> |
 
 
@@ -994,7 +994,7 @@ Cette production dépend des sources suivantes :
 | Propriété | Valeur |
 | --------- | ------ |
 | Chemin interne | `data/02_clean/elections/2012-presidentielle-bureau_de_vote.csv` |
-| Format de fichier | csv |
+| Format de fichier | text/csv |
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/dd/1602eeb3aef940be98b633715f98c0> |
 
 
@@ -1098,7 +1098,7 @@ Cette production dépend des sources suivantes :
 | Propriété | Valeur |
 | --------- | ------ |
 | Chemin interne | `data/02_clean/elections/2014-europeenne-bureau_de_vote.csv` |
-| Format de fichier | csv |
+| Format de fichier | text/csv |
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/86/a735fc59b31007870567dceaa7fc80> |
 
 
@@ -1190,7 +1190,7 @@ Cette production dépend des sources suivantes :
 | Propriété | Valeur |
 | --------- | ------ |
 | Chemin interne | `data/02_clean/elections/2017-legislatives-1-bureau_de_vote.csv` |
-| Format de fichier | csv |
+| Format de fichier | text/csv |
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/d5/c03e199a19ce3fae248e724c51015c> |
 
 
@@ -1288,7 +1288,7 @@ Cette production dépend des sources suivantes :
 | Propriété | Valeur |
 | --------- | ------ |
 | Chemin interne | `data/02_clean/elections/2017-legislatives-2-bureau_de_vote.csv` |
-| Format de fichier | csv |
+| Format de fichier | text/csv |
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/62/41616b484fc40fc433485de522348e> |
 
 
@@ -1386,7 +1386,7 @@ Cette production dépend des sources suivantes :
 | Propriété | Valeur |
 | --------- | ------ |
 | Chemin interne | `data/02_clean/elections/2017-presidentielle-1-bureau_de_vote.csv` |
-| Format de fichier | csv |
+| Format de fichier | text/csv |
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/34/16fd57375d7f99c435b0dcb104dfcc> |
 
 
@@ -1478,7 +1478,7 @@ Cette production dépend des sources suivantes :
 | Propriété | Valeur |
 | --------- | ------ |
 | Chemin interne | `data/02_clean/elections/2017-presidentielle-2-bureau_de_vote.csv` |
-| Format de fichier | csv |
+| Format de fichier | text/csv |
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/77/a8f040c5aa96fd0eff112314a5b611> |
 
 
@@ -1570,7 +1570,7 @@ Cette production dépend des sources suivantes :
 | Propriété | Valeur |
 | --------- | ------ |
 | Chemin interne | `data/02_clean/elections/2019-europeenne-bureau_de_vote.csv` |
-| Format de fichier | csv |
+| Format de fichier | text/csv |
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/de/7bd1fc201314a1c62b74d026e960e3> |
 
 
@@ -1650,7 +1650,7 @@ Cette production dépend des sources suivantes :
 | Propriété | Valeur |
 | --------- | ------ |
 | Chemin interne | `data/02_clean/elections/2020-municipales-1-bureau_de_vote.csv` |
-| Format de fichier | csv |
+| Format de fichier | text/csv |
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/90/c03f20ba4e73fd7f5df4ca7fab2fa9> |
 
 
@@ -1748,7 +1748,7 @@ Cette production dépend des sources suivantes :
 | Propriété | Valeur |
 | --------- | ------ |
 | Chemin interne | `data/02_clean/elections/2020-municipales-2-bureau_de_vote.csv` |
-| Format de fichier | csv |
+| Format de fichier | text/csv |
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/73/fec91deb9763538a41cfd4f09c1c61> |
 
 
@@ -1846,7 +1846,7 @@ Cette production dépend des sources suivantes :
 | Propriété | Valeur |
 | --------- | ------ |
 | Chemin interne | `data/02_clean/elections/2021-departementales-1-bureau_de_vote.csv` |
-| Format de fichier | csv |
+| Format de fichier | text/csv |
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/00/8adcda97cc2def4029909c41ff91ce> |
 
 
@@ -1920,7 +1920,7 @@ Cette production dépend des sources suivantes :
 | Propriété | Valeur |
 | --------- | ------ |
 | Chemin interne | `data/02_clean/elections/2021-departementales-2-bureau_de_vote.csv` |
-| Format de fichier | csv |
+| Format de fichier | text/csv |
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/c9/ceef10e419a0c0cda2fcb5a1203a9f> |
 
 
@@ -1994,7 +1994,7 @@ Cette production dépend des sources suivantes :
 | Propriété | Valeur |
 | --------- | ------ |
 | Chemin interne | `data/02_clean/elections/2021-regionales-1-bureau_de_vote.csv` |
-| Format de fichier | csv |
+| Format de fichier | text/csv |
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/f6/abf9e73855205186c075c143261ad8> |
 
 
@@ -2080,7 +2080,7 @@ Cette production dépend des sources suivantes :
 | Propriété | Valeur |
 | --------- | ------ |
 | Chemin interne | `data/02_clean/elections/2021-regionales-2-bureau_de_vote.csv` |
-| Format de fichier | csv |
+| Format de fichier | text/csv |
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/a9/ce190eac00088f2d08512d368dfe8a> |
 
 
@@ -2166,7 +2166,7 @@ Cette production dépend des sources suivantes :
 | Propriété | Valeur |
 | --------- | ------ |
 | Chemin interne | `data/02_clean/elections/2022-legislatives-1-bureau_de_vote.csv` |
-| Format de fichier | csv |
+| Format de fichier | text/csv |
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/f3/4b36691d23b2f1d4644a0d80fa2870> |
 
 
@@ -2264,7 +2264,7 @@ Cette production dépend des sources suivantes :
 | Propriété | Valeur |
 | --------- | ------ |
 | Chemin interne | `data/02_clean/elections/2022-legislatives-1-candidats.csv` |
-| Format de fichier | csv |
+| Format de fichier | text/csv |
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/88/9400dc852d825436e365d6d2d2f025> |
 
 
@@ -2418,7 +2418,7 @@ Cette production dépend des sources suivantes :
 | Propriété | Valeur |
 | --------- | ------ |
 | Chemin interne | `data/02_clean/elections/2022-legislatives-1-circonscription.csv` |
-| Format de fichier | csv |
+| Format de fichier | text/csv |
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/8f/ee40705cb4d868b49095ad8b269abd> |
 
 
@@ -2510,7 +2510,7 @@ Cette production dépend des sources suivantes :
 | Propriété | Valeur |
 | --------- | ------ |
 | Chemin interne | `data/02_clean/elections/2022-legislatives-2-bureau_de_vote.csv` |
-| Format de fichier | csv |
+| Format de fichier | text/csv |
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/5c/1a2bc94cdcd65377fd0eab32bc62d1> |
 
 
@@ -2608,7 +2608,7 @@ Cette production dépend des sources suivantes :
 | Propriété | Valeur |
 | --------- | ------ |
 | Chemin interne | `data/02_clean/elections/2022-legislatives-2-candidats.csv` |
-| Format de fichier | csv |
+| Format de fichier | text/csv |
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/dd/9c912a3b89e7bb3d5214f747b9e02d> |
 
 
@@ -2762,7 +2762,7 @@ Cette production dépend des sources suivantes :
 | Propriété | Valeur |
 | --------- | ------ |
 | Chemin interne | `data/02_clean/elections/2022-legislatives-2-circonscription.csv` |
-| Format de fichier | csv |
+| Format de fichier | text/csv |
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/c8/7a80ab75c40d53824137394a34ddb2> |
 
 
@@ -2854,7 +2854,7 @@ Cette production dépend des sources suivantes :
 | Propriété | Valeur |
 | --------- | ------ |
 | Chemin interne | `data/02_clean/elections/2022-presidentielle-1-bureau_de_vote.csv` |
-| Format de fichier | csv |
+| Format de fichier | text/csv |
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/14/dfa90d1a3b3099cb01817dabc28228> |
 
 
@@ -2946,7 +2946,7 @@ Cette production dépend des sources suivantes :
 | Propriété | Valeur |
 | --------- | ------ |
 | Chemin interne | `data/02_clean/elections/2022-presidentielle-1-circonscription.csv` |
-| Format de fichier | csv |
+| Format de fichier | text/csv |
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/89/56622be06f89a7ae975a292aad6a16> |
 
 
@@ -3032,7 +3032,7 @@ Cette production dépend des sources suivantes :
 | Propriété | Valeur |
 | --------- | ------ |
 | Chemin interne | `data/02_clean/elections/2022-presidentielle-2-bureau_de_vote.csv` |
-| Format de fichier | csv |
+| Format de fichier | text/csv |
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/67/2d58404e5c7fd088c0a172e089ba34> |
 
 
@@ -3124,7 +3124,7 @@ Cette production dépend des sources suivantes :
 | Propriété | Valeur |
 | --------- | ------ |
 | Chemin interne | `data/02_clean/elections/2022-presidentielle-2-circonscription.csv` |
-| Format de fichier | csv |
+| Format de fichier | text/csv |
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/c3/763d2f15d06df46858af5d74ebd310> |
 
 
@@ -3210,8 +3210,8 @@ Cette production dépend des sources suivantes :
 | Propriété | Valeur |
 | --------- | ------ |
 | Chemin interne | `data/02_clean/elections/2022-presidentielle-parrainages.csv` |
-| Format de fichier | csv |
-| URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/c1/b409e872d55b1ca3ea1e547862bd2a> |
+| Format de fichier | text/csv |
+| URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/c4/b7e16894b409e0c810750c4967afec> |
 
 
 
@@ -3290,7 +3290,7 @@ Cette production dépend des sources suivantes :
 | Propriété | Valeur |
 | --------- | ------ |
 | Chemin interne | `data/02_clean/elections/2024-europeenne-bureau_de_vote.csv` |
-| Format de fichier | csv |
+| Format de fichier | text/csv |
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/a8/8ff891a256710c3facdb42fa931630> |
 
 
@@ -3376,7 +3376,7 @@ Cette production dépend des sources suivantes :
 | Propriété | Valeur |
 | --------- | ------ |
 | Chemin interne | `data/02_clean/elections/2024-europeenne-circonscription.csv` |
-| Format de fichier | csv |
+| Format de fichier | text/csv |
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/0e/85b5bd51c38919008d4a92f0155a61> |
 
 
@@ -3462,7 +3462,7 @@ Cette production dépend des sources suivantes :
 | Propriété | Valeur |
 | --------- | ------ |
 | Chemin interne | `data/02_clean/elections/2024-legislatives-1-bureau_de_vote.csv` |
-| Format de fichier | csv |
+| Format de fichier | text/csv |
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/e8/4ceea11f11d2ca3064189a5d719a90> |
 
 
@@ -3554,7 +3554,7 @@ Cette production dépend des sources suivantes :
 | Propriété | Valeur |
 | --------- | ------ |
 | Chemin interne | `data/02_clean/elections/2024-legislatives-1-candidats.csv` |
-| Format de fichier | csv |
+| Format de fichier | text/csv |
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/ad/8eaee9ac50795b6bfd3e6edea36336> |
 
 
@@ -3690,7 +3690,7 @@ Cette production dépend des sources suivantes :
 | Propriété | Valeur |
 | --------- | ------ |
 | Chemin interne | `data/02_clean/elections/2024-legislatives-1-circonscription.csv` |
-| Format de fichier | csv |
+| Format de fichier | text/csv |
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/da/7b4a29378ec8de4691fee6ade31ef3> |
 
 
@@ -3782,7 +3782,7 @@ Cette production dépend des sources suivantes :
 | Propriété | Valeur |
 | --------- | ------ |
 | Chemin interne | `data/02_clean/elections/2024-legislatives-2-bureau_de_vote.csv` |
-| Format de fichier | csv |
+| Format de fichier | text/csv |
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/0d/775128e516a561291b20e900c6377b> |
 
 
@@ -3874,7 +3874,7 @@ Cette production dépend des sources suivantes :
 | Propriété | Valeur |
 | --------- | ------ |
 | Chemin interne | `data/02_clean/elections/2024-legislatives-2-candidats.csv` |
-| Format de fichier | csv |
+| Format de fichier | text/csv |
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/5d/c7dc1b36ed7e4f15bf4dd8b2ed27d2> |
 
 
@@ -4010,7 +4010,7 @@ Cette production dépend des sources suivantes :
 | Propriété | Valeur |
 | --------- | ------ |
 | Chemin interne | `data/02_clean/elections/2024-legislatives-2-circonscription.csv` |
-| Format de fichier | csv |
+| Format de fichier | text/csv |
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/c6/cdb9206fcf5986baae64bb036ac19b> |
 
 
@@ -4102,7 +4102,7 @@ Cette production dépend des sources suivantes :
 | Propriété | Valeur |
 | --------- | ------ |
 | Chemin interne | `data/02_clean/elections/2024-legislatives-correspondances-bureau_de_vote-circonscription.csv` |
-| Format de fichier | csv |
+| Format de fichier | text/csv |
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/67/26f0c1acf391480bce453c8911e82b> |
 
 
@@ -4149,7 +4149,7 @@ Cette production dépend des sources suivantes :
 | Propriété | Valeur |
 | --------- | ------ |
 | Chemin interne | `data/02_clean/rne/conseillers_arrondissement.csv` |
-| Format de fichier | csv |
+| Format de fichier | text/csv |
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/f7/7731f0195164866a3cd370b21dc58c> |
 
 
@@ -4253,7 +4253,7 @@ Cette production dépend des sources suivantes :
 | Propriété | Valeur |
 | --------- | ------ |
 | Chemin interne | `data/02_clean/rne/conseillers_csp.csv` |
-| Format de fichier | csv |
+| Format de fichier | text/csv |
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/8e/673f7e70a13fab98d760bae1bec662> |
 
 
@@ -4351,7 +4351,7 @@ Cette production dépend des sources suivantes :
 | Propriété | Valeur |
 | --------- | ------ |
 | Chemin interne | `data/02_clean/rne/conseillers_departementaux.csv` |
-| Format de fichier | csv |
+| Format de fichier | text/csv |
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/97/f614566d1df5966b4e31ef28bc4103> |
 
 
@@ -4443,7 +4443,7 @@ Cette production dépend des sources suivantes :
 | Propriété | Valeur |
 | --------- | ------ |
 | Chemin interne | `data/02_clean/rne/conseillers_municipaux.csv` |
-| Format de fichier | csv |
+| Format de fichier | text/csv |
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/a5/ec3670f065e61ed75e0c2c987795e3> |
 
 
@@ -4547,7 +4547,7 @@ Cette production dépend des sources suivantes :
 | Propriété | Valeur |
 | --------- | ------ |
 | Chemin interne | `data/02_clean/rne/conseillers_regionaux.csv` |
-| Format de fichier | csv |
+| Format de fichier | text/csv |
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/0d/bc7593a8b8ea36bb392873f7d2b675> |
 
 
@@ -4639,8 +4639,8 @@ Cette production dépend des sources suivantes :
 | Propriété | Valeur |
 | --------- | ------ |
 | Chemin interne | `data/03_main/elections/2022-presidentielle-parrainages.csv` |
-| Format de fichier | csv |
-| URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/af/2f45460d4570dd60a8445dd1b8115d> |
+| Format de fichier | text/csv |
+| URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/a2/0d751b4254ca57aef3dc426c1e328a> |
 
 
 
