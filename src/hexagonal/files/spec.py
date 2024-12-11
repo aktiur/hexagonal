@@ -1,7 +1,6 @@
 import datetime
 import tomllib
 from enum import StrEnum
-from operator import attrgetter
 from pathlib import PurePath
 from typing import Optional, List
 
@@ -41,10 +40,11 @@ class Dataset(BaseModel):
     path: PurePath
     nom: str
     type: DatasetType
-    format: str
     description: str
     url: str
     s3_url: str
+
+    mimetype: str = ""
 
     # sources
     info_url: Optional[str] = None
@@ -62,7 +62,7 @@ class Dataset(BaseModel):
     def proprietes(self) -> dict[str, str]:
         props = {
             "Chemin interne": Markup(f"`{self.path}`"),
-            "Format de fichier": self.format,
+            "Format de fichier": self.mimetype,
             "URL de téléchargement": Markup(f"<{self.url}>"),
             "URL de téléchargement d'origine": self.source_url
             and Markup(f"<{self.source_url}>"),
