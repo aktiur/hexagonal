@@ -2,6 +2,7 @@ from pathlib import Path
 from zipfile import Path as ZPath, ZipFile
 
 import click
+from glom import Match, Switch, Val, Spec, T, Assign
 
 from hexagonal.cog.type_nom import TYPES_NOMS
 from hexagonal.utils import iterate_csv, nettoyer_avec_spec
@@ -36,23 +37,36 @@ spec_departement = {
     "charniere": charniere,
 }
 
-spec_ctcd = {
-    "code_ctcd": "CTCD",
-    "code_region": "REG",
-    "code_chef_lieu": "CHEFLIEU",
-    "type_nom": "TNCC",
-    "nom": "NCCENR",
-    "article": article,
-    "charniere": charniere,
-}
+spec_ctcd = (
+    Assign(
+        "TNCC",
+        Spec(
+            (
+                "TNCC",
+                Match(
+                    Switch(
+                        [("1", Val("2"))],
+                        default=T,
+                    )
+                ),
+            )
+        ),
+    ),
+    {
+        "code_ctcd": "CTCD",
+        "code_region": "REG",
+        "code_chef_lieu": "CHEFLIEU",
+        "type_nom": "TNCC",
+        "nom": "NCCENR",
+        "article": article,
+        "charniere": charniere,
+    },
+)
 
 spec_com = {
     "code_departement": "COMER",
     "type_nom": "TNCC",
     "nom": "NCCENR",
-    "article": article,
-    "charniere": charniere,
-    "nom_article": "LIBELLE",
     "article": article,
     "charniere": charniere,
 }
@@ -94,13 +108,28 @@ spec_commune_historique = {
 
 
 fichiers_cog = [
-    (f"v_region_{ANNEE}", "regions", spec_region),
-    (f"v_departement_{ANNEE}", "departements", spec_departement),
-    (f"v_commune_{ANNEE}", "communes", spec_commune),
-    (f"v_commune_comer_{ANNEE}", "communes_com", spec_commune_com),
-    (f"v_ctcd_{ANNEE}", "ctcd", spec_ctcd),
-    (f"v_comer_{ANNEE}", "com", spec_com),
-    (f"v_commune_depuis_1943", "communes_historiques", spec_commune_historique),
+    (f"v_region_{ANNEE}", "regions", spec_region, list(spec_region)),
+    (
+        f"v_departement_{ANNEE}",
+        "departements",
+        spec_departement,
+        list(spec_departement),
+    ),
+    (f"v_commune_{ANNEE}", "communes", spec_commune, list(spec_commune)),
+    (
+        f"v_commune_comer_{ANNEE}",
+        "communes_com",
+        spec_commune_com,
+        list(spec_commune_com),
+    ),
+    (f"v_ctcd_{ANNEE}", "ctcd", spec_ctcd, list(spec_ctcd[1])),
+    (f"v_comer_{ANNEE}", "com", spec_com, list(spec_com)),
+    (
+        f"v_commune_depuis_1943",
+        "communes_historiques",
+        spec_commune_historique,
+        list(spec_commune_historique),
+    ),
 ]
 
 
@@ -117,9 +146,9 @@ def run(archive_path, dest_dir):
     with ZipFile(archive_path) as archive:
         archive_root = ZPath(archive)
 
-        for src, dest, spec in fichiers_cog:
+        for src, dest, spec, columns in fichiers_cog:
             with iterate_csv(archive_root / f"{src}.csv") as it:
-                nettoyer_avec_spec(it, dest_dir / f"{dest}.csv", spec)
+                nettoyer_avec_spec(it, dest_dir / f"{dest}.csv", spec, columns=columns)
 
 
 if __name__ == "__main__":

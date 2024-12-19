@@ -1,7 +1,7 @@
 import click
-from glom import Coalesce, T
+from glom import Coalesce, T, glom, S
 
-from hexagonal.codes import normalisation_code_circonscription_ministere
+from hexagonal.codes import CORRESPONDANCE_CODE_DEPARTEMENT
 from hexagonal.utils import (
     date_francaise_vers_iso,
     nettoyer_avec_spec,
@@ -9,14 +9,50 @@ from hexagonal.utils import (
     vers_booleen,
 )
 
+
+class ContextBuilder:
+    def glomit(self, target, scope):
+        departement = scope[glom](
+            target, Coalesce("Code du département", "Code département"), scope
+        )
+        departement = normalisation_code_departement(departement)
+
+        circonscription = target["Code circonscription"]
+        circonscription = normalisation_code_circonscription_ministere(
+            circonscription, departement
+        )
+
+        scope.update({"circonscription": circonscription, "departement": departement})
+        return target
+
+
+def normalisation_code_departement(code_departement: str):
+    return CORRESPONDANCE_CODE_DEPARTEMENT.get(
+        code_departement, code_departement
+    ).zfill(2)
+
+
+def normalisation_code_circonscription_ministere(
+    code_circonscription, code_departement
+):
+    """
+    normalise les codes de circonscription de façon à employer le format de la documentation
+
+    :param code_circonscription:
+    :return:
+    """
+    numero = code_circonscription[-2:].zfill(2)
+    if code_departement in ["977", "978"]:
+        code_departement = "ZX"
+    return f"{code_departement}-{numero}"
+
+
 booleen = vers_booleen(vrai=["oui"])
 
-spec = {
-    "departement": Coalesce("Code du département", "Code département"),
-    "circonscription": (
-        "Code circonscription",
-        normalisation_code_circonscription_ministere,
-    ),
+
+base_spec = {
+    "departement": S.departement,
+    "circonscription": S.circonscription,
     "numero_panneau": Coalesce("N° panneau", "Numéro de panneau"),
     "numero_depot": Coalesce("N° candidat", "N° dépôt"),
     "sexe": Coalesce("Sexe candidat", "Sexe du candidat"),
@@ -61,12 +97,12 @@ spec = {
 @click.option("-d", "--delimiter", default=",")
 @click.option("-e", "--encoding", default="utf-8")
 def nettoyer(src_file, dest_file, delimiter, encoding):
-    print(len(delimiter))
     with iterate_csv(src_file, encoding=encoding, delimiter=delimiter) as it:
         nettoyer_avec_spec(
             it,
             dest_file,
-            spec,
+            (ContextBuilder(), base_spec),
+            columns=list(base_spec.keys()),
         )
 
 
