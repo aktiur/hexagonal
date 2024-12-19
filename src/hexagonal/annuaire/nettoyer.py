@@ -5,6 +5,8 @@ from pathlib import Path
 import click
 from glom import glom, S, T, Spec, Iter, Coalesce
 
+from hexagonal.utils import nettoyer_avec_spec, iterate_ndjson
+
 
 def extraire_telephone(telephones):
     return "\n".join(
@@ -156,15 +158,6 @@ FICHIERS = [
 ]
 
 
-def nettoyer(in_path, out_path, spec):
-    with open(in_path, "r") as in_f, open(out_path, "w", newline="") as out_f:
-        w = csv.DictWriter(out_f, fieldnames=spec[1].keys())
-        w.writeheader()
-
-        mairies = (json.loads(line) for line in in_f)
-        w.writerows(glom(mairies, Iter(spec)))
-
-
 @click.command()
 @click.argument(
     "src_directory",
@@ -178,11 +171,13 @@ def run(src_directory, dest_directory):
     dest_directory.mkdir(exist_ok=True, parents=True)
 
     for fichier, spec in FICHIERS:
-        nettoyer(
-            src_directory / f"{fichier}.json",
-            dest_directory / f"{fichier}.csv",
-            spec,
-        )
+        with iterate_ndjson(src_directory / f"{fichier}.json") as it:
+            nettoyer_avec_spec(
+                it,
+                dest_directory / f"{fichier}.csv",
+                spec,
+                columns=list(spec[1].keys()),
+            )
 
 
 if __name__ == "__main__":

@@ -5,24 +5,6 @@ import pandas as pd
 
 from hexagonal.codes import normaliser_code_circonscription
 
-COLONNES_CANDIDATS = {
-    "Code du département": "departement",
-    "Code circonscription": "circonscription",
-    "N° panneau": "numero_panneau",
-    "N° candidat": "numero_depot",
-    "Sexe candidat": "sexe",
-    "Nom candidat": "nom",
-    "Prénom candidat": "prenom",
-    "Date naissance candidat": "date_naissance",
-    "Nuance candidat": "nuance",
-    "Profession candidat": "profession",
-    "Le candidat est sortant": "sortant",
-    "Sexe remplaçant": "sexe_suppleant",
-    "Nom remplaçant": "nom_suppleant",
-    "Prénom remplaçant": "prenom_suppleant",
-    "Date naiss. remplaçant": "date_naissance_suppleant",
-    "Le remplaçant est sortant": "sortant_suppleant",
-}
 
 COLONNES_LEMONDE = {
     "Département": "departement",
@@ -44,17 +26,7 @@ COLONNES_LEGIS_2022 = {
 
 def extraire_candidats(candidats, nuances_lemonde, nuances_legis_2022, destination):
     tour = re.search(r"2022-legislatives-(\d)-candidats.csv", candidats).group(1)
-    candidats = (
-        pd.read_csv(
-            candidats,
-            delimiter="\t",
-            encoding="latin1",
-            dtype=str,
-            usecols=list(COLONNES_CANDIDATS),
-        )
-        .rename(columns=COLONNES_CANDIDATS)
-        .reindex(columns=list(COLONNES_CANDIDATS.values()))
-    )
+    candidats = pd.read_csv(candidats, dtype=str)
 
     if tour == "1":
         # deux candidats de la 92-11 sont inversés dans le fichier du ministère, LÉVÊQUE et ROLLOT
@@ -64,11 +36,6 @@ def extraire_candidats(candidats, nuances_lemonde, nuances_legis_2022, destinati
         candidats["departement"] + candidats["circonscription"]
     )
     del candidats["departement"]
-
-    for c in ["date_naissance", "date_naissance_suppleant"]:
-        candidats[c] = pd.to_datetime(candidats[c], format="%d/%m/%Y").dt.strftime(
-            "%Y-%m-%d"
-        )
 
     nuances_lemonde = pd.read_csv(
         nuances_lemonde,

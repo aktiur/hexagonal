@@ -48,6 +48,15 @@ Les données sont stockées dans le dossier `data` avec les sous-dossiers suivan
 
 ## Utilisation
 
+### Récupération des données
+
+Pour éviter d'avoir à faire tourner le pipeline en entier, la version des données correspondant à un commit
+peut être récupérée depuis le cache en ligne avec la commande suivante :
+
+```bash
+dvc pull
+```
+
 ### Génération et vérification des données
 
 On utilise [dvc](https://dvc.org/) pour gérer le pipeline de données.

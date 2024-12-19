@@ -30,6 +30,26 @@ CORRESPONDANCE_CODE_DEPARTEMENT = {
 CORRESPONDANCE_CODE_DEPARTEMENT["99"] = "ZZ"
 
 
+def normalisation_code_departement(code_departement: str):
+    return CORRESPONDANCE_CODE_DEPARTEMENT.get(
+        code_departement, code_departement
+    ).zfill(2)
+
+
+def normalisation_code_circonscription_ministere(code_circonscription: str):
+    """
+    normalise les codes de circonscription du ministère de façon à employer le format de la documentation
+
+    :param code_circonscription:
+    :return:
+    """
+    departement = normalisation_code_departement(code_circonscription[:-2])
+    if departement in ["977", "978"]:
+        departement = "ZX"
+    numero = code_circonscription[-2:]
+    return f"{departement}-{numero}"
+
+
 def normaliser_code_departement(departement: pd.Series) -> pd.Series:
     """Normalise une série de codes de département.
 
@@ -81,8 +101,7 @@ def normaliser_code_circonscription(circonscription: pd.Series) -> pd.Series:
 def normaliser_code_commune(commune: pd.Series) -> pd.Series:
     """Normalise une série de codes de commune.
 
-    hexagonal suit la codification du Code Officiel Géographique (COG) de l'INSEE. Chaque commune est identifié par un
-    code à cinq chiffres (le deuxième chiffre pouvant être en réalité la lettre A ou B pour les communes corses).
+    hexagonal suit la codification du COG comme décrit dans la documentation.
 
     Cette fonction traite notamment le cas des communes des départements et collectivités d'outre-mer pour lesquelles le
     code utilisé par le ministère de l'intérieur n'a pas toujours suivi la codification de l'INSEE, et comporte même

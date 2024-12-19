@@ -32,25 +32,50 @@ stages:
       outs:
         - ${clean}/elections/${key}.csv
 
+  candidats-nettoyer:
+    foreach:
+      2022-legislatives-1-candidats:
+        delimiter: "\t"
+        encoding: latin1
+      2022-legislatives-2-candidats:
+        delimiter: "\t"
+        encoding: latin1
+      2024-legislatives-1-candidats:
+        delimiter: ";"
+      2024-legislatives-2-candidats:
+        delimiter: ";"
+    do:
+      cmd: >-
+        ${python} hexagonal.candidatures.nettoyer
+        ${item}
+        "${raw}/elections/${key}.csv"
+        "${clean}/elections/${key}.csv"
+      deps:
+        - ${raw}/elections/${key}.csv
+        - ${src}/hexagonal/candidatures/nettoyer.py
+      outs:
+        - ${clean}/elections/${key}.csv
+
+
   2024-legislatives-candidats:
     foreach:
       - 1
       - 2
     do:
       cmd: >-
-        ${python} hexagonal.candidatures.2024_legislatives
-        ${raw}/elections/2024-legislatives-${item}-candidats.csv
+        ${python} hexagonal.candidatures.legislatives2024
+        ${clean}/elections/2024-legislatives-${item}-candidats.csv
         ${raw}/elections/2024-legislatives-nfp-sensibilites.csv
         ${raw}/elections/2024-legislatives-nuances-lfi.csv
-        ${clean}/elections/2024-legislatives-${item}-candidats.csv
+        ${main}/elections/2024-legislatives-${item}-candidats.csv
       deps:
-        - ${raw}/elections/2024-legislatives-${item}-candidats.csv
+        - ${clean}/elections/2024-legislatives-${item}-candidats.csv
         - ${raw}/elections/2024-legislatives-nfp-sensibilites.csv
         - ${raw}/elections/2024-legislatives-nuances-lfi.csv
-        - ${src}/hexagonal/candidatures/2024_legislatives.py
+        - ${src}/hexagonal/candidatures/legislatives2024.py
         - ${src}/hexagonal/codes.py
       outs:
-        - ${clean}/elections/2024-legislatives-${item}-candidats.csv
+        - ${main}/elections/2024-legislatives-${item}-candidats.csv
 
   2022-legislatives-candidats:
     foreach:
@@ -58,20 +83,19 @@ stages:
       - 2
     do:
       cmd: >-
-        ${python} hexagonal.candidatures.2022_legislatives
-        ${raw}/elections/2022-legislatives-${item}-candidats.csv
+        ${python} hexagonal.candidatures.legislatives2022
+        ${clean}/elections/2022-legislatives-${item}-candidats.csv
         ${raw}/elections/2022-legislatives-nuances-lemonde.csv
         ${raw}/elections/2022-legislatives-nuances-legis-2022.csv
-        ${clean}/elections/2022-legislatives-${item}-candidats.csv
+        ${main}/elections/2022-legislatives-${item}-candidats.csv
       deps:
-        - ${raw}/elections/2022-legislatives-${item}-candidats.csv
+        - ${clean}/elections/2022-legislatives-${item}-candidats.csv
         - ${raw}/elections/2022-legislatives-nuances-lemonde.csv
         - ${raw}/elections/2022-legislatives-nuances-legis-2022.csv
-        - ${src}/hexagonal/candidatures/2022_legislatives.py
-        - ${src}/hexagonal/codes.py
+        - ${src}/hexagonal/candidatures/legislatives2022.py
         - ${src}/hexagonal/codes.py
       outs:
-        - ${clean}/elections/2022-legislatives-${item}-candidats.csv
+        - ${main}/elections/2022-legislatives-${item}-candidats.csv
 
   parrainages_nettoyer:
     foreach:
@@ -212,10 +236,11 @@ stages:
       - ${raw}/cog.zip
       - ${src}/hexagonal/cog/extraire.py
     outs:
+      - ${clean}/cog/regions.csv
+      - ${clean}/cog/departements.csv
       - ${clean}/cog/communes.csv
       - ${clean}/cog/communes_com.csv
       - ${clean}/cog/communes_historiques.csv
-      - ${clean}/cog/departements.csv
       - ${clean}/cog/com.csv
     cmd: >-
       ${python} hexagonal.cog.extraire

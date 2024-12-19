@@ -5,31 +5,8 @@ import pandas as pd
 from hexagonal.codes import normaliser_code_circonscription
 
 
-RENOMMAGE = {
-    "Code circonscription": "circonscription",
-    "Numéro de panneau": "numero_panneau",
-    "N° dépôt": "numero_depot",
-    "Sexe du candidat": "sexe",
-    "Nom du candidat": "nom",
-    "Prénom du candidat": "prenom",
-    "Date de naissance du candidat": "date_naissance",
-    "Code nuance": "nuance",
-    "Profession": "profession",
-    "Sortant": "sortant",
-    "Sexe remplaçant": "sexe_suppleant",
-    "Nom remplaçant": "nom_suppleant",
-    "Prénom remplaçant": "prenom_suppleant",
-    "Date de naissance remplaçant": "date_naissance_suppleant",
-    "Sortant remplaçant": "sortant_suppleant",
-}
-
-
 def extraire_candidats(candidats, sensibilite_nfp, nuances_lfi, destination):
-    candidats = (
-        pd.read_csv(candidats, delimiter=";")
-        .rename(columns=RENOMMAGE)
-        .reindex(columns=list(RENOMMAGE.values()))
-    )
+    candidats = pd.read_csv(candidats)
     candidats["circonscription"] = normaliser_code_circonscription(
         candidats["circonscription"]
     )
