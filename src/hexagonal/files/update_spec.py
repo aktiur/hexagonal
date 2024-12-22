@@ -5,7 +5,7 @@ from mimetypes import guess_type
 import tomli_w
 
 from hexagonal.files.dvc_files import get_dvc_files
-from hexagonal.files.spec import PRODUCTION_TYPES, SPEC, ColonneType
+from hexagonal.files.spec import PRODUCTION_TYPES, ColonneType
 
 FIELDS_ORDER = [
     "nom",
@@ -70,7 +70,6 @@ def update_spec():
                     colonnes_table[colonne] = original_colonnes.get(colonne, {})
 
                     colonnes_defaults = {
-                        "nom": colonne,
                         "description": "",
                         "type": ColonneType.STR,
                     }

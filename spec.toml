@@ -644,74 +644,62 @@ deps = [
 ]
 
 ["data/02_clean/annuaire/conseils_departementaux.csv".colonnes.id]
-nom = "Identifiant unique"
 description = """
 Un identifiant interne utilisé par l'annuaire de l'administration.
 """
 type = "str"
 
 ["data/02_clean/annuaire/conseils_departementaux.csv".colonnes.code_commune]
-nom = "Code commune"
 description = """
 Le code INSEE de la commune où se trouve le conseil départemental.
 """
 type = "code_commune"
 
 ["data/02_clean/annuaire/conseils_departementaux.csv".colonnes.siret]
-nom = "SIRET"
 description = """
 Le code SIRET du Conseil départemental
 """
 type = "str"
 
 ["data/02_clean/annuaire/conseils_departementaux.csv".colonnes.nom]
-nom = "nom"
 description = ""
 type = "str"
 
 ["data/02_clean/annuaire/conseils_departementaux.csv".colonnes.emails]
-nom = "emails"
 description = """
 Les adresses emails indiquées dans l'annuaire, séparées par un saut de ligne simple.
 """
 type = "str"
 
 ["data/02_clean/annuaire/conseils_departementaux.csv".colonnes.adresse_physique]
-nom = "Adresse"
 description = """
 Adresse physique complète
 """
 type = "str"
 
 ["data/02_clean/annuaire/conseils_departementaux.csv".colonnes.adresse_postale]
-nom = "Adresse postale"
 description = """
 L'adresse postale, si elle est différente de l'adresse physique (boîte postale, par exemple).
 """
 type = "str"
 
 ["data/02_clean/annuaire/conseils_departementaux.csv".colonnes.telephone]
-nom = "telephone"
 description = ""
 type = "str"
 
 ["data/02_clean/annuaire/conseils_departementaux.csv".colonnes.coordonnees]
-nom = "coordonnees"
 description = ""
 type = "str"
 
 ["data/02_clean/annuaire/conseils_departementaux.csv".colonnes.type_accessibilite]
-nom = "type_accessibilite"
 description = ""
 type = "str"
 
 ["data/02_clean/annuaire/conseils_departementaux.csv".colonnes.details_accessibilite]
-nom = "details_accessibilite"
 description = ""
 type = "str"
 
 ["data/02_clean/annuaire/conseils_departementaux.csv".colonnes.ouverture]
-nom = "ouverture"
 description = ""
 type = "str"
 
@@ -731,78 +719,66 @@ deps = [
 ]
 
 ["data/02_clean/annuaire/mairies.csv".colonnes.id]
-nom = "id"
 description = """
 Un identifiant interne à l'annuaire de l'administration
 """
 type = "str"
 
 ["data/02_clean/annuaire/mairies.csv".colonnes.code_commune]
-nom = "code_commune"
 description = """
 Le code INSEE de la commune à laquelle appartient la mairie
 """
 type = "code_commune"
 
 ["data/02_clean/annuaire/mairies.csv".colonnes.siret]
-nom = "siret"
 description = """
 Le numéro de SIRET de cette mairie
 """
 type = "str"
 
 ["data/02_clean/annuaire/mairies.csv".colonnes.nom]
-nom = "nom"
 description = ""
 type = "str"
 
 ["data/02_clean/annuaire/mairies.csv".colonnes.emails]
-nom = "emails"
 description = """
 Les adresse emails de contact pour cette mairie
 """
 type = "str"
 
 ["data/02_clean/annuaire/mairies.csv".colonnes.adresse_physique]
-nom = "adresse_physique"
 description = """
 L'adresse physique de la mairie.
 """
 type = "str"
 
 ["data/02_clean/annuaire/mairies.csv".colonnes.adresse_postale]
-nom = "adresse_postale"
 description = """
 L'adresse postale de la mairie, si elle est différente de l'adresse physique (par exemple boîte postale)
 """
 type = "str"
 
 ["data/02_clean/annuaire/mairies.csv".colonnes.telephone]
-nom = "telephone"
 description = """
 Numéros de téléphone de contact pour cette mairie.
 """
 type = "str"
 
 ["data/02_clean/annuaire/mairies.csv".colonnes.coordonnees]
-nom = "coordonnees"
 description = """
 Coordonnées géographiques de cette mairie, selon le système WGS84, au format <code>longitude,latitude</code>
 """
 type = "str"
 
 ["data/02_clean/annuaire/mairies.csv".colonnes.type_accessibilite]
-nom = "type_accessibilite"
 description = ""
 type = "str"
 
 ["data/02_clean/annuaire/mairies.csv".colonnes.details_accessibilite]
-nom = "details_accessibilite"
 description = ""
 type = "str"
 
 ["data/02_clean/annuaire/mairies.csv".colonnes.ouverture]
-nom = "ouverture"
 description = ""
 type = "str"
 
@@ -821,50 +797,42 @@ deps = [
 ]
 
 ["data/02_clean/assemblee_nationale/affiliations.csv".colonnes.id_personne]
-nom = "Identifiant député·e"
 description = """
 L'identifiant unique de la personne utilisé par l'Assemblée nationale
 """
 type = "str"
 
 ["data/02_clean/assemblee_nationale/affiliations.csv".colonnes.id_groupe]
-nom = "Identifiant groupe parlementaire"
 description = """
 L'identifiant unique du groupe parlementaire concerné.
 """
 type = "str"
 
 ["data/02_clean/assemblee_nationale/affiliations.csv".colonnes.prenom]
-nom = "prenom"
 description = """
 Le prénom de la personne concernée.
 """
 type = "str"
 
 ["data/02_clean/assemblee_nationale/affiliations.csv".colonnes.nom]
-nom = "nom"
 description = """
 L
 """
 type = "str"
 
 ["data/02_clean/assemblee_nationale/affiliations.csv".colonnes.abreviation_groupe]
-nom = "abreviation_groupe"
 description = ""
 type = "str"
 
 ["data/02_clean/assemblee_nationale/affiliations.csv".colonnes.legislature]
-nom = "legislature"
 description = ""
 type = "str"
 
 ["data/02_clean/assemblee_nationale/affiliations.csv".colonnes.date_debut]
-nom = "date_debut"
 description = ""
 type = "date"
 
 ["data/02_clean/assemblee_nationale/affiliations.csv".colonnes.date_fin]
-nom = "date_fin"
 description = ""
 type = "date"
 
@@ -880,57 +848,46 @@ deps = [
 ]
 
 ["data/02_clean/assemblee_nationale/deputes.csv".colonnes.id_personne]
-nom = "id_personne"
 description = ""
 type = "str"
 
 ["data/02_clean/assemblee_nationale/deputes.csv".colonnes.civilite]
-nom = "civilite"
 description = ""
 type = "str"
 
 ["data/02_clean/assemblee_nationale/deputes.csv".colonnes.prenom]
-nom = "prenom"
 description = ""
 type = "str"
 
 ["data/02_clean/assemblee_nationale/deputes.csv".colonnes.nom]
-nom = "nom"
 description = ""
 type = "str"
 
 ["data/02_clean/assemblee_nationale/deputes.csv".colonnes.date_naissance]
-nom = "date_naissance"
 description = ""
 type = "date"
 
 ["data/02_clean/assemblee_nationale/deputes.csv".colonnes.ville_naissance]
-nom = "ville_naissance"
 description = ""
 type = "str"
 
 ["data/02_clean/assemblee_nationale/deputes.csv".colonnes.departement_naissance]
-nom = "departement_naissance"
 description = ""
 type = "str"
 
 ["data/02_clean/assemblee_nationale/deputes.csv".colonnes.legislatures]
-nom = "legislatures"
 description = ""
 type = "str"
 
 ["data/02_clean/assemblee_nationale/deputes.csv".colonnes.profession]
-nom = "profession"
 description = ""
 type = "str"
 
 ["data/02_clean/assemblee_nationale/deputes.csv".colonnes.csp_agregee]
-nom = "csp_agregee"
 description = ""
 type = "str"
 
 ["data/02_clean/assemblee_nationale/deputes.csv".colonnes.csp]
-nom = "csp"
 description = ""
 type = "str"
 
@@ -946,47 +903,38 @@ deps = [
 ]
 
 ["data/02_clean/assemblee_nationale/groupes.csv".colonnes.id_groupe]
-nom = "id_groupe"
 description = ""
 type = "str"
 
 ["data/02_clean/assemblee_nationale/groupes.csv".colonnes.legislature]
-nom = "legislature"
 description = ""
 type = "str"
 
 ["data/02_clean/assemblee_nationale/groupes.csv".colonnes.nom]
-nom = "nom"
 description = ""
 type = "str"
 
 ["data/02_clean/assemblee_nationale/groupes.csv".colonnes.abrege]
-nom = "abrege"
 description = ""
 type = "str"
 
 ["data/02_clean/assemblee_nationale/groupes.csv".colonnes.abreviation]
-nom = "abreviation"
 description = ""
 type = "str"
 
 ["data/02_clean/assemblee_nationale/groupes.csv".colonnes.date_debut]
-nom = "date_debut"
 description = ""
 type = "date"
 
 ["data/02_clean/assemblee_nationale/groupes.csv".colonnes.date_fin]
-nom = "date_fin"
 description = ""
 type = "date"
 
 ["data/02_clean/assemblee_nationale/groupes.csv".colonnes.position]
-nom = "position"
 description = ""
 type = "str"
 
 ["data/02_clean/assemblee_nationale/groupes.csv".colonnes.preseance]
-nom = "preseance"
 description = ""
 type = "str"
 
@@ -1010,7 +958,6 @@ deps = [
 ]
 
 ["data/02_clean/assemblee_nationale/mandats.csv".colonnes.id_mandat]
-nom = "Identifiant du mandat"
 description = """
 L'identifiant unique du mandat.
 Il débute par le préfixe \"PM\".
@@ -1018,7 +965,6 @@ Il débute par le préfixe \"PM\".
 type = "str"
 
 ["data/02_clean/assemblee_nationale/mandats.csv".colonnes.id_personne]
-nom = "Identifiant de la personne"
 description = """
 L'identifiant unique de la personne dépositaire du mandat.
 Il débute par le préfixe \"PA\".
@@ -1026,58 +972,48 @@ Il débute par le préfixe \"PA\".
 type = "str"
 
 ["data/02_clean/assemblee_nationale/mandats.csv".colonnes.prenom]
-nom = "Prénom de la personne"
 description = """
 Le prénom de la personne dépositaire du mandat
 """
 type = "str"
 
 ["data/02_clean/assemblee_nationale/mandats.csv".colonnes.nom]
-nom = "Nom de famille de la personne"
 description = """
 Le nom de famille de la personne dépositaire du mandat.
 """
 type = "str"
 
 ["data/02_clean/assemblee_nationale/mandats.csv".colonnes.legislature]
-nom = "legislature"
 description = """
 Le numéro de la législature dans le cadre de laquelle se déroule le mandat.
 """
 type = "int"
 
 ["data/02_clean/assemblee_nationale/mandats.csv".colonnes.circonscription]
-nom = "circonscription"
 description = ""
 type = "str"
 
 ["data/02_clean/assemblee_nationale/mandats.csv".colonnes.suppleante]
-nom = "suppleante"
 description = ""
 type = "str"
 
 ["data/02_clean/assemblee_nationale/mandats.csv".colonnes.date_debut]
-nom = "date_debut"
 description = ""
 type = "date"
 
 ["data/02_clean/assemblee_nationale/mandats.csv".colonnes.date_fin]
-nom = "date_fin"
 description = ""
 type = "date"
 
 ["data/02_clean/assemblee_nationale/mandats.csv".colonnes.cause_debut_mandat]
-nom = "cause_debut_mandat"
 description = ""
 type = "str"
 
 ["data/02_clean/assemblee_nationale/mandats.csv".colonnes.cause_fin_mandat]
-nom = "cause_fin_mandat"
 description = ""
 type = "str"
 
 ["data/02_clean/assemblee_nationale/mandats.csv".colonnes.place]
-nom = "place"
 description = ""
 type = "str"
 
@@ -1093,27 +1029,22 @@ deps = [
 ]
 
 ["data/02_clean/cog/com.csv".colonnes.code_departement]
-nom = "code_departement"
 description = ""
-type = "str"
+type = "code_departement"
 
 ["data/02_clean/cog/com.csv".colonnes.type_nom]
-nom = "type_nom"
 description = ""
 type = "str"
 
 ["data/02_clean/cog/com.csv".colonnes.nom]
-nom = "nom"
 description = ""
 type = "str"
 
 ["data/02_clean/cog/com.csv".colonnes.article]
-nom = "article"
 description = ""
 type = "str"
 
 ["data/02_clean/cog/com.csv".colonnes.charniere]
-nom = "charniere"
 description = ""
 type = "str"
 
@@ -1129,62 +1060,50 @@ deps = [
 ]
 
 ["data/02_clean/cog/communes.csv".colonnes.code_commune]
-nom = "code_commune"
 description = ""
-type = "str"
+type = "code_commune"
 
 ["data/02_clean/cog/communes.csv".colonnes.type_commune]
-nom = "type_commune"
 description = ""
 type = "str"
 
 ["data/02_clean/cog/communes.csv".colonnes.code_region]
-nom = "code_region"
 description = ""
 type = "str"
 
 ["data/02_clean/cog/communes.csv".colonnes.code_departement]
-nom = "code_departement"
 description = ""
-type = "str"
+type = "code_departement"
 
 ["data/02_clean/cog/communes.csv".colonnes.code_collectivite_departementale]
-nom = "code_collectivite_departementale"
 description = ""
 type = "str"
 
 ["data/02_clean/cog/communes.csv".colonnes.code_arrondissement]
-nom = "code_arrondissement"
 description = ""
 type = "str"
 
 ["data/02_clean/cog/communes.csv".colonnes.code_canton]
-nom = "code_canton"
 description = ""
 type = "str"
 
 ["data/02_clean/cog/communes.csv".colonnes.code_commune_parent]
-nom = "code_commune_parent"
 description = ""
-type = "str"
+type = "code_commune"
 
 ["data/02_clean/cog/communes.csv".colonnes.type_nom]
-nom = "type_nom"
 description = ""
 type = "str"
 
 ["data/02_clean/cog/communes.csv".colonnes.nom]
-nom = "nom"
 description = ""
 type = "str"
 
 ["data/02_clean/cog/communes.csv".colonnes.article]
-nom = "article"
 description = ""
 type = "str"
 
 ["data/02_clean/cog/communes.csv".colonnes.charniere]
-nom = "charniere"
 description = ""
 type = "str"
 
@@ -1200,37 +1119,30 @@ deps = [
 ]
 
 ["data/02_clean/cog/communes_com.csv".colonnes.code_commune]
-nom = "code_commune"
 description = ""
-type = "str"
+type = "code_commune"
 
 ["data/02_clean/cog/communes_com.csv".colonnes.type_commune]
-nom = "type_commune"
 description = ""
 type = "str"
 
 ["data/02_clean/cog/communes_com.csv".colonnes.code_departement]
-nom = "code_departement"
 description = ""
-type = "str"
+type = "code_departement"
 
 ["data/02_clean/cog/communes_com.csv".colonnes.type_nom]
-nom = "type_nom"
 description = ""
 type = "str"
 
 ["data/02_clean/cog/communes_com.csv".colonnes.nom]
-nom = "nom"
 description = ""
 type = "str"
 
 ["data/02_clean/cog/communes_com.csv".colonnes.article]
-nom = "article"
 description = ""
 type = "str"
 
 ["data/02_clean/cog/communes_com.csv".colonnes.charniere]
-nom = "charniere"
 description = ""
 type = "str"
 
@@ -1246,37 +1158,30 @@ deps = [
 ]
 
 ["data/02_clean/cog/communes_historiques.csv".colonnes.code_commune]
-nom = "code_commune"
 description = ""
-type = "str"
+type = "code_commune"
 
 ["data/02_clean/cog/communes_historiques.csv".colonnes.type_nom]
-nom = "type_nom"
 description = ""
 type = "str"
 
 ["data/02_clean/cog/communes_historiques.csv".colonnes.nom]
-nom = "nom"
 description = ""
 type = "str"
 
 ["data/02_clean/cog/communes_historiques.csv".colonnes.article]
-nom = "article"
 description = ""
 type = "str"
 
 ["data/02_clean/cog/communes_historiques.csv".colonnes.charniere]
-nom = "charniere"
 description = ""
 type = "str"
 
 ["data/02_clean/cog/communes_historiques.csv".colonnes.date_debut]
-nom = "date_debut"
 description = ""
 type = "date"
 
 ["data/02_clean/cog/communes_historiques.csv".colonnes.date_fin]
-nom = "date_fin"
 description = ""
 type = "date"
 
@@ -1292,27 +1197,22 @@ deps = [
 ]
 
 ["data/02_clean/cog/departements.csv".colonnes.code_departement]
-nom = "code_departement"
 description = ""
-type = "str"
+type = "code_departement"
 
 ["data/02_clean/cog/departements.csv".colonnes.code_region]
-nom = "code_region"
 description = ""
 type = "str"
 
 ["data/02_clean/cog/departements.csv".colonnes.code_chef_lieu]
-nom = "code_chef_lieu"
 description = ""
 type = "str"
 
 ["data/02_clean/cog/departements.csv".colonnes.type_nom]
-nom = "type_nom"
 description = ""
 type = "str"
 
 ["data/02_clean/cog/departements.csv".colonnes.nom]
-nom = "nom"
 description = ""
 type = "str"
 
@@ -1328,62 +1228,50 @@ deps = [
 ]
 
 ["data/02_clean/elections/2012-presidentielle-bureau_de_vote.csv".colonnes.bureau_de_vote]
-nom = "bureau_de_vote"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2012-presidentielle-bureau_de_vote.csv".colonnes.circonscription]
-nom = "circonscription"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2012-presidentielle-bureau_de_vote.csv".colonnes.numero_tour]
-nom = "numero_tour"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2012-presidentielle-bureau_de_vote.csv".colonnes.canton]
-nom = "canton"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2012-presidentielle-bureau_de_vote.csv".colonnes.inscrits]
-nom = "inscrits"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2012-presidentielle-bureau_de_vote.csv".colonnes.votants]
-nom = "votants"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2012-presidentielle-bureau_de_vote.csv".colonnes.exprimes]
-nom = "exprimes"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2012-presidentielle-bureau_de_vote.csv".colonnes.numero_panneau]
-nom = "numero_panneau"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2012-presidentielle-bureau_de_vote.csv".colonnes.nom]
-nom = "nom"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2012-presidentielle-bureau_de_vote.csv".colonnes.prenom]
-nom = "prenom"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2012-presidentielle-bureau_de_vote.csv".colonnes.nuance]
-nom = "nuance"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2012-presidentielle-bureau_de_vote.csv".colonnes.voix]
-nom = "voix"
 description = ""
 type = "str"
 
@@ -1399,52 +1287,42 @@ deps = [
 ]
 
 ["data/02_clean/elections/2014-europeenne-bureau_de_vote.csv".colonnes.bureau_de_vote]
-nom = "bureau_de_vote"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2014-europeenne-bureau_de_vote.csv".colonnes.numero_tour]
-nom = "numero_tour"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2014-europeenne-bureau_de_vote.csv".colonnes.inscrits]
-nom = "inscrits"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2014-europeenne-bureau_de_vote.csv".colonnes.votants]
-nom = "votants"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2014-europeenne-bureau_de_vote.csv".colonnes.exprimes]
-nom = "exprimes"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2014-europeenne-bureau_de_vote.csv".colonnes.numero_panneau]
-nom = "numero_panneau"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2014-europeenne-bureau_de_vote.csv".colonnes.nom]
-nom = "nom"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2014-europeenne-bureau_de_vote.csv".colonnes.prenom]
-nom = "prenom"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2014-europeenne-bureau_de_vote.csv".colonnes.nuance]
-nom = "nuance"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2014-europeenne-bureau_de_vote.csv".colonnes.voix]
-nom = "voix"
 description = ""
 type = "str"
 
@@ -1460,57 +1338,46 @@ deps = [
 ]
 
 ["data/02_clean/elections/2017-legislatives-1-bureau_de_vote.csv".colonnes.bureau_de_vote]
-nom = "bureau_de_vote"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2017-legislatives-1-bureau_de_vote.csv".colonnes.circonscription]
-nom = "circonscription"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2017-legislatives-1-bureau_de_vote.csv".colonnes.inscrits]
-nom = "inscrits"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2017-legislatives-1-bureau_de_vote.csv".colonnes.votants]
-nom = "votants"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2017-legislatives-1-bureau_de_vote.csv".colonnes.exprimes]
-nom = "exprimes"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2017-legislatives-1-bureau_de_vote.csv".colonnes.numero_panneau]
-nom = "numero_panneau"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2017-legislatives-1-bureau_de_vote.csv".colonnes.nuance]
-nom = "nuance"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2017-legislatives-1-bureau_de_vote.csv".colonnes.nom]
-nom = "nom"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2017-legislatives-1-bureau_de_vote.csv".colonnes.prenom]
-nom = "prenom"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2017-legislatives-1-bureau_de_vote.csv".colonnes.sexe]
-nom = "sexe"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2017-legislatives-1-bureau_de_vote.csv".colonnes.voix]
-nom = "voix"
 description = ""
 type = "str"
 
@@ -1526,57 +1393,46 @@ deps = [
 ]
 
 ["data/02_clean/elections/2017-legislatives-2-bureau_de_vote.csv".colonnes.bureau_de_vote]
-nom = "bureau_de_vote"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2017-legislatives-2-bureau_de_vote.csv".colonnes.circonscription]
-nom = "circonscription"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2017-legislatives-2-bureau_de_vote.csv".colonnes.inscrits]
-nom = "inscrits"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2017-legislatives-2-bureau_de_vote.csv".colonnes.votants]
-nom = "votants"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2017-legislatives-2-bureau_de_vote.csv".colonnes.exprimes]
-nom = "exprimes"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2017-legislatives-2-bureau_de_vote.csv".colonnes.numero_panneau]
-nom = "numero_panneau"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2017-legislatives-2-bureau_de_vote.csv".colonnes.nuance]
-nom = "nuance"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2017-legislatives-2-bureau_de_vote.csv".colonnes.nom]
-nom = "nom"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2017-legislatives-2-bureau_de_vote.csv".colonnes.prenom]
-nom = "prenom"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2017-legislatives-2-bureau_de_vote.csv".colonnes.sexe]
-nom = "sexe"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2017-legislatives-2-bureau_de_vote.csv".colonnes.voix]
-nom = "voix"
 description = ""
 type = "str"
 
@@ -1592,52 +1448,42 @@ deps = [
 ]
 
 ["data/02_clean/elections/2017-presidentielle-1-bureau_de_vote.csv".colonnes.bureau_de_vote]
-nom = "bureau_de_vote"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2017-presidentielle-1-bureau_de_vote.csv".colonnes.circonscription]
-nom = "circonscription"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2017-presidentielle-1-bureau_de_vote.csv".colonnes.inscrits]
-nom = "inscrits"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2017-presidentielle-1-bureau_de_vote.csv".colonnes.votants]
-nom = "votants"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2017-presidentielle-1-bureau_de_vote.csv".colonnes.exprimes]
-nom = "exprimes"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2017-presidentielle-1-bureau_de_vote.csv".colonnes.numero_panneau]
-nom = "numero_panneau"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2017-presidentielle-1-bureau_de_vote.csv".colonnes.nom]
-nom = "nom"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2017-presidentielle-1-bureau_de_vote.csv".colonnes.prenom]
-nom = "prenom"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2017-presidentielle-1-bureau_de_vote.csv".colonnes.sexe]
-nom = "sexe"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2017-presidentielle-1-bureau_de_vote.csv".colonnes.voix]
-nom = "voix"
 description = ""
 type = "str"
 
@@ -1653,52 +1499,42 @@ deps = [
 ]
 
 ["data/02_clean/elections/2017-presidentielle-2-bureau_de_vote.csv".colonnes.bureau_de_vote]
-nom = "bureau_de_vote"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2017-presidentielle-2-bureau_de_vote.csv".colonnes.circonscription]
-nom = "circonscription"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2017-presidentielle-2-bureau_de_vote.csv".colonnes.inscrits]
-nom = "inscrits"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2017-presidentielle-2-bureau_de_vote.csv".colonnes.votants]
-nom = "votants"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2017-presidentielle-2-bureau_de_vote.csv".colonnes.exprimes]
-nom = "exprimes"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2017-presidentielle-2-bureau_de_vote.csv".colonnes.numero_panneau]
-nom = "numero_panneau"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2017-presidentielle-2-bureau_de_vote.csv".colonnes.nom]
-nom = "nom"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2017-presidentielle-2-bureau_de_vote.csv".colonnes.prenom]
-nom = "prenom"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2017-presidentielle-2-bureau_de_vote.csv".colonnes.sexe]
-nom = "sexe"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2017-presidentielle-2-bureau_de_vote.csv".colonnes.voix]
-nom = "voix"
 description = ""
 type = "str"
 
@@ -1714,42 +1550,34 @@ deps = [
 ]
 
 ["data/02_clean/elections/2019-europeenne-bureau_de_vote.csv".colonnes.bureau_de_vote]
-nom = "bureau_de_vote"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2019-europeenne-bureau_de_vote.csv".colonnes.inscrits]
-nom = "inscrits"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2019-europeenne-bureau_de_vote.csv".colonnes.votants]
-nom = "votants"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2019-europeenne-bureau_de_vote.csv".colonnes.exprimes]
-nom = "exprimes"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2019-europeenne-bureau_de_vote.csv".colonnes.numero_panneau]
-nom = "numero_panneau"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2019-europeenne-bureau_de_vote.csv".colonnes.liste_court]
-nom = "liste_court"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2019-europeenne-bureau_de_vote.csv".colonnes.liste_long]
-nom = "liste_long"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2019-europeenne-bureau_de_vote.csv".colonnes.voix]
-nom = "voix"
 description = ""
 type = "str"
 
@@ -1765,57 +1593,46 @@ deps = [
 ]
 
 ["data/02_clean/elections/2020-municipales-1-bureau_de_vote.csv".colonnes.bureau_de_vote]
-nom = "bureau_de_vote"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2020-municipales-1-bureau_de_vote.csv".colonnes.inscrits]
-nom = "inscrits"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2020-municipales-1-bureau_de_vote.csv".colonnes.votants]
-nom = "votants"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2020-municipales-1-bureau_de_vote.csv".colonnes.exprimes]
-nom = "exprimes"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2020-municipales-1-bureau_de_vote.csv".colonnes.numero_panneau]
-nom = "numero_panneau"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2020-municipales-1-bureau_de_vote.csv".colonnes.nuance]
-nom = "nuance"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2020-municipales-1-bureau_de_vote.csv".colonnes.nom]
-nom = "nom"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2020-municipales-1-bureau_de_vote.csv".colonnes.prenom]
-nom = "prenom"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2020-municipales-1-bureau_de_vote.csv".colonnes.sexe]
-nom = "sexe"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2020-municipales-1-bureau_de_vote.csv".colonnes.liste_long]
-nom = "liste_long"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2020-municipales-1-bureau_de_vote.csv".colonnes.voix]
-nom = "voix"
 description = ""
 type = "str"
 
@@ -1831,57 +1648,46 @@ deps = [
 ]
 
 ["data/02_clean/elections/2020-municipales-2-bureau_de_vote.csv".colonnes.bureau_de_vote]
-nom = "bureau_de_vote"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2020-municipales-2-bureau_de_vote.csv".colonnes.inscrits]
-nom = "inscrits"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2020-municipales-2-bureau_de_vote.csv".colonnes.votants]
-nom = "votants"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2020-municipales-2-bureau_de_vote.csv".colonnes.exprimes]
-nom = "exprimes"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2020-municipales-2-bureau_de_vote.csv".colonnes.numero_panneau]
-nom = "numero_panneau"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2020-municipales-2-bureau_de_vote.csv".colonnes.nuance]
-nom = "nuance"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2020-municipales-2-bureau_de_vote.csv".colonnes.nom]
-nom = "nom"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2020-municipales-2-bureau_de_vote.csv".colonnes.prenom]
-nom = "prenom"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2020-municipales-2-bureau_de_vote.csv".colonnes.sexe]
-nom = "sexe"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2020-municipales-2-bureau_de_vote.csv".colonnes.liste_long]
-nom = "liste_long"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2020-municipales-2-bureau_de_vote.csv".colonnes.voix]
-nom = "voix"
 description = ""
 type = "str"
 
@@ -1897,37 +1703,30 @@ deps = [
 ]
 
 ["data/02_clean/elections/2021-departementales-1-bureau_de_vote.csv".colonnes.bureau_de_vote]
-nom = "bureau_de_vote"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2021-departementales-1-bureau_de_vote.csv".colonnes.inscrits]
-nom = "inscrits"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2021-departementales-1-bureau_de_vote.csv".colonnes.votants]
-nom = "votants"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2021-departementales-1-bureau_de_vote.csv".colonnes.exprimes]
-nom = "exprimes"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2021-departementales-1-bureau_de_vote.csv".colonnes.numero_panneau]
-nom = "numero_panneau"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2021-departementales-1-bureau_de_vote.csv".colonnes.nuance]
-nom = "nuance"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2021-departementales-1-bureau_de_vote.csv".colonnes.voix]
-nom = "voix"
 description = ""
 type = "str"
 
@@ -1943,37 +1742,30 @@ deps = [
 ]
 
 ["data/02_clean/elections/2021-departementales-2-bureau_de_vote.csv".colonnes.bureau_de_vote]
-nom = "bureau_de_vote"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2021-departementales-2-bureau_de_vote.csv".colonnes.inscrits]
-nom = "inscrits"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2021-departementales-2-bureau_de_vote.csv".colonnes.votants]
-nom = "votants"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2021-departementales-2-bureau_de_vote.csv".colonnes.exprimes]
-nom = "exprimes"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2021-departementales-2-bureau_de_vote.csv".colonnes.numero_panneau]
-nom = "numero_panneau"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2021-departementales-2-bureau_de_vote.csv".colonnes.nuance]
-nom = "nuance"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2021-departementales-2-bureau_de_vote.csv".colonnes.voix]
-nom = "voix"
 description = ""
 type = "str"
 
@@ -1989,47 +1781,38 @@ deps = [
 ]
 
 ["data/02_clean/elections/2021-regionales-1-bureau_de_vote.csv".colonnes.bureau_de_vote]
-nom = "bureau_de_vote"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2021-regionales-1-bureau_de_vote.csv".colonnes.inscrits]
-nom = "inscrits"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2021-regionales-1-bureau_de_vote.csv".colonnes.votants]
-nom = "votants"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2021-regionales-1-bureau_de_vote.csv".colonnes.exprimes]
-nom = "exprimes"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2021-regionales-1-bureau_de_vote.csv".colonnes.numero_panneau]
-nom = "numero_panneau"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2021-regionales-1-bureau_de_vote.csv".colonnes.nuance]
-nom = "nuance"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2021-regionales-1-bureau_de_vote.csv".colonnes.liste_court]
-nom = "liste_court"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2021-regionales-1-bureau_de_vote.csv".colonnes.liste_long]
-nom = "liste_long"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2021-regionales-1-bureau_de_vote.csv".colonnes.voix]
-nom = "voix"
 description = ""
 type = "str"
 
@@ -2045,47 +1828,38 @@ deps = [
 ]
 
 ["data/02_clean/elections/2021-regionales-2-bureau_de_vote.csv".colonnes.bureau_de_vote]
-nom = "bureau_de_vote"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2021-regionales-2-bureau_de_vote.csv".colonnes.inscrits]
-nom = "inscrits"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2021-regionales-2-bureau_de_vote.csv".colonnes.votants]
-nom = "votants"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2021-regionales-2-bureau_de_vote.csv".colonnes.exprimes]
-nom = "exprimes"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2021-regionales-2-bureau_de_vote.csv".colonnes.numero_panneau]
-nom = "numero_panneau"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2021-regionales-2-bureau_de_vote.csv".colonnes.nuance]
-nom = "nuance"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2021-regionales-2-bureau_de_vote.csv".colonnes.liste_court]
-nom = "liste_court"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2021-regionales-2-bureau_de_vote.csv".colonnes.liste_long]
-nom = "liste_long"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2021-regionales-2-bureau_de_vote.csv".colonnes.voix]
-nom = "voix"
 description = ""
 type = "str"
 
@@ -2101,57 +1875,46 @@ deps = [
 ]
 
 ["data/02_clean/elections/2022-legislatives-1-bureau_de_vote.csv".colonnes.bureau_de_vote]
-nom = "bureau_de_vote"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-1-bureau_de_vote.csv".colonnes.circonscription]
-nom = "circonscription"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-1-bureau_de_vote.csv".colonnes.inscrits]
-nom = "inscrits"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-1-bureau_de_vote.csv".colonnes.votants]
-nom = "votants"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-1-bureau_de_vote.csv".colonnes.exprimes]
-nom = "exprimes"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-1-bureau_de_vote.csv".colonnes.numero_panneau]
-nom = "numero_panneau"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-1-bureau_de_vote.csv".colonnes.nuance]
-nom = "nuance"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-1-bureau_de_vote.csv".colonnes.nom]
-nom = "nom"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-1-bureau_de_vote.csv".colonnes.prenom]
-nom = "prenom"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-1-bureau_de_vote.csv".colonnes.sexe]
-nom = "sexe"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-1-bureau_de_vote.csv".colonnes.voix]
-nom = "voix"
 description = ""
 type = "str"
 
@@ -2169,102 +1932,82 @@ deps = [
 ]
 
 ["data/02_clean/elections/2022-legislatives-1-candidats.csv".colonnes.circonscription]
-nom = "circonscription"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-1-candidats.csv".colonnes.numero_panneau]
-nom = "numero_panneau"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-1-candidats.csv".colonnes.numero_depot]
-nom = "numero_depot"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-1-candidats.csv".colonnes.sexe]
-nom = "sexe"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-1-candidats.csv".colonnes.nom]
-nom = "nom"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-1-candidats.csv".colonnes.prenom]
-nom = "prenom"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-1-candidats.csv".colonnes.date_naissance]
-nom = "date_naissance"
 description = ""
 type = "date"
 
 ["data/02_clean/elections/2022-legislatives-1-candidats.csv".colonnes.nuance]
-nom = "nuance"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-1-candidats.csv".colonnes.profession]
-nom = "profession"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-1-candidats.csv".colonnes.sortant]
-nom = "sortant"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-1-candidats.csv".colonnes.sexe_suppleant]
-nom = "sexe_suppleant"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-1-candidats.csv".colonnes.nom_suppleant]
-nom = "nom_suppleant"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-1-candidats.csv".colonnes.prenom_suppleant]
-nom = "prenom_suppleant"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-1-candidats.csv".colonnes.date_naissance_suppleant]
-nom = "date_naissance_suppleant"
 description = ""
 type = "date"
 
 ["data/02_clean/elections/2022-legislatives-1-candidats.csv".colonnes.sortant_suppleant]
-nom = "sortant_suppleant"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-1-candidats.csv".colonnes.nom_lemonde]
-nom = "nom_lemonde"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-1-candidats.csv".colonnes.nuance_lemonde]
-nom = "nuance_lemonde"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-1-candidats.csv".colonnes.parti_lemonde]
-nom = "parti_lemonde"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-1-candidats.csv".colonnes.nuance_legis_2022]
-nom = "nuance_legis_2022"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-1-candidats.csv".colonnes.regroupement_om_legis_2022]
-nom = "regroupement_om_legis_2022"
 description = ""
 type = "str"
 
@@ -2280,52 +2023,42 @@ deps = [
 ]
 
 ["data/02_clean/elections/2022-legislatives-1-circonscription.csv".colonnes.circonscription]
-nom = "circonscription"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-1-circonscription.csv".colonnes.inscrits]
-nom = "inscrits"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-1-circonscription.csv".colonnes.votants]
-nom = "votants"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-1-circonscription.csv".colonnes.exprimes]
-nom = "exprimes"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-1-circonscription.csv".colonnes.numero_panneau]
-nom = "numero_panneau"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-1-circonscription.csv".colonnes.nuance]
-nom = "nuance"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-1-circonscription.csv".colonnes.nom]
-nom = "nom"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-1-circonscription.csv".colonnes.prenom]
-nom = "prenom"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-1-circonscription.csv".colonnes.sexe]
-nom = "sexe"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-1-circonscription.csv".colonnes.voix]
-nom = "voix"
 description = ""
 type = "str"
 
@@ -2341,57 +2074,46 @@ deps = [
 ]
 
 ["data/02_clean/elections/2022-legislatives-2-bureau_de_vote.csv".colonnes.bureau_de_vote]
-nom = "bureau_de_vote"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-2-bureau_de_vote.csv".colonnes.circonscription]
-nom = "circonscription"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-2-bureau_de_vote.csv".colonnes.inscrits]
-nom = "inscrits"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-2-bureau_de_vote.csv".colonnes.votants]
-nom = "votants"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-2-bureau_de_vote.csv".colonnes.exprimes]
-nom = "exprimes"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-2-bureau_de_vote.csv".colonnes.numero_panneau]
-nom = "numero_panneau"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-2-bureau_de_vote.csv".colonnes.nuance]
-nom = "nuance"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-2-bureau_de_vote.csv".colonnes.nom]
-nom = "nom"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-2-bureau_de_vote.csv".colonnes.prenom]
-nom = "prenom"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-2-bureau_de_vote.csv".colonnes.sexe]
-nom = "sexe"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-2-bureau_de_vote.csv".colonnes.voix]
-nom = "voix"
 description = ""
 type = "str"
 
@@ -2409,102 +2131,82 @@ deps = [
 ]
 
 ["data/02_clean/elections/2022-legislatives-2-candidats.csv".colonnes.circonscription]
-nom = "circonscription"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-2-candidats.csv".colonnes.numero_panneau]
-nom = "numero_panneau"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-2-candidats.csv".colonnes.numero_depot]
-nom = "numero_depot"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-2-candidats.csv".colonnes.sexe]
-nom = "sexe"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-2-candidats.csv".colonnes.nom]
-nom = "nom"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-2-candidats.csv".colonnes.prenom]
-nom = "prenom"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-2-candidats.csv".colonnes.date_naissance]
-nom = "date_naissance"
 description = ""
 type = "date"
 
 ["data/02_clean/elections/2022-legislatives-2-candidats.csv".colonnes.nuance]
-nom = "nuance"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-2-candidats.csv".colonnes.profession]
-nom = "profession"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-2-candidats.csv".colonnes.sortant]
-nom = "sortant"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-2-candidats.csv".colonnes.sexe_suppleant]
-nom = "sexe_suppleant"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-2-candidats.csv".colonnes.nom_suppleant]
-nom = "nom_suppleant"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-2-candidats.csv".colonnes.prenom_suppleant]
-nom = "prenom_suppleant"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-2-candidats.csv".colonnes.date_naissance_suppleant]
-nom = "date_naissance_suppleant"
 description = ""
 type = "date"
 
 ["data/02_clean/elections/2022-legislatives-2-candidats.csv".colonnes.sortant_suppleant]
-nom = "sortant_suppleant"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-2-candidats.csv".colonnes.nom_lemonde]
-nom = "nom_lemonde"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-2-candidats.csv".colonnes.nuance_lemonde]
-nom = "nuance_lemonde"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-2-candidats.csv".colonnes.parti_lemonde]
-nom = "parti_lemonde"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-2-candidats.csv".colonnes.nuance_legis_2022]
-nom = "nuance_legis_2022"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-2-candidats.csv".colonnes.regroupement_om_legis_2022]
-nom = "regroupement_om_legis_2022"
 description = ""
 type = "str"
 
@@ -2520,52 +2222,42 @@ deps = [
 ]
 
 ["data/02_clean/elections/2022-legislatives-2-circonscription.csv".colonnes.circonscription]
-nom = "circonscription"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-2-circonscription.csv".colonnes.inscrits]
-nom = "inscrits"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-2-circonscription.csv".colonnes.votants]
-nom = "votants"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-2-circonscription.csv".colonnes.exprimes]
-nom = "exprimes"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-2-circonscription.csv".colonnes.numero_panneau]
-nom = "numero_panneau"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-2-circonscription.csv".colonnes.nuance]
-nom = "nuance"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-2-circonscription.csv".colonnes.nom]
-nom = "nom"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-2-circonscription.csv".colonnes.prenom]
-nom = "prenom"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-2-circonscription.csv".colonnes.sexe]
-nom = "sexe"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-legislatives-2-circonscription.csv".colonnes.voix]
-nom = "voix"
 description = ""
 type = "str"
 
@@ -2581,52 +2273,42 @@ deps = [
 ]
 
 ["data/02_clean/elections/2022-presidentielle-1-bureau_de_vote.csv".colonnes.bureau_de_vote]
-nom = "bureau_de_vote"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-presidentielle-1-bureau_de_vote.csv".colonnes.circonscription]
-nom = "circonscription"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-presidentielle-1-bureau_de_vote.csv".colonnes.inscrits]
-nom = "inscrits"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-presidentielle-1-bureau_de_vote.csv".colonnes.votants]
-nom = "votants"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-presidentielle-1-bureau_de_vote.csv".colonnes.exprimes]
-nom = "exprimes"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-presidentielle-1-bureau_de_vote.csv".colonnes.numero_panneau]
-nom = "numero_panneau"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-presidentielle-1-bureau_de_vote.csv".colonnes.nom]
-nom = "nom"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-presidentielle-1-bureau_de_vote.csv".colonnes.prenom]
-nom = "prenom"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-presidentielle-1-bureau_de_vote.csv".colonnes.sexe]
-nom = "sexe"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-presidentielle-1-bureau_de_vote.csv".colonnes.voix]
-nom = "voix"
 description = ""
 type = "str"
 
@@ -2642,47 +2324,38 @@ deps = [
 ]
 
 ["data/02_clean/elections/2022-presidentielle-1-circonscription.csv".colonnes.circonscription]
-nom = "circonscription"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-presidentielle-1-circonscription.csv".colonnes.inscrits]
-nom = "inscrits"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-presidentielle-1-circonscription.csv".colonnes.votants]
-nom = "votants"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-presidentielle-1-circonscription.csv".colonnes.exprimes]
-nom = "exprimes"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-presidentielle-1-circonscription.csv".colonnes.numero_panneau]
-nom = "numero_panneau"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-presidentielle-1-circonscription.csv".colonnes.nom]
-nom = "nom"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-presidentielle-1-circonscription.csv".colonnes.prenom]
-nom = "prenom"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-presidentielle-1-circonscription.csv".colonnes.sexe]
-nom = "sexe"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-presidentielle-1-circonscription.csv".colonnes.voix]
-nom = "voix"
 description = ""
 type = "str"
 
@@ -2698,52 +2371,42 @@ deps = [
 ]
 
 ["data/02_clean/elections/2022-presidentielle-2-bureau_de_vote.csv".colonnes.bureau_de_vote]
-nom = "bureau_de_vote"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-presidentielle-2-bureau_de_vote.csv".colonnes.circonscription]
-nom = "circonscription"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-presidentielle-2-bureau_de_vote.csv".colonnes.inscrits]
-nom = "inscrits"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-presidentielle-2-bureau_de_vote.csv".colonnes.votants]
-nom = "votants"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-presidentielle-2-bureau_de_vote.csv".colonnes.exprimes]
-nom = "exprimes"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-presidentielle-2-bureau_de_vote.csv".colonnes.numero_panneau]
-nom = "numero_panneau"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-presidentielle-2-bureau_de_vote.csv".colonnes.nom]
-nom = "nom"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-presidentielle-2-bureau_de_vote.csv".colonnes.prenom]
-nom = "prenom"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-presidentielle-2-bureau_de_vote.csv".colonnes.sexe]
-nom = "sexe"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-presidentielle-2-bureau_de_vote.csv".colonnes.voix]
-nom = "voix"
 description = ""
 type = "str"
 
@@ -2759,47 +2422,38 @@ deps = [
 ]
 
 ["data/02_clean/elections/2022-presidentielle-2-circonscription.csv".colonnes.circonscription]
-nom = "circonscription"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-presidentielle-2-circonscription.csv".colonnes.inscrits]
-nom = "inscrits"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-presidentielle-2-circonscription.csv".colonnes.votants]
-nom = "votants"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-presidentielle-2-circonscription.csv".colonnes.exprimes]
-nom = "exprimes"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-presidentielle-2-circonscription.csv".colonnes.numero_panneau]
-nom = "numero_panneau"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-presidentielle-2-circonscription.csv".colonnes.nom]
-nom = "nom"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-presidentielle-2-circonscription.csv".colonnes.prenom]
-nom = "prenom"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-presidentielle-2-circonscription.csv".colonnes.sexe]
-nom = "sexe"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-presidentielle-2-circonscription.csv".colonnes.voix]
-nom = "voix"
 description = ""
 type = "str"
 
@@ -2815,42 +2469,34 @@ deps = [
 ]
 
 ["data/02_clean/elections/2022-presidentielle-parrainages.csv".colonnes.mandat]
-nom = "mandat"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-presidentielle-parrainages.csv".colonnes.nom]
-nom = "nom"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-presidentielle-parrainages.csv".colonnes.prenom]
-nom = "prenom"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-presidentielle-parrainages.csv".colonnes.sexe]
-nom = "sexe"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-presidentielle-parrainages.csv".colonnes.circonscription_mandat]
-nom = "circonscription_mandat"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-presidentielle-parrainages.csv".colonnes.departement_mandat]
-nom = "departement_mandat"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-presidentielle-parrainages.csv".colonnes.candidat]
-nom = "candidat"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2022-presidentielle-parrainages.csv".colonnes.date_publication]
-nom = "date_publication"
 description = ""
 type = "date"
 
@@ -2866,47 +2512,38 @@ deps = [
 ]
 
 ["data/02_clean/elections/2024-europeenne-bureau_de_vote.csv".colonnes.bureau_de_vote]
-nom = "bureau_de_vote"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-europeenne-bureau_de_vote.csv".colonnes.inscrits]
-nom = "inscrits"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-europeenne-bureau_de_vote.csv".colonnes.votants]
-nom = "votants"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-europeenne-bureau_de_vote.csv".colonnes.exprimes]
-nom = "exprimes"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-europeenne-bureau_de_vote.csv".colonnes.numero_panneau]
-nom = "numero_panneau"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-europeenne-bureau_de_vote.csv".colonnes.nuance]
-nom = "nuance"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-europeenne-bureau_de_vote.csv".colonnes.liste_court]
-nom = "liste_court"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-europeenne-bureau_de_vote.csv".colonnes.liste_long]
-nom = "liste_long"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-europeenne-bureau_de_vote.csv".colonnes.voix]
-nom = "voix"
 description = ""
 type = "str"
 
@@ -2922,47 +2559,38 @@ deps = [
 ]
 
 ["data/02_clean/elections/2024-europeenne-circonscription.csv".colonnes.circonscription]
-nom = "circonscription"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-europeenne-circonscription.csv".colonnes.inscrits]
-nom = "inscrits"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-europeenne-circonscription.csv".colonnes.votants]
-nom = "votants"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-europeenne-circonscription.csv".colonnes.exprimes]
-nom = "exprimes"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-europeenne-circonscription.csv".colonnes.numero_panneau]
-nom = "numero_panneau"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-europeenne-circonscription.csv".colonnes.nuance]
-nom = "nuance"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-europeenne-circonscription.csv".colonnes.liste_court]
-nom = "liste_court"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-europeenne-circonscription.csv".colonnes.liste_long]
-nom = "liste_long"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-europeenne-circonscription.csv".colonnes.voix]
-nom = "voix"
 description = ""
 type = "str"
 
@@ -2978,52 +2606,42 @@ deps = [
 ]
 
 ["data/02_clean/elections/2024-legislatives-1-bureau_de_vote.csv".colonnes.bureau_de_vote]
-nom = "bureau_de_vote"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-legislatives-1-bureau_de_vote.csv".colonnes.inscrits]
-nom = "inscrits"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-legislatives-1-bureau_de_vote.csv".colonnes.votants]
-nom = "votants"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-legislatives-1-bureau_de_vote.csv".colonnes.exprimes]
-nom = "exprimes"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-legislatives-1-bureau_de_vote.csv".colonnes.numero_panneau]
-nom = "numero_panneau"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-legislatives-1-bureau_de_vote.csv".colonnes.nuance]
-nom = "nuance"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-legislatives-1-bureau_de_vote.csv".colonnes.nom]
-nom = "nom"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-legislatives-1-bureau_de_vote.csv".colonnes.prenom]
-nom = "prenom"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-legislatives-1-bureau_de_vote.csv".colonnes.sexe]
-nom = "sexe"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-legislatives-1-bureau_de_vote.csv".colonnes.voix]
-nom = "voix"
 description = ""
 type = "str"
 
@@ -3041,87 +2659,70 @@ deps = [
 ]
 
 ["data/02_clean/elections/2024-legislatives-1-candidats.csv".colonnes.circonscription]
-nom = "circonscription"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-legislatives-1-candidats.csv".colonnes.numero_panneau]
-nom = "numero_panneau"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-legislatives-1-candidats.csv".colonnes.numero_depot]
-nom = "numero_depot"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-legislatives-1-candidats.csv".colonnes.sexe]
-nom = "sexe"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-legislatives-1-candidats.csv".colonnes.nom]
-nom = "nom"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-legislatives-1-candidats.csv".colonnes.prenom]
-nom = "prenom"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-legislatives-1-candidats.csv".colonnes.date_naissance]
-nom = "date_naissance"
 description = ""
 type = "date"
 
 ["data/02_clean/elections/2024-legislatives-1-candidats.csv".colonnes.nuance]
-nom = "nuance"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-legislatives-1-candidats.csv".colonnes.profession]
-nom = "profession"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-legislatives-1-candidats.csv".colonnes.sortant]
-nom = "sortant"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-legislatives-1-candidats.csv".colonnes.sexe_suppleant]
-nom = "sexe_suppleant"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-legislatives-1-candidats.csv".colonnes.nom_suppleant]
-nom = "nom_suppleant"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-legislatives-1-candidats.csv".colonnes.prenom_suppleant]
-nom = "prenom_suppleant"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-legislatives-1-candidats.csv".colonnes.date_naissance_suppleant]
-nom = "date_naissance_suppleant"
 description = ""
 type = "date"
 
 ["data/02_clean/elections/2024-legislatives-1-candidats.csv".colonnes.sortant_suppleant]
-nom = "sortant_suppleant"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-legislatives-1-candidats.csv".colonnes.nuance_lfi]
-nom = "nuance_lfi"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-legislatives-1-candidats.csv".colonnes.sensibilite]
-nom = "sensibilite"
 description = ""
 type = "str"
 
@@ -3137,52 +2738,42 @@ deps = [
 ]
 
 ["data/02_clean/elections/2024-legislatives-1-circonscription.csv".colonnes.circonscription]
-nom = "circonscription"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-legislatives-1-circonscription.csv".colonnes.inscrits]
-nom = "inscrits"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-legislatives-1-circonscription.csv".colonnes.votants]
-nom = "votants"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-legislatives-1-circonscription.csv".colonnes.exprimes]
-nom = "exprimes"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-legislatives-1-circonscription.csv".colonnes.numero_panneau]
-nom = "numero_panneau"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-legislatives-1-circonscription.csv".colonnes.nuance]
-nom = "nuance"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-legislatives-1-circonscription.csv".colonnes.nom]
-nom = "nom"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-legislatives-1-circonscription.csv".colonnes.prenom]
-nom = "prenom"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-legislatives-1-circonscription.csv".colonnes.sexe]
-nom = "sexe"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-legislatives-1-circonscription.csv".colonnes.voix]
-nom = "voix"
 description = ""
 type = "str"
 
@@ -3198,52 +2789,42 @@ deps = [
 ]
 
 ["data/02_clean/elections/2024-legislatives-2-bureau_de_vote.csv".colonnes.bureau_de_vote]
-nom = "bureau_de_vote"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-legislatives-2-bureau_de_vote.csv".colonnes.inscrits]
-nom = "inscrits"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-legislatives-2-bureau_de_vote.csv".colonnes.votants]
-nom = "votants"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-legislatives-2-bureau_de_vote.csv".colonnes.exprimes]
-nom = "exprimes"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-legislatives-2-bureau_de_vote.csv".colonnes.numero_panneau]
-nom = "numero_panneau"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-legislatives-2-bureau_de_vote.csv".colonnes.nuance]
-nom = "nuance"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-legislatives-2-bureau_de_vote.csv".colonnes.nom]
-nom = "nom"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-legislatives-2-bureau_de_vote.csv".colonnes.prenom]
-nom = "prenom"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-legislatives-2-bureau_de_vote.csv".colonnes.sexe]
-nom = "sexe"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-legislatives-2-bureau_de_vote.csv".colonnes.voix]
-nom = "voix"
 description = ""
 type = "str"
 
@@ -3261,87 +2842,70 @@ deps = [
 ]
 
 ["data/02_clean/elections/2024-legislatives-2-candidats.csv".colonnes.circonscription]
-nom = "circonscription"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-legislatives-2-candidats.csv".colonnes.numero_panneau]
-nom = "numero_panneau"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-legislatives-2-candidats.csv".colonnes.numero_depot]
-nom = "numero_depot"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-legislatives-2-candidats.csv".colonnes.sexe]
-nom = "sexe"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-legislatives-2-candidats.csv".colonnes.nom]
-nom = "nom"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-legislatives-2-candidats.csv".colonnes.prenom]
-nom = "prenom"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-legislatives-2-candidats.csv".colonnes.date_naissance]
-nom = "date_naissance"
 description = ""
 type = "date"
 
 ["data/02_clean/elections/2024-legislatives-2-candidats.csv".colonnes.nuance]
-nom = "nuance"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-legislatives-2-candidats.csv".colonnes.profession]
-nom = "profession"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-legislatives-2-candidats.csv".colonnes.sortant]
-nom = "sortant"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-legislatives-2-candidats.csv".colonnes.sexe_suppleant]
-nom = "sexe_suppleant"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-legislatives-2-candidats.csv".colonnes.nom_suppleant]
-nom = "nom_suppleant"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-legislatives-2-candidats.csv".colonnes.prenom_suppleant]
-nom = "prenom_suppleant"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-legislatives-2-candidats.csv".colonnes.date_naissance_suppleant]
-nom = "date_naissance_suppleant"
 description = ""
 type = "date"
 
 ["data/02_clean/elections/2024-legislatives-2-candidats.csv".colonnes.sortant_suppleant]
-nom = "sortant_suppleant"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-legislatives-2-candidats.csv".colonnes.nuance_lfi]
-nom = "nuance_lfi"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-legislatives-2-candidats.csv".colonnes.sensibilite]
-nom = "sensibilite"
 description = ""
 type = "str"
 
@@ -3357,52 +2921,42 @@ deps = [
 ]
 
 ["data/02_clean/elections/2024-legislatives-2-circonscription.csv".colonnes.circonscription]
-nom = "circonscription"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-legislatives-2-circonscription.csv".colonnes.inscrits]
-nom = "inscrits"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-legislatives-2-circonscription.csv".colonnes.votants]
-nom = "votants"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-legislatives-2-circonscription.csv".colonnes.exprimes]
-nom = "exprimes"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-legislatives-2-circonscription.csv".colonnes.numero_panneau]
-nom = "numero_panneau"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-legislatives-2-circonscription.csv".colonnes.nuance]
-nom = "nuance"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-legislatives-2-circonscription.csv".colonnes.nom]
-nom = "nom"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-legislatives-2-circonscription.csv".colonnes.prenom]
-nom = "prenom"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-legislatives-2-circonscription.csv".colonnes.sexe]
-nom = "sexe"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-legislatives-2-circonscription.csv".colonnes.voix]
-nom = "voix"
 description = ""
 type = "str"
 
@@ -3419,12 +2973,10 @@ deps = [
 ]
 
 ["data/02_clean/elections/2024-legislatives-correspondances-bureau_de_vote-circonscription.csv".colonnes.bureau_de_vote]
-nom = "bureau_de_vote"
 description = ""
 type = "str"
 
 ["data/02_clean/elections/2024-legislatives-correspondances-bureau_de_vote-circonscription.csv".colonnes.circonscription]
-nom = "circonscription"
 description = ""
 type = "str"
 
@@ -3440,62 +2992,50 @@ deps = [
 ]
 
 ["data/02_clean/rne/conseillers_arrondissement.csv".colonnes.code_commune]
-nom = "code_commune"
 description = ""
-type = "str"
+type = "code_commune"
 
 ["data/02_clean/rne/conseillers_arrondissement.csv".colonnes.code_secteur]
-nom = "code_secteur"
 description = ""
-type = "str"
+type = "code_commune"
 
 ["data/02_clean/rne/conseillers_arrondissement.csv".colonnes.nom]
-nom = "nom"
 description = ""
 type = "str"
 
 ["data/02_clean/rne/conseillers_arrondissement.csv".colonnes.prenom]
-nom = "prenom"
 description = ""
 type = "str"
 
 ["data/02_clean/rne/conseillers_arrondissement.csv".colonnes.sexe]
-nom = "sexe"
 description = ""
 type = "str"
 
 ["data/02_clean/rne/conseillers_arrondissement.csv".colonnes.date_naissance]
-nom = "date_naissance"
 description = ""
 type = "str"
 
 ["data/02_clean/rne/conseillers_arrondissement.csv".colonnes.lieu_naissance]
-nom = "lieu_naissance"
 description = ""
 type = "str"
 
 ["data/02_clean/rne/conseillers_arrondissement.csv".colonnes.csp]
-nom = "csp"
 description = ""
 type = "str"
 
 ["data/02_clean/rne/conseillers_arrondissement.csv".colonnes.date_debut_mandat]
-nom = "date_debut_mandat"
 description = ""
 type = "str"
 
 ["data/02_clean/rne/conseillers_arrondissement.csv".colonnes.fonction]
-nom = "fonction"
 description = ""
 type = "str"
 
 ["data/02_clean/rne/conseillers_arrondissement.csv".colonnes.date_debut_fonction]
-nom = "date_debut_fonction"
 description = ""
 type = "str"
 
 ["data/02_clean/rne/conseillers_arrondissement.csv".colonnes.nuance]
-nom = "nuance"
 description = ""
 type = "str"
 
@@ -3511,57 +3051,46 @@ deps = [
 ]
 
 ["data/02_clean/rne/conseillers_csp.csv".colonnes.type_csp]
-nom = "type_csp"
 description = ""
 type = "str"
 
 ["data/02_clean/rne/conseillers_csp.csv".colonnes.code_csp]
-nom = "code_csp"
 description = ""
 type = "str"
 
 ["data/02_clean/rne/conseillers_csp.csv".colonnes.code_section]
-nom = "code_section"
 description = ""
 type = "str"
 
 ["data/02_clean/rne/conseillers_csp.csv".colonnes.nom]
-nom = "nom"
 description = ""
 type = "str"
 
 ["data/02_clean/rne/conseillers_csp.csv".colonnes.prenom]
-nom = "prenom"
 description = ""
 type = "str"
 
 ["data/02_clean/rne/conseillers_csp.csv".colonnes.sexe]
-nom = "sexe"
 description = ""
 type = "str"
 
 ["data/02_clean/rne/conseillers_csp.csv".colonnes.date_naissance]
-nom = "date_naissance"
 description = ""
 type = "str"
 
 ["data/02_clean/rne/conseillers_csp.csv".colonnes.csp]
-nom = "csp"
 description = ""
 type = "str"
 
 ["data/02_clean/rne/conseillers_csp.csv".colonnes.date_debut_mandat]
-nom = "date_debut_mandat"
 description = ""
 type = "str"
 
 ["data/02_clean/rne/conseillers_csp.csv".colonnes.fonction]
-nom = "fonction"
 description = ""
 type = "str"
 
 ["data/02_clean/rne/conseillers_csp.csv".colonnes.date_debut_fonction]
-nom = "date_debut_fonction"
 description = ""
 type = "str"
 
@@ -3577,52 +3106,42 @@ deps = [
 ]
 
 ["data/02_clean/rne/conseillers_departementaux.csv".colonnes.code_departement]
-nom = "code_departement"
 description = ""
-type = "str"
+type = "code_departement"
 
 ["data/02_clean/rne/conseillers_departementaux.csv".colonnes.code_canton]
-nom = "code_canton"
 description = ""
 type = "str"
 
 ["data/02_clean/rne/conseillers_departementaux.csv".colonnes.nom]
-nom = "nom"
 description = ""
 type = "str"
 
 ["data/02_clean/rne/conseillers_departementaux.csv".colonnes.prenom]
-nom = "prenom"
 description = ""
 type = "str"
 
 ["data/02_clean/rne/conseillers_departementaux.csv".colonnes.sexe]
-nom = "sexe"
 description = ""
 type = "str"
 
 ["data/02_clean/rne/conseillers_departementaux.csv".colonnes.date_naissance]
-nom = "date_naissance"
 description = ""
 type = "str"
 
 ["data/02_clean/rne/conseillers_departementaux.csv".colonnes.csp]
-nom = "csp"
 description = ""
 type = "str"
 
 ["data/02_clean/rne/conseillers_departementaux.csv".colonnes.date_debut_mandat]
-nom = "date_debut_mandat"
 description = ""
 type = "str"
 
 ["data/02_clean/rne/conseillers_departementaux.csv".colonnes.fonction]
-nom = "fonction"
 description = ""
 type = "str"
 
 ["data/02_clean/rne/conseillers_departementaux.csv".colonnes.date_debut_fonction]
-nom = "date_debut_fonction"
 description = ""
 type = "str"
 
@@ -3638,62 +3157,50 @@ deps = [
 ]
 
 ["data/02_clean/rne/conseillers_municipaux.csv".colonnes.code_departement]
-nom = "code_departement"
 description = ""
-type = "str"
+type = "code_departement"
 
 ["data/02_clean/rne/conseillers_municipaux.csv".colonnes.code_collectivite_sp]
-nom = "code_collectivite_sp"
 description = ""
 type = "str"
 
 ["data/02_clean/rne/conseillers_municipaux.csv".colonnes.code_commune]
-nom = "code_commune"
-description = ""
+description = "code_commune"
 type = "str"
 
 ["data/02_clean/rne/conseillers_municipaux.csv".colonnes.nom]
-nom = "nom"
 description = ""
 type = "str"
 
 ["data/02_clean/rne/conseillers_municipaux.csv".colonnes.prenom]
-nom = "prenom"
 description = ""
 type = "str"
 
 ["data/02_clean/rne/conseillers_municipaux.csv".colonnes.sexe]
-nom = "sexe"
 description = ""
 type = "str"
 
 ["data/02_clean/rne/conseillers_municipaux.csv".colonnes.date_naissance]
-nom = "date_naissance"
 description = ""
 type = "date"
 
 ["data/02_clean/rne/conseillers_municipaux.csv".colonnes.csp]
-nom = "csp"
 description = ""
 type = "str"
 
 ["data/02_clean/rne/conseillers_municipaux.csv".colonnes.date_debut_mandat]
-nom = "date_debut_mandat"
 description = ""
 type = "date"
 
 ["data/02_clean/rne/conseillers_municipaux.csv".colonnes.fonction]
-nom = "fonction"
 description = ""
 type = "str"
 
 ["data/02_clean/rne/conseillers_municipaux.csv".colonnes.date_debut_fonction]
-nom = "date_debut_fonction"
 description = ""
 type = "date"
 
 ["data/02_clean/rne/conseillers_municipaux.csv".colonnes.nationalite]
-nom = "nationalite"
 description = ""
 type = "str"
 
@@ -3709,52 +3216,42 @@ deps = [
 ]
 
 ["data/02_clean/rne/conseillers_regionaux.csv".colonnes.code_region]
-nom = "code_region"
 description = ""
 type = "str"
 
 ["data/02_clean/rne/conseillers_regionaux.csv".colonnes.code_departement]
-nom = "code_departement"
 description = ""
-type = "str"
+type = "code_departement"
 
 ["data/02_clean/rne/conseillers_regionaux.csv".colonnes.nom]
-nom = "nom"
 description = ""
 type = "str"
 
 ["data/02_clean/rne/conseillers_regionaux.csv".colonnes.prenom]
-nom = "prenom"
 description = ""
 type = "str"
 
 ["data/02_clean/rne/conseillers_regionaux.csv".colonnes.sexe]
-nom = "sexe"
 description = ""
 type = "str"
 
 ["data/02_clean/rne/conseillers_regionaux.csv".colonnes.date_naissance]
-nom = "date_naissance"
 description = ""
 type = "str"
 
 ["data/02_clean/rne/conseillers_regionaux.csv".colonnes.csp]
-nom = "csp"
 description = ""
 type = "str"
 
 ["data/02_clean/rne/conseillers_regionaux.csv".colonnes.date_debut_mandat]
-nom = "date_debut_mandat"
 description = ""
 type = "str"
 
 ["data/02_clean/rne/conseillers_regionaux.csv".colonnes.fonction]
-nom = "fonction"
 description = ""
 type = "str"
 
 ["data/02_clean/rne/conseillers_regionaux.csv".colonnes.date_debut_fonction]
-nom = "date_debut_fonction"
 description = ""
 type = "str"
 
@@ -3772,41 +3269,33 @@ deps = [
 ]
 
 ["data/03_main/elections/2022-presidentielle-parrainages.csv".colonnes.mandat]
-nom = "mandat"
 description = ""
 type = "str"
 
 ["data/03_main/elections/2022-presidentielle-parrainages.csv".colonnes.nom]
-nom = "nom"
 description = ""
 type = "str"
 
 ["data/03_main/elections/2022-presidentielle-parrainages.csv".colonnes.prenom]
-nom = "prenom"
 description = ""
 type = "str"
 
 ["data/03_main/elections/2022-presidentielle-parrainages.csv".colonnes.sexe]
-nom = "sexe"
 description = ""
 type = "str"
 
 ["data/03_main/elections/2022-presidentielle-parrainages.csv".colonnes.type_code_circonscription]
-nom = "type_code_circonscription"
 description = ""
 type = "str"
 
 ["data/03_main/elections/2022-presidentielle-parrainages.csv".colonnes.code_circonscription]
-nom = "code_circonscription"
 description = ""
 type = "str"
 
 ["data/03_main/elections/2022-presidentielle-parrainages.csv".colonnes.candidat]
-nom = "candidat"
 description = ""
 type = "str"
 
 ["data/03_main/elections/2022-presidentielle-parrainages.csv".colonnes.date_publication]
-nom = "date_publication"
 description = ""
 type = "date"

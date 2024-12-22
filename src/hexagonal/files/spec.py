@@ -27,11 +27,12 @@ class ColonneType(StrEnum):
     STR = "str"
     DATE = "date"
     CODE_COMMUNE = "code_commune"
+    CODE_DEPARTEMENT = "code_departement"
+    CODE_REGION = "code_region"
     INT = "int"
 
 
 class Colonne(BaseModel):
-    nom: str
     type: ColonneType
     description: str
 

@@ -27,7 +27,6 @@
 {% for id, c in production.colonnes.items() -%}
   <tr>
     <td><code>{{ id }}</code></td>
-    <td>{{ c.nom }}</td>
     <td><code>{{ c.type }}</code></td>
     <td>{{ c.description }}</td>
   </tr>
