@@ -841,13 +841,13 @@ stages:
       size: 80815137
     - path: src/hexagonal/annuaire/nettoyer.py
       hash: md5
-      md5: 688a2d970b174ff5fbd61b097c0f7fe8
-      size: 4937
+      md5: aa3ad2f4a5d48f6f937c721f8485f5ac
+      size: 3945
     outs:
     - path: data/02_clean/annuaire/conseils_departementaux.csv
       hash: md5
-      md5: 5309c03e311afead3d83056b4b8688f5
-      size: 26668
+      md5: b1379fa5d07266a99e596bb06d4a9082
+      size: 20411
     - path: data/02_clean/annuaire/mairies.csv
       hash: md5
       md5: b86ed082ddc5e2897e5fefc593380e34

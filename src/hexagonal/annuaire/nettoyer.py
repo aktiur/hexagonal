@@ -69,92 +69,74 @@ def ouverture(mairie):
     return "\n".join(plages)
 
 
+contexte = S(
+    adresse_physique=selection_adresse("Adresse"),
+    adresse_postale=selection_adresse("Adresse postale"),
+)
+
+
+base_spec = {
+    "id": "id",
+    "code_commune": "code_insee_commune",
+    "siret": "siret",
+    "nom": "nom",
+    "emails": ("adresse_courriel", "\n".join),
+    "adresse_physique": (
+        Coalesce(
+            S.adresse_physique,
+            default=None,
+        ),
+        extraire_adresse,
+    ),
+    "adresse_postale": (
+        Coalesce(
+            S.adresse_postale,
+            default="",
+        ),
+        extraire_adresse,
+    ),
+    "telephone": ("telephone", extraire_telephone),
+    "coordonnees": (Coalesce((S.adresse_physique,), default=None), coordonnees),
+}
+
+
+accessibilite_spec = {
+    "type_accessibilite": Coalesce(
+        S.adresse_physique["accessibilite"],
+        default="",
+    ),
+    "details_accessibilite": Coalesce(
+        S.adresse_physique["note_accessibilite"],
+        default="",
+    ),
+    "ouverture": ouverture,
+}
+
+
 spec_mairies = (
-    (
-        S(
-            adresse_physique=selection_adresse("Adresse"),
-            adresse_postale=selection_adresse("Adresse postale"),
-        )
-    ),
+    contexte,
     {
-        "id": "id",
-        "code_commune": "code_insee_commune",
-        "siret": "siret",
-        "nom": "nom",
-        "emails": ("adresse_courriel", "\n".join),
-        "adresse_physique": (
-            Coalesce(
-                S.adresse_physique,
-                default=None,
-            ),
-            extraire_adresse,
-        ),
-        "adresse_postale": (
-            Coalesce(
-                S.adresse_postale,
-                default="",
-            ),
-            extraire_adresse,
-        ),
-        "telephone": ("telephone", extraire_telephone),
-        "coordonnees": (Coalesce((S.adresse_physique,), default=None), coordonnees),
-        "type_accessibilite": Coalesce(
-            S.adresse_physique["accessibilite"],
-            default="",
-        ),
-        "details_accessibilite": Coalesce(
-            S.adresse_physique["note_accessibilite"],
-            default="",
-        ),
-        "ouverture": ouverture,
+        **base_spec,
+        **accessibilite_spec,
     },
 )
 
 
-spec_conseils_departementaux = (
-    (
-        S(
-            adresse_physique=selection_adresse("Adresse"),
-            adresse_postale=selection_adresse("Adresse postale"),
-        )
-    ),
+spec_conseils_departementaux = (contexte, base_spec)
+
+spec_prefectures = (
+    contexte,
     {
-        "id": "id",
-        "code_commune": "code_insee_commune",
-        "siret": "siret",
-        "nom": "nom",
-        "emails": ("adresse_courriel", "\n".join),
-        "adresse_physique": (
-            Coalesce(
-                S.adresse_physique,
-                default=None,
-            ),
-            extraire_adresse,
-        ),
-        "adresse_postale": (
-            Coalesce(
-                S.adresse_postale,
-                default="",
-            ),
-            extraire_adresse,
-        ),
-        "telephone": ("telephone", extraire_telephone),
-        "coordonnees": (Coalesce((S.adresse_physique,), default=None), coordonnees),
-        "type_accessibilite": Coalesce(
-            S.adresse_physique["accessibilite"],
-            default="",
-        ),
-        "details_accessibilite": Coalesce(
-            S.adresse_physique["note_accessibilite"],
-            default="",
-        ),
-        "ouverture": ouverture,
+        **base_spec,
+        **accessibilite_spec,
     },
 )
+
 
 FICHIERS = [
     ("mairies", spec_mairies),
     ("conseils_departementaux", spec_conseils_departementaux),
+    ("prefectures", spec_prefectures),
 ]
 
 
