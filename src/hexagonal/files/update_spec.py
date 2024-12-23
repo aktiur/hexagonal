@@ -50,6 +50,8 @@ def update_spec():
             "s3_url": file.s3_url,
             "mimetype": mimetype or "",
         }
+        if file.data_deps:
+            overwrites["deps"] = [str(f) for f in file.data_deps]
 
         file_spec = {**defaults, **orig_spec, **overwrites}
 

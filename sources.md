@@ -1,7 +1,7 @@
 # Données sources
 
 <a name="data/01_raw/admin_express/admin_express_cog.7z"></a>
-## admin_express_cog
+## Admin Express COG édition 2024 France entière
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -9,7 +9,15 @@
 | Format de fichier | application/x-7z-compressed |
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/82/20f6d8b3447d1f10e2950276332c62> |
 | URL de téléchargement d&#39;origine | <https://data.geopf.fr/telechargement/download/ADMIN-EXPRESS-COG/ADMIN-EXPRESS-COG_3-2__SHP_WGS84G_FRA_2024-02-22/ADMIN-EXPRESS-COG_3-2__SHP_WGS84G_FRA_2024-02-22.7z> |
+| URL d&#39;information | <https://geoservices.ign.fr/adminexpress> |
 
+Fournit les contours géographiques correspondant au découpage administratif du territoire français.
+
+Il couvre l&#39;ensemble des départements français, y compris les départements et régions d&#39;outre-mer (DROM). Les
+collectivités d&#39;outre-mer (COM) ne sont pas couvertes par ce produit.
+
+Le produit ADMIN EXPRESS est décliné dans une édition « COG », appelé ADMIN EXPRESS COG, conforme au code officiel
+géographique publié chaque année par l’INSEE.
 
 <a name="data/01_raw/annuaire/annuaire.tar.bz2"></a>
 ## Base de données locales de l&#39;annuaire de l&#39;administration
@@ -412,7 +420,7 @@ la fois la nuance attribuée par le ministère de l’intérieur et celle du Mon
 
 
 <a name="data/01_raw/elections/2022-presidentielle-parrainages.csv"></a>
-## Liste des parrainages validés par le Conseil constitutionnel
+## Liste des parrainages à l&#39;élection présidentielle 2022 validés par le Conseil constitutionnel
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -565,7 +573,7 @@ Ce tableau indique :
 - la population municipale depuis 2006
 
 <a name="data/01_raw/rne/conseillers_arrondissement.csv"></a>
-## conseillers_arrondissement
+## Répertoire national des élus — conseillers d&#39;arrondissement de Paris, Marseille et Lyon
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -573,10 +581,11 @@ Ce tableau indique :
 | Format de fichier | text/csv |
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/bd/d0e9cc134bd9c122bff812a72620af> |
 | URL de téléchargement d&#39;origine | <https://www.data.gouv.fr/fr/datasets/r/3b6b2281-b9d9-4959-ae9d-c2c166dff118> |
+| URL d&#39;information | <https://www.data.gouv.fr/fr/datasets/repertoire-national-des-elus-1/> |
 
 
 <a name="data/01_raw/rne/conseillers_csp.csv"></a>
-## conseillers_csp
+## Répertoire national des élus — membres des assemblées délibérantes des collectivites à statut particulier
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -584,10 +593,11 @@ Ce tableau indique :
 | Format de fichier | text/csv |
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/76/50260d596109c66acbd2e83423c5f1> |
 | URL de téléchargement d&#39;origine | <https://static.data.gouv.fr/resources/repertoire-national-des-elus-1/20241031-095248/elus-membres-assemblee-ma.csv> |
+| URL d&#39;information | <https://www.data.gouv.fr/fr/datasets/repertoire-national-des-elus-1/> |
 
 
 <a name="data/01_raw/rne/conseillers_departementaux.csv"></a>
-## conseillers_departementaux
+## Répertoire national des élus — conseillers départementaux
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -595,10 +605,11 @@ Ce tableau indique :
 | Format de fichier | text/csv |
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/d0/8158a4f34f09a515333778d34a6e45> |
 | URL de téléchargement d&#39;origine | <https://www.data.gouv.fr/fr/datasets/r/601ef073-d986-4582-8e1a-ed14dc857fba> |
+| URL d&#39;information | <https://www.data.gouv.fr/fr/datasets/repertoire-national-des-elus-1/> |
 
 
 <a name="data/01_raw/rne/conseillers_epci.csv"></a>
-## conseillers_epci
+## Répertoire national des élus — conseillers des EPCI à fiscalité propre
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -606,6 +617,7 @@ Ce tableau indique :
 | Format de fichier | text/csv |
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/e4/ffddb7d7d7504d13e80ccbbb2a0b1b> |
 | URL de téléchargement d&#39;origine | <https://www.data.gouv.fr/fr/datasets/r/41d95d7d-b172-4636-ac44-32656367cdc7> |
+| URL d&#39;information | <https://www.data.gouv.fr/fr/datasets/repertoire-national-des-elus-1/> |
 
 
 <a name="data/01_raw/rne/conseillers_municipaux.csv"></a>
@@ -628,7 +640,7 @@ des candidatures.
 Ce fichier comporte la liste des conseillers municipaux.
 
 <a name="data/01_raw/rne/conseillers_regionaux.csv"></a>
-## conseillers_regionaux
+## Répertoire national des élus — conseillers régionaux
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -636,5 +648,6 @@ Ce fichier comporte la liste des conseillers municipaux.
 | Format de fichier | text/csv |
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/14/fa5e59eee9f3095a38596459a5c149> |
 | URL de téléchargement d&#39;origine | <https://www.data.gouv.fr/fr/datasets/r/430e13f9-834b-4411-a1a8-da0b4b6e715c> |
+| URL d&#39;information | <https://www.data.gouv.fr/fr/datasets/repertoire-national-des-elus-1/> |
 
 

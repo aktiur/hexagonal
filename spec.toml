@@ -891,10 +891,12 @@ type = "date"
 ["data/02_clean/assemblee_nationale/deputes.csv".colonnes.ville_naissance]
 description = "Ville de naissance"
 type = "str"
+nullable = true
 
 ["data/02_clean/assemblee_nationale/deputes.csv".colonnes.departement_naissance]
 description = "Département de naissance"
 type = "code_departement"
+nullable = true
 
 ["data/02_clean/assemblee_nationale/deputes.csv".colonnes.legislatures]
 description = """
@@ -908,14 +910,17 @@ description = """
 La profession de la personne
 """
 type = "str"
+nullable = true
 
 ["data/02_clean/assemblee_nationale/deputes.csv".colonnes.csp_agregee]
 description = "Catégorie socio-professionnelle, premier niveau de la PCS"
 type = "str"
+nullable = true
 
 ["data/02_clean/assemblee_nationale/deputes.csv".colonnes.csp]
 description = "Catégorie socio-professionnelle, deuxième niveau de la PCS"
 type = "str"
+nullable = true
 
 ["data/02_clean/assemblee_nationale/fiches.csv"]
 nom = "fiches"
@@ -926,6 +931,9 @@ description = """
 mimetype = "text/csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/71/e5e846805211992d03976a5dcd2af2"
 s3_url = "s3://hexagonal-data/cache/files/md5/71/e5e846805211992d03976a5dcd2af2"
+deps = [
+    "data/01_raw/assemblee-nationale.zip",
+]
 
 ["data/02_clean/assemblee_nationale/fiches.csv".colonnes.id_personne]
 description = ""
@@ -1338,6 +1346,9 @@ description = """
 mimetype = "text/csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/0b/2244b8608b461e22398da50e0f67d0"
 s3_url = "s3://hexagonal-data/cache/files/md5/0b/2244b8608b461e22398da50e0f67d0"
+deps = [
+    "data/01_raw/cog.zip",
+]
 
 ["data/02_clean/cog/regions.csv".colonnes.code_region]
 description = ""
@@ -2078,8 +2089,6 @@ url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/1b/ffe8
 s3_url = "s3://hexagonal-data/cache/files/md5/1b/ffe89e8a5830f4e17c757fa8135c54"
 deps = [
     "data/01_raw/elections/2022-legislatives-1-candidats.csv",
-    "data/01_raw/elections/2022-legislatives-nuances-lemonde.csv",
-    "data/01_raw/elections/2022-legislatives-nuances-legis-2022.csv",
 ]
 
 ["data/02_clean/elections/2022-legislatives-1-candidats.csv".colonnes.departement]
@@ -2261,8 +2270,6 @@ url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/2f/142b
 s3_url = "s3://hexagonal-data/cache/files/md5/2f/142b8fe02a85c63f54a962c147036c"
 deps = [
     "data/01_raw/elections/2022-legislatives-2-candidats.csv",
-    "data/01_raw/elections/2022-legislatives-nuances-lemonde.csv",
-    "data/01_raw/elections/2022-legislatives-nuances-legis-2022.csv",
 ]
 
 ["data/02_clean/elections/2022-legislatives-2-candidats.csv".colonnes.departement]
@@ -2774,8 +2781,6 @@ url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/c1/9c73
 s3_url = "s3://hexagonal-data/cache/files/md5/c1/9c73368deb0156f8ba71e695dced78"
 deps = [
     "data/01_raw/elections/2024-legislatives-1-candidats.csv",
-    "data/01_raw/elections/2024-legislatives-nfp-sensibilites.csv",
-    "data/01_raw/elections/2024-legislatives-nuances-lfi.csv",
 ]
 
 ["data/02_clean/elections/2024-legislatives-1-candidats.csv".colonnes.departement]
@@ -2953,8 +2958,6 @@ url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/b1/4d19
 s3_url = "s3://hexagonal-data/cache/files/md5/b1/4d19789e35e4f9fbf9a0d236867e48"
 deps = [
     "data/01_raw/elections/2024-legislatives-2-candidats.csv",
-    "data/01_raw/elections/2024-legislatives-nfp-sensibilites.csv",
-    "data/01_raw/elections/2024-legislatives-nuances-lfi.csv",
 ]
 
 ["data/02_clean/elections/2024-legislatives-2-candidats.csv".colonnes.departement]
@@ -3392,8 +3395,13 @@ description = """
 
 """
 mimetype = "text/csv"
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/4c/69d6ef081b448c84056bf1c1c6a09c"
-s3_url = "s3://hexagonal-data/cache/files/md5/4c/69d6ef081b448c84056bf1c1c6a09c"
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/84/a9b4583202e57f5716bcfb204670ab"
+s3_url = "s3://hexagonal-data/cache/files/md5/84/a9b4583202e57f5716bcfb204670ab"
+deps = [
+    "data/02_clean/elections/2022-legislatives-1-candidats.csv",
+    "data/01_raw/elections/2022-legislatives-nuances-lemonde.csv",
+    "data/01_raw/elections/2022-legislatives-nuances-legis-2022.csv",
+]
 
 ["data/03_main/elections/2022-legislatives-1-candidats.csv".colonnes.circonscription]
 description = ""
@@ -3455,11 +3463,6 @@ type = "str"
 description = ""
 type = "bool"
 
-["data/03_main/elections/2022-legislatives-1-candidats.csv".colonnes.nom_lemonde]
-description = ""
-type = "str"
-nullable = true
-
 ["data/03_main/elections/2022-legislatives-1-candidats.csv".colonnes.nuance_lemonde]
 description = ""
 type = "str"
@@ -3487,8 +3490,13 @@ description = """
 
 """
 mimetype = "text/csv"
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/03/c913baa587dba3525fd1d40c74956f"
-s3_url = "s3://hexagonal-data/cache/files/md5/03/c913baa587dba3525fd1d40c74956f"
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/c7/75b7da4a1a92fbdc4a3d7e4eb76c5d"
+s3_url = "s3://hexagonal-data/cache/files/md5/c7/75b7da4a1a92fbdc4a3d7e4eb76c5d"
+deps = [
+    "data/02_clean/elections/2022-legislatives-2-candidats.csv",
+    "data/01_raw/elections/2022-legislatives-nuances-lemonde.csv",
+    "data/01_raw/elections/2022-legislatives-nuances-legis-2022.csv",
+]
 
 ["data/03_main/elections/2022-legislatives-2-candidats.csv".colonnes.circonscription]
 description = ""
@@ -3549,11 +3557,6 @@ type = "str"
 ["data/03_main/elections/2022-legislatives-2-candidats.csv".colonnes.sortant_suppleant]
 description = ""
 type = "bool"
-
-["data/03_main/elections/2022-legislatives-2-candidats.csv".colonnes.nom_lemonde]
-description = ""
-type = "str"
-nullable = true
 
 ["data/03_main/elections/2022-legislatives-2-candidats.csv".colonnes.nuance_lemonde]
 description = ""
@@ -3629,8 +3632,13 @@ description = """
 
 """
 mimetype = "text/csv"
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/55/039f994c3982619e29b3cee2d51920"
-s3_url = "s3://hexagonal-data/cache/files/md5/55/039f994c3982619e29b3cee2d51920"
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/2b/8f8aafd90d405b32f87250a52a34ad"
+s3_url = "s3://hexagonal-data/cache/files/md5/2b/8f8aafd90d405b32f87250a52a34ad"
+deps = [
+    "data/02_clean/elections/2024-legislatives-1-candidats.csv",
+    "data/01_raw/elections/2024-legislatives-nfp-sensibilites.csv",
+    "data/01_raw/elections/2024-legislatives-nuances-lfi.csv",
+]
 
 ["data/03_main/elections/2024-legislatives-1-candidats.csv".colonnes.departement]
 description = ""
@@ -3712,8 +3720,13 @@ description = """
 
 """
 mimetype = "text/csv"
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/a8/3ac3141332232a3ce29d42403fa36c"
-s3_url = "s3://hexagonal-data/cache/files/md5/a8/3ac3141332232a3ce29d42403fa36c"
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/59/0e8d560245a7a23c90005fdc9da4ea"
+s3_url = "s3://hexagonal-data/cache/files/md5/59/0e8d560245a7a23c90005fdc9da4ea"
+deps = [
+    "data/02_clean/elections/2024-legislatives-2-candidats.csv",
+    "data/01_raw/elections/2024-legislatives-nfp-sensibilites.csv",
+    "data/01_raw/elections/2024-legislatives-nuances-lfi.csv",
+]
 
 ["data/03_main/elections/2024-legislatives-2-candidats.csv".colonnes.departement]
 description = ""

@@ -7,9 +7,6 @@ from hexagonal.codes import normaliser_code_circonscription
 
 def extraire_candidats(candidats, sensibilite_nfp, nuances_lfi, destination):
     candidats = pd.read_csv(candidats)
-    candidats["circonscription"] = normaliser_code_circonscription(
-        candidats["circonscription"]
-    )
     candidats["sortant"] = candidats["sortant"] == "OUI"
     candidats["sortant_suppleant"] = candidats["sortant_suppleant"] == "OUI"
     candidats["profession"] = candidats["profession"].str.slice(1, 3)

@@ -17,10 +17,10 @@ SPEC = {}
 
 def get_dataset(path: Union[str, bytes, Path]) -> pd.DataFrame:
     if isinstance(path, (str, bytes)):
-        p = PurePath(path)
+        path = Path(path)
 
-    p = path.relative_to(ROOT_DIR)
-    return SPEC[p]
+    path = path.resolve().relative_to(ROOT_DIR)
+    return SPEC[path]
 
 
 class DatasetType(StrEnum):

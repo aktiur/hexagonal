@@ -599,8 +599,8 @@ stages:
       size: 500739
     - path: src/hexagonal/candidatures/legislatives2024.py
       hash: md5
-      md5: 148307250b540d4f503d64b298bc31f9
-      size: 1022
+      md5: 9675ddd2a74c11b1190a89fab0af58d9
+      size: 911
     - path: src/hexagonal/codes.py
       hash: md5
       md5: b67f4c6a9a34fd34fff62a9c5e98da3e
@@ -608,8 +608,8 @@ stages:
     outs:
     - path: data/03_main/elections/2024-legislatives-1-candidats.csv
       hash: md5
-      md5: 55039f994c3982619e29b3cee2d51920
-      size: 377022
+      md5: 2b8f8aafd90d405b32f87250a52a34ad
+      size: 397512
   2024-legislatives-candidats@2:
     cmd: PYTHONPATH=src python -m hexagonal.candidatures.legislatives2024 data/02_clean/elections/2024-legislatives-2-candidats.csv
       data/01_raw/elections/2024-legislatives-nfp-sensibilites.csv data/01_raw/elections/2024-legislatives-nuances-lfi.csv
@@ -629,8 +629,8 @@ stages:
       size: 137936
     - path: src/hexagonal/candidatures/legislatives2024.py
       hash: md5
-      md5: 148307250b540d4f503d64b298bc31f9
-      size: 1022
+      md5: 9675ddd2a74c11b1190a89fab0af58d9
+      size: 911
     - path: src/hexagonal/codes.py
       hash: md5
       md5: b67f4c6a9a34fd34fff62a9c5e98da3e
@@ -638,8 +638,8 @@ stages:
     outs:
     - path: data/03_main/elections/2024-legislatives-2-candidats.csv
       hash: md5
-      md5: a83ac3141332232a3ce29d42403fa36c
-      size: 102847
+      md5: 590e8d560245a7a23c90005fdc9da4ea
+      size: 106818
   correspondances_bureau_de_vote_circonscription@2024:
     cmd: PYTHONPATH=src python -m hexagonal.correspondances_circonscription data/02_clean/elections/2024-legislatives-1-bureau_de_vote.csv
       data/02_clean/elections/2024-legislatives-1-candidats.csv 
@@ -686,8 +686,8 @@ stages:
       size: 756262
     - path: src/hexagonal/candidatures/legislatives2022.py
       hash: md5
-      md5: b9184fb7ade8ed2fc919084adaf8167c
-      size: 2260
+      md5: f6549f1943b98dd0fa9fb4fe72382bc5
+      size: 2204
     - path: src/hexagonal/codes.py
       hash: md5
       md5: b67f4c6a9a34fd34fff62a9c5e98da3e
@@ -695,8 +695,8 @@ stages:
     outs:
     - path: data/03_main/elections/2022-legislatives-1-candidats.csv
       hash: md5
-      md5: 4c69d6ef081b448c84056bf1c1c6a09c
-      size: 781495
+      md5: 84a9b4583202e57f5716bcfb204670ab
+      size: 986392
   2022-legislatives-candidats@2:
     cmd: PYTHONPATH=src python -m hexagonal.candidatures.legislatives2022 data/02_clean/elections/2022-legislatives-2-candidats.csv
       data/01_raw/elections/2022-legislatives-nuances-lemonde.csv data/01_raw/elections/2022-legislatives-nuances-legis-2022.csv
@@ -716,8 +716,8 @@ stages:
       size: 140177
     - path: src/hexagonal/candidatures/legislatives2022.py
       hash: md5
-      md5: b9184fb7ade8ed2fc919084adaf8167c
-      size: 2260
+      md5: f6549f1943b98dd0fa9fb4fe72382bc5
+      size: 2204
     - path: src/hexagonal/codes.py
       hash: md5
       md5: b67f4c6a9a34fd34fff62a9c5e98da3e
@@ -725,8 +725,8 @@ stages:
     outs:
     - path: data/03_main/elections/2022-legislatives-2-candidats.csv
       hash: md5
-      md5: 03c913baa587dba3525fd1d40c74956f
-      size: 144842
+      md5: c775b7da4a1a92fbdc4a3d7e4eb76c5d
+      size: 189885
   assemblee_nationale_deputees:
     cmd: PYTHONPATH=src python -m hexagonal.assemblee_nationale.liste data/01_raw/assemblee-nationale.zip
       data/02_clean/assemblee_nationale/fiches.csv data/02_clean/assemblee_nationale/deputes.csv

@@ -1,10 +1,11 @@
-import pandas as pd
+from pathlib import PurePath
+
 import pytest
 
 from hexagonal.files.spec import SPEC, PRODUCTION_TYPES
 
 CSV_PRODUCTIONS = [
-    k
+    str(k)
     for k, info in SPEC.items()
     if info.mimetype == "text/csv" and info.type in PRODUCTION_TYPES
 ]
@@ -17,13 +18,12 @@ def csv_path(request):
 
 @pytest.fixture(scope="session")
 def file_info(csv_path):
-    return SPEC[csv_path]
+    return SPEC[PurePath(csv_path)]
 
 
 @pytest.fixture(scope="session")
-def csv_dataset(csv_path):
-    info = SPEC[csv_path]
-    return info.as_pandas_dataframe()
+def csv_dataset(file_info):
+    return file_info.as_pandas_dataframe()
 
 
 def test_pas_de_colonne_vide_dans_les_fichiers_propres(csv_dataset):

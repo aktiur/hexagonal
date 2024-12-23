@@ -32,9 +32,6 @@ def extraire_candidats(candidats, nuances_lemonde, nuances_legis_2022, destinati
         # deux candidats de la 92-11 sont inversés dans le fichier du ministère, LÉVÊQUE et ROLLOT
         candidats.loc[5407:5408, "numero_panneau"] = ["9", "8"]
 
-    candidats["circonscription"] = normaliser_code_circonscription(
-        candidats["departement"] + candidats["circonscription"]
-    )
     del candidats["departement"]
 
     nuances_lemonde = pd.read_csv(
@@ -61,6 +58,9 @@ def extraire_candidats(candidats, nuances_lemonde, nuances_legis_2022, destinati
 
     candidats = pd.merge(candidats, nuances_lemonde, how="left")
     candidats = pd.merge(candidats, nuances_legis_2022, how="left")
+
+    candidats["nom"] = candidats["nom_lemonde"]
+    del candidats["nom_lemonde"]
 
     candidats.to_csv(destination, index=False)
 
