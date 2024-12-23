@@ -8,7 +8,7 @@ from hexagonal.assemblee_nationale.utils import (
     possiblement_nul,
     json_organes,
     ecrire_csv,
-    json_deputees,
+    json_personnes,
     to_list,
 )
 
@@ -71,7 +71,7 @@ def liste_affiliations(archive, groupe_map):
 
     return sorted(
         glom(
-            json_deputees(archive),
+            json_personnes(archive),
             (Iter(spec_deputees), Flatten()),
         ),
         key=itemgetter("date_debut", "id_personne"),

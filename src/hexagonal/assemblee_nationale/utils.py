@@ -11,7 +11,7 @@ def possiblement_nul(d):
     return d
 
 
-def json_deputees(archive):
+def json_personnes(archive):
     for deputee_file in (Path(archive) / "json" / "acteur").iterdir():
         with deputee_file.open() as fd:
             yield json.load(fd)["acteur"]

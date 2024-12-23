@@ -3,9 +3,10 @@ import sys
 from operator import itemgetter
 from zipfile import ZipFile
 
+import click
 from glom import glom, Coalesce, Invoke, T
 
-from hexagonal.assemblee_nationale.utils import possiblement_nul, json_deputees
+from hexagonal.assemblee_nationale.utils import possiblement_nul, json_personnes
 
 PCS_FAM = {
     "Agriculteurs exploitants": "1",
@@ -79,22 +80,34 @@ spec_extraction_liste_deputee = {
 }
 
 
-def extraire_liste_deputes(archive, out_file):
-    writer = csv.DictWriter(out_file, fieldnames=list(spec_extraction_liste_deputee))
+def extraire_liste_deputes(archive, fiches, deputes):
+    personnes = sorted(
+        glom(json_personnes(archive), [spec_extraction_liste_deputee]),
+        key=itemgetter("id_personne"),
+    )
 
-    writer.writeheader()
+    fiches_writer = csv.DictWriter(
+        fiches, fieldnames=list(spec_extraction_liste_deputee)
+    )
+    fiches_writer.writeheader()
+    fiches_writer.writerows(personnes)
 
-    deputes = glom(json_deputees(archive), [spec_extraction_liste_deputee])
+    deputes_writer = csv.DictWriter(
+        deputes, fieldnames=list(spec_extraction_liste_deputee)
+    )
+    deputes_writer.writeheader()
+    deputes_writer.writerows(p for p in personnes if p["legislatures"])
 
-    # noinspection PyTypeChecker
-    writer.writerows(sorted(deputes, key=itemgetter("id_personne")))
 
-
-def run():
-    archive_path, out_path = sys.argv[1:]
-
-    with ZipFile(archive_path) as archive, open(out_path, "w") as out_file:
-        extraire_liste_deputes(archive, out_file)
+@click.command()
+@click.argument(
+    "archive_path", type=click.Path(exists=True, file_okay=True, readable=True)
+)
+@click.argument("fiches", type=click.File("w"))
+@click.argument("deputes", type=click.File("w"))
+def run(archive_path, fiches, deputes):
+    with ZipFile(archive_path) as archive:
+        extraire_liste_deputes(archive, fiches, deputes)
 
 
 if __name__ == "__main__":

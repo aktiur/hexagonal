@@ -152,10 +152,12 @@ stages:
       - ${src}/hexagonal/assemblee_nationale/liste.py
       - ${src}/hexagonal/assemblee_nationale/utils.py
     outs:
+      - ${clean}/assemblee_nationale/fiches.csv
       - ${clean}/assemblee_nationale/deputes.csv
     cmd: >-
       ${python} hexagonal.assemblee_nationale.liste
       ${raw}/assemblee-nationale.zip
+      ${clean}/assemblee_nationale/fiches.csv
       ${clean}/assemblee_nationale/deputes.csv
 
   assemblee_nationale_mandats:

@@ -653,11 +653,11 @@ description = ""
 mimetype = "text/csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/b1/379fa5d07266a99e596bb06d4a9082"
 s3_url = "s3://hexagonal-data/cache/files/md5/b1/379fa5d07266a99e596bb06d4a9082"
+info_url = "https://www.data.gouv.fr/fr/datasets/repertoire-national-des-elus-1/"
 deps = [
     "data/01_raw/annuaire/mairies.json",
     "data/01_raw/annuaire/conseils_departementaux.json",
 ]
-info_url = "https://www.data.gouv.fr/fr/datasets/repertoire-national-des-elus-1/"
 
 ["data/02_clean/annuaire/conseils_departementaux.csv".colonnes.id]
 description = """
@@ -862,8 +862,8 @@ description = """
 Liste des personnes ayant exercé la fonction de député·e.
 """
 mimetype = "text/csv"
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/71/e5e846805211992d03976a5dcd2af2"
-s3_url = "s3://hexagonal-data/cache/files/md5/71/e5e846805211992d03976a5dcd2af2"
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/61/3bd1c724516add947941bd960c157c"
+s3_url = "s3://hexagonal-data/cache/files/md5/61/3bd1c724516add947941bd960c157c"
 deps = [
     "data/01_raw/assemblee-nationale.zip",
 ]
@@ -887,17 +887,14 @@ type = "str"
 ["data/02_clean/assemblee_nationale/deputes.csv".colonnes.date_naissance]
 description = "Date de naissance"
 type = "date"
-nullable = true
 
 ["data/02_clean/assemblee_nationale/deputes.csv".colonnes.ville_naissance]
 description = "Ville de naissance"
 type = "str"
-nullable = true
 
 ["data/02_clean/assemblee_nationale/deputes.csv".colonnes.departement_naissance]
 description = "Département de naissance"
 type = "code_departement"
-nullable = true
 
 ["data/02_clean/assemblee_nationale/deputes.csv".colonnes.legislatures]
 description = """
@@ -911,15 +908,73 @@ description = """
 La profession de la personne
 """
 type = "str"
-nullable = true
 
 ["data/02_clean/assemblee_nationale/deputes.csv".colonnes.csp_agregee]
 description = "Catégorie socio-professionnelle, premier niveau de la PCS"
 type = "str"
-nullable = true
 
 ["data/02_clean/assemblee_nationale/deputes.csv".colonnes.csp]
 description = "Catégorie socio-professionnelle, deuxième niveau de la PCS"
+type = "str"
+
+["data/02_clean/assemblee_nationale/fiches.csv"]
+nom = "fiches"
+type = "clean"
+description = """
+
+"""
+mimetype = "text/csv"
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/71/e5e846805211992d03976a5dcd2af2"
+s3_url = "s3://hexagonal-data/cache/files/md5/71/e5e846805211992d03976a5dcd2af2"
+
+["data/02_clean/assemblee_nationale/fiches.csv".colonnes.id_personne]
+description = ""
+type = "str"
+
+["data/02_clean/assemblee_nationale/fiches.csv".colonnes.civilite]
+description = ""
+type = "str"
+
+["data/02_clean/assemblee_nationale/fiches.csv".colonnes.prenom]
+description = ""
+type = "str"
+
+["data/02_clean/assemblee_nationale/fiches.csv".colonnes.nom]
+description = ""
+type = "str"
+
+["data/02_clean/assemblee_nationale/fiches.csv".colonnes.date_naissance]
+description = ""
+type = "str"
+nullable = true
+
+["data/02_clean/assemblee_nationale/fiches.csv".colonnes.ville_naissance]
+description = ""
+type = "str"
+nullable = true
+
+["data/02_clean/assemblee_nationale/fiches.csv".colonnes.departement_naissance]
+description = ""
+type = "str"
+nullable = true
+
+["data/02_clean/assemblee_nationale/fiches.csv".colonnes.legislatures]
+description = ""
+type = "str"
+nullable = true
+
+["data/02_clean/assemblee_nationale/fiches.csv".colonnes.profession]
+description = ""
+type = "str"
+nullable = true
+
+["data/02_clean/assemblee_nationale/fiches.csv".colonnes.csp_agregee]
+description = ""
+type = "str"
+nullable = true
+
+["data/02_clean/assemblee_nationale/fiches.csv".colonnes.csp]
+description = ""
 type = "str"
 nullable = true
 

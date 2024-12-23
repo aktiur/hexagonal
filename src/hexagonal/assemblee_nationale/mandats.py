@@ -5,7 +5,11 @@ from zipfile import ZipFile
 
 from glom import S, Flatten, glom, Iter, Check, SKIP, Spec, Coalesce
 
-from hexagonal.assemblee_nationale.utils import json_deputees, possiblement_nul, to_list
+from hexagonal.assemblee_nationale.utils import (
+    json_personnes,
+    possiblement_nul,
+    to_list,
+)
 
 CAUSES_MANDATS = {
     "élections générales": "GENERAL",
@@ -78,7 +82,7 @@ def extraire_mandats(archive, out_file):
 
     mandats = sorted(
         glom(
-            json_deputees(archive),
+            json_personnes(archive),
             (Iter(spec_deputees), Flatten()),
         ),
         key=itemgetter("date_debut", "id_mandat"),
