@@ -1,16 +1,26 @@
 import datetime
+import os
 import tomllib
 from enum import StrEnum
-from pathlib import PurePath
-from typing import Optional, List
+from pathlib import PurePath, Path
+from typing import Optional, List, Union
 
+import pandas as pd
 from markupsafe import Markup
 from pydantic import BaseModel
 
 from hexagonal.files import ROOT_DIR
-
+from hexagonal.utils import VRAI
 
 SPEC = {}
+
+
+def get_dataset(path: Union[str, bytes, Path]) -> pd.DataFrame:
+    if isinstance(path, (str, bytes)):
+        p = PurePath(path)
+
+    p = path.relative_to(ROOT_DIR)
+    return SPEC[p]
 
 
 class DatasetType(StrEnum):
@@ -29,12 +39,24 @@ class ColonneType(StrEnum):
     CODE_COMMUNE = "code_commune"
     CODE_DEPARTEMENT = "code_departement"
     CODE_REGION = "code_region"
-    INT = "int"
+    CODE_CIRCONSCRIPTION = "code_circonscription_legislative"
+    INT = "entier"
+    BOOL = "bool"
+
+
+PD_DTYPES = {
+    ColonneType.STR: "str",
+    ColonneType.CODE_COMMUNE: "str",
+    ColonneType.CODE_DEPARTEMENT: "str",
+    ColonneType.CODE_REGION: "str",
+    ColonneType.INT: int,
+}
 
 
 class Colonne(BaseModel):
     type: ColonneType
     description: str
+    nullable: bool = False
 
 
 class Dataset(BaseModel):
@@ -87,6 +109,24 @@ class Dataset(BaseModel):
 
         return [res[k] for k in sorted(res.keys())]
 
+    def as_pandas_dataframe(self):
+        params = {}
+        for id, col in self.colonnes.items():
+            if col.type in PD_DTYPES:
+                params.setdefault("dtype", {})[id] = PD_DTYPES[col.type]
+
+            if col.type == ColonneType.DATE:
+                params.setdefault("parse_dates", []).append(id)
+                params.setdefault("date_format", "ISO8601")
+
+        df = pd.read_csv(self.path, **params)
+
+        for id, col in self.colonnes.items():
+            if col.type == ColonneType.BOOL:
+                df[id] = df[id] == VRAI
+
+        return df
+
 
 with open(ROOT_DIR / "spec.toml", "rb") as fd:
     _spec = tomllib.load(fd)
@@ -94,4 +134,4 @@ with open(ROOT_DIR / "spec.toml", "rb") as fd:
     for path, dataset_info in _spec.items():
         path = PurePath(path)
 
-        SPEC[path] = Dataset(path=path, **dataset_info)
+        SPEC[path] = Dataset.model_validate({"path": path, **dataset_info})

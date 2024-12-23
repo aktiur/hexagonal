@@ -1,11 +1,21 @@
 ["data/01_raw/admin_express/admin_express_cog.7z"]
-nom = "admin_express_cog"
+nom = "Admin Express COG édition 2024 France entière"
 type = "source"
-description = ""
+description = """
+Fournit les contours géographiques correspondant au découpage administratif du territoire français.
+
+Il couvre l'ensemble des départements français, y compris les départements et régions d'outre-mer (DROM). Les
+collectivités d'outre-mer (COM) ne sont pas couvertes par ce produit.
+
+Le produit ADMIN EXPRESS est décliné dans une édition « COG », appelé ADMIN EXPRESS COG, conforme au code officiel
+géographique publié chaque année par l’INSEE.
+"""
 mimetype = "application/x-7z-compressed"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/82/20f6d8b3447d1f10e2950276332c62"
 s3_url = "s3://hexagonal-data/cache/files/md5/82/20f6d8b3447d1f10e2950276332c62"
 source_url = "https://data.geopf.fr/telechargement/download/ADMIN-EXPRESS-COG/ADMIN-EXPRESS-COG_3-2__SHP_WGS84G_FRA_2024-02-22/ADMIN-EXPRESS-COG_3-2__SHP_WGS84G_FRA_2024-02-22.7z"
+info_url = "https://geoservices.ign.fr/adminexpress"
+editeur = ""
 
 ["data/01_raw/annuaire/annuaire.tar.bz2"]
 nom = "Base de données locales de l'annuaire de l'administration"
@@ -436,7 +446,7 @@ info_url = "https://www.data.gouv.fr/fr/datasets/election-presidentielle-des-10-
 editeur = "Ministère de l'intérieur"
 
 ["data/01_raw/elections/2022-presidentielle-parrainages.csv"]
-nom = "Liste des parrainages validés par le Conseil constitutionnel"
+nom = "Liste des parrainages à l'élection présidentielle 2022 validés par le Conseil constitutionnel"
 type = "source"
 description = """
 Le tableau ci-dessous récapitule l’ensemble des parrainages signés par des élus habilités à soutenir un candidat et
@@ -569,40 +579,44 @@ editeur = "INSEE"
 date = "2023-12-28"
 
 ["data/01_raw/rne/conseillers_arrondissement.csv"]
-nom = "conseillers_arrondissement"
+nom = "Répertoire national des élus — conseillers d'arrondissement de Paris, Marseille et Lyon"
 type = "source"
 description = ""
 mimetype = "text/csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/bd/d0e9cc134bd9c122bff812a72620af"
 s3_url = "s3://hexagonal-data/cache/files/md5/bd/d0e9cc134bd9c122bff812a72620af"
 source_url = "https://www.data.gouv.fr/fr/datasets/r/3b6b2281-b9d9-4959-ae9d-c2c166dff118"
+info_url = "https://www.data.gouv.fr/fr/datasets/repertoire-national-des-elus-1/"
 
 ["data/01_raw/rne/conseillers_csp.csv"]
-nom = "conseillers_csp"
+nom = "Répertoire national des élus — membres des assemblées délibérantes des collectivites à statut particulier"
 type = "source"
 description = ""
 mimetype = "text/csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/76/50260d596109c66acbd2e83423c5f1"
 s3_url = "s3://hexagonal-data/cache/files/md5/76/50260d596109c66acbd2e83423c5f1"
 source_url = "https://static.data.gouv.fr/resources/repertoire-national-des-elus-1/20241031-095248/elus-membres-assemblee-ma.csv"
+info_url = "https://www.data.gouv.fr/fr/datasets/repertoire-national-des-elus-1/"
 
 ["data/01_raw/rne/conseillers_departementaux.csv"]
-nom = "conseillers_departementaux"
+nom = "Répertoire national des élus — conseillers départementaux"
 type = "source"
 description = ""
 mimetype = "text/csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/d0/8158a4f34f09a515333778d34a6e45"
 s3_url = "s3://hexagonal-data/cache/files/md5/d0/8158a4f34f09a515333778d34a6e45"
 source_url = "https://www.data.gouv.fr/fr/datasets/r/601ef073-d986-4582-8e1a-ed14dc857fba"
+info_url = "https://www.data.gouv.fr/fr/datasets/repertoire-national-des-elus-1/"
 
 ["data/01_raw/rne/conseillers_epci.csv"]
-nom = "conseillers_epci"
+nom = "Répertoire national des élus — conseillers des EPCI à fiscalité propre"
 type = "source"
 description = ""
 mimetype = "text/csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/e4/ffddb7d7d7504d13e80ccbbb2a0b1b"
 s3_url = "s3://hexagonal-data/cache/files/md5/e4/ffddb7d7d7504d13e80ccbbb2a0b1b"
 source_url = "https://www.data.gouv.fr/fr/datasets/r/41d95d7d-b172-4636-ac44-32656367cdc7"
+info_url = "https://www.data.gouv.fr/fr/datasets/repertoire-national-des-elus-1/"
 
 ["data/01_raw/rne/conseillers_municipaux.csv"]
 nom = "Répertoire national des élus — conseillers municipaux"
@@ -623,25 +637,27 @@ source_url = "https://www.data.gouv.fr/fr/datasets/r/d5f400de-ae3f-4966-8cb6-a85
 info_url = "https://www.data.gouv.fr/fr/datasets/repertoire-national-des-elus-1/"
 
 ["data/01_raw/rne/conseillers_regionaux.csv"]
-nom = "conseillers_regionaux"
+nom = "Répertoire national des élus — conseillers régionaux"
 type = "source"
 description = ""
 mimetype = "text/csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/14/fa5e59eee9f3095a38596459a5c149"
 s3_url = "s3://hexagonal-data/cache/files/md5/14/fa5e59eee9f3095a38596459a5c149"
 source_url = "https://www.data.gouv.fr/fr/datasets/r/430e13f9-834b-4411-a1a8-da0b4b6e715c"
+info_url = "https://www.data.gouv.fr/fr/datasets/repertoire-national-des-elus-1/"
 
 ["data/02_clean/annuaire/conseils_departementaux.csv"]
-nom = "Conseils départementaux"
+nom = "Annuaire administratif — Conseils départementaux"
 type = "clean"
 description = ""
 mimetype = "text/csv"
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/53/09c03e311afead3d83056b4b8688f5"
-s3_url = "s3://hexagonal-data/cache/files/md5/53/09c03e311afead3d83056b4b8688f5"
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/b1/379fa5d07266a99e596bb06d4a9082"
+s3_url = "s3://hexagonal-data/cache/files/md5/b1/379fa5d07266a99e596bb06d4a9082"
 deps = [
     "data/01_raw/annuaire/mairies.json",
     "data/01_raw/annuaire/conseils_departementaux.json",
 ]
+info_url = "https://www.data.gouv.fr/fr/datasets/repertoire-national-des-elus-1/"
 
 ["data/02_clean/annuaire/conseils_departementaux.csv".colonnes.id]
 description = """
@@ -660,6 +676,7 @@ description = """
 Le code SIRET du Conseil départemental
 """
 type = "str"
+nullable = true
 
 ["data/02_clean/annuaire/conseils_departementaux.csv".colonnes.nom]
 description = ""
@@ -670,18 +687,21 @@ description = """
 Les adresses emails indiquées dans l'annuaire, séparées par un saut de ligne simple.
 """
 type = "str"
+nullable = true
 
 ["data/02_clean/annuaire/conseils_departementaux.csv".colonnes.adresse_physique]
 description = """
 Adresse physique complète
 """
 type = "str"
+nullable = true
 
 ["data/02_clean/annuaire/conseils_departementaux.csv".colonnes.adresse_postale]
 description = """
 L'adresse postale, si elle est différente de l'adresse physique (boîte postale, par exemple).
 """
 type = "str"
+nullable = true
 
 ["data/02_clean/annuaire/conseils_departementaux.csv".colonnes.telephone]
 description = ""
@@ -690,18 +710,7 @@ type = "str"
 ["data/02_clean/annuaire/conseils_departementaux.csv".colonnes.coordonnees]
 description = ""
 type = "str"
-
-["data/02_clean/annuaire/conseils_departementaux.csv".colonnes.type_accessibilite]
-description = ""
-type = "str"
-
-["data/02_clean/annuaire/conseils_departementaux.csv".colonnes.details_accessibilite]
-description = ""
-type = "str"
-
-["data/02_clean/annuaire/conseils_departementaux.csv".colonnes.ouverture]
-description = ""
-type = "str"
+nullable = true
 
 ["data/02_clean/annuaire/mairies.csv"]
 nom = "Liste des mairies"
@@ -735,9 +744,10 @@ description = """
 Le numéro de SIRET de cette mairie
 """
 type = "str"
+nullable = true
 
 ["data/02_clean/annuaire/mairies.csv".colonnes.nom]
-description = ""
+description = "Le nom dans l'annuaire administratif"
 type = "str"
 
 ["data/02_clean/annuaire/mairies.csv".colonnes.emails]
@@ -745,42 +755,50 @@ description = """
 Les adresse emails de contact pour cette mairie
 """
 type = "str"
+nullable = true
 
 ["data/02_clean/annuaire/mairies.csv".colonnes.adresse_physique]
 description = """
 L'adresse physique de la mairie.
 """
 type = "str"
+nullable = true
 
 ["data/02_clean/annuaire/mairies.csv".colonnes.adresse_postale]
 description = """
 L'adresse postale de la mairie, si elle est différente de l'adresse physique (par exemple boîte postale)
 """
 type = "str"
+nullable = true
 
 ["data/02_clean/annuaire/mairies.csv".colonnes.telephone]
 description = """
 Numéros de téléphone de contact pour cette mairie.
 """
 type = "str"
+nullable = true
 
 ["data/02_clean/annuaire/mairies.csv".colonnes.coordonnees]
 description = """
 Coordonnées géographiques de cette mairie, selon le système WGS84, au format <code>longitude,latitude</code>
 """
 type = "str"
+nullable = true
 
 ["data/02_clean/annuaire/mairies.csv".colonnes.type_accessibilite]
-description = ""
+description = "Type d'accessibilité"
 type = "str"
+nullable = true
 
 ["data/02_clean/annuaire/mairies.csv".colonnes.details_accessibilite]
-description = ""
+description = "Détails sur l'accessibilité de cette mairie"
 type = "str"
+nullable = true
 
 ["data/02_clean/annuaire/mairies.csv".colonnes.ouverture]
-description = ""
+description = "Horaires d'ouverture indiqués dans l'annuaire"
 type = "str"
+nullable = true
 
 ["data/02_clean/assemblee_nationale/affiliations.csv"]
 nom = "Affiliation des députés à un groupe parlementaire"
@@ -798,48 +816,51 @@ deps = [
 
 ["data/02_clean/assemblee_nationale/affiliations.csv".colonnes.id_personne]
 description = """
-L'identifiant unique de la personne utilisé par l'Assemblée nationale
+L'identifiant unique de la personne affiliée
 """
 type = "str"
 
 ["data/02_clean/assemblee_nationale/affiliations.csv".colonnes.id_groupe]
 description = """
-L'identifiant unique du groupe parlementaire concerné.
+L'identifiant unique du groupe parlementaire concerné par l'affiliation
 """
 type = "str"
 
 ["data/02_clean/assemblee_nationale/affiliations.csv".colonnes.prenom]
 description = """
-Le prénom de la personne concernée.
+Le prénom de la personne affilée
 """
 type = "str"
 
 ["data/02_clean/assemblee_nationale/affiliations.csv".colonnes.nom]
 description = """
-L
+Le nom de famille de la personne affiliée
 """
 type = "str"
 
 ["data/02_clean/assemblee_nationale/affiliations.csv".colonnes.abreviation_groupe]
-description = ""
+description = "L'abbréviation usuelle du groupe parlementaire d'affiliation"
 type = "str"
 
 ["data/02_clean/assemblee_nationale/affiliations.csv".colonnes.legislature]
-description = ""
+description = "Le numéro de la législature correspondant à cette affiliation"
 type = "str"
 
 ["data/02_clean/assemblee_nationale/affiliations.csv".colonnes.date_debut]
-description = ""
+description = "Date de début de l'affiliation"
 type = "date"
 
 ["data/02_clean/assemblee_nationale/affiliations.csv".colonnes.date_fin]
-description = ""
+description = "Date de fin de l'affiliation"
 type = "date"
+nullable = true
 
 ["data/02_clean/assemblee_nationale/deputes.csv"]
-nom = "deputes"
+nom = "Liste des députés"
 type = "clean"
-description = ""
+description = """
+Liste des personnes ayant exercé la fonction de député·e.
+"""
 mimetype = "text/csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/71/e5e846805211992d03976a5dcd2af2"
 s3_url = "s3://hexagonal-data/cache/files/md5/71/e5e846805211992d03976a5dcd2af2"
@@ -848,51 +869,62 @@ deps = [
 ]
 
 ["data/02_clean/assemblee_nationale/deputes.csv".colonnes.id_personne]
-description = ""
+description = "Identifiant unique de la personne"
 type = "str"
 
 ["data/02_clean/assemblee_nationale/deputes.csv".colonnes.civilite]
-description = ""
+description = "Civilité"
 type = "str"
 
 ["data/02_clean/assemblee_nationale/deputes.csv".colonnes.prenom]
-description = ""
+description = "Prénom"
 type = "str"
 
 ["data/02_clean/assemblee_nationale/deputes.csv".colonnes.nom]
-description = ""
+description = "Nom de famille"
 type = "str"
 
 ["data/02_clean/assemblee_nationale/deputes.csv".colonnes.date_naissance]
-description = ""
+description = "Date de naissance"
 type = "date"
+nullable = true
 
 ["data/02_clean/assemblee_nationale/deputes.csv".colonnes.ville_naissance]
-description = ""
+description = "Ville de naissance"
 type = "str"
+nullable = true
 
 ["data/02_clean/assemblee_nationale/deputes.csv".colonnes.departement_naissance]
-description = ""
-type = "str"
+description = "Département de naissance"
+type = "code_departement"
+nullable = true
 
 ["data/02_clean/assemblee_nationale/deputes.csv".colonnes.legislatures]
-description = ""
+description = """
+Les numéros des législatures pendant lesquelles cette personne a occupé la
+fonction de député·e.
+"""
 type = "str"
 
 ["data/02_clean/assemblee_nationale/deputes.csv".colonnes.profession]
-description = ""
+description = """
+La profession de la personne
+"""
 type = "str"
+nullable = true
 
 ["data/02_clean/assemblee_nationale/deputes.csv".colonnes.csp_agregee]
-description = ""
+description = "Catégorie socio-professionnelle, premier niveau de la PCS"
 type = "str"
+nullable = true
 
 ["data/02_clean/assemblee_nationale/deputes.csv".colonnes.csp]
-description = ""
+description = "Catégorie socio-professionnelle, deuxième niveau de la PCS"
 type = "str"
+nullable = true
 
 ["data/02_clean/assemblee_nationale/groupes.csv"]
-nom = "groupes"
+nom = "Liste des groupes parlementaires"
 type = "clean"
 description = ""
 mimetype = "text/csv"
@@ -903,39 +935,41 @@ deps = [
 ]
 
 ["data/02_clean/assemblee_nationale/groupes.csv".colonnes.id_groupe]
-description = ""
+description = "Identifiant unique interne à l'Assemblée nationale"
 type = "str"
 
 ["data/02_clean/assemblee_nationale/groupes.csv".colonnes.legislature]
-description = ""
+description = "Numéro de la législature"
 type = "str"
 
 ["data/02_clean/assemblee_nationale/groupes.csv".colonnes.nom]
-description = ""
+description = "Nom complet du groupe"
 type = "str"
 
 ["data/02_clean/assemblee_nationale/groupes.csv".colonnes.abrege]
-description = ""
+description = "Nom abrégé du groupe"
 type = "str"
 
 ["data/02_clean/assemblee_nationale/groupes.csv".colonnes.abreviation]
-description = ""
+description = "Abbréviation usuelle du nom du groupe"
 type = "str"
 
 ["data/02_clean/assemblee_nationale/groupes.csv".colonnes.date_debut]
-description = ""
+description = "Date de constitution du groupe parlementaire"
 type = "date"
 
 ["data/02_clean/assemblee_nationale/groupes.csv".colonnes.date_fin]
-description = ""
+description = "Date de fin du groupe parlementaire"
 type = "date"
+nullable = true
 
 ["data/02_clean/assemblee_nationale/groupes.csv".colonnes.position]
-description = ""
+description = "Position du groupe parlementaire"
 type = "str"
+nullable = true
 
 ["data/02_clean/assemblee_nationale/groupes.csv".colonnes.preseance]
-description = ""
+description = "Préséance"
 type = "str"
 
 ["data/02_clean/assemblee_nationale/mandats.csv"]
@@ -987,15 +1021,16 @@ type = "str"
 description = """
 Le numéro de la législature dans le cadre de laquelle se déroule le mandat.
 """
-type = "int"
+type = "entier"
 
 ["data/02_clean/assemblee_nationale/mandats.csv".colonnes.circonscription]
-description = ""
-type = "str"
+description = "Code de la circonscription"
+type = "code_circonscription_legislative"
 
 ["data/02_clean/assemblee_nationale/mandats.csv".colonnes.suppleante]
-description = ""
+description = "Code du suppléant"
 type = "str"
+nullable = true
 
 ["data/02_clean/assemblee_nationale/mandats.csv".colonnes.date_debut]
 description = ""
@@ -1004,6 +1039,7 @@ type = "date"
 ["data/02_clean/assemblee_nationale/mandats.csv".colonnes.date_fin]
 description = ""
 type = "date"
+nullable = true
 
 ["data/02_clean/assemblee_nationale/mandats.csv".colonnes.cause_debut_mandat]
 description = ""
@@ -1012,10 +1048,12 @@ type = "str"
 ["data/02_clean/assemblee_nationale/mandats.csv".colonnes.cause_fin_mandat]
 description = ""
 type = "str"
+nullable = true
 
 ["data/02_clean/assemblee_nationale/mandats.csv".colonnes.place]
 description = ""
 type = "str"
+nullable = true
 
 ["data/02_clean/cog/com.csv"]
 nom = "com"
@@ -1043,6 +1081,7 @@ type = "str"
 ["data/02_clean/cog/com.csv".colonnes.article]
 description = ""
 type = "str"
+nullable = true
 
 ["data/02_clean/cog/com.csv".colonnes.charniere]
 description = ""
@@ -1070,26 +1109,32 @@ type = "str"
 ["data/02_clean/cog/communes.csv".colonnes.code_region]
 description = ""
 type = "str"
+nullable = true
 
 ["data/02_clean/cog/communes.csv".colonnes.code_departement]
 description = ""
 type = "code_departement"
+nullable = true
 
 ["data/02_clean/cog/communes.csv".colonnes.code_collectivite_departementale]
 description = ""
 type = "str"
+nullable = true
 
 ["data/02_clean/cog/communes.csv".colonnes.code_arrondissement]
 description = ""
 type = "str"
+nullable = true
 
 ["data/02_clean/cog/communes.csv".colonnes.code_canton]
 description = ""
 type = "str"
+nullable = true
 
 ["data/02_clean/cog/communes.csv".colonnes.code_commune_parent]
 description = ""
 type = "code_commune"
+nullable = true
 
 ["data/02_clean/cog/communes.csv".colonnes.type_nom]
 description = ""
@@ -1102,6 +1147,7 @@ type = "str"
 ["data/02_clean/cog/communes.csv".colonnes.article]
 description = ""
 type = "str"
+nullable = true
 
 ["data/02_clean/cog/communes.csv".colonnes.charniere]
 description = ""
@@ -1141,6 +1187,7 @@ type = "str"
 ["data/02_clean/cog/communes_com.csv".colonnes.article]
 description = ""
 type = "str"
+nullable = true
 
 ["data/02_clean/cog/communes_com.csv".colonnes.charniere]
 description = ""
@@ -1172,6 +1219,7 @@ type = "str"
 ["data/02_clean/cog/communes_historiques.csv".colonnes.article]
 description = ""
 type = "str"
+nullable = true
 
 ["data/02_clean/cog/communes_historiques.csv".colonnes.charniere]
 description = ""
@@ -1184,14 +1232,15 @@ type = "date"
 ["data/02_clean/cog/communes_historiques.csv".colonnes.date_fin]
 description = ""
 type = "date"
+nullable = true
 
 ["data/02_clean/cog/departements.csv"]
 nom = "departements"
 type = "clean"
 description = ""
 mimetype = "text/csv"
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/ac/09c997f36bf573bcd937ba62cc3768"
-s3_url = "s3://hexagonal-data/cache/files/md5/ac/09c997f36bf573bcd937ba62cc3768"
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/22/841dc41b957a71e752a4cd7ca005e1"
+s3_url = "s3://hexagonal-data/cache/files/md5/22/841dc41b957a71e752a4cd7ca005e1"
 deps = [
     "data/01_raw/cog.zip",
 ]
@@ -1213,6 +1262,50 @@ description = ""
 type = "str"
 
 ["data/02_clean/cog/departements.csv".colonnes.nom]
+description = ""
+type = "str"
+
+["data/02_clean/cog/departements.csv".colonnes.article]
+description = ""
+type = "str"
+nullable = true
+
+["data/02_clean/cog/departements.csv".colonnes.charniere]
+description = ""
+type = "str"
+
+["data/02_clean/cog/regions.csv"]
+nom = "regions"
+type = "clean"
+description = """
+
+"""
+mimetype = "text/csv"
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/0b/2244b8608b461e22398da50e0f67d0"
+s3_url = "s3://hexagonal-data/cache/files/md5/0b/2244b8608b461e22398da50e0f67d0"
+
+["data/02_clean/cog/regions.csv".colonnes.code_region]
+description = ""
+type = "str"
+
+["data/02_clean/cog/regions.csv".colonnes.code_commune_cheflieu]
+description = ""
+type = "str"
+
+["data/02_clean/cog/regions.csv".colonnes.type_nom]
+description = ""
+type = "str"
+
+["data/02_clean/cog/regions.csv".colonnes.nom]
+description = ""
+type = "str"
+
+["data/02_clean/cog/regions.csv".colonnes.article]
+description = ""
+type = "str"
+nullable = true
+
+["data/02_clean/cog/regions.csv".colonnes.charniere]
 description = ""
 type = "str"
 
@@ -1619,6 +1712,7 @@ type = "str"
 ["data/02_clean/elections/2020-municipales-1-bureau_de_vote.csv".colonnes.nom]
 description = ""
 type = "str"
+nullable = true
 
 ["data/02_clean/elections/2020-municipales-1-bureau_de_vote.csv".colonnes.prenom]
 description = ""
@@ -1631,6 +1725,7 @@ type = "str"
 ["data/02_clean/elections/2020-municipales-1-bureau_de_vote.csv".colonnes.liste_long]
 description = ""
 type = "str"
+nullable = true
 
 ["data/02_clean/elections/2020-municipales-1-bureau_de_vote.csv".colonnes.voix]
 description = ""
@@ -1686,6 +1781,7 @@ type = "str"
 ["data/02_clean/elections/2020-municipales-2-bureau_de_vote.csv".colonnes.liste_long]
 description = ""
 type = "str"
+nullable = true
 
 ["data/02_clean/elections/2020-municipales-2-bureau_de_vote.csv".colonnes.voix]
 description = ""
@@ -1923,13 +2019,17 @@ nom = "2022-legislatives-1-candidats"
 type = "clean"
 description = ""
 mimetype = "text/csv"
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/88/9400dc852d825436e365d6d2d2f025"
-s3_url = "s3://hexagonal-data/cache/files/md5/88/9400dc852d825436e365d6d2d2f025"
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/1b/ffe89e8a5830f4e17c757fa8135c54"
+s3_url = "s3://hexagonal-data/cache/files/md5/1b/ffe89e8a5830f4e17c757fa8135c54"
 deps = [
     "data/01_raw/elections/2022-legislatives-1-candidats.csv",
     "data/01_raw/elections/2022-legislatives-nuances-lemonde.csv",
     "data/01_raw/elections/2022-legislatives-nuances-legis-2022.csv",
 ]
+
+["data/02_clean/elections/2022-legislatives-1-candidats.csv".colonnes.departement]
+description = ""
+type = "str"
 
 ["data/02_clean/elections/2022-legislatives-1-candidats.csv".colonnes.circonscription]
 description = ""
@@ -1969,7 +2069,7 @@ type = "str"
 
 ["data/02_clean/elections/2022-legislatives-1-candidats.csv".colonnes.sortant]
 description = ""
-type = "str"
+type = "bool"
 
 ["data/02_clean/elections/2022-legislatives-1-candidats.csv".colonnes.sexe_suppleant]
 description = ""
@@ -1989,27 +2089,7 @@ type = "date"
 
 ["data/02_clean/elections/2022-legislatives-1-candidats.csv".colonnes.sortant_suppleant]
 description = ""
-type = "str"
-
-["data/02_clean/elections/2022-legislatives-1-candidats.csv".colonnes.nom_lemonde]
-description = ""
-type = "str"
-
-["data/02_clean/elections/2022-legislatives-1-candidats.csv".colonnes.nuance_lemonde]
-description = ""
-type = "str"
-
-["data/02_clean/elections/2022-legislatives-1-candidats.csv".colonnes.parti_lemonde]
-description = ""
-type = "str"
-
-["data/02_clean/elections/2022-legislatives-1-candidats.csv".colonnes.nuance_legis_2022]
-description = ""
-type = "str"
-
-["data/02_clean/elections/2022-legislatives-1-candidats.csv".colonnes.regroupement_om_legis_2022]
-description = ""
-type = "str"
+type = "bool"
 
 ["data/02_clean/elections/2022-legislatives-1-circonscription.csv"]
 nom = "2022-legislatives-1-circonscription"
@@ -2122,13 +2202,17 @@ nom = "2022-legislatives-2-candidats"
 type = "clean"
 description = ""
 mimetype = "text/csv"
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/dd/9c912a3b89e7bb3d5214f747b9e02d"
-s3_url = "s3://hexagonal-data/cache/files/md5/dd/9c912a3b89e7bb3d5214f747b9e02d"
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/2f/142b8fe02a85c63f54a962c147036c"
+s3_url = "s3://hexagonal-data/cache/files/md5/2f/142b8fe02a85c63f54a962c147036c"
 deps = [
     "data/01_raw/elections/2022-legislatives-2-candidats.csv",
     "data/01_raw/elections/2022-legislatives-nuances-lemonde.csv",
     "data/01_raw/elections/2022-legislatives-nuances-legis-2022.csv",
 ]
+
+["data/02_clean/elections/2022-legislatives-2-candidats.csv".colonnes.departement]
+description = ""
+type = "str"
 
 ["data/02_clean/elections/2022-legislatives-2-candidats.csv".colonnes.circonscription]
 description = ""
@@ -2168,7 +2252,7 @@ type = "str"
 
 ["data/02_clean/elections/2022-legislatives-2-candidats.csv".colonnes.sortant]
 description = ""
-type = "str"
+type = "bool"
 
 ["data/02_clean/elections/2022-legislatives-2-candidats.csv".colonnes.sexe_suppleant]
 description = ""
@@ -2188,27 +2272,7 @@ type = "date"
 
 ["data/02_clean/elections/2022-legislatives-2-candidats.csv".colonnes.sortant_suppleant]
 description = ""
-type = "str"
-
-["data/02_clean/elections/2022-legislatives-2-candidats.csv".colonnes.nom_lemonde]
-description = ""
-type = "str"
-
-["data/02_clean/elections/2022-legislatives-2-candidats.csv".colonnes.nuance_lemonde]
-description = ""
-type = "str"
-
-["data/02_clean/elections/2022-legislatives-2-candidats.csv".colonnes.parti_lemonde]
-description = ""
-type = "str"
-
-["data/02_clean/elections/2022-legislatives-2-candidats.csv".colonnes.nuance_legis_2022]
-description = ""
-type = "str"
-
-["data/02_clean/elections/2022-legislatives-2-candidats.csv".colonnes.regroupement_om_legis_2022]
-description = ""
-type = "str"
+type = "bool"
 
 ["data/02_clean/elections/2022-legislatives-2-circonscription.csv"]
 nom = "2022-legislatives-2-circonscription"
@@ -2487,6 +2551,7 @@ type = "str"
 ["data/02_clean/elections/2022-presidentielle-parrainages.csv".colonnes.circonscription_mandat]
 description = ""
 type = "str"
+nullable = true
 
 ["data/02_clean/elections/2022-presidentielle-parrainages.csv".colonnes.departement_mandat]
 description = ""
@@ -2650,13 +2715,17 @@ nom = "2024-legislatives-1-candidats"
 type = "clean"
 description = ""
 mimetype = "text/csv"
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/ad/8eaee9ac50795b6bfd3e6edea36336"
-s3_url = "s3://hexagonal-data/cache/files/md5/ad/8eaee9ac50795b6bfd3e6edea36336"
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/c1/9c73368deb0156f8ba71e695dced78"
+s3_url = "s3://hexagonal-data/cache/files/md5/c1/9c73368deb0156f8ba71e695dced78"
 deps = [
     "data/01_raw/elections/2024-legislatives-1-candidats.csv",
     "data/01_raw/elections/2024-legislatives-nfp-sensibilites.csv",
     "data/01_raw/elections/2024-legislatives-nuances-lfi.csv",
 ]
+
+["data/02_clean/elections/2024-legislatives-1-candidats.csv".colonnes.departement]
+description = ""
+type = "str"
 
 ["data/02_clean/elections/2024-legislatives-1-candidats.csv".colonnes.circonscription]
 description = ""
@@ -2696,7 +2765,7 @@ type = "str"
 
 ["data/02_clean/elections/2024-legislatives-1-candidats.csv".colonnes.sortant]
 description = ""
-type = "str"
+type = "bool"
 
 ["data/02_clean/elections/2024-legislatives-1-candidats.csv".colonnes.sexe_suppleant]
 description = ""
@@ -2716,15 +2785,7 @@ type = "date"
 
 ["data/02_clean/elections/2024-legislatives-1-candidats.csv".colonnes.sortant_suppleant]
 description = ""
-type = "str"
-
-["data/02_clean/elections/2024-legislatives-1-candidats.csv".colonnes.nuance_lfi]
-description = ""
-type = "str"
-
-["data/02_clean/elections/2024-legislatives-1-candidats.csv".colonnes.sensibilite]
-description = ""
-type = "str"
+type = "bool"
 
 ["data/02_clean/elections/2024-legislatives-1-circonscription.csv"]
 nom = "2024-legislatives-1-circonscription"
@@ -2833,13 +2894,17 @@ nom = "2024-legislatives-2-candidats"
 type = "clean"
 description = ""
 mimetype = "text/csv"
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/5d/c7dc1b36ed7e4f15bf4dd8b2ed27d2"
-s3_url = "s3://hexagonal-data/cache/files/md5/5d/c7dc1b36ed7e4f15bf4dd8b2ed27d2"
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/b1/4d19789e35e4f9fbf9a0d236867e48"
+s3_url = "s3://hexagonal-data/cache/files/md5/b1/4d19789e35e4f9fbf9a0d236867e48"
 deps = [
     "data/01_raw/elections/2024-legislatives-2-candidats.csv",
     "data/01_raw/elections/2024-legislatives-nfp-sensibilites.csv",
     "data/01_raw/elections/2024-legislatives-nuances-lfi.csv",
 ]
+
+["data/02_clean/elections/2024-legislatives-2-candidats.csv".colonnes.departement]
+description = ""
+type = "str"
 
 ["data/02_clean/elections/2024-legislatives-2-candidats.csv".colonnes.circonscription]
 description = ""
@@ -2879,7 +2944,7 @@ type = "str"
 
 ["data/02_clean/elections/2024-legislatives-2-candidats.csv".colonnes.sortant]
 description = ""
-type = "str"
+type = "bool"
 
 ["data/02_clean/elections/2024-legislatives-2-candidats.csv".colonnes.sexe_suppleant]
 description = ""
@@ -2899,15 +2964,7 @@ type = "date"
 
 ["data/02_clean/elections/2024-legislatives-2-candidats.csv".colonnes.sortant_suppleant]
 description = ""
-type = "str"
-
-["data/02_clean/elections/2024-legislatives-2-candidats.csv".colonnes.nuance_lfi]
-description = ""
-type = "str"
-
-["data/02_clean/elections/2024-legislatives-2-candidats.csv".colonnes.sensibilite]
-description = ""
-type = "str"
+type = "bool"
 
 ["data/02_clean/elections/2024-legislatives-2-circonscription.csv"]
 nom = "2024-legislatives-2-circonscription"
@@ -3018,6 +3075,7 @@ type = "str"
 ["data/02_clean/rne/conseillers_arrondissement.csv".colonnes.lieu_naissance]
 description = ""
 type = "str"
+nullable = true
 
 ["data/02_clean/rne/conseillers_arrondissement.csv".colonnes.csp]
 description = ""
@@ -3030,10 +3088,12 @@ type = "str"
 ["data/02_clean/rne/conseillers_arrondissement.csv".colonnes.fonction]
 description = ""
 type = "str"
+nullable = true
 
 ["data/02_clean/rne/conseillers_arrondissement.csv".colonnes.date_debut_fonction]
 description = ""
 type = "str"
+nullable = true
 
 ["data/02_clean/rne/conseillers_arrondissement.csv".colonnes.nuance]
 description = ""
@@ -3061,6 +3121,7 @@ type = "str"
 ["data/02_clean/rne/conseillers_csp.csv".colonnes.code_section]
 description = ""
 type = "str"
+nullable = true
 
 ["data/02_clean/rne/conseillers_csp.csv".colonnes.nom]
 description = ""
@@ -3089,10 +3150,12 @@ type = "str"
 ["data/02_clean/rne/conseillers_csp.csv".colonnes.fonction]
 description = ""
 type = "str"
+nullable = true
 
 ["data/02_clean/rne/conseillers_csp.csv".colonnes.date_debut_fonction]
 description = ""
 type = "str"
+nullable = true
 
 ["data/02_clean/rne/conseillers_departementaux.csv"]
 nom = "conseillers_departementaux"
@@ -3140,10 +3203,12 @@ type = "str"
 ["data/02_clean/rne/conseillers_departementaux.csv".colonnes.fonction]
 description = ""
 type = "str"
+nullable = true
 
 ["data/02_clean/rne/conseillers_departementaux.csv".colonnes.date_debut_fonction]
 description = ""
 type = "str"
+nullable = true
 
 ["data/02_clean/rne/conseillers_municipaux.csv"]
 nom = "conseillers_municipaux"
@@ -3159,10 +3224,12 @@ deps = [
 ["data/02_clean/rne/conseillers_municipaux.csv".colonnes.code_departement]
 description = ""
 type = "code_departement"
+nullable = true
 
 ["data/02_clean/rne/conseillers_municipaux.csv".colonnes.code_collectivite_sp]
 description = ""
 type = "str"
+nullable = true
 
 ["data/02_clean/rne/conseillers_municipaux.csv".colonnes.code_commune]
 description = "code_commune"
@@ -3171,6 +3238,7 @@ type = "str"
 ["data/02_clean/rne/conseillers_municipaux.csv".colonnes.nom]
 description = ""
 type = "str"
+nullable = true
 
 ["data/02_clean/rne/conseillers_municipaux.csv".colonnes.prenom]
 description = ""
@@ -3187,6 +3255,7 @@ type = "date"
 ["data/02_clean/rne/conseillers_municipaux.csv".colonnes.csp]
 description = ""
 type = "str"
+nullable = true
 
 ["data/02_clean/rne/conseillers_municipaux.csv".colonnes.date_debut_mandat]
 description = ""
@@ -3195,10 +3264,12 @@ type = "date"
 ["data/02_clean/rne/conseillers_municipaux.csv".colonnes.fonction]
 description = ""
 type = "str"
+nullable = true
 
 ["data/02_clean/rne/conseillers_municipaux.csv".colonnes.date_debut_fonction]
 description = ""
 type = "date"
+nullable = true
 
 ["data/02_clean/rne/conseillers_municipaux.csv".colonnes.nationalite]
 description = ""
@@ -3222,6 +3293,7 @@ type = "str"
 ["data/02_clean/rne/conseillers_regionaux.csv".colonnes.code_departement]
 description = ""
 type = "code_departement"
+nullable = true
 
 ["data/02_clean/rne/conseillers_regionaux.csv".colonnes.nom]
 description = ""
@@ -3242,6 +3314,7 @@ type = "str"
 ["data/02_clean/rne/conseillers_regionaux.csv".colonnes.csp]
 description = ""
 type = "str"
+nullable = true
 
 ["data/02_clean/rne/conseillers_regionaux.csv".colonnes.date_debut_mandat]
 description = ""
@@ -3250,10 +3323,202 @@ type = "str"
 ["data/02_clean/rne/conseillers_regionaux.csv".colonnes.fonction]
 description = ""
 type = "str"
+nullable = true
 
 ["data/02_clean/rne/conseillers_regionaux.csv".colonnes.date_debut_fonction]
 description = ""
 type = "str"
+nullable = true
+
+["data/03_main/elections/2022-legislatives-1-candidats.csv"]
+nom = "2022-legislatives-1-candidats"
+type = "main"
+description = """
+
+"""
+mimetype = "text/csv"
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/4c/69d6ef081b448c84056bf1c1c6a09c"
+s3_url = "s3://hexagonal-data/cache/files/md5/4c/69d6ef081b448c84056bf1c1c6a09c"
+
+["data/03_main/elections/2022-legislatives-1-candidats.csv".colonnes.circonscription]
+description = ""
+type = "str"
+
+["data/03_main/elections/2022-legislatives-1-candidats.csv".colonnes.numero_panneau]
+description = ""
+type = "str"
+
+["data/03_main/elections/2022-legislatives-1-candidats.csv".colonnes.numero_depot]
+description = ""
+type = "str"
+
+["data/03_main/elections/2022-legislatives-1-candidats.csv".colonnes.sexe]
+description = ""
+type = "str"
+
+["data/03_main/elections/2022-legislatives-1-candidats.csv".colonnes.nom]
+description = ""
+type = "str"
+
+["data/03_main/elections/2022-legislatives-1-candidats.csv".colonnes.prenom]
+description = ""
+type = "str"
+
+["data/03_main/elections/2022-legislatives-1-candidats.csv".colonnes.date_naissance]
+description = ""
+type = "str"
+
+["data/03_main/elections/2022-legislatives-1-candidats.csv".colonnes.nuance]
+description = ""
+type = "str"
+
+["data/03_main/elections/2022-legislatives-1-candidats.csv".colonnes.profession]
+description = ""
+type = "str"
+
+["data/03_main/elections/2022-legislatives-1-candidats.csv".colonnes.sortant]
+description = ""
+type = "bool"
+
+["data/03_main/elections/2022-legislatives-1-candidats.csv".colonnes.sexe_suppleant]
+description = ""
+type = "str"
+
+["data/03_main/elections/2022-legislatives-1-candidats.csv".colonnes.nom_suppleant]
+description = ""
+type = "str"
+
+["data/03_main/elections/2022-legislatives-1-candidats.csv".colonnes.prenom_suppleant]
+description = ""
+type = "str"
+
+["data/03_main/elections/2022-legislatives-1-candidats.csv".colonnes.date_naissance_suppleant]
+description = ""
+type = "str"
+
+["data/03_main/elections/2022-legislatives-1-candidats.csv".colonnes.sortant_suppleant]
+description = ""
+type = "bool"
+
+["data/03_main/elections/2022-legislatives-1-candidats.csv".colonnes.nom_lemonde]
+description = ""
+type = "str"
+nullable = true
+
+["data/03_main/elections/2022-legislatives-1-candidats.csv".colonnes.nuance_lemonde]
+description = ""
+type = "str"
+nullable = true
+
+["data/03_main/elections/2022-legislatives-1-candidats.csv".colonnes.parti_lemonde]
+description = ""
+type = "str"
+nullable = true
+
+["data/03_main/elections/2022-legislatives-1-candidats.csv".colonnes.nuance_legis_2022]
+description = ""
+type = "str"
+nullable = true
+
+["data/03_main/elections/2022-legislatives-1-candidats.csv".colonnes.regroupement_om_legis_2022]
+description = ""
+type = "str"
+nullable = true
+
+["data/03_main/elections/2022-legislatives-2-candidats.csv"]
+nom = "2022-legislatives-2-candidats"
+type = "main"
+description = """
+
+"""
+mimetype = "text/csv"
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/03/c913baa587dba3525fd1d40c74956f"
+s3_url = "s3://hexagonal-data/cache/files/md5/03/c913baa587dba3525fd1d40c74956f"
+
+["data/03_main/elections/2022-legislatives-2-candidats.csv".colonnes.circonscription]
+description = ""
+type = "str"
+
+["data/03_main/elections/2022-legislatives-2-candidats.csv".colonnes.numero_panneau]
+description = ""
+type = "str"
+
+["data/03_main/elections/2022-legislatives-2-candidats.csv".colonnes.numero_depot]
+description = ""
+type = "str"
+
+["data/03_main/elections/2022-legislatives-2-candidats.csv".colonnes.sexe]
+description = ""
+type = "str"
+
+["data/03_main/elections/2022-legislatives-2-candidats.csv".colonnes.nom]
+description = ""
+type = "str"
+
+["data/03_main/elections/2022-legislatives-2-candidats.csv".colonnes.prenom]
+description = ""
+type = "str"
+
+["data/03_main/elections/2022-legislatives-2-candidats.csv".colonnes.date_naissance]
+description = ""
+type = "str"
+
+["data/03_main/elections/2022-legislatives-2-candidats.csv".colonnes.nuance]
+description = ""
+type = "str"
+
+["data/03_main/elections/2022-legislatives-2-candidats.csv".colonnes.profession]
+description = ""
+type = "str"
+
+["data/03_main/elections/2022-legislatives-2-candidats.csv".colonnes.sortant]
+description = ""
+type = "bool"
+
+["data/03_main/elections/2022-legislatives-2-candidats.csv".colonnes.sexe_suppleant]
+description = ""
+type = "str"
+
+["data/03_main/elections/2022-legislatives-2-candidats.csv".colonnes.nom_suppleant]
+description = ""
+type = "str"
+
+["data/03_main/elections/2022-legislatives-2-candidats.csv".colonnes.prenom_suppleant]
+description = ""
+type = "str"
+
+["data/03_main/elections/2022-legislatives-2-candidats.csv".colonnes.date_naissance_suppleant]
+description = ""
+type = "str"
+
+["data/03_main/elections/2022-legislatives-2-candidats.csv".colonnes.sortant_suppleant]
+description = ""
+type = "bool"
+
+["data/03_main/elections/2022-legislatives-2-candidats.csv".colonnes.nom_lemonde]
+description = ""
+type = "str"
+nullable = true
+
+["data/03_main/elections/2022-legislatives-2-candidats.csv".colonnes.nuance_lemonde]
+description = ""
+type = "str"
+nullable = true
+
+["data/03_main/elections/2022-legislatives-2-candidats.csv".colonnes.parti_lemonde]
+description = ""
+type = "str"
+nullable = true
+
+["data/03_main/elections/2022-legislatives-2-candidats.csv".colonnes.nuance_legis_2022]
+description = ""
+type = "str"
+nullable = true
+
+["data/03_main/elections/2022-legislatives-2-candidats.csv".colonnes.regroupement_om_legis_2022]
+description = ""
+type = "str"
+nullable = true
 
 ["data/03_main/elections/2022-presidentielle-parrainages.csv"]
 nom = "2022-presidentielle-parrainages"
@@ -3287,10 +3552,12 @@ type = "str"
 ["data/03_main/elections/2022-presidentielle-parrainages.csv".colonnes.type_code_circonscription]
 description = ""
 type = "str"
+nullable = true
 
 ["data/03_main/elections/2022-presidentielle-parrainages.csv".colonnes.code_circonscription]
 description = ""
 type = "str"
+nullable = true
 
 ["data/03_main/elections/2022-presidentielle-parrainages.csv".colonnes.candidat]
 description = ""
@@ -3299,3 +3566,169 @@ type = "str"
 ["data/03_main/elections/2022-presidentielle-parrainages.csv".colonnes.date_publication]
 description = ""
 type = "date"
+
+["data/03_main/elections/2024-legislatives-1-candidats.csv"]
+nom = "2024-legislatives-1-candidats"
+type = "main"
+description = """
+
+"""
+mimetype = "text/csv"
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/55/039f994c3982619e29b3cee2d51920"
+s3_url = "s3://hexagonal-data/cache/files/md5/55/039f994c3982619e29b3cee2d51920"
+
+["data/03_main/elections/2024-legislatives-1-candidats.csv".colonnes.departement]
+description = ""
+type = "str"
+
+["data/03_main/elections/2024-legislatives-1-candidats.csv".colonnes.circonscription]
+description = ""
+type = "str"
+
+["data/03_main/elections/2024-legislatives-1-candidats.csv".colonnes.numero_panneau]
+description = ""
+type = "str"
+
+["data/03_main/elections/2024-legislatives-1-candidats.csv".colonnes.numero_depot]
+description = ""
+type = "str"
+
+["data/03_main/elections/2024-legislatives-1-candidats.csv".colonnes.sexe]
+description = ""
+type = "str"
+
+["data/03_main/elections/2024-legislatives-1-candidats.csv".colonnes.nom]
+description = ""
+type = "str"
+
+["data/03_main/elections/2024-legislatives-1-candidats.csv".colonnes.prenom]
+description = ""
+type = "str"
+
+["data/03_main/elections/2024-legislatives-1-candidats.csv".colonnes.date_naissance]
+description = ""
+type = "str"
+
+["data/03_main/elections/2024-legislatives-1-candidats.csv".colonnes.nuance]
+description = ""
+type = "str"
+
+["data/03_main/elections/2024-legislatives-1-candidats.csv".colonnes.profession]
+description = ""
+type = "str"
+
+["data/03_main/elections/2024-legislatives-1-candidats.csv".colonnes.sortant]
+description = ""
+type = "bool"
+
+["data/03_main/elections/2024-legislatives-1-candidats.csv".colonnes.sexe_suppleant]
+description = ""
+type = "str"
+
+["data/03_main/elections/2024-legislatives-1-candidats.csv".colonnes.nom_suppleant]
+description = ""
+type = "str"
+
+["data/03_main/elections/2024-legislatives-1-candidats.csv".colonnes.prenom_suppleant]
+description = ""
+type = "str"
+
+["data/03_main/elections/2024-legislatives-1-candidats.csv".colonnes.date_naissance_suppleant]
+description = ""
+type = "str"
+
+["data/03_main/elections/2024-legislatives-1-candidats.csv".colonnes.sortant_suppleant]
+description = ""
+type = "bool"
+
+["data/03_main/elections/2024-legislatives-1-candidats.csv".colonnes.nuance_lfi]
+description = ""
+type = "str"
+
+["data/03_main/elections/2024-legislatives-1-candidats.csv".colonnes.sensibilite]
+description = ""
+type = "str"
+nullable = true
+
+["data/03_main/elections/2024-legislatives-2-candidats.csv"]
+nom = "2024-legislatives-2-candidats"
+type = "main"
+description = """
+
+"""
+mimetype = "text/csv"
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/a8/3ac3141332232a3ce29d42403fa36c"
+s3_url = "s3://hexagonal-data/cache/files/md5/a8/3ac3141332232a3ce29d42403fa36c"
+
+["data/03_main/elections/2024-legislatives-2-candidats.csv".colonnes.departement]
+description = ""
+type = "str"
+
+["data/03_main/elections/2024-legislatives-2-candidats.csv".colonnes.circonscription]
+description = ""
+type = "str"
+
+["data/03_main/elections/2024-legislatives-2-candidats.csv".colonnes.numero_panneau]
+description = ""
+type = "str"
+
+["data/03_main/elections/2024-legislatives-2-candidats.csv".colonnes.numero_depot]
+description = ""
+type = "str"
+
+["data/03_main/elections/2024-legislatives-2-candidats.csv".colonnes.sexe]
+description = ""
+type = "str"
+
+["data/03_main/elections/2024-legislatives-2-candidats.csv".colonnes.nom]
+description = ""
+type = "str"
+
+["data/03_main/elections/2024-legislatives-2-candidats.csv".colonnes.prenom]
+description = ""
+type = "str"
+
+["data/03_main/elections/2024-legislatives-2-candidats.csv".colonnes.date_naissance]
+description = ""
+type = "str"
+
+["data/03_main/elections/2024-legislatives-2-candidats.csv".colonnes.nuance]
+description = ""
+type = "str"
+
+["data/03_main/elections/2024-legislatives-2-candidats.csv".colonnes.profession]
+description = ""
+type = "str"
+
+["data/03_main/elections/2024-legislatives-2-candidats.csv".colonnes.sortant]
+description = ""
+type = "bool"
+
+["data/03_main/elections/2024-legislatives-2-candidats.csv".colonnes.sexe_suppleant]
+description = ""
+type = "str"
+
+["data/03_main/elections/2024-legislatives-2-candidats.csv".colonnes.nom_suppleant]
+description = ""
+type = "str"
+
+["data/03_main/elections/2024-legislatives-2-candidats.csv".colonnes.prenom_suppleant]
+description = ""
+type = "str"
+
+["data/03_main/elections/2024-legislatives-2-candidats.csv".colonnes.date_naissance_suppleant]
+description = ""
+type = "str"
+
+["data/03_main/elections/2024-legislatives-2-candidats.csv".colonnes.sortant_suppleant]
+description = ""
+type = "bool"
+
+["data/03_main/elections/2024-legislatives-2-candidats.csv".colonnes.nuance_lfi]
+description = ""
+type = "str"
+
+["data/03_main/elections/2024-legislatives-2-candidats.csv".colonnes.sensibilite]
+description = ""
+type = "str"
+nullable = true
