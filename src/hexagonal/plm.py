@@ -25,7 +25,8 @@ class CommunePLM:
         assert bureau.startswith(self.code)
         id_bureau = bureau[6:]
         arrondissement = int(id_bureau[:2])
-        return f"{self.code}SR{self._secteur_par_arrondissement[arrondissement].numero:02d}"
+        numero_secteur = self._secteur_par_arrondissement[arrondissement].numero
+        return f"{self.code}SR{numero_secteur:02d}"
 
     def bureau_vers_arrondissement(self, bureau):
         assert bureau.startswith(self.code)

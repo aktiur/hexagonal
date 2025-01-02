@@ -3,7 +3,7 @@ import sys
 from operator import itemgetter
 from zipfile import ZipFile
 
-from glom import S, Flatten, glom, Iter, Check, SKIP, Spec, Coalesce
+from glom import SKIP, Check, Coalesce, Flatten, Iter, S, Spec, glom
 
 from hexagonal.assemblee_nationale.utils import (
     json_personnes,
@@ -13,27 +13,27 @@ from hexagonal.assemblee_nationale.utils import (
 
 CAUSES_MANDATS = {
     "élections générales": "GENERAL",
-    "remplacement d'un député ayant démissionné pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral": "DEM-INCOMPAT",
+    "remplacement d'un député ayant démissionné pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral": "DEM-INCOMPAT",  # noqa: E501
     "remplacement d'un député décédé": "DCD",
     "remplacement d'un député en mission au-delà de 6 mois": "MISSION",
     "remplacement d'un député nommé au Conseil Constitutionnel": "DEM-CC",
     "remplacement d'un député nommé au Gouvernement": "GOUV-ENTREE",
     "reprise de l'exercice du mandat d'un ancien membre du Gouvernement": "GOUV-RETOUR",
     "élection partielle": "PARTIELLE",
-    "élection partielle, en remplacement d'un député décédé et sans suppléant": "PARTIELLE-DCD",
-    "élection partielle, remplacement d'un député déchu de son mandat": "PARTIELLE-DECHEANCE",
+    "élection partielle, en remplacement d'un député décédé et sans suppléant": "PARTIELLE-DCD",  # noqa: E501
+    "élection partielle, remplacement d'un député déchu de son mandat": "PARTIELLE-DECHEANCE",  # noqa: E501
     "élection partielle, remplacement d'un député démissionnaire": "PARTIELLE-DEM",
-    "élection partielle, remplacement d'un député démissionnaire d'office": "PARTIELLE-DEMOFF",
-    "élection partielle, remplacement d'un député élu au Parlement européen": "PARTIELLE-PE",
+    "élection partielle, remplacement d'un député démissionnaire d'office": "PARTIELLE-DEMOFF",  # noqa: E501
+    "élection partielle, remplacement d'un député élu au Parlement européen": "PARTIELLE-PE",  # noqa: E501
     "élection partielle, remplacement d'un député élu au Sénat": "PARTIELLE-SEN",
-    "élection partielle, suite à l'annulation de l'élection d'un député": "PARTIELLE-ANN",
+    "élection partielle, suite à l'annulation de l'élection d'un député": "PARTIELLE-ANN",  # noqa: E501
 }
 
 
 def circonscription(d):
     lieu = d.get("election", {}).get("lieu", {})
 
-    SUBS = {
+    substitutions = {
         "099": "ZZ",
         "977": "ZX",
     }
@@ -41,7 +41,7 @@ def circonscription(d):
     dep = lieu["numDepartement"]
     numero = lieu["numCirco"].zfill(2)
 
-    dep = SUBS.get(dep, dep)
+    dep = substitutions.get(dep, dep)
 
     return f"{dep}-{numero}"
 

@@ -1,8 +1,9 @@
 from pathlib import Path
-from zipfile import Path as ZPath, ZipFile
+from zipfile import Path as ZPath
+from zipfile import ZipFile
 
 import click
-from glom import Match, Switch, Val, Spec, T, Assign
+from glom import Assign, Match, Spec, Switch, T, Val
 
 from hexagonal.cog.type_nom import TYPES_NOMS
 from hexagonal.utils import iterate_csv, nettoyer_avec_spec
@@ -125,7 +126,7 @@ fichiers_cog = [
     (f"v_ctcd_{ANNEE}", "ctcd", spec_ctcd, list(spec_ctcd[1])),
     (f"v_comer_{ANNEE}", "com", spec_com, list(spec_com)),
     (
-        f"v_commune_depuis_1943",
+        "v_commune_depuis_1943",
         "communes_historiques",
         spec_commune_historique,
         list(spec_commune_historique),

@@ -1,6 +1,5 @@
 import sys
 from itertools import chain
-from pathlib import Path
 from typing import Literal
 
 import pandas as pd
@@ -63,9 +62,9 @@ def clean_results(
 ):
     # trouver la première ligne
     with open(src, "r", encoding=encoding) as f:
-        for i, line in enumerate(f):
-            if delimiter in line:
-                nb_champs = len(line.split(delimiter))
+        for numero_ligne, ligne in enumerate(f):  # noqa: B007
+            if delimiter in ligne:
+                nb_champs = len(ligne.split(delimiter))
                 break
         else:
             raise ValueError("Impossible de trouver la première ligne")
@@ -73,10 +72,10 @@ def clean_results(
     nb_communs = nb_champs - len(partie_bureau)
     names = partie_commune[:nb_communs] + partie_bureau
 
-    df: pd.DataFrame = pd.read_csv(
+    resultats: pd.DataFrame = pd.read_csv(
         src,
         sep=delimiter,
-        skiprows=i,
+        skiprows=numero_ligne,
         names=names,
         header=None,
         dtype=types_par_colonne,  # type: ignore
@@ -84,28 +83,30 @@ def clean_results(
     )
 
     for field, transform in transforms.items():
-        if field in df.columns:
-            df[field] = df[field].astype(transform)
+        if field in resultats.columns:
+            resultats[field] = resultats[field].astype(transform)
 
-    if df.nom.nunique() < 1000:
-        df["nom"] = df["nom"].astype("category")
-        df["prenom"] = df["prenom"].astype("category")
+    if resultats.nom.nunique() < 1000:
+        resultats["nom"] = resultats["nom"].astype("category")
+        resultats["prenom"] = resultats["prenom"].astype("category")
 
-    df["bureau_de_vote"] = (
-        df["departement"].str.zfill(2)
-        + df["commune"].str.zfill(3)
+    resultats["bureau_de_vote"] = (
+        resultats["departement"].str.zfill(2)
+        + resultats["commune"].str.zfill(3)
         + "-"
-        + df["bureau"].str.zfill(4)
+        + resultats["bureau"].str.zfill(4)
     )
 
-    if "circonscription" in df.columns:
-        df["circonscription"] = df["circonscription"].astype(str).str.zfill(4)
+    if "circonscription" in resultats.columns:
+        resultats["circonscription"] = (
+            resultats["circonscription"].astype(str).str.zfill(4)
+        )
 
     clean_columns = [
         "bureau_de_vote",
-        *(c for c in (population + par_candidat) if c in df.columns),
+        *(c for c in (population + par_candidat) if c in resultats.columns),
     ]
-    df_clean = df.loc[:, clean_columns].reset_index(drop=True)
+    df_clean = resultats.loc[:, clean_columns].reset_index(drop=True)
     df_clean.to_csv(f"{dest}", index=False)
 
 

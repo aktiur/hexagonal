@@ -6,8 +6,8 @@ from typing import Generator
 from dvc.api import DVCFileSystem
 from dvc.stage import Stage
 
-from hexagonal.files import ROOT_DIR, DATA_DIR, CONFIG
-from hexagonal.files.spec import DatasetType, Dataset
+from hexagonal.files import CONFIG, DATA_DIR, ROOT_DIR
+from hexagonal.files.spec import DatasetType
 
 URL_PREFIX = "cache/files/md5"
 

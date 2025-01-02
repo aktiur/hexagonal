@@ -1,11 +1,11 @@
 import click
-from glom import Coalesce, T, glom, S
+from glom import Coalesce, S, T, glom
 
 from hexagonal.codes import CORRESPONDANCE_CODE_DEPARTEMENT
 from hexagonal.utils import (
     date_francaise_vers_iso,
-    nettoyer_avec_spec,
     iterate_csv,
+    nettoyer_avec_spec,
     vers_booleen,
 )
 
@@ -36,7 +36,7 @@ def normalisation_code_circonscription_ministere(
     code_circonscription, code_departement
 ):
     """
-    normalise les codes de circonscription de façon à employer le format de la documentation
+    normalise les codes de circonscription conformément à la documentation
 
     :param code_circonscription:
     :return:

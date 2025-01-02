@@ -5,9 +5,9 @@ import os
 import re
 from collections import defaultdict
 from contextlib import contextmanager
-from typing import Iterable, Optional, Union, TextIO
+from typing import Iterable, Optional, TextIO, Union
 
-from glom import glom, Iter
+from glom import Iter, glom
 
 DATE_FRANCAISE_RE = re.compile(r"^(?P<jour>\d{2})/(?P<mois>\d{2})/(?P<annee>\d{4})$")
 

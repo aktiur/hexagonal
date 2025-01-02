@@ -1,6 +1,6 @@
 from jinja2 import Environment, PackageLoader, select_autoescape
 
-from hexagonal.files.spec import SPEC, DatasetType, PRODUCTION_TYPES
+from hexagonal.files.spec import PRODUCTION_TYPES, SPEC, DatasetType
 
 
 def build():

@@ -2,7 +2,7 @@ from pathlib import Path
 
 import click
 import pandas as pd
-from glom import glom, T, Coalesce
+from glom import T, glom
 
 from hexagonal.utils import serie_dates_usuel_vers_iso
 
@@ -124,11 +124,11 @@ SPECS = {
 
 
 def extraire(in_path, out_path, spec):
-    df = pd.read_csv(in_path, delimiter=";", dtype=str)
+    data_in = pd.read_csv(in_path, delimiter=";", dtype=str)
 
-    df = pd.DataFrame(glom(df, spec))
+    data_out = pd.DataFrame(glom(data_in, spec))
 
-    df.to_csv(out_path, index=False)
+    data_out.to_csv(out_path, index=False)
 
 
 @click.command()

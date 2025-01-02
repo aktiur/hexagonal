@@ -2,13 +2,13 @@ import sys
 from operator import itemgetter
 from zipfile import ZipFile
 
-from glom import S, Flatten, glom, Iter, Coalesce, Spec
+from glom import Coalesce, Flatten, Iter, S, Spec, glom
 
 from hexagonal.assemblee_nationale.utils import (
-    possiblement_nul,
-    json_organes,
     ecrire_csv,
+    json_organes,
     json_personnes,
+    possiblement_nul,
     to_list,
 )
 

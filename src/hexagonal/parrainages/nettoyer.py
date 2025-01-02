@@ -2,7 +2,7 @@ import csv
 import re
 import sys
 
-from glom import glom, Iter
+from glom import Iter, glom
 
 from hexagonal.utils import date_francaise_vers_iso
 
@@ -15,10 +15,10 @@ MANDATS = {
     "président EPCI": "Présidente? d'un EPCI à fiscalité propre",
     "maire": "Maire",
     "maire délégué": "Maire déléguée? d'une commune associée ou d'une commune déléguée",
-    "membre assemblée outremer": "Membre d'une assemblée d'une collectivité territoriale d'outre-mer à statut particulier",
+    "membre assemblée outremer": "Membre d'une assemblée d'une collectivité territoriale d'outre-mer à statut particulier",  # noqa: E501
     "membre assemblée corse": "Membre de l'Assemblée de Corse",
     "président Polynésie française": "Présidente? de la Polynésie française",
-    "président Nouvelle-Calédonie": "Présidente? du gouvernement de la Nouvelle-Calédonie",
+    "président Nouvelle-Calédonie": "Présidente? du gouvernement de la Nouvelle-Calédonie",  # noqa: E501
     "président Martinique": "Présidente? du Conseil exécutif de Martinique",
     "conseiller Paris": "Conseill(er|ère) de Paris",
     "conseiller métropole Lyon": "Conseill(er|ère) métropolitaine? de Lyon",

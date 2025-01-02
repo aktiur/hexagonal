@@ -1,11 +1,10 @@
 import datetime
-import os
-import tomllib
 from enum import StrEnum
-from pathlib import PurePath, Path
-from typing import Optional, List, Union
+from pathlib import Path, PurePath
+from typing import List, Optional, Union
 
 import pandas as pd
+import tomllib
 from markupsafe import Markup
 from pydantic import BaseModel
 
@@ -111,21 +110,21 @@ class Dataset(BaseModel):
 
     def as_pandas_dataframe(self):
         params = {}
-        for id, col in self.colonnes.items():
-            if col.type in PD_DTYPES:
-                params.setdefault("dtype", {})[id] = PD_DTYPES[col.type]
+        for col_id, col_desc in self.colonnes.items():
+            if col_desc.type in PD_DTYPES:
+                params.setdefault("dtype", {})[col_id] = PD_DTYPES[col_desc.type]
 
-            if col.type == ColonneType.DATE:
-                params.setdefault("parse_dates", []).append(id)
+            if col_desc.type == ColonneType.DATE:
+                params.setdefault("parse_dates", []).append(col_id)
                 params.setdefault("date_format", "ISO8601")
 
-        df = pd.read_csv(self.path, **params)
+        dataset = pd.read_csv(self.path, **params)
 
-        for id, col in self.colonnes.items():
-            if col.type == ColonneType.BOOL:
-                df[id] = df[id] == VRAI
+        for col_id, col_desc in self.colonnes.items():
+            if col_desc.type == ColonneType.BOOL:
+                dataset[col_id] = dataset[col_id] == VRAI
 
-        return df
+        return dataset
 
 
 with open(ROOT_DIR / "spec.toml", "rb") as fd:

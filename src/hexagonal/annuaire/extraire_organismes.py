@@ -53,9 +53,10 @@ def extraire(archive: tarfile.TarFile, out_path):
     else:
         raise FileNotFoundError("Pas possible de trouver le fichier.")
 
-    with archive.extractfile(info) as organismes_fd, ouvrir_pour_ecrire(
-        out_path
-    ) as out_fds:
+    with (
+        archive.extractfile(info) as organismes_fd,
+        ouvrir_pour_ecrire(out_path) as out_fds,
+    ):
         service = json_stream.load(organismes_fd)["service"]
 
         for organisme in service.persistent():

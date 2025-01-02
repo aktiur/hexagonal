@@ -2,7 +2,7 @@ from pathlib import PurePath
 
 import pytest
 
-from hexagonal.files.spec import SPEC, PRODUCTION_TYPES
+from hexagonal.files.spec import PRODUCTION_TYPES, SPEC
 
 CSV_PRODUCTIONS = [
     str(k)

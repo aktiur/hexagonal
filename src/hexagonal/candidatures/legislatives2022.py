@@ -5,7 +5,6 @@ import pandas as pd
 
 from hexagonal.codes import normaliser_code_circonscription
 
-
 COLONNES_LEMONDE = {
     "Département": "departement",
     "Numéro Circonscription": "circonscription",
@@ -29,7 +28,8 @@ def extraire_candidats(candidats, nuances_lemonde, nuances_legis_2022, destinati
     candidats = pd.read_csv(candidats, dtype=str)
 
     if tour == "1":
-        # deux candidats de la 92-11 sont inversés dans le fichier du ministère, LÉVÊQUE et ROLLOT
+        # deux candidats de la 92-11 sont inversés dans le fichier du ministère, LÉVÊQUE
+        # et ROLLOT
         candidats.loc[5407:5408, "numero_panneau"] = ["9", "8"]
 
     del candidats["departement"]
@@ -56,8 +56,8 @@ def extraire_candidats(candidats, nuances_lemonde, nuances_legis_2022, destinati
     )
     del nuances_legis_2022["departement"]
 
-    candidats = pd.merge(candidats, nuances_lemonde, how="left")
-    candidats = pd.merge(candidats, nuances_legis_2022, how="left")
+    candidats = candidats.merge(nuances_lemonde, how="left")
+    candidats = candidats.merge(nuances_legis_2022, how="left")
 
     candidats["nom"] = candidats["nom_lemonde"]
     del candidats["nom_lemonde"]

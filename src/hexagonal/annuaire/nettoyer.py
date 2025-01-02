@@ -1,11 +1,9 @@
-import csv
-import json
 from pathlib import Path
 
 import click
-from glom import glom, S, T, Spec, Iter, Coalesce
+from glom import Coalesce, Iter, S, Spec
 
-from hexagonal.utils import nettoyer_avec_spec, iterate_ndjson
+from hexagonal.utils import iterate_ndjson, nettoyer_avec_spec
 
 
 def extraire_telephone(telephones):

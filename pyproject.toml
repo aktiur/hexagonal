@@ -29,13 +29,19 @@ click = "^8.1.7"
 
 [tool.poetry.group.dev.dependencies]
 ipython = "^8.26.0"
-black = "^24.8.0"
 dvc = "^3.55.2"
 dvc-s3 = "^3.2.0"
 pytest = "^8.3.4"
 jinja2 = "^3.1.4"
 pydantic = "^2.10.3"
 tomli-w = "^1.1.0"
+ruff = "^0.8.4"
+
+[tool.ruff]
+line-length = 88
+
+[tool.ruff.lint]
+select = ["E", "W", "F", "I", "N", "B", "A", "PD"]
 
 [build-system]
 requires = ["poetry-core"]

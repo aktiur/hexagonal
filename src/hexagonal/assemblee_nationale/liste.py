@@ -1,12 +1,11 @@
 import csv
-import sys
 from operator import itemgetter
 from zipfile import ZipFile
 
 import click
-from glom import glom, Coalesce, Invoke, T
+from glom import Coalesce, Invoke, T, glom
 
-from hexagonal.assemblee_nationale.utils import possiblement_nul, json_personnes
+from hexagonal.assemblee_nationale.utils import json_personnes, possiblement_nul
 
 PCS_FAM = {
     "Agriculteurs exploitants": "1",
@@ -28,7 +27,7 @@ PCS_CAT = {
     "Professions libérales et assimilés": "31",
     "Cadres de la fonction publique, professions intellectuelles et  artistiques": "32",
     "Cadres d'entreprise": "36",
-    "Professions intermédiaires de l'enseignement, de la santé, de la fonction publique et assimilés": "41",
+    "Professions intermédiaires de l'enseignement, de la santé, de la fonction publique et assimilés": "41",  # noqa: E501
     "Professions intermédiaires administratives et commerciales des entreprises": "46",
     "Techniciens": "47",
     "Contremaîtres, agents de maîtrise": "48",

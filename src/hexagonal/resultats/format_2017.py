@@ -1,16 +1,17 @@
-"""
-Ce fichier comprend la routine permettant de nettoyer les fichiers électoraux des scrutins post 2017
+"""Ce fichier comprend la routine permettant de nettoyer les fichiers électoraux des
+scrutins post 2017
 
-Le format employé après 2017 est un CSV à nombre de champs variable (sauf pour les scrutins nationaux où les
-candidatures sont partout les mêmes).
+Le format employé après 2017 est un CSV à nombre de champs variable (sauf pour les
+scrutins nationaux où les candidatures sont partout les mêmes).
 
-Il y a une ligne par bureau de vote avec un certain nombre de champs fixes donnant les informations propres au
-bureau de vote (identifiants INSEE, nombre d'inscrits, nombre de bulletins exprimés, etc.) et ensuite les champs
-correspondant aux informations d'un candidat sont répétées autant de fois que nécessaire.
+Il y a une ligne par bureau de vote avec un certain nombre de champs fixes donnant
+les informations propres au bureau de vote (identifiants INSEE, nombre d'inscrits,
+nombre de bulletins exprimés, etc.) et ensuite les champs correspondant aux
+informations d'un candidat sont répétées autant de fois que nécessaire.
 
-Le format est toujours à peu près le même, mais les entêtes utilisés semblent changer quasiment à chaque scrutin… Les
-deux tables de correspondance normalisent les noms de champs.
-"""
+Le format est toujours à peu près le même, mais les entêtes utilisés semblent changer
+quasiment à chaque scrutin… Les deux tables de correspondance normalisent les noms de
+champs."""
 
 import csv
 import sys
@@ -19,8 +20,8 @@ import pandas as pd
 
 from hexagonal.codes import (
     normaliser_code_circonscription,
-    normaliser_code_departement,
     normaliser_code_commune,
+    normaliser_code_departement,
 )
 
 # convertit les codes départements utilisés par le ministère de l'intérieur avant 2024
@@ -207,46 +208,52 @@ def read_file(src, delimiter=";", encoding="utf-8"):
                     break
                 all_entries.append(common_values + candidate_specific_values)
 
-    df = pd.DataFrame(all_entries, columns=fields)
+    resultats = pd.DataFrame(all_entries, columns=fields)
 
     for field, transform in transforms.items():
         try:
-            if field in df.columns:
-                df[field] = df[field].astype(transform)
-        except ValueError as _:
+            if field in resultats.columns:
+                resultats[field] = resultats[field].astype(transform)
+        except ValueError as e:
             print(f"global_fields: {common_fields!r}")
             print(f"repeated_fields: {candidate_specific_fields!r}")
-            raise ValueError(f"Echec transformation {transform} sur {field}")
+            raise ValueError(f"Echec transformation {transform} sur {field}") from e
 
-    return df
+    return resultats
 
 
 def clean_results(src, dest, delimiter=";", encoding="utf-8"):
-    df = read_file(src, delimiter, encoding=encoding)
+    resultats = read_file(src, delimiter, encoding=encoding)
 
-    if "circonscription" in df.columns:
-        df["circonscription"] = normaliser_code_circonscription(df["circonscription"])
-    if "numero_circonscription" in df.columns:
-        departement = normaliser_code_departement(df["departement"])
-        df["circonscription"] = (
-            departement + "-" + df["numero_circonscription"].str.zfill(2)
+    if "circonscription" in resultats.columns:
+        resultats["circonscription"] = normaliser_code_circonscription(
+            resultats["circonscription"]
+        )
+    if "numero_circonscription" in resultats.columns:
+        departement = normaliser_code_departement(resultats["departement"])
+        resultats["circonscription"] = (
+            departement + "-" + resultats["numero_circonscription"].str.zfill(2)
         )
 
-    if "commune" in df.columns:
-        df["code_commune"] = df["departement"].str.zfill(2) + df["commune"].str.zfill(3)
+    if "commune" in resultats.columns:
+        resultats["code_commune"] = resultats["departement"].str.zfill(2) + resultats[
+            "commune"
+        ].str.zfill(3)
 
-    if "code_commune" in df.columns:
-        df["code_commune"] = normaliser_code_commune(df["code_commune"])
+    if "code_commune" in resultats.columns:
+        resultats["code_commune"] = normaliser_code_commune(resultats["code_commune"])
 
-        df["bureau_de_vote"] = (
-            df["code_commune"] + "-" + df["bureau_in_commune"].str.zfill(4)
+        resultats["bureau_de_vote"] = (
+            resultats["code_commune"]
+            + "-"
+            + resultats["bureau_in_commune"].str.zfill(4)
         )
 
     clean_columns = [
-        c for c in (identifiants + population + par_candidat) if c in df.columns
+        c for c in (identifiants + population + par_candidat) if c in resultats.columns
     ]
-    df_clean = df.loc[:, clean_columns]
-    df_clean.to_csv(dest, index=False)
+    resultats = resultats.loc[:, clean_columns]
+    resultats.to_csv(dest, index=False)
 
 
 def run():

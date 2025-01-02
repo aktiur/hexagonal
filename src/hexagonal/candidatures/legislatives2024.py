@@ -2,8 +2,6 @@ import sys
 
 import pandas as pd
 
-from hexagonal.codes import normaliser_code_circonscription
-
 
 def extraire_candidats(candidats, sensibilite_nfp, nuances_lfi, destination):
     candidats = pd.read_csv(candidats)
@@ -18,8 +16,8 @@ def extraire_candidats(candidats, sensibilite_nfp, nuances_lfi, destination):
         ["circonscription", "numero_panneau", "nuance_lfi"]
     ]
 
-    candidats = pd.merge(candidats, nuances_lfi, how="left")
-    candidats = pd.merge(candidats, sensibilite_nfp, how="left")
+    candidats = candidats.merge(nuances_lfi, how="left")
+    candidats = candidats.merge(sensibilite_nfp, how="left")
 
     candidats.to_csv(destination, index=False)
 

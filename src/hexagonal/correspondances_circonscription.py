@@ -15,10 +15,9 @@ def etablir_correspondances(resultats, candidats, destination):
         dtype=str,
     )
 
-    correspondance = pd.merge(
-        resultats,
-        candidats,
-    )[["bureau_de_vote", "circonscription"]].drop_duplicates()
+    correspondance = resultats.merge(candidats)[
+        ["bureau_de_vote", "circonscription"]
+    ].drop_duplicates()
 
     assert correspondance.duplicated(["bureau_de_vote"], keep=False).sum() == 0
 
