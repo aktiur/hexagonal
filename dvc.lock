@@ -1097,3 +1097,20 @@ stages:
       hash: md5
       md5: b14d19789e35e4f9fbf9a0d236867e48
       size: 137936
+  cog_qualifier@communes:
+    cmd: PYTHONPATH=src python -m hexagonal.cog.qualifier data/02_clean/cog/communes.csv
+      data/03_main/cog/communes.csv
+    deps:
+    - path: data/02_clean/cog/communes.csv
+      hash: md5
+      md5: dfe31086cdf374f1a0152afc32e49681
+      size: 1702543
+    - path: src/hexagonal/cog/qualifier.py
+      hash: md5
+      md5: eeee2603dc5e511083f0855ddeb54bb3
+      size: 843
+    outs:
+    - path: data/03_main/cog/communes.csv
+      hash: md5
+      md5: df622f71689220a7ddd23bf66aef5452
+      size: 2268774
