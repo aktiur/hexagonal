@@ -1135,7 +1135,7 @@ type = "code_departement"
 
 ["data/02_clean/cog/com.csv".colonnes.type_nom]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/cog/com.csv".colonnes.nom]
 description = ""
@@ -1192,7 +1192,7 @@ nullable = true
 
 ["data/02_clean/cog/communes.csv".colonnes.type_nom]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/cog/communes.csv".colonnes.nom]
 description = ""
@@ -1223,7 +1223,7 @@ type = "code_departement"
 
 ["data/02_clean/cog/communes_com.csv".colonnes.type_nom]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/cog/communes_com.csv".colonnes.nom]
 description = ""
@@ -1246,7 +1246,7 @@ type = "code_commune"
 
 ["data/02_clean/cog/communes_historiques.csv".colonnes.type_nom]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/cog/communes_historiques.csv".colonnes.nom]
 description = ""
@@ -1288,7 +1288,7 @@ type = "str"
 
 ["data/02_clean/cog/ctcd.csv".colonnes.type_nom]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/cog/ctcd.csv".colonnes.nom]
 description = ""
@@ -1319,7 +1319,7 @@ type = "str"
 
 ["data/02_clean/cog/departements.csv".colonnes.type_nom]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/cog/departements.csv".colonnes.nom]
 description = ""
@@ -1332,8 +1332,8 @@ description = """
 
 """
 mimetype = "text/csv"
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/1c/7e5c989b223b78d9555a095a3b3590"
-s3_url = "s3://hexagonal-data/cache/files/md5/1c/7e5c989b223b78d9555a095a3b3590"
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/64/691627c240d83af6c599db5da6989f"
+s3_url = "s3://hexagonal-data/cache/files/md5/64/691627c240d83af6c599db5da6989f"
 deps = [
     "data/01_raw/cog.zip",
 ]
@@ -1356,7 +1356,7 @@ type = "str"
 
 ["data/02_clean/cog/mouvements_communes.csv".colonnes.type_nom_avant]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/cog/mouvements_communes.csv".colonnes.nom_commune_avant]
 description = ""
@@ -1372,7 +1372,7 @@ type = "str"
 
 ["data/02_clean/cog/mouvements_communes.csv".colonnes.type_nom_apres]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/cog/mouvements_communes.csv".colonnes.nom_commune_apres]
 description = ""
@@ -1401,7 +1401,7 @@ type = "str"
 
 ["data/02_clean/cog/regions.csv".colonnes.type_nom]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/cog/regions.csv".colonnes.nom]
 description = ""
@@ -3419,6 +3419,67 @@ nullable = true
 description = ""
 type = "str"
 nullable = true
+
+["data/03_main/cog/communes.csv"]
+nom = "Liste des communes"
+type = "main"
+description = """
+
+"""
+mimetype = "text/csv"
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/98/efdf877c9de61de31346d02b40c5fc"
+s3_url = "s3://hexagonal-data/cache/files/md5/98/efdf877c9de61de31346d02b40c5fc"
+deps = [
+    "data/02_clean/cog/communes.csv",
+]
+
+["data/03_main/cog/communes.csv".colonnes.code_commune]
+description = ""
+type = "code_commune"
+
+["data/03_main/cog/communes.csv".colonnes.type_commune]
+description = ""
+type = "str"
+
+["data/03_main/cog/communes.csv".colonnes.code_region]
+description = ""
+type = "code_region"
+
+["data/03_main/cog/communes.csv".colonnes.code_departement]
+description = ""
+type = "code_departement"
+
+["data/03_main/cog/communes.csv".colonnes.code_collectivite_departementale]
+description = ""
+type = "str"
+
+["data/03_main/cog/communes.csv".colonnes.code_arrondissement]
+description = ""
+type = "str"
+
+["data/03_main/cog/communes.csv".colonnes.code_canton]
+description = ""
+type = "str"
+
+["data/03_main/cog/communes.csv".colonnes.code_commune_parent]
+description = ""
+type = "code_commune"
+
+["data/03_main/cog/communes.csv".colonnes.type_nom]
+description = ""
+type = "entier"
+
+["data/03_main/cog/communes.csv".colonnes.nom]
+description = ""
+type = "str"
+
+["data/03_main/cog/communes.csv".colonnes.nom_complet]
+description = ""
+type = "str"
+
+["data/03_main/cog/communes.csv".colonnes.forme_possessive]
+description = ""
+type = "str"
 
 ["data/03_main/elections/2022-legislatives-1-candidats.csv"]
 nom = "2022-legislatives-1-candidats"

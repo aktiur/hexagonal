@@ -250,3 +250,17 @@ stages:
       ${python} hexagonal.cog.extraire
       ${raw}/cog.zip
       ${clean}/cog
+
+  cog_qualifier:
+    foreach:
+      - communes
+    do:
+      deps:
+        - ${clean}/cog/${item}.csv
+        - ${src}/hexagonal/cog/qualifier.py
+      outs:
+        - ${main}/cog/${item}.csv
+      cmd: >-
+        ${python} hexagonal.cog.qualifier
+        ${clean}/cog/${item}.csv
+        ${main}/cog/${item}.csv
