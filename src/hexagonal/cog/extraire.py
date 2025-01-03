@@ -3,20 +3,27 @@ from zipfile import Path as ZPath
 from zipfile import ZipFile
 
 import click
-from glom import Assign, Match, Spec, Switch, T, Val
+from glom import Match, Switch, T, Val
 
-from hexagonal.cog.type_nom import TYPES_NOMS
 from hexagonal.utils import iterate_csv, nettoyer_avec_spec
 
 ANNEE = 2024
 
-
-def article(entite):
-    return TYPES_NOMS[int(entite["TNCC"])].article
-
-
-def charniere(entite):
-    return TYPES_NOMS[int(entite["TNCC"])].charniere
+TYPES_EVENEMENTS_COMMUNE = {
+    10: "changement de nom",
+    20: "création",
+    21: "rétablissement",
+    30: "suppression",
+    31: "fusion simple",
+    32: "création commune nouvelle",
+    33: "fusion association",
+    34: "transformation fusion association en fusion simple",
+    35: "suppression commune déléguée",
+    41: "changement de département",
+    50: "transfert de chef-lieu",
+    70: "transformation commune associée en commune déléguée",
+    71: "rétablissement commune déléguée",
+}
 
 
 spec_region = {
@@ -24,8 +31,6 @@ spec_region = {
     "code_commune_cheflieu": "CHEFLIEU",
     "type_nom": "TNCC",
     "nom": "NCCENR",
-    "article": article,
-    "charniere": charniere,
 }
 
 spec_departement = {
@@ -34,42 +39,20 @@ spec_departement = {
     "code_chef_lieu": "CHEFLIEU",
     "type_nom": "TNCC",
     "nom": "NCCENR",
-    "article": article,
-    "charniere": charniere,
 }
 
-spec_ctcd = (
-    Assign(
-        "TNCC",
-        Spec(
-            (
-                "TNCC",
-                Match(
-                    Switch(
-                        [("1", Val("2"))],
-                        default=T,
-                    )
-                ),
-            )
-        ),
-    ),
-    {
-        "code_ctcd": "CTCD",
-        "code_region": "REG",
-        "code_chef_lieu": "CHEFLIEU",
-        "type_nom": "TNCC",
-        "nom": "NCCENR",
-        "article": article,
-        "charniere": charniere,
-    },
-)
+spec_ctcd = {
+    "code_ctcd": "CTCD",
+    "code_region": "REG",
+    "code_chef_lieu": "CHEFLIEU",
+    "type_nom": ("TNCC", Match(Switch([("1", Val("2"))], default=T))),
+    "nom": "NCCENR",
+}
 
 spec_com = {
     "code_departement": "COMER",
     "type_nom": "TNCC",
     "nom": "NCCENR",
-    "article": article,
-    "charniere": charniere,
 }
 
 spec_commune = {
@@ -83,8 +66,6 @@ spec_commune = {
     "code_commune_parent": "COMPARENT",
     "type_nom": "TNCC",
     "nom": "NCCENR",
-    "article": article,
-    "charniere": charniere,
 }
 
 spec_commune_com = {
@@ -93,44 +74,39 @@ spec_commune_com = {
     "code_departement": "COMER",
     "type_nom": "TNCC",
     "nom": "NCCENR",
-    "article": article,
-    "charniere": charniere,
 }
 
 spec_commune_historique = {
     "code_commune": "COM",
     "type_nom": "TNCC",
     "nom": "NCCENR",
-    "article": article,
-    "charniere": charniere,
     "date_debut": "DATE_DEBUT",
     "date_fin": "DATE_FIN",
 }
 
+spec_mouvements_communes = {
+    "type_evenement": ("MOD", int, TYPES_EVENEMENTS_COMMUNE.get),
+    "date_effet": "DATE_EFF",
+    "type_commune_avant": "TYPECOM_AV",
+    "code_commune_avant": "COM_AV",
+    "type_nom_avant": "TNCC_AV",
+    "nom_commune_avant": "NCCENR_AV",
+    "type_commune_apres": "TYPECOM_AP",
+    "code_commune_apres": "COM_AP",
+    "type_nom_apres": "TNCC_AP",
+    "nom_commune_apres": "NCCENR_AP",
+}
+
 
 fichiers_cog = [
-    (f"v_region_{ANNEE}", "regions", spec_region, list(spec_region)),
-    (
-        f"v_departement_{ANNEE}",
-        "departements",
-        spec_departement,
-        list(spec_departement),
-    ),
-    (f"v_commune_{ANNEE}", "communes", spec_commune, list(spec_commune)),
-    (
-        f"v_commune_comer_{ANNEE}",
-        "communes_com",
-        spec_commune_com,
-        list(spec_commune_com),
-    ),
-    (f"v_ctcd_{ANNEE}", "ctcd", spec_ctcd, list(spec_ctcd[1])),
-    (f"v_comer_{ANNEE}", "com", spec_com, list(spec_com)),
-    (
-        "v_commune_depuis_1943",
-        "communes_historiques",
-        spec_commune_historique,
-        list(spec_commune_historique),
-    ),
+    (f"v_region_{ANNEE}", "regions", spec_region),
+    (f"v_departement_{ANNEE}", "departements", spec_departement),
+    (f"v_commune_{ANNEE}", "communes", spec_commune),
+    (f"v_commune_comer_{ANNEE}", "communes_com", spec_commune_com),
+    (f"v_ctcd_{ANNEE}", "ctcd", spec_ctcd),
+    (f"v_comer_{ANNEE}", "com", spec_com),
+    ("v_commune_depuis_1943", "communes_historiques", spec_commune_historique),
+    ("v_mvt_commune_2024", "mouvements_communes", spec_mouvements_communes),
 ]
 
 
@@ -147,9 +123,9 @@ def run(archive_path, dest_dir):
     with ZipFile(archive_path) as archive:
         archive_root = ZPath(archive)
 
-        for src, dest, spec, columns in fichiers_cog:
+        for src, dest, spec in fichiers_cog:
             with iterate_csv(archive_root / f"{src}.csv") as it:
-                nettoyer_avec_spec(it, dest_dir / f"{dest}.csv", spec, columns=columns)
+                nettoyer_avec_spec(it, dest_dir / f"{dest}.csv", spec)
 
 
 if __name__ == "__main__":

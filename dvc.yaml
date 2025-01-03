@@ -244,6 +244,8 @@ stages:
       - ${clean}/cog/communes_com.csv
       - ${clean}/cog/communes_historiques.csv
       - ${clean}/cog/com.csv
+      - ${clean}/cog/ctcd.csv
+      - ${clean}/cog/mouvements_communes.csv
     cmd: >-
       ${python} hexagonal.cog.extraire
       ${raw}/cog.zip

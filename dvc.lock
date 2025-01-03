@@ -882,45 +882,53 @@ stages:
       size: 1879699
     - path: src/hexagonal/cog/extraire.py
       hash: md5
-      md5: 2efb58b44e4dca576f5cbc35be57f4c7
-      size: 3636
+      md5: 5d9907ede1f4929a95d8b24e9f09420d
+      size: 3502
     outs:
     - path: data/02_clean/cog/com.csv
       hash: md5
-      md5: eb6adcfa64aec45b1de8aa99714ba201
-      size: 332
+      md5: dc05bfe2412006f03b8b36ada0a46d09
+      size: 269
     - path: data/02_clean/cog/communes.csv
       hash: md5
-      md5: 00a2dc59d3571339c3c6fffbc5ec881d
-      size: 1897852
+      md5: dfe31086cdf374f1a0152afc32e49681
+      size: 1702543
     - path: data/02_clean/cog/communes_com.csv
       hash: md5
-      md5: c7ff14be8f5a8d3737c343146cd27a27
-      size: 3050
+      md5: 81462e90eb7e9006514eebcecced2ee4
+      size: 2537
     - path: data/02_clean/cog/communes_historiques.csv
       hash: md5
-      md5: 2b61bf920c2ecae8c56bf84a2cdfefca
-      size: 1720424
+      md5: 35a5986010e1e19fc7fa3df70581d014
+      size: 1500922
+    - path: data/02_clean/cog/ctcd.csv
+      hash: md5
+      md5: c0b21ebcabc375e53729529b81ef2471
+      size: 5395
     - path: data/02_clean/cog/departements.csv
       hash: md5
-      md5: 22841dc41b957a71e752a4cd7ca005e1
-      size: 3557
+      md5: ac09c997f36bf573bcd937ba62cc3768
+      size: 2615
+    - path: data/02_clean/cog/mouvements_communes.csv
+      hash: md5
+      md5: 64691627c240d83af6c599db5da6989f
+      size: 1162461
     - path: data/02_clean/cog/regions.csv
       hash: md5
-      md5: 0b2244b8608b461e22398da50e0f67d0
-      size: 665
+      md5: 75a71eafce2e51538d3cc0b30b15039f
+      size: 520
   parrainages_qualifier@2022:
     cmd: PYTHONPATH=src python -m hexagonal.parrainages.qualifier data/02_clean/elections/2022-presidentielle-parrainages.csv
       data/02_clean/cog/departements.csv data/02_clean/cog/communes.csv data/03_main/elections/2022-presidentielle-parrainages.csv
     deps:
     - path: data/02_clean/cog/communes.csv
       hash: md5
-      md5: 00a2dc59d3571339c3c6fffbc5ec881d
-      size: 1897852
+      md5: dfe31086cdf374f1a0152afc32e49681
+      size: 1702543
     - path: data/02_clean/cog/departements.csv
       hash: md5
-      md5: 22841dc41b957a71e752a4cd7ca005e1
-      size: 3557
+      md5: ac09c997f36bf573bcd937ba62cc3768
+      size: 2615
     - path: data/02_clean/elections/2022-presidentielle-parrainages.csv
       hash: md5
       md5: c4b7e16894b409e0c810750c4967afec
