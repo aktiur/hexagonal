@@ -1,10 +1,10 @@
 import datetime
+import tomllib
 from enum import StrEnum
 from pathlib import Path, PurePath
 from typing import List, Optional, Union
 
 import pandas as pd
-import tomllib
 from markupsafe import Markup
 from pydantic import BaseModel
 
@@ -44,11 +44,11 @@ class ColonneType(StrEnum):
 
 
 PD_DTYPES = {
-    ColonneType.STR: "str",
-    ColonneType.CODE_COMMUNE: "str",
-    ColonneType.CODE_DEPARTEMENT: "str",
-    ColonneType.CODE_REGION: "str",
-    ColonneType.INT: int,
+    ColonneType.STR: pd.StringDtype(),
+    ColonneType.CODE_COMMUNE: pd.StringDtype(),
+    ColonneType.CODE_DEPARTEMENT: pd.StringDtype(),
+    ColonneType.CODE_REGION: pd.StringDtype(),
+    ColonneType.INT: pd.Int64Dtype(),
 }
 
 

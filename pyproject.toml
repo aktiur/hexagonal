@@ -1,5 +1,13 @@
 [project]
 name = "hexagonal"
+version = "0.1.0"
+description = "hexagonal agrège l'information électorale et administrative française"
+authors = [
+    { name="Salomé Cheysson", email="salome@cheysson.fr" }
+]
+readme = "README.md"
+requires-python = "==3.12.*"
+dynamic = ["dependencies"]
 
 [tool.hexagonal]
 s3_root = "s3://hexagonal-data/"
@@ -11,21 +19,16 @@ addopts = [
 ]
 
 [tool.poetry]
-name = "hexagonal"
-version = "0.1.0"
-description = ""
-authors = ["Salomé Cheysson <salome@cheysson.fr>"]
-readme = "README.md"
 packages = [
   { include = "hexagonal", from = "src" }
 ]
 
 [tool.poetry.dependencies]
-python = "^3.12"
 pandas = "^2.2.2"
 glom = "^24.11.0"
 json-stream = "^2.3.2"
 click = "^8.1.7"
+openpyxl = "^3.1.5"
 
 [tool.poetry.group.dev.dependencies]
 ipython = "^8.26.0"

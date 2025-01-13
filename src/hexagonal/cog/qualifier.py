@@ -18,7 +18,9 @@ def run(source, dest):
         dataset["forme_possessive"] = (
             types_noms.map(attrgetter("charniere")) + dataset["nom"]
         )
-        dataset["nom"] = types_noms.map(attrgetter("article")) + dataset["nom"]
+        dataset["nom"] = (
+            types_noms.map(attrgetter("article")).str.capitalize() + dataset["nom"]
+        )
 
     dest.parent.mkdir(parents=True, exist_ok=True)
     dataset.to_csv(dest, index=False)

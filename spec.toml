@@ -1349,34 +1349,42 @@ type = "str"
 ["data/02_clean/cog/mouvements_communes.csv".colonnes.type_commune_avant]
 description = ""
 type = "str"
+nullable = true
 
 ["data/02_clean/cog/mouvements_communes.csv".colonnes.code_commune_avant]
 description = ""
 type = "str"
+nullable = true
 
 ["data/02_clean/cog/mouvements_communes.csv".colonnes.type_nom_avant]
 description = ""
 type = "entier"
+nullable = true
 
 ["data/02_clean/cog/mouvements_communes.csv".colonnes.nom_commune_avant]
 description = ""
 type = "str"
+nullable = true
 
 ["data/02_clean/cog/mouvements_communes.csv".colonnes.type_commune_apres]
 description = ""
 type = "str"
+nullable = true
 
 ["data/02_clean/cog/mouvements_communes.csv".colonnes.code_commune_apres]
 description = ""
 type = "str"
+nullable = true
 
 ["data/02_clean/cog/mouvements_communes.csv".colonnes.type_nom_apres]
 description = ""
 type = "entier"
+nullable = true
 
 ["data/02_clean/cog/mouvements_communes.csv".colonnes.nom_commune_apres]
 description = ""
 type = "str"
+nullable = true
 
 ["data/02_clean/cog/regions.csv"]
 nom = "regions"
