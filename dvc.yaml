@@ -251,16 +251,29 @@ stages:
       ${raw}/cog.zip
       ${clean}/cog
 
+  population_nettoyer:
+    deps:
+      - ${raw}/population_municipale.xlsx
+      - ${src}/hexagonal/population/nettoyer.py
+    outs:
+      - ${clean}/population_municipale.csv
+    cmd: >-
+      ${python} hexagonal.population.nettoyer
+      ${raw}/population_municipale.xlsx
+      ${clean}/population_municipale.csv
+
   cog_qualifier:
     foreach:
       - communes
     do:
       deps:
         - ${clean}/cog/${item}.csv
-        - ${src}/hexagonal/cog/qualifier.py
+        - ${clean}/population_municipale.csv
+        - ${src}/hexagonal/cog/qualifier_communes.py
       outs:
         - ${main}/cog/${item}.csv
       cmd: >-
-        ${python} hexagonal.cog.qualifier
+        ${python} hexagonal.cog.qualifier_communes
         ${clean}/cog/${item}.csv
+        ${clean}/population_municipale.csv
         ${main}/cog/${item}.csv

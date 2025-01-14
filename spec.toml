@@ -559,24 +559,15 @@ url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/24/a9e9
 s3_url = "s3://hexagonal-data/cache/files/md5/24/a9e931e2d43373ecddd42a2434eba6"
 editeur = "La France insoumise"
 
-["data/01_raw/population-municipale.xlsx"]
-nom = "Population municipale en France hors Mayotte de 1876 à 2021"
+["data/01_raw/population_municipale.xlsx"]
+nom = "population_municipale"
 type = "source"
 description = """
-Cette base fournit les données de populations de 1876 à 2021 pour les communes de France continentale, de 1936 à 2021
-pour les communes de Corse et de 1954 ou 1962 à 2021 pour les communes des DOM (hors Mayotte).
 
-Ce tableau indique :
-- la population totale de 1876 à 1954
-- la population sans doubles comptes de 1962 à 1999
-- la population municipale depuis 2006
 """
 mimetype = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/80/00453dd82685619c7f5b405222449c"
-s3_url = "s3://hexagonal-data/cache/files/md5/80/00453dd82685619c7f5b405222449c"
-source_url = "https://www.insee.fr/fr/statistiques/fichier/3698339/base-pop-historiques-1876-2021.xlsx"
-editeur = "INSEE"
-date = "2023-12-28"
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/d6/b7b360966185d728501adeaac33b53"
+s3_url = "s3://hexagonal-data/cache/files/md5/d6/b7b360966185d728501adeaac33b53"
 
 ["data/01_raw/rne/conseillers_arrondissement.csv"]
 nom = "Répertoire national des élus — conseillers d'arrondissement de Paris, Marseille et Lyon"
@@ -3135,6 +3126,214 @@ type = "str"
 description = ""
 type = "str"
 
+["data/02_clean/population_municipale.csv"]
+nom = "Population par commune de 1876 à 2022"
+type = "clean"
+description = """
+Pour chaque commune de France est indiquée la population pour chacun des recensements
+depuis celui de 1876.
+
+Les critères retenus pour définir la population d'une commune ont changé au cours du
+temps :
+
+- depuis le recensement de 2006, le chiffre donné est celui de la population
+municipale
+- entre 1962 et 1999, il s'agit de la population sans doubles comptes
+- entre 1876 et 1954, il s'agit de la population totale ; les populations d'un groupe de
+  communes ne peuvent donc pas être sommées pour obtenir la population du groupe de
+  communes.
+"""
+mimetype = "text/csv"
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/b2/4f555094c21b8eadecae02e763eb56"
+s3_url = "s3://hexagonal-data/cache/files/md5/b2/4f555094c21b8eadecae02e763eb56"
+deps = [
+    "data/01_raw/population_municipale.xlsx",
+]
+
+["data/02_clean/population_municipale.csv".colonnes.code_commune]
+description = ""
+type = "code_commune"
+
+["data/02_clean/population_municipale.csv".colonnes.population_municipale_2022]
+description = ""
+type = "entier"
+nullable = true
+
+["data/02_clean/population_municipale.csv".colonnes.population_municipale_2021]
+description = ""
+type = "entier"
+nullable = true
+
+["data/02_clean/population_municipale.csv".colonnes.population_municipale_2020]
+description = ""
+type = "entier"
+nullable = true
+
+["data/02_clean/population_municipale.csv".colonnes.population_municipale_2019]
+description = ""
+type = "entier"
+nullable = true
+
+["data/02_clean/population_municipale.csv".colonnes.population_municipale_2018]
+description = ""
+type = "entier"
+nullable = true
+
+["data/02_clean/population_municipale.csv".colonnes.population_municipale_2017]
+description = ""
+type = "entier"
+nullable = true
+
+["data/02_clean/population_municipale.csv".colonnes.population_municipale_2016]
+description = ""
+type = "entier"
+nullable = true
+
+["data/02_clean/population_municipale.csv".colonnes.population_municipale_2015]
+description = ""
+type = "entier"
+nullable = true
+
+["data/02_clean/population_municipale.csv".colonnes.population_municipale_2014]
+description = ""
+type = "entier"
+nullable = true
+
+["data/02_clean/population_municipale.csv".colonnes.population_municipale_2013]
+description = ""
+type = "entier"
+nullable = true
+
+["data/02_clean/population_municipale.csv".colonnes.population_municipale_2012]
+description = ""
+type = "entier"
+nullable = true
+
+["data/02_clean/population_municipale.csv".colonnes.population_municipale_2011]
+description = ""
+type = "entier"
+nullable = true
+
+["data/02_clean/population_municipale.csv".colonnes.population_municipale_2010]
+description = ""
+type = "entier"
+nullable = true
+
+["data/02_clean/population_municipale.csv".colonnes.population_municipale_2009]
+description = ""
+type = "entier"
+nullable = true
+
+["data/02_clean/population_municipale.csv".colonnes.population_municipale_2008]
+description = ""
+type = "entier"
+nullable = true
+
+["data/02_clean/population_municipale.csv".colonnes.population_municipale_2007]
+description = ""
+type = "entier"
+nullable = true
+
+["data/02_clean/population_municipale.csv".colonnes.population_municipale_2006]
+description = ""
+type = "entier"
+nullable = true
+
+["data/02_clean/population_municipale.csv".colonnes.population_sans_double_compte_1999]
+description = ""
+type = "entier"
+nullable = true
+
+["data/02_clean/population_municipale.csv".colonnes.population_sans_double_compte_1990]
+description = ""
+type = "entier"
+nullable = true
+
+["data/02_clean/population_municipale.csv".colonnes.population_sans_double_compte_1982]
+description = ""
+type = "entier"
+nullable = true
+
+["data/02_clean/population_municipale.csv".colonnes.population_sans_double_compte_1975]
+description = ""
+type = "entier"
+nullable = true
+
+["data/02_clean/population_municipale.csv".colonnes.population_sans_double_compte_1968]
+description = ""
+type = "entier"
+nullable = true
+
+["data/02_clean/population_municipale.csv".colonnes.population_sans_double_compte_1962]
+description = ""
+type = "entier"
+nullable = true
+
+["data/02_clean/population_municipale.csv".colonnes.population_totale_1954]
+description = ""
+type = "entier"
+nullable = true
+
+["data/02_clean/population_municipale.csv".colonnes.population_totale_1936]
+description = ""
+type = "entier"
+nullable = true
+
+["data/02_clean/population_municipale.csv".colonnes.population_totale_1931]
+description = ""
+type = "entier"
+nullable = true
+
+["data/02_clean/population_municipale.csv".colonnes.population_totale_1926]
+description = ""
+type = "entier"
+nullable = true
+
+["data/02_clean/population_municipale.csv".colonnes.population_totale_1921]
+description = ""
+type = "entier"
+nullable = true
+
+["data/02_clean/population_municipale.csv".colonnes.population_totale_1911]
+description = ""
+type = "entier"
+nullable = true
+
+["data/02_clean/population_municipale.csv".colonnes.population_totale_1906]
+description = ""
+type = "entier"
+nullable = true
+
+["data/02_clean/population_municipale.csv".colonnes.population_totale_1901]
+description = ""
+type = "entier"
+nullable = true
+
+["data/02_clean/population_municipale.csv".colonnes.population_totale_1896]
+description = ""
+type = "entier"
+nullable = true
+
+["data/02_clean/population_municipale.csv".colonnes.population_totale_1891]
+description = ""
+type = "entier"
+nullable = true
+
+["data/02_clean/population_municipale.csv".colonnes.population_totale_1886]
+description = ""
+type = "entier"
+nullable = true
+
+["data/02_clean/population_municipale.csv".colonnes.population_totale_1881]
+description = ""
+type = "entier"
+nullable = true
+
+["data/02_clean/population_municipale.csv".colonnes.population_totale_1876]
+description = ""
+type = "entier"
+nullable = true
+
 ["data/02_clean/rne/conseillers_arrondissement.csv"]
 nom = "conseillers_arrondissement"
 type = "clean"
@@ -3435,10 +3634,11 @@ description = """
 
 """
 mimetype = "text/csv"
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/98/efdf877c9de61de31346d02b40c5fc"
-s3_url = "s3://hexagonal-data/cache/files/md5/98/efdf877c9de61de31346d02b40c5fc"
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/78/e6d14d79120233b53385098438e73c"
+s3_url = "s3://hexagonal-data/cache/files/md5/78/e6d14d79120233b53385098438e73c"
 deps = [
     "data/02_clean/cog/communes.csv",
+    "data/02_clean/population_municipale.csv",
 ]
 
 ["data/03_main/cog/communes.csv".colonnes.code_commune]
@@ -3478,10 +3678,6 @@ description = ""
 type = "entier"
 
 ["data/03_main/cog/communes.csv".colonnes.nom]
-description = ""
-type = "str"
-
-["data/03_main/cog/communes.csv".colonnes.nom_complet]
 description = ""
 type = "str"
 
