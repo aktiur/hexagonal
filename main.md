@@ -83,7 +83,7 @@
   </tr>
 <tr>
     <td><code>population_municipale_2022</code></td>
-    <td><code>str</code></td>
+    <td><code>entier</code></td>
     <td></td>
   </tr>
 

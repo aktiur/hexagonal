@@ -3764,7 +3764,7 @@ type = "str"
 
 ["data/03_main/cog/communes.csv".colonnes.population_municipale_2022]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/03_main/elections/2022-legislatives-1-candidats.csv"]
 nom = "Liste qualifiée des candidats au premier tour des législatives de 2022"
