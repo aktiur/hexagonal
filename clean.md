@@ -4583,10 +4583,10 @@ Cette production dépend des sources suivantes :
 - [Répertoire national des élus — conseillers régionaux](sources.md#data/01_raw/rne/conseillers_regionaux.csv)
 
 
-## None
+## Élections
 
 <a name="data/03_main/elections/2022-presidentielle-parrainages.csv"></a>
-### 2022-presidentielle-parrainages
+### Parrainages enregistrées par le Conseil constitutionnel
 
 | Propriété | Valeur |
 | --------- | ------ |

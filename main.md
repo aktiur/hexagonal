@@ -1,7 +1,7 @@
 # Productions
 
 
-## None
+## Organisation administrative
 
 <a name="data/03_main/cog/communes.csv"></a>
 ### Liste des communes
@@ -97,8 +97,12 @@ Cette production dépend des sources suivantes :
 
 - [Code Officiel Géographique 2024](sources.md#data/01_raw/cog.zip)
 - [population_municipale](sources.md#data/01_raw/population_municipale.xlsx)
+
+
+## Élections
+
 <a name="data/03_main/elections/2022-legislatives-1-candidats.csv"></a>
-### 2022-legislatives-1-candidats
+### Liste qualifiée des candidats au premier tour des législatives de 2022
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -228,7 +232,7 @@ Cette production dépend des sources suivantes :
 - [LEGIS-2022 - Codage des nuances politiques des candidats aux élections législatives des 12 et 19 juin 2022](sources.md#data/01_raw/elections/2022-legislatives-nuances-legis-2022.csv)
 - [Le Monde — Liste des candidats et leur nuance politique](sources.md#data/01_raw/elections/2022-legislatives-nuances-lemonde.csv)
 <a name="data/03_main/elections/2022-legislatives-2-candidats.csv"></a>
-### 2022-legislatives-2-candidats
+### Liste qualifiée des candidats au second tour des législatives 2022
 
 | Propriété | Valeur |
 | --------- | ------ |

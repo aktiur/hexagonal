@@ -3705,6 +3705,7 @@ nullable = true
 
 ["data/03_main/cog/communes.csv"]
 nom = "Liste des communes"
+section = "Organisation administrative"
 type = "main"
 description = """
 
@@ -3766,7 +3767,8 @@ description = ""
 type = "str"
 
 ["data/03_main/elections/2022-legislatives-1-candidats.csv"]
-nom = "2022-legislatives-1-candidats"
+nom = "Liste qualifiée des candidats au premier tour des législatives de 2022"
+section = "Élections"
 type = "main"
 description = """
 
@@ -3861,7 +3863,8 @@ type = "str"
 nullable = true
 
 ["data/03_main/elections/2022-legislatives-2-candidats.csv"]
-nom = "2022-legislatives-2-candidats"
+nom = "Liste qualifiée des candidats au second tour des législatives 2022"
+section = "Élections"
 type = "main"
 description = """
 
@@ -3956,7 +3959,8 @@ type = "str"
 nullable = true
 
 ["data/03_main/elections/2022-presidentielle-parrainages.csv"]
-nom = "2022-presidentielle-parrainages"
+nom = "Parrainages enregistrées par le Conseil constitutionnel"
+section = "Élections"
 type = "clean"
 description = ""
 mimetype = "text/csv"
@@ -4004,6 +4008,7 @@ type = "date"
 
 ["data/03_main/elections/2024-legislatives-1-candidats.csv"]
 nom = "2024-legislatives-1-candidats"
+section = "Élections"
 type = "main"
 description = """
 
@@ -4092,6 +4097,7 @@ nullable = true
 
 ["data/03_main/elections/2024-legislatives-2-candidats.csv"]
 nom = "2024-legislatives-2-candidats"
+section = "Élections"
 type = "main"
 description = """
 
