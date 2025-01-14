@@ -68,6 +68,9 @@ class Dataset(BaseModel):
 
     mimetype: str = ""
 
+    # production
+    section: Optional[str] = None
+
     # sources
     info_url: Optional[str] = None
     source_url: Optional[str] = None

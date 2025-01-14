@@ -1,8 +1,12 @@
 # Données sources
 
+{% for editeur, sources in editeurs %}
+
+## {{ editeur }}
+
 {% for source in sources -%}
 <a name="{{ source.path }}"></a>
-## {{ source.nom }}
+### {{ source.nom }}
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -10,4 +14,5 @@
 | {{ prop }} | {{ val }} |
 {% endfor %}
 {{ source.description }}
+{% endfor %}
 {% endfor %}

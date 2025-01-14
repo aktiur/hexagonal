@@ -1,8 +1,11 @@
 # Productions
 
+{% for section, productions in sections %}
+## {{ section }}
+
 {% for production in productions -%}
 <a name="{{ production.path }}"></a>
-## {{ production.nom }}
+### {{ production.nom }}
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -42,4 +45,5 @@ Cette production dépend des sources suivantes :
 {% for source in production.sources() -%}
 - [{{ source.nom }}](sources.md#{{ source.path }})
 {% endfor -%}
+{% endfor %}
 {% endfor %}

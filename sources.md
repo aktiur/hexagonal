@@ -1,7 +1,11 @@
 # Données sources
 
+
+
+## INSEE
+
 <a name="data/01_raw/admin_express/admin_express_cog.7z"></a>
-## Admin Express COG édition 2024 France entière
+### Admin Express COG édition 2024 France entière
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -10,6 +14,7 @@
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/82/20f6d8b3447d1f10e2950276332c62> |
 | URL de téléchargement d&#39;origine | <https://data.geopf.fr/telechargement/download/ADMIN-EXPRESS-COG/ADMIN-EXPRESS-COG_3-2__SHP_WGS84G_FRA_2024-02-22/ADMIN-EXPRESS-COG_3-2__SHP_WGS84G_FRA_2024-02-22.7z> |
 | URL d&#39;information | <https://geoservices.ign.fr/adminexpress> |
+| Éditeur | INSEE |
 
 Fournit les contours géographiques correspondant au découpage administratif du territoire français.
 
@@ -19,45 +24,8 @@ collectivités d&#39;outre-mer (COM) ne sont pas couvertes par ce produit.
 Le produit ADMIN EXPRESS est décliné dans une édition « COG », appelé ADMIN EXPRESS COG, conforme au code officiel
 géographique publié chaque année par l’INSEE.
 
-<a name="data/01_raw/annuaire/annuaire.tar.bz2"></a>
-## Base de données locales de l&#39;annuaire de l&#39;administration
-
-| Propriété | Valeur |
-| --------- | ------ |
-| Chemin interne | `data/01_raw/annuaire/annuaire.tar.bz2` |
-| Format de fichier | application/x-tar+bzip2 |
-| URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/df/f4276a47b217d1ab1897817523e9c9> |
-| URL de téléchargement d&#39;origine | <https://lecomarquage.service-public.fr/donnees_locales_v4/all_latest.tar.bz2> |
-| Éditeur | Premier ministre |
-
-La Base de données locales référence plus de 63 000 guichets publics locaux
-(mairies, organismes sociaux, services de l&#39;état, etc.). Elle fournit leurs
-coordonnées (adresses, téléphones, site internet, horaires d&#39;ouverture,
-coordonnées de géolocalisation). En complément, sont indexés plus de 36 000
-fichiers des communes (conformes au Code Officiel Géographique de l’INSEE),
-précisant la compétence géographique des guichets.
-
-<a name="data/01_raw/assemblee-nationale.zip"></a>
-## Historique des députés
-
-| Propriété | Valeur |
-| --------- | ------ |
-| Chemin interne | `data/01_raw/assemblee-nationale.zip` |
-| Format de fichier | application/zip |
-| URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/aa/aa2511e0ae29fd3173e7894bedca13> |
-| URL de téléchargement d&#39;origine | <https://data.assemblee-nationale.fr/static/openData/repository/17/amo/tous_acteurs_mandats_organes_xi_legislature/AMO30_tous_acteurs_tous_mandats_tous_organes_historique.json.zip> |
-| Éditeur | Assemblée nationale de la République française |
-| Licence d&#39;utilisation | Licence Ouverte / Open Licence |
-
-Tous acteurs, tous mandats, tous organes depuis la XIème législature.
-
-Extrait au format JSON. L&#39;archive zip comprend trois dossiers regroupant
-respectivement les acteurs (i.e. personnes physiques), les déports (en
-cas de conflit d&#39;intérêt) et les organes (i.e. les personnes morales
-ou entités internes à l&#39;assemblée nationale).
-
 <a name="data/01_raw/cog.zip"></a>
-## Code Officiel Géographique 2024
+### Code Officiel Géographique 2024
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -83,8 +51,60 @@ territoires étrangers sont présentés sur cette page. Un troisième nouveau
 fichier met à disposition la liste des couples code extension - territoire de
 rattachement (commune ou pays).
 
+
+
+
+## Premier ministre
+
+<a name="data/01_raw/annuaire/annuaire.tar.bz2"></a>
+### Base de données locales de l&#39;annuaire de l&#39;administration
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | `data/01_raw/annuaire/annuaire.tar.bz2` |
+| Format de fichier | application/x-tar+bzip2 |
+| URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/df/f4276a47b217d1ab1897817523e9c9> |
+| URL de téléchargement d&#39;origine | <https://lecomarquage.service-public.fr/donnees_locales_v4/all_latest.tar.bz2> |
+| Éditeur | Premier ministre |
+
+La Base de données locales référence plus de 63 000 guichets publics locaux
+(mairies, organismes sociaux, services de l&#39;état, etc.). Elle fournit leurs
+coordonnées (adresses, téléphones, site internet, horaires d&#39;ouverture,
+coordonnées de géolocalisation). En complément, sont indexés plus de 36 000
+fichiers des communes (conformes au Code Officiel Géographique de l’INSEE),
+précisant la compétence géographique des guichets.
+
+
+
+
+## Assemblée nationale de la République française
+
+<a name="data/01_raw/assemblee-nationale.zip"></a>
+### Historique des députés
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | `data/01_raw/assemblee-nationale.zip` |
+| Format de fichier | application/zip |
+| URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/aa/aa2511e0ae29fd3173e7894bedca13> |
+| URL de téléchargement d&#39;origine | <https://data.assemblee-nationale.fr/static/openData/repository/17/amo/tous_acteurs_mandats_organes_xi_legislature/AMO30_tous_acteurs_tous_mandats_tous_organes_historique.json.zip> |
+| Éditeur | Assemblée nationale de la République française |
+| Licence d&#39;utilisation | Licence Ouverte / Open Licence |
+
+Tous acteurs, tous mandats, tous organes depuis la XIème législature.
+
+Extrait au format JSON. L&#39;archive zip comprend trois dossiers regroupant
+respectivement les acteurs (i.e. personnes physiques), les déports (en
+cas de conflit d&#39;intérêt) et les organes (i.e. les personnes morales
+ou entités internes à l&#39;assemblée nationale).
+
+
+
+
+## Ministère de l&#39;intérieur
+
 <a name="data/01_raw/elections/2005-referendum-bureau_de_vote.csv"></a>
-## Résultats du référendum de 2005 par bureau de vote
+### Résultats du référendum de 2005 par bureau de vote
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -96,7 +116,7 @@ rattachement (commune ou pays).
 
 
 <a name="data/01_raw/elections/2012-presidentielle-bureau_de_vote.csv"></a>
-## Résultats des deux tours de l&#39;élection présidentielle de 2012
+### Résultats des deux tours de l&#39;élection présidentielle de 2012
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -108,7 +128,7 @@ rattachement (commune ou pays).
 
 
 <a name="data/01_raw/elections/2014-europeenne-bureau_de_vote.csv"></a>
-## Résultats de l&#39;élection européenne de 2014 par bureau de vote
+### Résultats de l&#39;élection européenne de 2014 par bureau de vote
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -120,7 +140,7 @@ rattachement (commune ou pays).
 
 
 <a name="data/01_raw/elections/2017-legislatives-1-bureau_de_vote.csv"></a>
-## Résultats du premier tour des élections législatives de 2017 par bureau de vote
+### Résultats du premier tour des élections législatives de 2017 par bureau de vote
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -132,7 +152,7 @@ rattachement (commune ou pays).
 
 
 <a name="data/01_raw/elections/2017-legislatives-2-bureau_de_vote.csv"></a>
-## Résultats du deuxième tour des élections législatives de 2017 par bureau de vote
+### Résultats du deuxième tour des élections législatives de 2017 par bureau de vote
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -144,7 +164,7 @@ rattachement (commune ou pays).
 
 
 <a name="data/01_raw/elections/2017-presidentielle-1-bureau_de_vote.csv"></a>
-## Résultats du premier tour de l&#39;élection présidentielle de 2017 par bureau de vote
+### Résultats du premier tour de l&#39;élection présidentielle de 2017 par bureau de vote
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -157,7 +177,7 @@ rattachement (commune ou pays).
 
 
 <a name="data/01_raw/elections/2017-presidentielle-2-bureau_de_vote.csv"></a>
-## Résultats du deuxième tour de l&#39;élection présidentielle de 2017 par bureau de vote
+### Résultats du deuxième tour de l&#39;élection présidentielle de 2017 par bureau de vote
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -170,7 +190,7 @@ rattachement (commune ou pays).
 
 
 <a name="data/01_raw/elections/2019-europeenne-bureau_de_vote.csv"></a>
-## Résultats de l&#39;élection européenne de 2019 par bureau de vote
+### Résultats de l&#39;élection européenne de 2019 par bureau de vote
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -182,7 +202,7 @@ rattachement (commune ou pays).
 
 
 <a name="data/01_raw/elections/2020-municipales-1-bureau_de_vote_avant_correction.csv"></a>
-## Résultats du premier tour des municipales 2020 par bureau de vote
+### Résultats du premier tour des municipales 2020 par bureau de vote
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -196,7 +216,7 @@ Ce fichier comporte une anomalie : trois tabulations excédentaires aux lignes 1
 et 16921.
 
 <a name="data/01_raw/elections/2020-municipales-2-bureau_de_vote.csv"></a>
-## Résultats du deuxième tour des municipales 2020 par bureau de vote
+### Résultats du deuxième tour des municipales 2020 par bureau de vote
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -208,7 +228,7 @@ et 16921.
 
 
 <a name="data/01_raw/elections/2021-departementales-1-bureau_de_vote.csv"></a>
-## Résultats du premier tour des élections départementales de 2021 par bureau de vote
+### Résultats du premier tour des élections départementales de 2021 par bureau de vote
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -220,7 +240,7 @@ et 16921.
 
 
 <a name="data/01_raw/elections/2021-departementales-2-bureau_de_vote.csv"></a>
-## Résultats du deuxième tour des élections départementales de 2021 par bureau de vote
+### Résultats du deuxième tour des élections départementales de 2021 par bureau de vote
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -232,7 +252,7 @@ et 16921.
 
 
 <a name="data/01_raw/elections/2021-regionales-1-bureau_de_vote.csv"></a>
-## Résultats du premier tour des élections régionales de 2021 par bureau de vote
+### Résultats du premier tour des élections régionales de 2021 par bureau de vote
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -244,7 +264,7 @@ et 16921.
 
 
 <a name="data/01_raw/elections/2021-regionales-2-bureau_de_vote.csv"></a>
-## Résultats du deuxième tour des élections régionales de 2021 par bureau de vote
+### Résultats du deuxième tour des élections régionales de 2021 par bureau de vote
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -256,7 +276,7 @@ et 16921.
 
 
 <a name="data/01_raw/elections/2022-legislatives-1-bureau_de_vote.csv"></a>
-## Résultats du premier tour des élections législatives de 2022 par bureau de vote
+### Résultats du premier tour des élections législatives de 2022 par bureau de vote
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -268,7 +288,7 @@ et 16921.
 
 
 <a name="data/01_raw/elections/2022-legislatives-1-candidats.csv"></a>
-## Liste des candidats au premier tour des élections législatives 2022
+### Liste des candidats au premier tour des élections législatives 2022
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -280,7 +300,7 @@ et 16921.
 
 
 <a name="data/01_raw/elections/2022-legislatives-1-circonscription.csv"></a>
-## Résultats du premier tour des élections législatives de 2022 par circonscription législative
+### Résultats du premier tour des élections législatives de 2022 par circonscription législative
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -292,7 +312,7 @@ et 16921.
 
 
 <a name="data/01_raw/elections/2022-legislatives-2-bureau_de_vote.csv"></a>
-## Résultats du deuxième tour des élections législatives de 2022 par bureau de vote
+### Résultats du deuxième tour des élections législatives de 2022 par bureau de vote
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -304,7 +324,7 @@ et 16921.
 
 
 <a name="data/01_raw/elections/2022-legislatives-2-candidats.csv"></a>
-## Liste des candidats au deuxième tour des élections législatives de 2022
+### Liste des candidats au deuxième tour des élections législatives de 2022
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -316,7 +336,7 @@ et 16921.
 
 
 <a name="data/01_raw/elections/2022-legislatives-2-circonscription.csv"></a>
-## Résultats du deuxième tour des élections législatives de 2022 par circonscription
+### Résultats du deuxième tour des élections législatives de 2022 par circonscription
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -327,8 +347,65 @@ et 16921.
 | Éditeur | Ministère de l&#39;intérieur |
 
 
+<a name="data/01_raw/elections/2022-presidentielle-1-bureau_de_vote.csv"></a>
+### Résultats du premier tour de l&#39;élection présidentielle 2022 par bureau de vote
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | `data/01_raw/elections/2022-presidentielle-1-bureau_de_vote.csv` |
+| Format de fichier | text/csv |
+| URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/86/3143ce55ac2e71541972bd68ff9365> |
+| URL de téléchargement d&#39;origine | <https://www.data.gouv.fr/fr/datasets/r/79b5cac4-4957-486b-bbda-322d80868224> |
+| URL d&#39;information | <https://www.data.gouv.fr/fr/datasets/election-presidentielle-des-10-et-24-avril-2022-resultats-definitifs-du-1er-tour/> |
+| Éditeur | Ministère de l&#39;intérieur |
+
+
+<a name="data/01_raw/elections/2022-presidentielle-1-circonscription.csv"></a>
+### Résultats du premier tour de l&#39;élection présidentielle 2022 par circonscription législative
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | `data/01_raw/elections/2022-presidentielle-1-circonscription.csv` |
+| Format de fichier | text/csv |
+| URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/fb/5e45dd6a5ae43c93d3be0969d6c0d0> |
+| URL de téléchargement d&#39;origine | <https://www.data.gouv.fr/fr/datasets/r/056c3d1e-87ef-42b2-ae9c-57ad9d81b563> |
+| URL d&#39;information | <https://www.data.gouv.fr/fr/datasets/election-presidentielle-des-10-et-24-avril-2022-resultats-definitifs-du-1er-tour/> |
+| Éditeur | Ministère de l&#39;intérieur |
+
+
+<a name="data/01_raw/elections/2022-presidentielle-2-bureau_de_vote.csv"></a>
+### Résultats du deuxième tour de l&#39;élection présidentielle 2022 par bureau de vote
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | `data/01_raw/elections/2022-presidentielle-2-bureau_de_vote.csv` |
+| Format de fichier | text/csv |
+| URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/c5/e0a26fe52ed824208649d15628b528> |
+| URL de téléchargement d&#39;origine | <https://www.data.gouv.fr/fr/datasets/r/4dfd05a9-094e-4043-8a19-43b6b6bbe086> |
+| URL d&#39;information | <https://www.data.gouv.fr/fr/datasets/election-presidentielle-des-10-et-24-avril-2022-resultats-definitifs-du-2nd-tour/> |
+| Éditeur | Ministère de l&#39;intérieur |
+
+
+<a name="data/01_raw/elections/2022-presidentielle-2-circonscription.csv"></a>
+### Résultats du deuxième tour de l&#39;élection présidentielle 2022 par circonscription législative
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | `data/01_raw/elections/2022-presidentielle-2-circonscription.csv` |
+| Format de fichier | text/csv |
+| URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/29/2bc96162d5cde4d3cc7c98eeed4e00> |
+| URL de téléchargement d&#39;origine | <https://www.data.gouv.fr/fr/datasets/r/eefff73d-1b17-4695-8ec6-6671916e3af8> |
+| URL d&#39;information | <https://www.data.gouv.fr/fr/datasets/election-presidentielle-des-10-et-24-avril-2022-resultats-definitifs-du-2nd-tour/> |
+| Éditeur | Ministère de l&#39;intérieur |
+
+
+
+
+
+## Legis 2022
+
 <a name="data/01_raw/elections/2022-legislatives-nuances-legis-2022.csv"></a>
-## LEGIS-2022 - Codage des nuances politiques des candidats aux élections législatives des 12 et 19 juin 2022
+### LEGIS-2022 - Codage des nuances politiques des candidats aux élections législatives des 12 et 19 juin 2022
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -350,8 +427,13 @@ du ministère de l&#39;Intérieur). Son objectif principal est de comprendre la
 manière dont l&#39;élection à venir participe de la recomposition politique en cours
 dans notre pays.
 
+
+
+
+## Le Monde
+
 <a name="data/01_raw/elections/2022-legislatives-nuances-lemonde.csv"></a>
-## Le Monde — Liste des candidats et leur nuance politique
+### Le Monde — Liste des candidats et leur nuance politique
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -367,60 +449,13 @@ mieux représenter les tendances politiques et la future Assemblée nationale. L
 la fois la nuance attribuée par le ministère de l’intérieur et celle du Monde, celles-ci comportent quelques divergences
  et peuvent évoluer. Elles sont désormais disponibles en open data.
 
-<a name="data/01_raw/elections/2022-presidentielle-1-bureau_de_vote.csv"></a>
-## Résultats du premier tour de l&#39;élection présidentielle 2022 par bureau de vote
-
-| Propriété | Valeur |
-| --------- | ------ |
-| Chemin interne | `data/01_raw/elections/2022-presidentielle-1-bureau_de_vote.csv` |
-| Format de fichier | text/csv |
-| URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/86/3143ce55ac2e71541972bd68ff9365> |
-| URL de téléchargement d&#39;origine | <https://www.data.gouv.fr/fr/datasets/r/79b5cac4-4957-486b-bbda-322d80868224> |
-| URL d&#39;information | <https://www.data.gouv.fr/fr/datasets/election-presidentielle-des-10-et-24-avril-2022-resultats-definitifs-du-1er-tour/> |
-| Éditeur | Ministère de l&#39;intérieur |
 
 
-<a name="data/01_raw/elections/2022-presidentielle-1-circonscription.csv"></a>
-## Résultats du premier tour de l&#39;élection présidentielle 2022 par circonscription législative
 
-| Propriété | Valeur |
-| --------- | ------ |
-| Chemin interne | `data/01_raw/elections/2022-presidentielle-1-circonscription.csv` |
-| Format de fichier | text/csv |
-| URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/fb/5e45dd6a5ae43c93d3be0969d6c0d0> |
-| URL de téléchargement d&#39;origine | <https://www.data.gouv.fr/fr/datasets/r/056c3d1e-87ef-42b2-ae9c-57ad9d81b563> |
-| URL d&#39;information | <https://www.data.gouv.fr/fr/datasets/election-presidentielle-des-10-et-24-avril-2022-resultats-definitifs-du-1er-tour/> |
-| Éditeur | Ministère de l&#39;intérieur |
-
-
-<a name="data/01_raw/elections/2022-presidentielle-2-bureau_de_vote.csv"></a>
-## Résultats du deuxième tour de l&#39;élection présidentielle 2022 par bureau de vote
-
-| Propriété | Valeur |
-| --------- | ------ |
-| Chemin interne | `data/01_raw/elections/2022-presidentielle-2-bureau_de_vote.csv` |
-| Format de fichier | text/csv |
-| URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/c5/e0a26fe52ed824208649d15628b528> |
-| URL de téléchargement d&#39;origine | <https://www.data.gouv.fr/fr/datasets/r/4dfd05a9-094e-4043-8a19-43b6b6bbe086> |
-| URL d&#39;information | <https://www.data.gouv.fr/fr/datasets/election-presidentielle-des-10-et-24-avril-2022-resultats-definitifs-du-2nd-tour/> |
-| Éditeur | Ministère de l&#39;intérieur |
-
-
-<a name="data/01_raw/elections/2022-presidentielle-2-circonscription.csv"></a>
-## Résultats du deuxième tour de l&#39;élection présidentielle 2022 par circonscription législative
-
-| Propriété | Valeur |
-| --------- | ------ |
-| Chemin interne | `data/01_raw/elections/2022-presidentielle-2-circonscription.csv` |
-| Format de fichier | text/csv |
-| URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/29/2bc96162d5cde4d3cc7c98eeed4e00> |
-| URL de téléchargement d&#39;origine | <https://www.data.gouv.fr/fr/datasets/r/eefff73d-1b17-4695-8ec6-6671916e3af8> |
-| URL d&#39;information | <https://www.data.gouv.fr/fr/datasets/election-presidentielle-des-10-et-24-avril-2022-resultats-definitifs-du-2nd-tour/> |
-| Éditeur | Ministère de l&#39;intérieur |
-
+## Conseil constitutionnel
 
 <a name="data/01_raw/elections/2022-presidentielle-parrainages.csv"></a>
-## Liste des parrainages à l&#39;élection présidentielle 2022 validés par le Conseil constitutionnel
+### Liste des parrainages à l&#39;élection présidentielle 2022 validés par le Conseil constitutionnel
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -434,8 +469,13 @@ la fois la nuance attribuée par le ministère de l’intérieur et celle du Mon
 Le tableau ci-dessous récapitule l’ensemble des parrainages signés par des élus habilités à soutenir un candidat et
 validés par le Conseil constitutionnel.
 
+
+
+
+## None
+
 <a name="data/01_raw/elections/2024-europeenne-bureau_de_vote.csv"></a>
-## Résultats des élections européennes 2024 par bureau de vote
+### Résultats des élections européennes 2024 par bureau de vote
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -446,7 +486,7 @@ validés par le Conseil constitutionnel.
 
 
 <a name="data/01_raw/elections/2024-europeenne-circonscription.csv"></a>
-## Résultats des élections européennes 2024 par circonscription législative
+### Résultats des élections européennes 2024 par circonscription législative
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -457,7 +497,7 @@ validés par le Conseil constitutionnel.
 
 
 <a name="data/01_raw/elections/2024-legislatives-1-bureau_de_vote.csv"></a>
-## Résultats du premier tour des élections législatives 2024 par bureau de vote
+### Résultats du premier tour des élections législatives 2024 par bureau de vote
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -468,7 +508,7 @@ validés par le Conseil constitutionnel.
 
 
 <a name="data/01_raw/elections/2024-legislatives-1-candidats.csv"></a>
-## Liste des candidats au premier tour des élections législatives 2024
+### Liste des candidats au premier tour des élections législatives 2024
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -479,7 +519,7 @@ validés par le Conseil constitutionnel.
 
 
 <a name="data/01_raw/elections/2024-legislatives-1-circonscription.csv"></a>
-## Résultats du premier tour des élections législatives 2024 par circonscription législative
+### Résultats du premier tour des élections législatives 2024 par circonscription législative
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -490,7 +530,7 @@ validés par le Conseil constitutionnel.
 
 
 <a name="data/01_raw/elections/2024-legislatives-2-bureau_de_vote.csv"></a>
-## Résultats du deuxième tour des élections législatives 2024 par bureau de vote
+### Résultats du deuxième tour des élections législatives 2024 par bureau de vote
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -501,7 +541,7 @@ validés par le Conseil constitutionnel.
 
 
 <a name="data/01_raw/elections/2024-legislatives-2-candidats.csv"></a>
-## Liste des candidats au deuxième tour des élections législatives de 2024
+### Liste des candidats au deuxième tour des élections législatives de 2024
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -512,7 +552,7 @@ validés par le Conseil constitutionnel.
 
 
 <a name="data/01_raw/elections/2024-legislatives-2-circonscription.csv"></a>
-## Résultats du deuxième tour des élections législatives 2024 par circonscription législative
+### Résultats du deuxième tour des élections législatives 2024 par circonscription législative
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -522,58 +562,19 @@ validés par le Conseil constitutionnel.
 | URL de téléchargement d&#39;origine | <https://www.data.gouv.fr/fr/datasets/r/41ed46cd-77c2-4ecc-b8eb-374aa953ca39> |
 
 
-<a name="data/01_raw/elections/2024-legislatives-nfp-sensibilites.csv"></a>
-## Liste des candidats du Nouveau Front populaire et de leur sensibilité par circonscription législative
+<a name="data/01_raw/population_municipale.xlsx"></a>
+### population_municipale
 
 | Propriété | Valeur |
 | --------- | ------ |
-| Chemin interne | `data/01_raw/elections/2024-legislatives-nfp-sensibilites.csv` |
-| Format de fichier | text/csv |
-| URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/51/564d56f7bea8c6fc1abf14f540a073> |
-| Éditeur | La France insoumise |
-
-L&#39;accord signé entre la France insoumise, les Verts, le Parti communiste français et le Parti socialiste prévoyait une
-répartition des circonscriptions entre les 4 sensibilités. Ce fichier indique, pour chaque circonscription incluse dans
-le périmètre de l&#39;accord, la sensibilité à laquelle elle a été attribuée et le candidat que cette dernière y a investi.
-
-Ce fichier n&#39;indique pas la présence d&#39;éventuelles dissidences, investies ou non par une des quatre sensibilités de
-l&#39;accord.
-
-<a name="data/01_raw/elections/2024-legislatives-nuances-lfi.csv"></a>
-## La France insoumise — Nuançage des candidats des élections législatives 2024
-
-| Propriété | Valeur |
-| --------- | ------ |
-| Chemin interne | `data/01_raw/elections/2024-legislatives-nuances-lfi.csv` |
-| Format de fichier | text/csv |
-| URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/24/a9e931e2d43373ecddd42a2434eba6> |
-| Éditeur | La France insoumise |
-
-Ce nuançage a été réalisé par les équipes de la France insoumise pour permettre une analyse plus fine que celle
-qu&#39;autorisait le nuançage retenu par le Ministère de l&#39;intérieur.
-
-<a name="data/01_raw/population-municipale.xlsx"></a>
-## Population municipale en France hors Mayotte de 1876 à 2021
-
-| Propriété | Valeur |
-| --------- | ------ |
-| Chemin interne | `data/01_raw/population-municipale.xlsx` |
+| Chemin interne | `data/01_raw/population_municipale.xlsx` |
 | Format de fichier | application/vnd.openxmlformats-officedocument.spreadsheetml.sheet |
-| URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/80/00453dd82685619c7f5b405222449c> |
-| URL de téléchargement d&#39;origine | <https://www.insee.fr/fr/statistiques/fichier/3698339/base-pop-historiques-1876-2021.xlsx> |
-| Éditeur | INSEE |
-| Date | 28/12/2023 |
+| URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/d6/b7b360966185d728501adeaac33b53> |
 
-Cette base fournit les données de populations de 1876 à 2021 pour les communes de France continentale, de 1936 à 2021
-pour les communes de Corse et de 1954 ou 1962 à 2021 pour les communes des DOM (hors Mayotte).
 
-Ce tableau indique :
-- la population totale de 1876 à 1954
-- la population sans doubles comptes de 1962 à 1999
-- la population municipale depuis 2006
 
 <a name="data/01_raw/rne/conseillers_arrondissement.csv"></a>
-## Répertoire national des élus — conseillers d&#39;arrondissement de Paris, Marseille et Lyon
+### Répertoire national des élus — conseillers d&#39;arrondissement de Paris, Marseille et Lyon
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -585,7 +586,7 @@ Ce tableau indique :
 
 
 <a name="data/01_raw/rne/conseillers_csp.csv"></a>
-## Répertoire national des élus — membres des assemblées délibérantes des collectivites à statut particulier
+### Répertoire national des élus — membres des assemblées délibérantes des collectivites à statut particulier
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -597,7 +598,7 @@ Ce tableau indique :
 
 
 <a name="data/01_raw/rne/conseillers_departementaux.csv"></a>
-## Répertoire national des élus — conseillers départementaux
+### Répertoire national des élus — conseillers départementaux
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -609,7 +610,7 @@ Ce tableau indique :
 
 
 <a name="data/01_raw/rne/conseillers_epci.csv"></a>
-## Répertoire national des élus — conseillers des EPCI à fiscalité propre
+### Répertoire national des élus — conseillers des EPCI à fiscalité propre
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -621,7 +622,7 @@ Ce tableau indique :
 
 
 <a name="data/01_raw/rne/conseillers_municipaux.csv"></a>
-## Répertoire national des élus — conseillers municipaux
+### Répertoire national des élus — conseillers municipaux
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -640,7 +641,7 @@ des candidatures.
 Ce fichier comporte la liste des conseillers municipaux.
 
 <a name="data/01_raw/rne/conseillers_regionaux.csv"></a>
-## Répertoire national des élus — conseillers régionaux
+### Répertoire national des élus — conseillers régionaux
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -649,5 +650,41 @@ Ce fichier comporte la liste des conseillers municipaux.
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/14/fa5e59eee9f3095a38596459a5c149> |
 | URL de téléchargement d&#39;origine | <https://www.data.gouv.fr/fr/datasets/r/430e13f9-834b-4411-a1a8-da0b4b6e715c> |
 | URL d&#39;information | <https://www.data.gouv.fr/fr/datasets/repertoire-national-des-elus-1/> |
+
+
+
+
+
+## La France insoumise
+
+<a name="data/01_raw/elections/2024-legislatives-nfp-sensibilites.csv"></a>
+### Liste des candidats du Nouveau Front populaire et de leur sensibilité par circonscription législative
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | `data/01_raw/elections/2024-legislatives-nfp-sensibilites.csv` |
+| Format de fichier | text/csv |
+| URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/51/564d56f7bea8c6fc1abf14f540a073> |
+| Éditeur | La France insoumise |
+
+L&#39;accord signé entre la France insoumise, les Verts, le Parti communiste français et le Parti socialiste prévoyait une
+répartition des circonscriptions entre les 4 sensibilités. Ce fichier indique, pour chaque circonscription incluse dans
+le périmètre de l&#39;accord, la sensibilité à laquelle elle a été attribuée et le candidat que cette dernière y a investi.
+
+Ce fichier n&#39;indique pas la présence d&#39;éventuelles dissidences, investies ou non par une des quatre sensibilités de
+l&#39;accord.
+
+<a name="data/01_raw/elections/2024-legislatives-nuances-lfi.csv"></a>
+### La France insoumise — Nuançage des candidats des élections législatives 2024
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | `data/01_raw/elections/2024-legislatives-nuances-lfi.csv` |
+| Format de fichier | text/csv |
+| URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/24/a9e931e2d43373ecddd42a2434eba6> |
+| Éditeur | La France insoumise |
+
+Ce nuançage a été réalisé par les équipes de la France insoumise pour permettre une analyse plus fine que celle
+qu&#39;autorisait le nuançage retenu par le Ministère de l&#39;intérieur.
 
 

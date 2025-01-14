@@ -1,7 +1,10 @@
 # Productions
 
+
+## Annuaire administratif
+
 <a name="data/02_clean/annuaire/conseils_departementaux.csv"></a>
-## Annuaire administratif — Conseils départementaux
+### Annuaire administratif — Conseils départementaux
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -85,7 +88,7 @@ Cette production dépend des sources suivantes :
 
 - [Base de données locales de l&#39;annuaire de l&#39;administration](sources.md#data/01_raw/annuaire/annuaire.tar.bz2)
 <a name="data/02_clean/annuaire/mairies.csv"></a>
-## Liste des mairies
+### Liste des mairies
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -186,8 +189,12 @@ française.
 Cette production dépend des sources suivantes :
 
 - [Base de données locales de l&#39;annuaire de l&#39;administration](sources.md#data/01_raw/annuaire/annuaire.tar.bz2)
+
+
+## Assemblée nationale
+
 <a name="data/02_clean/assemblee_nationale/affiliations.csv"></a>
-## Affiliation des députés à un groupe parlementaire
+### Affiliation des députés à un groupe parlementaire
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -265,7 +272,7 @@ Cette production dépend des sources suivantes :
 
 - [Historique des députés](sources.md#data/01_raw/assemblee-nationale.zip)
 <a name="data/02_clean/assemblee_nationale/deputes.csv"></a>
-## Liste des députés
+### Liste des députés
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -356,7 +363,7 @@ Cette production dépend des sources suivantes :
 
 - [Historique des députés](sources.md#data/01_raw/assemblee-nationale.zip)
 <a name="data/02_clean/assemblee_nationale/fiches.csv"></a>
-## fiches
+### Fiches personnes de l&#39;Assemblée nationale
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -364,6 +371,13 @@ Cette production dépend des sources suivantes :
 | Format de fichier | text/csv |
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/71/e5e846805211992d03976a5dcd2af2> |
 
+Données extraites des fiches « acteurs » de l&#39;open data de l&#39;Assemblée nationale. Chaque
+ligne correspond à une personne référencée par l&#39;Assemblée nationale. Parmi les
+personnes référencées, on trouve :
+
+- les député·es
+- leurs suppléant·es
+- d&#39;autres parlementaires
 
 
 
@@ -444,7 +458,7 @@ Cette production dépend des sources suivantes :
 
 - [Historique des députés](sources.md#data/01_raw/assemblee-nationale.zip)
 <a name="data/02_clean/assemblee_nationale/groupes.csv"></a>
-## Liste des groupes parlementaires
+### Liste des groupes parlementaires
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -521,7 +535,7 @@ Cette production dépend des sources suivantes :
 
 - [Historique des députés](sources.md#data/01_raw/assemblee-nationale.zip)
 <a name="data/02_clean/assemblee_nationale/mandats.csv"></a>
-## Liste des mandats des député·es
+### Liste des mandats des député·es
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -626,15 +640,23 @@ Il débute par le préfixe &#34;PA&#34;.
 Cette production dépend des sources suivantes :
 
 - [Historique des députés](sources.md#data/01_raw/assemblee-nationale.zip)
+
+
+## Code Officiel Géographique (COG)
+
 <a name="data/02_clean/cog/com.csv"></a>
-## com
+### Liste des collectivités d&#39;Outremer
 
 | Propriété | Valeur |
 | --------- | ------ |
 | Chemin interne | `data/02_clean/cog/com.csv` |
 | Format de fichier | text/csv |
-| URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/eb/6adcfa64aec45b1de8aa99714ba201> |
+| URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/dc/05bfe2412006f03b8b36ada0a46d09> |
 
+Ce fichier liste les collectivités d&#39;Outremer au sens titre (les collectivités
+territoriales soumises au régime juridique de l&#39;article 74 de la Constitution) ainsi
+que la Nouvelle-Calédonie (régie par le titre XIII de la Constitution), les Terres
+australes et antarctiques françaises et l&#39;île de Clipperton.
 
 
 ### Colonnes
@@ -656,21 +678,11 @@ Cette production dépend des sources suivantes :
   </tr>
 <tr>
     <td><code>type_nom</code></td>
-    <td><code>str</code></td>
+    <td><code>entier</code></td>
     <td></td>
   </tr>
 <tr>
     <td><code>nom</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>article</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>charniere</code></td>
     <td><code>str</code></td>
     <td></td>
   </tr>
@@ -684,13 +696,13 @@ Cette production dépend des sources suivantes :
 
 - [Code Officiel Géographique 2024](sources.md#data/01_raw/cog.zip)
 <a name="data/02_clean/cog/communes.csv"></a>
-## communes
+### Liste des communes, arrondissements municipaux, communes déléguées et communes associées
 
 | Propriété | Valeur |
 | --------- | ------ |
 | Chemin interne | `data/02_clean/cog/communes.csv` |
 | Format de fichier | text/csv |
-| URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/00/a2dc59d3571339c3c6fffbc5ec881d> |
+| URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/df/e31086cdf374f1a0152afc32e49681> |
 
 
 
@@ -748,21 +760,11 @@ Cette production dépend des sources suivantes :
   </tr>
 <tr>
     <td><code>type_nom</code></td>
-    <td><code>str</code></td>
+    <td><code>entier</code></td>
     <td></td>
   </tr>
 <tr>
     <td><code>nom</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>article</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>charniere</code></td>
     <td><code>str</code></td>
     <td></td>
   </tr>
@@ -776,13 +778,13 @@ Cette production dépend des sources suivantes :
 
 - [Code Officiel Géographique 2024](sources.md#data/01_raw/cog.zip)
 <a name="data/02_clean/cog/communes_com.csv"></a>
-## communes_com
+### Liste des communes des collectivités d&#39;outremer
 
 | Propriété | Valeur |
 | --------- | ------ |
 | Chemin interne | `data/02_clean/cog/communes_com.csv` |
 | Format de fichier | text/csv |
-| URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/c7/ff14be8f5a8d3737c343146cd27a27> |
+| URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/81/462e90eb7e9006514eebcecced2ee4> |
 
 
 
@@ -815,21 +817,11 @@ Cette production dépend des sources suivantes :
   </tr>
 <tr>
     <td><code>type_nom</code></td>
-    <td><code>str</code></td>
+    <td><code>entier</code></td>
     <td></td>
   </tr>
 <tr>
     <td><code>nom</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>article</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>charniere</code></td>
     <td><code>str</code></td>
     <td></td>
   </tr>
@@ -843,13 +835,13 @@ Cette production dépend des sources suivantes :
 
 - [Code Officiel Géographique 2024](sources.md#data/01_raw/cog.zip)
 <a name="data/02_clean/cog/communes_historiques.csv"></a>
-## communes_historiques
+### Liste historique des communes avec leurs dates d&#39;existence
 
 | Propriété | Valeur |
 | --------- | ------ |
 | Chemin interne | `data/02_clean/cog/communes_historiques.csv` |
 | Format de fichier | text/csv |
-| URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/2b/61bf920c2ecae8c56bf84a2cdfefca> |
+| URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/35/a5986010e1e19fc7fa3df70581d014> |
 
 
 
@@ -872,21 +864,11 @@ Cette production dépend des sources suivantes :
   </tr>
 <tr>
     <td><code>type_nom</code></td>
-    <td><code>str</code></td>
+    <td><code>entier</code></td>
     <td></td>
   </tr>
 <tr>
     <td><code>nom</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>article</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>charniere</code></td>
     <td><code>str</code></td>
     <td></td>
   </tr>
@@ -909,14 +891,72 @@ Cette production dépend des sources suivantes :
 Cette production dépend des sources suivantes :
 
 - [Code Officiel Géographique 2024](sources.md#data/01_raw/cog.zip)
+<a name="data/02_clean/cog/ctcd.csv"></a>
+### Liste des collectivités territoriales ayant les compétences départementales
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | `data/02_clean/cog/ctcd.csv` |
+| Format de fichier | text/csv |
+| URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/c0/b21ebcabc375e53729529b81ef2471> |
+
+
+
+
+### Colonnes
+
+<table>
+<thead>
+  <tr>
+    <th>id</th>
+    <th>nom</th>
+    <th>type</th>
+    <th>description</th>
+  </tr>
+</thead>
+<tbody>
+<tr>
+    <td><code>code_ctcd</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>code_region</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>code_chef_lieu</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>type_nom</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>nom</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+
+</tbody>
+</table>
+
+### Sources
+
+Cette production dépend des sources suivantes :
+
+- [Code Officiel Géographique 2024](sources.md#data/01_raw/cog.zip)
 <a name="data/02_clean/cog/departements.csv"></a>
-## departements
+### Liste des départements
 
 | Propriété | Valeur |
 | --------- | ------ |
 | Chemin interne | `data/02_clean/cog/departements.csv` |
 | Format de fichier | text/csv |
-| URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/22/841dc41b957a71e752a4cd7ca005e1> |
+| URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/ac/09c997f36bf573bcd937ba62cc3768> |
 
 
 
@@ -949,7 +989,7 @@ Cette production dépend des sources suivantes :
   </tr>
 <tr>
     <td><code>type_nom</code></td>
-    <td><code>str</code></td>
+    <td><code>entier</code></td>
     <td></td>
   </tr>
 <tr>
@@ -957,13 +997,102 @@ Cette production dépend des sources suivantes :
     <td><code>str</code></td>
     <td></td>
   </tr>
+
+</tbody>
+</table>
+
+### Sources
+
+Cette production dépend des sources suivantes :
+
+- [Code Officiel Géographique 2024](sources.md#data/01_raw/cog.zip)
+<a name="data/02_clean/cog/mouvements_communes.csv"></a>
+### Liste des mouvements de commune
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | `data/02_clean/cog/mouvements_communes.csv` |
+| Format de fichier | text/csv |
+| URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/64/691627c240d83af6c599db5da6989f> |
+
+Ce fichier regroupe l&#39;ensemble des modifications apportées à la liste des communes
+dans le code officiel géographique.
+
+Les types de modifications apportées sont les suivantes :
+- changement de nom
+- création
+- rétablissement
+- suppression
+- fusion simple
+- création commune nouvelle
+- fusion association
+- transformation fusion association en fusion simple
+- suppression commune déléguée
+- changement de département
+- transfert de chef-lieu
+- transformation commune associée en commune déléguée
+- rétablissement commune déléguée
+
+
+### Colonnes
+
+<table>
+<thead>
+  <tr>
+    <th>id</th>
+    <th>nom</th>
+    <th>type</th>
+    <th>description</th>
+  </tr>
+</thead>
+<tbody>
 <tr>
-    <td><code>article</code></td>
+    <td><code>type_evenement</code></td>
     <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
-    <td><code>charniere</code></td>
+    <td><code>date_effet</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>type_commune_avant</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>code_commune_avant</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>type_nom_avant</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>nom_commune_avant</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>type_commune_apres</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>code_commune_apres</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>type_nom_apres</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>nom_commune_apres</code></td>
     <td><code>str</code></td>
     <td></td>
   </tr>
@@ -977,13 +1106,13 @@ Cette production dépend des sources suivantes :
 
 - [Code Officiel Géographique 2024](sources.md#data/01_raw/cog.zip)
 <a name="data/02_clean/cog/regions.csv"></a>
-## regions
+### Liste des régions
 
 | Propriété | Valeur |
 | --------- | ------ |
 | Chemin interne | `data/02_clean/cog/regions.csv` |
 | Format de fichier | text/csv |
-| URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/0b/2244b8608b461e22398da50e0f67d0> |
+| URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/75/a71eafce2e51538d3cc0b30b15039f> |
 
 
 
@@ -1012,21 +1141,11 @@ Cette production dépend des sources suivantes :
   </tr>
 <tr>
     <td><code>type_nom</code></td>
-    <td><code>str</code></td>
+    <td><code>entier</code></td>
     <td></td>
   </tr>
 <tr>
     <td><code>nom</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>article</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>charniere</code></td>
     <td><code>str</code></td>
     <td></td>
   </tr>
@@ -1039,8 +1158,12 @@ Cette production dépend des sources suivantes :
 Cette production dépend des sources suivantes :
 
 - [Code Officiel Géographique 2024](sources.md#data/01_raw/cog.zip)
+
+
+## Résultats électoraux
+
 <a name="data/02_clean/elections/2012-presidentielle-bureau_de_vote.csv"></a>
-## 2012-presidentielle-bureau_de_vote
+### Résultats des deux tours de l&#39;élection présidentielle de 2012
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -1132,7 +1255,7 @@ Cette production dépend des sources suivantes :
 
 - [Résultats des deux tours de l&#39;élection présidentielle de 2012](sources.md#data/01_raw/elections/2012-presidentielle-bureau_de_vote.csv)
 <a name="data/02_clean/elections/2014-europeenne-bureau_de_vote.csv"></a>
-## 2014-europeenne-bureau_de_vote
+### Résultats de l&#39;élection européenne de 2014 par bureau de vote
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -1214,7 +1337,7 @@ Cette production dépend des sources suivantes :
 
 - [Résultats de l&#39;élection européenne de 2014 par bureau de vote](sources.md#data/01_raw/elections/2014-europeenne-bureau_de_vote.csv)
 <a name="data/02_clean/elections/2017-legislatives-1-bureau_de_vote.csv"></a>
-## 2017-legislatives-1-bureau_de_vote
+### Résultats du premier tour des élections législatives de 2017 par bureau de vote
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -1301,7 +1424,7 @@ Cette production dépend des sources suivantes :
 
 - [Résultats du premier tour des élections législatives de 2017 par bureau de vote](sources.md#data/01_raw/elections/2017-legislatives-1-bureau_de_vote.csv)
 <a name="data/02_clean/elections/2017-legislatives-2-bureau_de_vote.csv"></a>
-## 2017-legislatives-2-bureau_de_vote
+### Résultats du deuxième tour des élections législatives de 2017 par bureau de vote
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -1388,7 +1511,7 @@ Cette production dépend des sources suivantes :
 
 - [Résultats du deuxième tour des élections législatives de 2017 par bureau de vote](sources.md#data/01_raw/elections/2017-legislatives-2-bureau_de_vote.csv)
 <a name="data/02_clean/elections/2017-presidentielle-1-bureau_de_vote.csv"></a>
-## 2017-presidentielle-1-bureau_de_vote
+### Résultats du premier tour de l&#39;élection présidentielle de 2017 par bureau de vote
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -1470,7 +1593,7 @@ Cette production dépend des sources suivantes :
 
 - [Résultats du premier tour de l&#39;élection présidentielle de 2017 par bureau de vote](sources.md#data/01_raw/elections/2017-presidentielle-1-bureau_de_vote.csv)
 <a name="data/02_clean/elections/2017-presidentielle-2-bureau_de_vote.csv"></a>
-## 2017-presidentielle-2-bureau_de_vote
+### Résultats du deuxième tour de l&#39;élection présidentielle de 2017 par bureau de vote
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -1552,7 +1675,7 @@ Cette production dépend des sources suivantes :
 
 - [Résultats du deuxième tour de l&#39;élection présidentielle de 2017 par bureau de vote](sources.md#data/01_raw/elections/2017-presidentielle-2-bureau_de_vote.csv)
 <a name="data/02_clean/elections/2019-europeenne-bureau_de_vote.csv"></a>
-## 2019-europeenne-bureau_de_vote
+### Résultats de l&#39;élection européenne de 2019 par bureau de vote
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -1624,7 +1747,7 @@ Cette production dépend des sources suivantes :
 
 - [Résultats de l&#39;élection européenne de 2019 par bureau de vote](sources.md#data/01_raw/elections/2019-europeenne-bureau_de_vote.csv)
 <a name="data/02_clean/elections/2020-municipales-1-bureau_de_vote.csv"></a>
-## 2020-municipales-1-bureau_de_vote
+### Résultats du premier tour des municipales 2020 par bureau de vote — corrigés
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -1711,7 +1834,7 @@ Cette production dépend des sources suivantes :
 
 - [Résultats du premier tour des municipales 2020 par bureau de vote](sources.md#data/01_raw/elections/2020-municipales-1-bureau_de_vote_avant_correction.csv)
 <a name="data/02_clean/elections/2020-municipales-2-bureau_de_vote.csv"></a>
-## 2020-municipales-2-bureau_de_vote
+### Résultats du deuxième tour des municipales 2020 par bureau de vote
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -1798,7 +1921,7 @@ Cette production dépend des sources suivantes :
 
 - [Résultats du deuxième tour des municipales 2020 par bureau de vote](sources.md#data/01_raw/elections/2020-municipales-2-bureau_de_vote.csv)
 <a name="data/02_clean/elections/2021-departementales-1-bureau_de_vote.csv"></a>
-## 2021-departementales-1-bureau_de_vote
+### Résultats du premier tour des élections départementales de 2021 par bureau de vote
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -1865,7 +1988,7 @@ Cette production dépend des sources suivantes :
 
 - [Résultats du premier tour des élections départementales de 2021 par bureau de vote](sources.md#data/01_raw/elections/2021-departementales-1-bureau_de_vote.csv)
 <a name="data/02_clean/elections/2021-departementales-2-bureau_de_vote.csv"></a>
-## 2021-departementales-2-bureau_de_vote
+### Résultats du deuxième tour des élections départementales de 2021 par bureau de vote
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -1932,7 +2055,7 @@ Cette production dépend des sources suivantes :
 
 - [Résultats du deuxième tour des élections départementales de 2021 par bureau de vote](sources.md#data/01_raw/elections/2021-departementales-2-bureau_de_vote.csv)
 <a name="data/02_clean/elections/2021-regionales-1-bureau_de_vote.csv"></a>
-## 2021-regionales-1-bureau_de_vote
+### Résultats du premier tour des élections régionales de 2021 par bureau de vote
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -2009,7 +2132,7 @@ Cette production dépend des sources suivantes :
 
 - [Résultats du premier tour des élections régionales de 2021 par bureau de vote](sources.md#data/01_raw/elections/2021-regionales-1-bureau_de_vote.csv)
 <a name="data/02_clean/elections/2021-regionales-2-bureau_de_vote.csv"></a>
-## 2021-regionales-2-bureau_de_vote
+### Résultats du deuxième tour des élections régionales de 2021 par bureau de vote
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -2086,7 +2209,7 @@ Cette production dépend des sources suivantes :
 
 - [Résultats du deuxième tour des élections régionales de 2021 par bureau de vote](sources.md#data/01_raw/elections/2021-regionales-2-bureau_de_vote.csv)
 <a name="data/02_clean/elections/2022-legislatives-1-bureau_de_vote.csv"></a>
-## 2022-legislatives-1-bureau_de_vote
+### Résultats du premier tour des élections législatives de 2022 par bureau de vote
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -2173,7 +2296,7 @@ Cette production dépend des sources suivantes :
 
 - [Résultats du premier tour des élections législatives de 2022 par bureau de vote](sources.md#data/01_raw/elections/2022-legislatives-1-bureau_de_vote.csv)
 <a name="data/02_clean/elections/2022-legislatives-1-candidats.csv"></a>
-## 2022-legislatives-1-candidats
+### Liste des candidats au premier tour des élections législatives 2022
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -2285,7 +2408,7 @@ Cette production dépend des sources suivantes :
 
 - [Liste des candidats au premier tour des élections législatives 2022](sources.md#data/01_raw/elections/2022-legislatives-1-candidats.csv)
 <a name="data/02_clean/elections/2022-legislatives-1-circonscription.csv"></a>
-## 2022-legislatives-1-circonscription
+### Résultats du premier tour des élections législatives de 2022 par circonscription législative
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -2367,7 +2490,7 @@ Cette production dépend des sources suivantes :
 
 - [Résultats du premier tour des élections législatives de 2022 par circonscription législative](sources.md#data/01_raw/elections/2022-legislatives-1-circonscription.csv)
 <a name="data/02_clean/elections/2022-legislatives-2-bureau_de_vote.csv"></a>
-## 2022-legislatives-2-bureau_de_vote
+### Résultats du deuxième tour des élections législatives de 2022 par bureau de vote
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -2454,7 +2577,7 @@ Cette production dépend des sources suivantes :
 
 - [Résultats du deuxième tour des élections législatives de 2022 par bureau de vote](sources.md#data/01_raw/elections/2022-legislatives-2-bureau_de_vote.csv)
 <a name="data/02_clean/elections/2022-legislatives-2-candidats.csv"></a>
-## 2022-legislatives-2-candidats
+### Liste des candidats au deuxième tour des élections législatives de 2022
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -2566,7 +2689,7 @@ Cette production dépend des sources suivantes :
 
 - [Liste des candidats au deuxième tour des élections législatives de 2022](sources.md#data/01_raw/elections/2022-legislatives-2-candidats.csv)
 <a name="data/02_clean/elections/2022-legislatives-2-circonscription.csv"></a>
-## 2022-legislatives-2-circonscription
+### Résultats du deuxième tour des élections législatives de 2022 par circonscription
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -2648,7 +2771,7 @@ Cette production dépend des sources suivantes :
 
 - [Résultats du deuxième tour des élections législatives de 2022 par circonscription](sources.md#data/01_raw/elections/2022-legislatives-2-circonscription.csv)
 <a name="data/02_clean/elections/2022-presidentielle-1-bureau_de_vote.csv"></a>
-## 2022-presidentielle-1-bureau_de_vote
+### Résultats du premier tour de l&#39;élection présidentielle 2022 par bureau de vote
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -2730,7 +2853,7 @@ Cette production dépend des sources suivantes :
 
 - [Résultats du premier tour de l&#39;élection présidentielle 2022 par bureau de vote](sources.md#data/01_raw/elections/2022-presidentielle-1-bureau_de_vote.csv)
 <a name="data/02_clean/elections/2022-presidentielle-1-circonscription.csv"></a>
-## 2022-presidentielle-1-circonscription
+### Résultats du premier tour de l&#39;élection présidentielle 2022 par circonscription législative
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -2807,7 +2930,7 @@ Cette production dépend des sources suivantes :
 
 - [Résultats du premier tour de l&#39;élection présidentielle 2022 par circonscription législative](sources.md#data/01_raw/elections/2022-presidentielle-1-circonscription.csv)
 <a name="data/02_clean/elections/2022-presidentielle-2-bureau_de_vote.csv"></a>
-## 2022-presidentielle-2-bureau_de_vote
+### Résultats du deuxième tour de l&#39;élection présidentielle 2022 par bureau de vote
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -2889,7 +3012,7 @@ Cette production dépend des sources suivantes :
 
 - [Résultats du deuxième tour de l&#39;élection présidentielle 2022 par bureau de vote](sources.md#data/01_raw/elections/2022-presidentielle-2-bureau_de_vote.csv)
 <a name="data/02_clean/elections/2022-presidentielle-2-circonscription.csv"></a>
-## 2022-presidentielle-2-circonscription
+### Résultats du deuxième tour de l&#39;élection présidentielle 2022 par circonscription législative
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -2966,7 +3089,7 @@ Cette production dépend des sources suivantes :
 
 - [Résultats du deuxième tour de l&#39;élection présidentielle 2022 par circonscription législative](sources.md#data/01_raw/elections/2022-presidentielle-2-circonscription.csv)
 <a name="data/02_clean/elections/2022-presidentielle-parrainages.csv"></a>
-## 2022-presidentielle-parrainages
+### Liste des parrainages à l&#39;élection présidentielle 2022 validés par le Conseil constitutionnel
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -3038,7 +3161,7 @@ Cette production dépend des sources suivantes :
 
 - [Liste des parrainages à l&#39;élection présidentielle 2022 validés par le Conseil constitutionnel](sources.md#data/01_raw/elections/2022-presidentielle-parrainages.csv)
 <a name="data/02_clean/elections/2024-europeenne-bureau_de_vote.csv"></a>
-## 2024-europeenne-bureau_de_vote
+### Résultats des élections européennes 2024 par bureau de vote
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -3115,7 +3238,7 @@ Cette production dépend des sources suivantes :
 
 - [Résultats des élections européennes 2024 par bureau de vote](sources.md#data/01_raw/elections/2024-europeenne-bureau_de_vote.csv)
 <a name="data/02_clean/elections/2024-europeenne-circonscription.csv"></a>
-## 2024-europeenne-circonscription
+### Résultats des élections européennes 2024 par circonscription législative
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -3192,7 +3315,7 @@ Cette production dépend des sources suivantes :
 
 - [Résultats des élections européennes 2024 par circonscription législative](sources.md#data/01_raw/elections/2024-europeenne-circonscription.csv)
 <a name="data/02_clean/elections/2024-legislatives-1-bureau_de_vote.csv"></a>
-## 2024-legislatives-1-bureau_de_vote
+### Résultats du premier tour des élections législatives 2024 par bureau de vote
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -3274,7 +3397,7 @@ Cette production dépend des sources suivantes :
 
 - [Résultats du premier tour des élections législatives 2024 par bureau de vote](sources.md#data/01_raw/elections/2024-legislatives-1-bureau_de_vote.csv)
 <a name="data/02_clean/elections/2024-legislatives-1-candidats.csv"></a>
-## 2024-legislatives-1-candidats
+### Liste des candidats au premier tour des élections législatives 2024
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -3386,7 +3509,7 @@ Cette production dépend des sources suivantes :
 
 - [Liste des candidats au premier tour des élections législatives 2024](sources.md#data/01_raw/elections/2024-legislatives-1-candidats.csv)
 <a name="data/02_clean/elections/2024-legislatives-1-circonscription.csv"></a>
-## 2024-legislatives-1-circonscription
+### Résultats du premier tour des élections législatives 2024 par circonscription législative
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -3468,7 +3591,7 @@ Cette production dépend des sources suivantes :
 
 - [Résultats du premier tour des élections législatives 2024 par circonscription législative](sources.md#data/01_raw/elections/2024-legislatives-1-circonscription.csv)
 <a name="data/02_clean/elections/2024-legislatives-2-bureau_de_vote.csv"></a>
-## 2024-legislatives-2-bureau_de_vote
+### Résultats du deuxième tour des élections législatives 2024 par bureau de vote
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -3550,7 +3673,7 @@ Cette production dépend des sources suivantes :
 
 - [Résultats du deuxième tour des élections législatives 2024 par bureau de vote](sources.md#data/01_raw/elections/2024-legislatives-2-bureau_de_vote.csv)
 <a name="data/02_clean/elections/2024-legislatives-2-candidats.csv"></a>
-## 2024-legislatives-2-candidats
+### Liste des candidats au deuxième tour des élections législatives de 2024
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -3662,7 +3785,7 @@ Cette production dépend des sources suivantes :
 
 - [Liste des candidats au deuxième tour des élections législatives de 2024](sources.md#data/01_raw/elections/2024-legislatives-2-candidats.csv)
 <a name="data/02_clean/elections/2024-legislatives-2-circonscription.csv"></a>
-## 2024-legislatives-2-circonscription
+### Résultats du deuxième tour des élections législatives 2024 par circonscription législative
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -3744,7 +3867,7 @@ Cette production dépend des sources suivantes :
 
 - [Résultats du deuxième tour des élections législatives 2024 par circonscription législative](sources.md#data/01_raw/elections/2024-legislatives-2-circonscription.csv)
 <a name="data/02_clean/elections/2024-legislatives-correspondances-bureau_de_vote-circonscription.csv"></a>
-## 2024-legislatives-correspondances-bureau_de_vote-circonscription
+### 2024-legislatives-correspondances-bureau_de_vote-circonscription
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -3786,8 +3909,245 @@ Cette production dépend des sources suivantes :
 
 - [Résultats du premier tour des élections législatives 2024 par bureau de vote](sources.md#data/01_raw/elections/2024-legislatives-1-bureau_de_vote.csv)
 - [Liste des candidats au premier tour des élections législatives 2024](sources.md#data/01_raw/elections/2024-legislatives-1-candidats.csv)
+
+
+## Démographie
+
+<a name="data/02_clean/population_municipale.csv"></a>
+### Population par commune de 1876 à 2022
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | `data/02_clean/population_municipale.csv` |
+| Format de fichier | text/csv |
+| URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/c8/6bb28a31ffffc09704549b1cccc863> |
+
+Pour chaque commune de France est indiquée la population pour chacun des recensements
+depuis celui de 1876.
+
+Les critères retenus pour définir la population d&#39;une commune ont changé au cours du
+temps :
+
+- depuis le recensement de 2006, le chiffre donné est celui de la population
+municipale
+- entre 1962 et 1999, il s&#39;agit de la population sans doubles comptes
+- entre 1876 et 1954, il s&#39;agit de la population totale ; les populations d&#39;un groupe de
+  communes ne peuvent donc pas être sommées pour obtenir la population du groupe de
+  communes.
+
+
+### Colonnes
+
+<table>
+<thead>
+  <tr>
+    <th>id</th>
+    <th>nom</th>
+    <th>type</th>
+    <th>description</th>
+  </tr>
+</thead>
+<tbody>
+<tr>
+    <td><code>code_commune</code></td>
+    <td><code>code_commune</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>population_municipale_2022</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>population_municipale_2021</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>population_municipale_2020</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>population_municipale_2019</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>population_municipale_2018</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>population_municipale_2017</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>population_municipale_2016</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>population_municipale_2015</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>population_municipale_2014</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>population_municipale_2013</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>population_municipale_2012</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>population_municipale_2011</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>population_municipale_2010</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>population_municipale_2009</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>population_municipale_2008</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>population_municipale_2007</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>population_municipale_2006</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>population_sans_doubles_comptes_1999</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>population_sans_doubles_comptes_1990</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>population_sans_doubles_comptes_1982</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>population_sans_doubles_comptes_1975</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>population_sans_doubles_comptes_1968</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>population_sans_doubles_comptes_1962</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>population_totale_1954</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>population_totale_1936</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>population_totale_1931</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>population_totale_1926</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>population_totale_1921</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>population_totale_1911</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>population_totale_1906</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>population_totale_1901</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>population_totale_1896</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>population_totale_1891</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>population_totale_1886</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>population_totale_1881</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>population_totale_1876</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+
+</tbody>
+</table>
+
+### Sources
+
+Cette production dépend des sources suivantes :
+
+- [population_municipale](sources.md#data/01_raw/population_municipale.xlsx)
+
+
+## Répertoire national des élus
+
 <a name="data/02_clean/rne/conseillers_arrondissement.csv"></a>
-## conseillers_arrondissement
+### conseillers_arrondissement
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -3879,7 +4239,7 @@ Cette production dépend des sources suivantes :
 
 - [Répertoire national des élus — conseillers d&#39;arrondissement de Paris, Marseille et Lyon](sources.md#data/01_raw/rne/conseillers_arrondissement.csv)
 <a name="data/02_clean/rne/conseillers_csp.csv"></a>
-## conseillers_csp
+### conseillers_csp
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -3966,7 +4326,7 @@ Cette production dépend des sources suivantes :
 
 - [Répertoire national des élus — membres des assemblées délibérantes des collectivites à statut particulier](sources.md#data/01_raw/rne/conseillers_csp.csv)
 <a name="data/02_clean/rne/conseillers_departementaux.csv"></a>
-## conseillers_departementaux
+### conseillers_departementaux
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -4048,7 +4408,7 @@ Cette production dépend des sources suivantes :
 
 - [Répertoire national des élus — conseillers départementaux](sources.md#data/01_raw/rne/conseillers_departementaux.csv)
 <a name="data/02_clean/rne/conseillers_municipaux.csv"></a>
-## conseillers_municipaux
+### conseillers_municipaux
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -4140,7 +4500,7 @@ Cette production dépend des sources suivantes :
 
 - [Répertoire national des élus — conseillers municipaux](sources.md#data/01_raw/rne/conseillers_municipaux.csv)
 <a name="data/02_clean/rne/conseillers_regionaux.csv"></a>
-## conseillers_regionaux
+### conseillers_regionaux
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -4221,268 +4581,12 @@ Cette production dépend des sources suivantes :
 Cette production dépend des sources suivantes :
 
 - [Répertoire national des élus — conseillers régionaux](sources.md#data/01_raw/rne/conseillers_regionaux.csv)
-<a name="data/03_main/elections/2022-legislatives-1-candidats.csv"></a>
-## 2022-legislatives-1-candidats
-
-| Propriété | Valeur |
-| --------- | ------ |
-| Chemin interne | `data/03_main/elections/2022-legislatives-1-candidats.csv` |
-| Format de fichier | text/csv |
-| URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/84/a9b4583202e57f5716bcfb204670ab> |
 
 
+## None
 
-
-### Colonnes
-
-<table>
-<thead>
-  <tr>
-    <th>id</th>
-    <th>nom</th>
-    <th>type</th>
-    <th>description</th>
-  </tr>
-</thead>
-<tbody>
-<tr>
-    <td><code>circonscription</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>numero_panneau</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>numero_depot</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>sexe</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>nom</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>prenom</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>date_naissance</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>nuance</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>profession</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>sortant</code></td>
-    <td><code>bool</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>sexe_suppleant</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>nom_suppleant</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>prenom_suppleant</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>date_naissance_suppleant</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>sortant_suppleant</code></td>
-    <td><code>bool</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>nuance_lemonde</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>parti_lemonde</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>nuance_legis_2022</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>regroupement_om_legis_2022</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-
-</tbody>
-</table>
-
-### Sources
-
-Cette production dépend des sources suivantes :
-
-- [Liste des candidats au premier tour des élections législatives 2022](sources.md#data/01_raw/elections/2022-legislatives-1-candidats.csv)
-- [LEGIS-2022 - Codage des nuances politiques des candidats aux élections législatives des 12 et 19 juin 2022](sources.md#data/01_raw/elections/2022-legislatives-nuances-legis-2022.csv)
-- [Le Monde — Liste des candidats et leur nuance politique](sources.md#data/01_raw/elections/2022-legislatives-nuances-lemonde.csv)
-<a name="data/03_main/elections/2022-legislatives-2-candidats.csv"></a>
-## 2022-legislatives-2-candidats
-
-| Propriété | Valeur |
-| --------- | ------ |
-| Chemin interne | `data/03_main/elections/2022-legislatives-2-candidats.csv` |
-| Format de fichier | text/csv |
-| URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/c7/75b7da4a1a92fbdc4a3d7e4eb76c5d> |
-
-
-
-
-### Colonnes
-
-<table>
-<thead>
-  <tr>
-    <th>id</th>
-    <th>nom</th>
-    <th>type</th>
-    <th>description</th>
-  </tr>
-</thead>
-<tbody>
-<tr>
-    <td><code>circonscription</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>numero_panneau</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>numero_depot</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>sexe</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>nom</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>prenom</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>date_naissance</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>nuance</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>profession</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>sortant</code></td>
-    <td><code>bool</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>sexe_suppleant</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>nom_suppleant</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>prenom_suppleant</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>date_naissance_suppleant</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>sortant_suppleant</code></td>
-    <td><code>bool</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>nuance_lemonde</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>parti_lemonde</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>nuance_legis_2022</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>regroupement_om_legis_2022</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-
-</tbody>
-</table>
-
-### Sources
-
-Cette production dépend des sources suivantes :
-
-- [Liste des candidats au deuxième tour des élections législatives de 2022](sources.md#data/01_raw/elections/2022-legislatives-2-candidats.csv)
-- [LEGIS-2022 - Codage des nuances politiques des candidats aux élections législatives des 12 et 19 juin 2022](sources.md#data/01_raw/elections/2022-legislatives-nuances-legis-2022.csv)
-- [Le Monde — Liste des candidats et leur nuance politique](sources.md#data/01_raw/elections/2022-legislatives-nuances-lemonde.csv)
 <a name="data/03_main/elections/2022-presidentielle-parrainages.csv"></a>
-## 2022-presidentielle-parrainages
+### 2022-presidentielle-parrainages
 
 | Propriété | Valeur |
 | --------- | ------ |
@@ -4554,253 +4658,4 @@ Cette production dépend des sources suivantes :
 
 - [Code Officiel Géographique 2024](sources.md#data/01_raw/cog.zip)
 - [Liste des parrainages à l&#39;élection présidentielle 2022 validés par le Conseil constitutionnel](sources.md#data/01_raw/elections/2022-presidentielle-parrainages.csv)
-<a name="data/03_main/elections/2024-legislatives-1-candidats.csv"></a>
-## 2024-legislatives-1-candidats
 
-| Propriété | Valeur |
-| --------- | ------ |
-| Chemin interne | `data/03_main/elections/2024-legislatives-1-candidats.csv` |
-| Format de fichier | text/csv |
-| URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/2b/8f8aafd90d405b32f87250a52a34ad> |
-
-
-
-
-### Colonnes
-
-<table>
-<thead>
-  <tr>
-    <th>id</th>
-    <th>nom</th>
-    <th>type</th>
-    <th>description</th>
-  </tr>
-</thead>
-<tbody>
-<tr>
-    <td><code>departement</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>circonscription</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>numero_panneau</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>numero_depot</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>sexe</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>nom</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>prenom</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>date_naissance</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>nuance</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>profession</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>sortant</code></td>
-    <td><code>bool</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>sexe_suppleant</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>nom_suppleant</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>prenom_suppleant</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>date_naissance_suppleant</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>sortant_suppleant</code></td>
-    <td><code>bool</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>nuance_lfi</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>sensibilite</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-
-</tbody>
-</table>
-
-### Sources
-
-Cette production dépend des sources suivantes :
-
-- [Liste des candidats au premier tour des élections législatives 2024](sources.md#data/01_raw/elections/2024-legislatives-1-candidats.csv)
-- [Liste des candidats du Nouveau Front populaire et de leur sensibilité par circonscription législative](sources.md#data/01_raw/elections/2024-legislatives-nfp-sensibilites.csv)
-- [La France insoumise — Nuançage des candidats des élections législatives 2024](sources.md#data/01_raw/elections/2024-legislatives-nuances-lfi.csv)
-<a name="data/03_main/elections/2024-legislatives-2-candidats.csv"></a>
-## 2024-legislatives-2-candidats
-
-| Propriété | Valeur |
-| --------- | ------ |
-| Chemin interne | `data/03_main/elections/2024-legislatives-2-candidats.csv` |
-| Format de fichier | text/csv |
-| URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/59/0e8d560245a7a23c90005fdc9da4ea> |
-
-
-
-
-### Colonnes
-
-<table>
-<thead>
-  <tr>
-    <th>id</th>
-    <th>nom</th>
-    <th>type</th>
-    <th>description</th>
-  </tr>
-</thead>
-<tbody>
-<tr>
-    <td><code>departement</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>circonscription</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>numero_panneau</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>numero_depot</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>sexe</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>nom</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>prenom</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>date_naissance</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>nuance</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>profession</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>sortant</code></td>
-    <td><code>bool</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>sexe_suppleant</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>nom_suppleant</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>prenom_suppleant</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>date_naissance_suppleant</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>sortant_suppleant</code></td>
-    <td><code>bool</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>nuance_lfi</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>sensibilite</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-
-</tbody>
-</table>
-
-### Sources
-
-Cette production dépend des sources suivantes :
-
-- [Liste des candidats au deuxième tour des élections législatives de 2024](sources.md#data/01_raw/elections/2024-legislatives-2-candidats.csv)
-- [Liste des candidats du Nouveau Front populaire et de leur sensibilité par circonscription législative](sources.md#data/01_raw/elections/2024-legislatives-nfp-sensibilites.csv)
-- [La France insoumise — Nuançage des candidats des élections législatives 2024](sources.md#data/01_raw/elections/2024-legislatives-nuances-lfi.csv)
