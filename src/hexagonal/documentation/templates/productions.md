@@ -1,6 +1,15 @@
 # Productions
 
 {% for section, productions in sections %}
+- [{{ section }}](#{{ section|slugify }})
+{%- for prod in productions %}
+  - [{{ prod.nom }}](#{{ prod.path }})
+{%- endfor %}
+{%- endfor %}
+
+
+{% for section, productions in sections %}
+<a name="{{ section|slugify }}"></a>
 ## {{ section }}
 
 {% for production in productions -%}

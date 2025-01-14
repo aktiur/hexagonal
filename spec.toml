@@ -45,6 +45,7 @@ ligne (format dit ndjson)
 mimetype = "application/json"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/d0/79eaee7e513be6acde1d9bdfaf0002"
 s3_url = "s3://hexagonal-data/cache/files/md5/d0/79eaee7e513be6acde1d9bdfaf0002"
+editeur = "Premier ministre"
 deps = [
     "data/01_raw/annuaire/annuaire.tar.bz2",
 ]
@@ -60,6 +61,7 @@ ligne (format dit ndjson)
 mimetype = "application/json"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/a2/a1f4d0a7a1fab329844ba4e3eaef84"
 s3_url = "s3://hexagonal-data/cache/files/md5/a2/a1f4d0a7a1fab329844ba4e3eaef84"
+editeur = "Premier ministre"
 deps = [
     "data/01_raw/annuaire/annuaire.tar.bz2",
 ]
@@ -74,6 +76,7 @@ EPCI, chacun au format JSON, séparé par une nouvelleligne (format dit ndjson)
 mimetype = "application/json"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/5f/fdaca257899a799b34169664804658"
 s3_url = "s3://hexagonal-data/cache/files/md5/5f/fdaca257899a799b34169664804658"
+editeur = "Premier ministre"
 deps = [
     "data/01_raw/annuaire/annuaire.tar.bz2",
 ]
@@ -88,6 +91,7 @@ mairies, chacun au format JSON, séparé par une nouvelleligne (format dit ndjso
 mimetype = "application/json"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/b9/5de50790673feae76c1f7d5f7765d8"
 s3_url = "s3://hexagonal-data/cache/files/md5/b9/5de50790673feae76c1f7d5f7765d8"
+editeur = "Premier ministre"
 deps = [
     "data/01_raw/annuaire/annuaire.tar.bz2",
 ]
@@ -99,6 +103,7 @@ description = ""
 mimetype = "application/json"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/f7/e71bfc0c1beff22dbb905e1cf76401"
 s3_url = "s3://hexagonal-data/cache/files/md5/f7/e71bfc0c1beff22dbb905e1cf76401"
+editeur = "Premier ministre"
 deps = [
     "data/01_raw/annuaire/annuaire.tar.bz2",
 ]
@@ -236,6 +241,7 @@ description = ""
 mimetype = "text/csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/13/4a9746d44fbccabb9136992975c355"
 s3_url = "s3://hexagonal-data/cache/files/md5/13/4a9746d44fbccabb9136992975c355"
+editeur = "Ministère de l'intérieur"
 deps = [
     "data/01_raw/elections/2020-municipales-1-bureau_de_vote_avant_correction.csv",
 ]
@@ -467,6 +473,7 @@ mimetype = "text/csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/b3/a9085acb27df6669ac04d5aca2e5da"
 s3_url = "s3://hexagonal-data/cache/files/md5/b3/a9085acb27df6669ac04d5aca2e5da"
 source_url = "https://www.data.gouv.fr/fr/datasets/r/cc1883d9-1265-4365-b754-fb6aef22d82e"
+editeur = "Ministère de l'intérieur"
 
 ["data/01_raw/elections/2024-europeenne-circonscription.csv"]
 nom = "Résultats des élections européennes 2024 par circonscription législative"
@@ -476,6 +483,7 @@ mimetype = "text/csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/8a/9a6ca76b17b2ce3600c400ce800187"
 s3_url = "s3://hexagonal-data/cache/files/md5/8a/9a6ca76b17b2ce3600c400ce800187"
 source_url = "https://www.data.gouv.fr/fr/datasets/r/ee37cbef-3d2a-4efe-a395-530b85a63028"
+editeur = "Ministère de l'intérieur"
 
 ["data/01_raw/elections/2024-legislatives-1-bureau_de_vote.csv"]
 nom = "Résultats du premier tour des élections législatives 2024 par bureau de vote"
@@ -485,6 +493,7 @@ mimetype = "text/csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/92/547431feb455ad1065815e72c40d8e"
 s3_url = "s3://hexagonal-data/cache/files/md5/92/547431feb455ad1065815e72c40d8e"
 source_url = "https://www.data.gouv.fr/fr/datasets/r/6813fb28-7ec0-42ff-a528-2bc3d82d7dcd"
+editeur = "Ministère de l'intérieur"
 
 ["data/01_raw/elections/2024-legislatives-1-candidats.csv"]
 nom = "Liste des candidats au premier tour des élections législatives 2024"
@@ -494,6 +503,7 @@ mimetype = "text/csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/c8/40bd309348cbe6cd728cc96bf550d0"
 s3_url = "s3://hexagonal-data/cache/files/md5/c8/40bd309348cbe6cd728cc96bf550d0"
 source_url = "https://www.data.gouv.fr/fr/datasets/r/cd5b39e6-5feb-4864-b274-3431ed81442c"
+editeur = "Ministère de l'intérieur"
 
 ["data/01_raw/elections/2024-legislatives-1-circonscription.csv"]
 nom = "Résultats du premier tour des élections législatives 2024 par circonscription législative"
@@ -503,6 +513,7 @@ mimetype = "text/csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/1d/424007d37d7cf2d24d799403d6af00"
 s3_url = "s3://hexagonal-data/cache/files/md5/1d/424007d37d7cf2d24d799403d6af00"
 source_url = "https://www.data.gouv.fr/fr/datasets/r/5163f2e3-1362-4c35-89a0-1934bb74f2d9"
+editeur = "Ministère de l'intérieur"
 
 ["data/01_raw/elections/2024-legislatives-2-bureau_de_vote.csv"]
 nom = "Résultats du deuxième tour des élections législatives 2024 par bureau de vote"
@@ -512,6 +523,7 @@ mimetype = "text/csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/06/3dfce8aa81153f6b535b7ecdb49d6f"
 s3_url = "s3://hexagonal-data/cache/files/md5/06/3dfce8aa81153f6b535b7ecdb49d6f"
 source_url = "https://www.data.gouv.fr/fr/datasets/r/ca974f04-cfd9-4da8-8554-4a868a09c6c2"
+editeur = "Ministère de l'intérieur"
 
 ["data/01_raw/elections/2024-legislatives-2-candidats.csv"]
 nom = "Liste des candidats au deuxième tour des élections législatives de 2024"
@@ -521,6 +533,7 @@ mimetype = "text/csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/c6/e6f33721554d0a1260d81775c0fd22"
 s3_url = "s3://hexagonal-data/cache/files/md5/c6/e6f33721554d0a1260d81775c0fd22"
 source_url = "https://www.data.gouv.fr/fr/datasets/r/f04605b8-4c02-4496-8a26-2bc02b17f739"
+editeur = "Ministère de l'intérieur"
 
 ["data/01_raw/elections/2024-legislatives-2-circonscription.csv"]
 nom = "Résultats du deuxième tour des élections législatives 2024 par circonscription législative"
@@ -530,6 +543,7 @@ mimetype = "text/csv"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/52/32b0951ce8ca92573ea3b35d5d62a0"
 s3_url = "s3://hexagonal-data/cache/files/md5/52/32b0951ce8ca92573ea3b35d5d62a0"
 source_url = "https://www.data.gouv.fr/fr/datasets/r/41ed46cd-77c2-4ecc-b8eb-374aa953ca39"
+editeur = "Ministère de l'intérieur"
 
 ["data/01_raw/elections/2024-legislatives-nfp-sensibilites.csv"]
 nom = "Liste des candidats du Nouveau Front populaire et de leur sensibilité par circonscription législative"
@@ -560,14 +574,13 @@ s3_url = "s3://hexagonal-data/cache/files/md5/24/a9e931e2d43373ecddd42a2434eba6"
 editeur = "La France insoumise"
 
 ["data/01_raw/population_municipale.xlsx"]
-nom = "population_municipale"
+nom = "Séries historiques de population par commune (1876 à 2022)"
 type = "source"
-description = """
-
-"""
+description = ""
 mimetype = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/d6/b7b360966185d728501adeaac33b53"
 s3_url = "s3://hexagonal-data/cache/files/md5/d6/b7b360966185d728501adeaac33b53"
+editeur = "INSEE"
 
 ["data/01_raw/rne/conseillers_arrondissement.csv"]
 nom = "Répertoire national des élus — conseillers d'arrondissement de Paris, Marseille et Lyon"
@@ -578,6 +591,7 @@ url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/bd/d0e9
 s3_url = "s3://hexagonal-data/cache/files/md5/bd/d0e9cc134bd9c122bff812a72620af"
 source_url = "https://www.data.gouv.fr/fr/datasets/r/3b6b2281-b9d9-4959-ae9d-c2c166dff118"
 info_url = "https://www.data.gouv.fr/fr/datasets/repertoire-national-des-elus-1/"
+editeur = "Ministère de l'intérieur"
 
 ["data/01_raw/rne/conseillers_csp.csv"]
 nom = "Répertoire national des élus — membres des assemblées délibérantes des collectivites à statut particulier"
@@ -588,6 +602,7 @@ url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/76/5026
 s3_url = "s3://hexagonal-data/cache/files/md5/76/50260d596109c66acbd2e83423c5f1"
 source_url = "https://static.data.gouv.fr/resources/repertoire-national-des-elus-1/20241031-095248/elus-membres-assemblee-ma.csv"
 info_url = "https://www.data.gouv.fr/fr/datasets/repertoire-national-des-elus-1/"
+editeur = "Ministère de l'intérieur"
 
 ["data/01_raw/rne/conseillers_departementaux.csv"]
 nom = "Répertoire national des élus — conseillers départementaux"
@@ -598,6 +613,7 @@ url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/d0/8158
 s3_url = "s3://hexagonal-data/cache/files/md5/d0/8158a4f34f09a515333778d34a6e45"
 source_url = "https://www.data.gouv.fr/fr/datasets/r/601ef073-d986-4582-8e1a-ed14dc857fba"
 info_url = "https://www.data.gouv.fr/fr/datasets/repertoire-national-des-elus-1/"
+editeur = "Ministère de l'intérieur"
 
 ["data/01_raw/rne/conseillers_epci.csv"]
 nom = "Répertoire national des élus — conseillers des EPCI à fiscalité propre"
@@ -608,6 +624,7 @@ url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/e4/ffdd
 s3_url = "s3://hexagonal-data/cache/files/md5/e4/ffddb7d7d7504d13e80ccbbb2a0b1b"
 source_url = "https://www.data.gouv.fr/fr/datasets/r/41d95d7d-b172-4636-ac44-32656367cdc7"
 info_url = "https://www.data.gouv.fr/fr/datasets/repertoire-national-des-elus-1/"
+editeur = "Ministère de l'intérieur"
 
 ["data/01_raw/rne/conseillers_municipaux.csv"]
 nom = "Répertoire national des élus — conseillers municipaux"
@@ -626,6 +643,7 @@ url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/ba/04a3
 s3_url = "s3://hexagonal-data/cache/files/md5/ba/04a3782f9cbb41b4487a0a6c048873"
 source_url = "https://www.data.gouv.fr/fr/datasets/r/d5f400de-ae3f-4966-8cb6-a85c70c6c24a"
 info_url = "https://www.data.gouv.fr/fr/datasets/repertoire-national-des-elus-1/"
+editeur = "Ministère de l'intérieur"
 
 ["data/01_raw/rne/conseillers_regionaux.csv"]
 nom = "Répertoire national des élus — conseillers régionaux"
@@ -636,6 +654,7 @@ url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/14/fa5e
 s3_url = "s3://hexagonal-data/cache/files/md5/14/fa5e59eee9f3095a38596459a5c149"
 source_url = "https://www.data.gouv.fr/fr/datasets/r/430e13f9-834b-4411-a1a8-da0b4b6e715c"
 info_url = "https://www.data.gouv.fr/fr/datasets/repertoire-national-des-elus-1/"
+editeur = "Ministère de l'intérieur"
 
 ["data/02_clean/annuaire/conseils_departementaux.csv"]
 nom = "Annuaire administratif — Conseils départementaux"

@@ -1,7 +1,112 @@
 # Données sources
 
 
+- [Assemblée nationale de la République française](#assemblee-nationale-de-la-republique-francaise)
+  - [Historique des députés](#data/01_raw/assemblee-nationale.zip)
+- [Conseil constitutionnel](#conseil-constitutionnel)
+  - [Liste des parrainages à l&#39;élection présidentielle 2022 validés par le Conseil constitutionnel](#data/01_raw/elections/2022-presidentielle-parrainages.csv)
+- [INSEE](#insee)
+  - [Admin Express COG édition 2024 France entière](#data/01_raw/admin_express/admin_express_cog.7z)
+  - [Code Officiel Géographique 2024](#data/01_raw/cog.zip)
+  - [Séries historiques de population par commune (1876 à 2022)](#data/01_raw/population_municipale.xlsx)
+- [La France insoumise](#la-france-insoumise)
+  - [Liste des candidats du Nouveau Front populaire et de leur sensibilité par circonscription législative](#data/01_raw/elections/2024-legislatives-nfp-sensibilites.csv)
+  - [La France insoumise — Nuançage des candidats des élections législatives 2024](#data/01_raw/elections/2024-legislatives-nuances-lfi.csv)
+- [Le Monde](#le-monde)
+  - [Le Monde — Liste des candidats et leur nuance politique](#data/01_raw/elections/2022-legislatives-nuances-lemonde.csv)
+- [Legis 2022](#legis-2022)
+  - [LEGIS-2022 - Codage des nuances politiques des candidats aux élections législatives des 12 et 19 juin 2022](#data/01_raw/elections/2022-legislatives-nuances-legis-2022.csv)
+- [Ministère de l&#39;intérieur](#ministere-de-l-interieur)
+  - [Résultats du référendum de 2005 par bureau de vote](#data/01_raw/elections/2005-referendum-bureau_de_vote.csv)
+  - [Résultats des deux tours de l&#39;élection présidentielle de 2012](#data/01_raw/elections/2012-presidentielle-bureau_de_vote.csv)
+  - [Résultats de l&#39;élection européenne de 2014 par bureau de vote](#data/01_raw/elections/2014-europeenne-bureau_de_vote.csv)
+  - [Résultats du premier tour des élections législatives de 2017 par bureau de vote](#data/01_raw/elections/2017-legislatives-1-bureau_de_vote.csv)
+  - [Résultats du deuxième tour des élections législatives de 2017 par bureau de vote](#data/01_raw/elections/2017-legislatives-2-bureau_de_vote.csv)
+  - [Résultats du premier tour de l&#39;élection présidentielle de 2017 par bureau de vote](#data/01_raw/elections/2017-presidentielle-1-bureau_de_vote.csv)
+  - [Résultats du deuxième tour de l&#39;élection présidentielle de 2017 par bureau de vote](#data/01_raw/elections/2017-presidentielle-2-bureau_de_vote.csv)
+  - [Résultats de l&#39;élection européenne de 2019 par bureau de vote](#data/01_raw/elections/2019-europeenne-bureau_de_vote.csv)
+  - [Résultats du premier tour des municipales 2020 par bureau de vote](#data/01_raw/elections/2020-municipales-1-bureau_de_vote_avant_correction.csv)
+  - [Résultats du deuxième tour des municipales 2020 par bureau de vote](#data/01_raw/elections/2020-municipales-2-bureau_de_vote.csv)
+  - [Résultats du premier tour des élections départementales de 2021 par bureau de vote](#data/01_raw/elections/2021-departementales-1-bureau_de_vote.csv)
+  - [Résultats du deuxième tour des élections départementales de 2021 par bureau de vote](#data/01_raw/elections/2021-departementales-2-bureau_de_vote.csv)
+  - [Résultats du premier tour des élections régionales de 2021 par bureau de vote](#data/01_raw/elections/2021-regionales-1-bureau_de_vote.csv)
+  - [Résultats du deuxième tour des élections régionales de 2021 par bureau de vote](#data/01_raw/elections/2021-regionales-2-bureau_de_vote.csv)
+  - [Résultats du premier tour des élections législatives de 2022 par bureau de vote](#data/01_raw/elections/2022-legislatives-1-bureau_de_vote.csv)
+  - [Liste des candidats au premier tour des élections législatives 2022](#data/01_raw/elections/2022-legislatives-1-candidats.csv)
+  - [Résultats du premier tour des élections législatives de 2022 par circonscription législative](#data/01_raw/elections/2022-legislatives-1-circonscription.csv)
+  - [Résultats du deuxième tour des élections législatives de 2022 par bureau de vote](#data/01_raw/elections/2022-legislatives-2-bureau_de_vote.csv)
+  - [Liste des candidats au deuxième tour des élections législatives de 2022](#data/01_raw/elections/2022-legislatives-2-candidats.csv)
+  - [Résultats du deuxième tour des élections législatives de 2022 par circonscription](#data/01_raw/elections/2022-legislatives-2-circonscription.csv)
+  - [Résultats du premier tour de l&#39;élection présidentielle 2022 par bureau de vote](#data/01_raw/elections/2022-presidentielle-1-bureau_de_vote.csv)
+  - [Résultats du premier tour de l&#39;élection présidentielle 2022 par circonscription législative](#data/01_raw/elections/2022-presidentielle-1-circonscription.csv)
+  - [Résultats du deuxième tour de l&#39;élection présidentielle 2022 par bureau de vote](#data/01_raw/elections/2022-presidentielle-2-bureau_de_vote.csv)
+  - [Résultats du deuxième tour de l&#39;élection présidentielle 2022 par circonscription législative](#data/01_raw/elections/2022-presidentielle-2-circonscription.csv)
+  - [Résultats des élections européennes 2024 par bureau de vote](#data/01_raw/elections/2024-europeenne-bureau_de_vote.csv)
+  - [Résultats des élections européennes 2024 par circonscription législative](#data/01_raw/elections/2024-europeenne-circonscription.csv)
+  - [Résultats du premier tour des élections législatives 2024 par bureau de vote](#data/01_raw/elections/2024-legislatives-1-bureau_de_vote.csv)
+  - [Liste des candidats au premier tour des élections législatives 2024](#data/01_raw/elections/2024-legislatives-1-candidats.csv)
+  - [Résultats du premier tour des élections législatives 2024 par circonscription législative](#data/01_raw/elections/2024-legislatives-1-circonscription.csv)
+  - [Résultats du deuxième tour des élections législatives 2024 par bureau de vote](#data/01_raw/elections/2024-legislatives-2-bureau_de_vote.csv)
+  - [Liste des candidats au deuxième tour des élections législatives de 2024](#data/01_raw/elections/2024-legislatives-2-candidats.csv)
+  - [Résultats du deuxième tour des élections législatives 2024 par circonscription législative](#data/01_raw/elections/2024-legislatives-2-circonscription.csv)
+  - [Répertoire national des élus — conseillers d&#39;arrondissement de Paris, Marseille et Lyon](#data/01_raw/rne/conseillers_arrondissement.csv)
+  - [Répertoire national des élus — membres des assemblées délibérantes des collectivites à statut particulier](#data/01_raw/rne/conseillers_csp.csv)
+  - [Répertoire national des élus — conseillers départementaux](#data/01_raw/rne/conseillers_departementaux.csv)
+  - [Répertoire national des élus — conseillers des EPCI à fiscalité propre](#data/01_raw/rne/conseillers_epci.csv)
+  - [Répertoire national des élus — conseillers municipaux](#data/01_raw/rne/conseillers_municipaux.csv)
+  - [Répertoire national des élus — conseillers régionaux](#data/01_raw/rne/conseillers_regionaux.csv)
+- [Premier ministre](#premier-ministre)
+  - [Base de données locales de l&#39;annuaire de l&#39;administration](#data/01_raw/annuaire/annuaire.tar.bz2)
 
+
+
+<a name="assemblee-nationale-de-la-republique-francaise"></a>
+## Assemblée nationale de la République française
+
+<a name="data/01_raw/assemblee-nationale.zip"></a>
+### Historique des députés
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | `data/01_raw/assemblee-nationale.zip` |
+| Format de fichier | application/zip |
+| URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/aa/aa2511e0ae29fd3173e7894bedca13> |
+| URL de téléchargement d&#39;origine | <https://data.assemblee-nationale.fr/static/openData/repository/17/amo/tous_acteurs_mandats_organes_xi_legislature/AMO30_tous_acteurs_tous_mandats_tous_organes_historique.json.zip> |
+| Éditeur | Assemblée nationale de la République française |
+| Licence d&#39;utilisation | Licence Ouverte / Open Licence |
+
+Tous acteurs, tous mandats, tous organes depuis la XIème législature.
+
+Extrait au format JSON. L&#39;archive zip comprend trois dossiers regroupant
+respectivement les acteurs (i.e. personnes physiques), les déports (en
+cas de conflit d&#39;intérêt) et les organes (i.e. les personnes morales
+ou entités internes à l&#39;assemblée nationale).
+
+
+
+
+<a name="conseil-constitutionnel"></a>
+## Conseil constitutionnel
+
+<a name="data/01_raw/elections/2022-presidentielle-parrainages.csv"></a>
+### Liste des parrainages à l&#39;élection présidentielle 2022 validés par le Conseil constitutionnel
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | `data/01_raw/elections/2022-presidentielle-parrainages.csv` |
+| Format de fichier | text/csv |
+| URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/62/595a6af02961ae4f2f2a7b0ebccddb> |
+| URL de téléchargement d&#39;origine | <https://presidentielle2022.conseil-constitutionnel.fr/telechargement/parrainagestotal.csv> |
+| URL d&#39;information | <https://presidentielle2022.conseil-constitutionnel.fr/les-parrainages/tous-les-parrainages-valides.html> |
+| Éditeur | Conseil constitutionnel |
+
+Le tableau ci-dessous récapitule l’ensemble des parrainages signés par des élus habilités à soutenir un candidat et
+validés par le Conseil constitutionnel.
+
+
+
+
+<a name="insee"></a>
 ## INSEE
 
 <a name="data/01_raw/admin_express/admin_express_cog.7z"></a>
@@ -51,56 +156,109 @@ territoires étrangers sont présentés sur cette page. Un troisième nouveau
 fichier met à disposition la liste des couples code extension - territoire de
 rattachement (commune ou pays).
 
-
-
-
-## Premier ministre
-
-<a name="data/01_raw/annuaire/annuaire.tar.bz2"></a>
-### Base de données locales de l&#39;annuaire de l&#39;administration
+<a name="data/01_raw/population_municipale.xlsx"></a>
+### Séries historiques de population par commune (1876 à 2022)
 
 | Propriété | Valeur |
 | --------- | ------ |
-| Chemin interne | `data/01_raw/annuaire/annuaire.tar.bz2` |
-| Format de fichier | application/x-tar+bzip2 |
-| URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/df/f4276a47b217d1ab1897817523e9c9> |
-| URL de téléchargement d&#39;origine | <https://lecomarquage.service-public.fr/donnees_locales_v4/all_latest.tar.bz2> |
-| Éditeur | Premier ministre |
-
-La Base de données locales référence plus de 63 000 guichets publics locaux
-(mairies, organismes sociaux, services de l&#39;état, etc.). Elle fournit leurs
-coordonnées (adresses, téléphones, site internet, horaires d&#39;ouverture,
-coordonnées de géolocalisation). En complément, sont indexés plus de 36 000
-fichiers des communes (conformes au Code Officiel Géographique de l’INSEE),
-précisant la compétence géographique des guichets.
+| Chemin interne | `data/01_raw/population_municipale.xlsx` |
+| Format de fichier | application/vnd.openxmlformats-officedocument.spreadsheetml.sheet |
+| URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/d6/b7b360966185d728501adeaac33b53> |
+| Éditeur | INSEE |
 
 
 
 
-## Assemblée nationale de la République française
 
-<a name="data/01_raw/assemblee-nationale.zip"></a>
-### Historique des députés
+<a name="la-france-insoumise"></a>
+## La France insoumise
+
+<a name="data/01_raw/elections/2024-legislatives-nfp-sensibilites.csv"></a>
+### Liste des candidats du Nouveau Front populaire et de leur sensibilité par circonscription législative
 
 | Propriété | Valeur |
 | --------- | ------ |
-| Chemin interne | `data/01_raw/assemblee-nationale.zip` |
-| Format de fichier | application/zip |
-| URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/aa/aa2511e0ae29fd3173e7894bedca13> |
-| URL de téléchargement d&#39;origine | <https://data.assemblee-nationale.fr/static/openData/repository/17/amo/tous_acteurs_mandats_organes_xi_legislature/AMO30_tous_acteurs_tous_mandats_tous_organes_historique.json.zip> |
-| Éditeur | Assemblée nationale de la République française |
-| Licence d&#39;utilisation | Licence Ouverte / Open Licence |
+| Chemin interne | `data/01_raw/elections/2024-legislatives-nfp-sensibilites.csv` |
+| Format de fichier | text/csv |
+| URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/51/564d56f7bea8c6fc1abf14f540a073> |
+| Éditeur | La France insoumise |
 
-Tous acteurs, tous mandats, tous organes depuis la XIème législature.
+L&#39;accord signé entre la France insoumise, les Verts, le Parti communiste français et le Parti socialiste prévoyait une
+répartition des circonscriptions entre les 4 sensibilités. Ce fichier indique, pour chaque circonscription incluse dans
+le périmètre de l&#39;accord, la sensibilité à laquelle elle a été attribuée et le candidat que cette dernière y a investi.
 
-Extrait au format JSON. L&#39;archive zip comprend trois dossiers regroupant
-respectivement les acteurs (i.e. personnes physiques), les déports (en
-cas de conflit d&#39;intérêt) et les organes (i.e. les personnes morales
-ou entités internes à l&#39;assemblée nationale).
+Ce fichier n&#39;indique pas la présence d&#39;éventuelles dissidences, investies ou non par une des quatre sensibilités de
+l&#39;accord.
+
+<a name="data/01_raw/elections/2024-legislatives-nuances-lfi.csv"></a>
+### La France insoumise — Nuançage des candidats des élections législatives 2024
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | `data/01_raw/elections/2024-legislatives-nuances-lfi.csv` |
+| Format de fichier | text/csv |
+| URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/24/a9e931e2d43373ecddd42a2434eba6> |
+| Éditeur | La France insoumise |
+
+Ce nuançage a été réalisé par les équipes de la France insoumise pour permettre une analyse plus fine que celle
+qu&#39;autorisait le nuançage retenu par le Ministère de l&#39;intérieur.
 
 
 
 
+<a name="le-monde"></a>
+## Le Monde
+
+<a name="data/01_raw/elections/2022-legislatives-nuances-lemonde.csv"></a>
+### Le Monde — Liste des candidats et leur nuance politique
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | `data/01_raw/elections/2022-legislatives-nuances-lemonde.csv` |
+| Format de fichier | text/csv |
+| URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/a1/f8ad9352c14eeeb4ff8fd530747eab> |
+| URL de téléchargement d&#39;origine | <https://assets-decodeurs.lemonde.fr/decodeurs/elections_2022_snippets/legislatives/tour1/candidats_legislatives_lemonde.csv> |
+| URL d&#39;information | <https://www.lemonde.fr/les-decodeurs/article/2022/06/15/legislatives-2022-le-monde-met-a-disposition-la-liste-des-candidats-et-leur-nuance-politique-en-open-data_6130475_4355770.html> |
+| Éditeur | Le Monde |
+
+Le Monde a décidé de réétiqueter chacun des quelque 6 300 candidats et candidates aux élections législatives 2022 pour
+mieux représenter les tendances politiques et la future Assemblée nationale. Les données des candidatures contenant à
+la fois la nuance attribuée par le ministère de l’intérieur et celle du Monde, celles-ci comportent quelques divergences
+ et peuvent évoluer. Elles sont désormais disponibles en open data.
+
+
+
+
+<a name="legis-2022"></a>
+## Legis 2022
+
+<a name="data/01_raw/elections/2022-legislatives-nuances-legis-2022.csv"></a>
+### LEGIS-2022 - Codage des nuances politiques des candidats aux élections législatives des 12 et 19 juin 2022
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | `data/01_raw/elections/2022-legislatives-nuances-legis-2022.csv` |
+| Format de fichier | text/csv |
+| URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/40/277717333ff3a1e20113d5fd249219> |
+| URL de téléchargement d&#39;origine | <https://www.data.gouv.fr/fr/datasets/r/67d3987a-3f9d-464c-a678-116c25186f66> |
+| Éditeur | Legis 2022 |
+
+Le projet LEGIS-2022 regroupe une trentaine de chercheurs en science politique
+spécialistes des études électorales et du parlement, issus des principaux
+centres de recherches français, à Sciences Po Paris, Sciences Po Grenoble,
+Université Panthéon-Sorbonne, Université Panthéon-Assas, Université de Lille,
+Université de Nice Côte d&#39;Azur. Il s&#39;est consacré à produire un étiquetage de
+l&#39;appartenance partisane de chacun des 6290 candidats aux élections législatives
+de l&#39;hexagone, des outremers et des Français de l&#39;Etranger, en fonction d&#39;une
+grille comportant 39 nuances politiques (contre 16 pour le bureau des élections
+du ministère de l&#39;Intérieur). Son objectif principal est de comprendre la
+manière dont l&#39;élection à venir participe de la recomposition politique en cours
+dans notre pays.
+
+
+
+
+<a name="ministere-de-l-interieur"></a>
 ## Ministère de l&#39;intérieur
 
 <a name="data/01_raw/elections/2005-referendum-bureau_de_vote.csv"></a>
@@ -399,81 +557,6 @@ et 16921.
 | Éditeur | Ministère de l&#39;intérieur |
 
 
-
-
-
-## Legis 2022
-
-<a name="data/01_raw/elections/2022-legislatives-nuances-legis-2022.csv"></a>
-### LEGIS-2022 - Codage des nuances politiques des candidats aux élections législatives des 12 et 19 juin 2022
-
-| Propriété | Valeur |
-| --------- | ------ |
-| Chemin interne | `data/01_raw/elections/2022-legislatives-nuances-legis-2022.csv` |
-| Format de fichier | text/csv |
-| URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/40/277717333ff3a1e20113d5fd249219> |
-| URL de téléchargement d&#39;origine | <https://www.data.gouv.fr/fr/datasets/r/67d3987a-3f9d-464c-a678-116c25186f66> |
-| Éditeur | Legis 2022 |
-
-Le projet LEGIS-2022 regroupe une trentaine de chercheurs en science politique
-spécialistes des études électorales et du parlement, issus des principaux
-centres de recherches français, à Sciences Po Paris, Sciences Po Grenoble,
-Université Panthéon-Sorbonne, Université Panthéon-Assas, Université de Lille,
-Université de Nice Côte d&#39;Azur. Il s&#39;est consacré à produire un étiquetage de
-l&#39;appartenance partisane de chacun des 6290 candidats aux élections législatives
-de l&#39;hexagone, des outremers et des Français de l&#39;Etranger, en fonction d&#39;une
-grille comportant 39 nuances politiques (contre 16 pour le bureau des élections
-du ministère de l&#39;Intérieur). Son objectif principal est de comprendre la
-manière dont l&#39;élection à venir participe de la recomposition politique en cours
-dans notre pays.
-
-
-
-
-## Le Monde
-
-<a name="data/01_raw/elections/2022-legislatives-nuances-lemonde.csv"></a>
-### Le Monde — Liste des candidats et leur nuance politique
-
-| Propriété | Valeur |
-| --------- | ------ |
-| Chemin interne | `data/01_raw/elections/2022-legislatives-nuances-lemonde.csv` |
-| Format de fichier | text/csv |
-| URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/a1/f8ad9352c14eeeb4ff8fd530747eab> |
-| URL de téléchargement d&#39;origine | <https://assets-decodeurs.lemonde.fr/decodeurs/elections_2022_snippets/legislatives/tour1/candidats_legislatives_lemonde.csv> |
-| URL d&#39;information | <https://www.lemonde.fr/les-decodeurs/article/2022/06/15/legislatives-2022-le-monde-met-a-disposition-la-liste-des-candidats-et-leur-nuance-politique-en-open-data_6130475_4355770.html> |
-| Éditeur | Le Monde |
-
-Le Monde a décidé de réétiqueter chacun des quelque 6 300 candidats et candidates aux élections législatives 2022 pour
-mieux représenter les tendances politiques et la future Assemblée nationale. Les données des candidatures contenant à
-la fois la nuance attribuée par le ministère de l’intérieur et celle du Monde, celles-ci comportent quelques divergences
- et peuvent évoluer. Elles sont désormais disponibles en open data.
-
-
-
-
-## Conseil constitutionnel
-
-<a name="data/01_raw/elections/2022-presidentielle-parrainages.csv"></a>
-### Liste des parrainages à l&#39;élection présidentielle 2022 validés par le Conseil constitutionnel
-
-| Propriété | Valeur |
-| --------- | ------ |
-| Chemin interne | `data/01_raw/elections/2022-presidentielle-parrainages.csv` |
-| Format de fichier | text/csv |
-| URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/62/595a6af02961ae4f2f2a7b0ebccddb> |
-| URL de téléchargement d&#39;origine | <https://presidentielle2022.conseil-constitutionnel.fr/telechargement/parrainagestotal.csv> |
-| URL d&#39;information | <https://presidentielle2022.conseil-constitutionnel.fr/les-parrainages/tous-les-parrainages-valides.html> |
-| Éditeur | Conseil constitutionnel |
-
-Le tableau ci-dessous récapitule l’ensemble des parrainages signés par des élus habilités à soutenir un candidat et
-validés par le Conseil constitutionnel.
-
-
-
-
-## None
-
 <a name="data/01_raw/elections/2024-europeenne-bureau_de_vote.csv"></a>
 ### Résultats des élections européennes 2024 par bureau de vote
 
@@ -483,6 +566,7 @@ validés par le Conseil constitutionnel.
 | Format de fichier | text/csv |
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/b3/a9085acb27df6669ac04d5aca2e5da> |
 | URL de téléchargement d&#39;origine | <https://www.data.gouv.fr/fr/datasets/r/cc1883d9-1265-4365-b754-fb6aef22d82e> |
+| Éditeur | Ministère de l&#39;intérieur |
 
 
 <a name="data/01_raw/elections/2024-europeenne-circonscription.csv"></a>
@@ -494,6 +578,7 @@ validés par le Conseil constitutionnel.
 | Format de fichier | text/csv |
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/8a/9a6ca76b17b2ce3600c400ce800187> |
 | URL de téléchargement d&#39;origine | <https://www.data.gouv.fr/fr/datasets/r/ee37cbef-3d2a-4efe-a395-530b85a63028> |
+| Éditeur | Ministère de l&#39;intérieur |
 
 
 <a name="data/01_raw/elections/2024-legislatives-1-bureau_de_vote.csv"></a>
@@ -505,6 +590,7 @@ validés par le Conseil constitutionnel.
 | Format de fichier | text/csv |
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/92/547431feb455ad1065815e72c40d8e> |
 | URL de téléchargement d&#39;origine | <https://www.data.gouv.fr/fr/datasets/r/6813fb28-7ec0-42ff-a528-2bc3d82d7dcd> |
+| Éditeur | Ministère de l&#39;intérieur |
 
 
 <a name="data/01_raw/elections/2024-legislatives-1-candidats.csv"></a>
@@ -516,6 +602,7 @@ validés par le Conseil constitutionnel.
 | Format de fichier | text/csv |
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/c8/40bd309348cbe6cd728cc96bf550d0> |
 | URL de téléchargement d&#39;origine | <https://www.data.gouv.fr/fr/datasets/r/cd5b39e6-5feb-4864-b274-3431ed81442c> |
+| Éditeur | Ministère de l&#39;intérieur |
 
 
 <a name="data/01_raw/elections/2024-legislatives-1-circonscription.csv"></a>
@@ -527,6 +614,7 @@ validés par le Conseil constitutionnel.
 | Format de fichier | text/csv |
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/1d/424007d37d7cf2d24d799403d6af00> |
 | URL de téléchargement d&#39;origine | <https://www.data.gouv.fr/fr/datasets/r/5163f2e3-1362-4c35-89a0-1934bb74f2d9> |
+| Éditeur | Ministère de l&#39;intérieur |
 
 
 <a name="data/01_raw/elections/2024-legislatives-2-bureau_de_vote.csv"></a>
@@ -538,6 +626,7 @@ validés par le Conseil constitutionnel.
 | Format de fichier | text/csv |
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/06/3dfce8aa81153f6b535b7ecdb49d6f> |
 | URL de téléchargement d&#39;origine | <https://www.data.gouv.fr/fr/datasets/r/ca974f04-cfd9-4da8-8554-4a868a09c6c2> |
+| Éditeur | Ministère de l&#39;intérieur |
 
 
 <a name="data/01_raw/elections/2024-legislatives-2-candidats.csv"></a>
@@ -549,6 +638,7 @@ validés par le Conseil constitutionnel.
 | Format de fichier | text/csv |
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/c6/e6f33721554d0a1260d81775c0fd22> |
 | URL de téléchargement d&#39;origine | <https://www.data.gouv.fr/fr/datasets/r/f04605b8-4c02-4496-8a26-2bc02b17f739> |
+| Éditeur | Ministère de l&#39;intérieur |
 
 
 <a name="data/01_raw/elections/2024-legislatives-2-circonscription.csv"></a>
@@ -560,17 +650,7 @@ validés par le Conseil constitutionnel.
 | Format de fichier | text/csv |
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/52/32b0951ce8ca92573ea3b35d5d62a0> |
 | URL de téléchargement d&#39;origine | <https://www.data.gouv.fr/fr/datasets/r/41ed46cd-77c2-4ecc-b8eb-374aa953ca39> |
-
-
-<a name="data/01_raw/population_municipale.xlsx"></a>
-### population_municipale
-
-| Propriété | Valeur |
-| --------- | ------ |
-| Chemin interne | `data/01_raw/population_municipale.xlsx` |
-| Format de fichier | application/vnd.openxmlformats-officedocument.spreadsheetml.sheet |
-| URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/d6/b7b360966185d728501adeaac33b53> |
-
+| Éditeur | Ministère de l&#39;intérieur |
 
 
 <a name="data/01_raw/rne/conseillers_arrondissement.csv"></a>
@@ -583,6 +663,7 @@ validés par le Conseil constitutionnel.
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/bd/d0e9cc134bd9c122bff812a72620af> |
 | URL de téléchargement d&#39;origine | <https://www.data.gouv.fr/fr/datasets/r/3b6b2281-b9d9-4959-ae9d-c2c166dff118> |
 | URL d&#39;information | <https://www.data.gouv.fr/fr/datasets/repertoire-national-des-elus-1/> |
+| Éditeur | Ministère de l&#39;intérieur |
 
 
 <a name="data/01_raw/rne/conseillers_csp.csv"></a>
@@ -595,6 +676,7 @@ validés par le Conseil constitutionnel.
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/76/50260d596109c66acbd2e83423c5f1> |
 | URL de téléchargement d&#39;origine | <https://static.data.gouv.fr/resources/repertoire-national-des-elus-1/20241031-095248/elus-membres-assemblee-ma.csv> |
 | URL d&#39;information | <https://www.data.gouv.fr/fr/datasets/repertoire-national-des-elus-1/> |
+| Éditeur | Ministère de l&#39;intérieur |
 
 
 <a name="data/01_raw/rne/conseillers_departementaux.csv"></a>
@@ -607,6 +689,7 @@ validés par le Conseil constitutionnel.
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/d0/8158a4f34f09a515333778d34a6e45> |
 | URL de téléchargement d&#39;origine | <https://www.data.gouv.fr/fr/datasets/r/601ef073-d986-4582-8e1a-ed14dc857fba> |
 | URL d&#39;information | <https://www.data.gouv.fr/fr/datasets/repertoire-national-des-elus-1/> |
+| Éditeur | Ministère de l&#39;intérieur |
 
 
 <a name="data/01_raw/rne/conseillers_epci.csv"></a>
@@ -619,6 +702,7 @@ validés par le Conseil constitutionnel.
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/e4/ffddb7d7d7504d13e80ccbbb2a0b1b> |
 | URL de téléchargement d&#39;origine | <https://www.data.gouv.fr/fr/datasets/r/41d95d7d-b172-4636-ac44-32656367cdc7> |
 | URL d&#39;information | <https://www.data.gouv.fr/fr/datasets/repertoire-national-des-elus-1/> |
+| Éditeur | Ministère de l&#39;intérieur |
 
 
 <a name="data/01_raw/rne/conseillers_municipaux.csv"></a>
@@ -631,6 +715,7 @@ validés par le Conseil constitutionnel.
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/ba/04a3782f9cbb41b4487a0a6c048873> |
 | URL de téléchargement d&#39;origine | <https://www.data.gouv.fr/fr/datasets/r/d5f400de-ae3f-4966-8cb6-a85c70c6c24a> |
 | URL d&#39;information | <https://www.data.gouv.fr/fr/datasets/repertoire-national-des-elus-1/> |
+| Éditeur | Ministère de l&#39;intérieur |
 
 Le Répertoire National des Élus (RNE) a pour finalité le suivi des titulaires
 d’un mandat électoral. Il est renseigné et tenu à jour par les préfectures et
@@ -650,41 +735,31 @@ Ce fichier comporte la liste des conseillers municipaux.
 | URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/14/fa5e59eee9f3095a38596459a5c149> |
 | URL de téléchargement d&#39;origine | <https://www.data.gouv.fr/fr/datasets/r/430e13f9-834b-4411-a1a8-da0b4b6e715c> |
 | URL d&#39;information | <https://www.data.gouv.fr/fr/datasets/repertoire-national-des-elus-1/> |
+| Éditeur | Ministère de l&#39;intérieur |
 
 
 
 
 
-## La France insoumise
+<a name="premier-ministre"></a>
+## Premier ministre
 
-<a name="data/01_raw/elections/2024-legislatives-nfp-sensibilites.csv"></a>
-### Liste des candidats du Nouveau Front populaire et de leur sensibilité par circonscription législative
-
-| Propriété | Valeur |
-| --------- | ------ |
-| Chemin interne | `data/01_raw/elections/2024-legislatives-nfp-sensibilites.csv` |
-| Format de fichier | text/csv |
-| URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/51/564d56f7bea8c6fc1abf14f540a073> |
-| Éditeur | La France insoumise |
-
-L&#39;accord signé entre la France insoumise, les Verts, le Parti communiste français et le Parti socialiste prévoyait une
-répartition des circonscriptions entre les 4 sensibilités. Ce fichier indique, pour chaque circonscription incluse dans
-le périmètre de l&#39;accord, la sensibilité à laquelle elle a été attribuée et le candidat que cette dernière y a investi.
-
-Ce fichier n&#39;indique pas la présence d&#39;éventuelles dissidences, investies ou non par une des quatre sensibilités de
-l&#39;accord.
-
-<a name="data/01_raw/elections/2024-legislatives-nuances-lfi.csv"></a>
-### La France insoumise — Nuançage des candidats des élections législatives 2024
+<a name="data/01_raw/annuaire/annuaire.tar.bz2"></a>
+### Base de données locales de l&#39;annuaire de l&#39;administration
 
 | Propriété | Valeur |
 | --------- | ------ |
-| Chemin interne | `data/01_raw/elections/2024-legislatives-nuances-lfi.csv` |
-| Format de fichier | text/csv |
-| URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/24/a9e931e2d43373ecddd42a2434eba6> |
-| Éditeur | La France insoumise |
+| Chemin interne | `data/01_raw/annuaire/annuaire.tar.bz2` |
+| Format de fichier | application/x-tar+bzip2 |
+| URL de téléchargement | <https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/df/f4276a47b217d1ab1897817523e9c9> |
+| URL de téléchargement d&#39;origine | <https://lecomarquage.service-public.fr/donnees_locales_v4/all_latest.tar.bz2> |
+| Éditeur | Premier ministre |
 
-Ce nuançage a été réalisé par les équipes de la France insoumise pour permettre une analyse plus fine que celle
-qu&#39;autorisait le nuançage retenu par le Ministère de l&#39;intérieur.
+La Base de données locales référence plus de 63 000 guichets publics locaux
+(mairies, organismes sociaux, services de l&#39;état, etc.). Elle fournit leurs
+coordonnées (adresses, téléphones, site internet, horaires d&#39;ouverture,
+coordonnées de géolocalisation). En complément, sont indexés plus de 36 000
+fichiers des communes (conformes au Code Officiel Géographique de l’INSEE),
+précisant la compétence géographique des guichets.
 
 
