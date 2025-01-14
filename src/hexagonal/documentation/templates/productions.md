@@ -21,7 +21,6 @@
 <thead>
   <tr>
     <th>id</th>
-    <th>nom</th>
     <th>type</th>
     <th>description</th>
   </tr>

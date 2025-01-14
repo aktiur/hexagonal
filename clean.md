@@ -21,7 +21,6 @@
 <thead>
   <tr>
     <th>id</th>
-    <th>nom</th>
     <th>type</th>
     <th>description</th>
   </tr>
@@ -106,7 +105,6 @@ française.
 <thead>
   <tr>
     <th>id</th>
-    <th>nom</th>
     <th>type</th>
     <th>description</th>
   </tr>
@@ -212,7 +210,6 @@ XIème législature.
 <thead>
   <tr>
     <th>id</th>
-    <th>nom</th>
     <th>type</th>
     <th>description</th>
   </tr>
@@ -289,7 +286,6 @@ Liste des personnes ayant exercé la fonction de député·e.
 <thead>
   <tr>
     <th>id</th>
-    <th>nom</th>
     <th>type</th>
     <th>description</th>
   </tr>
@@ -387,7 +383,6 @@ personnes référencées, on trouve :
 <thead>
   <tr>
     <th>id</th>
-    <th>nom</th>
     <th>type</th>
     <th>description</th>
   </tr>
@@ -474,7 +469,6 @@ Cette production dépend des sources suivantes :
 <thead>
   <tr>
     <th>id</th>
-    <th>nom</th>
     <th>type</th>
     <th>description</th>
   </tr>
@@ -558,7 +552,6 @@ par deux mandats différents.
 <thead>
   <tr>
     <th>id</th>
-    <th>nom</th>
     <th>type</th>
     <th>description</th>
   </tr>
@@ -665,7 +658,6 @@ australes et antarctiques françaises et l&#39;île de Clipperton.
 <thead>
   <tr>
     <th>id</th>
-    <th>nom</th>
     <th>type</th>
     <th>description</th>
   </tr>
@@ -712,7 +704,6 @@ Cette production dépend des sources suivantes :
 <thead>
   <tr>
     <th>id</th>
-    <th>nom</th>
     <th>type</th>
     <th>description</th>
   </tr>
@@ -794,7 +785,6 @@ Cette production dépend des sources suivantes :
 <thead>
   <tr>
     <th>id</th>
-    <th>nom</th>
     <th>type</th>
     <th>description</th>
   </tr>
@@ -851,7 +841,6 @@ Cette production dépend des sources suivantes :
 <thead>
   <tr>
     <th>id</th>
-    <th>nom</th>
     <th>type</th>
     <th>description</th>
   </tr>
@@ -909,7 +898,6 @@ Cette production dépend des sources suivantes :
 <thead>
   <tr>
     <th>id</th>
-    <th>nom</th>
     <th>type</th>
     <th>description</th>
   </tr>
@@ -966,7 +954,6 @@ Cette production dépend des sources suivantes :
 <thead>
   <tr>
     <th>id</th>
-    <th>nom</th>
     <th>type</th>
     <th>description</th>
   </tr>
@@ -1040,7 +1027,6 @@ Les types de modifications apportées sont les suivantes :
 <thead>
   <tr>
     <th>id</th>
-    <th>nom</th>
     <th>type</th>
     <th>description</th>
   </tr>
@@ -1123,7 +1109,6 @@ Cette production dépend des sources suivantes :
 <thead>
   <tr>
     <th>id</th>
-    <th>nom</th>
     <th>type</th>
     <th>description</th>
   </tr>
@@ -1179,7 +1164,6 @@ Cette production dépend des sources suivantes :
 <thead>
   <tr>
     <th>id</th>
-    <th>nom</th>
     <th>type</th>
     <th>description</th>
   </tr>
@@ -1271,7 +1255,6 @@ Cette production dépend des sources suivantes :
 <thead>
   <tr>
     <th>id</th>
-    <th>nom</th>
     <th>type</th>
     <th>description</th>
   </tr>
@@ -1353,7 +1336,6 @@ Cette production dépend des sources suivantes :
 <thead>
   <tr>
     <th>id</th>
-    <th>nom</th>
     <th>type</th>
     <th>description</th>
   </tr>
@@ -1440,7 +1422,6 @@ Cette production dépend des sources suivantes :
 <thead>
   <tr>
     <th>id</th>
-    <th>nom</th>
     <th>type</th>
     <th>description</th>
   </tr>
@@ -1527,7 +1508,6 @@ Cette production dépend des sources suivantes :
 <thead>
   <tr>
     <th>id</th>
-    <th>nom</th>
     <th>type</th>
     <th>description</th>
   </tr>
@@ -1609,7 +1589,6 @@ Cette production dépend des sources suivantes :
 <thead>
   <tr>
     <th>id</th>
-    <th>nom</th>
     <th>type</th>
     <th>description</th>
   </tr>
@@ -1691,7 +1670,6 @@ Cette production dépend des sources suivantes :
 <thead>
   <tr>
     <th>id</th>
-    <th>nom</th>
     <th>type</th>
     <th>description</th>
   </tr>
@@ -1763,7 +1741,6 @@ Cette production dépend des sources suivantes :
 <thead>
   <tr>
     <th>id</th>
-    <th>nom</th>
     <th>type</th>
     <th>description</th>
   </tr>
@@ -1850,7 +1827,6 @@ Cette production dépend des sources suivantes :
 <thead>
   <tr>
     <th>id</th>
-    <th>nom</th>
     <th>type</th>
     <th>description</th>
   </tr>
@@ -1937,7 +1913,6 @@ Cette production dépend des sources suivantes :
 <thead>
   <tr>
     <th>id</th>
-    <th>nom</th>
     <th>type</th>
     <th>description</th>
   </tr>
@@ -2004,7 +1979,6 @@ Cette production dépend des sources suivantes :
 <thead>
   <tr>
     <th>id</th>
-    <th>nom</th>
     <th>type</th>
     <th>description</th>
   </tr>
@@ -2071,7 +2045,6 @@ Cette production dépend des sources suivantes :
 <thead>
   <tr>
     <th>id</th>
-    <th>nom</th>
     <th>type</th>
     <th>description</th>
   </tr>
@@ -2148,7 +2121,6 @@ Cette production dépend des sources suivantes :
 <thead>
   <tr>
     <th>id</th>
-    <th>nom</th>
     <th>type</th>
     <th>description</th>
   </tr>
@@ -2225,7 +2197,6 @@ Cette production dépend des sources suivantes :
 <thead>
   <tr>
     <th>id</th>
-    <th>nom</th>
     <th>type</th>
     <th>description</th>
   </tr>
@@ -2312,7 +2283,6 @@ Cette production dépend des sources suivantes :
 <thead>
   <tr>
     <th>id</th>
-    <th>nom</th>
     <th>type</th>
     <th>description</th>
   </tr>
@@ -2424,7 +2394,6 @@ Cette production dépend des sources suivantes :
 <thead>
   <tr>
     <th>id</th>
-    <th>nom</th>
     <th>type</th>
     <th>description</th>
   </tr>
@@ -2506,7 +2475,6 @@ Cette production dépend des sources suivantes :
 <thead>
   <tr>
     <th>id</th>
-    <th>nom</th>
     <th>type</th>
     <th>description</th>
   </tr>
@@ -2593,7 +2561,6 @@ Cette production dépend des sources suivantes :
 <thead>
   <tr>
     <th>id</th>
-    <th>nom</th>
     <th>type</th>
     <th>description</th>
   </tr>
@@ -2705,7 +2672,6 @@ Cette production dépend des sources suivantes :
 <thead>
   <tr>
     <th>id</th>
-    <th>nom</th>
     <th>type</th>
     <th>description</th>
   </tr>
@@ -2787,7 +2753,6 @@ Cette production dépend des sources suivantes :
 <thead>
   <tr>
     <th>id</th>
-    <th>nom</th>
     <th>type</th>
     <th>description</th>
   </tr>
@@ -2869,7 +2834,6 @@ Cette production dépend des sources suivantes :
 <thead>
   <tr>
     <th>id</th>
-    <th>nom</th>
     <th>type</th>
     <th>description</th>
   </tr>
@@ -2946,7 +2910,6 @@ Cette production dépend des sources suivantes :
 <thead>
   <tr>
     <th>id</th>
-    <th>nom</th>
     <th>type</th>
     <th>description</th>
   </tr>
@@ -3028,7 +2991,6 @@ Cette production dépend des sources suivantes :
 <thead>
   <tr>
     <th>id</th>
-    <th>nom</th>
     <th>type</th>
     <th>description</th>
   </tr>
@@ -3105,7 +3067,6 @@ Cette production dépend des sources suivantes :
 <thead>
   <tr>
     <th>id</th>
-    <th>nom</th>
     <th>type</th>
     <th>description</th>
   </tr>
@@ -3177,7 +3138,6 @@ Cette production dépend des sources suivantes :
 <thead>
   <tr>
     <th>id</th>
-    <th>nom</th>
     <th>type</th>
     <th>description</th>
   </tr>
@@ -3254,7 +3214,6 @@ Cette production dépend des sources suivantes :
 <thead>
   <tr>
     <th>id</th>
-    <th>nom</th>
     <th>type</th>
     <th>description</th>
   </tr>
@@ -3331,7 +3290,6 @@ Cette production dépend des sources suivantes :
 <thead>
   <tr>
     <th>id</th>
-    <th>nom</th>
     <th>type</th>
     <th>description</th>
   </tr>
@@ -3413,7 +3371,6 @@ Cette production dépend des sources suivantes :
 <thead>
   <tr>
     <th>id</th>
-    <th>nom</th>
     <th>type</th>
     <th>description</th>
   </tr>
@@ -3525,7 +3482,6 @@ Cette production dépend des sources suivantes :
 <thead>
   <tr>
     <th>id</th>
-    <th>nom</th>
     <th>type</th>
     <th>description</th>
   </tr>
@@ -3607,7 +3563,6 @@ Cette production dépend des sources suivantes :
 <thead>
   <tr>
     <th>id</th>
-    <th>nom</th>
     <th>type</th>
     <th>description</th>
   </tr>
@@ -3689,7 +3644,6 @@ Cette production dépend des sources suivantes :
 <thead>
   <tr>
     <th>id</th>
-    <th>nom</th>
     <th>type</th>
     <th>description</th>
   </tr>
@@ -3801,7 +3755,6 @@ Cette production dépend des sources suivantes :
 <thead>
   <tr>
     <th>id</th>
-    <th>nom</th>
     <th>type</th>
     <th>description</th>
   </tr>
@@ -3883,7 +3836,6 @@ Cette production dépend des sources suivantes :
 <thead>
   <tr>
     <th>id</th>
-    <th>nom</th>
     <th>type</th>
     <th>description</th>
   </tr>
@@ -3942,7 +3894,6 @@ municipale
 <thead>
   <tr>
     <th>id</th>
-    <th>nom</th>
     <th>type</th>
     <th>description</th>
   </tr>
@@ -4163,7 +4114,6 @@ Cette production dépend des sources suivantes :
 <thead>
   <tr>
     <th>id</th>
-    <th>nom</th>
     <th>type</th>
     <th>description</th>
   </tr>
@@ -4255,7 +4205,6 @@ Cette production dépend des sources suivantes :
 <thead>
   <tr>
     <th>id</th>
-    <th>nom</th>
     <th>type</th>
     <th>description</th>
   </tr>
@@ -4342,7 +4291,6 @@ Cette production dépend des sources suivantes :
 <thead>
   <tr>
     <th>id</th>
-    <th>nom</th>
     <th>type</th>
     <th>description</th>
   </tr>
@@ -4424,7 +4372,6 @@ Cette production dépend des sources suivantes :
 <thead>
   <tr>
     <th>id</th>
-    <th>nom</th>
     <th>type</th>
     <th>description</th>
   </tr>
@@ -4516,7 +4463,6 @@ Cette production dépend des sources suivantes :
 <thead>
   <tr>
     <th>id</th>
-    <th>nom</th>
     <th>type</th>
     <th>description</th>
   </tr>
@@ -4602,7 +4548,6 @@ Cette production dépend des sources suivantes :
 <thead>
   <tr>
     <th>id</th>
-    <th>nom</th>
     <th>type</th>
     <th>description</th>
   </tr>
