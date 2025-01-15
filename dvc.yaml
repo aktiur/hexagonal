@@ -154,11 +154,15 @@ stages:
     outs:
       - ${clean}/assemblee_nationale/fiches.csv
       - ${clean}/assemblee_nationale/deputes.csv
+      - ${clean}/assemblee_nationale/adresses_postales.csv
+      - ${clean}/assemblee_nationale/adresses_electroniques.csv
     cmd: >-
       ${python} hexagonal.assemblee_nationale.liste
       ${raw}/assemblee-nationale.zip
       ${clean}/assemblee_nationale/fiches.csv
       ${clean}/assemblee_nationale/deputes.csv
+      ${clean}/assemblee_nationale/adresses_postales.csv
+      ${clean}/assemblee_nationale/adresses_electroniques.csv
 
   assemblee_nationale_mandats:
     deps:
@@ -277,3 +281,4 @@ stages:
         ${clean}/cog/${item}.csv
         ${clean}/population_municipale.csv
         ${main}/cog/${item}.csv
+
