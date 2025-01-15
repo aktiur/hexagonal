@@ -1498,15 +1498,15 @@ type = "str"
 
 ["data/02_clean/elections/2012-presidentielle-bureau_de_vote.csv".colonnes.inscrits]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2012-presidentielle-bureau_de_vote.csv".colonnes.votants]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2012-presidentielle-bureau_de_vote.csv".colonnes.exprimes]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2012-presidentielle-bureau_de_vote.csv".colonnes.numero_panneau]
 description = ""
@@ -1526,7 +1526,7 @@ type = "str"
 
 ["data/02_clean/elections/2012-presidentielle-bureau_de_vote.csv".colonnes.voix]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2014-europeenne-bureau_de_vote.csv"]
 nom = "Résultats de l'élection européenne de 2014 par bureau de vote"
@@ -1550,15 +1550,15 @@ type = "str"
 
 ["data/02_clean/elections/2014-europeenne-bureau_de_vote.csv".colonnes.inscrits]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2014-europeenne-bureau_de_vote.csv".colonnes.votants]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2014-europeenne-bureau_de_vote.csv".colonnes.exprimes]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2014-europeenne-bureau_de_vote.csv".colonnes.numero_panneau]
 description = ""
@@ -1578,7 +1578,7 @@ type = "str"
 
 ["data/02_clean/elections/2014-europeenne-bureau_de_vote.csv".colonnes.voix]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2017-legislatives-1-bureau_de_vote.csv"]
 nom = "Résultats du premier tour des élections législatives de 2017 par bureau de vote"
@@ -1602,15 +1602,15 @@ type = "str"
 
 ["data/02_clean/elections/2017-legislatives-1-bureau_de_vote.csv".colonnes.inscrits]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2017-legislatives-1-bureau_de_vote.csv".colonnes.votants]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2017-legislatives-1-bureau_de_vote.csv".colonnes.exprimes]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2017-legislatives-1-bureau_de_vote.csv".colonnes.numero_panneau]
 description = ""
@@ -1634,7 +1634,7 @@ type = "str"
 
 ["data/02_clean/elections/2017-legislatives-1-bureau_de_vote.csv".colonnes.voix]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2017-legislatives-2-bureau_de_vote.csv"]
 nom = "Résultats du deuxième tour des élections législatives de 2017 par bureau de vote"
@@ -1658,15 +1658,15 @@ type = "str"
 
 ["data/02_clean/elections/2017-legislatives-2-bureau_de_vote.csv".colonnes.inscrits]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2017-legislatives-2-bureau_de_vote.csv".colonnes.votants]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2017-legislatives-2-bureau_de_vote.csv".colonnes.exprimes]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2017-legislatives-2-bureau_de_vote.csv".colonnes.numero_panneau]
 description = ""
@@ -1690,7 +1690,7 @@ type = "str"
 
 ["data/02_clean/elections/2017-legislatives-2-bureau_de_vote.csv".colonnes.voix]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2017-presidentielle-1-bureau_de_vote.csv"]
 nom = "Résultats du premier tour de l'élection présidentielle de 2017 par bureau de vote"
@@ -1714,15 +1714,15 @@ type = "str"
 
 ["data/02_clean/elections/2017-presidentielle-1-bureau_de_vote.csv".colonnes.inscrits]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2017-presidentielle-1-bureau_de_vote.csv".colonnes.votants]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2017-presidentielle-1-bureau_de_vote.csv".colonnes.exprimes]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2017-presidentielle-1-bureau_de_vote.csv".colonnes.numero_panneau]
 description = ""
@@ -1742,7 +1742,7 @@ type = "str"
 
 ["data/02_clean/elections/2017-presidentielle-1-bureau_de_vote.csv".colonnes.voix]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2017-presidentielle-2-bureau_de_vote.csv"]
 nom = "Résultats du deuxième tour de l'élection présidentielle de 2017 par bureau de vote"
@@ -1766,15 +1766,15 @@ type = "str"
 
 ["data/02_clean/elections/2017-presidentielle-2-bureau_de_vote.csv".colonnes.inscrits]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2017-presidentielle-2-bureau_de_vote.csv".colonnes.votants]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2017-presidentielle-2-bureau_de_vote.csv".colonnes.exprimes]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2017-presidentielle-2-bureau_de_vote.csv".colonnes.numero_panneau]
 description = ""
@@ -1794,7 +1794,7 @@ type = "str"
 
 ["data/02_clean/elections/2017-presidentielle-2-bureau_de_vote.csv".colonnes.voix]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2019-europeenne-bureau_de_vote.csv"]
 nom = "Résultats de l'élection européenne de 2019 par bureau de vote"
@@ -1814,15 +1814,15 @@ type = "str"
 
 ["data/02_clean/elections/2019-europeenne-bureau_de_vote.csv".colonnes.inscrits]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2019-europeenne-bureau_de_vote.csv".colonnes.votants]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2019-europeenne-bureau_de_vote.csv".colonnes.exprimes]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2019-europeenne-bureau_de_vote.csv".colonnes.numero_panneau]
 description = ""
@@ -1838,7 +1838,7 @@ type = "str"
 
 ["data/02_clean/elections/2019-europeenne-bureau_de_vote.csv".colonnes.voix]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2020-municipales-1-bureau_de_vote.csv"]
 nom = "Résultats du premier tour des municipales 2020 par bureau de vote — corrigés"
@@ -1858,15 +1858,15 @@ type = "str"
 
 ["data/02_clean/elections/2020-municipales-1-bureau_de_vote.csv".colonnes.inscrits]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2020-municipales-1-bureau_de_vote.csv".colonnes.votants]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2020-municipales-1-bureau_de_vote.csv".colonnes.exprimes]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2020-municipales-1-bureau_de_vote.csv".colonnes.numero_panneau]
 description = ""
@@ -1896,7 +1896,7 @@ nullable = true
 
 ["data/02_clean/elections/2020-municipales-1-bureau_de_vote.csv".colonnes.voix]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2020-municipales-2-bureau_de_vote.csv"]
 nom = "Résultats du deuxième tour des municipales 2020 par bureau de vote"
@@ -1916,15 +1916,15 @@ type = "str"
 
 ["data/02_clean/elections/2020-municipales-2-bureau_de_vote.csv".colonnes.inscrits]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2020-municipales-2-bureau_de_vote.csv".colonnes.votants]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2020-municipales-2-bureau_de_vote.csv".colonnes.exprimes]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2020-municipales-2-bureau_de_vote.csv".colonnes.numero_panneau]
 description = ""
@@ -1953,7 +1953,7 @@ nullable = true
 
 ["data/02_clean/elections/2020-municipales-2-bureau_de_vote.csv".colonnes.voix]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2021-departementales-1-bureau_de_vote.csv"]
 nom = "Résultats du premier tour des élections départementales de 2021 par bureau de vote"
@@ -1973,15 +1973,15 @@ type = "str"
 
 ["data/02_clean/elections/2021-departementales-1-bureau_de_vote.csv".colonnes.inscrits]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2021-departementales-1-bureau_de_vote.csv".colonnes.votants]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2021-departementales-1-bureau_de_vote.csv".colonnes.exprimes]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2021-departementales-1-bureau_de_vote.csv".colonnes.numero_panneau]
 description = ""
@@ -1993,7 +1993,7 @@ type = "str"
 
 ["data/02_clean/elections/2021-departementales-1-bureau_de_vote.csv".colonnes.voix]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2021-departementales-2-bureau_de_vote.csv"]
 nom = "Résultats du deuxième tour des élections départementales de 2021 par bureau de vote"
@@ -2013,15 +2013,15 @@ type = "str"
 
 ["data/02_clean/elections/2021-departementales-2-bureau_de_vote.csv".colonnes.inscrits]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2021-departementales-2-bureau_de_vote.csv".colonnes.votants]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2021-departementales-2-bureau_de_vote.csv".colonnes.exprimes]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2021-departementales-2-bureau_de_vote.csv".colonnes.numero_panneau]
 description = ""
@@ -2033,7 +2033,7 @@ type = "str"
 
 ["data/02_clean/elections/2021-departementales-2-bureau_de_vote.csv".colonnes.voix]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2021-regionales-1-bureau_de_vote.csv"]
 nom = "Résultats du premier tour des élections régionales de 2021 par bureau de vote"
@@ -2053,15 +2053,15 @@ type = "str"
 
 ["data/02_clean/elections/2021-regionales-1-bureau_de_vote.csv".colonnes.inscrits]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2021-regionales-1-bureau_de_vote.csv".colonnes.votants]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2021-regionales-1-bureau_de_vote.csv".colonnes.exprimes]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2021-regionales-1-bureau_de_vote.csv".colonnes.numero_panneau]
 description = ""
@@ -2081,7 +2081,7 @@ type = "str"
 
 ["data/02_clean/elections/2021-regionales-1-bureau_de_vote.csv".colonnes.voix]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2021-regionales-2-bureau_de_vote.csv"]
 nom = "Résultats du deuxième tour des élections régionales de 2021 par bureau de vote"
@@ -2101,15 +2101,15 @@ type = "str"
 
 ["data/02_clean/elections/2021-regionales-2-bureau_de_vote.csv".colonnes.inscrits]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2021-regionales-2-bureau_de_vote.csv".colonnes.votants]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2021-regionales-2-bureau_de_vote.csv".colonnes.exprimes]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2021-regionales-2-bureau_de_vote.csv".colonnes.numero_panneau]
 description = ""
@@ -2129,7 +2129,7 @@ type = "str"
 
 ["data/02_clean/elections/2021-regionales-2-bureau_de_vote.csv".colonnes.voix]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2022-legislatives-1-bureau_de_vote.csv"]
 nom = "Résultats du premier tour des élections législatives de 2022 par bureau de vote"
@@ -2153,15 +2153,15 @@ type = "str"
 
 ["data/02_clean/elections/2022-legislatives-1-bureau_de_vote.csv".colonnes.inscrits]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2022-legislatives-1-bureau_de_vote.csv".colonnes.votants]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2022-legislatives-1-bureau_de_vote.csv".colonnes.exprimes]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2022-legislatives-1-bureau_de_vote.csv".colonnes.numero_panneau]
 description = ""
@@ -2185,7 +2185,7 @@ type = "str"
 
 ["data/02_clean/elections/2022-legislatives-1-bureau_de_vote.csv".colonnes.voix]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2022-legislatives-1-candidats.csv"]
 nom = "Liste des candidats au premier tour des élections législatives 2022"
@@ -2281,15 +2281,15 @@ type = "str"
 
 ["data/02_clean/elections/2022-legislatives-1-circonscription.csv".colonnes.inscrits]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2022-legislatives-1-circonscription.csv".colonnes.votants]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2022-legislatives-1-circonscription.csv".colonnes.exprimes]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2022-legislatives-1-circonscription.csv".colonnes.numero_panneau]
 description = ""
@@ -2313,7 +2313,7 @@ type = "str"
 
 ["data/02_clean/elections/2022-legislatives-1-circonscription.csv".colonnes.voix]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2022-legislatives-2-bureau_de_vote.csv"]
 nom = "Résultats du deuxième tour des élections législatives de 2022 par bureau de vote"
@@ -2337,15 +2337,15 @@ type = "str"
 
 ["data/02_clean/elections/2022-legislatives-2-bureau_de_vote.csv".colonnes.inscrits]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2022-legislatives-2-bureau_de_vote.csv".colonnes.votants]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2022-legislatives-2-bureau_de_vote.csv".colonnes.exprimes]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2022-legislatives-2-bureau_de_vote.csv".colonnes.numero_panneau]
 description = ""
@@ -2369,7 +2369,7 @@ type = "str"
 
 ["data/02_clean/elections/2022-legislatives-2-bureau_de_vote.csv".colonnes.voix]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2022-legislatives-2-candidats.csv"]
 nom = "Liste des candidats au deuxième tour des élections législatives de 2022"
@@ -2465,15 +2465,15 @@ type = "str"
 
 ["data/02_clean/elections/2022-legislatives-2-circonscription.csv".colonnes.inscrits]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2022-legislatives-2-circonscription.csv".colonnes.votants]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2022-legislatives-2-circonscription.csv".colonnes.exprimes]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2022-legislatives-2-circonscription.csv".colonnes.numero_panneau]
 description = ""
@@ -2497,7 +2497,7 @@ type = "str"
 
 ["data/02_clean/elections/2022-legislatives-2-circonscription.csv".colonnes.voix]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2022-presidentielle-1-bureau_de_vote.csv"]
 nom = "Résultats du premier tour de l'élection présidentielle 2022 par bureau de vote"
@@ -2521,15 +2521,15 @@ type = "str"
 
 ["data/02_clean/elections/2022-presidentielle-1-bureau_de_vote.csv".colonnes.inscrits]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2022-presidentielle-1-bureau_de_vote.csv".colonnes.votants]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2022-presidentielle-1-bureau_de_vote.csv".colonnes.exprimes]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2022-presidentielle-1-bureau_de_vote.csv".colonnes.numero_panneau]
 description = ""
@@ -2549,7 +2549,7 @@ type = "str"
 
 ["data/02_clean/elections/2022-presidentielle-1-bureau_de_vote.csv".colonnes.voix]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2022-presidentielle-1-circonscription.csv"]
 nom = "Résultats du premier tour de l'élection présidentielle 2022 par circonscription législative"
@@ -2569,15 +2569,15 @@ type = "str"
 
 ["data/02_clean/elections/2022-presidentielle-1-circonscription.csv".colonnes.inscrits]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2022-presidentielle-1-circonscription.csv".colonnes.votants]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2022-presidentielle-1-circonscription.csv".colonnes.exprimes]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2022-presidentielle-1-circonscription.csv".colonnes.numero_panneau]
 description = ""
@@ -2597,7 +2597,7 @@ type = "str"
 
 ["data/02_clean/elections/2022-presidentielle-1-circonscription.csv".colonnes.voix]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2022-presidentielle-2-bureau_de_vote.csv"]
 nom = "Résultats du deuxième tour de l'élection présidentielle 2022 par bureau de vote"
@@ -2621,15 +2621,15 @@ type = "str"
 
 ["data/02_clean/elections/2022-presidentielle-2-bureau_de_vote.csv".colonnes.inscrits]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2022-presidentielle-2-bureau_de_vote.csv".colonnes.votants]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2022-presidentielle-2-bureau_de_vote.csv".colonnes.exprimes]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2022-presidentielle-2-bureau_de_vote.csv".colonnes.numero_panneau]
 description = ""
@@ -2649,7 +2649,7 @@ type = "str"
 
 ["data/02_clean/elections/2022-presidentielle-2-bureau_de_vote.csv".colonnes.voix]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2022-presidentielle-2-circonscription.csv"]
 nom = "Résultats du deuxième tour de l'élection présidentielle 2022 par circonscription législative"
@@ -2669,15 +2669,15 @@ type = "str"
 
 ["data/02_clean/elections/2022-presidentielle-2-circonscription.csv".colonnes.inscrits]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2022-presidentielle-2-circonscription.csv".colonnes.votants]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2022-presidentielle-2-circonscription.csv".colonnes.exprimes]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2022-presidentielle-2-circonscription.csv".colonnes.numero_panneau]
 description = ""
@@ -2697,7 +2697,7 @@ type = "str"
 
 ["data/02_clean/elections/2022-presidentielle-2-circonscription.csv".colonnes.voix]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2022-presidentielle-parrainages.csv"]
 nom = "Liste des parrainages à l'élection présidentielle 2022 validés par le Conseil constitutionnel"
@@ -2762,15 +2762,15 @@ type = "str"
 
 ["data/02_clean/elections/2024-europeenne-bureau_de_vote.csv".colonnes.inscrits]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2024-europeenne-bureau_de_vote.csv".colonnes.votants]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2024-europeenne-bureau_de_vote.csv".colonnes.exprimes]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2024-europeenne-bureau_de_vote.csv".colonnes.numero_panneau]
 description = ""
@@ -2790,7 +2790,7 @@ type = "str"
 
 ["data/02_clean/elections/2024-europeenne-bureau_de_vote.csv".colonnes.voix]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2024-europeenne-circonscription.csv"]
 nom = "Résultats des élections européennes 2024 par circonscription législative"
@@ -2810,15 +2810,15 @@ type = "str"
 
 ["data/02_clean/elections/2024-europeenne-circonscription.csv".colonnes.inscrits]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2024-europeenne-circonscription.csv".colonnes.votants]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2024-europeenne-circonscription.csv".colonnes.exprimes]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2024-europeenne-circonscription.csv".colonnes.numero_panneau]
 description = ""
@@ -2838,7 +2838,7 @@ type = "str"
 
 ["data/02_clean/elections/2024-europeenne-circonscription.csv".colonnes.voix]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2024-legislatives-1-bureau_de_vote.csv"]
 nom = "Résultats du premier tour des élections législatives 2024 par bureau de vote"
@@ -2858,15 +2858,15 @@ type = "str"
 
 ["data/02_clean/elections/2024-legislatives-1-bureau_de_vote.csv".colonnes.inscrits]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2024-legislatives-1-bureau_de_vote.csv".colonnes.votants]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2024-legislatives-1-bureau_de_vote.csv".colonnes.exprimes]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2024-legislatives-1-bureau_de_vote.csv".colonnes.numero_panneau]
 description = ""
@@ -2890,7 +2890,7 @@ type = "str"
 
 ["data/02_clean/elections/2024-legislatives-1-bureau_de_vote.csv".colonnes.voix]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2024-legislatives-1-candidats.csv"]
 nom = "Liste des candidats au premier tour des élections législatives 2024"
@@ -2986,15 +2986,15 @@ type = "str"
 
 ["data/02_clean/elections/2024-legislatives-1-circonscription.csv".colonnes.inscrits]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2024-legislatives-1-circonscription.csv".colonnes.votants]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2024-legislatives-1-circonscription.csv".colonnes.exprimes]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2024-legislatives-1-circonscription.csv".colonnes.numero_panneau]
 description = ""
@@ -3018,7 +3018,7 @@ type = "str"
 
 ["data/02_clean/elections/2024-legislatives-1-circonscription.csv".colonnes.voix]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2024-legislatives-2-bureau_de_vote.csv"]
 nom = "Résultats du deuxième tour des élections législatives 2024 par bureau de vote"
@@ -3038,15 +3038,15 @@ type = "str"
 
 ["data/02_clean/elections/2024-legislatives-2-bureau_de_vote.csv".colonnes.inscrits]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2024-legislatives-2-bureau_de_vote.csv".colonnes.votants]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2024-legislatives-2-bureau_de_vote.csv".colonnes.exprimes]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2024-legislatives-2-bureau_de_vote.csv".colonnes.numero_panneau]
 description = ""
@@ -3070,7 +3070,7 @@ type = "str"
 
 ["data/02_clean/elections/2024-legislatives-2-bureau_de_vote.csv".colonnes.voix]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2024-legislatives-2-candidats.csv"]
 nom = "Liste des candidats au deuxième tour des élections législatives de 2024"
@@ -3166,15 +3166,15 @@ type = "str"
 
 ["data/02_clean/elections/2024-legislatives-2-circonscription.csv".colonnes.inscrits]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2024-legislatives-2-circonscription.csv".colonnes.votants]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2024-legislatives-2-circonscription.csv".colonnes.exprimes]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2024-legislatives-2-circonscription.csv".colonnes.numero_panneau]
 description = ""
@@ -3198,7 +3198,7 @@ type = "str"
 
 ["data/02_clean/elections/2024-legislatives-2-circonscription.csv".colonnes.voix]
 description = ""
-type = "str"
+type = "entier"
 
 ["data/02_clean/elections/2024-legislatives-correspondances-bureau_de_vote-circonscription.csv"]
 nom = "2024-legislatives-correspondances-bureau_de_vote-circonscription"

@@ -90,6 +90,8 @@ stages:
         ${main}/elections/2022-legislatives-${item}-candidats.csv
       deps:
         - ${clean}/elections/2022-legislatives-${item}-candidats.csv
+        - ${clean}/elections/2022-legislatives-1-circonscription.csv
+        - ${clean}/elections/2022-legislatives-2-circonscription.csv
         - ${raw}/elections/2022-legislatives-nuances-lemonde.csv
         - ${raw}/elections/2022-legislatives-nuances-legis-2022.csv
         - ${src}/hexagonal/candidatures/legislatives2022.py
