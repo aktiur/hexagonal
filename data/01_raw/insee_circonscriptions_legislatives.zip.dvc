@@ -1,0 +1,12 @@
+md5: e4ce70308696e4e10f38179d34ee2ede
+frozen: true
+deps:
+- checksum: '287238648336317551246317771935937358789'
+  hash: md5
+  path: 
+    https://www.insee.fr/fr/statistiques/fichier/6441661/contours_circonscriptions_legislatives_03052022.zip
+outs:
+- md5: dac42b77df3c3982c6badb41822ec3e3
+  size: 6083265
+  hash: md5
+  path: insee_circonscriptions_legislatives.zip

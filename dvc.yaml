@@ -323,15 +323,39 @@ stages:
       node_modules/.bin/mapshaper
       ${raw}/admin_express/communes.shp
       -proj crs=epsg:3857
-      -affine where="INSEE_DEP =='971'" shift=6556000,3230000 scale=3
-      -affine where="INSEE_DEP =='972'" shift=6780000,3405000 scale=4
-      -affine where="INSEE_DEP =='973'" shift=6150000,4620000 scale=0.6
-      -affine where="INSEE_DEP =='974'" shift=-5700000,7450000 scale=3
-      -affine where="INSEE_DEP =='976'" shift=-4310000,6500000 scale=3
-      -affine where="['77', '78', '91', '95'].includes(INSEE_DEP)" shift=900000,200000 scale=2
-      -affine where="['75', '92', '93', '94'].includes(INSEE_DEP)" shift=900000,-200000 scale=6
+      -rename-fields 'code_arrondissement=INSEE_ARR,code_canton=INSEE_CAN,code_commune=INSEE_COM,'
+      -rename-fields 'nom=NOM,population=POPULATION,siren_epci=SIREN_EPCI,code_departement=INSEE_DEP'
+      -affine where="code_departement =='971'" shift=6556000,3230000 scale=3
+      -affine where="code_departement =='972'" shift=6780000,3405000 scale=4
+      -affine where="code_departement =='973'" shift=6150000,4620000 scale=0.6
+      -affine where="code_departement =='974'" shift=-5700000,7450000 scale=3
+      -affine where="code_departement =='976'" shift=-4310000,6500000 scale=3
+      -affine where="['77', '78', '91', '95'].includes(code_departement)" shift=900000,200000 scale=2
+      -affine where="['75', '92', '93', '94'].includes(code_departement)" shift=900000,-200000 scale=6
       -simplify resolution=1000
-      -rename-fields 'code_arrondissement=INSEE_ARR,code_canton=INSEE_CAN,code_commune=INSEE_COM'
-      -rename-fields 'nom=NOM,population=POPULATION,siren_epci=SIREN_EPCI'
-      -filter-fields 'code_commune,code_canton,code_arrondissement,nom,population,siren_epci'
+      -filter-fields 'code_commune,code_canton,code_arrondissement,code_departement,nom,population,siren_epci'
       -o format=topojson ${main}/cartographie/communes.json
+
+  circonscriptions_carto:
+    deps:
+      - ${raw}/insee_circonscriptions_legislatives.zip
+    outs:
+      - ${main}/cartographie/circonscriptions_legislatives.json
+    cmd: >-
+      mkdir -p ${main}/cartographie/ &&
+      node_modules/.bin/mapshaper
+      ${raw}/insee_circonscriptions_legislatives.zip
+      -proj crs=epsg:3857
+      -rename-fields 'code_departement=dep'
+      -each 'code_circonscription = code_departement + "-" + id_circo.slice(-2)'
+      -clean gap-fill-area=1km2 snap-interval=300 \
+      -affine where="code_departement =='971'" shift=6556000,3230000 scale=3
+      -affine where="code_departement =='972'" shift=6780000,3405000 scale=4
+      -affine where="code_departement =='973'" shift=6150000,4620000 scale=0.6
+      -affine where="code_departement =='974'" shift=-5700000,7450000 scale=3
+      -affine where="code_departement =='976'" shift=-4310000,6500000 scale=3
+      -affine where="['77', '78', '91', '95'].includes(code_departement)" shift=900000,200000 scale=2
+      -affine where="['75', '92', '93', '94'].includes(code_departement)" shift=900000,-200000 scale=6
+      -simplify resolution=1000
+      -filter-fields 'code_circonscription,code_departement'
+      -o format=topojson ${main}/cartographie/circonscriptions_legislatives.json
