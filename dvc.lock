@@ -1124,25 +1124,33 @@ stages:
       size: 137936
   cog_qualifier@communes:
     cmd: PYTHONPATH=src python -m hexagonal.cog.qualifier_communes data/02_clean/cog/communes.csv
-      data/02_clean/population_municipale.csv data/03_main/cog/communes.csv
+      data/02_clean/population_municipale.csv data/02_clean/epci.csv data/02_clean/communes_epci.csv         data/03_main/cog/communes.csv
     deps:
     - path: data/02_clean/cog/communes.csv
       hash: md5
       md5: dfe31086cdf374f1a0152afc32e49681
       size: 1702543
+    - path: data/02_clean/communes_epci.csv
+      hash: md5
+      md5: 40472aa392b9e2a84de86d30b1eb8d83
+      size: 908244
+    - path: data/02_clean/epci.csv
+      hash: md5
+      md5: d355ed2662d0db2fa65059b202a1bcf8
+      size: 69796
     - path: data/02_clean/population_municipale.csv
       hash: md5
       md5: c86bb28a31ffffc09704549b1cccc863
       size: 5509375
     - path: src/hexagonal/cog/qualifier_communes.py
       hash: md5
-      md5: f44164c2261f68b16ad6bdfc273713a7
-      size: 1158
+      md5: 99f455a30895b8bf219a4d731ae5b85c
+      size: 1614
     outs:
     - path: data/03_main/cog/communes.csv
       hash: md5
-      md5: 75c454596f947d39b09b6163d5bff67f
-      size: 2420998
+      md5: a827e2d4fd1451ea3baf0284d59b84f2
+      size: 4038095
   population_nettoyer:
     cmd: PYTHONPATH=src python -m hexagonal.population.nettoyer data/01_raw/population_municipale.xlsx
       data/02_clean/population_municipale.csv
@@ -1294,3 +1302,24 @@ stages:
       hash: md5
       md5: 3b4cffa52a88b7f0e6d5e77fd80ff5b1
       size: 294023
+  epci_nettoyer:
+    cmd: PYTHONPATH=src python -m hexagonal.intercommunalite.nettoyer data/01_raw/epci.xlsx
+      data/02_clean/epci.csv data/02_clean/communes_epci.csv
+    deps:
+    - path: data/01_raw/epci.xlsx
+      hash: md5
+      md5: 3cd63fde716090a0e9945f1b3405a48b
+      size: 2893321
+    - path: src/hexagonal/intercommunalite/nettoyer.py
+      hash: md5
+      md5: 8b4a593f05964070dae3b2f73dba7f9b
+      size: 1418
+    outs:
+    - path: data/02_clean/communes_epci.csv
+      hash: md5
+      md5: 40472aa392b9e2a84de86d30b1eb8d83
+      size: 908244
+    - path: data/02_clean/epci.csv
+      hash: md5
+      md5: d355ed2662d0db2fa65059b202a1bcf8
+      size: 69796

@@ -64,7 +64,7 @@ def update_spec():
                 with open(file.path, "r", newline="") as fd:
                     r = csv.reader(fd)
                     colonnes = next(r)
-            except (csv.Error, UnicodeDecodeError):
+            except (csv.Error, UnicodeDecodeError, FileNotFoundError):
                 pass
             else:
                 original_colonnes = file_spec.get("colonnes", {})

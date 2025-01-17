@@ -257,6 +257,19 @@ stages:
       ${raw}/cog.zip
       ${clean}/cog
 
+  epci_nettoyer:
+    deps:
+      - ${raw}/epci.xlsx
+      - ${src}/hexagonal/intercommunalite/nettoyer.py
+    outs:
+      - ${clean}/epci.csv
+      - ${clean}/communes_epci.csv
+    cmd: >-
+      ${python} hexagonal.intercommunalite.nettoyer
+      ${raw}/epci.xlsx
+      ${clean}/epci.csv
+      ${clean}/communes_epci.csv
+
   admin_express_extraire:
     deps:
       - ${raw}/admin_express/admin_express_cog.7z
@@ -300,6 +313,8 @@ stages:
       deps:
         - ${clean}/cog/${item}.csv
         - ${clean}/population_municipale.csv
+        - ${clean}/epci.csv
+        - ${clean}/communes_epci.csv
         - ${src}/hexagonal/cog/qualifier_communes.py
       outs:
         - ${main}/cog/${item}.csv
@@ -307,6 +322,8 @@ stages:
         ${python} hexagonal.cog.qualifier_communes
         ${clean}/cog/${item}.csv
         ${clean}/population_municipale.csv
+        ${clean}/epci.csv
+        ${clean}/communes_epci.csv
         ${main}/cog/${item}.csv
 
   communes_carto:

@@ -1,0 +1,13 @@
+md5: f0531c0408c36c3bc06fce9cbd6ff35b
+frozen: true
+deps:
+- checksum: '"2c2609-6102c3e2a7353"'
+  size: 2893321
+  hash: md5
+  path: 
+    https://www.collectivites-locales.gouv.fr/files/Accueil/DESL/2024/epcicom2024.xlsx
+outs:
+- md5: 3cd63fde716090a0e9945f1b3405a48b
+  size: 2893321
+  hash: md5
+  path: epci.xlsx
