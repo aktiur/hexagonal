@@ -49,6 +49,7 @@ PD_DTYPES = {
     ColonneType.CODE_DEPARTEMENT: pd.StringDtype(),
     ColonneType.CODE_REGION: pd.StringDtype(),
     ColonneType.INT: pd.Int64Dtype(),
+    ColonneType.BOOL: pd.StringDtype(),
 }
 
 

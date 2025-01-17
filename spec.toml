@@ -812,6 +812,96 @@ description = "Horaires d'ouverture indiqués dans l'annuaire"
 type = "str"
 nullable = true
 
+["data/02_clean/assemblee_nationale/adresses_electroniques.csv"]
+nom = "adresses_electroniques"
+type = "clean"
+description = """
+
+"""
+mimetype = "text/csv"
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/08/64af1d0629afcaa812697365797748"
+s3_url = "s3://hexagonal-data/cache/files/md5/08/64af1d0629afcaa812697365797748"
+deps = [
+    "data/01_raw/assemblee-nationale.zip",
+]
+
+["data/02_clean/assemblee_nationale/adresses_electroniques.csv".colonnes.id_adresse]
+description = ""
+type = "str"
+
+["data/02_clean/assemblee_nationale/adresses_electroniques.csv".colonnes.id_personne]
+description = ""
+type = "str"
+
+["data/02_clean/assemblee_nationale/adresses_electroniques.csv".colonnes.type]
+description = ""
+type = "str"
+
+["data/02_clean/assemblee_nationale/adresses_electroniques.csv".colonnes.adresse_rattachement]
+description = ""
+type = "str"
+
+["data/02_clean/assemblee_nationale/adresses_electroniques.csv".colonnes.adresse]
+description = ""
+type = "str"
+
+["data/02_clean/assemblee_nationale/adresses_electroniques.csv".colonnes.poids]
+description = ""
+type = "str"
+
+["data/02_clean/assemblee_nationale/adresses_postales.csv"]
+nom = "adresses_postales"
+type = "clean"
+description = """
+
+"""
+mimetype = "text/csv"
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/00/7a544eb3497d2c7f69b4c43a666bbf"
+s3_url = "s3://hexagonal-data/cache/files/md5/00/7a544eb3497d2c7f69b4c43a666bbf"
+deps = [
+    "data/01_raw/assemblee-nationale.zip",
+]
+
+["data/02_clean/assemblee_nationale/adresses_postales.csv".colonnes.id_adresse]
+description = ""
+type = "str"
+
+["data/02_clean/assemblee_nationale/adresses_postales.csv".colonnes.id_personne]
+description = ""
+type = "str"
+
+["data/02_clean/assemblee_nationale/adresses_postales.csv".colonnes.type]
+description = ""
+type = "str"
+
+["data/02_clean/assemblee_nationale/adresses_postales.csv".colonnes.intitule]
+description = ""
+type = "str"
+
+["data/02_clean/assemblee_nationale/adresses_postales.csv".colonnes.numero_rue]
+description = ""
+type = "str"
+
+["data/02_clean/assemblee_nationale/adresses_postales.csv".colonnes.code_postal]
+description = ""
+type = "str"
+
+["data/02_clean/assemblee_nationale/adresses_postales.csv".colonnes.ville]
+description = ""
+type = "str"
+
+["data/02_clean/assemblee_nationale/adresses_postales.csv".colonnes.complement]
+description = ""
+type = "str"
+
+["data/02_clean/assemblee_nationale/adresses_postales.csv".colonnes.nom_rue]
+description = ""
+type = "str"
+
+["data/02_clean/assemblee_nationale/adresses_postales.csv".colonnes.poids]
+description = ""
+type = "str"
+
 ["data/02_clean/assemblee_nationale/affiliations.csv"]
 nom = "Affiliation des députés à un groupe parlementaire"
 section = "Assemblée nationale"
@@ -3793,10 +3883,12 @@ description = """
 
 """
 mimetype = "text/csv"
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/84/a9b4583202e57f5716bcfb204670ab"
-s3_url = "s3://hexagonal-data/cache/files/md5/84/a9b4583202e57f5716bcfb204670ab"
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/bb/801c5f2d42b3c8635181cec0ab2a0a"
+s3_url = "s3://hexagonal-data/cache/files/md5/bb/801c5f2d42b3c8635181cec0ab2a0a"
 deps = [
     "data/02_clean/elections/2022-legislatives-1-candidats.csv",
+    "data/02_clean/elections/2022-legislatives-1-circonscription.csv",
+    "data/02_clean/elections/2022-legislatives-2-circonscription.csv",
     "data/01_raw/elections/2022-legislatives-nuances-lemonde.csv",
     "data/01_raw/elections/2022-legislatives-nuances-legis-2022.csv",
 ]
@@ -3881,6 +3973,14 @@ description = ""
 type = "str"
 nullable = true
 
+["data/03_main/elections/2022-legislatives-1-candidats.csv".colonnes.gagnant]
+description = ""
+type = "bool"
+
+["data/03_main/elections/2022-legislatives-1-candidats.csv".colonnes.gagnant_premier_tour]
+description = ""
+type = "bool"
+
 ["data/03_main/elections/2022-legislatives-2-candidats.csv"]
 nom = "Liste qualifiée des candidats au second tour des législatives 2022"
 section = "Élections"
@@ -3889,10 +3989,12 @@ description = """
 
 """
 mimetype = "text/csv"
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/c7/75b7da4a1a92fbdc4a3d7e4eb76c5d"
-s3_url = "s3://hexagonal-data/cache/files/md5/c7/75b7da4a1a92fbdc4a3d7e4eb76c5d"
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/6b/348169472258f9d5058cbe8ff5b8e8"
+s3_url = "s3://hexagonal-data/cache/files/md5/6b/348169472258f9d5058cbe8ff5b8e8"
 deps = [
     "data/02_clean/elections/2022-legislatives-2-candidats.csv",
+    "data/02_clean/elections/2022-legislatives-1-circonscription.csv",
+    "data/02_clean/elections/2022-legislatives-2-circonscription.csv",
     "data/01_raw/elections/2022-legislatives-nuances-lemonde.csv",
     "data/01_raw/elections/2022-legislatives-nuances-legis-2022.csv",
 ]
@@ -3976,6 +4078,14 @@ nullable = true
 description = ""
 type = "str"
 nullable = true
+
+["data/03_main/elections/2022-legislatives-2-candidats.csv".colonnes.gagnant]
+description = ""
+type = "bool"
+
+["data/03_main/elections/2022-legislatives-2-candidats.csv".colonnes.gagnant_premier_tour]
+description = ""
+type = "bool"
 
 ["data/03_main/elections/2022-presidentielle-parrainages.csv"]
 nom = "Parrainages enregistrées par le Conseil constitutionnel"
