@@ -309,3 +309,29 @@ stages:
         ${clean}/population_municipale.csv
         ${main}/cog/${item}.csv
 
+  communes_carto:
+    deps:
+      - ${raw}/admin_express/communes.cpg
+      - ${raw}/admin_express/communes.dbf
+      - ${raw}/admin_express/communes.prj
+      - ${raw}/admin_express/communes.shp
+      - ${raw}/admin_express/communes.shx
+    outs:
+      - ${main}/cartographie/communes.json
+    cmd: >-
+      mkdir -p ${main}/cartographie/ &&
+      node_modules/.bin/mapshaper
+      ${raw}/admin_express/communes.shp
+      -proj crs=epsg:3857
+      -affine where="INSEE_DEP =='971'" shift=6556000,3230000 scale=3
+      -affine where="INSEE_DEP =='972'" shift=6780000,3405000 scale=4
+      -affine where="INSEE_DEP =='973'" shift=6150000,4620000 scale=0.6
+      -affine where="INSEE_DEP =='974'" shift=-5700000,7450000 scale=3
+      -affine where="INSEE_DEP =='976'" shift=-4310000,6500000 scale=3
+      -affine where="['77', '78', '91', '95'].includes(INSEE_DEP)" shift=900000,200000 scale=2
+      -affine where="['75', '92', '93', '94'].includes(INSEE_DEP)" shift=900000,-200000 scale=6
+      -simplify resolution=1000
+      -rename-fields 'code_arrondissement=INSEE_ARR,code_canton=INSEE_CAN,code_commune=INSEE_COM'
+      -rename-fields 'nom=NOM,population=POPULATION,siren_epci=SIREN_EPCI'
+      -filter-fields 'code_commune,code_canton,code_arrondissement,nom,population,siren_epci'
+      -o format=topojson ${main}/cartographie/communes.json

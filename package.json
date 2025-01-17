@@ -1,0 +1,14 @@
+{
+  "name": "hexagonal",
+  "version": "1.0.0",
+  "description": "Ce dépôt agrège toute l'information électorale, administrative et géographique française pour faciliter l'analyse électorale.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mapshaper": "^0.6.102"
+  }
+}

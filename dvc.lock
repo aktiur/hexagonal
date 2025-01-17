@@ -1233,3 +1233,41 @@ stages:
       hash: md5
       md5: 25fb01c4be2209502217fdb9ac3a1e37
       size: 20612
+  communes_carto:
+    cmd: mkdir -p data/03_main/cartographie/ && node_modules/.bin/mapshaper data/01_raw/admin_express/communes.shp
+      -proj crs=epsg:3857 -affine where="INSEE_DEP =='971'" shift=6556000,3230000
+      scale=3 -affine where="INSEE_DEP =='972'" shift=6780000,3405000 scale=4 -affine
+      where="INSEE_DEP =='973'" shift=6150000,4620000 scale=0.6 -affine where="INSEE_DEP
+      =='974'" shift=-5700000,7450000 scale=3 -affine where="INSEE_DEP =='976'" shift=-4310000,6500000
+      scale=3 -affine where="['77', '78', '91', '95'].includes(INSEE_DEP)" shift=900000,200000
+      scale=2 -affine where="['75', '92', '93', '94'].includes(INSEE_DEP)" shift=900000,-200000
+      scale=6 -simplify resolution=1000 -rename-fields 'code_arrondissement=INSEE_ARR,code_canton=INSEE_CAN,code_commune=INSEE_COM'
+      -rename-fields 'nom=NOM,population=POPULATION,siren_epci=SIREN_EPCI' -filter-fields
+      'code_commune,code_canton,code_arrondissement,nom,population,siren_epci' -o
+      format=topojson data/03_main/cartographie/communes.json
+    deps:
+    - path: data/01_raw/admin_express/communes.cpg
+      hash: md5
+      md5: ae3b3df9970b49b6523e608759bc957d
+      size: 5
+    - path: data/01_raw/admin_express/communes.dbf
+      hash: md5
+      md5: 10adfc5417e54764f1f606a6511fc9e9
+      size: 6847646
+    - path: data/01_raw/admin_express/communes.prj
+      hash: md5
+      md5: c742bee3d4edfc2948a2ad08de1790a5
+      size: 145
+    - path: data/01_raw/admin_express/communes.shp
+      hash: md5
+      md5: 232c6abcbbbe35775013a8e316b73d22
+      size: 420059028
+    - path: data/01_raw/admin_express/communes.shx
+      hash: md5
+      md5: decafde7e0b9ed3bab1c1b5c12378227
+      size: 279580
+    outs:
+    - path: data/03_main/cartographie/communes.json
+      hash: md5
+      md5: 92091520d76d57ed9629c8a71d976822
+      size: 10489149
