@@ -257,6 +257,31 @@ stages:
       ${raw}/cog.zip
       ${clean}/cog
 
+  admin_express_extraire:
+    deps:
+      - ${raw}/admin_express/admin_express_cog.7z
+      - ${src}/hexagonal/admin_express/extraire.py
+    outs:
+      - ${raw}/admin_express/communes.cpg
+      - ${raw}/admin_express/communes.dbf
+      - ${raw}/admin_express/communes.prj
+      - ${raw}/admin_express/communes.shp
+      - ${raw}/admin_express/communes.shx
+      - ${raw}/admin_express/communes_deleguees.cpg
+      - ${raw}/admin_express/communes_deleguees.dbf
+      - ${raw}/admin_express/communes_deleguees.prj
+      - ${raw}/admin_express/communes_deleguees.shp
+      - ${raw}/admin_express/communes_deleguees.shx
+      - ${raw}/admin_express/arrondissements_municipaux.cpg
+      - ${raw}/admin_express/arrondissements_municipaux.dbf
+      - ${raw}/admin_express/arrondissements_municipaux.prj
+      - ${raw}/admin_express/arrondissements_municipaux.shp
+      - ${raw}/admin_express/arrondissements_municipaux.shx
+    cmd: >-
+      ${python} hexagonal.admin_express.extraire
+      ${raw}/admin_express/admin_express_cog.7z
+      ${raw}/admin_express/
+
   population_nettoyer:
     deps:
       - ${raw}/population_municipale.xlsx

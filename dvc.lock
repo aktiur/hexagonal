@@ -1160,3 +1160,76 @@ stages:
       hash: md5
       md5: c86bb28a31ffffc09704549b1cccc863
       size: 5509375
+  admin_express_extraire:
+    cmd: PYTHONPATH=src python -m hexagonal.admin_express.extraire data/01_raw/admin_express/admin_express_cog.7z
+      data/01_raw/admin_express/
+    deps:
+    - path: data/01_raw/admin_express/admin_express_cog.7z
+      hash: md5
+      md5: 8220f6d8b3447d1f10e2950276332c62
+      size: 586834108
+    - path: src/hexagonal/admin_express/extraire.py
+      hash: md5
+      md5: ffc80c8f271d0e131f7675121d31d4f2
+      size: 1043
+    outs:
+    - path: data/01_raw/admin_express/arrondissements_municipaux.cpg
+      hash: md5
+      md5: ae3b3df9970b49b6523e608759bc957d
+      size: 5
+    - path: data/01_raw/admin_express/arrondissements_municipaux.dbf
+      hash: md5
+      md5: 386a6b9d79e62b21f78f57fa4fc08c35
+      size: 6661
+    - path: data/01_raw/admin_express/arrondissements_municipaux.prj
+      hash: md5
+      md5: c742bee3d4edfc2948a2ad08de1790a5
+      size: 145
+    - path: data/01_raw/admin_express/arrondissements_municipaux.shp
+      hash: md5
+      md5: 3bd1d972fb3f3060ae65e1827f574353
+      size: 663484
+    - path: data/01_raw/admin_express/arrondissements_municipaux.shx
+      hash: md5
+      md5: af6de512f4a8abc5810a18c67b6553f5
+      size: 460
+    - path: data/01_raw/admin_express/communes.cpg
+      hash: md5
+      md5: ae3b3df9970b49b6523e608759bc957d
+      size: 5
+    - path: data/01_raw/admin_express/communes.dbf
+      hash: md5
+      md5: 10adfc5417e54764f1f606a6511fc9e9
+      size: 6847646
+    - path: data/01_raw/admin_express/communes.prj
+      hash: md5
+      md5: c742bee3d4edfc2948a2ad08de1790a5
+      size: 145
+    - path: data/01_raw/admin_express/communes.shp
+      hash: md5
+      md5: 232c6abcbbbe35775013a8e316b73d22
+      size: 420059028
+    - path: data/01_raw/admin_express/communes.shx
+      hash: md5
+      md5: decafde7e0b9ed3bab1c1b5c12378227
+      size: 279580
+    - path: data/01_raw/admin_express/communes_deleguees.cpg
+      hash: md5
+      md5: ae3b3df9970b49b6523e608759bc957d
+      size: 5
+    - path: data/01_raw/admin_express/communes_deleguees.dbf
+      hash: md5
+      md5: 0831ceb863f55582f8baad0a7d9112b0
+      size: 379730
+    - path: data/01_raw/admin_express/communes_deleguees.prj
+      hash: md5
+      md5: c742bee3d4edfc2948a2ad08de1790a5
+      size: 145
+    - path: data/01_raw/admin_express/communes_deleguees.shp
+      hash: md5
+      md5: 6f9e0e17d30ce7a095fafa795212317f
+      size: 31200220
+    - path: data/01_raw/admin_express/communes_deleguees.shx
+      hash: md5
+      md5: 25fb01c4be2209502217fdb9ac3a1e37
+      size: 20612

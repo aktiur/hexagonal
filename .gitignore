@@ -6,3 +6,10 @@
 *.zip
 *.tar.bz2
 *.7z
+
+# shapefiles
+*.cpg
+*.dbf
+*.prj
+*.shp
+*.shx
