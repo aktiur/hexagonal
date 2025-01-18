@@ -1244,17 +1244,18 @@ stages:
       size: 20612
   communes_carto:
     cmd: mkdir -p data/03_main/cartographie/ && node_modules/.bin/mapshaper data/01_raw/admin_express/communes.shp
-      -proj crs=epsg:3857 -rename-fields 'code_arrondissement=INSEE_ARR,code_canton=INSEE_CAN,code_commune=INSEE_COM,'
-      -rename-fields 'nom=NOM,population=POPULATION,siren_epci=SIREN_EPCI,code_departement=INSEE_DEP'
-      -affine where="code_departement =='971'" shift=6556000,3230000 scale=3 -affine
-      where="code_departement =='972'" shift=6780000,3405000 scale=4 -affine where="code_departement
-      =='973'" shift=6150000,4620000 scale=0.6 -affine where="code_departement =='974'"
-      shift=-5700000,7450000 scale=3 -affine where="code_departement =='976'" shift=-4310000,6500000
-      scale=3 -affine where="['77', '78', '91', '95'].includes(code_departement)"
-      shift=900000,200000 scale=2 -affine where="['75', '92', '93', '94'].includes(code_departement)"
+      -proj crs=epsg:3857 -rename-fields 'code_commune=INSEE_COM,code_arrondissement=INSEE_ARR,code_canton=INSEE_CAN'
+      -rename-fields 'code_departement=INSEE_DEP,code_region=INSEE_REG' -rename-fields
+      'nom=NOM,population=POPULATION,siren_epci=SIREN_EPCI' -affine where="code_departement
+      =='971'" shift=6556000,3230000 scale=3 -affine where="code_departement =='972'"
+      shift=6780000,3405000 scale=4 -affine where="code_departement =='973'" shift=6150000,4620000
+      scale=0.6 -affine where="code_departement =='974'" shift=-5700000,7450000 scale=3
+      -affine where="code_departement =='976'" shift=-4310000,6500000 scale=3 -affine
+      where="['77', '78', '91', '95'].includes(code_departement)" shift=900000,200000
+      scale=2 -affine where="['75', '92', '93', '94'].includes(code_departement)"
       shift=900000,-200000 scale=6 -simplify resolution=1000 -filter-fields 
-      'code_commune,code_canton,code_arrondissement,code_departement,nom,population,siren_epci'
-      -o format=topojson data/03_main/cartographie/communes.json
+      'code_commune,code_canton,code_arrondissement,code_departement,code_region,nom,population,siren_epci'
+      -rename-layers names=communes -o format=topojson data/03_main/cartographie/communes.json
     deps:
     - path: data/01_raw/admin_express/communes.cpg
       hash: md5
@@ -1279,18 +1280,19 @@ stages:
     outs:
     - path: data/03_main/cartographie/communes.json
       hash: md5
-      md5: 91b3c3faadc77903dd87792ec5775a2a
-      size: 11327718
+      md5: 1430e0e2be4bd52e64b69c095069cdcf
+      size: 11991483
   circonscriptions_carto:
     cmd: mkdir -p data/03_main/cartographie/ && node_modules/.bin/mapshaper data/01_raw/insee_circonscriptions_legislatives.zip
-      -proj crs=epsg:3857 -rename-fields 'code_departement=dep' -each 'code_circonscription
-      = code_departement + "-" + id_circo.slice(-2)' -clean gap-fill-area=1km2 snap-interval=300
-      \ -affine where="code_departement =='971'" shift=6556000,3230000 scale=3 -affine
-      where="code_departement =='972'" shift=6780000,3405000 scale=4 -affine where="code_departement
-      =='973'" shift=6150000,4620000 scale=0.6 -affine where="code_departement =='974'"
-      shift=-5700000,7450000 scale=3 -affine where="code_departement =='976'" shift=-4310000,6500000
-      scale=3 -affine where="['77', '78', '91', '95'].includes(code_departement)"
-      shift=900000,200000 scale=2 -affine where="['75', '92', '93', '94'].includes(code_departement)"
+      -proj crs=epsg:3857 -rename-layers names=circonscriptions_legislatives -rename-fields
+      'code_departement=dep' -each 'code_circonscription = code_departement + "-"
+      + id_circo.slice(-2)' -clean gap-fill-area=1km2 snap-interval=300 \ -affine
+      where="code_departement =='971'" shift=6556000,3230000 scale=3 -affine where="code_departement
+      =='972'" shift=6780000,3405000 scale=4 -affine where="code_departement =='973'"
+      shift=6150000,4620000 scale=0.6 -affine where="code_departement =='974'" shift=-5700000,7450000
+      scale=3 -affine where="code_departement =='976'" shift=-4310000,6500000 scale=3
+      -affine where="['77', '78', '91', '95'].includes(code_departement)" shift=900000,200000
+      scale=2 -affine where="['75', '92', '93', '94'].includes(code_departement)"
       shift=900000,-200000 scale=6 -simplify resolution=1000 -filter-fields 'code_circonscription,code_departement'
       -o format=topojson data/03_main/cartographie/circonscriptions_legislatives.json
     deps:
@@ -1301,8 +1303,8 @@ stages:
     outs:
     - path: data/03_main/cartographie/circonscriptions_legislatives.json
       hash: md5
-      md5: 3b4cffa52a88b7f0e6d5e77fd80ff5b1
-      size: 294023
+      md5: fa4d736813edf5cd966b1fda7ca5f83c
+      size: 294016
   epci_nettoyer:
     cmd: PYTHONPATH=src python -m hexagonal.intercommunalite.nettoyer data/01_raw/epci.xlsx
       data/02_clean/epci.csv data/02_clean/communes_epci.csv
@@ -1324,3 +1326,86 @@ stages:
       hash: md5
       md5: d355ed2662d0db2fa65059b202a1bcf8
       size: 69796
+  circonscriptions_details:
+    cmd: mkdir -p data/03_main/contours/ && node_modules/.bin/mapshaper data/01_raw/insee_circonscriptions_legislatives.zip
+      -proj crs=epsg:3857 -clean gap-fill-area=1km2 snap-interval=300 \ -proj crs=epsg:4326
+      -rename-layers names=circonscriptions_legislatives -rename-fields 'code_departement=dep'
+      -each 'code_circonscription = code_departement + "-" + id_circo.slice(-2)' -filter-fields
+      'code_circonscription,code_departement' -o format=topojson data/03_main/contours/circonscriptions_legislatives.json
+    deps:
+    - path: data/01_raw/insee_circonscriptions_legislatives.zip
+      hash: md5
+      md5: dac42b77df3c3982c6badb41822ec3e3
+      size: 6083265
+    outs:
+    - path: data/03_main/contours/circonscriptions_legislatives.json
+      hash: md5
+      md5: 5f9db0dcc0c3c469136a0cb3ff202675
+      size: 609639
+  communes_details:
+    cmd: mkdir -p data/03_main/contours/ && node_modules/.bin/mapshaper data/01_raw/admin_express/communes.shp
+      -rename-layers names=communes -rename-fields 'code_commune=INSEE_COM,code_departement=INSEE_DEP,code_region=INSEE_REG'
+      -rename-fields 'code_arrondissement=INSEE_ARR,code_canton=INSEE_CAN' -rename-fields
+      'nom=NOM,population=POPULATION,siren_epci=SIREN_EPCI,' -filter-fields 
+      'code_commune,code_canton,code_arrondissement,code_departement,nom,population,siren_epci'
+      -o format=topojson data/03_main/contours/communes.json
+    deps:
+    - path: data/01_raw/admin_express/communes.cpg
+      hash: md5
+      md5: ae3b3df9970b49b6523e608759bc957d
+      size: 5
+    - path: data/01_raw/admin_express/communes.dbf
+      hash: md5
+      md5: 10adfc5417e54764f1f606a6511fc9e9
+      size: 6847646
+    - path: data/01_raw/admin_express/communes.prj
+      hash: md5
+      md5: c742bee3d4edfc2948a2ad08de1790a5
+      size: 145
+    - path: data/01_raw/admin_express/communes.shp
+      hash: md5
+      md5: 232c6abcbbbe35775013a8e316b73d22
+      size: 420059028
+    - path: data/01_raw/admin_express/communes.shx
+      hash: md5
+      md5: decafde7e0b9ed3bab1c1b5c12378227
+      size: 279580
+    outs:
+    - path: data/03_main/contours/communes.json
+      hash: md5
+      md5: 647833ea8172dd5922e1795e958f1351
+      size: 130683847
+  departements_carto:
+    cmd: 'node_modules/.bin/mapshaper data/03_main/cartographie/communes.json -dissolve
+      fields=code_departement copy-fields=code_region sum-fields=population -rename-layers
+      names=departements -o format=topojson data/03_main/cartographie/departements.json  '
+    deps:
+    - path: data/03_main/cartographie/communes.json
+      hash: md5
+      md5: 1430e0e2be4bd52e64b69c095069cdcf
+      size: 11991483
+    outs:
+    - path: data/03_main/cartographie/departements.json
+      hash: md5
+      md5: c916da5583ec289d8b29a56582011e5a
+      size: 160491
+  epci_carto:
+    cmd: 'node_modules/.bin/mapshaper -i files=data/02_clean/epci.csv name=epci-data
+      string-fields=siren_epci -i files=data/03_main/cartographie/communes.json -dissolve
+      fields=siren_epci copy-fields=code_departement,code_region sum-fields=population       -join
+      source=epci-data keys=siren_epci,siren_epci fields=nom_epci,type_epci -rename-layers
+      names=epci -o format=topojson data/03_main/cartographie/epci.json  '
+    deps:
+    - path: data/02_clean/epci.csv
+      hash: md5
+      md5: d355ed2662d0db2fa65059b202a1bcf8
+      size: 69796
+    - path: data/03_main/cartographie/communes.json
+      hash: md5
+      md5: 1430e0e2be4bd52e64b69c095069cdcf
+      size: 11991483
+    outs:
+    - path: data/03_main/cartographie/epci.json
+      hash: md5
+      md5: 547d501325b77619ee7c6075b6a84e14
+      size: 738915
