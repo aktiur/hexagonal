@@ -870,17 +870,17 @@ stages:
       size: 80815137
     - path: src/hexagonal/annuaire/nettoyer.py
       hash: md5
-      md5: b9caf4625d96e88044b16fc709810551
-      size: 3913
+      md5: 6e799be530bd57b4c988cc238ff10ad8
+      size: 4313
     outs:
     - path: data/02_clean/annuaire/conseils_departementaux.csv
       hash: md5
-      md5: b1379fa5d07266a99e596bb06d4a9082
-      size: 20411
+      md5: 0f76a65596b5cc61a8469f2c50ea349a
+      size: 22282
     - path: data/02_clean/annuaire/mairies.csv
       hash: md5
-      md5: b86ed082ddc5e2897e5fefc593380e34
-      size: 10479235
+      md5: d7c65ad31a69a88f357ef946eb09a356
+      size: 12409020
   parrainages_nettoyer@2022:
     cmd: PYTHONPATH=src python -m hexagonal.parrainages.nettoyer data/01_raw/elections/2022-presidentielle-parrainages.csv
       data/02_clean/elections/2022-presidentielle-parrainages.csv
@@ -1124,7 +1124,8 @@ stages:
       size: 137936
   cog_qualifier@communes:
     cmd: PYTHONPATH=src python -m hexagonal.cog.qualifier_communes data/02_clean/cog/communes.csv
-      data/02_clean/population_municipale.csv data/02_clean/epci.csv data/02_clean/communes_epci.csv         data/03_main/cog/communes.csv
+      data/02_clean/population_municipale.csv data/02_clean/epci.csv data/02_clean/communes_epci.csv
+      data/03_main/cog/communes.csv
     deps:
     - path: data/02_clean/cog/communes.csv
       hash: md5

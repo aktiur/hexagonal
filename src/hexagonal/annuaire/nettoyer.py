@@ -6,6 +6,12 @@ from glom import Coalesce, Iter, S, Spec
 from hexagonal.utils import iterate_ndjson, nettoyer_avec_spec
 
 
+def code_departement(code_commune):
+    if code_commune[:2] in ["97", "98"]:
+        return code_commune[:3]
+    return code_commune[:2]
+
+
 def extraire_telephone(telephones):
     return "\n".join(
         f"{t['valeur']} ({t['description']}" if t["description"] else t["valeur"]
@@ -25,17 +31,19 @@ def selection_adresse(type_adresse):
     )
 
 
-def extraire_adresse(adresse):
-    if adresse:
-        elements = [
-            adresse["numero_voie"],
-            adresse["complement1"],
-            adresse["complement2"],
-            adresse["service_distribution"],
-            f"{adresse['code_postal']} {adresse['nom_commune']}",
-        ]
-
-        return "\n".join(e.strip() for e in elements if e.strip())
+def champs_adresses(prefixe, subspec):
+    return {
+        f"{prefixe}_complement1": (subspec, Coalesce("complement1", default="")),
+        f"{prefixe}_complement2": (subspec, Coalesce("complement2", default="")),
+        f"{prefixe}_numero_voie": (subspec, Coalesce("numero_voie", default="")),
+        f"{prefixe}_service_distribution": (
+            subspec,
+            Coalesce("service_distribution", default=""),
+        ),
+        f"{prefixe}_code_postal": (subspec, Coalesce("code_postal", default="")),
+        f"{prefixe}_commune": (subspec, Coalesce("nom_commune", default="")),
+        f"{prefixe}_pays": (subspec, Coalesce("pays", default="")),
+    }
 
 
 def coordonnees(adresse):
@@ -75,26 +83,18 @@ contexte = S(
 
 base_spec = {
     "id": "id",
+    "code_departement": ("code_insee_commune", code_departement),
     "code_commune": "code_insee_commune",
     "siret": "siret",
     "nom": "nom",
     "emails": ("adresse_courriel", "\n".join),
-    "adresse_physique": (
-        Coalesce(
-            S.adresse_physique,
-            default=None,
-        ),
-        extraire_adresse,
-    ),
-    "adresse_postale": (
-        Coalesce(
-            S.adresse_postale,
-            default="",
-        ),
-        extraire_adresse,
+    **champs_adresses("physique", S.adresse_physique),
+    **champs_adresses(
+        "postale",
+        Coalesce(S.adresse_postale, S.adresse_physique, skip=None, default={}),
     ),
     "telephone": ("telephone", extraire_telephone),
-    "coordonnees": (Coalesce((S.adresse_physique,), default=None), coordonnees),
+    "coordonnees": (Coalesce(S.adresse_physique, default=None), coordonnees),
 }
 
 
