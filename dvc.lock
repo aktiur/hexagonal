@@ -1409,3 +1409,16 @@ stages:
       hash: md5
       md5: 547d501325b77619ee7c6075b6a84e14
       size: 738915
+  tableau_correspondance_anciens_codes_communes:
+    cmd: mkdir -p data/03_main/cog/ && PYTHONPATH=src python -m hexagonal.cog.qualifier_mouvements
+      data/02_clean/cog/mouvements_communes.csv 2010-01-01 data/03_main/cog/correspondances_anciens_codes_communes.csv
+    deps:
+    - path: data/02_clean/cog/mouvements_communes.csv
+      hash: md5
+      md5: 64691627c240d83af6c599db5da6989f
+      size: 1162461
+    outs:
+    - path: data/03_main/cog/correspondances_anciens_codes_communes.csv
+      hash: md5
+      md5: bdbc7c7a4fe8fe668ea1a42def9edef8
+      size: 21350

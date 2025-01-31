@@ -444,3 +444,15 @@ stages:
       -simplify resolution=1000
       -filter-fields 'code_circonscription,code_departement'
       -o format=topojson ${main}/cartographie/circonscriptions_legislatives.json
+
+  tableau_correspondance_anciens_codes_communes:
+    deps:
+      - ${clean}/cog/mouvements_communes.csv
+    outs:
+      - ${main}/cog/correspondances_anciens_codes_communes.csv
+    cmd: >-
+      mkdir -p ${main}/cog/ &&
+      ${python} hexagonal.cog.qualifier_mouvements
+      ${clean}/cog/mouvements_communes.csv
+      2010-01-01
+      ${main}/cog/correspondances_anciens_codes_communes.csv
