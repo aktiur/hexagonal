@@ -7,7 +7,28 @@ authors = [
 ]
 readme = "README.md"
 requires-python = "==3.12.*"
-dynamic = ["dependencies"]
+dependencies = [
+    "pandas ~= 2.2.2",
+    "glom ~= 24.11.0",
+    "click ~= 8.1.7",
+]
+
+[dependency-groups]
+dev = [
+    "ipython ~= 8.26.0",
+    "dvc ~= 3.55.2",
+    "dvc-s3 ~= 3.2.0",
+    "pytest ~= 8.3.4",
+    "jinja2 ~= 3.1.4",
+    "pydantic ~= 2.10.3",
+    "tomli-w ~= 1.1.0",
+    "ruff ~= 0.8.4",
+    "python-slugify[unidecode] ~= 8.0.4",
+    "py7zr ~= 0.22.0",
+    "fiona ~= 1.10.1",
+    "json-stream ~= 2.3.2",
+    "openpyxl ~= 3.1.5",
+]
 
 [tool.hexagonal]
 s3_root = "s3://hexagonal-data/"
@@ -18,37 +39,15 @@ addopts = [
     "--import-mode=importlib",
 ]
 
-[tool.poetry]
-packages = [
-  { include = "hexagonal", from = "src" }
-]
-
-[tool.poetry.dependencies]
-pandas = "^2.2.2"
-glom = "^24.11.0"
-click = "^8.1.7"
-
-[tool.poetry.group.dev.dependencies]
-ipython = "^8.26.0"
-dvc = "^3.55.2"
-dvc-s3 = "^3.2.0"
-pytest = "^8.3.4"
-jinja2 = "^3.1.4"
-pydantic = "^2.10.3"
-tomli-w = "^1.1.0"
-ruff = "^0.8.4"
-python-slugify = {extras = ["unidecode"], version = "^8.0.4"}
-py7zr = "^0.22.0"
-fiona = "^1.10.1"
-json-stream = "^2.3.2"
-openpyxl = "^3.1.5"
-
 [tool.ruff]
 line-length = 88
 
 [tool.ruff.lint]
 select = ["E", "W", "F", "I", "N", "B", "A", "PD"]
 
+[tool.hatch.build.targets.wheel]
+packages = ["src/hexagonal"]
+
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
