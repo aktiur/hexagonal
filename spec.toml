@@ -1106,7 +1106,7 @@ nullable = true
 
 ["data/02_clean/annuaire/mairies.csv".colonnes.type_accessibilite]
 description = "Type d'accessibilité"
-type = "str"
+type = "qualitative"
 nullable = true
 
 ["data/02_clean/annuaire/mairies.csv".colonnes.details_accessibilite]
@@ -1586,7 +1586,7 @@ type = "code_commune"
 
 ["data/02_clean/cog/communes.csv".colonnes.type_commune]
 description = ""
-type = "str"
+type = "qualitative"
 
 ["data/02_clean/cog/communes.csv".colonnes.code_region]
 description = ""
@@ -1789,11 +1789,11 @@ deps = [
 
 ["data/02_clean/cog/mouvements_communes.csv".colonnes.type_evenement]
 description = ""
-type = "str"
+type = "qualitative"
 
 ["data/02_clean/cog/mouvements_communes.csv".colonnes.date_effet]
 description = ""
-type = "str"
+type = "date"
 
 ["data/02_clean/cog/mouvements_communes.csv".colonnes.type_commune_avant]
 description = ""

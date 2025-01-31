@@ -14,12 +14,17 @@ from hexagonal.utils import VRAI
 SPEC = {}
 
 
-def get_dataset(path: Union[str, bytes, Path]) -> pd.DataFrame:
-    if isinstance(path, (str, bytes)):
-        path = Path(path)
+def _load_spec():
+    global SPEC
 
-    path = path.resolve().relative_to(ROOT_DIR)
-    return SPEC[path]
+    with open(ROOT_DIR / "spec.toml", "rb") as fd:
+        _spec = tomllib.load(fd)
+
+    SPEC = {}
+    for path, dataset_info in _spec.items():
+        path = PurePath(path)
+
+        SPEC[path] = Dataset.model_validate({"path": path, **dataset_info})
 
 
 class DatasetType(StrEnum):
@@ -41,6 +46,7 @@ class ColonneType(StrEnum):
     CODE_CIRCONSCRIPTION = "code_circonscription_legislative"
     INT = "entier"
     BOOL = "bool"
+    QUALITATIVE = "qualitative"
 
 
 PD_DTYPES = {
@@ -50,6 +56,7 @@ PD_DTYPES = {
     ColonneType.CODE_REGION: pd.StringDtype(),
     ColonneType.INT: pd.Int64Dtype(),
     ColonneType.BOOL: pd.StringDtype(),
+    ColonneType.QUALITATIVE: pd.CategoricalDtype(),
 }
 
 
@@ -131,10 +138,16 @@ class Dataset(BaseModel):
         return dataset
 
 
-with open(ROOT_DIR / "spec.toml", "rb") as fd:
-    _spec = tomllib.load(fd)
+def get_dataset(path: Union[str, bytes, Path]) -> Dataset:
+    if isinstance(path, (str, bytes)):
+        path = Path(path)
 
-    for path, dataset_info in _spec.items():
-        path = PurePath(path)
+    path = path.resolve().relative_to(ROOT_DIR)
+    return SPEC[path]
 
-        SPEC[path] = Dataset.model_validate({"path": path, **dataset_info})
+
+def get_dataframe(path: Union[str, bytes, Path]) -> pd.DataFrame:
+    return get_dataset(path).as_pandas_dataframe()
+
+
+_load_spec()
