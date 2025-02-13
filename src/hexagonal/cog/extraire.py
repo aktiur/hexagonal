@@ -26,6 +26,12 @@ TYPES_EVENEMENTS_COMMUNE = {
 }
 
 
+def corriger_nom_commune_com(nom_commune):
+    if nom_commune == "Bouloupari":
+        return "Boulouparis"
+    return nom_commune
+
+
 spec_region = {
     "code_region": "REG",
     "code_commune_cheflieu": "CHEFLIEU",
@@ -73,7 +79,7 @@ spec_commune_com = {
     "type_commune": "NATURE_ZONAGE",
     "code_departement": "COMER",
     "type_nom": "TNCC",
-    "nom": "NCCENR",
+    "nom": ("NCCENR", corriger_nom_commune_com),
 }
 
 spec_commune_historique = {
@@ -90,11 +96,11 @@ spec_mouvements_communes = {
     "type_commune_avant": "TYPECOM_AV",
     "code_commune_avant": "COM_AV",
     "type_nom_avant": "TNCC_AV",
-    "nom_commune_avant": "NCCENR_AV",
+    "nom_avant": "NCCENR_AV",
     "type_commune_apres": "TYPECOM_AP",
     "code_commune_apres": "COM_AP",
     "type_nom_apres": "TNCC_AP",
-    "nom_commune_apres": "NCCENR_AP",
+    "nom_apres": "NCCENR_AP",
 }
 
 
