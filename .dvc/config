@@ -1,4 +1,6 @@
 [core]
-    remote = data
-['remote "data"']
+    remote = https
+['remote "s3"']
     url = s3://hexagonal-data/cache/
+['remote "https"']
+    url = https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/
