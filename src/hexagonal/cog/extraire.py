@@ -5,9 +5,8 @@ from zipfile import ZipFile
 import click
 from glom import Match, Switch, T, Val
 
+from hexagonal.cog import ANNEE
 from hexagonal.utils import iterate_csv, nettoyer_avec_spec
-
-ANNEE = 2024
 
 TYPES_EVENEMENTS_COMMUNE = {
     10: "changement de nom",
@@ -112,7 +111,7 @@ fichiers_cog = [
     (f"v_ctcd_{ANNEE}", "ctcd", spec_ctcd),
     (f"v_comer_{ANNEE}", "com", spec_com),
     ("v_commune_depuis_1943", "communes_historiques", spec_commune_historique),
-    ("v_mvt_commune_2024", "mouvements_communes", spec_mouvements_communes),
+    (f"v_mvt_commune_{ANNEE}", "mouvements_communes", spec_mouvements_communes),
 ]
 
 

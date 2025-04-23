@@ -19,7 +19,7 @@ def run(chemin_communes, chemin_population, chemin_epci, chemin_communes_epci, d
     epci = get_dataset(chemin_epci).as_pandas_dataframe()
     communes_epci = get_dataset(chemin_communes_epci).as_pandas_dataframe()
 
-    communes = communes.merge(communes_epci)
+    communes = communes.merge(communes_epci, how="left")
     communes = communes.merge(epci[["siren_epci", "nom_epci", "type_epci"]])
 
     if "type_nom" in communes.columns:

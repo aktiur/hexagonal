@@ -903,29 +903,29 @@ stages:
     deps:
     - path: data/01_raw/cog.zip
       hash: md5
-      md5: 05b4046e254c75d9f558c0f3d4ba3c60
-      size: 1879699
+      md5: d4c084b8a04dcc97ed99e1a687107bc0
+      size: 1943027
     - path: src/hexagonal/cog/extraire.py
       hash: md5
-      md5: 9a54cd7fc5c3bf42af0e5cc1690d680e
-      size: 3647
+      md5: 5655887ad3f6164864edb98a914a00b6
+      size: 3669
     outs:
     - path: data/02_clean/cog/com.csv
       hash: md5
-      md5: dc05bfe2412006f03b8b36ada0a46d09
-      size: 269
+      md5: cf4701f6b9ea4587a20ba58874c0ae1b
+      size: 293
     - path: data/02_clean/cog/communes.csv
       hash: md5
-      md5: dfe31086cdf374f1a0152afc32e49681
-      size: 1702543
+      md5: 5da5f7dacec0b0723fef714ddbd166b3
+      size: 1702444
     - path: data/02_clean/cog/communes_com.csv
       hash: md5
-      md5: 3d97a6720fa95d8714705fc7924d24bb
-      size: 2538
+      md5: e37c61c15277522f321eade6ba714d64
+      size: 2572
     - path: data/02_clean/cog/communes_historiques.csv
       hash: md5
-      md5: 35a5986010e1e19fc7fa3df70581d014
-      size: 1500922
+      md5: 78fb2c1430ccbda7641676deb7a19048
+      size: 1506127
     - path: data/02_clean/cog/ctcd.csv
       hash: md5
       md5: c0b21ebcabc375e53729529b81ef2471
@@ -936,8 +936,8 @@ stages:
       size: 2615
     - path: data/02_clean/cog/mouvements_communes.csv
       hash: md5
-      md5: be628cc04bf3b739fa5f0f3dbc5433b6
-      size: 1162445
+      md5: 66013df6f486e4ff34511b19e596817c
+      size: 1185528
     - path: data/02_clean/cog/regions.csv
       hash: md5
       md5: 75a71eafce2e51538d3cc0b30b15039f
@@ -948,12 +948,12 @@ stages:
     deps:
     - path: data/02_clean/cog/communes.csv
       hash: md5
-      md5: dfe31086cdf374f1a0152afc32e49681
-      size: 1702543
+      md5: 5da5f7dacec0b0723fef714ddbd166b3
+      size: 1702444
     - path: data/02_clean/cog/communes_com.csv
       hash: md5
-      md5: 3d97a6720fa95d8714705fc7924d24bb
-      size: 2538
+      md5: e37c61c15277522f321eade6ba714d64
+      size: 2572
     - path: data/02_clean/cog/departements.csv
       hash: md5
       md5: ac09c997f36bf573bcd937ba62cc3768
@@ -969,8 +969,8 @@ stages:
     outs:
     - path: data/03_main/elections/2022-presidentielle-parrainages.csv
       hash: md5
-      md5: 9e058738ab7d5b878242ab66642c2711
-      size: 1034095
+      md5: 3da5da55e31acfdee79c65cad5e427cc
+      size: 1034090
   rne_nettoyer@conseillers_arrondissement:
     cmd: PYTHONPATH=src python -m hexagonal.rne.extraire data/01_raw/rne data/02_clean/rne
       conseillers_arrondissement
@@ -1133,8 +1133,8 @@ stages:
     deps:
     - path: data/02_clean/cog/communes.csv
       hash: md5
-      md5: dfe31086cdf374f1a0152afc32e49681
-      size: 1702543
+      md5: 5da5f7dacec0b0723fef714ddbd166b3
+      size: 1702444
     - path: data/02_clean/communes_epci.csv
       hash: md5
       md5: 40472aa392b9e2a84de86d30b1eb8d83
@@ -1149,13 +1149,13 @@ stages:
       size: 5509375
     - path: src/hexagonal/cog/qualifier_communes.py
       hash: md5
-      md5: 99f455a30895b8bf219a4d731ae5b85c
-      size: 1614
+      md5: 2256bc3d422e1754d616f9e6d0080f16
+      size: 1626
     outs:
     - path: data/03_main/cog/communes.csv
       hash: md5
-      md5: a827e2d4fd1451ea3baf0284d59b84f2
-      size: 4038095
+      md5: fddf9febdbe3f058ebbba224060ee50a
+      size: 4039428
   population_nettoyer:
     cmd: PYTHONPATH=src python -m hexagonal.population.nettoyer data/01_raw/population_municipale.xlsx
       data/02_clean/population_municipale.csv
@@ -1179,8 +1179,8 @@ stages:
     deps:
     - path: data/01_raw/admin_express/admin_express_cog.7z
       hash: md5
-      md5: 8220f6d8b3447d1f10e2950276332c62
-      size: 586834108
+      md5: aea27feb6061e6aad3fc4b635eecbe1e
+      size: 654932554
     - path: src/hexagonal/admin_express/extraire.py
       hash: md5
       md5: ffc80c8f271d0e131f7675121d31d4f2
@@ -1192,7 +1192,7 @@ stages:
       size: 5
     - path: data/01_raw/admin_express/arrondissements_municipaux.dbf
       hash: md5
-      md5: 386a6b9d79e62b21f78f57fa4fc08c35
+      md5: 583e5f18690c654e58381a7bae6fc285
       size: 6661
     - path: data/01_raw/admin_express/arrondissements_municipaux.prj
       hash: md5
@@ -1200,11 +1200,11 @@ stages:
       size: 145
     - path: data/01_raw/admin_express/arrondissements_municipaux.shp
       hash: md5
-      md5: 3bd1d972fb3f3060ae65e1827f574353
-      size: 663484
+      md5: db80c017aa5368094400f1c5428324d3
+      size: 905184
     - path: data/01_raw/admin_express/arrondissements_municipaux.shx
       hash: md5
-      md5: af6de512f4a8abc5810a18c67b6553f5
+      md5: e6beb12aaf01362b51fb0856884bdad0
       size: 460
     - path: data/01_raw/admin_express/communes.cpg
       hash: md5
@@ -1212,40 +1212,40 @@ stages:
       size: 5
     - path: data/01_raw/admin_express/communes.dbf
       hash: md5
-      md5: 10adfc5417e54764f1f606a6511fc9e9
-      size: 6847646
+      md5: 167b7f289e6f899ebe6149bdbf892dc7
+      size: 6835886
     - path: data/01_raw/admin_express/communes.prj
       hash: md5
       md5: c742bee3d4edfc2948a2ad08de1790a5
       size: 145
     - path: data/01_raw/admin_express/communes.shp
       hash: md5
-      md5: 232c6abcbbbe35775013a8e316b73d22
-      size: 420059028
+      md5: 9037fd11cba2a1a085b4f64573b2f28d
+      size: 444424512
     - path: data/01_raw/admin_express/communes.shx
       hash: md5
-      md5: decafde7e0b9ed3bab1c1b5c12378227
-      size: 279580
+      md5: 5b20edaf8ee7df1190666a8b101eb4cd
+      size: 279100
     - path: data/01_raw/admin_express/communes_deleguees.cpg
       hash: md5
       md5: ae3b3df9970b49b6523e608759bc957d
       size: 5
     - path: data/01_raw/admin_express/communes_deleguees.dbf
       hash: md5
-      md5: 0831ceb863f55582f8baad0a7d9112b0
-      size: 379730
+      md5: 202eecd739a2d157e673949dd8647e44
+      size: 389202
     - path: data/01_raw/admin_express/communes_deleguees.prj
       hash: md5
       md5: c742bee3d4edfc2948a2ad08de1790a5
       size: 145
     - path: data/01_raw/admin_express/communes_deleguees.shp
       hash: md5
-      md5: 6f9e0e17d30ce7a095fafa795212317f
-      size: 31200220
+      md5: 5a784f0fa312718197aad6041da3c30b
+      size: 32637612
     - path: data/01_raw/admin_express/communes_deleguees.shx
       hash: md5
-      md5: 25fb01c4be2209502217fdb9ac3a1e37
-      size: 20612
+      md5: 3e110d2c4fe672bdc4698aac5133d1d9
+      size: 21124
   communes_carto:
     cmd: mkdir -p data/03_main/cartographie/ && node_modules/.bin/mapshaper data/01_raw/admin_express/communes.shp
       -proj crs=epsg:3857 -rename-fields 'code_commune=INSEE_COM,code_arrondissement=INSEE_ARR,code_canton=INSEE_CAN'
@@ -1267,25 +1267,25 @@ stages:
       size: 5
     - path: data/01_raw/admin_express/communes.dbf
       hash: md5
-      md5: 10adfc5417e54764f1f606a6511fc9e9
-      size: 6847646
+      md5: 167b7f289e6f899ebe6149bdbf892dc7
+      size: 6835886
     - path: data/01_raw/admin_express/communes.prj
       hash: md5
       md5: c742bee3d4edfc2948a2ad08de1790a5
       size: 145
     - path: data/01_raw/admin_express/communes.shp
       hash: md5
-      md5: 232c6abcbbbe35775013a8e316b73d22
-      size: 420059028
+      md5: 9037fd11cba2a1a085b4f64573b2f28d
+      size: 444424512
     - path: data/01_raw/admin_express/communes.shx
       hash: md5
-      md5: decafde7e0b9ed3bab1c1b5c12378227
-      size: 279580
+      md5: 5b20edaf8ee7df1190666a8b101eb4cd
+      size: 279100
     outs:
     - path: data/03_main/cartographie/communes.json
       hash: md5
-      md5: 1430e0e2be4bd52e64b69c095069cdcf
-      size: 11991483
+      md5: 3d2532aadcb0a884fe938138bdff5aa5
+      size: 11973203
   circonscriptions_carto:
     cmd: mkdir -p data/03_main/cartographie/ && node_modules/.bin/mapshaper data/01_raw/insee_circonscriptions_legislatives.zip
       -proj crs=epsg:3857 -rename-layers names=circonscriptions_legislatives -rename-fields
@@ -1360,25 +1360,25 @@ stages:
       size: 5
     - path: data/01_raw/admin_express/communes.dbf
       hash: md5
-      md5: 10adfc5417e54764f1f606a6511fc9e9
-      size: 6847646
+      md5: 167b7f289e6f899ebe6149bdbf892dc7
+      size: 6835886
     - path: data/01_raw/admin_express/communes.prj
       hash: md5
       md5: c742bee3d4edfc2948a2ad08de1790a5
       size: 145
     - path: data/01_raw/admin_express/communes.shp
       hash: md5
-      md5: 232c6abcbbbe35775013a8e316b73d22
-      size: 420059028
+      md5: 9037fd11cba2a1a085b4f64573b2f28d
+      size: 444424512
     - path: data/01_raw/admin_express/communes.shx
       hash: md5
-      md5: decafde7e0b9ed3bab1c1b5c12378227
-      size: 279580
+      md5: 5b20edaf8ee7df1190666a8b101eb4cd
+      size: 279100
     outs:
     - path: data/03_main/contours/communes.json
       hash: md5
-      md5: 647833ea8172dd5922e1795e958f1351
-      size: 130683847
+      md5: 9a0ef27fe20088a3911b7c257496f2b1
+      size: 142387661
   departements_carto:
     cmd: 'node_modules/.bin/mapshaper data/03_main/cartographie/communes.json -dissolve
       fields=code_departement copy-fields=code_region sum-fields=population -rename-layers
@@ -1386,13 +1386,13 @@ stages:
     deps:
     - path: data/03_main/cartographie/communes.json
       hash: md5
-      md5: 1430e0e2be4bd52e64b69c095069cdcf
-      size: 11991483
+      md5: 3d2532aadcb0a884fe938138bdff5aa5
+      size: 11973203
     outs:
     - path: data/03_main/cartographie/departements.json
       hash: md5
-      md5: c916da5583ec289d8b29a56582011e5a
-      size: 160491
+      md5: 2f3e36f7a5c15b89ec286edffd989726
+      size: 160289
   epci_carto:
     cmd: 'node_modules/.bin/mapshaper -i files=data/02_clean/epci.csv name=epci-data
       string-fields=siren_epci -i files=data/03_main/cartographie/communes.json -dissolve
@@ -1406,13 +1406,13 @@ stages:
       size: 69796
     - path: data/03_main/cartographie/communes.json
       hash: md5
-      md5: 1430e0e2be4bd52e64b69c095069cdcf
-      size: 11991483
+      md5: 3d2532aadcb0a884fe938138bdff5aa5
+      size: 11973203
     outs:
     - path: data/03_main/cartographie/epci.json
       hash: md5
-      md5: 547d501325b77619ee7c6075b6a84e14
-      size: 738915
+      md5: d0d7f58a78c7c2c1313072c1ebf6969f
+      size: 739327
   tableau_correspondance_anciens_codes_communes:
     cmd: mkdir -p data/03_main/cog/ && PYTHONPATH=src python -m hexagonal.cog.qualifier_mouvements
       data/02_clean/cog/mouvements_communes.csv 2010-01-01 data/03_main/cog/correspondances_anciens_codes_communes.csv
