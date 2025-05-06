@@ -44,10 +44,10 @@ def normaliser_noms_villes(s):
 
 def extraire_candidats(candidats, nuances_lemonde, nuances_legis_2022, destination):
     tour1 = get_dataset(
-        "data/02_clean/elections/2022-legislatives-1-circonscription.csv"
+        "data/02_clean/elections/2022-legislatives-1-circonscription.parquet"
     ).as_pandas_dataframe()
     tour2 = get_dataset(
-        "data/02_clean/elections/2022-legislatives-2-circonscription.csv"
+        "data/02_clean/elections/2022-legislatives-2-circonscription.parquet"
     ).as_pandas_dataframe()
 
     tour1["gagnant_premier_tour"] = (tour1["voix"] / tour1["inscrits"] > 0.25) & (

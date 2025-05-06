@@ -120,22 +120,27 @@ class Dataset(BaseModel):
         return [res[k] for k in sorted(res.keys())]
 
     def as_pandas_dataframe(self):
-        params = {}
-        for col_id, col_desc in self.colonnes.items():
-            if col_desc.type in PD_DTYPES:
-                params.setdefault("dtype", {})[col_id] = PD_DTYPES[col_desc.type]
+        if self.path.suffix == ".parquet":
+            return pd.read_parquet(self.path)
+        elif self.path.suffix == ".csv":
+            params = {}
+            for col_id, col_desc in self.colonnes.items():
+                if col_desc.type in PD_DTYPES:
+                    params.setdefault("dtype", {})[col_id] = PD_DTYPES[col_desc.type]
 
-            if col_desc.type == ColonneType.DATE:
-                params.setdefault("parse_dates", []).append(col_id)
-                params.setdefault("date_format", "ISO8601")
+                if col_desc.type == ColonneType.DATE:
+                    params.setdefault("parse_dates", []).append(col_id)
+                    params.setdefault("date_format", "ISO8601")
 
-        dataset = pd.read_csv(self.path, **params)
+            dataset = pd.read_csv(self.path, **params)
 
-        for col_id, col_desc in self.colonnes.items():
-            if col_desc.type == ColonneType.BOOL:
-                dataset[col_id] = dataset[col_id] == VRAI
+            for col_id, col_desc in self.colonnes.items():
+                if col_desc.type == ColonneType.BOOL:
+                    dataset[col_id] = dataset[col_id] == VRAI
 
-        return dataset
+            return dataset
+        else:
+            raise ValueError("Format impossible à convertir en dataframe")
 
 
 def get_dataset(path: Union[str, bytes, Path]) -> Dataset:

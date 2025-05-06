@@ -1,8 +1,10 @@
 import csv
+import mimetypes
 import tomllib
-from mimetypes import guess_type
 
+import pyarrow.parquet as pq
 import tomli_w
+from pyarrow import ArrowException
 
 from hexagonal.files.dvc_files import get_dvc_files
 from hexagonal.files.spec import PRODUCTION_TYPES, ColonneType
@@ -22,6 +24,20 @@ FIELDS_ORDER = [
     "licence",
 ]
 
+mimetypes.add_type(
+    "application/vnd.apache.parquet",
+    ".parquet",
+)
+
+PARQUET_TYPES = {
+    "STRING": ColonneType.STR,
+    "BYTE_ARRAY": ColonneType.STR,
+    "INT8": ColonneType.INT,
+    "INT16": ColonneType.INT,
+    "INT32": ColonneType.INT,
+    "INT64": ColonneType.INT,
+}
+
 
 def update_spec():
     new_spec = {}
@@ -40,7 +56,7 @@ def update_spec():
             "type": file.default_type,
         }
 
-        mimetype, encoding = guess_type(file.path)
+        mimetype, encoding = mimetypes.guess_type(file.path)
         if mimetype and encoding:
             mimetype = f"{mimetype}+{encoding}"
         elif encoding:
@@ -87,6 +103,37 @@ def update_spec():
             *[f for f in file_spec if f not in FIELDS_ORDER],
         ]
         new_spec[str(file.path)] = {f: file_spec[f] for f in fields}
+
+        if (
+            file_spec["mimetype"] == "application/vnd.apache.parquet"
+            and file_spec["type"] in PRODUCTION_TYPES
+        ):
+            try:
+                parquet_data = pq.ParquetFile(file.path)
+                columns = parquet_data.schema
+
+                original_colonnes = file_spec.get("colonnes", {})
+                colonnes_table = {}
+
+                for colonne in columns:
+                    colonnes_table[colonne.name] = original_colonnes.get(
+                        colonne.name, {}
+                    )
+
+                    col_type = PARQUET_TYPES.get(
+                        colonne.logical_type.type, PARQUET_TYPES[colonne.physical_type]
+                    )
+
+                    colonnes_defaults = {
+                        "description": "",
+                        "type": col_type,
+                    }
+
+                    for k, v in colonnes_defaults.items():
+                        colonnes_table[colonne.name].setdefault(k, v)
+
+            except ArrowException:
+                pass
 
     with open("spec.toml", "wb") as fd:
         tomli_w.dump(new_spec, fd, multiline_strings=True)

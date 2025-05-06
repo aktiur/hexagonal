@@ -1,6 +1,5 @@
 import sys
 from itertools import chain
-from typing import Literal
 
 import pandas as pd
 
@@ -14,7 +13,7 @@ partie_commune = [
 ]
 
 partie_bureau = [
-    "bureau",  # -- Champ 5  : N° de bureau de vote
+    "bureau_de_vote",  # -- Champ 5  : N° de bureau de vote
     "inscrits",  # -- Champ 6  : Inscrits
     "votants",  # -- Champ 7  : Votants
     "exprimes",  # -- Champ 8  : Exprimés
@@ -26,20 +25,19 @@ partie_bureau = [
 ]
 
 
-transforms: dict[str, Literal["int", "category"]] = {
-    "circonscription": "int",
-    "numero_tour": "int",
-    "numero_panneau": "int",
+transforms: dict[str, str] = {
+    "numero_tour": "int8",
+    "numero_panneau": "int8",
     "nuance": "category",
-    "inscrits": "int",
-    "votants": "int",
-    "exprimes": "int",
-    "voix": "int",
+    "inscrits": "int32",
+    "votants": "int32",
+    "exprimes": "int32",
+    "voix": "int32",
 }
 
 population = [
-    "circonscription",
     "numero_tour",
+    "circonscription",
     "canton",
     "inscrits",
     "votants",
@@ -86,28 +84,30 @@ def clean_results(
         if field in resultats.columns:
             resultats[field] = resultats[field].astype(transform)
 
-    if resultats.nom.nunique() < 1000:
-        resultats["nom"] = resultats["nom"].astype("category")
-        resultats["prenom"] = resultats["prenom"].astype("category")
+    resultats["nom"] = resultats["nom"].astype("category")
+    resultats["prenom"] = resultats["prenom"].astype("category")
 
-    resultats["bureau_de_vote"] = (
-        resultats["departement"].str.zfill(2)
-        + resultats["commune"].str.zfill(3)
-        + "-"
-        + resultats["bureau"].str.zfill(4)
-    )
+    resultats["code_commune"] = (
+        resultats["departement"] + resultats["commune"]
+    ).astype("category")
 
     if "circonscription" in resultats.columns:
         resultats["circonscription"] = (
-            resultats["circonscription"].astype(str).str.zfill(4)
+            resultats["departement"] + "-" + resultats["circonscription"]
+        ).astype("category")
+
+    if "canton" in resultats.columns:
+        resultats["canton"] = (resultats["departement"] + resultats["canton"]).astype(
+            "category"
         )
 
     clean_columns = [
+        "code_commune",
         "bureau_de_vote",
         *(c for c in (population + par_candidat) if c in resultats.columns),
     ]
     df_clean = resultats.loc[:, clean_columns].reset_index(drop=True)
-    df_clean.to_csv(f"{dest}", index=False)
+    df_clean.to_parquet(dest, index=False)
 
 
 def run():
