@@ -11,6 +11,7 @@ dependencies = [
     "pandas ~= 2.2.2",
     "glom ~= 24.11.0",
     "click ~= 8.1.7",
+    "pyarrow>=20.0.0",
 ]
 
 [dependency-groups]

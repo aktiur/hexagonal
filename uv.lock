@@ -1,4 +1,5 @@
 version = 1
+revision = 1
 requires-python = "==3.12.*"
 
 [[package]]
@@ -882,6 +883,7 @@ dependencies = [
     { name = "click" },
     { name = "glom" },
     { name = "pandas" },
+    { name = "pyarrow" },
 ]
 
 [package.dev-dependencies]
@@ -906,6 +908,7 @@ requires-dist = [
     { name = "click", specifier = "~=8.1.7" },
     { name = "glom", specifier = "~=24.11.0" },
     { name = "pandas", specifier = "~=2.2.2" },
+    { name = "pyarrow", specifier = ">=20.0.0" },
 ]
 
 [package.metadata.requires-dev]
@@ -1065,6 +1068,7 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/85/53/0d73e91bca3fc02211db46c9a9ab376821a435f2ca0d15046a3c38d5117c/json_stream_rs_tokenizer-0.4.27-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:c115e4decb5c00266e7df98163bc27db2d1675f94fc4efc66bc1a30cf47ddbc3", size = 320436 },
     { url = "https://files.pythonhosted.org/packages/a7/fa/d31117b835958205d12e63b796f23c58a85122565545baf7df6d4f27b4fe/json_stream_rs_tokenizer-0.4.27-cp312-cp312-manylinux_2_5_i686.manylinux1_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:68a39fca288c69c93cde1eca4f4ce406006dd7fb82f45f35ec03294a60df57ed", size = 335401 },
     { url = "https://files.pythonhosted.org/packages/57/c0/7dcf9df22ffd79c39a261ac821881295d22cb5e3f7263618ed9ed4c5b9f2/json_stream_rs_tokenizer-0.4.27-cp312-cp312-musllinux_1_1_aarch64.whl", hash = "sha256:52738f5943ae46faf0aa9a6e9c255a862f851048e9381e03a77c9813d954506c", size = 350872 },
+    { url = "https://files.pythonhosted.org/packages/56/e1/4fba0f43c6768be7d0be4892a7e5623d73cd312f6749ca15951b647507b6/json_stream_rs_tokenizer-0.4.27-cp312-cp312-musllinux_1_2_aarch64.whl", hash = "sha256:145cae739e6186e5b71b1ce784cd4ff47b714690a89856c004ec4752dbfec21c", size = 390537 },
     { url = "https://files.pythonhosted.org/packages/e4/7a/fb92e47fd6ea26fe9cad424d22ee62802b6abadd6012886c88002d31f391/json_stream_rs_tokenizer-0.4.27-cp312-cp312-win32.whl", hash = "sha256:032443bcce5ff0d01d83118f12d73ae2719c87d6a3ae69d4e4e286c1b2eaf89a", size = 167020 },
     { url = "https://files.pythonhosted.org/packages/d1/0f/48076a0284f5aea55e9c1f9aa87ee6d0eb7af5c1b46bc0724b057ff2f26d/json_stream_rs_tokenizer-0.4.27-cp312-cp312-win_amd64.whl", hash = "sha256:f6de65c96f9c89c3b1fd0017e1da7780b1a1f90e0cded56bfec6d27b797b216f", size = 176949 },
 ]
@@ -1407,6 +1411,23 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/26/c3/0e05c711c16af0b9c47f3f77323303b338b9a871ba020d95d2b8dd6605ae/py7zr-0.22.0.tar.gz", hash = "sha256:c6c7aea5913535184003b73938490f9a4d8418598e533f9ca991d3b8e45a139e", size = 4992926 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/d0/59/dd1750002c0f46099281116f8165247bc62dc85edad41cdd26e7b26de19d/py7zr-0.22.0-py3-none-any.whl", hash = "sha256:993b951b313500697d71113da2681386589b7b74f12e48ba13cc12beca79d078", size = 67906 },
+]
+
+[[package]]
+name = "pyarrow"
+version = "20.0.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/a2/ee/a7810cb9f3d6e9238e61d312076a9859bf3668fd21c69744de9532383912/pyarrow-20.0.0.tar.gz", hash = "sha256:febc4a913592573c8d5805091a6c2b5064c8bd6e002131f01061797d91c783c1", size = 1125187 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/a1/d6/0c10e0d54f6c13eb464ee9b67a68b8c71bcf2f67760ef5b6fbcddd2ab05f/pyarrow-20.0.0-cp312-cp312-macosx_12_0_arm64.whl", hash = "sha256:75a51a5b0eef32727a247707d4755322cb970be7e935172b6a3a9f9ae98404ba", size = 30815067 },
+    { url = "https://files.pythonhosted.org/packages/7e/e2/04e9874abe4094a06fd8b0cbb0f1312d8dd7d707f144c2ec1e5e8f452ffa/pyarrow-20.0.0-cp312-cp312-macosx_12_0_x86_64.whl", hash = "sha256:211d5e84cecc640c7a3ab900f930aaff5cd2702177e0d562d426fb7c4f737781", size = 32297128 },
+    { url = "https://files.pythonhosted.org/packages/31/fd/c565e5dcc906a3b471a83273039cb75cb79aad4a2d4a12f76cc5ae90a4b8/pyarrow-20.0.0-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:4ba3cf4182828be7a896cbd232aa8dd6a31bd1f9e32776cc3796c012855e1199", size = 41334890 },
+    { url = "https://files.pythonhosted.org/packages/af/a9/3bdd799e2c9b20c1ea6dc6fa8e83f29480a97711cf806e823f808c2316ac/pyarrow-20.0.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:2c3a01f313ffe27ac4126f4c2e5ea0f36a5fc6ab51f8726cf41fee4b256680bd", size = 42421775 },
+    { url = "https://files.pythonhosted.org/packages/10/f7/da98ccd86354c332f593218101ae56568d5dcedb460e342000bd89c49cc1/pyarrow-20.0.0-cp312-cp312-manylinux_2_28_aarch64.whl", hash = "sha256:a2791f69ad72addd33510fec7bb14ee06c2a448e06b649e264c094c5b5f7ce28", size = 40687231 },
+    { url = "https://files.pythonhosted.org/packages/bb/1b/2168d6050e52ff1e6cefc61d600723870bf569cbf41d13db939c8cf97a16/pyarrow-20.0.0-cp312-cp312-manylinux_2_28_x86_64.whl", hash = "sha256:4250e28a22302ce8692d3a0e8ec9d9dde54ec00d237cff4dfa9c1fbf79e472a8", size = 42295639 },
+    { url = "https://files.pythonhosted.org/packages/b2/66/2d976c0c7158fd25591c8ca55aee026e6d5745a021915a1835578707feb3/pyarrow-20.0.0-cp312-cp312-musllinux_1_2_aarch64.whl", hash = "sha256:89e030dc58fc760e4010148e6ff164d2f44441490280ef1e97a542375e41058e", size = 42908549 },
+    { url = "https://files.pythonhosted.org/packages/31/a9/dfb999c2fc6911201dcbf348247f9cc382a8990f9ab45c12eabfd7243a38/pyarrow-20.0.0-cp312-cp312-musllinux_1_2_x86_64.whl", hash = "sha256:6102b4864d77102dbbb72965618e204e550135a940c2534711d5ffa787df2a5a", size = 44557216 },
+    { url = "https://files.pythonhosted.org/packages/a0/8e/9adee63dfa3911be2382fb4d92e4b2e7d82610f9d9f668493bebaa2af50f/pyarrow-20.0.0-cp312-cp312-win_amd64.whl", hash = "sha256:96d6a0a37d9c98be08f5ed6a10831d88d52cac7b13f5287f1e0f625a0de8062b", size = 25660496 },
 ]
 
 [[package]]

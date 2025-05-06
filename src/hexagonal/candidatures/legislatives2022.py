@@ -5,7 +5,7 @@ import pandas as pd
 from unidecode import unidecode
 
 from hexagonal.codes import normaliser_code_circonscription
-from hexagonal.files.spec import get_dataset
+from hexagonal.files.spec import get_dataframe
 from hexagonal.utils import FAUX, VRAI
 
 COLONNES_LEMONDE = {
@@ -43,32 +43,34 @@ def normaliser_noms_villes(s):
 
 
 def extraire_candidats(candidats, nuances_lemonde, nuances_legis_2022, destination):
-    tour1 = get_dataset(
-        "data/02_clean/elections/2022-legislatives-1-circonscription.csv"
-    ).as_pandas_dataframe()
-    tour2 = get_dataset(
-        "data/02_clean/elections/2022-legislatives-2-circonscription.csv"
-    ).as_pandas_dataframe()
+    tour1 = get_dataframe(
+        "data/02_clean/elections/2022-legislatives-1-circonscription.parquet"
+    )
+    tour2 = get_dataframe(
+        "data/02_clean/elections/2022-legislatives-2-circonscription.parquet"
+    )
 
     tour1["gagnant_premier_tour"] = (tour1["voix"] / tour1["inscrits"] > 0.25) & (
         tour1["voix"] / tour1["exprimes"] > 0.5
     )
     tour1["gagnant"] = tour1["gagnant_premier_tour"]
-    tour2["gagnant"] = (
-        tour2.groupby("circonscription")["voix"].rank(ascending=False) == 1
-    )
+
+    rangs_candidats_tour2 = tour2.groupby("circonscription", observed=True)[
+        "voix"
+    ].rank(ascending=False)
+    tour2["gagnant"] = rangs_candidats_tour2 == 1
     tour2["gagnant_premier_tour"] = False
     gagnants = pd.concat([tour2, tour1], ignore_index=True).drop_duplicates(
         ["circonscription", "numero_panneau"]
     )[["circonscription", "numero_panneau", "gagnant", "gagnant_premier_tour"]]
 
     tour = re.search(r"2022-legislatives-(\d)-candidats.csv", candidats).group(1)
-    candidats = pd.read_csv(candidats, dtype=str)
+    candidats = get_dataframe(candidats)
 
     if tour == "1":
         # deux candidats de la 92-11 sont inversés dans le fichier du ministère, LÉVÊQUE
         # et ROLLOT
-        candidats.loc[5407:5408, "numero_panneau"] = ["9", "8"]
+        candidats.loc[5407:5408, "numero_panneau"] = [9, 8]
 
     del candidats["departement"]
 
@@ -81,6 +83,7 @@ def extraire_candidats(candidats, nuances_lemonde, nuances_legis_2022, destinati
         nuances_lemonde["departement"].str.lstrip("0")
         + nuances_lemonde["circonscription"].str.zfill(2)
     )
+    nuances_lemonde["numero_panneau"] = pd.to_numeric(nuances_lemonde["numero_panneau"])
     del nuances_lemonde["departement"]
 
     nuances_legis_2022 = pd.read_csv(
@@ -91,6 +94,9 @@ def extraire_candidats(candidats, nuances_lemonde, nuances_legis_2022, destinati
     nuances_legis_2022["circonscription"] = normaliser_code_circonscription(
         nuances_legis_2022["departement"]
         + nuances_legis_2022["circonscription"].str.zfill(2)
+    )
+    nuances_legis_2022["numero_panneau"] = pd.to_numeric(
+        nuances_legis_2022["numero_panneau"]
     )
     del nuances_legis_2022["departement"]
 

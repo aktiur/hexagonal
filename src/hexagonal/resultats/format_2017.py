@@ -56,9 +56,9 @@ fixed_headers = {
     "Code commune": "code_commune",
     "Libellé de la commune": None,
     "Libellé commune": None,
-    "Code du b.vote": "bureau_in_commune",
-    "Code B.Vote": "bureau_in_commune",
-    "Code BV": "bureau_in_commune",
+    "Code du b.vote": "bureau_de_vote",
+    "Code B.Vote": "bureau_de_vote",
+    "Code BV": "bureau_de_vote",
     "Inscrits": "inscrits",
     "Abstentions": None,
     "% Abs/Ins": None,
@@ -124,14 +124,15 @@ repeated_headers = {
 
 
 transforms = {
-    "inscrits": int,
-    "votants": int,
-    "exprimes": int,
-    "blancs": int,
-    "voix": int,
+    "bureau_de_vote": "category",
+    "inscrits": "int32",
+    "votants": "int32",
+    "exprimes": "int32",
+    "blancs": "int32",
+    "voix": "int32",
     "sexe": "category",
-    "numero_panneau": int,
-    "numero_liste": int,
+    "numero_panneau": "int16",
+    "numero_liste": "int8",
     "nuance": "category",
     "nom": "category",
     "prenom": "category",
@@ -140,7 +141,7 @@ transforms = {
     "tete_liste": "category",
 }
 
-identifiants = ["bureau_de_vote", "circonscription"]
+identifiants = ["code_commune", "bureau_de_vote", "circonscription"]
 population = ["inscrits", "votants", "exprimes"]
 par_candidat = [
     "numero_panneau",
@@ -152,6 +153,13 @@ par_candidat = [
     "liste_long",
     "voix",
 ]
+
+MAPPING_SEXE = {
+    "M": "M",
+    "F": "F",
+    "MASCULIN": "M",
+    "FEMININ": "F",
+}
 
 
 def read_file(src, delimiter=";", encoding="utf-8"):
@@ -225,15 +233,18 @@ def read_file(src, delimiter=";", encoding="utf-8"):
 def clean_results(src, dest, delimiter=";", encoding="utf-8"):
     resultats = read_file(src, delimiter, encoding=encoding)
 
+    if "sexe" in resultats.columns:
+        resultats["sexe"] = resultats["sexe"].map(MAPPING_SEXE)
+
     if "circonscription" in resultats.columns:
         resultats["circonscription"] = normaliser_code_circonscription(
             resultats["circonscription"]
-        )
+        ).astype("category")
     if "numero_circonscription" in resultats.columns:
         departement = normaliser_code_departement(resultats["departement"])
         resultats["circonscription"] = (
             departement + "-" + resultats["numero_circonscription"].str.zfill(2)
-        )
+        ).astype("category")
 
     if "commune" in resultats.columns:
         resultats["code_commune"] = resultats["departement"].str.zfill(2) + resultats[
@@ -241,19 +252,15 @@ def clean_results(src, dest, delimiter=";", encoding="utf-8"):
         ].str.zfill(3)
 
     if "code_commune" in resultats.columns:
-        resultats["code_commune"] = normaliser_code_commune(resultats["code_commune"])
-
-        resultats["bureau_de_vote"] = (
+        resultats["code_commune"] = normaliser_code_commune(
             resultats["code_commune"]
-            + "-"
-            + resultats["bureau_in_commune"].str.zfill(4)
-        )
+        ).astype("category")
 
     clean_columns = [
         c for c in (identifiants + population + par_candidat) if c in resultats.columns
     ]
     resultats = resultats.loc[:, clean_columns]
-    resultats.to_csv(dest, index=False)
+    resultats.to_parquet(dest, index=False)
 
 
 def run():

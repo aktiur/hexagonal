@@ -24,13 +24,13 @@ stages:
     do:
       cmd: >-
         ${python} hexagonal.resultats.format_${item.format}
-        ${raw}/elections/${key}.csv ${clean}/elections/${key}.csv ${item.encoding} "${item.delimiter}"
+        ${raw}/elections/${key}.csv ${clean}/elections/${key}.parquet ${item.encoding} "${item.delimiter}"
       deps:
         - ${raw}/elections/${key}.csv
         - ${src}/hexagonal/resultats/format_${item.format}.py
         - ${src}/hexagonal/codes.py
       outs:
-        - ${clean}/elections/${key}.csv
+        - ${clean}/elections/${key}.parquet
 
   candidats-nettoyer:
     foreach:
@@ -90,8 +90,8 @@ stages:
         ${main}/elections/2022-legislatives-${item}-candidats.csv
       deps:
         - ${clean}/elections/2022-legislatives-${item}-candidats.csv
-        - ${clean}/elections/2022-legislatives-1-circonscription.csv
-        - ${clean}/elections/2022-legislatives-2-circonscription.csv
+        - ${clean}/elections/2022-legislatives-1-circonscription.parquet
+        - ${clean}/elections/2022-legislatives-2-circonscription.parquet
         - ${raw}/elections/2022-legislatives-nuances-lemonde.csv
         - ${raw}/elections/2022-legislatives-nuances-legis-2022.csv
         - ${src}/hexagonal/candidatures/legislatives2022.py
@@ -137,11 +137,11 @@ stages:
     do:
       cmd: >-
         ${python} hexagonal.correspondances_circonscription
-        ${clean}/elections/${item}-legislatives-1-bureau_de_vote.csv
+        ${clean}/elections/${item}-legislatives-1-bureau_de_vote.parquet
         ${clean}/elections/${item}-legislatives-1-candidats.csv
         ${clean}/elections/${item}-legislatives-correspondances-bureau_de_vote-circonscription.csv
       deps:
-        - ${clean}/elections/${item}-legislatives-1-bureau_de_vote.csv
+        - ${clean}/elections/${item}-legislatives-1-bureau_de_vote.parquet
         - ${clean}/elections/${item}-legislatives-1-candidats.csv
         - ${src}/hexagonal/correspondances_circonscription.py
         - ${src}/hexagonal/codes.py
@@ -340,10 +340,10 @@ stages:
       node_modules/.bin/mapshaper
       ${raw}/admin_express/communes.shp
       -rename-layers names=communes
-      -rename-fields 'code_commune=INSEE_COM,code_departement=INSEE_DEP,code_region=INSEE_REG'
+      -rename-fields 'id=INSEE_COM,code_departement=INSEE_DEP,code_region=INSEE_REG'
       -rename-fields 'code_arrondissement=INSEE_ARR,code_canton=INSEE_CAN'
       -rename-fields 'nom=NOM,population=POPULATION,siren_epci=SIREN_EPCI,'
-      -filter-fields 'code_commune,code_canton,code_arrondissement,code_departement,nom,population,siren_epci'
+      -filter-fields 'id,code_canton,code_arrondissement,code_departement,nom,population,siren_epci'
       -o format=topojson ${main}/contours/communes.json
 
   circonscriptions_details:
