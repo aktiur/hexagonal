@@ -4166,10 +4166,20 @@ deps = [
 ]
 
 ["data/03_main/cartographie/communes.json"]
-nom = "communes"
+nom = "Communes carto"
 type = "main"
 description = """
+Une version simplifiée des contours des communes, utile pour la cartographie.
 
+Pour permettre la visualisation, les déplacements affines suivants ont été effectués :
+- l'Île-de-France a été extraite et déplacée sur la droite ; la grande couronne est
+  grossie deux fois ; la petite couronne est placée en-dessous et grossie six fois
+- les outremer ont été déplacés à côté de l'hexagone : la Guadeloupe, La Réunion et Mayotte
+  sont grossis trois fois ; la Martinique est grossie 4 fois ; la Guyane est réduite
+  de 40 % pour leur donner des tailles visuelles équivalentes.
+
+Le système de coordonnées employé est EPSG:3857 (dit web mercator), mais les outremer
+ont été déplacés pour les placer à côté de l'hexagone,
 """
 mimetype = "application/json"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/3d/2532aadcb0a884fe938138bdff5aa5"
@@ -4186,6 +4196,7 @@ deps = [
 nom = "departements"
 type = "main"
 description = """
+Une version simplifiée des contours des départements utilisable pour la cartographie.
 
 """
 mimetype = "application/json"
