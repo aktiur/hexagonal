@@ -1,0 +1,12 @@
+md5: d4e2e3d981cd62d93b68ffca656931e7
+frozen: true
+deps:
+- checksum: '"0bc33f3e6f9ab457917430e57f6122a9"'
+  size: 4930492
+  hash: md5
+  path: https://naciscdn.org/naturalearth/10m/cultural/ne_10m_admin_0_countries.zip
+outs:
+- md5: 0bc33f3e6f9ab457917430e57f6122a9
+  size: 4930492
+  hash: md5
+  path: ne_10m_admin_0_countries.zip

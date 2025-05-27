@@ -1,0 +1,12 @@
+md5: 23adb77a3ec37c54c920b3c77a78d39b
+frozen: true
+deps:
+- checksum: '"533bb68748d7a414b50a816704772c77"'
+  size: 2811199
+  hash: md5
+  path: https://naciscdn.org/naturalearth/10m/cultural/ne_10m_populated_places.zip
+outs:
+- md5: 533bb68748d7a414b50a816704772c77
+  size: 2811199
+  hash: md5
+  path: ne_10m_populated_places.zip

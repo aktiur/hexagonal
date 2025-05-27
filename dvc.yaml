@@ -366,6 +366,8 @@ stages:
 
   communes_carto:
     deps:
+      - ${src}/scripts/cartographie/communes.sh
+      - ${src}/scripts/cartographie/drom_idf.sh
       - ${raw}/admin_express/communes.cpg
       - ${raw}/admin_express/communes.dbf
       - ${raw}/admin_express/communes.prj
@@ -374,24 +376,9 @@ stages:
     outs:
       - ${main}/cartographie/communes.json
     cmd: >-
-      mkdir -p ${main}/cartographie/ &&
-      node_modules/.bin/mapshaper
+      ${src}/scripts/cartographie/communes.sh
       ${raw}/admin_express/communes.shp
-      -proj crs=epsg:3857
-      -rename-fields 'code_commune=INSEE_COM,code_arrondissement=INSEE_ARR,code_canton=INSEE_CAN'
-      -rename-fields 'code_departement=INSEE_DEP,code_region=INSEE_REG'
-      -rename-fields 'nom=NOM,population=POPULATION,siren_epci=SIREN_EPCI'
-      -affine where="code_departement =='971'" shift=6556000,3230000 scale=3
-      -affine where="code_departement =='972'" shift=6780000,3405000 scale=4
-      -affine where="code_departement =='973'" shift=6150000,4620000 scale=0.6
-      -affine where="code_departement =='974'" shift=-5700000,7450000 scale=3
-      -affine where="code_departement =='976'" shift=-4310000,6500000 scale=3
-      -affine where="['77', '78', '91', '95'].includes(code_departement)" shift=900000,200000 scale=2
-      -affine where="['75', '92', '93', '94'].includes(code_departement)" shift=900000,-200000 scale=6
-      -simplify resolution=1000
-      -filter-fields 'code_commune,code_canton,code_arrondissement,code_departement,code_region,nom,population,siren_epci'
-      -rename-layers names=communes
-      -o format=topojson ${main}/cartographie/communes.json
+      ${main}/cartographie/communes.json
 
   epci_carto:
     deps:
@@ -422,37 +409,25 @@ stages:
 
   circonscriptions_carto:
     deps:
+      - ${src}/scripts/cartographie/circonscriptions.sh
+      - ${src}/scripts/cartographie/drom_idf.sh
       - ${raw}/insee_circonscriptions_legislatives.zip
     outs:
       - ${main}/cartographie/circonscriptions_legislatives.json
     cmd: >-
-      mkdir -p ${main}/cartographie/ &&
-      node_modules/.bin/mapshaper
+      ${src}/scripts/cartographie/circonscriptions.sh
       ${raw}/insee_circonscriptions_legislatives.zip
-      -proj crs=epsg:3857
-      -rename-layers names=circonscriptions_legislatives
-      -rename-fields 'code_departement=dep'
-      -each 'code_circonscription = code_departement + "-" + id_circo.slice(-2)'
-      -clean gap-fill-area=1km2 snap-interval=300 \
-      -affine where="code_departement =='971'" shift=6556000,3230000 scale=3
-      -affine where="code_departement =='972'" shift=6780000,3405000 scale=4
-      -affine where="code_departement =='973'" shift=6150000,4620000 scale=0.6
-      -affine where="code_departement =='974'" shift=-5700000,7450000 scale=3
-      -affine where="code_departement =='976'" shift=-4310000,6500000 scale=3
-      -affine where="['77', '78', '91', '95'].includes(code_departement)" shift=900000,200000 scale=2
-      -affine where="['75', '92', '93', '94'].includes(code_departement)" shift=900000,-200000 scale=6
-      -simplify resolution=1000
-      -filter-fields 'code_circonscription,code_departement'
-      -o format=topojson ${main}/cartographie/circonscriptions_legislatives.json
+      ${main}/cartographie/circonscriptions_legislatives.json
 
-#  tableau_correspondance_anciens_codes_communes:
-#    deps:
-#      - ${clean}/cog/mouvements_communes.csv
-#    outs:
-#      - ${main}/cog/correspondances_anciens_codes_communes.csv
-#    cmd: >-
-#      mkdir -p ${main}/cog/ &&
-#      ${python} hexagonal.cog.qualifier_mouvements
-#      ${clean}/cog/mouvements_communes.csv
-#      2010-01-01
-#      ${main}/cog/correspondances_anciens_codes_communes.csv
+  pays_carto:
+    deps:
+      - ${src}/scripts/cartographie/pays.sh
+      - ${raw}/ne_10m_admin_0_countries.zip
+      - ${raw}/ne_10m_populated_places.zip
+    outs:
+      - ${main}/cartographie/pays.json
+    cmd: >-
+      ${src}/scripts/cartographie/pays.sh
+      ${raw}/ne_10m_admin_0_countries.zip
+      ${raw}/ne_10m_populated_places.zip
+      ${main}/cartographie/pays.json
