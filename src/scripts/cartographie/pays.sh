@@ -19,7 +19,8 @@ args+=( -target ne_10m_admin_0_countries )
 # on crée le code_circonscription, on renomme le code département et on ne garde que ça
 args+=( -rename-fields "code_a2=ISO_A2,code_a3=ISO_A3,nom=NAME,nom_fr=NAME_FR,nom_en=NAME_EN" )
 args+=( -rename-fields "population=POP_EST,population_annee=POP_YEAR,type=TYPE")
-args+=( -filter-fields 'code_a2,code_a3,nom,nom_fr,nom_en,population,population_annee,type' )
+args+=( -rename-fields "continent=CONTINENT,region_un=REGION_UN,region=SUBREGION" )
+args+=( -filter-fields 'code_a2,code_a3,nom,nom_fr,nom_en,population,population_annee,type,continent,region,region_un' )
 
 # Une simplification au kilomètre près est appliquée
 args+=( -simplify 20% )
@@ -29,13 +30,12 @@ args+=( -clean )
 
 # on importe les lieux peuplés
 args+=( -i "${VILLES}")
-args+=( -target ne_10m_populated_places )
-args+=( -rename-fields "nom=NAME,nom_fr=NAME_FR,nom_en=NAME_EN,code_pays_a2=ISO_A2" )
-args+=( -rename-fields "type=FEATURECLA,population_min=POP_MIN,population_max=POP_MAX,population_autre=POP_OTHER" )
-args+=( -filter-fields "nom,code_pays_a2,type,nom,nom_fr,nom_en,type,population_min,population_max,population_autre" )
+args+=( -target cities1000 )
+args+=( -filter-fields "geoname_id,nom,code_pays_a2,nom,population,fclass,fcode" )
+args+=( -filter "population >= 10000" )
 
 # on renomme les deux couches concernées
-args+=( -rename-layers "names=pays,lieux" "target=ne_10m_admin_0_countries,ne_10m_populated_places"  )
+args+=( -rename-layers "names=pays,lieux" "target=ne_10m_admin_0_countries,cities1000"  )
 
 # La topologie obtenue est enregistrée au format TopoJSON
 args+=( -o format=topojson "target=pays,lieux" "${DST_TOPOLOGY}" )

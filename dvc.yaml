@@ -419,15 +419,23 @@ stages:
       ${raw}/insee_circonscriptions_legislatives.zip
       ${main}/cartographie/circonscriptions_legislatives.json
 
+  extraire_geonames_cities1000:
+    deps:
+      - ${raw}/geonames/cities1000.zip
+      - ${src}/hexagonal/geonames/extract.py
+    outs:
+      - ${clean}/geonames/cities1000.json
+    cmd: ${python} hexagonal.geonames.extract ${raw}/geonames/cities1000.zip ${clean}/geonames/cities1000.json
+
   pays_carto:
     deps:
       - ${src}/scripts/cartographie/pays.sh
-      - ${raw}/ne_10m_admin_0_countries.zip
-      - ${raw}/ne_10m_populated_places.zip
+      - ${raw}/natural_earth/ne_10m_admin_0_countries.zip
+      - ${clean}/geonames/cities1000.json
     outs:
       - ${main}/cartographie/pays.json
     cmd: >-
       ${src}/scripts/cartographie/pays.sh
-      ${raw}/ne_10m_admin_0_countries.zip
-      ${raw}/ne_10m_populated_places.zip
+      ${raw}/natural_earth/ne_10m_admin_0_countries.zip
+      ${clean}/geonames/cities1000.json
       ${main}/cartographie/pays.json

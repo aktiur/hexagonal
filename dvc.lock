@@ -1432,24 +1432,41 @@ stages:
       md5: bdbc7c7a4fe8fe668ea1a42def9edef8
       size: 21350
   pays_carto:
-    cmd: src/scripts/cartographie/pays.sh data/01_raw/ne_10m_admin_0_countries.zip
-      data/01_raw/ne_10m_populated_places.zip data/03_main/cartographie/pays.json
+    cmd: src/scripts/cartographie/pays.sh data/01_raw/natural_earth/ne_10m_admin_0_countries.zip
+      data/02_clean/geonames/cities1000.json data/03_main/cartographie/pays.json
     deps:
-    - path: data/01_raw/ne_10m_admin_0_countries.zip
+    - path: data/01_raw/natural_earth/ne_10m_admin_0_countries.zip
       hash: md5
       md5: 0bc33f3e6f9ab457917430e57f6122a9
       size: 4930492
-    - path: data/01_raw/ne_10m_populated_places.zip
+    - path: data/02_clean/geonames/cities1000.json
       hash: md5
-      md5: 533bb68748d7a414b50a816704772c77
-      size: 2811199
+      md5: 42dd75e0a9ed2f650a75fe269d022f95
+      size: 64199336
     - path: src/scripts/cartographie/pays.sh
       hash: md5
-      md5: 493d05d8f9c22cbcb91959ed804fea67
-      size: 1483
+      md5: de21be805fdd95c1ba78529c2f88a5f8
+      size: 1370
       isexec: true
     outs:
     - path: data/03_main/cartographie/pays.json
       hash: md5
-      md5: 1781b6fa784a746456e9a2efdf94d893
-      size: 2711549
+      md5: fea8b648e54fc46a78e0a172a0c0fcd3
+      size: 7819441
+  extraire_geonames_cities1000:
+    cmd: PYTHONPATH=src python -m hexagonal.geonames.extract data/01_raw/geonames/cities1000.zip
+      data/02_clean/geonames/cities1000.json
+    deps:
+    - path: data/01_raw/geonames/cities1000.zip
+      hash: md5
+      md5: 11ae971aff2eb4b587435e0ac2e1a0e0
+      size: 9629447
+    - path: src/hexagonal/geonames/extract.py
+      hash: md5
+      md5: d0ed8c9f539456e3f1bd0092e65e28f6
+      size: 1706
+    outs:
+    - path: data/02_clean/geonames/cities1000.json
+      hash: md5
+      md5: 42dd75e0a9ed2f650a75fe269d022f95
+      size: 64199336

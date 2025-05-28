@@ -1,0 +1,12 @@
+md5: de1d664de3822945ec724fb9abce084f
+frozen: true
+deps:
+- checksum: '"92ef07-6361412174704"'
+  size: 9629447
+  hash: md5
+  path: https://download.geonames.org/export/dump/cities1000.zip
+outs:
+- md5: 11ae971aff2eb4b587435e0ac2e1a0e0
+  size: 9629447
+  hash: md5
+  path: cities1000.zip
