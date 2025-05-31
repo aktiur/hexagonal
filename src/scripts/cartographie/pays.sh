@@ -17,7 +17,7 @@ args+=( -i "${PAYS}" )
 args+=( -target ne_10m_admin_0_countries )
 
 # on crée le code_circonscription, on renomme le code département et on ne garde que ça
-args+=( -rename-fields "code_a2=ISO_A2,code_a3=ISO_A3,nom=NAME,nom_fr=NAME_FR,nom_en=NAME_EN" )
+args+=( -rename-fields "code_a2=ISO_A2_EH,code_a3=ISO_A3_EH,nom=NAME,nom_fr=NAME_FR,nom_en=NAME_EN" )
 args+=( -rename-fields "population=POP_EST,population_annee=POP_YEAR,type=TYPE")
 args+=( -rename-fields "continent=CONTINENT,region_un=REGION_UN,region=SUBREGION" )
 args+=( -filter-fields 'code_a2,code_a3,nom,nom_fr,nom_en,population,population_annee,type,continent,region,region_un' )
