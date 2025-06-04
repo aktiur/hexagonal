@@ -31,7 +31,7 @@ args+=( -clean )
 # on importe les lieux peuplés
 args+=( -i "${VILLES}")
 args+=( -target cities1000 )
-args+=( -filter-fields "geoname_id,nom,code_pays_a2,nom,population,fclass,fcode" )
+args+=( -filter-fields "geoname_id,nom,noms_alt,code_pays_a2,nom,population,fclass,fcode" )
 args+=( -filter "population >= 10000" )
 
 # on renomme les deux couches concernées

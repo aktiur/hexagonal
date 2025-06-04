@@ -14,7 +14,7 @@ NAMES = {
     "geoname_id": INT,
     "nom": STR,
     "asciiname": None,
-    "alternatenames": None,
+    "noms_alt": STR,
     "latitude": FLOAT,
     "longitude": FLOAT,
     "fclass": STR,
@@ -55,6 +55,8 @@ def extract_geonames(source, dest):
     ]
     del villes["longitude"]
     del villes["latitude"]
+
+    villes["noms_alt"] = villes["noms_alt"].str.split(",")
 
     villes = gpd.GeoDataFrame(villes, geometry="coordinates", crs="EPSG:4326")
 

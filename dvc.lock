@@ -1441,18 +1441,18 @@ stages:
       size: 4930492
     - path: data/02_clean/geonames/cities1000.json
       hash: md5
-      md5: 42dd75e0a9ed2f650a75fe269d022f95
-      size: 64199336
+      md5: b7f2d27697f57e8678d5b3adf022d7a0
+      size: 80449147
     - path: src/scripts/cartographie/pays.sh
       hash: md5
-      md5: 33dfb952febb6f3eed1b8034f68516bf
-      size: 1376
+      md5: eaed8de38ad260b6f60ff142f95e432e
+      size: 1385
       isexec: true
     outs:
     - path: data/03_main/cartographie/pays.json
       hash: md5
-      md5: a4444a4e9564ee4def64f9186ef847c3
-      size: 7819432
+      md5: 8725006aac5595fa3af6fb9717089507
+      size: 13992115
   extraire_geonames_cities1000:
     cmd: PYTHONPATH=src python -m hexagonal.geonames.extract data/01_raw/geonames/cities1000.zip
       data/02_clean/geonames/cities1000.json
@@ -1463,10 +1463,10 @@ stages:
       size: 9629447
     - path: src/hexagonal/geonames/extract.py
       hash: md5
-      md5: d0ed8c9f539456e3f1bd0092e65e28f6
-      size: 1706
+      md5: c20adb3336d44914d1b456619afa518c
+      size: 1759
     outs:
     - path: data/02_clean/geonames/cities1000.json
       hash: md5
-      md5: 42dd75e0a9ed2f650a75fe269d022f95
-      size: 64199336
+      md5: b7f2d27697f57e8678d5b3adf022d7a0
+      size: 80449147
