@@ -38,6 +38,6 @@ args+=( -filter "population >= 10000" )
 args+=( -rename-layers "names=pays,lieux" "target=ne_10m_admin_0_countries,cities1000"  )
 
 # La topologie obtenue est enregistrée au format TopoJSON
-args+=( -o format=topojson "target=pays,lieux" "${DST_TOPOLOGY}" )
+args+=( -o format=topojson "target=pays,lieux" "id-field=code_a2,geoname_id" "${DST_TOPOLOGY}" )
 
 node_modules/.bin/mapshaper "${args[@]}"

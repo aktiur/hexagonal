@@ -1445,14 +1445,14 @@ stages:
       size: 80449147
     - path: src/scripts/cartographie/pays.sh
       hash: md5
-      md5: eaed8de38ad260b6f60ff142f95e432e
-      size: 1385
+      md5: 128659716ea608129d17d831a37656fb
+      size: 1415
       isexec: true
     outs:
     - path: data/03_main/cartographie/pays.json
       hash: md5
-      md5: 8725006aac5595fa3af6fb9717089507
-      size: 13992115
+      md5: a361634128d8179a7f7c29b34b93f113
+      size: 14520356
   extraire_geonames_cities1000:
     cmd: PYTHONPATH=src python -m hexagonal.geonames.extract data/01_raw/geonames/cities1000.zip
       data/02_clean/geonames/cities1000.json
