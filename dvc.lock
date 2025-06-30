@@ -1256,65 +1256,48 @@ stages:
       md5: 3e110d2c4fe672bdc4698aac5133d1d9
       size: 21124
   communes_carto:
-    cmd: src/scripts/cartographie/communes.sh data/01_raw/admin_express/communes.shp
-      data/03_main/cartographie/communes.json
+    cmd: src/scripts/cartographie/communes.sh data/03_main/geodata/communes.json data/03_main/cartographie/communes.json
     deps:
-    - path: data/01_raw/admin_express/communes.cpg
+    - path: data/03_main/geodata/communes.json
       hash: md5
-      md5: ae3b3df9970b49b6523e608759bc957d
-      size: 5
-    - path: data/01_raw/admin_express/communes.dbf
-      hash: md5
-      md5: 167b7f289e6f899ebe6149bdbf892dc7
-      size: 6835886
-    - path: data/01_raw/admin_express/communes.prj
-      hash: md5
-      md5: c742bee3d4edfc2948a2ad08de1790a5
-      size: 145
-    - path: data/01_raw/admin_express/communes.shp
-      hash: md5
-      md5: 9037fd11cba2a1a085b4f64573b2f28d
-      size: 444424512
-    - path: data/01_raw/admin_express/communes.shx
-      hash: md5
-      md5: 5b20edaf8ee7df1190666a8b101eb4cd
-      size: 279100
+      md5: 17bdc1ae1b3d1eea0e5abfe2cbf91c0c
+      size: 143050286
     - path: src/scripts/cartographie/communes.sh
       hash: md5
-      md5: db8115a648f13273f096a143a7ac1ffa
-      size: 1288
+      md5: 4a313e53204b3b1fa876a8c2ee0bd0f7
+      size: 868
       isexec: true
-    - path: src/scripts/cartographie/drom_idf.sh
+    - path: src/scripts/cartographie/zones_france.sh
       hash: md5
-      md5: 4572985fda3be335abe2793caee165e8
-      size: 800
+      md5: f02677d48ada08d9b237cbedd130a4e6
+      size: 492
     outs:
     - path: data/03_main/cartographie/communes.json
       hash: md5
-      md5: 6f3bad9f4be90b8aba3660b9cab0ec75
-      size: 11973203
+      md5: e093085aec11276e7c3b61787ea6b4f7
+      size: 17802788
   circonscriptions_carto:
-    cmd: src/scripts/cartographie/circonscriptions.sh data/01_raw/insee_circonscriptions_legislatives.zip
+    cmd: src/scripts/cartographie/circonscriptions.sh data/03_main/geodata/circonscriptions_legislatives.json
       data/03_main/cartographie/circonscriptions_legislatives.json
     deps:
-    - path: data/01_raw/insee_circonscriptions_legislatives.zip
+    - path: data/03_main/geodata/circonscriptions_legislatives.json
       hash: md5
-      md5: dac42b77df3c3982c6badb41822ec3e3
-      size: 6083265
+      md5: ebc3f1d802e611cababdd25affc94393
+      size: 602599
     - path: src/scripts/cartographie/circonscriptions.sh
       hash: md5
-      md5: ee0f3d47b22b60e3521a5306e1821cdb
-      size: 1204
+      md5: f65dae7a3f41403bb2613a75a93cf692
+      size: 877
       isexec: true
-    - path: src/scripts/cartographie/drom_idf.sh
+    - path: src/scripts/cartographie/zones_france.sh
       hash: md5
-      md5: 4572985fda3be335abe2793caee165e8
-      size: 800
+      md5: f02677d48ada08d9b237cbedd130a4e6
+      size: 492
     outs:
     - path: data/03_main/cartographie/circonscriptions_legislatives.json
       hash: md5
-      md5: fa4d736813edf5cd966b1fda7ca5f83c
-      size: 294016
+      md5: 1b98427ce41054e41c880e265e62b15f
+      size: 533117
   epci_nettoyer:
     cmd: PYTHONPATH=src python -m hexagonal.intercommunalite.nettoyer data/01_raw/epci.xlsx
       data/02_clean/epci.csv data/02_clean/communes_epci.csv
@@ -1337,27 +1320,25 @@ stages:
       md5: d355ed2662d0db2fa65059b202a1bcf8
       size: 69796
   circonscriptions_details:
-    cmd: mkdir -p data/03_main/contours/ && node_modules/.bin/mapshaper data/01_raw/insee_circonscriptions_legislatives.zip
-      -proj crs=epsg:3857 -clean gap-fill-area=1km2 snap-interval=300 \ -proj crs=epsg:4326
-      -rename-layers names=circonscriptions_legislatives -rename-fields 'code_departement=dep'
-      -each 'code_circonscription = code_departement + "-" + id_circo.slice(-2)' -filter-fields
-      'code_circonscription,code_departement' -o format=topojson data/03_main/contours/circonscriptions_legislatives.json
+    cmd: src/scripts/geodata/circonscriptions.sh data/01_raw/insee_circonscriptions_legislatives.zip
+      data/03_main/geodata/circonscriptions_legislatives.json
     deps:
     - path: data/01_raw/insee_circonscriptions_legislatives.zip
       hash: md5
       md5: dac42b77df3c3982c6badb41822ec3e3
       size: 6083265
-    outs:
-    - path: data/03_main/contours/circonscriptions_legislatives.json
+    - path: src/scripts/geodata/circonscriptions.sh
       hash: md5
-      md5: 5f9db0dcc0c3c469136a0cb3ff202675
-      size: 609639
+      md5: de037e2b3abcbec8f4e9e48f108be2b1
+      size: 855
+      isexec: true
+    outs:
+    - path: data/03_main/geodata/circonscriptions_legislatives.json
+      hash: md5
+      md5: ebc3f1d802e611cababdd25affc94393
+      size: 602599
   communes_details:
-    cmd: mkdir -p data/03_main/contours/ && node_modules/.bin/mapshaper data/01_raw/admin_express/communes.shp
-      -rename-layers names=communes -rename-fields 'id=INSEE_COM,code_departement=INSEE_DEP,code_region=INSEE_REG'
-      -rename-fields 'code_arrondissement=INSEE_ARR,code_canton=INSEE_CAN' -rename-fields
-      'nom=NOM,population=POPULATION,siren_epci=SIREN_EPCI,' -filter-fields 'id,code_canton,code_arrondissement,code_departement,nom,population,siren_epci'
-      -o format=topojson data/03_main/contours/communes.json
+    cmd: src/scripts/geodata/communes.sh data/01_raw/admin_express/communes.shp data/03_main/geodata/communes.json
     deps:
     - path: data/01_raw/admin_express/communes.cpg
       hash: md5
@@ -1379,11 +1360,16 @@ stages:
       hash: md5
       md5: 5b20edaf8ee7df1190666a8b101eb4cd
       size: 279100
-    outs:
-    - path: data/03_main/contours/communes.json
+    - path: src/scripts/geodata/communes.sh
       hash: md5
-      md5: 413878b172a1c3d0ccd0a8a2330a220c
-      size: 142038911
+      md5: 1da56f1aa482c5ca5fd17b154d19eb8f
+      size: 913
+      isexec: true
+    outs:
+    - path: data/03_main/geodata/communes.json
+      hash: md5
+      md5: 17bdc1ae1b3d1eea0e5abfe2cbf91c0c
+      size: 143050286
   departements_carto:
     cmd: 'node_modules/.bin/mapshaper data/03_main/cartographie/communes.json -dissolve
       fields=code_departement copy-fields=code_region sum-fields=population -rename-layers
@@ -1391,13 +1377,13 @@ stages:
     deps:
     - path: data/03_main/cartographie/communes.json
       hash: md5
-      md5: 6f3bad9f4be90b8aba3660b9cab0ec75
-      size: 11973203
+      md5: e093085aec11276e7c3b61787ea6b4f7
+      size: 17802788
     outs:
     - path: data/03_main/cartographie/departements.json
       hash: md5
-      md5: 2f3e36f7a5c15b89ec286edffd989726
-      size: 160289
+      md5: 24513e0165badb312043e17632d03a57
+      size: 685394
   epci_carto:
     cmd: 'node_modules/.bin/mapshaper -i files=data/02_clean/epci.csv name=epci-data
       string-fields=siren_epci -i files=data/03_main/cartographie/communes.json -dissolve
@@ -1411,13 +1397,13 @@ stages:
       size: 69796
     - path: data/03_main/cartographie/communes.json
       hash: md5
-      md5: 6f3bad9f4be90b8aba3660b9cab0ec75
-      size: 11973203
+      md5: e093085aec11276e7c3b61787ea6b4f7
+      size: 17802788
     outs:
     - path: data/03_main/cartographie/epci.json
       hash: md5
-      md5: d0d7f58a78c7c2c1313072c1ebf6969f
-      size: 739327
+      md5: 35d5c44c586cef2eb3ddcba714f8ed33
+      size: 2223636
   tableau_correspondance_anciens_codes_communes:
     cmd: mkdir -p data/03_main/cog/ && PYTHONPATH=src python -m hexagonal.cog.qualifier_mouvements
       data/02_clean/cog/mouvements_communes.csv 2010-01-01 data/03_main/cog/correspondances_anciens_codes_communes.csv
@@ -1445,8 +1431,8 @@ stages:
       size: 80449147
     - path: src/scripts/cartographie/pays.sh
       hash: md5
-      md5: 128659716ea608129d17d831a37656fb
-      size: 1415
+      md5: f061ae58440b74898b5954e033055be8
+      size: 1425
       isexec: true
     outs:
     - path: data/03_main/cartographie/pays.json
@@ -1470,3 +1456,231 @@ stages:
       hash: md5
       md5: b7f2d27697f57e8678d5b3adf022d7a0
       size: 80449147
+  communes_carto@hexagone:
+    cmd: src/scripts/cartographie/filter_project.sh data/03_main/geodata/communes.json
+      data/03_main/cartographie/communes_hexagone.json hexagone 'code_departement.length
+      === 2' EPSG:2154
+    deps:
+    - path: data/03_main/geodata/communes.json
+      hash: md5
+      md5: 17bdc1ae1b3d1eea0e5abfe2cbf91c0c
+      size: 143050286
+    - path: src/scripts/cartographie/filter_project.sh
+      hash: md5
+      md5: 48fddcc6c42d601d98fca860d04f83ff
+      size: 642
+      isexec: true
+    outs:
+    - path: data/03_main/cartographie/communes_hexagone.json
+      hash: md5
+      md5: e25ac3c4a8a67c7d5be237269c37b134
+      size: 17365401
+  communes_carto@guadeloupe:
+    cmd: src/scripts/cartographie/filter_project.sh data/03_main/geodata/communes.json
+      data/03_main/cartographie/communes_guadeloupe.json guadeloupe 'code_departement
+      === "971"' EPSG:5490
+    deps:
+    - path: data/03_main/geodata/communes.json
+      hash: md5
+      md5: 17bdc1ae1b3d1eea0e5abfe2cbf91c0c
+      size: 143050286
+    - path: src/scripts/cartographie/filter_project.sh
+      hash: md5
+      md5: 48fddcc6c42d601d98fca860d04f83ff
+      size: 642
+      isexec: true
+    outs:
+    - path: data/03_main/cartographie/communes_guadeloupe.json
+      hash: md5
+      md5: f59ba60a2f1be8015930229c8e286ad7
+      size: 25890
+  communes_carto@martinique:
+    cmd: src/scripts/cartographie/filter_project.sh data/03_main/geodata/communes.json
+      data/03_main/cartographie/communes_martinique.json martinique 'code_departement
+      === "972"' EPSG:5490
+    deps:
+    - path: data/03_main/geodata/communes.json
+      hash: md5
+      md5: 17bdc1ae1b3d1eea0e5abfe2cbf91c0c
+      size: 143050286
+    - path: src/scripts/cartographie/filter_project.sh
+      hash: md5
+      md5: 48fddcc6c42d601d98fca860d04f83ff
+      size: 642
+      isexec: true
+    outs:
+    - path: data/03_main/cartographie/communes_martinique.json
+      hash: md5
+      md5: 5ce5e22b3dc698bfec2ea1faceb85300
+      size: 26260
+  communes_carto@guyane:
+    cmd: src/scripts/cartographie/filter_project.sh data/03_main/geodata/communes.json
+      data/03_main/cartographie/communes_guyane.json guyane 'code_departement ===
+      "973"' EPSG:2972
+    deps:
+    - path: data/03_main/geodata/communes.json
+      hash: md5
+      md5: 17bdc1ae1b3d1eea0e5abfe2cbf91c0c
+      size: 143050286
+    - path: src/scripts/cartographie/filter_project.sh
+      hash: md5
+      md5: 48fddcc6c42d601d98fca860d04f83ff
+      size: 642
+      isexec: true
+    outs:
+    - path: data/03_main/cartographie/communes_guyane.json
+      hash: md5
+      md5: 6f2e88c90c570d7fa7727b199518c3cd
+      size: 93332
+  communes_carto@reunion:
+    cmd: src/scripts/cartographie/filter_project.sh data/03_main/geodata/communes.json
+      data/03_main/cartographie/communes_reunion.json reunion 'code_departement ===
+      "974"' EPSG:2975
+    deps:
+    - path: data/03_main/geodata/communes.json
+      hash: md5
+      md5: 17bdc1ae1b3d1eea0e5abfe2cbf91c0c
+      size: 143050286
+    - path: src/scripts/cartographie/filter_project.sh
+      hash: md5
+      md5: 48fddcc6c42d601d98fca860d04f83ff
+      size: 642
+      isexec: true
+    outs:
+    - path: data/03_main/cartographie/communes_reunion.json
+      hash: md5
+      md5: 8064913b69433010278a5577fbf568f4
+      size: 20339
+  communes_carto@mayotte:
+    cmd: src/scripts/cartographie/filter_project.sh data/03_main/geodata/communes.json
+      data/03_main/cartographie/communes_mayotte.json mayotte 'code_departement ===
+      "976"' EPSG:4471
+    deps:
+    - path: data/03_main/geodata/communes.json
+      hash: md5
+      md5: 17bdc1ae1b3d1eea0e5abfe2cbf91c0c
+      size: 143050286
+    - path: src/scripts/cartographie/filter_project.sh
+      hash: md5
+      md5: 48fddcc6c42d601d98fca860d04f83ff
+      size: 642
+      isexec: true
+    outs:
+    - path: data/03_main/cartographie/communes_mayotte.json
+      hash: md5
+      md5: eac1c4730d028cf791fc15fce3c27b3e
+      size: 10536
+  circonscriptions_carto@hexagone:
+    cmd: src/scripts/cartographie/filter_project.sh data/03_main/geodata/circonscriptions_legislatives.json
+      data/03_main/cartographie/circonscriptions_hexagone.json hexagone 'code_departement.length
+      === 2' EPSG:2154
+    deps:
+    - path: data/03_main/geodata/circonscriptions_legislatives.json
+      hash: md5
+      md5: ebc3f1d802e611cababdd25affc94393
+      size: 602599
+    - path: src/scripts/cartographie/filter_project.sh
+      hash: md5
+      md5: 48fddcc6c42d601d98fca860d04f83ff
+      size: 642
+      isexec: true
+    outs:
+    - path: data/03_main/cartographie/circonscriptions_hexagone.json
+      hash: md5
+      md5: 1b196b8460cbdc99eceb0d1b2007fce5
+      size: 486848
+  circonscriptions_carto@guadeloupe:
+    cmd: src/scripts/cartographie/filter_project.sh data/03_main/geodata/circonscriptions_legislatives.json
+      data/03_main/cartographie/circonscriptions_guadeloupe.json guadeloupe 'code_departement
+      === "971"' EPSG:5490
+    deps:
+    - path: data/03_main/geodata/circonscriptions_legislatives.json
+      hash: md5
+      md5: ebc3f1d802e611cababdd25affc94393
+      size: 602599
+    - path: src/scripts/cartographie/filter_project.sh
+      hash: md5
+      md5: 48fddcc6c42d601d98fca860d04f83ff
+      size: 642
+      isexec: true
+    outs:
+    - path: data/03_main/cartographie/circonscriptions_guadeloupe.json
+      hash: md5
+      md5: f5af7eb72a16d1ba1028dd7f469ab6a1
+      size: 10029
+  circonscriptions_carto@martinique:
+    cmd: src/scripts/cartographie/filter_project.sh data/03_main/geodata/circonscriptions_legislatives.json
+      data/03_main/cartographie/circonscriptions_martinique.json martinique 'code_departement
+      === "972"' EPSG:5490
+    deps:
+    - path: data/03_main/geodata/circonscriptions_legislatives.json
+      hash: md5
+      md5: ebc3f1d802e611cababdd25affc94393
+      size: 602599
+    - path: src/scripts/cartographie/filter_project.sh
+      hash: md5
+      md5: 48fddcc6c42d601d98fca860d04f83ff
+      size: 642
+      isexec: true
+    outs:
+    - path: data/03_main/cartographie/circonscriptions_martinique.json
+      hash: md5
+      md5: d543bcde9cffc5f7c4b3409c0900f536
+      size: 9630
+  circonscriptions_carto@guyane:
+    cmd: src/scripts/cartographie/filter_project.sh data/03_main/geodata/circonscriptions_legislatives.json
+      data/03_main/cartographie/circonscriptions_guyane.json guyane 'code_departement
+      === "973"' EPSG:2972
+    deps:
+    - path: data/03_main/geodata/circonscriptions_legislatives.json
+      hash: md5
+      md5: ebc3f1d802e611cababdd25affc94393
+      size: 602599
+    - path: src/scripts/cartographie/filter_project.sh
+      hash: md5
+      md5: 48fddcc6c42d601d98fca860d04f83ff
+      size: 642
+      isexec: true
+    outs:
+    - path: data/03_main/cartographie/circonscriptions_guyane.json
+      hash: md5
+      md5: a95906342555446c04b60c46f391e503
+      size: 33930
+  circonscriptions_carto@reunion:
+    cmd: src/scripts/cartographie/filter_project.sh data/03_main/geodata/circonscriptions_legislatives.json
+      data/03_main/cartographie/circonscriptions_reunion.json reunion 'code_departement
+      === "974"' EPSG:2975
+    deps:
+    - path: data/03_main/geodata/circonscriptions_legislatives.json
+      hash: md5
+      md5: ebc3f1d802e611cababdd25affc94393
+      size: 602599
+    - path: src/scripts/cartographie/filter_project.sh
+      hash: md5
+      md5: 48fddcc6c42d601d98fca860d04f83ff
+      size: 642
+      isexec: true
+    outs:
+    - path: data/03_main/cartographie/circonscriptions_reunion.json
+      hash: md5
+      md5: 71ebd5bf3f4bb9e4093f328abe9d2ee1
+      size: 7189
+  circonscriptions_carto@mayotte:
+    cmd: src/scripts/cartographie/filter_project.sh data/03_main/geodata/circonscriptions_legislatives.json
+      data/03_main/cartographie/circonscriptions_mayotte.json mayotte 'code_departement
+      === "976"' EPSG:4471
+    deps:
+    - path: data/03_main/geodata/circonscriptions_legislatives.json
+      hash: md5
+      md5: ebc3f1d802e611cababdd25affc94393
+      size: 602599
+    - path: src/scripts/cartographie/filter_project.sh
+      hash: md5
+      md5: 48fddcc6c42d601d98fca860d04f83ff
+      size: 642
+      isexec: true
+    outs:
+    - path: data/03_main/cartographie/circonscriptions_mayotte.json
+      hash: md5
+      md5: d09d93638f0a82a9390ca0ebc1d6b3f7
+      size: 4838

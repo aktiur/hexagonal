@@ -22,7 +22,7 @@ args+=( -rename-fields "population=POP_EST,population_annee=POP_YEAR,type=TYPE")
 args+=( -rename-fields "continent=CONTINENT,region_un=REGION_UN,region=SUBREGION" )
 args+=( -filter-fields 'code_a2,code_a3,nom,nom_fr,nom_en,population,population_annee,type,continent,region,region_un' )
 
-# Une simplification au kilomètre près est appliquée
+# Une simplification à 20% de la taille d'origine est appliquée
 args+=( -simplify 20% )
 
 # nettoyage de la topologie
