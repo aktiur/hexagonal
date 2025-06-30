@@ -272,28 +272,28 @@ stages:
 
   admin_express_extraire:
     deps:
-      - ${raw}/admin_express/admin_express_cog.7z
+      - ${raw}/ign/admin_express/admin_express_cog.7z
       - ${src}/hexagonal/admin_express/extraire.py
     outs:
-      - ${raw}/admin_express/communes.cpg
-      - ${raw}/admin_express/communes.dbf
-      - ${raw}/admin_express/communes.prj
-      - ${raw}/admin_express/communes.shp
-      - ${raw}/admin_express/communes.shx
-      - ${raw}/admin_express/communes_deleguees.cpg
-      - ${raw}/admin_express/communes_deleguees.dbf
-      - ${raw}/admin_express/communes_deleguees.prj
-      - ${raw}/admin_express/communes_deleguees.shp
-      - ${raw}/admin_express/communes_deleguees.shx
-      - ${raw}/admin_express/arrondissements_municipaux.cpg
-      - ${raw}/admin_express/arrondissements_municipaux.dbf
-      - ${raw}/admin_express/arrondissements_municipaux.prj
-      - ${raw}/admin_express/arrondissements_municipaux.shp
-      - ${raw}/admin_express/arrondissements_municipaux.shx
+      - ${raw}/ign/admin_express/communes.cpg
+      - ${raw}/ign/admin_express/communes.dbf
+      - ${raw}/ign/admin_express/communes.prj
+      - ${raw}/ign/admin_express/communes.shp
+      - ${raw}/ign/admin_express/communes.shx
+      - ${raw}/ign/admin_express/communes_deleguees.cpg
+      - ${raw}/ign/admin_express/communes_deleguees.dbf
+      - ${raw}/ign/admin_express/communes_deleguees.prj
+      - ${raw}/ign/admin_express/communes_deleguees.shp
+      - ${raw}/ign/admin_express/communes_deleguees.shx
+      - ${raw}/ign/admin_express/arrondissements_municipaux.cpg
+      - ${raw}/ign/admin_express/arrondissements_municipaux.dbf
+      - ${raw}/ign/admin_express/arrondissements_municipaux.prj
+      - ${raw}/ign/admin_express/arrondissements_municipaux.shp
+      - ${raw}/ign/admin_express/arrondissements_municipaux.shx
     cmd: >-
       ${python} hexagonal.admin_express.extraire
-      ${raw}/admin_express/admin_express_cog.7z
-      ${raw}/admin_express/
+      ${raw}/ign/admin_express/admin_express_cog.7z
+      ${raw}/ign/admin_express/
 
   population_nettoyer:
     deps:
@@ -329,16 +329,16 @@ stages:
   communes_details:
     deps:
       - ${src}/scripts/geodata/communes.sh
-      - ${raw}/admin_express/communes.cpg
-      - ${raw}/admin_express/communes.dbf
-      - ${raw}/admin_express/communes.prj
-      - ${raw}/admin_express/communes.shp
-      - ${raw}/admin_express/communes.shx
+      - ${raw}/ign/admin_express/communes.cpg
+      - ${raw}/ign/admin_express/communes.dbf
+      - ${raw}/ign/admin_express/communes.prj
+      - ${raw}/ign/admin_express/communes.shp
+      - ${raw}/ign/admin_express/communes.shx
     outs:
       - ${main}/geodata/communes.json
     cmd: >-
       ${src}/scripts/geodata/communes.sh
-      ${raw}/admin_express/communes.shp
+      ${raw}/ign/admin_express/communes.shp
       ${main}/geodata/communes.json
 
   circonscriptions_details:

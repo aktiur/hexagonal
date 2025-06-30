@@ -1,4 +1,4 @@
-["data/01_raw/admin_express/admin_express_cog.7z"]
+["data/01_raw/ign/admin_express/admin_express_cog.7z"]
 nom = "Admin Express COG édition 2024 France entière"
 type = "source"
 description = """
@@ -17,7 +17,7 @@ source_url = "https://data.geopf.fr/telechargement/download/ADMIN-EXPRESS-COG/AD
 info_url = "https://geoservices.ign.fr/adminexpress"
 editeur = "INSEE"
 
-["data/01_raw/admin_express/arrondissements_municipaux.cpg"]
+["data/01_raw/ign/admin_express/arrondissements_municipaux.cpg"]
 nom = "arrondissements_municipaux"
 type = "intermediaire"
 description = """
@@ -27,10 +27,10 @@ mimetype = ""
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/ae/3b3df9970b49b6523e608759bc957d"
 s3_url = "s3://hexagonal-data/cache/files/md5/ae/3b3df9970b49b6523e608759bc957d"
 deps = [
-    "data/01_raw/admin_express/admin_express_cog.7z",
+    "data/01_raw/ign/admin_express/admin_express_cog.7z",
 ]
 
-["data/01_raw/admin_express/arrondissements_municipaux.dbf"]
+["data/01_raw/ign/admin_express/arrondissements_municipaux.dbf"]
 nom = "arrondissements_municipaux"
 type = "intermediaire"
 description = """
@@ -40,10 +40,10 @@ mimetype = "application/vnd.dbf"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/58/3e5f18690c654e58381a7bae6fc285"
 s3_url = "s3://hexagonal-data/cache/files/md5/58/3e5f18690c654e58381a7bae6fc285"
 deps = [
-    "data/01_raw/admin_express/admin_express_cog.7z",
+    "data/01_raw/ign/admin_express/admin_express_cog.7z",
 ]
 
-["data/01_raw/admin_express/arrondissements_municipaux.prj"]
+["data/01_raw/ign/admin_express/arrondissements_municipaux.prj"]
 nom = "arrondissements_municipaux"
 type = "source"
 description = """
@@ -53,10 +53,10 @@ mimetype = ""
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/c7/42bee3d4edfc2948a2ad08de1790a5"
 s3_url = "s3://hexagonal-data/cache/files/md5/c7/42bee3d4edfc2948a2ad08de1790a5"
 deps = [
-    "data/01_raw/admin_express/admin_express_cog.7z",
+    "data/01_raw/ign/admin_express/admin_express_cog.7z",
 ]
 
-["data/01_raw/admin_express/arrondissements_municipaux.shp"]
+["data/01_raw/ign/admin_express/arrondissements_municipaux.shp"]
 nom = "arrondissements_municipaux"
 type = "intermediaire"
 description = """
@@ -66,10 +66,10 @@ mimetype = "application/x-qgis"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/db/80c017aa5368094400f1c5428324d3"
 s3_url = "s3://hexagonal-data/cache/files/md5/db/80c017aa5368094400f1c5428324d3"
 deps = [
-    "data/01_raw/admin_express/admin_express_cog.7z",
+    "data/01_raw/ign/admin_express/admin_express_cog.7z",
 ]
 
-["data/01_raw/admin_express/arrondissements_municipaux.shx"]
+["data/01_raw/ign/admin_express/arrondissements_municipaux.shx"]
 nom = "arrondissements_municipaux"
 type = "intermediaire"
 description = """
@@ -79,10 +79,10 @@ mimetype = "application/x-qgis"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/e6/beb12aaf01362b51fb0856884bdad0"
 s3_url = "s3://hexagonal-data/cache/files/md5/e6/beb12aaf01362b51fb0856884bdad0"
 deps = [
-    "data/01_raw/admin_express/admin_express_cog.7z",
+    "data/01_raw/ign/admin_express/admin_express_cog.7z",
 ]
 
-["data/01_raw/admin_express/communes.cpg"]
+["data/01_raw/ign/admin_express/communes.cpg"]
 nom = "communes"
 type = "intermediaire"
 description = """
@@ -92,10 +92,10 @@ mimetype = ""
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/ae/3b3df9970b49b6523e608759bc957d"
 s3_url = "s3://hexagonal-data/cache/files/md5/ae/3b3df9970b49b6523e608759bc957d"
 deps = [
-    "data/01_raw/admin_express/admin_express_cog.7z",
+    "data/01_raw/ign/admin_express/admin_express_cog.7z",
 ]
 
-["data/01_raw/admin_express/communes.dbf"]
+["data/01_raw/ign/admin_express/communes.dbf"]
 nom = "communes"
 type = "intermediaire"
 description = """
@@ -105,10 +105,10 @@ mimetype = "application/vnd.dbf"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/16/7b7f289e6f899ebe6149bdbf892dc7"
 s3_url = "s3://hexagonal-data/cache/files/md5/16/7b7f289e6f899ebe6149bdbf892dc7"
 deps = [
-    "data/01_raw/admin_express/admin_express_cog.7z",
+    "data/01_raw/ign/admin_express/admin_express_cog.7z",
 ]
 
-["data/01_raw/admin_express/communes.prj"]
+["data/01_raw/ign/admin_express/communes.prj"]
 nom = "communes"
 type = "intermediaire"
 description = """
@@ -118,10 +118,10 @@ mimetype = ""
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/c7/42bee3d4edfc2948a2ad08de1790a5"
 s3_url = "s3://hexagonal-data/cache/files/md5/c7/42bee3d4edfc2948a2ad08de1790a5"
 deps = [
-    "data/01_raw/admin_express/admin_express_cog.7z",
+    "data/01_raw/ign/admin_express/admin_express_cog.7z",
 ]
 
-["data/01_raw/admin_express/communes.shp"]
+["data/01_raw/ign/admin_express/communes.shp"]
 nom = "communes"
 type = "intermediaire"
 description = """
@@ -131,10 +131,10 @@ mimetype = "application/x-qgis"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/90/37fd11cba2a1a085b4f64573b2f28d"
 s3_url = "s3://hexagonal-data/cache/files/md5/90/37fd11cba2a1a085b4f64573b2f28d"
 deps = [
-    "data/01_raw/admin_express/admin_express_cog.7z",
+    "data/01_raw/ign/admin_express/admin_express_cog.7z",
 ]
 
-["data/01_raw/admin_express/communes.shx"]
+["data/01_raw/ign/admin_express/communes.shx"]
 nom = "communes"
 type = "intermediaire"
 description = """
@@ -144,10 +144,10 @@ mimetype = "application/x-qgis"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/5b/20edaf8ee7df1190666a8b101eb4cd"
 s3_url = "s3://hexagonal-data/cache/files/md5/5b/20edaf8ee7df1190666a8b101eb4cd"
 deps = [
-    "data/01_raw/admin_express/admin_express_cog.7z",
+    "data/01_raw/ign/admin_express/admin_express_cog.7z",
 ]
 
-["data/01_raw/admin_express/communes_deleguees.cpg"]
+["data/01_raw/ign/admin_express/communes_deleguees.cpg"]
 nom = "communes_deleguees"
 type = "intermediaire"
 description = """
@@ -157,10 +157,10 @@ mimetype = ""
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/ae/3b3df9970b49b6523e608759bc957d"
 s3_url = "s3://hexagonal-data/cache/files/md5/ae/3b3df9970b49b6523e608759bc957d"
 deps = [
-    "data/01_raw/admin_express/admin_express_cog.7z",
+    "data/01_raw/ign/admin_express/admin_express_cog.7z",
 ]
 
-["data/01_raw/admin_express/communes_deleguees.dbf"]
+["data/01_raw/ign/admin_express/communes_deleguees.dbf"]
 nom = "communes_deleguees"
 type = "intermediaire"
 description = """
@@ -170,10 +170,10 @@ mimetype = "application/vnd.dbf"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/20/2eecd739a2d157e673949dd8647e44"
 s3_url = "s3://hexagonal-data/cache/files/md5/20/2eecd739a2d157e673949dd8647e44"
 deps = [
-    "data/01_raw/admin_express/admin_express_cog.7z",
+    "data/01_raw/ign/admin_express/admin_express_cog.7z",
 ]
 
-["data/01_raw/admin_express/communes_deleguees.prj"]
+["data/01_raw/ign/admin_express/communes_deleguees.prj"]
 nom = "communes_deleguees"
 type = "intermediaire"
 description = """
@@ -183,10 +183,10 @@ mimetype = ""
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/c7/42bee3d4edfc2948a2ad08de1790a5"
 s3_url = "s3://hexagonal-data/cache/files/md5/c7/42bee3d4edfc2948a2ad08de1790a5"
 deps = [
-    "data/01_raw/admin_express/admin_express_cog.7z",
+    "data/01_raw/ign/admin_express/admin_express_cog.7z",
 ]
 
-["data/01_raw/admin_express/communes_deleguees.shp"]
+["data/01_raw/ign/admin_express/communes_deleguees.shp"]
 nom = "communes_deleguees"
 type = "intermediaire"
 description = """
@@ -196,10 +196,10 @@ mimetype = "application/x-qgis"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/5a/784f0fa312718197aad6041da3c30b"
 s3_url = "s3://hexagonal-data/cache/files/md5/5a/784f0fa312718197aad6041da3c30b"
 deps = [
-    "data/01_raw/admin_express/admin_express_cog.7z",
+    "data/01_raw/ign/admin_express/admin_express_cog.7z",
 ]
 
-["data/01_raw/admin_express/communes_deleguees.shx"]
+["data/01_raw/ign/admin_express/communes_deleguees.shx"]
 nom = "communes_deleguees"
 type = "intermediaire"
 description = """
@@ -209,7 +209,7 @@ mimetype = "application/x-qgis"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/3e/110d2c4fe672bdc4698aac5133d1d9"
 s3_url = "s3://hexagonal-data/cache/files/md5/3e/110d2c4fe672bdc4698aac5133d1d9"
 deps = [
-    "data/01_raw/admin_express/admin_express_cog.7z",
+    "data/01_raw/ign/admin_express/admin_express_cog.7z",
 ]
 
 ["data/01_raw/annuaire/annuaire.tar.bz2"]
@@ -4185,11 +4185,11 @@ mimetype = "application/json"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/3d/2532aadcb0a884fe938138bdff5aa5"
 s3_url = "s3://hexagonal-data/cache/files/md5/3d/2532aadcb0a884fe938138bdff5aa5"
 deps = [
-    "data/01_raw/admin_express/communes.cpg",
-    "data/01_raw/admin_express/communes.dbf",
-    "data/01_raw/admin_express/communes.prj",
-    "data/01_raw/admin_express/communes.shp",
-    "data/01_raw/admin_express/communes.shx",
+    "data/01_raw/ign/admin_express/communes.cpg",
+    "data/01_raw/ign/admin_express/communes.dbf",
+    "data/01_raw/ign/admin_express/communes.prj",
+    "data/01_raw/ign/admin_express/communes.shp",
+    "data/01_raw/ign/admin_express/communes.shx",
 ]
 
 ["data/03_main/cartographie/departements.json"]
@@ -4324,11 +4324,11 @@ mimetype = "application/json"
 url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/9a/0ef27fe20088a3911b7c257496f2b1"
 s3_url = "s3://hexagonal-data/cache/files/md5/9a/0ef27fe20088a3911b7c257496f2b1"
 deps = [
-    "data/01_raw/admin_express/communes.cpg",
-    "data/01_raw/admin_express/communes.dbf",
-    "data/01_raw/admin_express/communes.prj",
-    "data/01_raw/admin_express/communes.shp",
-    "data/01_raw/admin_express/communes.shx",
+    "data/01_raw/ign/admin_express/communes.cpg",
+    "data/01_raw/ign/admin_express/communes.dbf",
+    "data/01_raw/ign/admin_express/communes.prj",
+    "data/01_raw/ign/admin_express/communes.shp",
+    "data/01_raw/ign/admin_express/communes.shx",
 ]
 
 ["data/03_main/elections/2022-legislatives-1-candidats.csv"]
