@@ -1,0 +1,12 @@
+md5: 53e8a84de3de17978be6c3b63ad7121a
+frozen: true
+deps:
+- checksum: '204262809410993839826176241980835662484'
+  hash: md5
+  path: 
+    https://opendata.paris.fr/api/explore/v2.1/catalog/datasets/secteurs-des-bureaux-de-vote-en-2021/exports/geojson?lang=fr&timezone=Europe%2FBerlin
+outs:
+- md5: dcf210975b5d10b55a11fa003e1effde
+  size: 948305
+  hash: md5
+  path: 2021-secteur-bureaux.json

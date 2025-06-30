@@ -384,6 +384,19 @@ stages:
         '${item.filtre}'
         ${item.projection}
 
+  paris_carto:
+    deps:
+      - ${raw}/paris/2022-secteur-bureaux.json
+      - ${raw}/paris/2024-secteur-bureaux.json
+    outs:
+      - ${main}/cartographie/paris-2022-2024.json
+    cmd: >-
+      mapshaper
+      -i ${raw}/paris/2022-secteur-bureaux.json ${raw}/paris/2024-secteur-bureaux.json combine-files
+      -proj EPSG:2154 'target=*'
+      -clean snap-interval=10m 'target=*'
+      -o ${main}/cartographie/paris-2022-2024.json format=topojson 'target=*'
+
   extraire_geonames_cities1000:
     deps:
       - ${raw}/geonames/cities1000.zip

@@ -1684,3 +1684,21 @@ stages:
       hash: md5
       md5: d09d93638f0a82a9390ca0ebc1d6b3f7
       size: 4838
+  paris_carto:
+    cmd: mapshaper -i data/01_raw/paris/2022-secteur-bureaux.json data/01_raw/paris/2024-secteur-bureaux.json
+      combine-files -proj EPSG:2154 'target=*' -clean snap-interval=10m 'target=*'
+      -o data/03_main/cartographie/paris-2022-2024.json format=topojson 'target=*'
+    deps:
+    - path: data/01_raw/paris/2022-secteur-bureaux.json
+      hash: md5
+      md5: 4a1cfeb031ba0bc608478e866ed67ccf
+      size: 4633821
+    - path: data/01_raw/paris/2024-secteur-bureaux.json
+      hash: md5
+      md5: 0a9c91c663f3b0fbe3d93e28eee2f816
+      size: 1807645
+    outs:
+    - path: data/03_main/cartographie/paris-2022-2024.json
+      hash: md5
+      md5: 8a0de4f8a200b2c9e246d2e13f0ef92e
+      size: 1525274

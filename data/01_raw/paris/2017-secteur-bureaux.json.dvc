@@ -1,0 +1,12 @@
+md5: 5740612b81e7d95f51d9f1f39cc2a96f
+frozen: true
+deps:
+- checksum: '196349154623269302462677435975552362817'
+  hash: md5
+  path: 
+    https://opendata.paris.fr/api/explore/v2.1/catalog/datasets/secteurs-des-bureaux-de-vote-en-2017/exports/geojson?lang=fr&timezone=Europe%2FBerlin
+outs:
+- md5: 85c2fb6205c340bf5a1503c2bd2b7c43
+  size: 871322
+  hash: md5
+  path: 2017-secteur-bureaux.json
