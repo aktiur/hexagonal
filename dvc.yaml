@@ -393,8 +393,9 @@ stages:
     cmd: >-
       mapshaper
       -i ${raw}/paris/2022-secteur-bureaux.json ${raw}/paris/2024-secteur-bureaux.json combine-files
-      -proj EPSG:2154 'target=*'
+      -proj EPSG:3857 'target=*'
       -clean snap-interval=10m 'target=*'
+      -rename-layers 2022,2024 target=2022-secteur-bureaux,2024-secteur-bureaux
       -o ${main}/cartographie/paris-2022-2024.json format=topojson 'target=*'
 
   extraire_geonames_cities1000:

@@ -1183,10 +1183,10 @@ stages:
       md5: c86bb28a31ffffc09704549b1cccc863
       size: 5509375
   admin_express_extraire:
-    cmd: PYTHONPATH=src python -m hexagonal.admin_express.extraire data/01_raw/admin_express/admin_express_cog.7z
-      data/01_raw/admin_express/
+    cmd: PYTHONPATH=src python -m hexagonal.admin_express.extraire data/01_raw/ign/admin_express/admin_express_cog.7z
+      data/01_raw/ign/admin_express/
     deps:
-    - path: data/01_raw/admin_express/admin_express_cog.7z
+    - path: data/01_raw/ign/admin_express/admin_express_cog.7z
       hash: md5
       md5: aea27feb6061e6aad3fc4b635eecbe1e
       size: 654932554
@@ -1195,63 +1195,63 @@ stages:
       md5: ffc80c8f271d0e131f7675121d31d4f2
       size: 1043
     outs:
-    - path: data/01_raw/admin_express/arrondissements_municipaux.cpg
+    - path: data/01_raw/ign/admin_express/arrondissements_municipaux.cpg
       hash: md5
       md5: ae3b3df9970b49b6523e608759bc957d
       size: 5
-    - path: data/01_raw/admin_express/arrondissements_municipaux.dbf
+    - path: data/01_raw/ign/admin_express/arrondissements_municipaux.dbf
       hash: md5
       md5: 583e5f18690c654e58381a7bae6fc285
       size: 6661
-    - path: data/01_raw/admin_express/arrondissements_municipaux.prj
+    - path: data/01_raw/ign/admin_express/arrondissements_municipaux.prj
       hash: md5
       md5: c742bee3d4edfc2948a2ad08de1790a5
       size: 145
-    - path: data/01_raw/admin_express/arrondissements_municipaux.shp
+    - path: data/01_raw/ign/admin_express/arrondissements_municipaux.shp
       hash: md5
       md5: db80c017aa5368094400f1c5428324d3
       size: 905184
-    - path: data/01_raw/admin_express/arrondissements_municipaux.shx
+    - path: data/01_raw/ign/admin_express/arrondissements_municipaux.shx
       hash: md5
       md5: e6beb12aaf01362b51fb0856884bdad0
       size: 460
-    - path: data/01_raw/admin_express/communes.cpg
+    - path: data/01_raw/ign/admin_express/communes.cpg
       hash: md5
       md5: ae3b3df9970b49b6523e608759bc957d
       size: 5
-    - path: data/01_raw/admin_express/communes.dbf
+    - path: data/01_raw/ign/admin_express/communes.dbf
       hash: md5
       md5: 167b7f289e6f899ebe6149bdbf892dc7
       size: 6835886
-    - path: data/01_raw/admin_express/communes.prj
+    - path: data/01_raw/ign/admin_express/communes.prj
       hash: md5
       md5: c742bee3d4edfc2948a2ad08de1790a5
       size: 145
-    - path: data/01_raw/admin_express/communes.shp
+    - path: data/01_raw/ign/admin_express/communes.shp
       hash: md5
       md5: 9037fd11cba2a1a085b4f64573b2f28d
       size: 444424512
-    - path: data/01_raw/admin_express/communes.shx
+    - path: data/01_raw/ign/admin_express/communes.shx
       hash: md5
       md5: 5b20edaf8ee7df1190666a8b101eb4cd
       size: 279100
-    - path: data/01_raw/admin_express/communes_deleguees.cpg
+    - path: data/01_raw/ign/admin_express/communes_deleguees.cpg
       hash: md5
       md5: ae3b3df9970b49b6523e608759bc957d
       size: 5
-    - path: data/01_raw/admin_express/communes_deleguees.dbf
+    - path: data/01_raw/ign/admin_express/communes_deleguees.dbf
       hash: md5
       md5: 202eecd739a2d157e673949dd8647e44
       size: 389202
-    - path: data/01_raw/admin_express/communes_deleguees.prj
+    - path: data/01_raw/ign/admin_express/communes_deleguees.prj
       hash: md5
       md5: c742bee3d4edfc2948a2ad08de1790a5
       size: 145
-    - path: data/01_raw/admin_express/communes_deleguees.shp
+    - path: data/01_raw/ign/admin_express/communes_deleguees.shp
       hash: md5
       md5: 5a784f0fa312718197aad6041da3c30b
       size: 32637612
-    - path: data/01_raw/admin_express/communes_deleguees.shx
+    - path: data/01_raw/ign/admin_express/communes_deleguees.shx
       hash: md5
       md5: 3e110d2c4fe672bdc4698aac5133d1d9
       size: 21124
@@ -1338,25 +1338,26 @@ stages:
       md5: ebc3f1d802e611cababdd25affc94393
       size: 602599
   communes_details:
-    cmd: src/scripts/geodata/communes.sh data/01_raw/admin_express/communes.shp data/03_main/geodata/communes.json
+    cmd: src/scripts/geodata/communes.sh data/01_raw/ign/admin_express/communes.shp
+      data/03_main/geodata/communes.json
     deps:
-    - path: data/01_raw/admin_express/communes.cpg
+    - path: data/01_raw/ign/admin_express/communes.cpg
       hash: md5
       md5: ae3b3df9970b49b6523e608759bc957d
       size: 5
-    - path: data/01_raw/admin_express/communes.dbf
+    - path: data/01_raw/ign/admin_express/communes.dbf
       hash: md5
       md5: 167b7f289e6f899ebe6149bdbf892dc7
       size: 6835886
-    - path: data/01_raw/admin_express/communes.prj
+    - path: data/01_raw/ign/admin_express/communes.prj
       hash: md5
       md5: c742bee3d4edfc2948a2ad08de1790a5
       size: 145
-    - path: data/01_raw/admin_express/communes.shp
+    - path: data/01_raw/ign/admin_express/communes.shp
       hash: md5
       md5: 9037fd11cba2a1a085b4f64573b2f28d
       size: 444424512
-    - path: data/01_raw/admin_express/communes.shx
+    - path: data/01_raw/ign/admin_express/communes.shx
       hash: md5
       md5: 5b20edaf8ee7df1190666a8b101eb4cd
       size: 279100
@@ -1686,8 +1687,9 @@ stages:
       size: 4838
   paris_carto:
     cmd: mapshaper -i data/01_raw/paris/2022-secteur-bureaux.json data/01_raw/paris/2024-secteur-bureaux.json
-      combine-files -proj EPSG:2154 'target=*' -clean snap-interval=10m 'target=*'
-      -o data/03_main/cartographie/paris-2022-2024.json format=topojson 'target=*'
+      combine-files -proj EPSG:3857 'target=*' -clean snap-interval=10m 'target=*'
+      -rename-layers 2022,2024 target=2022-secteur-bureaux,2024-secteur-bureaux -o
+      data/03_main/cartographie/paris-2022-2024.json format=topojson 'target=*'
     deps:
     - path: data/01_raw/paris/2022-secteur-bureaux.json
       hash: md5
@@ -1700,5 +1702,5 @@ stages:
     outs:
     - path: data/03_main/cartographie/paris-2022-2024.json
       hash: md5
-      md5: 8a0de4f8a200b2c9e246d2e13f0ef92e
-      size: 1525274
+      md5: 6acee8db7b97b8597524b5f73e2b5046
+      size: 1629950
