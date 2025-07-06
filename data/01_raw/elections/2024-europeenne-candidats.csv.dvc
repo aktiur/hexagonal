@@ -1,0 +1,13 @@
+md5: be894f37c653fdff0a7f0d21b42a7f55
+frozen: true
+deps:
+- checksum: '"665443bb-69d76"'
+  size: 433526
+  hash: md5
+  path: 
+    https://static.data.gouv.fr/resources/elections-europeennes-du-9-juin-2024-candidatures-enregistrees/20240527-082635/candidats-eur-2024.csv
+outs:
+- md5: ef5a04840f72551769af9dc38c021664
+  size: 433526
+  hash: md5
+  path: 2024-europeenne-candidats.csv

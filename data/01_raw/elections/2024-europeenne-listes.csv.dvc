@@ -1,0 +1,5 @@
+outs:
+- md5: d685a11f64da23aa1550339056589c80
+  size: 10320
+  hash: md5
+  path: 2024-europeenne-listes.csv
