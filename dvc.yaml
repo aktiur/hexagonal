@@ -192,6 +192,18 @@ stages:
       ${clean}/assemblee_nationale/groupes.csv
       ${clean}/assemblee_nationale/affiliations.csv
 
+  assemblee_nationale_commissions:
+    deps:
+      - ${raw}/assemblee-nationale.zip
+      - ${src}/hexagonal/assemblee_nationale/commissions.py
+      - ${src}/hexagonal/assemblee_nationale/utils.py
+    outs:
+      - ${clean}/assemblee_nationale/commissions.csv
+    cmd: >-
+      ${python} hexagonal.assemblee_nationale.commissions
+      ${raw}/assemblee-nationale.zip
+      ${clean}/assemblee_nationale/commissions.csv
+
   rne_nettoyer:
     foreach:
       - conseillers_arrondissement

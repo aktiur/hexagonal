@@ -817,8 +817,8 @@ stages:
       size: 13247738
     - path: src/hexagonal/assemblee_nationale/groupes.py
       hash: md5
-      md5: d839511af4560045fec48dfca0617a72
-      size: 2785
+      md5: 5dce03318e91ffee684e96c68aad34d5
+      size: 2832
     - path: src/hexagonal/assemblee_nationale/utils.py
       hash: md5
       md5: e0374b700ee9abb35f4f88145645bd6b
@@ -826,8 +826,8 @@ stages:
     outs:
     - path: data/02_clean/assemblee_nationale/affiliations.csv
       hash: md5
-      md5: 8bb092b862f248f503050e202eb80704
-      size: 312979
+      md5: 0b56ec6bf1b686bc3436f237a51f5749
+      size: 350360
     - path: data/02_clean/assemblee_nationale/groupes.csv
       hash: md5
       md5: 3c3b5cdbb812161dee7ae3a72b59b05f
@@ -1704,3 +1704,24 @@ stages:
       hash: md5
       md5: 6acee8db7b97b8597524b5f73e2b5046
       size: 1629950
+  assemblee_nationale_commissions:
+    cmd: PYTHONPATH=src python -m hexagonal.assemblee_nationale.commissions data/01_raw/assemblee-nationale.zip
+      data/02_clean/assemblee_nationale/commissions.csv
+    deps:
+    - path: data/01_raw/assemblee-nationale.zip
+      hash: md5
+      md5: 0b1e0746581366d7d9c87852b0b2fce8
+      size: 13247738
+    - path: src/hexagonal/assemblee_nationale/commissions.py
+      hash: md5
+      md5: 7c33e0c22db2d38f8fd8d2b629e166a2
+      size: 2477
+    - path: src/hexagonal/assemblee_nationale/utils.py
+      hash: md5
+      md5: e0374b700ee9abb35f4f88145645bd6b
+      size: 895
+    outs:
+    - path: data/02_clean/assemblee_nationale/commissions.csv
+      hash: md5
+      md5: fa001ee043a023240d549ecac52baa26
+      size: 1725938

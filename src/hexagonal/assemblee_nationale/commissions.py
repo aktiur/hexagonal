@@ -13,46 +13,39 @@ from hexagonal.assemblee_nationale.utils import (
 )
 
 
-def est_un_groupe(g):
-    return g["codeType"] == "GP" and g["libelleAbrege"] != "NI"
+def est_une_commission(g):
+    return g["codeType"] == "COMPER"
 
 
-def est_une_affiliation(g):
-    return (
-        g["typeOrgane"] == "GP"
-        and g["infosQualite"]["codeQualite"] != "Député non-inscrit"
-    )
+def est_participation_commission(g):
+    return g["typeOrgane"] == "COMPER"
 
 
-def liste_groupes(archive):
-    spec_extraction_groupe = {
-        "id_groupe": "uid",
-        "legislature": ("legislature", int),
+def liste_commissions(archive):
+    spec_extraction_commission = {
+        "id": "uid",
         "nom": "libelle",
-        "abrege": "libelleAbrege",
-        "abreviation": "libelleAbrev",
+        "nom_abrege": "libelleAbrege",
         "date_debut": "viMoDe.dateDebut",
         "date_fin": "viMoDe.dateFin",
-        "position": "positionPolitique",
-        "preseance": ("preseance", int),
     }
 
     return sorted(
         glom(
             json_organes(archive),
-            Iter().filter(est_un_groupe).map(spec_extraction_groupe),
+            Iter().filter(est_une_commission).map(spec_extraction_commission),
         ),
-        key=itemgetter("date_debut", "id_groupe"),
+        key=itemgetter("id"),
     )
 
 
-def liste_affiliations(archive, groupe_map):
+def liste_participations(archive, com_map):
     spec_extraction_affiliation = {
         "id_personne": S.uid,
-        "id_groupe": "organes.organeRef",
+        "id_com": "organes.organeRef",
         "prenom": S.prenom,
         "nom": S.nom,
-        "abreviation_groupe": ("organes.organeRef", groupe_map.get),
+        "commission": ("organes.organeRef", com_map.get),
         "legislature": "legislature",
         "date_debut": "dateDebut",
         "date_fin": ("dateFin", possiblement_nul),
@@ -67,7 +60,7 @@ def liste_affiliations(archive, groupe_map):
         ),  # enregistre prenom et nom dans le scope
         "mandats.mandat",  # selectionne les mandats
         to_list,  # convertit en une liste pour les quelques cas de mandats uniques
-        Iter().filter(est_une_affiliation).map(spec_extraction_affiliation),
+        Iter().filter(est_participation_commission).map(spec_extraction_affiliation),
     )
 
     return sorted(
@@ -79,19 +72,18 @@ def liste_affiliations(archive, groupe_map):
     )
 
 
-def extraire_groupes_et_affilations(archive, groupes_path, affiliations_path):
-    groupes = liste_groupes(archive)
-    ecrire_csv(groupes, list(groupes[0]), groupes_path)
-    abrev_groupes = {g["id_groupe"]: g["abreviation"] for g in groupes}
-    affiliations = liste_affiliations(archive, abrev_groupes)
-    ecrire_csv(affiliations, list(affiliations[0]), affiliations_path)
+def extraire_groupes_et_affilations(archive, participations_path):
+    commissions = liste_commissions(archive)
+    abrege_coms = {g["id"]: g["nom_abrege"] for g in commissions}
+    participations = liste_participations(archive, abrege_coms)
+    ecrire_csv(participations, list(participations[0]), participations_path)
 
 
 def run():
-    archive_path, groupes_path, affilations_path = sys.argv[1:]
+    archive_path, participations_path = sys.argv[1:]
 
     with ZipFile(archive_path) as archive:
-        extraire_groupes_et_affilations(archive, groupes_path, affilations_path)
+        extraire_groupes_et_affilations(archive, participations_path)
 
 
 if __name__ == "__main__":
