@@ -1716,8 +1716,8 @@ stages:
       size: 13247738
     - path: src/hexagonal/assemblee_nationale/commissions.py
       hash: md5
-      md5: 7c33e0c22db2d38f8fd8d2b629e166a2
-      size: 2477
+      md5: 1669c3a9cad9aeac440b0e43de6ea7e8
+      size: 2484
     - path: src/hexagonal/assemblee_nationale/utils.py
       hash: md5
       md5: e0374b700ee9abb35f4f88145645bd6b
@@ -1725,5 +1725,68 @@ stages:
     outs:
     - path: data/02_clean/assemblee_nationale/commissions.csv
       hash: md5
-      md5: fa001ee043a023240d549ecac52baa26
-      size: 1725938
+      md5: fbd22e489017299b435657433425d81d
+      size: 1725945
+  assemblee_nationale_fiches:
+    cmd: PYTHONPATH=src python -m hexagonal.assemblee_nationale.fiches data/01_raw/assemblee-nationale.zip
+      data/02_clean/assemblee_nationale/fiches.csv data/02_clean/assemblee_nationale/adresses_postales.csv
+      data/02_clean/assemblee_nationale/adresses_electroniques.csv
+    deps:
+    - path: data/01_raw/assemblee-nationale.zip
+      hash: md5
+      md5: 0b1e0746581366d7d9c87852b0b2fce8
+      size: 13247738
+    - path: src/hexagonal/assemblee_nationale/fiches.py
+      hash: md5
+      md5: b69dac40710b6d7ef90d91723b76382b
+      size: 6203
+    - path: src/hexagonal/assemblee_nationale/utils.py
+      hash: md5
+      md5: e0374b700ee9abb35f4f88145645bd6b
+      size: 895
+    outs:
+    - path: data/02_clean/assemblee_nationale/adresses_electroniques.csv
+      hash: md5
+      md5: bfb1bb9e44a12c459131c47725772e83
+      size: 422936
+    - path: data/02_clean/assemblee_nationale/adresses_postales.csv
+      hash: md5
+      md5: 6e18b24385b2852a3dd3264e9ab58a8f
+      size: 302467
+    - path: data/02_clean/assemblee_nationale/fiches.csv
+      hash: md5
+      md5: 0945caaaaa27a68fad93799b1d3a3620
+      size: 252887
+  assemblee_nationale_deputes:
+    cmd: PYTHONPATH=src python -m hexagonal.assemblee_nationale.deputes data/02_clean/assemblee_nationale
+      data/03_main/assemblee_nationale/deputes.csv
+    deps:
+    - path: data/02_clean/assemblee_nationale/adresses_electroniques.csv
+      hash: md5
+      md5: bfb1bb9e44a12c459131c47725772e83
+      size: 422936
+    - path: data/02_clean/assemblee_nationale/affiliations.csv
+      hash: md5
+      md5: 0b56ec6bf1b686bc3436f237a51f5749
+      size: 350360
+    - path: data/02_clean/assemblee_nationale/commissions.csv
+      hash: md5
+      md5: fbd22e489017299b435657433425d81d
+      size: 1725945
+    - path: data/02_clean/assemblee_nationale/fiches.csv
+      hash: md5
+      md5: 0945caaaaa27a68fad93799b1d3a3620
+      size: 252887
+    - path: data/02_clean/assemblee_nationale/mandats.csv
+      hash: md5
+      md5: c4d4adaba4b1e1f71406c74e4aff6bd2
+      size: 407493
+    - path: src/hexagonal/assemblee_nationale/deputes.py
+      hash: md5
+      md5: 71ec8cc6c493e1914d690ad5cbbdda5c
+      size: 3963
+    outs:
+    - path: data/03_main/assemblee_nationale/deputes.csv
+      hash: md5
+      md5: 763c03cd18403573d9ae680af74ad67a
+      size: 160261

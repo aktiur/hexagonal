@@ -123,10 +123,11 @@ spec_adresse_electronique = {
 }
 
 
-def extraire_liste_deputes(
-    archive, fiches, deputes, adresses_postales, adresses_electroniques
+def extraire_liste_personnes(
+    archive, fiches, adresses_postales, adresses_electroniques
 ):
-    personnes = sorted(
+    # noinspection PyTypeChecker
+    personnes: list[dict] = sorted(
         glom(json_personnes(archive), [spec_extraction_liste_deputee]),
         key=itemgetter("id_personne"),
     )
@@ -153,12 +154,6 @@ def extraire_liste_deputes(
     fiches_writer.writeheader()
     fiches_writer.writerows(personnes)
 
-    deputes_writer = csv.DictWriter(
-        deputes, fieldnames=list(spec_extraction_liste_deputee)
-    )
-    deputes_writer.writeheader()
-    deputes_writer.writerows(p for p in personnes if p["legislatures"])
-
     adresses_postales_writer = csv.DictWriter(
         adresses_postales, fieldnames=list(spec_adresse_postale)
     )
@@ -177,13 +172,12 @@ def extraire_liste_deputes(
     "archive_path", type=click.Path(exists=True, file_okay=True, readable=True)
 )
 @click.argument("fiches", type=click.File("w"))
-@click.argument("deputes", type=click.File("w"))
 @click.argument("adresses_postales", type=click.File("w"))
 @click.argument("adresses_electroniques", type=click.File("w"))
-def run(archive_path, fiches, deputes, adresses_postales, adresses_electroniques):
+def run(archive_path, fiches, adresses_postales, adresses_electroniques):
     with ZipFile(archive_path) as archive:
-        extraire_liste_deputes(
-            archive, fiches, deputes, adresses_postales, adresses_electroniques
+        extraire_liste_personnes(
+            archive, fiches, adresses_postales, adresses_electroniques
         )
 
 

@@ -147,21 +147,19 @@ stages:
       outs:
         - ${clean}/elections/${item}-legislatives-correspondances-bureau_de_vote-circonscription.csv
 
-  assemblee_nationale_deputees:
+  assemblee_nationale_fiches:
     deps:
       - ${raw}/assemblee-nationale.zip
-      - ${src}/hexagonal/assemblee_nationale/liste.py
+      - ${src}/hexagonal/assemblee_nationale/fiches.py
       - ${src}/hexagonal/assemblee_nationale/utils.py
     outs:
       - ${clean}/assemblee_nationale/fiches.csv
-      - ${clean}/assemblee_nationale/deputes.csv
       - ${clean}/assemblee_nationale/adresses_postales.csv
       - ${clean}/assemblee_nationale/adresses_electroniques.csv
     cmd: >-
-      ${python} hexagonal.assemblee_nationale.liste
+      ${python} hexagonal.assemblee_nationale.fiches
       ${raw}/assemblee-nationale.zip
       ${clean}/assemblee_nationale/fiches.csv
-      ${clean}/assemblee_nationale/deputes.csv
       ${clean}/assemblee_nationale/adresses_postales.csv
       ${clean}/assemblee_nationale/adresses_electroniques.csv
 
@@ -202,6 +200,21 @@ stages:
       ${python} hexagonal.assemblee_nationale.commissions
       ${raw}/assemblee-nationale.zip
       ${clean}/assemblee_nationale/commissions.csv
+
+  assemblee_nationale_deputes:
+    deps:
+      - ${src}/hexagonal/assemblee_nationale/deputes.py
+      - ${clean}/assemblee_nationale/fiches.csv
+      - ${clean}/assemblee_nationale/adresses_electroniques.csv
+      - ${clean}/assemblee_nationale/commissions.csv
+      - ${clean}/assemblee_nationale/mandats.csv
+      - ${clean}/assemblee_nationale/affiliations.csv
+    outs:
+      - ${main}/assemblee_nationale/deputes.csv
+    cmd:
+      ${python} hexagonal.assemblee_nationale.deputes
+      ${clean}/assemblee_nationale
+      ${main}/assemblee_nationale/deputes.csv
 
   rne_nettoyer:
     foreach:

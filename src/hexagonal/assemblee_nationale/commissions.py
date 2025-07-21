@@ -42,7 +42,7 @@ def liste_commissions(archive):
 def liste_participations(archive, com_map):
     spec_extraction_affiliation = {
         "id_personne": S.uid,
-        "id_com": "organes.organeRef",
+        "id_commission": "organes.organeRef",
         "prenom": S.prenom,
         "nom": S.nom,
         "commission": ("organes.organeRef", com_map.get),
