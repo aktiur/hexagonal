@@ -1,9 +1,11 @@
 import zipfile
+from io import BytesIO
 from pathlib import Path
 
 import click
 import geopandas as gpd
 import pandas as pd
+import pyzstd
 from shapely.geometry.point import Point
 
 INT = pd.Int64Dtype()
@@ -61,7 +63,14 @@ def extract_geonames(source, dest):
     villes = gpd.GeoDataFrame(villes, geometry="coordinates", crs="EPSG:4326")
 
     dest.parent.mkdir(parents=True, exist_ok=True)
-    villes.to_file(dest, driver="GeoJSON")
+
+    # pour une raison inconnue, geopandas accepte d'écrire vers un buffer mais pas vers
+    # un fichier ouvert…
+    buffer = BytesIO()
+    villes.to_file(buffer, driver="GeoJSON")
+
+    with pyzstd.open(dest, "wb") as fd:
+        fd.write(buffer.getvalue())
 
 
 if __name__ == "__main__":

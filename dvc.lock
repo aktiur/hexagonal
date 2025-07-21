@@ -1422,29 +1422,29 @@ stages:
       size: 21350
   pays_carto:
     cmd: src/scripts/cartographie/pays.sh data/01_raw/natural_earth/ne_10m_admin_0_countries.zip
-      data/02_clean/geonames/cities1000.json data/03_main/cartographie/pays.json
+      data/02_clean/geonames/cities1000.json.zst data/03_main/cartographie/pays.json.zst
     deps:
     - path: data/01_raw/natural_earth/ne_10m_admin_0_countries.zip
       hash: md5
       md5: 0bc33f3e6f9ab457917430e57f6122a9
       size: 4930492
-    - path: data/02_clean/geonames/cities1000.json
+    - path: data/02_clean/geonames/cities1000.json.zst
       hash: md5
-      md5: b7f2d27697f57e8678d5b3adf022d7a0
-      size: 80449147
+      md5: 785ad2e508f73cd2743988f9ab620c6b
+      size: 11883534
     - path: src/scripts/cartographie/pays.sh
       hash: md5
-      md5: f061ae58440b74898b5954e033055be8
-      size: 1425
+      md5: 5b737b45406e187d1a1ac134bde2aa11
+      size: 1727
       isexec: true
     outs:
-    - path: data/03_main/cartographie/pays.json
+    - path: data/03_main/cartographie/pays.json.zst
       hash: md5
-      md5: a361634128d8179a7f7c29b34b93f113
-      size: 14520356
+      md5: 32c52edfb43946975f704c808374ce6b
+      size: 3923175
   extraire_geonames_cities1000:
     cmd: PYTHONPATH=src python -m hexagonal.geonames.extract data/01_raw/geonames/cities1000.zip
-      data/02_clean/geonames/cities1000.json
+      data/02_clean/geonames/cities1000.json.zst
     deps:
     - path: data/01_raw/geonames/cities1000.zip
       hash: md5
@@ -1452,13 +1452,13 @@ stages:
       size: 9629447
     - path: src/hexagonal/geonames/extract.py
       hash: md5
-      md5: c20adb3336d44914d1b456619afa518c
-      size: 1759
+      md5: 8114f83c073cfe5ff331b2a644181a6d
+      size: 2015
     outs:
-    - path: data/02_clean/geonames/cities1000.json
+    - path: data/02_clean/geonames/cities1000.json.zst
       hash: md5
-      md5: b7f2d27697f57e8678d5b3adf022d7a0
-      size: 80449147
+      md5: 785ad2e508f73cd2743988f9ab620c6b
+      size: 11883534
   communes_carto@hexagone:
     cmd: src/scripts/cartographie/filter_project.sh data/03_main/geodata/communes.json
       data/03_main/cartographie/communes_hexagone.json hexagone 'code_departement.length

@@ -427,18 +427,18 @@ stages:
       - ${raw}/geonames/cities1000.zip
       - ${src}/hexagonal/geonames/extract.py
     outs:
-      - ${clean}/geonames/cities1000.json
-    cmd: ${python} hexagonal.geonames.extract ${raw}/geonames/cities1000.zip ${clean}/geonames/cities1000.json
+      - ${clean}/geonames/cities1000.json.zst
+    cmd: ${python} hexagonal.geonames.extract ${raw}/geonames/cities1000.zip ${clean}/geonames/cities1000.json.zst
 
   pays_carto:
     deps:
       - ${src}/scripts/cartographie/pays.sh
       - ${raw}/natural_earth/ne_10m_admin_0_countries.zip
-      - ${clean}/geonames/cities1000.json
+      - ${clean}/geonames/cities1000.json.zst
     outs:
-      - ${main}/cartographie/pays.json
+      - ${main}/cartographie/pays.json.zst
     cmd: >-
       ${src}/scripts/cartographie/pays.sh
       ${raw}/natural_earth/ne_10m_admin_0_countries.zip
-      ${clean}/geonames/cities1000.json
-      ${main}/cartographie/pays.json
+      ${clean}/geonames/cities1000.json.zst
+      ${main}/cartographie/pays.json.zst
