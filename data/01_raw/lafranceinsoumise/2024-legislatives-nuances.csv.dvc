@@ -2,4 +2,4 @@ outs:
 - md5: 24a9e931e2d43373ecddd42a2434eba6
   size: 125983
   hash: md5
-  path: 2024-legislatives-nuances-lfi.csv
+  path: 2024-legislatives-nuances.csv

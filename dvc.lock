@@ -1,23 +1,25 @@
 schema: '2.0'
 stages:
   nettoyer-2020-municipales-1:
-    cmd: sed '13751,13752s/ \t / / ; 16921s/ \t / /' < data/01_raw/elections/2020-municipales-1-bureau_de_vote_avant_correction.csv
-      > data/01_raw/elections/2020-municipales-1-bureau_de_vote.csv
+    cmd: sed '13751,13752s/ \t / / ; 16921s/ \t / /' < 
+      data/01_raw/ministere_interieur/2020-municipales-1-bureau_de_vote_avant_correction.csv
+      > data/01_raw/ministere_interieur/2020-municipales-1-bureau_de_vote.csv
     deps:
-    - path: data/01_raw/elections/2020-municipales-1-bureau_de_vote_avant_correction.csv
+    - path: 
+        data/01_raw/ministere_interieur/2020-municipales-1-bureau_de_vote_avant_correction.csv
       hash: md5
       md5: d5ed37c4abd7a4952826ead2ca11a408
       size: 66948003
     outs:
-    - path: data/01_raw/elections/2020-municipales-1-bureau_de_vote.csv
+    - path: data/01_raw/ministere_interieur/2020-municipales-1-bureau_de_vote.csv
       hash: md5
       md5: 134a9746d44fbccabb9136992975c355
       size: 66947997
   normaliser-format-elections@2012-presidentielle-bureau_de_vote:
-    cmd: PYTHONPATH=src python -m hexagonal.resultats.format_2014 data/01_raw/elections/2012-presidentielle-bureau_de_vote.csv
+    cmd: PYTHONPATH=src python -m hexagonal.resultats.format_2014 data/01_raw/ministere_interieur/2012-presidentielle-bureau_de_vote.csv
       data/02_clean/elections/2012-presidentielle-bureau_de_vote.parquet latin1 ";"
     deps:
-    - path: data/01_raw/elections/2012-presidentielle-bureau_de_vote.csv
+    - path: data/01_raw/ministere_interieur/2012-presidentielle-bureau_de_vote.csv
       hash: md5
       md5: c12faa2e574d4844ed8686d17519a9e4
       size: 58668586
@@ -35,10 +37,10 @@ stages:
       md5: 1e56b8e4a4f067dfbdd93e5bcad22249
       size: 3095773
   normaliser-format-elections@2014-europeenne-bureau_de_vote:
-    cmd: PYTHONPATH=src python -m hexagonal.resultats.format_2014 data/01_raw/elections/2014-europeenne-bureau_de_vote.csv
+    cmd: PYTHONPATH=src python -m hexagonal.resultats.format_2014 data/01_raw/ministere_interieur/2014-europeenne-bureau_de_vote.csv
       data/02_clean/elections/2014-europeenne-bureau_de_vote.parquet latin1 ";"
     deps:
-    - path: data/01_raw/elections/2014-europeenne-bureau_de_vote.csv
+    - path: data/01_raw/ministere_interieur/2014-europeenne-bureau_de_vote.csv
       hash: md5
       md5: 21aecbfcb6e0caf8eb09a3b573170623
       size: 108205025
@@ -56,10 +58,10 @@ stages:
       md5: f9aa8c1946cd3f3d98cdc5f6909acb27
       size: 2923125
   normaliser-format-elections@2017-legislatives-1-bureau_de_vote:
-    cmd: PYTHONPATH=src python -m hexagonal.resultats.format_2017 data/01_raw/elections/2017-legislatives-1-bureau_de_vote.csv
+    cmd: PYTHONPATH=src python -m hexagonal.resultats.format_2017 data/01_raw/ministere_interieur/2017-legislatives-1-bureau_de_vote.csv
       data/02_clean/elections/2017-legislatives-1-bureau_de_vote.parquet latin1 ";"
     deps:
-    - path: data/01_raw/elections/2017-legislatives-1-bureau_de_vote.csv
+    - path: data/01_raw/ministere_interieur/2017-legislatives-1-bureau_de_vote.csv
       hash: md5
       md5: 3eaa57f0825abafeeb38dcf81d3f80aa
       size: 42454602
@@ -77,10 +79,10 @@ stages:
       md5: b4e4d0406be9140881b7f7bbf765cdb4
       size: 2992035
   normaliser-format-elections@2017-legislatives-2-bureau_de_vote:
-    cmd: PYTHONPATH=src python -m hexagonal.resultats.format_2017 data/01_raw/elections/2017-legislatives-2-bureau_de_vote.csv
+    cmd: PYTHONPATH=src python -m hexagonal.resultats.format_2017 data/01_raw/ministere_interieur/2017-legislatives-2-bureau_de_vote.csv
       data/02_clean/elections/2017-legislatives-2-bureau_de_vote.parquet latin1 ";"
     deps:
-    - path: data/01_raw/elections/2017-legislatives-2-bureau_de_vote.csv
+    - path: data/01_raw/ministere_interieur/2017-legislatives-2-bureau_de_vote.csv
       hash: md5
       md5: f7488f6de8dc80bc650c19c36aab6b4d
       size: 14067818
@@ -98,11 +100,11 @@ stages:
       md5: 818d964c2abf4447fb62015c39ad017d
       size: 1461617
   normaliser-format-elections@2017-presidentielle-1-bureau_de_vote:
-    cmd: PYTHONPATH=src python -m hexagonal.resultats.format_2017 data/01_raw/elections/2017-presidentielle-1-bureau_de_vote.csv
+    cmd: PYTHONPATH=src python -m hexagonal.resultats.format_2017 data/01_raw/ministere_interieur/2017-presidentielle-1-bureau_de_vote.csv
       data/02_clean/elections/2017-presidentielle-1-bureau_de_vote.parquet latin1
       ";"
     deps:
-    - path: data/01_raw/elections/2017-presidentielle-1-bureau_de_vote.csv
+    - path: data/01_raw/ministere_interieur/2017-presidentielle-1-bureau_de_vote.csv
       hash: md5
       md5: 1fc04aa0a22b83172876987f6146b0ea
       size: 34748748
@@ -120,11 +122,11 @@ stages:
       md5: 4f304e948aa175904cd9eaa49648d183
       size: 1930104
   normaliser-format-elections@2017-presidentielle-2-bureau_de_vote:
-    cmd: PYTHONPATH=src python -m hexagonal.resultats.format_2017 data/01_raw/elections/2017-presidentielle-2-bureau_de_vote.csv
+    cmd: PYTHONPATH=src python -m hexagonal.resultats.format_2017 data/01_raw/ministere_interieur/2017-presidentielle-2-bureau_de_vote.csv
       data/02_clean/elections/2017-presidentielle-2-bureau_de_vote.parquet latin1
       ";"
     deps:
-    - path: data/01_raw/elections/2017-presidentielle-2-bureau_de_vote.csv
+    - path: data/01_raw/ministere_interieur/2017-presidentielle-2-bureau_de_vote.csv
       hash: md5
       md5: 7f2883a04e3243222ac800d1d73f01eb
       size: 13463989
@@ -142,10 +144,10 @@ stages:
       md5: 059676582b511c0173c7f0a93a936740
       size: 1231080
   normaliser-format-elections@2019-europeenne-bureau_de_vote:
-    cmd: PYTHONPATH=src python -m hexagonal.resultats.format_2017 data/01_raw/elections/2019-europeenne-bureau_de_vote.csv
+    cmd: PYTHONPATH=src python -m hexagonal.resultats.format_2017 data/01_raw/ministere_interieur/2019-europeenne-bureau_de_vote.csv
       data/02_clean/elections/2019-europeenne-bureau_de_vote.parquet latin1 ";"
     deps:
-    - path: data/01_raw/elections/2019-europeenne-bureau_de_vote.csv
+    - path: data/01_raw/ministere_interieur/2019-europeenne-bureau_de_vote.csv
       hash: md5
       md5: 41122a5230f18ab9736f5a07828b1221
       size: 217110330
@@ -163,11 +165,11 @@ stages:
       md5: 69347db16451d057891805819aeed2c5
       size: 3590997
   normaliser-format-elections@2020-municipales-1-bureau_de_vote:
-    cmd: "PYTHONPATH=src python -m hexagonal.resultats.format_2017 data/01_raw/elections/2020-municipales-1-bureau_de_vote.csv
+    cmd: "PYTHONPATH=src python -m hexagonal.resultats.format_2017 data/01_raw/ministere_interieur/2020-municipales-1-bureau_de_vote.csv
       data/02_clean/elections/2020-municipales-1-bureau_de_vote.parquet latin1 \"\t\
       \""
     deps:
-    - path: data/01_raw/elections/2020-municipales-1-bureau_de_vote.csv
+    - path: data/01_raw/ministere_interieur/2020-municipales-1-bureau_de_vote.csv
       hash: md5
       md5: 134a9746d44fbccabb9136992975c355
       size: 66947997
@@ -185,10 +187,10 @@ stages:
       md5: 6e5bce884b840a951ce5bb8e8755405f
       size: 5617790
   normaliser-format-elections@2020-municipales-2-bureau_de_vote:
-    cmd: PYTHONPATH=src python -m hexagonal.resultats.format_2017 data/01_raw/elections/2020-municipales-2-bureau_de_vote.csv
+    cmd: PYTHONPATH=src python -m hexagonal.resultats.format_2017 data/01_raw/ministere_interieur/2020-municipales-2-bureau_de_vote.csv
       data/02_clean/elections/2020-municipales-2-bureau_de_vote.parquet latin1 ";"
     deps:
-    - path: data/01_raw/elections/2020-municipales-2-bureau_de_vote.csv
+    - path: data/01_raw/ministere_interieur/2020-municipales-2-bureau_de_vote.csv
       hash: md5
       md5: fa88d768c4ce3098a7f883dd9e7b03e7
       size: 6773003
@@ -206,11 +208,11 @@ stages:
       md5: bf981f155cf48b70baeb3daf1c1a9b16
       size: 1050140
   normaliser-format-elections@2021-departementales-1-bureau_de_vote:
-    cmd: PYTHONPATH=src python -m hexagonal.resultats.format_2017 data/01_raw/elections/2021-departementales-1-bureau_de_vote.csv
+    cmd: PYTHONPATH=src python -m hexagonal.resultats.format_2017 data/01_raw/ministere_interieur/2021-departementales-1-bureau_de_vote.csv
       data/02_clean/elections/2021-departementales-1-bureau_de_vote.parquet latin1
       ";"
     deps:
-    - path: data/01_raw/elections/2021-departementales-1-bureau_de_vote.csv
+    - path: data/01_raw/ministere_interieur/2021-departementales-1-bureau_de_vote.csv
       hash: md5
       md5: 779c9e5cefb35ef7b91379a6a761a1a0
       size: 24572024
@@ -228,11 +230,11 @@ stages:
       md5: 803bf1ea2b60d87c63aef6e6bc7e0fad
       size: 1683492
   normaliser-format-elections@2021-departementales-2-bureau_de_vote:
-    cmd: PYTHONPATH=src python -m hexagonal.resultats.format_2017 data/01_raw/elections/2021-departementales-2-bureau_de_vote.csv
+    cmd: PYTHONPATH=src python -m hexagonal.resultats.format_2017 data/01_raw/ministere_interieur/2021-departementales-2-bureau_de_vote.csv
       data/02_clean/elections/2021-departementales-2-bureau_de_vote.parquet latin1
       ";"
     deps:
-    - path: data/01_raw/elections/2021-departementales-2-bureau_de_vote.csv
+    - path: data/01_raw/ministere_interieur/2021-departementales-2-bureau_de_vote.csv
       hash: md5
       md5: bccfd795640a1f2684e1c1a921d065d0
       size: 15501944
@@ -250,10 +252,10 @@ stages:
       md5: 1d9dda9d8f198b7ae59a48511b4052ca
       size: 1056302
   normaliser-format-elections@2021-regionales-1-bureau_de_vote:
-    cmd: PYTHONPATH=src python -m hexagonal.resultats.format_2017 data/01_raw/elections/2021-regionales-1-bureau_de_vote.csv
+    cmd: PYTHONPATH=src python -m hexagonal.resultats.format_2017 data/01_raw/ministere_interieur/2021-regionales-1-bureau_de_vote.csv
       data/02_clean/elections/2021-regionales-1-bureau_de_vote.parquet latin1 ";"
     deps:
-    - path: data/01_raw/elections/2021-regionales-1-bureau_de_vote.csv
+    - path: data/01_raw/ministere_interieur/2021-regionales-1-bureau_de_vote.csv
       hash: md5
       md5: b0e0383c1c736cc49867f05c662ed50f
       size: 65487496
@@ -271,10 +273,10 @@ stages:
       md5: 0e9ca4dd7b95579d91ccd285d14dab3b
       size: 1893673
   normaliser-format-elections@2021-regionales-2-bureau_de_vote:
-    cmd: PYTHONPATH=src python -m hexagonal.resultats.format_2017 data/01_raw/elections/2021-regionales-2-bureau_de_vote.csv
+    cmd: PYTHONPATH=src python -m hexagonal.resultats.format_2017 data/01_raw/ministere_interieur/2021-regionales-2-bureau_de_vote.csv
       data/02_clean/elections/2021-regionales-2-bureau_de_vote.parquet latin1 ";"
     deps:
-    - path: data/01_raw/elections/2021-regionales-2-bureau_de_vote.csv
+    - path: data/01_raw/ministere_interieur/2021-regionales-2-bureau_de_vote.csv
       hash: md5
       md5: 436df1e7dcbe2ac545c537195e0a7299
       size: 33614226
@@ -292,11 +294,11 @@ stages:
       md5: 5f6aa830d0d2cb1f8629424b49897340
       size: 1544152
   normaliser-format-elections@2022-presidentielle-1-bureau_de_vote:
-    cmd: PYTHONPATH=src python -m hexagonal.resultats.format_2017 data/01_raw/elections/2022-presidentielle-1-bureau_de_vote.csv
+    cmd: PYTHONPATH=src python -m hexagonal.resultats.format_2017 data/01_raw/ministere_interieur/2022-presidentielle-1-bureau_de_vote.csv
       data/02_clean/elections/2022-presidentielle-1-bureau_de_vote.parquet latin1
       ";"
     deps:
-    - path: data/01_raw/elections/2022-presidentielle-1-bureau_de_vote.csv
+    - path: data/01_raw/ministere_interieur/2022-presidentielle-1-bureau_de_vote.csv
       hash: md5
       md5: 863143ce55ac2e71541972bd68ff9365
       size: 36463842
@@ -314,11 +316,11 @@ stages:
       md5: 777865c441312f10e54e0aff51956a1a
       size: 2028364
   normaliser-format-elections@2022-presidentielle-1-circonscription:
-    cmd: PYTHONPATH=src python -m hexagonal.resultats.format_2017 data/01_raw/elections/2022-presidentielle-1-circonscription.csv
+    cmd: PYTHONPATH=src python -m hexagonal.resultats.format_2017 data/01_raw/ministere_interieur/2022-presidentielle-1-circonscription.csv
       data/02_clean/elections/2022-presidentielle-1-circonscription.parquet latin1
       ";"
     deps:
-    - path: data/01_raw/elections/2022-presidentielle-1-circonscription.csv
+    - path: data/01_raw/ministere_interieur/2022-presidentielle-1-circonscription.csv
       hash: md5
       md5: fb5e45dd6a5ae43c93d3be0969d6c0d0
       size: 317249
@@ -336,11 +338,11 @@ stages:
       md5: 75af04253dba49c02592806c10340937
       size: 52176
   normaliser-format-elections@2022-presidentielle-2-bureau_de_vote:
-    cmd: PYTHONPATH=src python -m hexagonal.resultats.format_2017 data/01_raw/elections/2022-presidentielle-2-bureau_de_vote.csv
+    cmd: PYTHONPATH=src python -m hexagonal.resultats.format_2017 data/01_raw/ministere_interieur/2022-presidentielle-2-bureau_de_vote.csv
       data/02_clean/elections/2022-presidentielle-2-bureau_de_vote.parquet latin1
       ";"
     deps:
-    - path: data/01_raw/elections/2022-presidentielle-2-bureau_de_vote.csv
+    - path: data/01_raw/ministere_interieur/2022-presidentielle-2-bureau_de_vote.csv
       hash: md5
       md5: c5e0a26fe52ed824208649d15628b528
       size: 13530843
@@ -358,11 +360,11 @@ stages:
       md5: 56b4a7e9e4285a209e5f678ca0eb80b6
       size: 1230437
   normaliser-format-elections@2022-presidentielle-2-circonscription:
-    cmd: PYTHONPATH=src python -m hexagonal.resultats.format_2017 data/01_raw/elections/2022-presidentielle-2-circonscription.csv
+    cmd: PYTHONPATH=src python -m hexagonal.resultats.format_2017 data/01_raw/ministere_interieur/2022-presidentielle-2-circonscription.csv
       data/02_clean/elections/2022-presidentielle-2-circonscription.parquet latin1
       ";"
     deps:
-    - path: data/01_raw/elections/2022-presidentielle-2-circonscription.csv
+    - path: data/01_raw/ministere_interieur/2022-presidentielle-2-circonscription.csv
       hash: md5
       md5: 292bc96162d5cde4d3cc7c98eeed4e00
       size: 114954
@@ -380,10 +382,10 @@ stages:
       md5: b9bd9a6a658b8b84cf7bd486b9406e9f
       size: 26901
   normaliser-format-elections@2022-legislatives-1-bureau_de_vote:
-    cmd: PYTHONPATH=src python -m hexagonal.resultats.format_2017 data/01_raw/elections/2022-legislatives-1-bureau_de_vote.csv
+    cmd: PYTHONPATH=src python -m hexagonal.resultats.format_2017 data/01_raw/ministere_interieur/2022-legislatives-1-bureau_de_vote.csv
       data/02_clean/elections/2022-legislatives-1-bureau_de_vote.parquet latin1 ";"
     deps:
-    - path: data/01_raw/elections/2022-legislatives-1-bureau_de_vote.csv
+    - path: data/01_raw/ministere_interieur/2022-legislatives-1-bureau_de_vote.csv
       hash: md5
       md5: ab8e9e02c1253a44a9ec7547851842ad
       size: 36290423
@@ -401,10 +403,10 @@ stages:
       md5: ca5001d32c660f487a093cb65e9be6fb
       size: 2757497
   normaliser-format-elections@2022-legislatives-1-circonscription:
-    cmd: PYTHONPATH=src python -m hexagonal.resultats.format_2017 data/01_raw/elections/2022-legislatives-1-circonscription.csv
+    cmd: PYTHONPATH=src python -m hexagonal.resultats.format_2017 data/01_raw/ministere_interieur/2022-legislatives-1-circonscription.csv
       data/02_clean/elections/2022-legislatives-1-circonscription.parquet latin1 ";"
     deps:
-    - path: data/01_raw/elections/2022-legislatives-1-circonscription.csv
+    - path: data/01_raw/ministere_interieur/2022-legislatives-1-circonscription.csv
       hash: md5
       md5: 4986d461320a1ab758e4af374464c09c
       size: 325756
@@ -422,10 +424,10 @@ stages:
       md5: 99448ab458830001140b506fc4de8f09
       size: 124795
   normaliser-format-elections@2022-legislatives-2-bureau_de_vote:
-    cmd: PYTHONPATH=src python -m hexagonal.resultats.format_2017 data/01_raw/elections/2022-legislatives-2-bureau_de_vote.csv
+    cmd: PYTHONPATH=src python -m hexagonal.resultats.format_2017 data/01_raw/ministere_interieur/2022-legislatives-2-bureau_de_vote.csv
       data/02_clean/elections/2022-legislatives-2-bureau_de_vote.parquet latin1 ";"
     deps:
-    - path: data/01_raw/elections/2022-legislatives-2-bureau_de_vote.csv
+    - path: data/01_raw/ministere_interieur/2022-legislatives-2-bureau_de_vote.csv
       hash: md5
       md5: 02e9bcfb3e506d7d4ada0a141315c61c
       size: 14215650
@@ -443,10 +445,10 @@ stages:
       md5: 77b83d1c3f6ca81cd02977151096bb34
       size: 1424807
   normaliser-format-elections@2022-legislatives-2-circonscription:
-    cmd: PYTHONPATH=src python -m hexagonal.resultats.format_2017 data/01_raw/elections/2022-legislatives-2-circonscription.csv
+    cmd: PYTHONPATH=src python -m hexagonal.resultats.format_2017 data/01_raw/ministere_interieur/2022-legislatives-2-circonscription.csv
       data/02_clean/elections/2022-legislatives-2-circonscription.parquet latin1 ";"
     deps:
-    - path: data/01_raw/elections/2022-legislatives-2-circonscription.csv
+    - path: data/01_raw/ministere_interieur/2022-legislatives-2-circonscription.csv
       hash: md5
       md5: c827e0066aed7e3fa15557e785d1eb27
       size: 122973
@@ -464,10 +466,10 @@ stages:
       md5: daa2da42591adff382fdbb1f484e7dd4
       size: 44080
   normaliser-format-elections@2024-europeenne-bureau_de_vote:
-    cmd: PYTHONPATH=src python -m hexagonal.resultats.format_2017 data/01_raw/elections/2024-europeenne-bureau_de_vote.csv
+    cmd: PYTHONPATH=src python -m hexagonal.resultats.format_2017 data/01_raw/ministere_interieur/2024-europeenne-bureau_de_vote.csv
       data/02_clean/elections/2024-europeenne-bureau_de_vote.parquet utf8 ";"
     deps:
-    - path: data/01_raw/elections/2024-europeenne-bureau_de_vote.csv
+    - path: data/01_raw/ministere_interieur/2024-europeenne-bureau_de_vote.csv
       hash: md5
       md5: b3a9085acb27df6669ac04d5aca2e5da
       size: 254095448
@@ -485,10 +487,10 @@ stages:
       md5: f40bc07ef8e8f4526eae9ffe7ed181c3
       size: 3735948
   normaliser-format-elections@2024-europeenne-circonscription:
-    cmd: PYTHONPATH=src python -m hexagonal.resultats.format_2017 data/01_raw/elections/2024-europeenne-circonscription.csv
+    cmd: PYTHONPATH=src python -m hexagonal.resultats.format_2017 data/01_raw/ministere_interieur/2024-europeenne-circonscription.csv
       data/02_clean/elections/2024-europeenne-circonscription.parquet utf8 ";"
     deps:
-    - path: data/01_raw/elections/2024-europeenne-circonscription.csv
+    - path: data/01_raw/ministere_interieur/2024-europeenne-circonscription.csv
       hash: md5
       md5: 8a9a6ca76b17b2ce3600c400ce800187
       size: 2118726
@@ -506,10 +508,10 @@ stages:
       md5: 6669cfdc2d217c6c2f9e576b0dfc0976
       size: 81209
   normaliser-format-elections@2024-legislatives-1-bureau_de_vote:
-    cmd: PYTHONPATH=src python -m hexagonal.resultats.format_2017 data/01_raw/elections/2024-legislatives-1-bureau_de_vote.csv
+    cmd: PYTHONPATH=src python -m hexagonal.resultats.format_2017 data/01_raw/ministere_interieur/2024-legislatives-1-bureau_de_vote.csv
       data/02_clean/elections/2024-legislatives-1-bureau_de_vote.parquet utf8 ";"
     deps:
-    - path: data/01_raw/elections/2024-legislatives-1-bureau_de_vote.csv
+    - path: data/01_raw/ministere_interieur/2024-legislatives-1-bureau_de_vote.csv
       hash: md5
       md5: 92547431feb455ad1065815e72c40d8e
       size: 37476376
@@ -527,10 +529,10 @@ stages:
       md5: e878a8530935dbdc054ee1c90cb1c86d
       size: 2605596
   normaliser-format-elections@2024-legislatives-1-circonscription:
-    cmd: PYTHONPATH=src python -m hexagonal.resultats.format_2017 data/01_raw/elections/2024-legislatives-1-circonscription.csv
+    cmd: PYTHONPATH=src python -m hexagonal.resultats.format_2017 data/01_raw/ministere_interieur/2024-legislatives-1-circonscription.csv
       data/02_clean/elections/2024-legislatives-1-circonscription.parquet utf8 ";"
     deps:
-    - path: data/01_raw/elections/2024-legislatives-1-circonscription.csv
+    - path: data/01_raw/ministere_interieur/2024-legislatives-1-circonscription.csv
       hash: md5
       md5: 1d424007d37d7cf2d24d799403d6af00
       size: 337917
@@ -548,10 +550,10 @@ stages:
       md5: 28bed19926f5fe2f93ff12b737b41a70
       size: 96807
   normaliser-format-elections@2024-legislatives-2-bureau_de_vote:
-    cmd: PYTHONPATH=src python -m hexagonal.resultats.format_2017 data/01_raw/elections/2024-legislatives-2-bureau_de_vote.csv
+    cmd: PYTHONPATH=src python -m hexagonal.resultats.format_2017 data/01_raw/ministere_interieur/2024-legislatives-2-bureau_de_vote.csv
       data/02_clean/elections/2024-legislatives-2-bureau_de_vote.parquet utf8 ";"
     deps:
-    - path: data/01_raw/elections/2024-legislatives-2-bureau_de_vote.csv
+    - path: data/01_raw/ministere_interieur/2024-legislatives-2-bureau_de_vote.csv
       hash: md5
       md5: 063dfce8aa81153f6b535b7ecdb49d6f
       size: 16652378
@@ -569,10 +571,10 @@ stages:
       md5: f421f01953b2139996ae6044eb47bcf2
       size: 1314640
   normaliser-format-elections@2024-legislatives-2-circonscription:
-    cmd: PYTHONPATH=src python -m hexagonal.resultats.format_2017 data/01_raw/elections/2024-legislatives-2-circonscription.csv
+    cmd: PYTHONPATH=src python -m hexagonal.resultats.format_2017 data/01_raw/ministere_interieur/2024-legislatives-2-circonscription.csv
       data/02_clean/elections/2024-legislatives-2-circonscription.parquet utf8 ";"
     deps:
-    - path: data/01_raw/elections/2024-legislatives-2-circonscription.csv
+    - path: data/01_raw/ministere_interieur/2024-legislatives-2-circonscription.csv
       hash: md5
       md5: 5232b0951ce8ca92573ea3b35d5d62a0
       size: 147285
@@ -591,14 +593,14 @@ stages:
       size: 41413
   2024-legislatives-candidats@1:
     cmd: PYTHONPATH=src python -m hexagonal.candidatures.legislatives2024 data/02_clean/elections/2024-legislatives-1-candidats.csv
-      data/01_raw/elections/2024-legislatives-nfp-sensibilites.csv data/01_raw/elections/2024-legislatives-nuances-lfi.csv
+      data/01_raw/lafranceinsoumise/2024-legislatives-nfp-sensibilites.csv data/01_raw/lafranceinsoumise/2024-legislatives-nuances.csv
       data/03_main/elections/2024-legislatives-1-candidats.csv
     deps:
-    - path: data/01_raw/elections/2024-legislatives-nfp-sensibilites.csv
+    - path: data/01_raw/lafranceinsoumise/2024-legislatives-nfp-sensibilites.csv
       hash: md5
       md5: 51564d56f7bea8c6fc1abf14f540a073
       size: 17175
-    - path: data/01_raw/elections/2024-legislatives-nuances-lfi.csv
+    - path: data/01_raw/lafranceinsoumise/2024-legislatives-nuances.csv
       hash: md5
       md5: 24a9e931e2d43373ecddd42a2434eba6
       size: 125983
@@ -621,14 +623,14 @@ stages:
       size: 397512
   2024-legislatives-candidats@2:
     cmd: PYTHONPATH=src python -m hexagonal.candidatures.legislatives2024 data/02_clean/elections/2024-legislatives-2-candidats.csv
-      data/01_raw/elections/2024-legislatives-nfp-sensibilites.csv data/01_raw/elections/2024-legislatives-nuances-lfi.csv
+      data/01_raw/lafranceinsoumise/2024-legislatives-nfp-sensibilites.csv data/01_raw/lafranceinsoumise/2024-legislatives-nuances.csv
       data/03_main/elections/2024-legislatives-2-candidats.csv
     deps:
-    - path: data/01_raw/elections/2024-legislatives-nfp-sensibilites.csv
+    - path: data/01_raw/lafranceinsoumise/2024-legislatives-nfp-sensibilites.csv
       hash: md5
       md5: 51564d56f7bea8c6fc1abf14f540a073
       size: 17175
-    - path: data/01_raw/elections/2024-legislatives-nuances-lfi.csv
+    - path: data/01_raw/lafranceinsoumise/2024-legislatives-nuances.csv
       hash: md5
       md5: 24a9e931e2d43373ecddd42a2434eba6
       size: 125983
@@ -678,17 +680,17 @@ stages:
       size: 1003883
   2022-legislatives-candidats@1:
     cmd: PYTHONPATH=src python -m hexagonal.candidatures.legislatives2022 data/02_clean/elections/2022-legislatives-1-candidats.csv
-      data/01_raw/elections/2022-legislatives-nuances-lemonde.csv data/01_raw/elections/2022-legislatives-nuances-legis-2022.csv
+      data/01_raw/le_monde/2022-legislatives-nuances.csv data/01_raw/legis_2022/2022-legislatives-nuances.csv
       data/03_main/elections/2022-legislatives-1-candidats.csv
     deps:
-    - path: data/01_raw/elections/2022-legislatives-nuances-legis-2022.csv
-      hash: md5
-      md5: 40277717333ff3a1e20113d5fd249219
-      size: 1675341
-    - path: data/01_raw/elections/2022-legislatives-nuances-lemonde.csv
+    - path: data/01_raw/le_monde/2022-legislatives-nuances.csv
       hash: md5
       md5: a1f8ad9352c14eeeb4ff8fd530747eab
       size: 348542
+    - path: data/01_raw/legis_2022/2022-legislatives-nuances.csv
+      hash: md5
+      md5: 40277717333ff3a1e20113d5fd249219
+      size: 1675341
     - path: data/02_clean/elections/2022-legislatives-1-candidats.csv
       hash: md5
       md5: 1bffe89e8a5830f4e17c757fa8135c54
@@ -716,17 +718,17 @@ stages:
       size: 1061446
   2022-legislatives-candidats@2:
     cmd: PYTHONPATH=src python -m hexagonal.candidatures.legislatives2022 data/02_clean/elections/2022-legislatives-2-candidats.csv
-      data/01_raw/elections/2022-legislatives-nuances-lemonde.csv data/01_raw/elections/2022-legislatives-nuances-legis-2022.csv
+      data/01_raw/le_monde/2022-legislatives-nuances.csv data/01_raw/legis_2022/2022-legislatives-nuances.csv
       data/03_main/elections/2022-legislatives-2-candidats.csv
     deps:
-    - path: data/01_raw/elections/2022-legislatives-nuances-legis-2022.csv
-      hash: md5
-      md5: 40277717333ff3a1e20113d5fd249219
-      size: 1675341
-    - path: data/01_raw/elections/2022-legislatives-nuances-lemonde.csv
+    - path: data/01_raw/le_monde/2022-legislatives-nuances.csv
       hash: md5
       md5: a1f8ad9352c14eeeb4ff8fd530747eab
       size: 348542
+    - path: data/01_raw/legis_2022/2022-legislatives-nuances.csv
+      hash: md5
+      md5: 40277717333ff3a1e20113d5fd249219
+      size: 1675341
     - path: data/02_clean/elections/2022-legislatives-1-circonscription.parquet
       hash: md5
       md5: 99448ab458830001140b506fc4de8f09
@@ -891,10 +893,10 @@ stages:
       md5: d7c65ad31a69a88f357ef946eb09a356
       size: 12409020
   parrainages_nettoyer@2022:
-    cmd: PYTHONPATH=src python -m hexagonal.parrainages.nettoyer data/01_raw/elections/2022-presidentielle-parrainages.csv
+    cmd: PYTHONPATH=src python -m hexagonal.parrainages.nettoyer data/01_raw/conseil_constitutionnel/2022-presidentielle-parrainages.csv
       data/02_clean/elections/2022-presidentielle-parrainages.csv
     deps:
-    - path: data/01_raw/elections/2022-presidentielle-parrainages.csv
+    - path: data/01_raw/conseil_constitutionnel/2022-presidentielle-parrainages.csv
       hash: md5
       md5: 62595a6af02961ae4f2f2a7b0ebccddb
       size: 1171235
@@ -1067,10 +1069,10 @@ stages:
       size: 41436
   candidats-nettoyer@2022-legislatives-1-candidats:
     cmd: "PYTHONPATH=src python -m hexagonal.candidatures.nettoyer --delimiter '\t\
-      ' --encoding latin1 \"data/01_raw/elections/2022-legislatives-1-candidats.csv\"\
+      ' --encoding latin1 \"data/01_raw/ministere_interieur/2022-legislatives-1-candidats.csv\"\
       \ \"data/02_clean/elections/2022-legislatives-1-candidats.csv\""
     deps:
-    - path: data/01_raw/elections/2022-legislatives-1-candidats.csv
+    - path: data/01_raw/ministere_interieur/2022-legislatives-1-candidats.csv
       hash: md5
       md5: f3376d549226719ce0d499493996b753
       size: 953606
@@ -1085,10 +1087,10 @@ stages:
       size: 756262
   candidats-nettoyer@2022-legislatives-2-candidats:
     cmd: "PYTHONPATH=src python -m hexagonal.candidatures.nettoyer --delimiter '\t\
-      ' --encoding latin1 \"data/01_raw/elections/2022-legislatives-2-candidats.csv\"\
+      ' --encoding latin1 \"data/01_raw/ministere_interieur/2022-legislatives-2-candidats.csv\"\
       \ \"data/02_clean/elections/2022-legislatives-2-candidats.csv\""
     deps:
-    - path: data/01_raw/elections/2022-legislatives-2-candidats.csv
+    - path: data/01_raw/ministere_interieur/2022-legislatives-2-candidats.csv
       hash: md5
       md5: 6abd2abe7e78e547b7401d0f8938cd47
       size: 176287
@@ -1103,9 +1105,9 @@ stages:
       size: 140177
   candidats-nettoyer@2024-legislatives-1-candidats:
     cmd: PYTHONPATH=src python -m hexagonal.candidatures.nettoyer --delimiter ';'
-      "data/01_raw/elections/2024-legislatives-1-candidats.csv" "data/02_clean/elections/2024-legislatives-1-candidats.csv"
+      "data/01_raw/ministere_interieur/2024-legislatives-1-candidats.csv" "data/02_clean/elections/2024-legislatives-1-candidats.csv"
     deps:
-    - path: data/01_raw/elections/2024-legislatives-1-candidats.csv
+    - path: data/01_raw/ministere_interieur/2024-legislatives-1-candidats.csv
       hash: md5
       md5: c840bd309348cbe6cd728cc96bf550d0
       size: 622985
@@ -1120,9 +1122,9 @@ stages:
       size: 500739
   candidats-nettoyer@2024-legislatives-2-candidats:
     cmd: PYTHONPATH=src python -m hexagonal.candidatures.nettoyer --delimiter ';'
-      "data/01_raw/elections/2024-legislatives-2-candidats.csv" "data/02_clean/elections/2024-legislatives-2-candidats.csv"
+      "data/01_raw/ministere_interieur/2024-legislatives-2-candidats.csv" "data/02_clean/elections/2024-legislatives-2-candidats.csv"
     deps:
-    - path: data/01_raw/elections/2024-legislatives-2-candidats.csv
+    - path: data/01_raw/ministere_interieur/2024-legislatives-2-candidats.csv
       hash: md5
       md5: c6e6f33721554d0a1260d81775c0fd22
       size: 172050

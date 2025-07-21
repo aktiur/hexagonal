@@ -1,4 +1,3 @@
-md5: d6d0445900aa6cc6847b561b45b4e66a
 frozen: true
 deps:
 - checksum: '"62bab80e-19904d"'
@@ -9,4 +8,5 @@ outs:
 - md5: 40277717333ff3a1e20113d5fd249219
   size: 1675341
   hash: md5
-  path: 2022-legislatives-nuances-legis-2022.csv
+  path: 2022-legislatives-nuances.csv
+md5: 7b0c8394d43019faf26baadcddd2090b

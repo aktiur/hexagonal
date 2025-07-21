@@ -12,21 +12,21 @@ stages:
   nettoyer-2020-municipales-1:
     cmd: >-
       sed '13751,13752s/ \t / / ; 16921s/ \t / /'
-      < ${raw}/elections/2020-municipales-1-bureau_de_vote_avant_correction.csv
-      > ${raw}/elections/2020-municipales-1-bureau_de_vote.csv
+      < ${raw}/ministere_interieur/2020-municipales-1-bureau_de_vote_avant_correction.csv
+      > ${raw}/ministere_interieur/2020-municipales-1-bureau_de_vote.csv
     deps:
-      - ${raw}/elections/2020-municipales-1-bureau_de_vote_avant_correction.csv
+      - ${raw}/ministere_interieur/2020-municipales-1-bureau_de_vote_avant_correction.csv
     outs:
-      - ${raw}/elections/2020-municipales-1-bureau_de_vote.csv
+      - ${raw}/ministere_interieur/2020-municipales-1-bureau_de_vote.csv
 
   normaliser-format-elections:
     foreach: ${scrutins}
     do:
       cmd: >-
         ${python} hexagonal.resultats.format_${item.format}
-        ${raw}/elections/${key}.csv ${clean}/elections/${key}.parquet ${item.encoding} "${item.delimiter}"
+        ${raw}/ministere_interieur/${key}.csv ${clean}/elections/${key}.parquet ${item.encoding} "${item.delimiter}"
       deps:
-        - ${raw}/elections/${key}.csv
+        - ${raw}/ministere_interieur/${key}.csv
         - ${src}/hexagonal/resultats/format_${item.format}.py
         - ${src}/hexagonal/codes.py
       outs:
@@ -48,14 +48,13 @@ stages:
       cmd: >-
         ${python} hexagonal.candidatures.nettoyer
         ${item}
-        "${raw}/elections/${key}.csv"
+        "${raw}/ministere_interieur/${key}.csv"
         "${clean}/elections/${key}.csv"
       deps:
-        - ${raw}/elections/${key}.csv
+        - ${raw}/ministere_interieur/${key}.csv
         - ${src}/hexagonal/candidatures/nettoyer.py
       outs:
         - ${clean}/elections/${key}.csv
-
 
   2024-legislatives-candidats:
     foreach:
@@ -65,13 +64,13 @@ stages:
       cmd: >-
         ${python} hexagonal.candidatures.legislatives2024
         ${clean}/elections/2024-legislatives-${item}-candidats.csv
-        ${raw}/elections/2024-legislatives-nfp-sensibilites.csv
-        ${raw}/elections/2024-legislatives-nuances-lfi.csv
+        ${raw}/lafranceinsoumise/2024-legislatives-nfp-sensibilites.csv
+        ${raw}/lafranceinsoumise/2024-legislatives-nuances.csv
         ${main}/elections/2024-legislatives-${item}-candidats.csv
       deps:
         - ${clean}/elections/2024-legislatives-${item}-candidats.csv
-        - ${raw}/elections/2024-legislatives-nfp-sensibilites.csv
-        - ${raw}/elections/2024-legislatives-nuances-lfi.csv
+        - ${raw}/lafranceinsoumise/2024-legislatives-nfp-sensibilites.csv
+        - ${raw}/lafranceinsoumise/2024-legislatives-nuances.csv
         - ${src}/hexagonal/candidatures/legislatives2024.py
         - ${src}/hexagonal/codes.py
       outs:
@@ -85,15 +84,15 @@ stages:
       cmd: >-
         ${python} hexagonal.candidatures.legislatives2022
         ${clean}/elections/2022-legislatives-${item}-candidats.csv
-        ${raw}/elections/2022-legislatives-nuances-lemonde.csv
-        ${raw}/elections/2022-legislatives-nuances-legis-2022.csv
+        ${raw}/le_monde/2022-legislatives-nuances.csv
+        ${raw}/legis_2022/2022-legislatives-nuances.csv
         ${main}/elections/2022-legislatives-${item}-candidats.csv
       deps:
         - ${clean}/elections/2022-legislatives-${item}-candidats.csv
         - ${clean}/elections/2022-legislatives-1-circonscription.parquet
         - ${clean}/elections/2022-legislatives-2-circonscription.parquet
-        - ${raw}/elections/2022-legislatives-nuances-lemonde.csv
-        - ${raw}/elections/2022-legislatives-nuances-legis-2022.csv
+        - ${raw}/le_monde/2022-legislatives-nuances.csv
+        - ${raw}/legis_2022/2022-legislatives-nuances.csv
         - ${src}/hexagonal/candidatures/legislatives2022.py
         - ${src}/hexagonal/codes.py
       outs:
@@ -104,13 +103,13 @@ stages:
       - 2022
     do:
       deps:
-        - ${raw}/elections/${item}-presidentielle-parrainages.csv
+        - ${raw}/conseil_constitutionnel/${item}-presidentielle-parrainages.csv
         - ${src}/hexagonal/parrainages/nettoyer.py
       outs:
         - ${clean}/elections/${item}-presidentielle-parrainages.csv
       cmd: >-
         ${python} hexagonal.parrainages.nettoyer
-        ${raw}/elections/${item}-presidentielle-parrainages.csv
+        ${raw}/conseil_constitutionnel/${item}-presidentielle-parrainages.csv
         ${clean}/elections/${item}-presidentielle-parrainages.csv
 
   parrainages_qualifier:
