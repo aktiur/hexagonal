@@ -1,13 +1,12 @@
-md5: aa94934e5a9ad92ce8de625ad6a303c9
+md5: 5f029326c418db95cbbc070fb3ca52e3
 frozen: true
 deps:
-- checksum: '"67235370-1518d"'
-  size: 86413
+- checksum: '"684c356d-14d03"'
+  size: 85251
   hash: md5
-  path: 
-    https://static.data.gouv.fr/resources/repertoire-national-des-elus-1/20241031-095248/elus-membres-assemblee-ma.csv
+  path: https://www.data.gouv.fr/api/1/datasets/r/a595be27-cfab-4810-b9d4-22e193bffe35
 outs:
-- md5: 7650260d596109c66acbd2e83423c5f1
-  size: 86413
+- md5: 540af71e0cd1e893ad4828ca9cbb3e7e
+  size: 85251
   hash: md5
   path: conseillers_csp.csv

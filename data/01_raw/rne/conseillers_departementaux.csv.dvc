@@ -1,12 +1,12 @@
-md5: ca417cef76bd5591aacd8bab4c3f6aaf
+md5: eec868d168fd639746211b75e0f1c835
 frozen: true
 deps:
-- checksum: '"67235358-83929"'
-  size: 538921
+- checksum: '"684c3553-82a52"'
+  size: 535122
   hash: md5
   path: https://www.data.gouv.fr/fr/datasets/r/601ef073-d986-4582-8e1a-ed14dc857fba
 outs:
-- md5: d08158a4f34f09a515333778d34a6e45
-  size: 538921
+- md5: c97b23f2a92eb0c41d0d263ca9430840
+  size: 535122
   hash: md5
   path: conseillers_departementaux.csv
