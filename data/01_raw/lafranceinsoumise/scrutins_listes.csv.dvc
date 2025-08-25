@@ -1,0 +1,5 @@
+outs:
+- md5: 9298d6138602e9e7d687e196d13f162d
+  size: 664
+  hash: md5
+  path: scrutins_listes.csv
