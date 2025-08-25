@@ -1,0 +1,65 @@
+nom = "Affiliation des députés à un groupe parlementaire"
+description = """
+Ce fichier comporte une ligne pour chaque affiliation d'un député à un groupe parlementaire, à partir de la
+XIème législature.
+"""
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/36/a17d9f5d80eb12a07b9532b83b461a"
+s3_url = "s3://hexagonal-data/cache/files/md5/36/a17d9f5d80eb12a07b9532b83b461a"
+mimetype = "text/csv"
+deps = [
+    "data/01_raw/assemblee-nationale.zip",
+]
+section = "Assemblée nationale"
+
+[colonnes.id_personne]
+type = "str"
+description = """
+L'identifiant unique de la personne affiliée
+"""
+nullable = false
+
+[colonnes.id_groupe]
+type = "str"
+description = """
+L'identifiant unique du groupe parlementaire concerné par l'affiliation
+"""
+nullable = false
+
+[colonnes.prenom]
+type = "str"
+description = """
+Le prénom de la personne affilée
+"""
+nullable = false
+
+[colonnes.nom]
+type = "str"
+description = """
+Le nom de famille de la personne affiliée
+"""
+nullable = false
+
+[colonnes.abreviation_groupe]
+type = "str"
+description = "L'abbréviation usuelle du groupe parlementaire d'affiliation"
+nullable = false
+
+[colonnes.legislature]
+type = "str"
+description = "Le numéro de la législature correspondant à cette affiliation"
+nullable = false
+
+[colonnes.date_debut]
+type = "date"
+description = "Date de début de l'affiliation"
+nullable = false
+
+[colonnes.date_fin]
+type = "date"
+description = "Date de fin de l'affiliation"
+nullable = true
+
+[colonnes.qualite]
+type = "str"
+description = ""
+nullable = false

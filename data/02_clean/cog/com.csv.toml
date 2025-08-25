@@ -1,0 +1,29 @@
+nom = "Liste des collectivités d'Outremer"
+description = """
+Ce fichier liste les collectivités d'Outremer au sens titre (les collectivités
+territoriales soumises au régime juridique de l'article 74 de la Constitution) ainsi
+que la Nouvelle-Calédonie (régie par le titre XIII de la Constitution), les Terres
+australes et antarctiques françaises et l'île de Clipperton.
+"""
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/cf/4701f6b9ea4587a20ba58874c0ae1b"
+s3_url = "s3://hexagonal-data/cache/files/md5/cf/4701f6b9ea4587a20ba58874c0ae1b"
+mimetype = "text/csv"
+deps = [
+    "data/01_raw/cog.zip",
+]
+section = "Découpage administratif"
+
+[colonnes.code_departement]
+type = "code_departement"
+description = ""
+nullable = false
+
+[colonnes.type_nom]
+type = "entier"
+description = ""
+nullable = false
+
+[colonnes.nom]
+type = "str"
+description = ""
+nullable = false

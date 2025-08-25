@@ -1,0 +1,12 @@
+nom = "Liste des parrainages validés par le Conseil constitutionnel pour l'élection de 2022"
+description = """
+Le tableau ci-dessous récapitule l’ensemble des parrainages signés par des élus habilités à soutenir un candidat et validés par le Conseil constitutionnel.
+
+ATTENTION : l'ensemble des parrainages affichés pour un candidat ne préjuge pas de la validité de sa candidature. Seule la décision finale du Conseil constitutionnel fait foi.
+"""
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/62/595a6af02961ae4f2f2a7b0ebccddb"
+s3_url = "s3://hexagonal-data/cache/files/md5/62/595a6af02961ae4f2f2a7b0ebccddb"
+mimetype = "text/csv"
+info_url = "https://presidentielle2022.conseil-constitutionnel.fr/les-parrainages/tous-les-parrainages-valides.html"
+source_url = "https://presidentielle2022.conseil-constitutionnel.fr/telechargement/parrainagestotal.csv"
+editeur = "Conseil constitutionnel"

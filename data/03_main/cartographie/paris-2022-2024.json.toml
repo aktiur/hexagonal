@@ -1,0 +1,12 @@
+nom = "Contours simplifiés des secteurs de bureaux de vote à Paris en 2022 et 2024"
+description = """
+
+"""
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/6a/cee8db7b97b8597524b5f73e2b5046"
+s3_url = "s3://hexagonal-data/cache/files/md5/6a/cee8db7b97b8597524b5f73e2b5046"
+mimetype = "application/topo+json"
+deps = [
+    "data/01_raw/paris/2022-secteur-bureaux.json",
+    "data/01_raw/paris/2024-secteur-bureaux.json",
+]
+section = "Cartographie"

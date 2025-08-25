@@ -7,7 +7,7 @@ from dvc.api import DVCFileSystem
 from dvc.stage import Stage
 
 from hexagonal.files import CONFIG, DATA_DIR, ROOT_DIR
-from hexagonal.files.spec import DatasetType
+from hexagonal.files.spec import DatasetType, get_main_dir
 
 URL_PREFIX = "cache/files/md5"
 
@@ -37,14 +37,8 @@ class DVCFile:
         return DEFAULT_TYPES[self.base_dir]
 
     @property
-    def default_format(self):
-        return self.path.suffix[1:]
-
-    @property
     def base_dir(self) -> str:
-        parents = list(self.path.parents)
-        assert parents[-2].resolve() == DATA_DIR and len(parents) >= 3
-        return parents[-3].name
+        return get_main_dir(self.path)
 
     @property
     def data_deps(self):

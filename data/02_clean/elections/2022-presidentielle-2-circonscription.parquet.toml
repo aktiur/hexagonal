@@ -1,0 +1,54 @@
+nom = "Résultats du deuxième tour de l'élection présidentielle 2022 par circonscription législative"
+description = ""
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/b9/bd9a6a658b8b84cf7bd486b9406e9f"
+s3_url = "s3://hexagonal-data/cache/files/md5/b9/bd9a6a658b8b84cf7bd486b9406e9f"
+mimetype = "application/vnd.apache.parquet"
+deps = [
+    "data/01_raw/ministere_interieur/2022-presidentielle-2-circonscription.csv",
+]
+section = "Résultats électoraux"
+
+[colonnes.circonscription]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.inscrits]
+type = "entier"
+description = ""
+nullable = false
+
+[colonnes.votants]
+type = "entier"
+description = ""
+nullable = false
+
+[colonnes.exprimes]
+type = "entier"
+description = ""
+nullable = false
+
+[colonnes.numero_panneau]
+type = "entier"
+description = ""
+nullable = false
+
+[colonnes.nom]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.prenom]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.sexe]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.voix]
+type = "entier"
+description = ""
+nullable = false

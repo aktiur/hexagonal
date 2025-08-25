@@ -1,0 +1,10 @@
+nom = "cities1000"
+description = """
+The GeoNames geographical database covers all countries and contains over eleven million placenames that are available for download free of charge.
+"""
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/11/ae971aff2eb4b587435e0ac2e1a0e0"
+s3_url = "s3://hexagonal-data/cache/files/md5/11/ae971aff2eb4b587435e0ac2e1a0e0"
+mimetype = "application/zip"
+info_url = "https://download.geonames.org/export/dump/"
+source_url = "https://download.geonames.org/export/dump/cities1000.zip"
+editeur = "GeoNames"

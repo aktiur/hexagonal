@@ -1,0 +1,48 @@
+nom = "Résultats du deuxième tour des élections départementales de 2021 par bureau de vote"
+description = ""
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/1d/9dda9d8f198b7ae59a48511b4052ca"
+s3_url = "s3://hexagonal-data/cache/files/md5/1d/9dda9d8f198b7ae59a48511b4052ca"
+mimetype = "application/vnd.apache.parquet"
+deps = [
+    "data/01_raw/ministere_interieur/2021-departementales-2-bureau_de_vote.csv",
+]
+section = "Résultats électoraux"
+
+[colonnes.code_commune]
+type = "str"
+nullable = false
+
+[colonnes.bureau_de_vote]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.inscrits]
+type = "entier"
+description = ""
+nullable = false
+
+[colonnes.votants]
+type = "entier"
+description = ""
+nullable = false
+
+[colonnes.exprimes]
+type = "entier"
+description = ""
+nullable = false
+
+[colonnes.numero_panneau]
+type = "entier"
+description = ""
+nullable = false
+
+[colonnes.nuance]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.voix]
+type = "entier"
+description = ""
+nullable = false

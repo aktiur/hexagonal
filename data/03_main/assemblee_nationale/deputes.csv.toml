@@ -1,0 +1,160 @@
+nom = "Liste des députés en cours de mandat"
+description = """
+
+"""
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/40/eb56c796908bacc792e7343cf7d554"
+s3_url = "s3://hexagonal-data/cache/files/md5/40/eb56c796908bacc792e7343cf7d554"
+mimetype = "text/csv"
+deps = [
+    "data/02_clean/assemblee_nationale/fiches.csv",
+    "data/02_clean/assemblee_nationale/adresses_electroniques.csv",
+    "data/02_clean/assemblee_nationale/commissions.csv",
+    "data/02_clean/assemblee_nationale/mandats.csv",
+    "data/02_clean/assemblee_nationale/affiliations.csv",
+]
+section = "Assemblée nationale"
+
+[colonnes.id_personne]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.civilite]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.prenom]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.nom]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.date_naissance]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.ville_naissance]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.departement_naissance]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.legislatures]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.profession]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.csp_agregee]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.csp]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.id_mandat]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.circonscription]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.suppleante]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.date_debut]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.cause_debut_mandat]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.place]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.id_commission]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.commission]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.date_debut_commission]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.poste_commission]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.id_groupe]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.abreviation_groupe]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.date_debut_groupe]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.poste_groupe]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.email_an]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.email_autre]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.telephone_an]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.telephone_circonscription]
+type = "str"
+description = ""
+nullable = false

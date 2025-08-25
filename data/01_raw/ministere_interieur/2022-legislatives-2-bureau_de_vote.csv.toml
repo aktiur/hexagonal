@@ -1,0 +1,7 @@
+nom = "Résultats du deuxième tour des élections législatives de 2022 par bureau de vote"
+description = ""
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/02/e9bcfb3e506d7d4ada0a141315c61c"
+s3_url = "s3://hexagonal-data/cache/files/md5/02/e9bcfb3e506d7d4ada0a141315c61c"
+mimetype = "text/csv"
+source_url = "https://www.data.gouv.fr/fr/datasets/r/cada247a-6528-44e7-8308-30c0c335a4b2"
+editeur = "Ministère de l'intérieur"

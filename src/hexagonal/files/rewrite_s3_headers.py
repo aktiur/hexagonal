@@ -1,11 +1,11 @@
 import boto3
 
-from hexagonal.files.spec import SPEC
+from hexagonal.files.spec import load_all_specs
 
 
-def rewrite_metadata():
+def rewrite_metadata(specs):
     client = boto3.client("s3")
-    for path, source in SPEC.items():
+    for path, source in specs.items():
         print(f"{path}… ", end="", flush=True)
         if source.mimetype:
             assert source.s3_url.startswith("s3://")
@@ -36,4 +36,4 @@ def rewrite_metadata():
 
 
 if __name__ == "__main__":
-    rewrite_metadata()
+    rewrite_metadata(load_all_specs())

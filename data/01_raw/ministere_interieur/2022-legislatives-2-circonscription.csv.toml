@@ -1,0 +1,7 @@
+nom = "Résultats du deuxième tour des élections législatives de 2022 par circonscription"
+description = ""
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/c8/27e0066aed7e3fa15557e785d1eb27"
+s3_url = "s3://hexagonal-data/cache/files/md5/c8/27e0066aed7e3fa15557e785d1eb27"
+mimetype = "text/csv"
+source_url = "https://www.data.gouv.fr/fr/datasets/r/a84f1483-a191-4187-ad40-404105bb9bf0"
+editeur = "Ministère de l'intérieur"

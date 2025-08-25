@@ -1,0 +1,7 @@
+nom = "Résultats des élections européennes 2024 par circonscription législative"
+description = ""
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/8a/9a6ca76b17b2ce3600c400ce800187"
+s3_url = "s3://hexagonal-data/cache/files/md5/8a/9a6ca76b17b2ce3600c400ce800187"
+mimetype = "text/csv"
+source_url = "https://www.data.gouv.fr/fr/datasets/r/ee37cbef-3d2a-4efe-a395-530b85a63028"
+editeur = "Ministère de l'intérieur"

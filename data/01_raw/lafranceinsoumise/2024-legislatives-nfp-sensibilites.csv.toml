@@ -1,0 +1,13 @@
+nom = "Liste des candidats du Nouveau Front populaire et de leur sensibilité par circonscription législative"
+description = """
+L'accord signé entre la France insoumise, les Verts, le Parti communiste français et le Parti socialiste prévoyait une
+répartition des circonscriptions entre les 4 sensibilités. Ce fichier indique, pour chaque circonscription incluse dans
+le périmètre de l'accord, la sensibilité à laquelle elle a été attribuée et le candidat que cette dernière y a investi.
+
+Ce fichier n'indique pas la présence d'éventuelles dissidences, investies ou non par une des quatre sensibilités de
+l'accord.
+"""
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/51/564d56f7bea8c6fc1abf14f540a073"
+s3_url = "s3://hexagonal-data/cache/files/md5/51/564d56f7bea8c6fc1abf14f540a073"
+mimetype = "text/csv"
+editeur = "La France insoumise"

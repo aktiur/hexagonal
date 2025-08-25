@@ -1,0 +1,11 @@
+nom = "Liste des candidats aux élections législatives 2022 et de leur nuance politique"
+description = """
+« Le Monde » a réétiqueté l’ensemble des candidats aux législatives afin d’obtenir des
+nuances politiques plus précises que celles du ministère de l’intérieur.
+"""
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/a1/f8ad9352c14eeeb4ff8fd530747eab"
+s3_url = "s3://hexagonal-data/cache/files/md5/a1/f8ad9352c14eeeb4ff8fd530747eab"
+mimetype = "text/csv"
+info_url = "https://www.lemonde.fr/les-decodeurs/article/2022/06/15/legislatives-2022-le-monde-met-a-disposition-la-liste-des-candidats-et-leur-nuance-politique-en-open-data_6130475_4355770.html"
+source_url = "https://assets-decodeurs.lemonde.fr/decodeurs/elections_2022_snippets/legislatives/tour1/candidats_legislatives_lemonde.csv"
+editeur = "Le Monde"

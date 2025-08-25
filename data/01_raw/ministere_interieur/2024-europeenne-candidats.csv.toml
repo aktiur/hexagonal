@@ -1,0 +1,9 @@
+nom = "2024-europeenne-candidats"
+description = """
+
+"""
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/ef/5a04840f72551769af9dc38c021664"
+s3_url = "s3://hexagonal-data/cache/files/md5/ef/5a04840f72551769af9dc38c021664"
+mimetype = "text/csv"
+source_url = "https://static.data.gouv.fr/resources/elections-europeennes-du-9-juin-2024-candidatures-enregistrees/20240527-082635/candidats-eur-2024.csv"
+editeur = "Ministère de l'intérieur"

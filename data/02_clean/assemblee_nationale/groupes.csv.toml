@@ -1,0 +1,54 @@
+nom = "Liste des groupes parlementaires"
+description = ""
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/3c/3b5cdbb812161dee7ae3a72b59b05f"
+s3_url = "s3://hexagonal-data/cache/files/md5/3c/3b5cdbb812161dee7ae3a72b59b05f"
+mimetype = "text/csv"
+deps = [
+    "data/01_raw/assemblee-nationale.zip",
+]
+section = "Assemblée nationale"
+
+[colonnes.id_groupe]
+type = "str"
+description = "Identifiant unique interne à l'Assemblée nationale"
+nullable = false
+
+[colonnes.legislature]
+type = "str"
+description = "Numéro de la législature"
+nullable = false
+
+[colonnes.nom]
+type = "str"
+description = "Nom complet du groupe"
+nullable = false
+
+[colonnes.abrege]
+type = "str"
+description = "Nom abrégé du groupe"
+nullable = false
+
+[colonnes.abreviation]
+type = "str"
+description = "Abbréviation usuelle du nom du groupe"
+nullable = false
+
+[colonnes.date_debut]
+type = "date"
+description = "Date de constitution du groupe parlementaire"
+nullable = false
+
+[colonnes.date_fin]
+type = "date"
+description = "Date de fin du groupe parlementaire"
+nullable = true
+
+[colonnes.position]
+type = "str"
+description = "Position du groupe parlementaire"
+nullable = true
+
+[colonnes.preseance]
+type = "str"
+description = "Préséance"
+nullable = false

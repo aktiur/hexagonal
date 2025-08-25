@@ -1,0 +1,73 @@
+nom = "Fiches personnes de l'Assemblée nationale"
+description = """
+Données extraites des fiches « acteurs » de l'open data de l'Assemblée nationale. Chaque
+ligne correspond à une personne référencée par l'Assemblée nationale. Parmi les
+personnes référencées, on trouve :
+
+- les député·es
+- leurs suppléant·es
+- d'autres parlementaires
+
+"""
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/09/45caaaaa27a68fad93799b1d3a3620"
+s3_url = "s3://hexagonal-data/cache/files/md5/09/45caaaaa27a68fad93799b1d3a3620"
+mimetype = "text/csv"
+deps = [
+    "data/01_raw/assemblee-nationale.zip",
+]
+section = "Assemblée nationale"
+
+[colonnes.id_personne]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.civilite]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.prenom]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.nom]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.date_naissance]
+type = "str"
+description = ""
+nullable = true
+
+[colonnes.ville_naissance]
+type = "str"
+description = ""
+nullable = true
+
+[colonnes.departement_naissance]
+type = "str"
+description = ""
+nullable = true
+
+[colonnes.legislatures]
+type = "str"
+description = ""
+nullable = true
+
+[colonnes.profession]
+type = "str"
+description = ""
+nullable = true
+
+[colonnes.csp_agregee]
+type = "str"
+description = ""
+nullable = true
+
+[colonnes.csp]
+type = "str"
+description = ""
+nullable = true

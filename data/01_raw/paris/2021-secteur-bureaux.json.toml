@@ -1,0 +1,9 @@
+nom = "Secteurs des bureaux de vote parisiens en 2021"
+description = """
+
+"""
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/dc/f210975b5d10b55a11fa003e1effde"
+s3_url = "s3://hexagonal-data/cache/files/md5/dc/f210975b5d10b55a11fa003e1effde"
+mimetype = "application/json"
+source_url = "https://opendata.paris.fr/api/explore/v2.1/catalog/datasets/secteurs-des-bureaux-de-vote-en-2021/exports/geojson?lang=fr&timezone=Europe%2FBerlin"
+editeur = "Mairie de Paris"

@@ -1,0 +1,8 @@
+nom = "Répertoire national des élus — conseillers départementaux"
+description = ""
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/c9/7b23f2a92eb0c41d0d263ca9430840"
+s3_url = "s3://hexagonal-data/cache/files/md5/c9/7b23f2a92eb0c41d0d263ca9430840"
+mimetype = "text/csv"
+info_url = "https://www.data.gouv.fr/fr/datasets/repertoire-national-des-elus-1/"
+source_url = "https://www.data.gouv.fr/fr/datasets/r/601ef073-d986-4582-8e1a-ed14dc857fba"
+editeur = "Ministère de l'intérieur"

@@ -1,0 +1,55 @@
+nom = "Liste des EPCI à fiscalité propres"
+description = """
+
+"""
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/91/5b0225e1c25acb4b4f4d8cc8fcdc72"
+s3_url = "s3://hexagonal-data/cache/files/md5/91/5b0225e1c25acb4b4f4d8cc8fcdc72"
+mimetype = "text/csv"
+deps = [
+    "data/01_raw/epci.xlsx",
+]
+section = "Découpage administratif"
+
+[colonnes.siren_epci]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.code_departement]
+type = "code_departement"
+description = ""
+nullable = false
+
+[colonnes.nom_epci]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.type_epci]
+type = "str"
+description = """
+Indique s'il s'agit de d'une communauté de commune (CC), communauté urbaines (CU),
+communauté d'agglomération (CA), d'une métropole (METRO), ou de la métropole sui
+generis de Lyon (MET69).
+"""
+nullable = false
+
+[colonnes.mode_financement]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.nombre_membres]
+type = "entier"
+description = ""
+nullable = false
+
+[colonnes.population_municipale]
+type = "entier"
+description = ""
+nullable = false
+
+[colonnes.population_totale]
+type = "entier"
+description = ""
+nullable = false

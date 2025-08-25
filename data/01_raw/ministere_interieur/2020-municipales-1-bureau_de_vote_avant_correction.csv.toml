@@ -1,0 +1,10 @@
+nom = "Résultats du premier tour des municipales 2020 par bureau de vote"
+description = """
+Ce fichier comporte une anomalie : trois tabulations excédentaires aux lignes 13751, 13752
+et 16921.
+"""
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/d5/ed37c4abd7a4952826ead2ca11a408"
+s3_url = "s3://hexagonal-data/cache/files/md5/d5/ed37c4abd7a4952826ead2ca11a408"
+mimetype = "text/csv"
+source_url = "https://www.data.gouv.fr/fr/datasets/r/248f6f21-68ad-45f3-82f5-53fffabce5f3"
+editeur = "Ministère de l'intérieur"

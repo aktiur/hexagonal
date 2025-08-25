@@ -1,0 +1,11 @@
+nom = "Contours simplifiés des circonscriptions législatives de Martinique"
+description = """
+
+"""
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/d5/43bcde9cffc5f7c4b3409c0900f536"
+s3_url = "s3://hexagonal-data/cache/files/md5/d5/43bcde9cffc5f7c4b3409c0900f536"
+mimetype = "application/topo+json"
+deps = [
+    "data/03_main/geodata/circonscriptions_legislatives.json",
+]
+section = "Cartographie"

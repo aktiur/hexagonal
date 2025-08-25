@@ -1,0 +1,7 @@
+nom = "Résultats de l'élection européenne de 2014 par bureau de vote"
+description = ""
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/21/aecbfcb6e0caf8eb09a3b573170623"
+s3_url = "s3://hexagonal-data/cache/files/md5/21/aecbfcb6e0caf8eb09a3b573170623"
+mimetype = "text/csv"
+source_url = "https://www.data.gouv.fr/fr/datasets/r/c5af18ce-b673-4019-a9c3-07ee6209668c"
+editeur = "Ministère de l'intérieur"

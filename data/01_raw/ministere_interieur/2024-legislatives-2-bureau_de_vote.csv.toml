@@ -1,0 +1,7 @@
+nom = "Résultats du deuxième tour des élections législatives 2024 par bureau de vote"
+description = ""
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/06/3dfce8aa81153f6b535b7ecdb49d6f"
+s3_url = "s3://hexagonal-data/cache/files/md5/06/3dfce8aa81153f6b535b7ecdb49d6f"
+mimetype = "text/csv"
+source_url = "https://www.data.gouv.fr/fr/datasets/r/ca974f04-cfd9-4da8-8554-4a868a09c6c2"
+editeur = "Ministère de l'intérieur"

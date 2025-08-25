@@ -1,0 +1,7 @@
+nom = "Résultats du premier tour des élections législatives 2024 par bureau de vote"
+description = ""
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/92/547431feb455ad1065815e72c40d8e"
+s3_url = "s3://hexagonal-data/cache/files/md5/92/547431feb455ad1065815e72c40d8e"
+mimetype = "text/csv"
+source_url = "https://www.data.gouv.fr/fr/datasets/r/6813fb28-7ec0-42ff-a528-2bc3d82d7dcd"
+editeur = "Ministère de l'intérieur"

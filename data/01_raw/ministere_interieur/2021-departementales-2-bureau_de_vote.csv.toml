@@ -1,0 +1,7 @@
+nom = "Résultats du deuxième tour des élections départementales de 2021 par bureau de vote"
+description = ""
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/bc/cfd795640a1f2684e1c1a921d065d0"
+s3_url = "s3://hexagonal-data/cache/files/md5/bc/cfd795640a1f2684e1c1a921d065d0"
+mimetype = "text/csv"
+source_url = "https://www.data.gouv.fr/fr/datasets/r/b34b36d9-e416-4144-8384-d101b140afaf"
+editeur = "Ministère de l'intérieur"

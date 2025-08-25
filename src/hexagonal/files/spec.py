@@ -1,30 +1,17 @@
+import dataclasses
 import datetime
 import tomllib
 from enum import StrEnum
+from operator import attrgetter
 from pathlib import Path, PurePath
-from typing import List, Optional, Union
+from typing import Annotated, Any, Callable, List, Optional
 
 import pandas as pd
 from markupsafe import Markup
-from pydantic import BaseModel
+from pydantic import BaseModel, ConfigDict, Field
 
 from hexagonal.files import ROOT_DIR
 from hexagonal.utils import VRAI
-
-SPEC = {}
-
-
-def _load_spec():
-    global SPEC
-
-    with open(ROOT_DIR / "spec.toml", "rb") as fd:
-        _spec = tomllib.load(fd)
-
-    SPEC = {}
-    for path, dataset_info in _spec.items():
-        path = PurePath(path)
-
-        SPEC[path] = Dataset.model_validate({"path": path, **dataset_info})
 
 
 class DatasetType(StrEnum):
@@ -32,6 +19,18 @@ class DatasetType(StrEnum):
     INTERMEDIAIRE = "intermediaire"
     CLEAN = "clean"
     MAIN = "main"
+
+
+def display_date(date: datetime.date) -> str:
+    return date.strftime("%d/%m/%Y")
+
+
+@dataclasses.dataclass
+class DisplayFunction:
+    func: Callable[[Any], str]
+
+
+type Date = Annotated[datetime.date, DisplayFunction(display_date)]
 
 
 PRODUCTION_TYPES = [DatasetType.CLEAN, DatasetType.MAIN]
@@ -60,37 +59,24 @@ PD_DTYPES = {
 }
 
 
-class Colonne(BaseModel):
+class ColonneMetadata(BaseModel):
     type: ColonneType
-    description: str
+    description: Optional[str] = None
     nullable: bool = False
 
 
-class Dataset(BaseModel):
-    path: PurePath
+class DatasetSpec(BaseModel):
+    model_config = ConfigDict(
+        validate_by_name=True, validate_by_alias=False, serialize_by_alias=False
+    )
+
+    path: Path = Field(alias="Chemin interne")
     nom: str
-    type: DatasetType
     description: str
-    url: str
+    url: str = Field("URL de téléchargement")
     s3_url: str
 
-    mimetype: str = ""
-
-    # production
-    section: Optional[str] = None
-
-    # sources
-    info_url: Optional[str] = None
-    source_url: Optional[str] = None
-    editeur: Optional[str] = None
-    date: Optional[datetime.date] = None
-    licence: Optional[str] = None
-
-    # fichiers produits
-    deps: Optional[List[PurePath]] = None
-
-    # csv files
-    colonnes: Optional[dict[str, Colonne]] = None
+    mimetype: str | None = Field(alias="Format de fichier", default=None)
 
     def proprietes(self) -> dict[str, str]:
         props = {
@@ -107,22 +93,10 @@ class Dataset(BaseModel):
 
         return {k: v for k, v in props.items() if v}
 
-    def sources(self):
-        res = {}
-        work = [*self.deps]
-        while work:
-            current = SPEC[work.pop()]
-            if current.type == DatasetType.SOURCE:
-                res[current.path] = current
-            if current.deps:
-                work.extend(current.deps)
-
-        return [res[k] for k in sorted(res.keys())]
-
     def as_pandas_dataframe(self):
-        if self.path.suffix == ".parquet":
+        if self.mimetype == "application/vnd.apache.parquet":
             return pd.read_parquet(self.path)
-        elif self.path.suffix == ".csv":
+        elif self.path.suffix == "text/csv":
             params = {}
             for col_id, col_desc in self.colonnes.items():
                 if col_desc.type in PD_DTYPES:
@@ -143,16 +117,86 @@ class Dataset(BaseModel):
             raise ValueError("Format impossible à convertir en dataframe")
 
 
-def get_dataset(path: Union[str, bytes, Path]) -> Dataset:
-    if isinstance(path, (str, bytes)):
-        path = Path(path)
+class Source(DatasetSpec):
+    # sources
+    info_url: Optional[str] = Field(alias="URL d'information", default=None)
+    source_url: Optional[str] = Field(
+        alias="URL de téléchargement d'origine", default=None
+    )
+    editeur: Optional[str] = Field(alias="Éditeur", default=None)
+    date: Optional[datetime.date] = Field(alias="Date", default=None)
+    licence: Optional[str] = Field(alias="Licence d'utilisation", default=None)
 
+
+class Production(DatasetSpec):
+    deps: List[PurePath] = Field(default_factory=list)
+    section: Optional[str] = Field(default=None)
+
+    # csv files
+    colonnes: Optional[dict[str, ColonneMetadata]] = None
+
+    def sources(self, spec):
+        res = {}
+        work = [*self.deps]
+        while work:
+            current = spec[work.pop()]
+            if current.type == DatasetType.SOURCE:
+                res[current.path] = current
+            if current.deps:
+                work.extend(current.deps)
+
+        return [res[k] for k in sorted(res.keys())]
+
+
+def get_main_dir(path: Path) -> str:
     path = path.resolve().relative_to(ROOT_DIR)
-    return SPEC[path]
+
+    parents = list(path.parents)
+    assert parents[-2].name == "data"
+    return parents[-3].name
 
 
-def get_dataframe(path: Union[str, bytes, Path]) -> pd.DataFrame:
-    return get_dataset(path).as_pandas_dataframe()
+def load_spec(path: Path) -> DatasetSpec:
+    toml_path = path.with_suffix(f"{path.suffix}.toml")
+    if not toml_path.is_file():
+        raise FileNotFoundError(
+            f"Le fichier {path} n'est pas un dataset (fichier toml manquant)."
+        )
+
+    with toml_path.open("rb") as fd:
+        spec = tomllib.load(fd)
+
+    if get_main_dir(path) == "01_raw":
+        return Source.model_validate({"path": path, **spec})
+    return Production.model_validate({"path": path, **spec})
 
 
-_load_spec()
+def load_all_specs():
+    specs = []
+
+    roots = [
+        ("01_raw", Source),
+        ("02_clean", Production),
+        ("03_main", Production),
+    ]
+
+    for data_root, klass in roots:
+        for d, _, files in (ROOT_DIR / "data" / data_root).walk():
+            for f in files:
+                path = d / f
+                if path.suffix == ".toml":
+                    with path.open("rb") as fd:
+                        spec = tomllib.load(fd)
+
+                    dataset_path = path.with_suffix("").resolve().relative_to(ROOT_DIR)
+                    specs.append(klass.model_validate(
+                        {"path": dataset_path, **spec}
+                    ))
+
+    specs = {spec.path: spec for spec in sorted(specs, key=attrgetter("path"))}
+
+    return specs
+
+
+def get_dataframe(path: str | bytes | Path) -> pd.DataFrame:
+    return load_spec(path).as_pandas_dataframe()

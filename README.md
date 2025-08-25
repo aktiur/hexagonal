@@ -3,14 +3,6 @@
 Ce dépôt agrège toute l'information électorale, administrative et géographique
 française pour faciliter l'analyse électorale.
 
-## Installation
-
-L'installation du projet se fait avec uv
-
-```bash
-uv sync
-```
-
 ## Organisation du projet
 
 Les données sont stockées dans le dossier `data` avec les sous-dossiers suivants:
@@ -22,11 +14,18 @@ Les données sont stockées dans le dossier `data` avec les sous-dossiers suivan
 
 ## Utilisation
 
-### Récupération des données
+### Installation des dépendances
 
-Pour éviter d'avoir à faire tourner le pipeline en entier, la version des données
-correspondant à un commit
-peut être récupérée depuis le cache en ligne avec la commande suivante :
+L'installation du projet se fait avec uv
+
+```bash
+uv sync
+```
+
+### Récupération initiale des données
+
+Une version initiale des données (et notamment des sources, dont certaines peuvent ne
+plus être disponibles en ligne) peut être récupérée depuis le cache en ligne.
 
 ```bash
 uv run dvc pull
@@ -47,7 +46,7 @@ qui permet de vérifier si les artefacts générés localement sont
 cohérents avec ceux de la lockfile.
 
 ```bash
-dvc status
+uv run dvc status
 ````
 
 Si les artefacts sont cohérents, on a le message suivant:
@@ -63,7 +62,7 @@ Sinon, dvc nous dira quels artefacts sont incohérents.
 Après un développment, on peut mettre à jour le lockfile avec:
 
 ```bash
-dvc repro
+uv run dvc repro
 ```
 
 Le fichier `dvc.lock` est modifié et à committer.
@@ -90,3 +89,10 @@ Cette commande interroge le serveur d'origine, télécharge la nouvelle version 
 
 Pour d'autres fichiers, l'URL correspond à une édition particulière du fichier, et il
 faut donc la changer pour mettre à jour le fichier. C'est par exemple le cas du COG.
+
+Dans ce cas, il faut utiliser la commande :
+
+```bash
+uv run dvc import-url <nouvelle url> <chemin complet du fichier à mettre à jour>
+```
+

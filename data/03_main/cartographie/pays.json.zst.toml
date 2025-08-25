@@ -1,0 +1,10 @@
+nom = "Contours simplifiés des pays du monde"
+description = ""
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/32/c52edfb43946975f704c808374ce6b"
+s3_url = "s3://hexagonal-data/cache/files/md5/32/c52edfb43946975f704c808374ce6b"
+mimetype = "application/zstd"
+deps = [
+    "data/01_raw/natural_earth/ne_10m_admin_0_countries.zip",
+    "data/02_clean/geonames/cities1000.json.zst",
+]
+section = "Cartographie"

@@ -1,0 +1,120 @@
+nom = "Liste des candidats aux élections législatives de 2024"
+description = """
+
+"""
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/4e/859150f179338bb2561fa9c457536c"
+s3_url = "s3://hexagonal-data/cache/files/md5/4e/859150f179338bb2561fa9c457536c"
+mimetype = "text/csv"
+deps = [
+    "data/02_clean/elections/2022-legislatives-1-candidats.csv",
+    "data/02_clean/elections/2022-legislatives-1-circonscription.parquet",
+    "data/02_clean/elections/2022-legislatives-2-circonscription.parquet",
+    "data/01_raw/le_monde/2022-legislatives-nuances.csv",
+    "data/01_raw/legis_2022/2022-legislatives-nuances.csv",
+]
+section = "Résultats électoraux"
+
+[colonnes.circonscription]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.numero_panneau]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.numero_depot]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.sexe]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.nom]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.prenom]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.date_naissance]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.nuance]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.profession]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.sortant]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.sexe_suppleant]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.nom_suppleant]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.prenom_suppleant]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.date_naissance_suppleant]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.sortant_suppleant]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.nuance_lemonde]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.parti_lemonde]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.nuance_legis_2022]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.regroupement_om_legis_2022]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.gagnant]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.gagnant_premier_tour]
+type = "str"
+description = ""
+nullable = false

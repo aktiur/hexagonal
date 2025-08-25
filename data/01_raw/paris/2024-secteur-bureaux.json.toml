@@ -1,0 +1,9 @@
+nom = "Secteurs des bureaux de vote parisiens en 2024"
+description = """
+
+"""
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/0a/9c91c663f3b0fbe3d93e28eee2f816"
+s3_url = "s3://hexagonal-data/cache/files/md5/0a/9c91c663f3b0fbe3d93e28eee2f816"
+mimetype = "application/json"
+source_url = "https://opendata.paris.fr/api/explore/v2.1/catalog/datasets/secteurs-des-bureaux-de-vote-2024/exports/geojson?lang=fr&timezone=Europe%2FBerlin"
+editeur = "Mairie de Paris"

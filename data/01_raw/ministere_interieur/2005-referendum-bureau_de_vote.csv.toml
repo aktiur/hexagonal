@@ -1,0 +1,7 @@
+nom = "Résultats du référendum de 2005 par bureau de vote"
+description = ""
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/96/0334973bf05499070429ba154a833a"
+s3_url = "s3://hexagonal-data/cache/files/md5/96/0334973bf05499070429ba154a833a"
+mimetype = "text/csv"
+source_url = "https://www.data.gouv.fr/s/resources/referendum-de-2005-resultats-par-bureaux-de-vote/20150925-112918/RF05_BVot.txt"
+editeur = "Ministère de l'intérieur"

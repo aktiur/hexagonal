@@ -1,0 +1,34 @@
+nom = "Liste des départements"
+description = ""
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/ac/09c997f36bf573bcd937ba62cc3768"
+s3_url = "s3://hexagonal-data/cache/files/md5/ac/09c997f36bf573bcd937ba62cc3768"
+mimetype = "text/csv"
+deps = [
+    "data/01_raw/cog.zip",
+]
+section = "Découpage administratif"
+
+[colonnes.code_departement]
+type = "code_departement"
+description = ""
+nullable = false
+
+[colonnes.code_region]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.code_chef_lieu]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.type_nom]
+type = "entier"
+description = ""
+nullable = false
+
+[colonnes.nom]
+type = "str"
+description = ""
+nullable = false

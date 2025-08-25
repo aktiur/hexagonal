@@ -1,0 +1,7 @@
+nom = "Liste des candidats au deuxième tour des élections législatives de 2022"
+description = ""
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/6a/bd2abe7e78e547b7401d0f8938cd47"
+s3_url = "s3://hexagonal-data/cache/files/md5/6a/bd2abe7e78e547b7401d0f8938cd47"
+mimetype = "text/csv"
+source_url = "https://www.data.gouv.fr/fr/datasets/r/49172b79-a152-434d-b63a-bff926892b26"
+editeur = "Ministère de l'intérieur"

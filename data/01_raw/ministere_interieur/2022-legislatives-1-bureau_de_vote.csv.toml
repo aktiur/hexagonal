@@ -1,0 +1,7 @@
+nom = "Résultats du premier tour des élections législatives de 2022 par bureau de vote"
+description = ""
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/ab/8e9e02c1253a44a9ec7547851842ad"
+s3_url = "s3://hexagonal-data/cache/files/md5/ab/8e9e02c1253a44a9ec7547851842ad"
+mimetype = "text/csv"
+source_url = "https://www.data.gouv.fr/fr/datasets/r/a1f73b85-8194-44f4-a2b7-c343edb47d32"
+editeur = "Ministère de l'intérieur"

@@ -1,0 +1,9 @@
+nom = "Secteurs des bureaux de vote parisiens en 2020"
+description = """
+
+"""
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/1a/1bc12d49bd0512dfc60d2fcc300e19"
+s3_url = "s3://hexagonal-data/cache/files/md5/1a/1bc12d49bd0512dfc60d2fcc300e19"
+mimetype = "application/json"
+source_url = "https://opendata.paris.fr/api/explore/v2.1/catalog/datasets/secteurs-des-bureaux-de-vote-en-2020/exports/geojson?lang=fr&timezone=Europe%2FBerlin"
+editeur = "Mairie de Paris"

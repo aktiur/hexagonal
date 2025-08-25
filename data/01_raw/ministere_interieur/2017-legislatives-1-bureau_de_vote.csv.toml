@@ -1,0 +1,7 @@
+nom = "Résultats du premier tour des élections législatives de 2017 par bureau de vote"
+description = ""
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/3e/aa57f0825abafeeb38dcf81d3f80aa"
+s3_url = "s3://hexagonal-data/cache/files/md5/3e/aa57f0825abafeeb38dcf81d3f80aa"
+mimetype = "text/csv"
+source_url = "https://www.data.gouv.fr/fr/datasets/r/80cb1309-9147-4bae-b6e2-79877d549b50"
+editeur = "Ministère de l'intérieur"

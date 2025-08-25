@@ -1,0 +1,58 @@
+nom = "Résultats du deuxième tour des élections régionales de 2021 par bureau de vote"
+description = ""
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/5f/6aa830d0d2cb1f8629424b49897340"
+s3_url = "s3://hexagonal-data/cache/files/md5/5f/6aa830d0d2cb1f8629424b49897340"
+mimetype = "application/vnd.apache.parquet"
+deps = [
+    "data/01_raw/ministere_interieur/2021-regionales-2-bureau_de_vote.csv",
+]
+section = "Résultats électoraux"
+
+[colonnes.code_commune]
+type = "str"
+nullable = false
+
+[colonnes.bureau_de_vote]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.inscrits]
+type = "entier"
+description = ""
+nullable = false
+
+[colonnes.votants]
+type = "entier"
+description = ""
+nullable = false
+
+[colonnes.exprimes]
+type = "entier"
+description = ""
+nullable = false
+
+[colonnes.numero_panneau]
+type = "entier"
+description = ""
+nullable = false
+
+[colonnes.nuance]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.liste_court]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.liste_long]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.voix]
+type = "entier"
+description = ""
+nullable = false

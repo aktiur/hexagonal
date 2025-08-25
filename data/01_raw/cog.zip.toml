@@ -1,0 +1,23 @@
+nom = "Code Officiel Géographique 2024"
+description = """
+L'Insee met à disposition les fichiers annuels portant sur les communes, les
+cantons, les arrondissements, les départements, les régions et les pays et
+territoires étrangers de 1999 à 2024. Depuis 2021, l’Insee propose également la
+liste des collectivités territoriales ayant les compétences départementales et
+depuis 2022, deux fichiers concernant les collectivités et territoires français
+d’outre-mer, ainsi que leurs communes et autres zonages équivalents pour celles
+non découpées en commune. En 2024, deux nouveaux fichiers relatifs aux pays et
+territoires étrangers sont mis à disposition : liste rénovée des pays et
+territoires étrangers, liste des couples code - libellé de pays ou territoire
+étranger depuis 1943. Les changements concernant la diffusion du COG des pays et
+territoires étrangers sont présentés sur cette page. Un troisième nouveau
+fichier met à disposition la liste des couples code extension - territoire de
+rattachement (commune ou pays).
+"""
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/d4/c084b8a04dcc97ed99e1a687107bc0"
+s3_url = "s3://hexagonal-data/cache/files/md5/d4/c084b8a04dcc97ed99e1a687107bc0"
+mimetype = "application/zip"
+info_url = "https://www.insee.fr/fr/information/2560452"
+source_url = "https://www.insee.fr/fr/statistiques/fichier/8377162/cog_ensemble_2025_csv.zip"
+editeur = "INSEE"
+date = 2024-02-20

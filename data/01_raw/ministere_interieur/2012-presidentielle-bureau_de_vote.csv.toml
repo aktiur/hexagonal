@@ -1,0 +1,7 @@
+nom = "Résultats des deux tours de l'élection présidentielle de 2012"
+description = ""
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/c1/2faa2e574d4844ed8686d17519a9e4"
+s3_url = "s3://hexagonal-data/cache/files/md5/c1/2faa2e574d4844ed8686d17519a9e4"
+mimetype = "text/csv"
+source_url = "https://www.data.gouv.fr/fr/datasets/r/206b1668-2b31-46da-b957-9857f94fe85c"
+editeur = "Ministère de l'intérieur"

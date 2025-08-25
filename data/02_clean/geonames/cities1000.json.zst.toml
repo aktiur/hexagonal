@@ -1,0 +1,11 @@
+nom = "Villes de plus de 1000 habitants"
+description = """
+
+"""
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/78/5ad2e508f73cd2743988f9ab620c6b"
+s3_url = "s3://hexagonal-data/cache/files/md5/78/5ad2e508f73cd2743988f9ab620c6b"
+mimetype = "application/geo+json"
+deps = [
+    "data/01_raw/geonames/cities1000.zip",
+]
+section = "Cartographie"

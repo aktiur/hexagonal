@@ -1,0 +1,8 @@
+nom = "Résultats du premier tour de l'élection présidentielle 2022 par bureau de vote"
+description = ""
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/86/3143ce55ac2e71541972bd68ff9365"
+s3_url = "s3://hexagonal-data/cache/files/md5/86/3143ce55ac2e71541972bd68ff9365"
+mimetype = "text/csv"
+info_url = "https://www.data.gouv.fr/fr/datasets/election-presidentielle-des-10-et-24-avril-2022-resultats-definitifs-du-1er-tour/"
+source_url = "https://www.data.gouv.fr/fr/datasets/r/79b5cac4-4957-486b-bbda-322d80868224"
+editeur = "Ministère de l'intérieur"

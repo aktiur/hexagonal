@@ -1,0 +1,69 @@
+nom = "conseillers_municipaux"
+description = ""
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/f6/b66568a2b0d5736ebec705d8178a5b"
+s3_url = "s3://hexagonal-data/cache/files/md5/f6/b66568a2b0d5736ebec705d8178a5b"
+mimetype = "text/csv"
+deps = [
+    "data/01_raw/rne/conseillers_municipaux.csv",
+]
+section = "Répertoire national des élus"
+
+[colonnes.code_departement]
+type = "code_departement"
+description = ""
+nullable = true
+
+[colonnes.code_collectivite_sp]
+type = "str"
+description = ""
+nullable = true
+
+[colonnes.code_commune]
+type = "str"
+description = "code_commune"
+nullable = false
+
+[colonnes.nom]
+type = "str"
+description = ""
+nullable = true
+
+[colonnes.prenom]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.sexe]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.date_naissance]
+type = "date"
+description = ""
+nullable = false
+
+[colonnes.csp]
+type = "str"
+description = ""
+nullable = true
+
+[colonnes.date_debut_mandat]
+type = "date"
+description = ""
+nullable = false
+
+[colonnes.fonction]
+type = "str"
+description = ""
+nullable = true
+
+[colonnes.date_debut_fonction]
+type = "date"
+description = ""
+nullable = true
+
+[colonnes.nationalite]
+type = "str"
+description = ""
+nullable = false

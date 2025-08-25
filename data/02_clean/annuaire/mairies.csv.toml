@@ -1,0 +1,150 @@
+nom = "Liste des mairies"
+description = """
+Ce jeu de données extraits de l'annuaire administratif comporte une entrée pour chaque mairie
+française.
+"""
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/d7/c65ad31a69a88f357ef946eb09a356"
+s3_url = "s3://hexagonal-data/cache/files/md5/d7/c65ad31a69a88f357ef946eb09a356"
+mimetype = "text/csv"
+deps = [
+    "data/01_raw/annuaire/mairies.json",
+    "data/01_raw/annuaire/conseils_departementaux.json",
+]
+section = "Annuaire administratif"
+
+[colonnes.id]
+type = "str"
+description = """
+Un identifiant interne à l'annuaire de l'administration
+"""
+nullable = false
+
+[colonnes.code_departement]
+type = "code_departement"
+description = ""
+nullable = false
+
+[colonnes.code_commune]
+type = "code_commune"
+description = """
+Le code INSEE de la commune à laquelle appartient la mairie
+"""
+nullable = false
+
+[colonnes.siret]
+type = "str"
+description = """
+Le numéro de SIRET de cette mairie
+"""
+nullable = true
+
+[colonnes.nom]
+type = "str"
+description = "Le nom dans l'annuaire administratif"
+nullable = false
+
+[colonnes.emails]
+type = "str"
+description = """
+Les adresse emails de contact pour cette mairie
+"""
+nullable = true
+
+[colonnes.physique_complement1]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.physique_complement2]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.physique_numero_voie]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.physique_service_distribution]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.physique_code_postal]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.physique_commune]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.physique_pays]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.postale_complement1]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.postale_complement2]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.postale_numero_voie]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.postale_service_distribution]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.postale_code_postal]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.postale_commune]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.postale_pays]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.telephone]
+type = "str"
+description = """
+Numéros de téléphone de contact pour cette mairie.
+"""
+nullable = true
+
+[colonnes.coordonnees]
+type = "str"
+description = """
+Coordonnées géographiques de cette mairie, selon le système WGS84, au format <code>longitude,latitude</code>
+"""
+nullable = true
+
+[colonnes.type_accessibilite]
+type = "qualitative"
+description = "Type d'accessibilité"
+nullable = true
+
+[colonnes.details_accessibilite]
+type = "str"
+description = "Détails sur l'accessibilité de cette mairie"
+nullable = true
+
+[colonnes.ouverture]
+type = "str"
+description = "Horaires d'ouverture indiqués dans l'annuaire"
+nullable = true

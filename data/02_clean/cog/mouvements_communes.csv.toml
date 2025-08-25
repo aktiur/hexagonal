@@ -1,0 +1,77 @@
+nom = "Liste des mouvements de commune"
+description = """
+Ce fichier regroupe l'ensemble des modifications apportées à la liste des communes
+dans le code officiel géographique.
+
+Les types de modifications apportées sont les suivantes :
+- changement de nom
+- création
+- rétablissement
+- suppression
+- fusion simple
+- création commune nouvelle
+- fusion association
+- transformation fusion association en fusion simple
+- suppression commune déléguée
+- changement de département
+- transfert de chef-lieu
+- transformation commune associée en commune déléguée
+- rétablissement commune déléguée
+"""
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/66/013df6f486e4ff34511b19e596817c"
+s3_url = "s3://hexagonal-data/cache/files/md5/66/013df6f486e4ff34511b19e596817c"
+mimetype = "text/csv"
+deps = [
+    "data/01_raw/cog.zip",
+]
+section = "Découpage administratif"
+
+[colonnes.type_evenement]
+type = "qualitative"
+description = ""
+nullable = false
+
+[colonnes.date_effet]
+type = "date"
+description = ""
+nullable = false
+
+[colonnes.type_commune_avant]
+type = "str"
+description = ""
+nullable = true
+
+[colonnes.code_commune_avant]
+type = "str"
+description = ""
+nullable = true
+
+[colonnes.type_nom_avant]
+type = "entier"
+description = ""
+nullable = true
+
+[colonnes.nom_avant]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.type_commune_apres]
+type = "str"
+description = ""
+nullable = true
+
+[colonnes.code_commune_apres]
+type = "str"
+description = ""
+nullable = true
+
+[colonnes.type_nom_apres]
+type = "entier"
+description = ""
+nullable = true
+
+[colonnes.nom_apres]
+type = "str"
+description = ""
+nullable = false

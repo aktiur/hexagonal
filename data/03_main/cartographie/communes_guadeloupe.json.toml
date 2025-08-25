@@ -1,0 +1,11 @@
+nom = "Contours simplifiés des communes de Guadeloupe"
+description = """
+
+"""
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/f5/9ba60a2f1be8015930229c8e286ad7"
+s3_url = "s3://hexagonal-data/cache/files/md5/f5/9ba60a2f1be8015930229c8e286ad7"
+mimetype = "application/topo+json"
+deps = [
+    "data/03_main/geodata/communes.json",
+]
+section = "Cartographie"

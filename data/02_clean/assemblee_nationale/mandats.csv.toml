@@ -1,0 +1,89 @@
+nom = "Liste des mandats des député·es"
+description = """
+Ce fichier liste l'ensemble des mandats de député·es depuis la 12ème législature.
+
+Chaque mandat correspond à une période uninterrompue pendant laquelle une personne est restée députée, pour une
+législature donnée. La réélection d'un·e député·e correspond donc à un nouveau mandat.
+
+De la même façon, le cas d'une personne qui perd son statut de député·e avant de le récupérer sera matérialisé
+par deux mandats différents.
+"""
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/c4/d4adaba4b1e1f71406c74e4aff6bd2"
+s3_url = "s3://hexagonal-data/cache/files/md5/c4/d4adaba4b1e1f71406c74e4aff6bd2"
+mimetype = "text/csv"
+deps = [
+    "data/01_raw/assemblee-nationale.zip",
+]
+section = "Assemblée nationale"
+
+[colonnes.id_mandat]
+type = "str"
+description = """
+L'identifiant unique du mandat.
+Il débute par le préfixe \"PM\".
+"""
+nullable = false
+
+[colonnes.id_personne]
+type = "str"
+description = """
+L'identifiant unique de la personne dépositaire du mandat.
+Il débute par le préfixe \"PA\".
+"""
+nullable = false
+
+[colonnes.prenom]
+type = "str"
+description = """
+Le prénom de la personne dépositaire du mandat
+"""
+nullable = false
+
+[colonnes.nom]
+type = "str"
+description = """
+Le nom de famille de la personne dépositaire du mandat.
+"""
+nullable = false
+
+[colonnes.legislature]
+type = "entier"
+description = """
+Le numéro de la législature dans le cadre de laquelle se déroule le mandat.
+"""
+nullable = false
+
+[colonnes.circonscription]
+type = "code_circonscription_legislative"
+description = "Code de la circonscription"
+nullable = false
+
+[colonnes.suppleante]
+type = "str"
+description = "Code du suppléant"
+nullable = true
+
+[colonnes.date_debut]
+type = "date"
+description = ""
+nullable = false
+
+[colonnes.date_fin]
+type = "date"
+description = ""
+nullable = true
+
+[colonnes.cause_debut_mandat]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.cause_fin_mandat]
+type = "str"
+description = ""
+nullable = true
+
+[colonnes.place]
+type = "str"
+description = ""
+nullable = true

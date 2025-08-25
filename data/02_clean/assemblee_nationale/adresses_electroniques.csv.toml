@@ -1,0 +1,41 @@
+nom = "Adresses électroniques des député·es"
+description = """
+
+"""
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/b5/bf9b932f5d356eee9df9462e4d4960"
+s3_url = "s3://hexagonal-data/cache/files/md5/b5/bf9b932f5d356eee9df9462e4d4960"
+mimetype = "text/csv"
+deps = [
+    "data/01_raw/assemblee-nationale.zip",
+]
+section = "Assemblée nationale"
+
+[colonnes.id_adresse]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.id_personne]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.type]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.adresse_rattachement]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.adresse]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.poids]
+type = "str"
+description = ""
+nullable = false

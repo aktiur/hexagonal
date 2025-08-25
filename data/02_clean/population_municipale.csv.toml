@@ -1,0 +1,207 @@
+nom = "Population par commune de 1876 à 2022"
+description = """
+Pour chaque commune de France est indiquée la population pour chacun des recensements
+depuis celui de 1876.
+
+Les critères retenus pour définir la population d'une commune ont changé au cours du
+temps :
+
+- depuis le recensement de 2006, le chiffre donné est celui de la population
+municipale
+- entre 1962 et 1999, il s'agit de la population sans doubles comptes
+- entre 1876 et 1954, il s'agit de la population totale ; les populations d'un groupe de
+  communes ne peuvent donc pas être sommées pour obtenir la population du groupe de
+  communes.
+"""
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/c8/6bb28a31ffffc09704549b1cccc863"
+s3_url = "s3://hexagonal-data/cache/files/md5/c8/6bb28a31ffffc09704549b1cccc863"
+mimetype = "text/csv"
+deps = [
+    "data/01_raw/population_municipale.xlsx",
+]
+section = "Démographie"
+
+[colonnes.code_commune]
+type = "code_commune"
+description = ""
+nullable = false
+
+[colonnes.population_municipale_2022]
+type = "entier"
+description = ""
+nullable = true
+
+[colonnes.population_municipale_2021]
+type = "entier"
+description = ""
+nullable = true
+
+[colonnes.population_municipale_2020]
+type = "entier"
+description = ""
+nullable = true
+
+[colonnes.population_municipale_2019]
+type = "entier"
+description = ""
+nullable = true
+
+[colonnes.population_municipale_2018]
+type = "entier"
+description = ""
+nullable = true
+
+[colonnes.population_municipale_2017]
+type = "entier"
+description = ""
+nullable = true
+
+[colonnes.population_municipale_2016]
+type = "entier"
+description = ""
+nullable = true
+
+[colonnes.population_municipale_2015]
+type = "entier"
+description = ""
+nullable = true
+
+[colonnes.population_municipale_2014]
+type = "entier"
+description = ""
+nullable = true
+
+[colonnes.population_municipale_2013]
+type = "entier"
+description = ""
+nullable = true
+
+[colonnes.population_municipale_2012]
+type = "entier"
+description = ""
+nullable = true
+
+[colonnes.population_municipale_2011]
+type = "entier"
+description = ""
+nullable = true
+
+[colonnes.population_municipale_2010]
+type = "entier"
+description = ""
+nullable = true
+
+[colonnes.population_municipale_2009]
+type = "entier"
+description = ""
+nullable = true
+
+[colonnes.population_municipale_2008]
+type = "entier"
+description = ""
+nullable = true
+
+[colonnes.population_municipale_2007]
+type = "entier"
+description = ""
+nullable = true
+
+[colonnes.population_municipale_2006]
+type = "entier"
+description = ""
+nullable = true
+
+[colonnes.population_sans_doubles_comptes_1999]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.population_sans_doubles_comptes_1990]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.population_sans_doubles_comptes_1982]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.population_sans_doubles_comptes_1975]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.population_sans_doubles_comptes_1968]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.population_sans_doubles_comptes_1962]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.population_totale_1954]
+type = "entier"
+description = ""
+nullable = true
+
+[colonnes.population_totale_1936]
+type = "entier"
+description = ""
+nullable = true
+
+[colonnes.population_totale_1931]
+type = "entier"
+description = ""
+nullable = true
+
+[colonnes.population_totale_1926]
+type = "entier"
+description = ""
+nullable = true
+
+[colonnes.population_totale_1921]
+type = "entier"
+description = ""
+nullable = true
+
+[colonnes.population_totale_1911]
+type = "entier"
+description = ""
+nullable = true
+
+[colonnes.population_totale_1906]
+type = "entier"
+description = ""
+nullable = true
+
+[colonnes.population_totale_1901]
+type = "entier"
+description = ""
+nullable = true
+
+[colonnes.population_totale_1896]
+type = "entier"
+description = ""
+nullable = true
+
+[colonnes.population_totale_1891]
+type = "entier"
+description = ""
+nullable = true
+
+[colonnes.population_totale_1886]
+type = "entier"
+description = ""
+nullable = true
+
+[colonnes.population_totale_1881]
+type = "entier"
+description = ""
+nullable = true
+
+[colonnes.population_totale_1876]
+type = "entier"
+description = ""
+nullable = true

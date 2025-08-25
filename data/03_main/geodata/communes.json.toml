@@ -1,0 +1,15 @@
+nom = "Contours précis des communes de France"
+description = """
+
+"""
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/17/bdc1ae1b3d1eea0e5abfe2cbf91c0c"
+s3_url = "s3://hexagonal-data/cache/files/md5/17/bdc1ae1b3d1eea0e5abfe2cbf91c0c"
+mimetype = "application/topo+json"
+deps = [
+    "data/01_raw/ign/admin_express/communes.cpg",
+    "data/01_raw/ign/admin_express/communes.dbf",
+    "data/01_raw/ign/admin_express/communes.prj",
+    "data/01_raw/ign/admin_express/communes.shp",
+    "data/01_raw/ign/admin_express/communes.shx",
+]
+section = "Données géographiques précises"

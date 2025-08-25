@@ -1,0 +1,8 @@
+nom = "Répertoire national des élus — conseillers d'arrondissement de Paris, Marseille et Lyon"
+description = ""
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/2d/0a06f8637f8f6b47a2a48c929566cf"
+s3_url = "s3://hexagonal-data/cache/files/md5/2d/0a06f8637f8f6b47a2a48c929566cf"
+mimetype = "text/csv"
+info_url = "https://www.data.gouv.fr/fr/datasets/repertoire-national-des-elus-1/"
+source_url = "https://www.data.gouv.fr/fr/datasets/r/3b6b2281-b9d9-4959-ae9d-c2c166dff118"
+editeur = "Ministère de l'intérieur"

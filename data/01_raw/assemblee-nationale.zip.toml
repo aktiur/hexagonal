@@ -1,0 +1,15 @@
+nom = "Historique des députés"
+description = """
+Tous acteurs, tous mandats, tous organes depuis la XIème législature.
+
+Extrait au format JSON. L'archive zip comprend trois dossiers regroupant
+respectivement les acteurs (i.e. personnes physiques), les déports (en
+cas de conflit d'intérêt) et les organes (i.e. les personnes morales
+ou entités internes à l'assemblée nationale).
+"""
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/19/9712875f10e1705145f1334458aaaf"
+s3_url = "s3://hexagonal-data/cache/files/md5/19/9712875f10e1705145f1334458aaaf"
+mimetype = "application/zip"
+source_url = "https://data.assemblee-nationale.fr/static/openData/repository/17/amo/tous_acteurs_mandats_organes_xi_legislature/AMO30_tous_acteurs_tous_mandats_tous_organes_historique.json.zip"
+editeur = "Assemblée nationale de la République française"
+licence = "Licence Ouverte / Open Licence"

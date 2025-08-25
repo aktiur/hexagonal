@@ -1,0 +1,11 @@
+nom = "Contours simplifiés des communes de Mayotte"
+description = """
+
+"""
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/ea/c1c4730d028cf791fc15fce3c27b3e"
+s3_url = "s3://hexagonal-data/cache/files/md5/ea/c1c4730d028cf791fc15fce3c27b3e"
+mimetype = "application/topo+json"
+deps = [
+    "data/03_main/geodata/communes.json",
+]
+section = "Cartographie"

@@ -1,0 +1,10 @@
+nom = "Codage des nuances politiques des candidats aux élections législatives des 12 et 19 juin 2022"
+description = """
+Le projet LEGIS-2022 regroupe une trentaine de chercheurs en science politique spécialistes des études électorales et du parlement, issus des principaux centres de recherches français, à Sciences Po Paris, Sciences Po Grenoble, Université Panthéon-Sorbonne, Université Panthéon-Assas, Université de Lille, Université de Nice Côte d'Azur. Il s'est consacré à produire un étiquetage de l'appartenance partisane de chacun des 6290 candidats aux élections législatives de l'hexagone, des outremers et des Français de l'Etranger, en fonction d'une grille comportant 39 nuances politiques (contre 16 pour le bureau des élections du ministère de l'Intérieur). Son objectif principal est de comprendre la manière dont l'élection à venir participe de la recomposition politique en cours dans notre pays.
+"""
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/40/277717333ff3a1e20113d5fd249219"
+s3_url = "s3://hexagonal-data/cache/files/md5/40/277717333ff3a1e20113d5fd249219"
+mimetype = "text/csv"
+info_url = "https://www.data.gouv.fr/datasets/legis-2022-codage-des-nuances-politiques-des-candidats-aux-elections-legislatives-des-12-et-19-juin-2022/"
+source_url = "https://www.data.gouv.fr/fr/datasets/r/67d3987a-3f9d-464c-a678-116c25186f66"
+editeur = "LEGIS-2022"

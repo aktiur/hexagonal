@@ -1,0 +1,8 @@
+nom = "Répertoire national des élus — conseillers régionaux"
+description = ""
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/2f/e0945c9714d346bb2a7fdf1cffc7c3"
+s3_url = "s3://hexagonal-data/cache/files/md5/2f/e0945c9714d346bb2a7fdf1cffc7c3"
+mimetype = "text/csv"
+info_url = "https://www.data.gouv.fr/fr/datasets/repertoire-national-des-elus-1/"
+source_url = "https://www.data.gouv.fr/fr/datasets/r/430e13f9-834b-4411-a1a8-da0b4b6e715c"
+editeur = "Ministère de l'intérieur"

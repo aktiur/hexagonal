@@ -1,0 +1,9 @@
+nom = "Secteurs des bureaux de vote parisiens en 2017"
+description = """
+
+"""
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/85/c2fb6205c340bf5a1503c2bd2b7c43"
+s3_url = "s3://hexagonal-data/cache/files/md5/85/c2fb6205c340bf5a1503c2bd2b7c43"
+mimetype = "application/json"
+source_url = "https://opendata.paris.fr/api/explore/v2.1/catalog/datasets/secteurs-des-bureaux-de-vote-en-2017/exports/geojson?lang=fr&timezone=Europe%2FBerlin"
+editeur = "Mairie de Paris"

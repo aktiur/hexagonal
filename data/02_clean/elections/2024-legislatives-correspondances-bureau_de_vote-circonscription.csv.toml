@@ -1,0 +1,27 @@
+nom = "Correspondance entre bureaux de vote et circonscription pendant les élections législatives 2024"
+description = """
+
+"""
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/6e/54cb1756529a7e80a1ae9e7bacd433"
+s3_url = "s3://hexagonal-data/cache/files/md5/6e/54cb1756529a7e80a1ae9e7bacd433"
+mimetype = "text/csv"
+deps = [
+    "data/02_clean/elections/2024-legislatives-1-bureau_de_vote.parquet",
+    "data/02_clean/elections/2024-legislatives-1-candidats.csv",
+]
+section = "Résultats électoraux"
+
+[colonnes.code_commune]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.bureau_de_vote]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.circonscription]
+type = "str"
+description = ""
+nullable = false

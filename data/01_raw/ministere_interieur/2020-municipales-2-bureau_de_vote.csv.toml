@@ -1,0 +1,7 @@
+nom = "Résultats du deuxième tour des municipales 2020 par bureau de vote"
+description = ""
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/fa/88d768c4ce3098a7f883dd9e7b03e7"
+s3_url = "s3://hexagonal-data/cache/files/md5/fa/88d768c4ce3098a7f883dd9e7b03e7"
+mimetype = "text/csv"
+source_url = "https://www.data.gouv.fr/fr/datasets/r/7e641d2e-e017-43d4-9434-49d5acd44b4b"
+editeur = "Ministère de l'intérieur"

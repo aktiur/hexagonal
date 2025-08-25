@@ -1,0 +1,14 @@
+nom = "Base de données locales de l'annuaire de l'administration"
+description = """
+La Base de données locales référence plus de 63 000 guichets publics locaux
+(mairies, organismes sociaux, services de l'état, etc.). Elle fournit leurs
+coordonnées (adresses, téléphones, site internet, horaires d'ouverture,
+coordonnées de géolocalisation). En complément, sont indexés plus de 36 000
+fichiers des communes (conformes au Code Officiel Géographique de l’INSEE),
+précisant la compétence géographique des guichets.
+"""
+url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/df/f4276a47b217d1ab1897817523e9c9"
+s3_url = "s3://hexagonal-data/cache/files/md5/df/f4276a47b217d1ab1897817523e9c9"
+mimetype = "application/x-tar+bzip2"
+source_url = "https://lecomarquage.service-public.fr/donnees_locales_v4/all_latest.tar.bz2"
+editeur = "Premier ministre"

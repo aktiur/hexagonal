@@ -1,28 +1,22 @@
 import csv
 import mimetypes
-import tomllib
+import sys
 
 import pyarrow.parquet as pq
 import tomli_w
 from pyarrow import ArrowException
 
-from hexagonal.files.dvc_files import get_dvc_files
-from hexagonal.files.spec import PRODUCTION_TYPES, ColonneType
-
-FIELDS_ORDER = [
-    "nom",
-    "section",
-    "type",
-    "description",
-    "mimetype",
-    "encoding",
-    "url",
-    "s3_url",
-    "source_url",
-    "info_url",
-    "editeur",
-    "licence",
-]
+from hexagonal.files import ROOT_DIR
+from hexagonal.files.dvc_files import DVCFile, get_dvc_files
+from hexagonal.files.spec import (
+    ColonneMetadata,
+    ColonneType,
+    DatasetSpec,
+    Production,
+    Source,
+    get_main_dir,
+    load_spec,
+)
 
 mimetypes.add_type(
     "application/vnd.apache.parquet",
@@ -39,105 +33,142 @@ PARQUET_TYPES = {
 }
 
 
-def update_spec():
-    new_spec = {}
+def missing_files():
+    missing = []
+    for d, _, files in (ROOT_DIR / "data" / "01_raw").walk():
+        for f in files:
+            path = d / f
+            if path.suffix == ".toml" and not path.with_suffix(".dvc").is_file():
+                missing.append(path.with_suffix(""))
 
-    with open("spec.toml", "rb") as fd:
-        old_spec = tomllib.load(fd)
+    for prod_dir in ("02_clean", "03_main"):
+        for d, _, files in (ROOT_DIR / "data" / prod_dir).walk():
+            for f in files:
+                path = d / f
+                if path.suffix == ".toml" and not path.with_suffix("").is_file():
+                    missing.append(path.with_suffix(""))
 
-    data_files = sorted(get_dvc_files())
+    return missing
 
-    for file in data_files:
-        orig_spec = old_spec.get(str(file.path), {})
 
-        defaults = {
-            "nom": file.path.stem,
-            "description": "\n",
-            "type": file.default_type,
-        }
+def updated_values(file: DVCFile):
+    spec = {
+        "url": file.http_url,
+        "s3_url": file.s3_url,
+    }
 
-        mimetype, encoding = mimetypes.guess_type(file.path)
-        if mimetype and encoding:
-            mimetype = f"{mimetype}+{encoding}"
-        elif encoding:
-            mimetype = f"application/x-{encoding}"
+    if file.source_url:
+        spec["source_url"] = file.source_url
 
-        overwrites = {
-            "url": file.http_url,
-            "s3_url": file.s3_url,
-            "mimetype": mimetype or "",
-        }
-        if file.data_deps:
-            overwrites["deps"] = [str(f) for f in file.data_deps]
+    if file.data_deps:
+        spec["deps"] = [str(f) for f in file.data_deps]
 
-        file_spec = {**defaults, **orig_spec, **overwrites}
+    return spec
+
+
+def default_spec(file: DVCFile):
+    mimetype, encoding = mimetypes.guess_type(file.path)
+    if mimetype and encoding:
+        mimetype = f"{mimetype}+{encoding}"
+    elif encoding:
+        mimetype = f"application/x-{encoding}"
+
+    spec_kwargs = {
+        "path": file.path,
+        "nom": file.path.stem,
+        "description": "\n",
+        "mimetype": mimetype,
+        **updated_values(file),
+    }
+
+    if get_main_dir(file.path) == "01_raw":
+        if file.path.with_suffix(f"{file.path.suffix}.dvc").is_file():
+            return Source.model_validate(spec_kwargs)
+        else:
+            return None
+    return Production.model_validate(spec_kwargs)
+
+
+def update_csv_columns(file: DVCFile, columns: dict[str, ColonneMetadata]):
+    try:
+        with open(file.path, "r", newline="") as fd:
+            r = csv.reader(fd)
+            header = next(r)
+    except (csv.Error, UnicodeDecodeError, FileNotFoundError):
+        return columns
+
+    updated_columns = {}
+    for colonne in header:
+        updated_columns[colonne] = columns.get(
+            colonne, ColonneMetadata(type=ColonneType.STR)
+        )
+
+    return updated_columns
+
+
+def update_parquet_columns(file: DVCFile, columns: dict[str, ColonneMetadata]):
+    try:
+        parquet_data = pq.ParquetFile(file.path)
+        metadata = parquet_data.schema
+    except ArrowException:
+        return columns
+
+    updated_columns = {}
+    for column in metadata:
+        updated_columns[column.name] = columns.get(
+            column.name,
+            ColonneMetadata(type=ColonneType.STR),
+        )
+        parquet_type = PARQUET_TYPES.get(
+            column.logical_type.type, PARQUET_TYPES[column.physical_type]
+        )
+        updated_columns[column.name].type = parquet_type
+
+    return updated_columns
+
+
+def write_spec(spec: DatasetSpec):
+    path = spec.path.with_suffix(f"{spec.path.suffix}.toml")
+    content = spec.model_dump(exclude_none=True)
+    content.pop("path")
+
+    with open(path, "wb") as fd:
+        tomli_w.dump(content, fd, multiline_strings=True)
+
+
+def update_specs():
+    for f in missing_files():
+        sys.stderr.write(f"Spec présente pour le fichier manquant {f}\n")
+
+    for file in get_dvc_files():
+        try:
+            spec = load_spec(file.path)
+        except FileNotFoundError:
+            spec = default_spec(file)
+        else:
+            for k, v in updated_values(file).items():
+                setattr(spec, k, v)
+
+        if not spec:
+            continue
+
+        if isinstance(spec, Source) and not spec.editeur:
+            sys.stderr.write(f"Source sans editeur: {file}\n")
+
+        if isinstance(spec, Production) and not spec.section:
+            sys.stderr.write(f"Production sans section: {file}\n")
+
+        if isinstance(spec, Production) and spec.mimetype == "text/csv":
+            spec.colonnes = update_csv_columns(file, spec.colonnes or {})
 
         if (
-            file_spec["mimetype"] == "text/csv"
-            and file_spec["type"] in PRODUCTION_TYPES
+            isinstance(spec, Production)
+            and spec.mimetype == "application/vnd.apache.parquet"
         ):
-            try:
-                with open(file.path, "r", newline="") as fd:
-                    r = csv.reader(fd)
-                    colonnes = next(r)
-            except (csv.Error, UnicodeDecodeError, FileNotFoundError):
-                pass
-            else:
-                original_colonnes = file_spec.get("colonnes", {})
-                colonnes_table = {}
-                for colonne in colonnes:
-                    colonnes_table[colonne] = original_colonnes.get(colonne, {})
+            spec.colonnes = update_parquet_columns(file, spec.colonnes or {})
 
-                    colonnes_defaults = {
-                        "description": "",
-                        "type": ColonneType.STR,
-                    }
-
-                    for k, v in colonnes_defaults.items():
-                        colonnes_table[colonne].setdefault(k, v)
-
-                file_spec["colonnes"] = colonnes_table
-
-        fields = [
-            *[f for f in FIELDS_ORDER if f in file_spec],
-            *[f for f in file_spec if f not in FIELDS_ORDER],
-        ]
-        new_spec[str(file.path)] = {f: file_spec[f] for f in fields}
-
-        if (
-            file_spec["mimetype"] == "application/vnd.apache.parquet"
-            and file_spec["type"] in PRODUCTION_TYPES
-        ):
-            try:
-                parquet_data = pq.ParquetFile(file.path)
-                columns = parquet_data.schema
-
-                original_colonnes = file_spec.get("colonnes", {})
-                colonnes_table = {}
-
-                for colonne in columns:
-                    colonnes_table[colonne.name] = original_colonnes.get(
-                        colonne.name, {}
-                    )
-
-                    col_type = PARQUET_TYPES.get(
-                        colonne.logical_type.type, PARQUET_TYPES[colonne.physical_type]
-                    )
-
-                    colonnes_defaults = {
-                        "description": "",
-                        "type": col_type,
-                    }
-
-                    for k, v in colonnes_defaults.items():
-                        colonnes_table[colonne.name].setdefault(k, v)
-
-            except ArrowException:
-                pass
-
-    with open("spec.toml", "wb") as fd:
-        tomli_w.dump(new_spec, fd, multiline_strings=True)
+        write_spec(spec)
 
 
 if __name__ == "__main__":
-    update_spec()
+    update_specs()
