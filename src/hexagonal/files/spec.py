@@ -96,7 +96,7 @@ class DatasetSpec(BaseModel):
     def as_pandas_dataframe(self):
         if self.mimetype == "application/vnd.apache.parquet":
             return pd.read_parquet(self.path)
-        elif self.path.suffix == "text/csv":
+        elif self.mimetype == "text/csv":
             params = {}
             for col_id, col_desc in self.colonnes.items():
                 if col_desc.type in PD_DTYPES:
@@ -189,9 +189,7 @@ def load_all_specs():
                         spec = tomllib.load(fd)
 
                     dataset_path = path.with_suffix("").resolve().relative_to(ROOT_DIR)
-                    specs.append(klass.model_validate(
-                        {"path": dataset_path, **spec}
-                    ))
+                    specs.append(klass.model_validate({"path": dataset_path, **spec}))
 
     specs = {spec.path: spec for spec in sorted(specs, key=attrgetter("path"))}
 
@@ -199,4 +197,6 @@ def load_all_specs():
 
 
 def get_dataframe(path: str | bytes | Path) -> pd.DataFrame:
+    if isinstance(path, str | bytes):
+        path = Path(path)
     return load_spec(path).as_pandas_dataframe()
