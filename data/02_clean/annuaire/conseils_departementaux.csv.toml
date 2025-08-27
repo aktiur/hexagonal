@@ -1,12 +1,6 @@
 nom = "Annuaire administratif — Conseils départementaux"
 description = ""
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/0f/76a65596b5cc61a8469f2c50ea349a"
-s3_url = "s3://hexagonal-data/cache/files/md5/0f/76a65596b5cc61a8469f2c50ea349a"
 mimetype = "text/csv"
-deps = [
-    "data/01_raw/annuaire/mairies.json",
-    "data/01_raw/annuaire/conseils_departementaux.json",
-]
 section = "Annuaire administratif"
 
 [colonnes.id]

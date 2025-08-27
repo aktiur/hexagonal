@@ -1,11 +1,6 @@
 nom = "Résultats du deuxième tour de l'élection présidentielle 2022 par bureau de vote"
 description = ""
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/56/b4a7e9e4285a209e5f678ca0eb80b6"
-s3_url = "s3://hexagonal-data/cache/files/md5/56/b4a7e9e4285a209e5f678ca0eb80b6"
 mimetype = "application/vnd.apache.parquet"
-deps = [
-    "data/01_raw/ministere_interieur/2022-presidentielle-2-bureau_de_vote.csv",
-]
 section = "Résultats électoraux"
 
 [colonnes.code_commune]

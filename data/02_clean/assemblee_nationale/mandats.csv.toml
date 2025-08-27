@@ -8,12 +8,7 @@ législature donnée. La réélection d'un·e député·e correspond donc à un 
 De la même façon, le cas d'une personne qui perd son statut de député·e avant de le récupérer sera matérialisé
 par deux mandats différents.
 """
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/c4/d4adaba4b1e1f71406c74e4aff6bd2"
-s3_url = "s3://hexagonal-data/cache/files/md5/c4/d4adaba4b1e1f71406c74e4aff6bd2"
 mimetype = "text/csv"
-deps = [
-    "data/01_raw/assemblee-nationale.zip",
-]
 section = "Assemblée nationale"
 
 [colonnes.id_mandat]

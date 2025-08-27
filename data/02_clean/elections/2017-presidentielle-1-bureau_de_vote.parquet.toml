@@ -1,11 +1,6 @@
 nom = "Résultats du premier tour de l'élection présidentielle de 2017 par bureau de vote"
 description = ""
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/4f/304e948aa175904cd9eaa49648d183"
-s3_url = "s3://hexagonal-data/cache/files/md5/4f/304e948aa175904cd9eaa49648d183"
 mimetype = "application/vnd.apache.parquet"
-deps = [
-    "data/01_raw/ministere_interieur/2017-presidentielle-1-bureau_de_vote.csv",
-]
 section = "Résultats électoraux"
 
 [colonnes.code_commune]

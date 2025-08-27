@@ -1,11 +1,6 @@
 nom = "Liste des candidats au deuxième tour des élections législatives de 2022"
 description = ""
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/2f/142b8fe02a85c63f54a962c147036c"
-s3_url = "s3://hexagonal-data/cache/files/md5/2f/142b8fe02a85c63f54a962c147036c"
 mimetype = "text/csv"
-deps = [
-    "data/01_raw/ministere_interieur/2022-legislatives-2-candidats.csv",
-]
 section = "Résultats électoraux"
 
 [colonnes.departement]

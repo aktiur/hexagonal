@@ -2,10 +2,5 @@ nom = "Contours simplifiés des communes de la Réunion"
 description = """
 
 """
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/80/64913b69433010278a5577fbf568f4"
-s3_url = "s3://hexagonal-data/cache/files/md5/80/64913b69433010278a5577fbf568f4"
 mimetype = "application/topo+json"
-deps = [
-    "data/03_main/geodata/communes.json",
-]
 section = "Cartographie"

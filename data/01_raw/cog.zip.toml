@@ -14,10 +14,7 @@ territoires étrangers sont présentés sur cette page. Un troisième nouveau
 fichier met à disposition la liste des couples code extension - territoire de
 rattachement (commune ou pays).
 """
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/d4/c084b8a04dcc97ed99e1a687107bc0"
-s3_url = "s3://hexagonal-data/cache/files/md5/d4/c084b8a04dcc97ed99e1a687107bc0"
 mimetype = "application/zip"
 info_url = "https://www.insee.fr/fr/information/2560452"
-source_url = "https://www.insee.fr/fr/statistiques/fichier/8377162/cog_ensemble_2025_csv.zip"
 editeur = "INSEE"
 date = 2024-02-20

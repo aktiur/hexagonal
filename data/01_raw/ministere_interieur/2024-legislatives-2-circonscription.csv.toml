@@ -1,7 +1,4 @@
 nom = "Résultats du deuxième tour des élections législatives 2024 par circonscription législative"
 description = ""
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/52/32b0951ce8ca92573ea3b35d5d62a0"
-s3_url = "s3://hexagonal-data/cache/files/md5/52/32b0951ce8ca92573ea3b35d5d62a0"
 mimetype = "text/csv"
-source_url = "https://www.data.gouv.fr/fr/datasets/r/41ed46cd-77c2-4ecc-b8eb-374aa953ca39"
 editeur = "Ministère de l'intérieur"

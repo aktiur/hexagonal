@@ -1,11 +1,6 @@
 nom = "conseillers_regionaux"
 description = ""
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/f3/211aeded6da625a227af278eedb8f5"
-s3_url = "s3://hexagonal-data/cache/files/md5/f3/211aeded6da625a227af278eedb8f5"
 mimetype = "text/csv"
-deps = [
-    "data/01_raw/rne/conseillers_regionaux.csv",
-]
 section = "Répertoire national des élus"
 
 [colonnes.code_region]

@@ -1,7 +1,4 @@
 nom = "Résultats du premier tour des élections départementales de 2021 par bureau de vote"
 description = ""
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/77/9c9e5cefb35ef7b91379a6a761a1a0"
-s3_url = "s3://hexagonal-data/cache/files/md5/77/9c9e5cefb35ef7b91379a6a761a1a0"
 mimetype = "text/csv"
-source_url = "https://www.data.gouv.fr/fr/datasets/r/57370a9b-7fa1-465c-a051-c984fc21321f"
 editeur = "Ministère de l'intérieur"

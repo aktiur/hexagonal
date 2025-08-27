@@ -1,7 +1,4 @@
 nom = "Séries historiques de population par commune (1876 à 2022)"
 description = ""
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/d6/b7b360966185d728501adeaac33b53"
-s3_url = "s3://hexagonal-data/cache/files/md5/d6/b7b360966185d728501adeaac33b53"
 mimetype = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-source_url = "https://www.insee.fr/fr/statistiques/fichier/3698339/base-pop-historiques-1876-2022.xlsx"
 editeur = "INSEE"

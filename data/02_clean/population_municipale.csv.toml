@@ -13,12 +13,7 @@ municipale
   communes ne peuvent donc pas être sommées pour obtenir la population du groupe de
   communes.
 """
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/c8/6bb28a31ffffc09704549b1cccc863"
-s3_url = "s3://hexagonal-data/cache/files/md5/c8/6bb28a31ffffc09704549b1cccc863"
 mimetype = "text/csv"
-deps = [
-    "data/01_raw/population_municipale.xlsx",
-]
 section = "Démographie"
 
 [colonnes.code_commune]

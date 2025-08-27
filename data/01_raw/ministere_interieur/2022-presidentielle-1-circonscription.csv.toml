@@ -1,8 +1,5 @@
 nom = "Résultats du premier tour de l'élection présidentielle 2022 par circonscription législative"
 description = ""
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/fb/5e45dd6a5ae43c93d3be0969d6c0d0"
-s3_url = "s3://hexagonal-data/cache/files/md5/fb/5e45dd6a5ae43c93d3be0969d6c0d0"
 mimetype = "text/csv"
 info_url = "https://www.data.gouv.fr/fr/datasets/election-presidentielle-des-10-et-24-avril-2022-resultats-definitifs-du-1er-tour/"
-source_url = "https://www.data.gouv.fr/fr/datasets/r/056c3d1e-87ef-42b2-ae9c-57ad9d81b563"
 editeur = "Ministère de l'intérieur"

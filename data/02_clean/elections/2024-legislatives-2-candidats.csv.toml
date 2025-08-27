@@ -1,11 +1,6 @@
 nom = "Liste des candidats au deuxième tour des élections législatives de 2024"
 description = ""
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/b1/4d19789e35e4f9fbf9a0d236867e48"
-s3_url = "s3://hexagonal-data/cache/files/md5/b1/4d19789e35e4f9fbf9a0d236867e48"
 mimetype = "text/csv"
-deps = [
-    "data/01_raw/ministere_interieur/2024-legislatives-2-candidats.csv",
-]
 section = "Résultats électoraux"
 
 [colonnes.departement]

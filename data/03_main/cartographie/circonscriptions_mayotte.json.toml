@@ -2,10 +2,5 @@ nom = "Contours simplifiés des circonscriptions législatives de Mayotte"
 description = """
 
 """
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/d0/9d93638f0a82a9390ca0ebc1d6b3f7"
-s3_url = "s3://hexagonal-data/cache/files/md5/d0/9d93638f0a82a9390ca0ebc1d6b3f7"
 mimetype = "application/topo+json"
-deps = [
-    "data/03_main/geodata/circonscriptions_legislatives.json",
-]
 section = "Cartographie"

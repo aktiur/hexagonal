@@ -1,11 +1,6 @@
 nom = "conseillers_csp"
 description = ""
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/a9/0037e40d09d62940863628e235432c"
-s3_url = "s3://hexagonal-data/cache/files/md5/a9/0037e40d09d62940863628e235432c"
 mimetype = "text/csv"
-deps = [
-    "data/01_raw/rne/conseillers_csp.csv",
-]
 section = "Répertoire national des élus"
 
 [colonnes.type_csp]

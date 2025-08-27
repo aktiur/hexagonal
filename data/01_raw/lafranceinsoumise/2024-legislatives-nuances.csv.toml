@@ -3,7 +3,5 @@ description = """
 Ce fichier propose un nuançage réalisé par les équipes de la France insoumise pendant la
 campagne des législatives 2024 à des fins d'analyse électorale.
 """
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/24/a9e931e2d43373ecddd42a2434eba6"
-s3_url = "s3://hexagonal-data/cache/files/md5/24/a9e931e2d43373ecddd42a2434eba6"
 mimetype = "text/csv"
 editeur = "La France insoumise"

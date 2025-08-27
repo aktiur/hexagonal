@@ -1,8 +1,5 @@
 nom = "Résultats du premier tour de l'élection présidentielle de 2017 par bureau de vote"
 description = ""
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/1f/c04aa0a22b83172876987f6146b0ea"
-s3_url = "s3://hexagonal-data/cache/files/md5/1f/c04aa0a22b83172876987f6146b0ea"
 mimetype = "text/csv"
 info_url = "https://www.data.gouv.fr/fr/datasets/election-presidentielle-des-23-avril-et-7-mai-2017-resultats-definitifs-du-1er-tour-par-bureaux-de-vote/"
-source_url = "https://www.data.gouv.fr/fr/datasets/r/8fdb0926-ea9d-4fb4-a136-7767cd97e30b"
 editeur = "Ministère de l'intérieur"

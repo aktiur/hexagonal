@@ -1,7 +1,4 @@
 nom = "Liste des candidats au premier tour des élections législatives 2022"
 description = ""
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/f3/376d549226719ce0d499493996b753"
-s3_url = "s3://hexagonal-data/cache/files/md5/f3/376d549226719ce0d499493996b753"
 mimetype = "text/csv"
-source_url = "https://www.data.gouv.fr/fr/datasets/r/c79af2f3-1733-4df3-be37-caebacbc1321"
 editeur = "Ministère de l'intérieur"

@@ -2,16 +2,7 @@ nom = "Liste des députés en cours de mandat"
 description = """
 
 """
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/40/eb56c796908bacc792e7343cf7d554"
-s3_url = "s3://hexagonal-data/cache/files/md5/40/eb56c796908bacc792e7343cf7d554"
 mimetype = "text/csv"
-deps = [
-    "data/02_clean/assemblee_nationale/fiches.csv",
-    "data/02_clean/assemblee_nationale/adresses_electroniques.csv",
-    "data/02_clean/assemblee_nationale/commissions.csv",
-    "data/02_clean/assemblee_nationale/mandats.csv",
-    "data/02_clean/assemblee_nationale/affiliations.csv",
-]
 section = "Assemblée nationale"
 
 [colonnes.id_personne]

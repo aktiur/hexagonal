@@ -3,6 +3,9 @@
 Ce dépôt agrège toute l'information électorale, administrative et géographique
 française pour faciliter l'analyse électorale.
 
+- [Liste des fichiers mis à disposition](productions.md)
+- [Liste des sources utilisées](sources.md)
+
 ## Organisation du projet
 
 Les données sont stockées dans le dossier `data` avec les sous-dossiers suivants:
@@ -96,3 +99,49 @@ Dans ce cas, il faut utiliser la commande :
 uv run dvc import-url <nouvelle url> <chemin complet du fichier à mettre à jour>
 ```
 
+### Pousser les modifications
+
+Lorsque des fichiers ont été modifiés, il faut les pousser vers le cache distant de DVC
+pour les rendre accessibles. Pour cela, il est nécessaire de me contacter pour obtenir
+des droits en écriture sur le bucket S3 `hexagonal-data`.
+
+```shell
+uv run dvc push -r s3
+```
+
+## Documentation
+
+L'ensemble des sources, et l'ensemble des données produites sont documentés. Cette
+documentation se trouve dans un fichier portant le même nom que le fichier documenté,
+suivi de l'extension `.toml`.
+
+### Créer la documentation pour un nouveau fichier
+
+La commande suivante permet de créer une version initiale de ces fichiers pour les
+nouvelles sources et productions :
+
+```shell
+just update_specs
+```
+
+Elle met par ailleurs à jour la liste des dépendances des différents fichiers (à partir
+des pipelines définis dans DVC).
+
+### Créer les fichiers de documentation des sources et productions
+
+La commande suivante permet de créer ou mettre à jour les deux fichiers <sources.md>
+et <productions.md> :
+
+```shell
+just documentation
+```
+
+### Ajouter les bons headers aux fichiers dans S3
+
+Pour permettre le téléchargement correct des fichiers depuis les fichiers <sources.md>
+et <productions.md>, il faut réécrire les headers HTTP `Content-Type` et
+`Content-Disposition` pour y mettre les bons types et noms de fichiers.
+
+```shell
+just rewrite_s3_headers
+```

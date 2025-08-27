@@ -3,10 +3,7 @@ description = """
 Comporte la liste de toutes les communes de France et l'EPCI à fiscalité propre à
 laquelle elles appartiennent au 1er janvier 2025
 """
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/44/1fe3c5fc561d00cfc64a34ef304a4a"
-s3_url = "s3://hexagonal-data/cache/files/md5/44/1fe3c5fc561d00cfc64a34ef304a4a"
 mimetype = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
 info_url = "https://www.collectivites-locales.gouv.fr/institutions/liste-et-composition-des-epci-fiscalite-propre"
-source_url = "https://www.collectivites-locales.gouv.fr/files/Accueil/DESL/2025/epcicom2025-2.xlsx"
 editeur = "Direction générale des finances et direction générale des collectivités locales"
 date = 2025-01-01

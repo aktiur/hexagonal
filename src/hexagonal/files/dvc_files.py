@@ -1,13 +1,13 @@
-from dataclasses import dataclass
+from __future__ import annotations
+
+from dataclasses import dataclass, field
 from os.path import join
 from pathlib import Path
-from typing import Generator
 
 from dvc.api import DVCFileSystem
-from dvc.stage import Stage
 
-from hexagonal.files import CONFIG, DATA_DIR, ROOT_DIR
-from hexagonal.files.spec import DatasetType, get_main_dir
+from hexagonal.files import CONFIG
+from hexagonal.files.spec import DatasetType, get_main_dir, relative_path
 
 URL_PREFIX = "cache/files/md5"
 
@@ -22,15 +22,8 @@ DEFAULT_TYPES = {
 class DVCFile:
     path: Path
     hash: str
-    stage: Stage
-
-    @property
-    def deps(self):
-        return [
-            Path(d.fs_path).relative_to(ROOT_DIR)
-            for d in self.stage.deps
-            if d.fs_path.startswith("/")
-        ]
+    deps: list[DVCFile] = field(default_factory=list)
+    urls: list[str] = field(default_factory=list)
 
     @property
     def default_type(self):
@@ -39,14 +32,6 @@ class DVCFile:
     @property
     def base_dir(self) -> str:
         return get_main_dir(self.path)
-
-    @property
-    def data_deps(self):
-        return [p for p in self.deps if Path("data") in p.parents]
-
-    @property
-    def source_deps(self):
-        return [p for p in self.deps if Path("src") in p.parents]
 
     @property
     def s3_url(self):
@@ -58,32 +43,34 @@ class DVCFile:
         hash_part = f"{URL_PREFIX}/{self.hash[:2]}/{self.hash[2:]}"
         return join(CONFIG["http_root"], hash_part)
 
-    @property
-    def source_url(self):
-        try:
-            return next(
-                d.fs_path for d in self.stage.deps if d.fs_path.startswith("http")
-            )
-        except StopIteration:
-            return None
-
     def __repr__(self):
-        return f"DataFile(path={str(self.path)!r})"
+        return f"DVCFile(path={str(self.path)!r})"
 
     def __str__(self):
         return str(self.path)
 
 
-def get_dvc_files() -> Generator[DVCFile, None, None]:
+def get_dvc_files() -> dict[Path, DVCFile]:
     fs = DVCFileSystem(".")
     index = fs.repo.index
 
     stages = index.stages
 
+    files = {}
+    deps = {}
+
     for stage in stages:
         for out in stage.outs:
-            yield DVCFile(
-                Path(out.fs_path).relative_to(DATA_DIR.parent),
-                out.hash_info.value,
-                stage,
-            )
+            path = relative_path(out.fs_path)
+            urls = [d.fs_path for d in stage.deps if d.fs_path.startswith("http")]
+            files[path] = DVCFile(path, out.hash_info.value, urls=urls)
+            deps[path] = [
+                relative_path(d.fs_path)
+                for d in stage.deps
+                if d.fs_path.startswith("/")
+            ]
+
+    for path in deps:
+        files[path].deps.extend(files[d] for d in deps[path] if d in files)
+
+    return files

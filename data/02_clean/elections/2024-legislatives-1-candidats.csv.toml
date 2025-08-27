@@ -1,11 +1,6 @@
 nom = "Liste des candidats au premier tour des élections législatives 2024"
 description = ""
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/c1/9c73368deb0156f8ba71e695dced78"
-s3_url = "s3://hexagonal-data/cache/files/md5/c1/9c73368deb0156f8ba71e695dced78"
 mimetype = "text/csv"
-deps = [
-    "data/01_raw/ministere_interieur/2024-legislatives-1-candidats.csv",
-]
 section = "Résultats électoraux"
 
 [colonnes.departement]

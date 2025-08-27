@@ -1,11 +1,6 @@
 nom = "Liste des groupes parlementaires"
 description = ""
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/3c/3b5cdbb812161dee7ae3a72b59b05f"
-s3_url = "s3://hexagonal-data/cache/files/md5/3c/3b5cdbb812161dee7ae3a72b59b05f"
 mimetype = "text/csv"
-deps = [
-    "data/01_raw/assemblee-nationale.zip",
-]
 section = "Assemblée nationale"
 
 [colonnes.id_groupe]

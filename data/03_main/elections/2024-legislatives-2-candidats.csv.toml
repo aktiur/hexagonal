@@ -2,14 +2,7 @@ nom = "2024-legislatives-2-candidats"
 description = """
 
 """
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/59/0e8d560245a7a23c90005fdc9da4ea"
-s3_url = "s3://hexagonal-data/cache/files/md5/59/0e8d560245a7a23c90005fdc9da4ea"
 mimetype = "text/csv"
-deps = [
-    "data/02_clean/elections/2024-legislatives-2-candidats.csv",
-    "data/01_raw/lafranceinsoumise/2024-legislatives-nfp-sensibilites.csv",
-    "data/01_raw/lafranceinsoumise/2024-legislatives-nuances.csv",
-]
 section = "Élections"
 
 [colonnes.departement]

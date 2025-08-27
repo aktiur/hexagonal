@@ -2,10 +2,5 @@ nom = "Contours précis des circonscriptions législatives en 2024"
 description = """
 
 """
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/eb/c3f1d802e611cababdd25affc94393"
-s3_url = "s3://hexagonal-data/cache/files/md5/eb/c3f1d802e611cababdd25affc94393"
 mimetype = "application/topo+json"
-deps = [
-    "data/01_raw/insee_circonscriptions_legislatives.zip",
-]
 section = "Données géographiques précises"

@@ -1,11 +1,6 @@
 nom = "Liste des communes des collectivités d'outremer"
 description = ""
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/e3/7c61c15277522f321eade6ba714d64"
-s3_url = "s3://hexagonal-data/cache/files/md5/e3/7c61c15277522f321eade6ba714d64"
 mimetype = "text/csv"
-deps = [
-    "data/01_raw/cog.zip",
-]
 section = "Découpage administratif"
 
 [colonnes.code_commune]

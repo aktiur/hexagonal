@@ -1,7 +1,4 @@
 nom = "Résultats du deuxième tour des élections législatives de 2017 par bureau de vote"
 description = ""
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/f7/488f6de8dc80bc650c19c36aab6b4d"
-s3_url = "s3://hexagonal-data/cache/files/md5/f7/488f6de8dc80bc650c19c36aab6b4d"
 mimetype = "text/csv"
-source_url = "https://www.data.gouv.fr/fr/datasets/r/8eb61f3e-dfdf-496e-85af-2859cd7383c3"
 editeur = "Ministère de l'intérieur"

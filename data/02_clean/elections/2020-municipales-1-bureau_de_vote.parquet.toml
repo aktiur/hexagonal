@@ -1,11 +1,6 @@
 nom = "Résultats du premier tour des municipales 2020 par bureau de vote — corrigés"
 description = ""
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/6e/5bce884b840a951ce5bb8e8755405f"
-s3_url = "s3://hexagonal-data/cache/files/md5/6e/5bce884b840a951ce5bb8e8755405f"
 mimetype = "application/vnd.apache.parquet"
-deps = [
-    "data/01_raw/ministere_interieur/2020-municipales-1-bureau_de_vote.csv",
-]
 section = "Résultats électoraux"
 
 [colonnes.code_commune]

@@ -1,7 +1,4 @@
 nom = "Résultats du premier tour des élections régionales de 2021 par bureau de vote"
 description = ""
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/b0/e0383c1c736cc49867f05c662ed50f"
-s3_url = "s3://hexagonal-data/cache/files/md5/b0/e0383c1c736cc49867f05c662ed50f"
 mimetype = "text/csv"
-source_url = "https://www.data.gouv.fr/fr/datasets/r/52c3e6f1-2faa-4295-9f76-5b0e9cb9f7b0"
 editeur = "Ministère de l'intérieur"

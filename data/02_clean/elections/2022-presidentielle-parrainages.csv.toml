@@ -2,12 +2,7 @@ nom = "Parrainages validés pour la présidentielle de 2022"
 description = """
 
 """
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/c4/b7e16894b409e0c810750c4967afec"
-s3_url = "s3://hexagonal-data/cache/files/md5/c4/b7e16894b409e0c810750c4967afec"
 mimetype = "text/csv"
-deps = [
-    "data/01_raw/conseil_constitutionnel/2022-presidentielle-parrainages.csv",
-]
 section = "Résultats électoraux"
 
 [colonnes.mandat]

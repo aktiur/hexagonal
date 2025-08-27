@@ -2,12 +2,7 @@ nom = "Adresses postales des député·es"
 description = """
 
 """
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/3b/2419e36a704ea03d71115a74ad3e3d"
-s3_url = "s3://hexagonal-data/cache/files/md5/3b/2419e36a704ea03d71115a74ad3e3d"
 mimetype = "text/csv"
-deps = [
-    "data/01_raw/assemblee-nationale.zip",
-]
 section = "Assemblée nationale"
 
 [colonnes.id_adresse]

@@ -2,10 +2,5 @@ nom = "Contours simplifiés des communes de Martinique"
 description = """
 
 """
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/5c/e5e22b3dc698bfec2ea1faceb85300"
-s3_url = "s3://hexagonal-data/cache/files/md5/5c/e5e22b3dc698bfec2ea1faceb85300"
 mimetype = "application/topo+json"
-deps = [
-    "data/03_main/geodata/communes.json",
-]
 section = "Cartographie"

@@ -1,11 +1,6 @@
 nom = "Résultats des élections européennes 2024 par bureau de vote"
 description = ""
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/f4/0bc07ef8e8f4526eae9ffe7ed181c3"
-s3_url = "s3://hexagonal-data/cache/files/md5/f4/0bc07ef8e8f4526eae9ffe7ed181c3"
 mimetype = "application/vnd.apache.parquet"
-deps = [
-    "data/01_raw/ministere_interieur/2024-europeenne-bureau_de_vote.csv",
-]
 section = "Résultats électoraux"
 
 [colonnes.code_commune]

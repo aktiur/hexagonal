@@ -1,17 +1,24 @@
-import dataclasses
 import datetime
 import tomllib
 from enum import StrEnum
 from operator import attrgetter
-from pathlib import Path, PurePath
-from typing import Annotated, Any, Callable, List, Optional
+from pathlib import Path
 
 import pandas as pd
-from markupsafe import Markup
 from pydantic import BaseModel, ConfigDict, Field
 
 from hexagonal.files import ROOT_DIR
 from hexagonal.utils import VRAI
+
+props_funcs = {
+    "date": lambda d: d.strftime("%d/%m/%Y"),
+}
+
+
+def relative_path(path: Path | str) -> Path:
+    if isinstance(path, str):
+        path = Path(path)
+    return path.resolve().relative_to(ROOT_DIR)
 
 
 class DatasetType(StrEnum):
@@ -19,18 +26,6 @@ class DatasetType(StrEnum):
     INTERMEDIAIRE = "intermediaire"
     CLEAN = "clean"
     MAIN = "main"
-
-
-def display_date(date: datetime.date) -> str:
-    return date.strftime("%d/%m/%Y")
-
-
-@dataclasses.dataclass
-class DisplayFunction:
-    func: Callable[[Any], str]
-
-
-type Date = Annotated[datetime.date, DisplayFunction(display_date)]
 
 
 PRODUCTION_TYPES = [DatasetType.CLEAN, DatasetType.MAIN]
@@ -61,7 +56,7 @@ PD_DTYPES = {
 
 class ColonneMetadata(BaseModel):
     type: ColonneType
-    description: Optional[str] = None
+    description: str | None = None
     nullable: bool = False
 
 
@@ -73,25 +68,18 @@ class DatasetSpec(BaseModel):
     path: Path = Field(alias="Chemin interne")
     nom: str
     description: str
-    url: str = Field("URL de téléchargement")
-    s3_url: str
 
     mimetype: str | None = Field(alias="Format de fichier", default=None)
 
-    def proprietes(self) -> dict[str, str]:
-        props = {
-            "Chemin interne": Markup(f"`{self.path}`"),
-            "Format de fichier": self.mimetype,
-            "URL de téléchargement": Markup(f"<{self.url}>"),
-            "URL de téléchargement d'origine": self.source_url
-            and Markup(f"<{self.source_url}>"),
-            "URL d'information": self.info_url and Markup(f"<{self.info_url}>"),
-            "Éditeur": self.editeur,
-            "Date": self.date and self.date.strftime("%d/%m/%Y"),
-            "Licence d'utilisation": self.licence,
-        }
-
-        return {k: v for k, v in props.items() if v}
+    def props(self):
+        props = {}
+        for name, field in self.model_fields.items():
+            if field.alias and getattr(self, name):
+                if name in props_funcs:
+                    props[field.alias] = props_funcs[name](getattr(self, name))
+                else:
+                    props[field.alias] = getattr(self, name)
+        return props
 
     def as_pandas_dataframe(self):
         if self.mimetype == "application/vnd.apache.parquet":
@@ -119,33 +107,17 @@ class DatasetSpec(BaseModel):
 
 class Source(DatasetSpec):
     # sources
-    info_url: Optional[str] = Field(alias="URL d'information", default=None)
-    source_url: Optional[str] = Field(
-        alias="URL de téléchargement d'origine", default=None
-    )
-    editeur: Optional[str] = Field(alias="Éditeur", default=None)
-    date: Optional[datetime.date] = Field(alias="Date", default=None)
-    licence: Optional[str] = Field(alias="Licence d'utilisation", default=None)
+    info_url: str | None = Field(alias="URL d'information", default=None)
+    editeur: str | None = Field(alias="Éditeur", default=None)
+    date: datetime.date | None = Field(alias="Date", default=None)
+    licence: str | None = Field(alias="Licence d'utilisation", default=None)
 
 
 class Production(DatasetSpec):
-    deps: List[PurePath] = Field(default_factory=list)
-    section: Optional[str] = Field(default=None)
+    section: str | None = Field(default=None)
 
     # csv files
-    colonnes: Optional[dict[str, ColonneMetadata]] = None
-
-    def sources(self, spec):
-        res = {}
-        work = [*self.deps]
-        while work:
-            current = spec[work.pop()]
-            if current.type == DatasetType.SOURCE:
-                res[current.path] = current
-            if current.deps:
-                work.extend(current.deps)
-
-        return [res[k] for k in sorted(res.keys())]
+    colonnes: dict[str, ColonneMetadata] | None = None
 
 
 def get_main_dir(path: Path) -> str:

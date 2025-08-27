@@ -1,7 +1,4 @@
 nom = "Résultats du deuxième tour des élections régionales de 2021 par bureau de vote"
 description = ""
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/43/6df1e7dcbe2ac545c537195e0a7299"
-s3_url = "s3://hexagonal-data/cache/files/md5/43/6df1e7dcbe2ac545c537195e0a7299"
 mimetype = "text/csv"
-source_url = "https://www.data.gouv.fr/fr/datasets/r/75221ab0-2066-4a11-bc42-b0f76d201dfe"
 editeur = "Ministère de l'intérieur"

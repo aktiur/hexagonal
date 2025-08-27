@@ -1,11 +1,6 @@
 nom = "Résultats du premier tour des élections législatives 2024 par circonscription législative"
 description = ""
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/28/bed19926f5fe2f93ff12b737b41a70"
-s3_url = "s3://hexagonal-data/cache/files/md5/28/bed19926f5fe2f93ff12b737b41a70"
 mimetype = "application/vnd.apache.parquet"
-deps = [
-    "data/01_raw/ministere_interieur/2024-legislatives-1-circonscription.csv",
-]
 section = "Résultats électoraux"
 
 [colonnes.circonscription]

@@ -1,11 +1,6 @@
 nom = "Résultats des deux tours de l'élection présidentielle de 2012"
 description = ""
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/1e/56b8e4a4f067dfbdd93e5bcad22249"
-s3_url = "s3://hexagonal-data/cache/files/md5/1e/56b8e4a4f067dfbdd93e5bcad22249"
 mimetype = "application/vnd.apache.parquet"
-deps = [
-    "data/01_raw/ministere_interieur/2012-presidentielle-bureau_de_vote.csv",
-]
 section = "Résultats électoraux"
 
 [colonnes.code_commune]

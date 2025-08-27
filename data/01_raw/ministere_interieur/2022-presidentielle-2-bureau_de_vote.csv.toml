@@ -1,8 +1,5 @@
 nom = "Résultats du deuxième tour de l'élection présidentielle 2022 par bureau de vote"
 description = ""
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/c5/e0a26fe52ed824208649d15628b528"
-s3_url = "s3://hexagonal-data/cache/files/md5/c5/e0a26fe52ed824208649d15628b528"
 mimetype = "text/csv"
 info_url = "https://www.data.gouv.fr/fr/datasets/election-presidentielle-des-10-et-24-avril-2022-resultats-definitifs-du-2nd-tour/"
-source_url = "https://www.data.gouv.fr/fr/datasets/r/4dfd05a9-094e-4043-8a19-43b6b6bbe086"
 editeur = "Ministère de l'intérieur"

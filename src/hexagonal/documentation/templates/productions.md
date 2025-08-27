@@ -1,3 +1,14 @@
+{% macro render_tree(d) -%}
+    <ul>
+    {% for (nom, lien),v in d.items() -%}
+        <li><a href="{{ lien }}">{{ nom }}</a>
+        {% if v -%}
+        {{ render_tree(v) }}
+        {% endif -%}
+        </li>
+    {% endfor -%}
+    </ul>
+{%- endmacro %}
 # Productions
 
 {% for section, productions in sections %}
@@ -9,16 +20,16 @@
 
 
 {% for section, productions in sections %}
-<a name="{{ section|slugify }}"></a>
 ## {{ section }}
+<a name="{{ section|slugify }}"></a>
 
 {% for production in productions -%}
-<a name="{{ production.path }}"></a>
 ### {{ production.nom }}
+<a name="{{ production.path }}"></a>
 
 | Propriété | Valeur |
 | --------- | ------ |
-{% for prop, val in production.proprietes().items() -%}
+{% for prop, val in production.props.items() -%}
 | {{ prop }} | {{ val }} |
 {% endfor %}
 {{ production.description }}
@@ -50,8 +61,7 @@
 
 Cette production dépend des sources suivantes :
 
-{% for source in production.sources() -%}
-- [{{ source.nom }}](sources.md#{{ source.path }})
-{% endfor -%}
+{{ render_tree(production.deps) }}
+
 {% endfor %}
 {% endfor %}

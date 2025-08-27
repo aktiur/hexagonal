@@ -1,11 +1,6 @@
 nom = "Résultats de l'élection européenne de 2019 par bureau de vote"
 description = ""
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/69/347db16451d057891805819aeed2c5"
-s3_url = "s3://hexagonal-data/cache/files/md5/69/347db16451d057891805819aeed2c5"
 mimetype = "application/vnd.apache.parquet"
-deps = [
-    "data/01_raw/ministere_interieur/2019-europeenne-bureau_de_vote.csv",
-]
 section = "Résultats électoraux"
 
 [colonnes.code_commune]

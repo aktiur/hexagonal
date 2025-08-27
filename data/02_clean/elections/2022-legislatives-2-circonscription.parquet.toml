@@ -1,11 +1,6 @@
 nom = "Résultats du deuxième tour des élections législatives de 2022 par circonscription"
 description = ""
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/da/a2da42591adff382fdbb1f484e7dd4"
-s3_url = "s3://hexagonal-data/cache/files/md5/da/a2da42591adff382fdbb1f484e7dd4"
 mimetype = "application/vnd.apache.parquet"
-deps = [
-    "data/01_raw/ministere_interieur/2022-legislatives-2-circonscription.csv",
-]
 section = "Résultats électoraux"
 
 [colonnes.circonscription]

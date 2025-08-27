@@ -9,12 +9,7 @@ personnes référencées, on trouve :
 - d'autres parlementaires
 
 """
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/09/45caaaaa27a68fad93799b1d3a3620"
-s3_url = "s3://hexagonal-data/cache/files/md5/09/45caaaaa27a68fad93799b1d3a3620"
 mimetype = "text/csv"
-deps = [
-    "data/01_raw/assemblee-nationale.zip",
-]
 section = "Assemblée nationale"
 
 [colonnes.id_personne]

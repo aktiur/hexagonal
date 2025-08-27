@@ -1,0 +1,7 @@
+nom = "Listes déposées pour l'élection européenne 2024 en France"
+description = """
+Ce site agrège des informations utiles pour caractériser les listes déposées pour les
+élections européennes 2024.
+"""
+mimetype = "text/csv"
+editeur = "La France insoumise"

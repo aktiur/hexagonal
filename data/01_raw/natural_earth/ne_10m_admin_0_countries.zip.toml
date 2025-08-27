@@ -4,9 +4,6 @@ There are 258 countries in the world. Greenland as separate from Denmark. Most u
 
 Natural Earth shows de facto boundaries by default according to who controls the territory, versus de jure. Optional point-of-view (POV) variants are available for several dozen countries in the next section.
 """
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/0b/c33f3e6f9ab457917430e57f6122a9"
-s3_url = "s3://hexagonal-data/cache/files/md5/0b/c33f3e6f9ab457917430e57f6122a9"
 mimetype = "application/zip"
 info_url = "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/"
-source_url = "https://naciscdn.org/naturalearth/10m/cultural/ne_10m_admin_0_countries.zip"
 editeur = "Natural Earth"

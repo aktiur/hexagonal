@@ -2,12 +2,7 @@ nom = "Liste des régions"
 description = """
 
 """
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/75/a71eafce2e51538d3cc0b30b15039f"
-s3_url = "s3://hexagonal-data/cache/files/md5/75/a71eafce2e51538d3cc0b30b15039f"
 mimetype = "text/csv"
-deps = [
-    "data/01_raw/cog.zip",
-]
 section = "Découpage administratif"
 
 [colonnes.code_region]

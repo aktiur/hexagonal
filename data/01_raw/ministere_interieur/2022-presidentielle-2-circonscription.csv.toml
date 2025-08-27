@@ -1,8 +1,5 @@
 nom = "Résultats du deuxième tour de l'élection présidentielle 2022 par circonscription législative"
 description = ""
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/29/2bc96162d5cde4d3cc7c98eeed4e00"
-s3_url = "s3://hexagonal-data/cache/files/md5/29/2bc96162d5cde4d3cc7c98eeed4e00"
 mimetype = "text/csv"
 info_url = "https://www.data.gouv.fr/fr/datasets/election-presidentielle-des-10-et-24-avril-2022-resultats-definitifs-du-2nd-tour/"
-source_url = "https://www.data.gouv.fr/fr/datasets/r/eefff73d-1b17-4695-8ec6-6671916e3af8"
 editeur = "Ministère de l'intérieur"

@@ -1,11 +1,6 @@
 nom = "Résultats du premier tour de l'élection présidentielle 2022 par circonscription législative"
 description = ""
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/75/af04253dba49c02592806c10340937"
-s3_url = "s3://hexagonal-data/cache/files/md5/75/af04253dba49c02592806c10340937"
 mimetype = "application/vnd.apache.parquet"
-deps = [
-    "data/01_raw/ministere_interieur/2022-presidentielle-1-circonscription.csv",
-]
 section = "Résultats électoraux"
 
 [colonnes.circonscription]

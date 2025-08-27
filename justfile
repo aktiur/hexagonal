@@ -1,7 +1,7 @@
 release: rewrite_s3_headers update_specs
 
 update_specs:
-  uv run src/hexagonal/files/update_spec.py
+  uv run src/hexagonal/files/update_specs.py
 
 push:
   uv run dvc push -r s3

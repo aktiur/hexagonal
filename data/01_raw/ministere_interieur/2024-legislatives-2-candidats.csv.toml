@@ -1,7 +1,4 @@
 nom = "Liste des candidats au deuxième tour des élections législatives de 2024"
 description = ""
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/c6/e6f33721554d0a1260d81775c0fd22"
-s3_url = "s3://hexagonal-data/cache/files/md5/c6/e6f33721554d0a1260d81775c0fd22"
 mimetype = "text/csv"
-source_url = "https://www.data.gouv.fr/fr/datasets/r/f04605b8-4c02-4496-8a26-2bc02b17f739"
 editeur = "Ministère de l'intérieur"

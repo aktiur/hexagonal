@@ -2,10 +2,5 @@ nom = "Conteurs simplifiés des circonscriptions législatives de Guadeloupe"
 description = """
 
 """
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/f5/af7eb72a16d1ba1028dd7f469ab6a1"
-s3_url = "s3://hexagonal-data/cache/files/md5/f5/af7eb72a16d1ba1028dd7f469ab6a1"
 mimetype = "application/topo+json"
-deps = [
-    "data/03_main/geodata/circonscriptions_legislatives.json",
-]
 section = "Cartographie"

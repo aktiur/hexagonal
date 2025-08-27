@@ -2,15 +2,7 @@ nom = "Liste des communes"
 description = """
 
 """
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/96/4988ff05af1c6f97d9bf42f72850f8"
-s3_url = "s3://hexagonal-data/cache/files/md5/96/4988ff05af1c6f97d9bf42f72850f8"
 mimetype = "text/csv"
-deps = [
-    "data/02_clean/cog/communes.csv",
-    "data/02_clean/population_municipale.csv",
-    "data/02_clean/epci.csv",
-    "data/02_clean/communes_epci.csv",
-]
 section = "Organisation administrative"
 
 [colonnes.code_commune]

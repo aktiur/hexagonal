@@ -1,7 +1,4 @@
 nom = "Résultats des élections européennes 2024 par bureau de vote"
 description = ""
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/b3/a9085acb27df6669ac04d5aca2e5da"
-s3_url = "s3://hexagonal-data/cache/files/md5/b3/a9085acb27df6669ac04d5aca2e5da"
 mimetype = "text/csv"
-source_url = "https://www.data.gouv.fr/fr/datasets/r/cc1883d9-1265-4365-b754-fb6aef22d82e"
 editeur = "Ministère de l'intérieur"

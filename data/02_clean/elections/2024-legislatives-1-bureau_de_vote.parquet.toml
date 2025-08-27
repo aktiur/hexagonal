@@ -1,11 +1,6 @@
 nom = "Résultats du premier tour des élections législatives 2024 par bureau de vote"
 description = ""
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/e8/78a8530935dbdc054ee1c90cb1c86d"
-s3_url = "s3://hexagonal-data/cache/files/md5/e8/78a8530935dbdc054ee1c90cb1c86d"
 mimetype = "application/vnd.apache.parquet"
-deps = [
-    "data/01_raw/ministere_interieur/2024-legislatives-1-bureau_de_vote.csv",
-]
 section = "Résultats électoraux"
 
 [colonnes.code_commune]

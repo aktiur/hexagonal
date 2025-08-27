@@ -3,12 +3,7 @@ description = """
 Ce fichier comporte une ligne pour chaque affiliation d'un député à un groupe parlementaire, à partir de la
 XIème législature.
 """
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/36/a17d9f5d80eb12a07b9532b83b461a"
-s3_url = "s3://hexagonal-data/cache/files/md5/36/a17d9f5d80eb12a07b9532b83b461a"
 mimetype = "text/csv"
-deps = [
-    "data/01_raw/assemblee-nationale.zip",
-]
 section = "Assemblée nationale"
 
 [colonnes.id_personne]

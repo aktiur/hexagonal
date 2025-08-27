@@ -2,10 +2,5 @@ nom = "Contours simplifiés des circonscriptions législatives de Guyane"
 description = """
 
 """
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/a9/5906342555446c04b60c46f391e503"
-s3_url = "s3://hexagonal-data/cache/files/md5/a9/5906342555446c04b60c46f391e503"
 mimetype = "application/topo+json"
-deps = [
-    "data/03_main/geodata/circonscriptions_legislatives.json",
-]
 section = "Cartographie"

@@ -1,6 +1,4 @@
 nom = "Paramètres électoraux des différents scrutins de listes"
 description = ""
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/92/98d6138602e9e7d687e196d13f162d"
-s3_url = "s3://hexagonal-data/cache/files/md5/92/98d6138602e9e7d687e196d13f162d"
 mimetype = "text/csv"
 editeur = "La France insoumise"

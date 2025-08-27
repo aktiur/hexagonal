@@ -1,11 +1,6 @@
 nom = "Liste des communes, arrondissements municipaux, communes déléguées et communes associées"
 description = ""
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/5d/a5f7dacec0b0723fef714ddbd166b3"
-s3_url = "s3://hexagonal-data/cache/files/md5/5d/a5f7dacec0b0723fef714ddbd166b3"
 mimetype = "text/csv"
-deps = [
-    "data/01_raw/cog.zip",
-]
 section = "Découpage administratif"
 
 [colonnes.code_commune]

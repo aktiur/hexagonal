@@ -1,11 +1,6 @@
 nom = "Résultats du premier tour des élections législatives de 2022 par bureau de vote"
 description = ""
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/ca/5001d32c660f487a093cb65e9be6fb"
-s3_url = "s3://hexagonal-data/cache/files/md5/ca/5001d32c660f487a093cb65e9be6fb"
 mimetype = "application/vnd.apache.parquet"
-deps = [
-    "data/01_raw/ministere_interieur/2022-legislatives-1-bureau_de_vote.csv",
-]
 section = "Résultats électoraux"
 
 [colonnes.code_commune]

@@ -2,10 +2,5 @@ nom = "Contours simplifiés des communes de l'hexagone"
 description = """
 
 """
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/e2/5ac3c4a8a67c7d5be237269c37b134"
-s3_url = "s3://hexagonal-data/cache/files/md5/e2/5ac3c4a8a67c7d5be237269c37b134"
 mimetype = "application/topo+json"
-deps = [
-    "data/03_main/geodata/communes.json",
-]
 section = "Cartographie"

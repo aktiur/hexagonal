@@ -51,21 +51,6 @@ def missing_files():
     return missing
 
 
-def updated_values(file: DVCFile):
-    spec = {
-        "url": file.http_url,
-        "s3_url": file.s3_url,
-    }
-
-    if file.source_url:
-        spec["source_url"] = file.source_url
-
-    if file.data_deps:
-        spec["deps"] = [str(f) for f in file.data_deps]
-
-    return spec
-
-
 def default_spec(file: DVCFile):
     mimetype, encoding = mimetypes.guess_type(file.path)
     if mimetype and encoding:
@@ -78,7 +63,6 @@ def default_spec(file: DVCFile):
         "nom": file.path.stem,
         "description": "\n",
         "mimetype": mimetype,
-        **updated_values(file),
     }
 
     if get_main_dir(file.path) == "01_raw":
@@ -140,23 +124,20 @@ def update_specs():
     for f in missing_files():
         sys.stderr.write(f"Spec présente pour le fichier manquant {f}\n")
 
-    for file in get_dvc_files():
+    for file in get_dvc_files().values():
         try:
             spec = load_spec(file.path)
         except FileNotFoundError:
             spec = default_spec(file)
-        else:
-            for k, v in updated_values(file).items():
-                setattr(spec, k, v)
 
         if not spec:
             continue
 
         if isinstance(spec, Source) and not spec.editeur:
-            sys.stderr.write(f"Source sans editeur: {file}\n")
+            sys.stderr.write(f"Source sans editeur: {file.path}\n")
 
         if isinstance(spec, Production) and not spec.section:
-            sys.stderr.write(f"Production sans section: {file}\n")
+            sys.stderr.write(f"Production sans section: {file.path}\n")
 
         if isinstance(spec, Production) and spec.mimetype == "text/csv":
             spec.colonnes = update_csv_columns(file, spec.colonnes or {})

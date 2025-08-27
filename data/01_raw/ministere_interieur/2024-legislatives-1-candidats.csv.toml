@@ -1,7 +1,4 @@
 nom = "Liste des candidats au premier tour des élections législatives 2024"
 description = ""
-url = "https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/c8/40bd309348cbe6cd728cc96bf550d0"
-s3_url = "s3://hexagonal-data/cache/files/md5/c8/40bd309348cbe6cd728cc96bf550d0"
 mimetype = "text/csv"
-source_url = "https://www.data.gouv.fr/fr/datasets/r/cd5b39e6-5feb-4864-b274-3431ed81442c"
 editeur = "Ministère de l'intérieur"
