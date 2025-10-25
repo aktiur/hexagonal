@@ -1,0 +1,7 @@
+nom = "Nuançage précis des candidats aux législatives 2024"
+description = """
+Un nuançage précis à deux niveaux (alliance et parti) réalisé par Elia Stebach pour
+la France insoumise en 2025.
+"""
+mimetype = "text/csv"
+editeur = "La France insoumise"

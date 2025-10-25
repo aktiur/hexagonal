@@ -1,0 +1,5 @@
+outs:
+- md5: a54dc32d27295768eeda9da7de17613b
+  size: 148951
+  hash: md5
+  path: 2024-legislatives-candidats.csv
