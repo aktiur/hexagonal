@@ -107,7 +107,7 @@
 | --------- | ------ |
 | Chemin interne | data/02_clean/annuaire/conseils_departementaux.csv |
 | Format de fichier | text/csv |
-| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/0f/76a65596b5cc61a8469f2c50ea349a |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/ce/04c5543d4ca04895b1b047d4062e84 |
 
 
 
@@ -157,17 +157,17 @@
 </td>
   </tr>
 <tr>
+    <td><code>physique_numero_voie</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
     <td><code>physique_complement1</code></td>
     <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
     <td><code>physique_complement2</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>physique_numero_voie</code></td>
     <td><code>str</code></td>
     <td></td>
   </tr>
@@ -192,17 +192,17 @@
     <td></td>
   </tr>
 <tr>
+    <td><code>postale_numero_voie</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
     <td><code>postale_complement1</code></td>
     <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
     <td><code>postale_complement2</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>postale_numero_voie</code></td>
     <td><code>str</code></td>
     <td></td>
   </tr>
@@ -256,10 +256,13 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/02_clean/annuaire/mairies.csv |
 | Format de fichier | text/csv |
-| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/d7/c65ad31a69a88f357ef946eb09a356 |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/9a/bd683ca93ab600aef3bfc20151757f |
 
-Ce jeu de données extraits de l&#39;annuaire administratif comporte une entrée pour chaque mairie
-française.
+Extraction au format CSV des mairies depuis l&#39;annuaire administratif.
+
+L&#39;adresse physique reprend la première adresse avec pour type «Adresse» dans la liste
+des adresses. L&#39;adresse postale reprend soit la première adresse de type «Adresse
+postale», s&#39;il y en a, soit la même adresse que pour l&#39;adresse physique.
 
 
 ### Colonnes
@@ -304,23 +307,24 @@ française.
 <tr>
     <td><code>emails</code></td>
     <td><code>str</code></td>
-    <td>Les adresse emails de contact pour cette mairie
+    <td>Les adresses emails de contact pour cette mairie, séparées par des sauts de ligne
+s&#39;il y en a plusieurs.Numéros de téléphone de contact pour cette mairie.
 </td>
-  </tr>
-<tr>
-    <td><code>physique_complement1</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>physique_complement2</code></td>
-    <td><code>str</code></td>
-    <td></td>
   </tr>
 <tr>
     <td><code>physique_numero_voie</code></td>
     <td><code>str</code></td>
-    <td></td>
+    <td>Numéro et nom de la voie pour l&#39;adresse physique.</td>
+  </tr>
+<tr>
+    <td><code>physique_complement1</code></td>
+    <td><code>str</code></td>
+    <td>Première ligne complémentaire dans l&#39;adresse physique.</td>
+  </tr>
+<tr>
+    <td><code>physique_complement2</code></td>
+    <td><code>str</code></td>
+    <td>Deuxième ligne complémentaire dans l&#39;adresse physique.</td>
   </tr>
 <tr>
     <td><code>physique_service_distribution</code></td>
@@ -330,7 +334,7 @@ française.
 <tr>
     <td><code>physique_code_postal</code></td>
     <td><code>str</code></td>
-    <td></td>
+    <td>Code postal pour l&#39;adresse physique.</td>
   </tr>
 <tr>
     <td><code>physique_commune</code></td>
@@ -343,17 +347,17 @@ française.
     <td></td>
   </tr>
 <tr>
+    <td><code>postale_numero_voie</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
     <td><code>postale_complement1</code></td>
     <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
     <td><code>postale_complement2</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>postale_numero_voie</code></td>
     <td><code>str</code></td>
     <td></td>
   </tr>
@@ -380,7 +384,8 @@ française.
 <tr>
     <td><code>telephone</code></td>
     <td><code>str</code></td>
-    <td>Numéros de téléphone de contact pour cette mairie.
+    <td>Numéros de téléphone de contact pour cette mairie, séparés par des sauts de ligne s&#39;il
+y en a plusieurs.
 </td>
   </tr>
 <tr>
@@ -6599,7 +6604,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/03_main/elections/2024-legislatives-1-candidats.csv |
 | Format de fichier | text/csv |
-| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/2b/8f8aafd90d405b32f87250a52a34ad |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/28/e06f0288f71fd922cc6b1e6b39c20e |
 
 
 
@@ -6704,6 +6709,16 @@ Cette production dépend des sources suivantes :
     <td><code>sensibilite</code></td>
     <td><code>str</code></td>
     <td></td>
+  </tr>
+<tr>
+    <td><code>alliance</code></td>
+    <td><code>str</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>parti</code></td>
+    <td><code>str</code></td>
+    <td>None</td>
   </tr>
 
 </tbody>
@@ -6724,6 +6739,8 @@ Cette production dépend des sources suivantes :
         </li>
     <li><a href="sources.md#data/01_raw/lafranceinsoumise/2024-legislatives-nuances.csv">Nuançage LFI des candidatures aux législatives 2024</a>
         </li>
+    <li><a href="sources.md#data/01_raw/lafranceinsoumise/2024-legislatives-candidats.csv">Nuançage précis des candidats aux législatives 2024</a>
+        </li>
     </ul>
 
 ### 2024-legislatives-2-candidats
@@ -6733,7 +6750,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/03_main/elections/2024-legislatives-2-candidats.csv |
 | Format de fichier | text/csv |
-| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/59/0e8d560245a7a23c90005fdc9da4ea |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/52/1021b4f255c5bb6d76b07ebe8ae7b0 |
 
 
 
@@ -6839,6 +6856,16 @@ Cette production dépend des sources suivantes :
     <td><code>str</code></td>
     <td></td>
   </tr>
+<tr>
+    <td><code>alliance</code></td>
+    <td><code>str</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>parti</code></td>
+    <td><code>str</code></td>
+    <td>None</td>
+  </tr>
 
 </tbody>
 </table>
@@ -6857,6 +6884,8 @@ Cette production dépend des sources suivantes :
     <li><a href="sources.md#data/01_raw/lafranceinsoumise/2024-legislatives-nfp-sensibilites.csv">Liste des candidats du Nouveau Front populaire et de leur sensibilité par circonscription législative</a>
         </li>
     <li><a href="sources.md#data/01_raw/lafranceinsoumise/2024-legislatives-nuances.csv">Nuançage LFI des candidatures aux législatives 2024</a>
+        </li>
+    <li><a href="sources.md#data/01_raw/lafranceinsoumise/2024-legislatives-candidats.csv">Nuançage précis des candidats aux législatives 2024</a>
         </li>
     </ul>
 

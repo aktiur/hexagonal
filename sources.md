@@ -18,6 +18,7 @@
   - [Codage des nuances politiques des candidats aux élections législatives des 12 et 19 juin 2022](#data/01_raw/legis_2022/2022-legislatives-nuances.csv)
 - [La France insoumise](#la-france-insoumise)
   - [Listes déposées pour l&#39;élection européenne 2024 en France](#data/01_raw/lafranceinsoumise/2024-europeenne-listes.csv)
+  - [Nuançage précis des candidats aux législatives 2024](#data/01_raw/lafranceinsoumise/2024-legislatives-candidats.csv)
   - [Liste des candidats du Nouveau Front populaire et de leur sensibilité par circonscription législative](#data/01_raw/lafranceinsoumise/2024-legislatives-nfp-sensibilites.csv)
   - [Nuançage LFI des candidatures aux législatives 2024](#data/01_raw/lafranceinsoumise/2024-legislatives-nuances.csv)
   - [Paramètres électoraux des différents scrutins de listes](#data/01_raw/lafranceinsoumise/scrutins_listes.csv)
@@ -283,6 +284,19 @@ Le projet LEGIS-2022 regroupe une trentaine de chercheurs en science politique s
 
 Ce site agrège des informations utiles pour caractériser les listes déposées pour les
 élections européennes 2024.
+
+### Nuançage précis des candidats aux législatives 2024
+<a name="data/01_raw/lafranceinsoumise/2024-legislatives-candidats.csv"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/lafranceinsoumise/2024-legislatives-candidats.csv |
+| Format de fichier | text/csv |
+| Éditeur | La France insoumise |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/09/1a6058b5ec9245608c7e81c41f8310 |
+
+Un nuançage précis à deux niveaux (alliance et parti) réalisé par Elia Stebach pour
+la France insoumise en 2025.
 
 ### Liste des candidats du Nouveau Front populaire et de leur sensibilité par circonscription législative
 <a name="data/01_raw/lafranceinsoumise/2024-legislatives-nfp-sensibilites.csv"></a>

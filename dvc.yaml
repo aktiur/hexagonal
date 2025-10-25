@@ -66,11 +66,13 @@ stages:
         ${clean}/elections/2024-legislatives-${item}-candidats.csv
         ${raw}/lafranceinsoumise/2024-legislatives-nfp-sensibilites.csv
         ${raw}/lafranceinsoumise/2024-legislatives-nuances.csv
+        ${raw}/lafranceinsoumise/2024-legislatives-candidats.csv
         ${main}/elections/2024-legislatives-${item}-candidats.csv
       deps:
         - ${clean}/elections/2024-legislatives-${item}-candidats.csv
         - ${raw}/lafranceinsoumise/2024-legislatives-nfp-sensibilites.csv
         - ${raw}/lafranceinsoumise/2024-legislatives-nuances.csv
+        - ${raw}/lafranceinsoumise/2024-legislatives-candidats.csv
         - ${src}/hexagonal/candidatures/legislatives2024.py
         - ${src}/hexagonal/codes.py
       outs:

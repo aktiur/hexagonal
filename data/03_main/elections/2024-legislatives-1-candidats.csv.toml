@@ -94,3 +94,11 @@ nullable = false
 type = "str"
 description = ""
 nullable = true
+
+[colonnes.alliance]
+type = "str"
+nullable = false
+
+[colonnes.parti]
+type = "str"
+nullable = false

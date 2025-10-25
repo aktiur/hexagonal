@@ -662,8 +662,13 @@ stages:
       data/02_clean/elections/2024-legislatives-1-candidats.csv 
       data/01_raw/lafranceinsoumise/2024-legislatives-nfp-sensibilites.csv 
       data/01_raw/lafranceinsoumise/2024-legislatives-nuances.csv 
+      data/01_raw/lafranceinsoumise/2024-legislatives-candidats.csv 
       data/03_main/elections/2024-legislatives-1-candidats.csv
     deps:
+    - path: data/01_raw/lafranceinsoumise/2024-legislatives-candidats.csv
+      hash: md5
+      md5: 091a6058b5ec9245608c7e81c41f8310
+      size: 148939
     - path: data/01_raw/lafranceinsoumise/2024-legislatives-nfp-sensibilites.csv
       hash: md5
       md5: 51564d56f7bea8c6fc1abf14f540a073
@@ -678,8 +683,8 @@ stages:
       size: 500739
     - path: src/hexagonal/candidatures/legislatives2024.py
       hash: md5
-      md5: 32e83b40b92a3b1c0d04c6854d973050
-      size: 842
+      md5: 33c66850fb5149af476cc42825452cd0
+      size: 1051
     - path: src/hexagonal/codes.py
       hash: md5
       md5: e59f0e1df4f37f8fbb6b6045a1659e23
@@ -687,15 +692,20 @@ stages:
     outs:
     - path: data/03_main/elections/2024-legislatives-1-candidats.csv
       hash: md5
-      md5: 2b8f8aafd90d405b32f87250a52a34ad
-      size: 397512
+      md5: 28e06f0288f71fd922cc6b1e6b39c20e
+      size: 431894
   2024-legislatives-candidats@2:
     cmd: PYTHONPATH=src python -m hexagonal.candidatures.legislatives2024 
       data/02_clean/elections/2024-legislatives-2-candidats.csv 
       data/01_raw/lafranceinsoumise/2024-legislatives-nfp-sensibilites.csv 
       data/01_raw/lafranceinsoumise/2024-legislatives-nuances.csv 
+      data/01_raw/lafranceinsoumise/2024-legislatives-candidats.csv 
       data/03_main/elections/2024-legislatives-2-candidats.csv
     deps:
+    - path: data/01_raw/lafranceinsoumise/2024-legislatives-candidats.csv
+      hash: md5
+      md5: 091a6058b5ec9245608c7e81c41f8310
+      size: 148939
     - path: data/01_raw/lafranceinsoumise/2024-legislatives-nfp-sensibilites.csv
       hash: md5
       md5: 51564d56f7bea8c6fc1abf14f540a073
@@ -710,8 +720,8 @@ stages:
       size: 137936
     - path: src/hexagonal/candidatures/legislatives2024.py
       hash: md5
-      md5: 32e83b40b92a3b1c0d04c6854d973050
-      size: 842
+      md5: 33c66850fb5149af476cc42825452cd0
+      size: 1051
     - path: src/hexagonal/codes.py
       hash: md5
       md5: e59f0e1df4f37f8fbb6b6045a1659e23
@@ -719,8 +729,8 @@ stages:
     outs:
     - path: data/03_main/elections/2024-legislatives-2-candidats.csv
       hash: md5
-      md5: 590e8d560245a7a23c90005fdc9da4ea
-      size: 106818
+      md5: 521021b4f255c5bb6d76b07ebe8ae7b0
+      size: 116243
   correspondances_bureau_de_vote_circonscription@2024:
     cmd: PYTHONPATH=src python -m hexagonal.correspondances_circonscription 
       data/02_clean/elections/2024-legislatives-1-bureau_de_vote.parquet 
