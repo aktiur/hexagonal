@@ -2,7 +2,7 @@ from jinja2 import Environment, PackageLoader, select_autoescape
 from slugify import slugify
 
 from hexagonal.files.dvc_files import get_dvc_files
-from hexagonal.files.spec import Source, load_all_specs
+from hexagonal.files.spec import SourceSpec, load_all_specs
 
 
 def slugify_filter(value):
@@ -11,7 +11,7 @@ def slugify_filter(value):
 
 def url(path, specs):
     file = specs[path]
-    base_file = "sources.md" if isinstance(file, Source) else "productions.md"
+    base_file = "sources.md" if isinstance(file, SourceSpec) else "productions.md"
     fragment = str(path)
     return file.nom, f"{base_file}#{fragment}"
 
@@ -39,7 +39,7 @@ def build(specs):
     sources_template = env.get_template("sources.md")
     productions_template = env.get_template("productions.md")
 
-    sources = [f for f in specs.values() if isinstance(f, Source)]
+    sources = [f for f in specs.values() if isinstance(f, SourceSpec)]
     editeurs = {}
     for source in sources:
         file = dvc_files[source.path]
@@ -61,7 +61,7 @@ def build(specs):
     with open("sources.md", "w") as fd:
         fd.write(sources_template.render(editeurs=sorted(editeurs.items())))
 
-    productions = [f for f in specs.values() if not isinstance(f, Source)]
+    productions = [f for f in specs.values() if not isinstance(f, SourceSpec)]
     sections = {}
     for prod in productions:
         file = dvc_files[prod.path]

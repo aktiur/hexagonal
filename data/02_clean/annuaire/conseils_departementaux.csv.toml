@@ -41,17 +41,17 @@ Les adresses emails indiquées dans l'annuaire, séparées par un saut de ligne 
 """
 nullable = true
 
+[colonnes.physique_numero_voie]
+type = "str"
+description = ""
+nullable = false
+
 [colonnes.physique_complement1]
 type = "str"
 description = ""
 nullable = false
 
 [colonnes.physique_complement2]
-type = "str"
-description = ""
-nullable = false
-
-[colonnes.physique_numero_voie]
 type = "str"
 description = ""
 nullable = false
@@ -76,17 +76,17 @@ type = "str"
 description = ""
 nullable = false
 
+[colonnes.postale_numero_voie]
+type = "str"
+description = ""
+nullable = false
+
 [colonnes.postale_complement1]
 type = "str"
 description = ""
 nullable = false
 
 [colonnes.postale_complement2]
-type = "str"
-description = ""
-nullable = false
-
-[colonnes.postale_numero_voie]
 type = "str"
 description = ""
 nullable = false

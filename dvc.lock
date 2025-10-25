@@ -962,16 +962,16 @@ stages:
       size: 80815137
     - path: src/hexagonal/annuaire/nettoyer.py
       hash: md5
-      md5: 6e799be530bd57b4c988cc238ff10ad8
+      md5: dbfe639a743ba82a59c9826f9c490f74
       size: 4313
     outs:
     - path: data/02_clean/annuaire/conseils_departementaux.csv
       hash: md5
-      md5: 0f76a65596b5cc61a8469f2c50ea349a
+      md5: ce04c5543d4ca04895b1b047d4062e84
       size: 22282
     - path: data/02_clean/annuaire/mairies.csv
       hash: md5
-      md5: d7c65ad31a69a88f357ef946eb09a356
+      md5: 9abd683ca93ab600aef3bfc20151757f
       size: 12409020
   parrainages_nettoyer@2022:
     cmd: PYTHONPATH=src python -m hexagonal.parrainages.nettoyer 

@@ -33,9 +33,9 @@ def selection_adresse(type_adresse):
 
 def champs_adresses(prefixe, subspec):
     return {
+        f"{prefixe}_numero_voie": (subspec, Coalesce("numero_voie", default="")),
         f"{prefixe}_complement1": (subspec, Coalesce("complement1", default="")),
         f"{prefixe}_complement2": (subspec, Coalesce("complement2", default="")),
-        f"{prefixe}_numero_voie": (subspec, Coalesce("numero_voie", default="")),
         f"{prefixe}_service_distribution": (
             subspec,
             Coalesce("service_distribution", default=""),

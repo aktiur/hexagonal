@@ -48,7 +48,7 @@ def calculer_correspondances(chemin_mvt, date_limite):
     )
     # l'annulation survient toujours après la fusion
     # On garde la première annulation après la fusion, s'il y en a plusieurs
-    # (ce cas n'existe pas encore avec le COG 2024)
+    # mais ce cas n'existe pas encore avec le COG 2024.
     annulations_fusions = (
         annulations_fusions[
             annulations_fusions["date_effet"]

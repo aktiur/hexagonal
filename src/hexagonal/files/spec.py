@@ -7,18 +7,13 @@ from pathlib import Path
 import pandas as pd
 from pydantic import BaseModel, ConfigDict, Field
 
-from hexagonal.files import ROOT_DIR
+from hexagonal.files import ROOT_DIR, get_main_dir
+from hexagonal.files.dvc_files import DVCFile
 from hexagonal.utils import VRAI
 
 props_funcs = {
     "date": lambda d: d.strftime("%d/%m/%Y"),
 }
-
-
-def relative_path(path: Path | str) -> Path:
-    if isinstance(path, str):
-        path = Path(path)
-    return path.resolve().relative_to(ROOT_DIR)
 
 
 class DatasetType(StrEnum):
@@ -105,7 +100,7 @@ class DatasetSpec(BaseModel):
             raise ValueError("Format impossible à convertir en dataframe")
 
 
-class Source(DatasetSpec):
+class SourceSpec(DatasetSpec):
     # sources
     info_url: str | None = Field(alias="URL d'information", default=None)
     editeur: str | None = Field(alias="Éditeur", default=None)
@@ -113,19 +108,11 @@ class Source(DatasetSpec):
     licence: str | None = Field(alias="Licence d'utilisation", default=None)
 
 
-class Production(DatasetSpec):
+class ProductionSpec(DatasetSpec):
     section: str | None = Field(default=None)
 
     # csv files
     colonnes: dict[str, ColonneMetadata] | None = None
-
-
-def get_main_dir(path: Path) -> str:
-    path = path.resolve().relative_to(ROOT_DIR)
-
-    parents = list(path.parents)
-    assert parents[-2].name == "data"
-    return parents[-3].name
 
 
 def load_spec(path: Path) -> DatasetSpec:
@@ -139,17 +126,28 @@ def load_spec(path: Path) -> DatasetSpec:
         spec = tomllib.load(fd)
 
     if get_main_dir(path) == "01_raw":
-        return Source.model_validate({"path": path, **spec})
-    return Production.model_validate({"path": path, **spec})
+        return SourceSpec.model_validate({"path": path, **spec})
+    return ProductionSpec.model_validate({"path": path, **spec})
+
+
+class Dataset:
+    def __init__(self, path, spec: DatasetSpec = None, dvc_file: DVCFile = None):
+        self.path = path
+        if not spec:
+            spec = load_spec(path)
+        self.spec = spec
+        self.dvc_file = dvc_file
+
+
 
 
 def load_all_specs():
     specs = []
 
     roots = [
-        ("01_raw", Source),
-        ("02_clean", Production),
-        ("03_main", Production),
+        ("01_raw", SourceSpec),
+        ("02_clean", ProductionSpec),
+        ("03_main", ProductionSpec),
     ]
 
     for data_root, klass in roots:

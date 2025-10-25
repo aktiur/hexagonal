@@ -6,16 +6,9 @@ from pathlib import Path
 
 from dvc.api import DVCFileSystem
 
-from hexagonal.files import CONFIG
-from hexagonal.files.spec import DatasetType, get_main_dir, relative_path
+from hexagonal.files import CONFIG, relative_path
 
 URL_PREFIX = "cache/files/md5"
-
-DEFAULT_TYPES = {
-    "01_raw": DatasetType.SOURCE,
-    "02_clean": DatasetType.CLEAN,
-    "03_main": DatasetType.MAIN,
-}
 
 
 @dataclass(order=True, frozen=True)
@@ -24,14 +17,6 @@ class DVCFile:
     hash: str
     deps: list[DVCFile] = field(default_factory=list)
     urls: list[str] = field(default_factory=list)
-
-    @property
-    def default_type(self):
-        return DEFAULT_TYPES[self.base_dir]
-
-    @property
-    def base_dir(self) -> str:
-        return get_main_dir(self.path)
 
     @property
     def s3_url(self):

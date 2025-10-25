@@ -6,15 +6,14 @@ import pyarrow.parquet as pq
 import tomli_w
 from pyarrow import ArrowException
 
-from hexagonal.files import ROOT_DIR
+from hexagonal.files import ROOT_DIR, get_main_dir
 from hexagonal.files.dvc_files import DVCFile, get_dvc_files
 from hexagonal.files.spec import (
     ColonneMetadata,
     ColonneType,
     DatasetSpec,
-    Production,
-    Source,
-    get_main_dir,
+    ProductionSpec,
+    SourceSpec,
     load_spec,
 )
 
@@ -67,10 +66,10 @@ def default_spec(file: DVCFile):
 
     if get_main_dir(file.path) == "01_raw":
         if file.path.with_suffix(f"{file.path.suffix}.dvc").is_file():
-            return Source.model_validate(spec_kwargs)
+            return SourceSpec.model_validate(spec_kwargs)
         else:
             return None
-    return Production.model_validate(spec_kwargs)
+    return ProductionSpec.model_validate(spec_kwargs)
 
 
 def update_csv_columns(file: DVCFile, columns: dict[str, ColonneMetadata]):
@@ -133,17 +132,17 @@ def update_specs():
         if not spec:
             continue
 
-        if isinstance(spec, Source) and not spec.editeur:
+        if isinstance(spec, SourceSpec) and not spec.editeur:
             sys.stderr.write(f"Source sans editeur: {file.path}\n")
 
-        if isinstance(spec, Production) and not spec.section:
+        if isinstance(spec, ProductionSpec) and not spec.section:
             sys.stderr.write(f"Production sans section: {file.path}\n")
 
-        if isinstance(spec, Production) and spec.mimetype == "text/csv":
+        if isinstance(spec, ProductionSpec) and spec.mimetype == "text/csv":
             spec.colonnes = update_csv_columns(file, spec.colonnes or {})
 
         if (
-            isinstance(spec, Production)
+            isinstance(spec, ProductionSpec)
             and spec.mimetype == "application/vnd.apache.parquet"
         ):
             spec.colonnes = update_parquet_columns(file, spec.colonnes or {})

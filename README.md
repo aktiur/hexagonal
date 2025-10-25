@@ -19,7 +19,11 @@ Les données sont stockées dans le dossier `data` avec les sous-dossiers suivan
 
 ### Installation des dépendances
 
-L'installation du projet se fait avec uv
+L'installation du projet se fait avec le gestionnaire de paquets
+uv ([voir instructions d'installation](https://docs.astral.sh/uv/getting-started/installation/)).
+
+Pour créer l'environnement virtuel et installer les dépendances, utilisez la commande
+suivante.
 
 ```bash
 uv sync

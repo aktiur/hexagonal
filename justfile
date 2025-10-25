@@ -1,4 +1,4 @@
-release: rewrite_s3_headers update_specs
+release: rewrite_s3_headers
 
 update_specs:
   uv run src/hexagonal/files/update_specs.py
