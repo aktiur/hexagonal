@@ -15,7 +15,7 @@ Les données sont stockées dans le dossier `data` avec les sous-dossiers suivan
 - `03_main/`: Données prêtes à l'emploi par étude (_feature engineering_, jointures,
   aggrégats, etc.)
 
-## Utilisation
+## Mise en place
 
 ### Installation des dépendances
 
@@ -29,16 +29,23 @@ suivante.
 uv sync
 ```
 
+Pour pouvoir utiliser `just`, il est conseillé de l'installer globalement avec `uv` s'il
+n'est pas déjà disponible :
+
+```bash
+uv tool install rust-just
+```
+
 ### Récupération initiale des données
 
 Une version initiale des données (et notamment des sources, dont certaines peuvent ne
 plus être disponibles en ligne) peut être récupérée depuis le cache en ligne.
 
 ```bash
-uv run dvc pull
+just pull
 ```
 
-### Génération et vérification des données
+### Vérification des données
 
 On utilise [dvc](https://dvc.org/) pour gérer le pipeline de données.
 
@@ -64,20 +71,51 @@ Data and pipelines are up to date.
 
 Sinon, dvc nous dira quels artefacts sont incohérents.
 
-### Mise à jour des données
+## Gestion des données sources
 
-Après un développment, on peut mettre à jour le lockfile avec:
+L'ensemble des données sources sont présentes dans le dossier `data/01_raw`. Les 
+fichiers sont organisés dans des dossiers correspondant aux éditeurs des données.
+
+L'ensemble des fichiers sources est versionné avec dvc et non directement avec git. En 
+effet, git ne gère pas correctement les fichiers volumineux. En pratique, cela signifie
+que les jeux de données ne sont jamais ajoutés directement dans le dépôt git (et le
+fichier `.gitignore` exclut d'ailleurs la plupart des extensions correspondant à des 
+jeux de données). À chaque jeu de donnée correspond un fichier `.dvc` généré par DVC.
+C'est ce dernier qui doit être ajouté dans git.
+
+### Ajouter un jeu de données source
+
+La démarche est différente selon qu'il s'agisse d'un jeu de données disponible sur 
+internet, ou non (par exemple s'il s'agit d'un jeu de données produit par la France
+insoumise).
+
+Dans les deux cas, la commande à utiliser crée un fichier `.dvc` qu'il faut 
+impérativement versionner avec git. Le fichier lui-même ne doit pas être versionné
+
+#### Depuis une URL externe
+
+La commande `import-url` de DVC permet d'importer une source externe depuis une URL :
 
 ```bash
-uv run dvc repro
+uv run dvc import-url <url> data/01_raw/<editeur>/<nom du fichier>
 ```
 
-Le fichier `dvc.lock` est modifié et à committer.
+#### Sans URL externe
 
-### Mettre à jour une des sources
+Le fichier doit être enregistré dans le dossier `data/01_raw/<editeur>/<nom fichier>`.
+La commande `uv run dvc add data/01_raw/<editeur>/<nom fichier>` permet ensuite de
+générer le fichier `.dvc`.
 
-Les sources ne sont pas mises à jour automatiquement. Pour les mises à jour, il y a deux
-cas de figure.
+### Mettre à jour une source existante
+
+Les sources ne sont pas mises à jour automatiquement. Pour les mises à jour, il y a
+trois  cas de figure.
+
+#### Il n'y a pas d'URL externe
+
+Il faut alors éditer le fichier directement, ou le remplacer par la nouvelle version.
+Une fois que c'est fait, la commande `uv run dvc add` permet de mettre à jour le fichier 
+`.dvc` correspondant pour prendre en compte les modifications correspondantes.
 
 #### L'URL de la source ne change pas
 
@@ -103,6 +141,80 @@ Dans ce cas, il faut utiliser la commande :
 uv run dvc import-url <nouvelle url> <chemin complet du fichier à mettre à jour>
 ```
 
+### Documenter les sources
+
+Chaque source ajoutée doit être documentée. Lorsque la source a été ajoutée à DVC, la
+commande suivante permet de générer un squelette de documentation :
+
+```bash
+just scaffold_doc
+```
+
+Un fichier `.toml` est créé dans le même dossier que les sources ajoutées. Pour une 
+source, les propriétés suivantes peuvent être renseignées :
+
+| Propriété | Description                                 |
+|-----------|---------------------------------------------|
+| `nom` | Une désignation complète du jeu de données  |
+| `description` | Une description aussi complète que possible |
+| `editeur` | L'éditeur du jeu de données                 |
+| `date` | La date du jeu de données, si pertinent     |
+| `info_url` | Une URL vers une documentation externe      |
+
+## Traitements des données
+
+Les traitements de données sont définis dans le fichier `dvc.yaml`
+([voir la documentation de DVC](https://dvc.org/doc/user-guide/pipelines/defining-pipelines)).
+
+### Reproduire les traitements de données
+
+La commande `uv run dvc repro` fait tourner tous les traitements de données qui ne sont
+plus à jour.
+
+S'il y en avait, le fichier `dvc.lock` est mis à jour en conséquence. Si c'est le cas,
+il est impératif :
+
+1. de versionner `dvc.lock`
+2. de pousser les nouvelles versions des fichiers.
+
+
+### Conventions à suivre pour ajouter de nouveaux traitements de données
+
+De préférence, les traitements de données doivent être écrits en Python. Si nécessaire,
+il est toutefois possible d'ajouter des traitements sous la forme de scripts bash.
+
+#### Écrire un traitement de données en Python
+
+Les traitements de données en Python doivent respecter les conventions suivantes :
+
+1. Chaque traitement doit être un module Python exécutable dans le paquet `hexagonal` ;
+   le fichier source doit donc se trouver dans le dossier `src/hexagonal`.
+2. Sauf execption, le module exécutable doit prendre en argument les chemins vers les fichiers sources
+   et les fichiers destination plutôt que d'accéder aux fichiers avec un chemin en dur.
+   Il est possible d'utiliser la bibliothèque `click` pour faciliter le traitement des
+   arguments.
+
+
+#### Écrire un traitement de données en bash
+
+Les traitements de données en Bash doivent respecter les conventions suivantes :
+
+1. Les scripts de traitements doivent se trouver dans le dossier `src/scripts`.
+2. Sauf exception, le script doit prendre en argument les chemins vers les fichiers sources
+   et les fichiers destination plutôt que d'accéder aux fichiers avec un chemin en dur, dans la mesure du possible.
+3. Les scripts ne peuvent utiliser de dépendances externes qu'en cas de nécessité.
+
+#### Ajouter le traitement dans `dvc.yaml`
+
+Une fois le traitement écrit, il faut l'ajouter dans le fichier `dvc.yaml` selon les
+conventions suivantes :
+
+1. Donner un nom explicite au nom du traitement, en s'assurant qu'il soit bien unique
+2. La liste des dépendances doit inclure aussi bien la source du traitement que les jeux de données utilisés
+3. Les variables `${src}`, `${raw}`, `${clean}` et `${main}` doivent être utilisés plutôt que les chemins complets.
+4. Pour un traitement en python, le script doit être invoqué avec la syntaxe `${python} <nom.du.module>`
+
+
 ### Pousser les modifications
 
 Lorsque des fichiers ont été modifiés, il faut les pousser vers le cache distant de DVC
@@ -110,7 +222,7 @@ pour les rendre accessibles. Pour cela, il est nécessaire de me contacter pour 
 des droits en écriture sur le bucket S3 `hexagonal-data`.
 
 ```shell
-uv run dvc push -r s3
+just push
 ```
 
 ## Documentation
@@ -125,7 +237,7 @@ La commande suivante permet de créer une version initiale de ces fichiers pour 
 nouvelles sources et productions :
 
 ```shell
-just update_specs
+just scaffold_doc
 ```
 
 Elle met par ailleurs à jour la liste des dépendances des différents fichiers (à partir
@@ -137,7 +249,7 @@ La commande suivante permet de créer ou mettre à jour les deux fichiers <sourc
 et <productions.md> :
 
 ```shell
-just documentation
+just build_doc
 ```
 
 ### Ajouter les bons headers aux fichiers dans S3
@@ -147,5 +259,5 @@ et <productions.md>, il faut réécrire les headers HTTP `Content-Type` et
 `Content-Disposition` pour y mettre les bons types et noms de fichiers.
 
 ```shell
-just rewrite_s3_headers
+just push
 ```
