@@ -28,6 +28,14 @@ def qualifier_codes_postaux(codes_postaux, communes):
         )
     )
 
+    par_code_postal["autres_communes"] = (
+        codes_postaux.sort_values(
+            ["code_postal", "population_municipale_2022"], ascending=[True, False]
+        )
+        .groupby("code_postal")["nom"]
+        .agg(lambda g: ", ".join(g.iloc[1:]))
+    )
+
     par_code_postal["population_totale"] = codes_postaux.groupby("code_postal")[
         "population_municipale_2022"
     ].sum()

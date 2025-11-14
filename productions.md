@@ -2520,7 +2520,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/03_main/codes_postaux.csv |
 | Format de fichier | text/csv |
-| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/a2/44fbbc0192bd75eae1b9d38e0b8ceb |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/1a/0e0834a64acb4c3eb82f0068729c50 |
 
 Ce fichier comporte une ligne par code postal et indique, pour chaque code postal,
 le code INSEE et le nom de la commune la plus peuplée dans le territoire délivré par
@@ -2557,6 +2557,11 @@ le code postal.
     <td><code>population_commune_principale</code></td>
     <td><code>entier</code></td>
     <td>None</td>
+  </tr>
+<tr>
+    <td><code>autres_communes</code></td>
+    <td><code>str</code></td>
+    <td>Nom de toutes les autres communes du code postal</td>
   </tr>
 <tr>
     <td><code>population_totale</code></td>

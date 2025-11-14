@@ -23,6 +23,11 @@ nullable = false
 type = "entier"
 nullable = false
 
+[colonnes.autres_communes]
+type = "str"
+description = "Nom de toutes les autres communes du code postal"
+nullable = false
+
 [colonnes.population_totale]
 type = "entier"
 nullable = false

@@ -1955,10 +1955,10 @@ stages:
       size: 4033972
     - path: src/hexagonal/codes_postaux/qualifier.py
       hash: md5
-      md5: 1969267fba5b36c00da45a344515e293
-      size: 1746
+      md5: 81e4ddc9088e9cf6471262ee713fd73f
+      size: 2009
     outs:
     - path: data/03_main/codes_postaux.csv
       hash: md5
-      md5: a244fbbc0192bd75eae1b9d38e0b8ceb
-      size: 218771
+      md5: 1a0e0834a64acb4c3eb82f0068729c50
+      size: 631927
