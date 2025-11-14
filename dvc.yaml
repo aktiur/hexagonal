@@ -267,7 +267,7 @@ stages:
       
   cog_nettoyer:
     deps:
-      - ${raw}/cog.zip
+      - ${raw}/insee/cog.zip
       - ${src}/hexagonal/cog/extraire.py
     outs:
       - ${clean}/cog/regions.csv
@@ -280,7 +280,7 @@ stages:
       - ${clean}/cog/mouvements_communes.csv
     cmd: >-
       ${python} hexagonal.cog.extraire
-      ${raw}/cog.zip
+      ${raw}/insee/cog.zip
       ${clean}/cog
 
   epci_nettoyer:
@@ -323,13 +323,13 @@ stages:
 
   population_nettoyer:
     deps:
-      - ${raw}/population_municipale.xlsx
+      - ${raw}/insee/population_municipale.xlsx
       - ${src}/hexagonal/population/nettoyer.py
     outs:
       - ${clean}/population_municipale.csv
     cmd: >-
       ${python} hexagonal.population.nettoyer
-      ${raw}/population_municipale.xlsx
+      ${raw}/insee/population_municipale.xlsx
       ${clean}/population_municipale.csv
 
   cog_qualifier:
@@ -369,13 +369,13 @@ stages:
 
   circonscriptions_details:
     deps:
-      - ${raw}/insee_circonscriptions_legislatives.zip
+      - ${raw}/insee/insee_circonscriptions_legislatives.zip
       - ${src}/scripts/geodata/circonscriptions.sh
     outs:
       - ${main}/geodata/circonscriptions_legislatives.json
     cmd: >-
       ${src}/scripts/geodata/circonscriptions.sh
-      ${raw}/insee_circonscriptions_legislatives.zip
+      ${raw}/insee/insee_circonscriptions_legislatives.zip
       ${main}/geodata/circonscriptions_legislatives.json
 
   communes_carto:

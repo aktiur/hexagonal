@@ -1003,17 +1003,17 @@ stages:
       md5: c4b7e16894b409e0c810750c4967afec
       size: 1079529
   cog_nettoyer:
-    cmd: PYTHONPATH=src python -m hexagonal.cog.extraire data/01_raw/cog.zip 
-      data/02_clean/cog
+    cmd: PYTHONPATH=src python -m hexagonal.cog.extraire 
+      data/01_raw/insee/cog.zip data/02_clean/cog
     deps:
-    - path: data/01_raw/cog.zip
+    - path: data/01_raw/insee/cog.zip
       hash: md5
       md5: d4c084b8a04dcc97ed99e1a687107bc0
       size: 1943027
     - path: src/hexagonal/cog/extraire.py
       hash: md5
-      md5: 5655887ad3f6164864edb98a914a00b6
-      size: 3669
+      md5: 9a53cbb9cdd916eccc73739e3aba005d
+      size: 3687
     outs:
     - path: data/02_clean/cog/com.csv
       hash: md5
@@ -1268,10 +1268,10 @@ stages:
       size: 4033972
   population_nettoyer:
     cmd: PYTHONPATH=src python -m hexagonal.population.nettoyer 
-      data/01_raw/population_municipale.xlsx 
+      data/01_raw/insee/population_municipale.xlsx 
       data/02_clean/population_municipale.csv
     deps:
-    - path: data/01_raw/population_municipale.xlsx
+    - path: data/01_raw/insee/population_municipale.xlsx
       hash: md5
       md5: d6b7b360966185d728501adeaac33b53
       size: 6860893
@@ -1427,10 +1427,10 @@ stages:
       size: 69758
   circonscriptions_details:
     cmd: src/scripts/geodata/circonscriptions.sh 
-      data/01_raw/insee_circonscriptions_legislatives.zip 
+      data/01_raw/insee/insee_circonscriptions_legislatives.zip 
       data/03_main/geodata/circonscriptions_legislatives.json
     deps:
-    - path: data/01_raw/insee_circonscriptions_legislatives.zip
+    - path: data/01_raw/insee/insee_circonscriptions_legislatives.zip
       hash: md5
       md5: dac42b77df3c3982c6badb41822ec3e3
       size: 6083265
