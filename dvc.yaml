@@ -272,6 +272,7 @@ stages:
     outs:
       - ${clean}/cog/regions.csv
       - ${clean}/cog/departements.csv
+      - ${clean}/cog/cantons.csv
       - ${clean}/cog/communes.csv
       - ${clean}/cog/communes_com.csv
       - ${clean}/cog/communes_historiques.csv

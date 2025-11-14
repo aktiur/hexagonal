@@ -81,6 +81,15 @@ spec_commune_com = {
     "nom": ("NCCENR", corriger_nom_commune_com),
 }
 
+spec_canton = {
+    "code_canton": "CAN",
+    "code_departement": "DEP",
+    "code_commune_bureau_centralisateur": "BURCENTRAL",
+    "type_canton": "TYPECT",
+    "type_nom_canton": "TNCC",
+    "nom_canton": "LIBELLE",
+}
+
 spec_commune_historique = {
     "code_commune": "COM",
     "type_nom": "TNCC",
@@ -106,6 +115,7 @@ spec_mouvements_communes = {
 fichiers_cog = [
     (f"v_region_{ANNEE}", "regions", spec_region),
     (f"v_departement_{ANNEE}", "departements", spec_departement),
+    (f"v_canton_{ANNEE}", "cantons", spec_canton),
     (f"v_commune_{ANNEE}", "communes", spec_commune),
     (f"v_commune_comer_{ANNEE}", "communes_com", spec_commune_com),
     (f"v_ctcd_{ANNEE}", "ctcd", spec_ctcd),
