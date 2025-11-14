@@ -1,0 +1,23 @@
+nom = "Liste des associations codes postaux et codes communes"
+description = """
+Ce fichier référence l'ensemble des codes postaux utilisés pas la Poste et indique à
+quelles communes ils sont associés.
+"""
+mimetype = "text/csv"
+section = "Découpage administratif"
+
+[colonnes.code_postal]
+type = "str"
+nullable = false
+
+[colonnes.code_commune]
+type = "code_commune"
+nullable = false
+
+[colonnes.libelle_acheminement]
+type = "str"
+nullable = false
+
+[colonnes.ligne5]
+type = "str"
+nullable = false

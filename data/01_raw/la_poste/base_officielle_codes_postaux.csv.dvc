@@ -1,0 +1,13 @@
+md5: 9ce418887f4acf2b75b7525ab007b213
+frozen: true
+deps:
+- checksum: W/"17bb46-19a616a0213"
+  size: 1555270
+  hash: md5
+  path: 
+    https://datanova.laposte.fr/data-fair/api/v1/datasets/laposte-hexasmal/data-files/019HexaSmal.csv
+outs:
+- md5: 707ebfeaea08c99a4ff7aa5b080be0c1
+  size: 1555270
+  hash: md5
+  path: base_officielle_codes_postaux.csv

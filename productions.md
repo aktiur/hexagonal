@@ -34,6 +34,8 @@
   - [Contours précis des circonscriptions législatives en 2024](#data/03_main/geodata/circonscriptions_legislatives.json)
   - [Contours précis des communes de France](#data/03_main/geodata/communes.json)
 - [Découpage administratif](#decoupage-administratif)
+  - [Liste des associations codes postaux et codes communes](#data/02_clean/codes_postaux.csv)
+  - [Liste des cantons](#data/02_clean/cog/cantons.csv)
   - [Liste des collectivités d&#39;Outremer](#data/02_clean/cog/com.csv)
   - [Liste des communes, arrondissements municipaux, communes déléguées et communes associées](#data/02_clean/cog/communes.csv)
   - [Liste des communes des collectivités d&#39;outremer](#data/02_clean/cog/communes_com.csv)
@@ -44,6 +46,7 @@
   - [Liste des régions](#data/02_clean/cog/regions.csv)
   - [communes_epci](#data/02_clean/communes_epci.csv)
   - [Liste des EPCI à fiscalité propres](#data/02_clean/epci.csv)
+  - [Liste des codes postaux](#data/03_main/codes_postaux.csv)
 - [Démographie](#demographie)
   - [Population par commune de 1876 à 2022](#data/02_clean/population_municipale.csv)
 - [Organisation administrative](#organisation-administrative)
@@ -1291,7 +1294,7 @@ Cette production dépend des sources suivantes :
 <ul>
     <li><a href="productions.md#data/03_main/geodata/circonscriptions_legislatives.json">Contours précis des circonscriptions législatives en 2024</a>
         <ul>
-    <li><a href="sources.md#data/01_raw/insee_circonscriptions_legislatives.zip">Circonscriptions législatives - Fond cartographique</a>
+    <li><a href="sources.md#data/01_raw/insee/insee_circonscriptions_legislatives.zip">Circonscriptions législatives - Fond cartographique</a>
         </li>
     </ul>
         </li>
@@ -1318,7 +1321,7 @@ Cette production dépend des sources suivantes :
 <ul>
     <li><a href="productions.md#data/03_main/geodata/circonscriptions_legislatives.json">Contours précis des circonscriptions législatives en 2024</a>
         <ul>
-    <li><a href="sources.md#data/01_raw/insee_circonscriptions_legislatives.zip">Circonscriptions législatives - Fond cartographique</a>
+    <li><a href="sources.md#data/01_raw/insee/insee_circonscriptions_legislatives.zip">Circonscriptions législatives - Fond cartographique</a>
         </li>
     </ul>
         </li>
@@ -1345,7 +1348,7 @@ Cette production dépend des sources suivantes :
 <ul>
     <li><a href="productions.md#data/03_main/geodata/circonscriptions_legislatives.json">Contours précis des circonscriptions législatives en 2024</a>
         <ul>
-    <li><a href="sources.md#data/01_raw/insee_circonscriptions_legislatives.zip">Circonscriptions législatives - Fond cartographique</a>
+    <li><a href="sources.md#data/01_raw/insee/insee_circonscriptions_legislatives.zip">Circonscriptions législatives - Fond cartographique</a>
         </li>
     </ul>
         </li>
@@ -1372,7 +1375,7 @@ Cette production dépend des sources suivantes :
 <ul>
     <li><a href="productions.md#data/03_main/geodata/circonscriptions_legislatives.json">Contours précis des circonscriptions législatives en 2024</a>
         <ul>
-    <li><a href="sources.md#data/01_raw/insee_circonscriptions_legislatives.zip">Circonscriptions législatives - Fond cartographique</a>
+    <li><a href="sources.md#data/01_raw/insee/insee_circonscriptions_legislatives.zip">Circonscriptions législatives - Fond cartographique</a>
         </li>
     </ul>
         </li>
@@ -1399,7 +1402,7 @@ Cette production dépend des sources suivantes :
 <ul>
     <li><a href="productions.md#data/03_main/geodata/circonscriptions_legislatives.json">Contours précis des circonscriptions législatives en 2024</a>
         <ul>
-    <li><a href="sources.md#data/01_raw/insee_circonscriptions_legislatives.zip">Circonscriptions législatives - Fond cartographique</a>
+    <li><a href="sources.md#data/01_raw/insee/insee_circonscriptions_legislatives.zip">Circonscriptions législatives - Fond cartographique</a>
         </li>
     </ul>
         </li>
@@ -1426,7 +1429,7 @@ Cette production dépend des sources suivantes :
 <ul>
     <li><a href="productions.md#data/03_main/geodata/circonscriptions_legislatives.json">Contours précis des circonscriptions législatives en 2024</a>
         <ul>
-    <li><a href="sources.md#data/01_raw/insee_circonscriptions_legislatives.zip">Circonscriptions législatives - Fond cartographique</a>
+    <li><a href="sources.md#data/01_raw/insee/insee_circonscriptions_legislatives.zip">Circonscriptions législatives - Fond cartographique</a>
         </li>
     </ul>
         </li>
@@ -1671,7 +1674,7 @@ Cette production dépend des sources suivantes :
 Cette production dépend des sources suivantes :
 
 <ul>
-    <li><a href="sources.md#data/01_raw/insee_circonscriptions_legislatives.zip">Circonscriptions législatives - Fond cartographique</a>
+    <li><a href="sources.md#data/01_raw/insee/insee_circonscriptions_legislatives.zip">Circonscriptions législatives - Fond cartographique</a>
         </li>
     </ul>
 
@@ -1702,6 +1705,145 @@ Cette production dépend des sources suivantes :
 
 ## Découpage administratif
 <a name="decoupage-administratif"></a>
+
+### Liste des associations codes postaux et codes communes
+<a name="data/02_clean/codes_postaux.csv"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/02_clean/codes_postaux.csv |
+| Format de fichier | text/csv |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/7c/02184bfb9341336c35bc439ee9942a |
+
+Ce fichier référence l&#39;ensemble des codes postaux utilisés pas la Poste et indique à
+quelles communes ils sont associés.
+
+
+### Colonnes
+
+<table>
+<thead>
+  <tr>
+    <th>id</th>
+    <th>type</th>
+    <th>description</th>
+  </tr>
+</thead>
+<tbody>
+<tr>
+    <td><code>code_postal</code></td>
+    <td><code>str</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>code_commune</code></td>
+    <td><code>code_commune</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>libelle_acheminement</code></td>
+    <td><code>str</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>ligne5</code></td>
+    <td><code>str</code></td>
+    <td>None</td>
+  </tr>
+
+</tbody>
+</table>
+
+### Sources
+
+Cette production dépend des sources suivantes :
+
+<ul>
+    <li><a href="sources.md#data/01_raw/la_poste/base_officielle_codes_postaux.csv">Base officielle des codes postaux</a>
+        </li>
+    </ul>
+
+### Liste des cantons
+<a name="data/02_clean/cog/cantons.csv"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/02_clean/cog/cantons.csv |
+| Format de fichier | text/csv |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/6f/694185a95d77640c1b13b5d327bf3d |
+
+La liste des cantons extraite du COG.
+
+Cette liste comprend non seulement les cantons en tant que tels, mais aussi les
+cantons-ou-villes et les cantons fictifs.
+
+A la différence du canton, le « Canton-ou-ville » (ou pseudo-canton) est un regroupement
+d&#39;une ou plusieurs communes entières.
+
+Dans les agglomérations urbaines, chaque canton comprend en général une partie de la
+commune principale et éventuellement une ou plusieurs communes périphériques. Dans ce
+cas, l&#39;Insee considère la commune principale, entière, comme un pseudo-canton unique et
+distinct.
+
+Pour la ou les communes périphériques, le pseudo-canton considéré est alors identique au
+vrai canton amputé de la fraction de la commune principale que comprend le vrai canton.
+
+
+### Colonnes
+
+<table>
+<thead>
+  <tr>
+    <th>id</th>
+    <th>type</th>
+    <th>description</th>
+  </tr>
+</thead>
+<tbody>
+<tr>
+    <td><code>code_canton</code></td>
+    <td><code>str</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>code_departement</code></td>
+    <td><code>code_departement</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>code_commune_bureau_centralisateur</code></td>
+    <td><code>code_commune</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>type_canton</code></td>
+    <td><code>str</code></td>
+    <td>Indique s&#39;il s&#39;agit d&#39;un véritable canton, d&#39;un canton-ville (ou pseudo-canton) ou d&#39;un
+canton fictif.
+</td>
+  </tr>
+<tr>
+    <td><code>type_nom_canton</code></td>
+    <td><code>entier</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>nom_canton</code></td>
+    <td><code>str</code></td>
+    <td>None</td>
+  </tr>
+
+</tbody>
+</table>
+
+### Sources
+
+Cette production dépend des sources suivantes :
+
+<ul>
+    <li><a href="sources.md#data/01_raw/insee/cog.zip">Code Officiel Géographique 2024</a>
+        </li>
+    </ul>
 
 ### Liste des collectivités d&#39;Outremer
 <a name="data/02_clean/cog/com.csv"></a>
@@ -1753,7 +1895,7 @@ australes et antarctiques françaises et l&#39;île de Clipperton.
 Cette production dépend des sources suivantes :
 
 <ul>
-    <li><a href="sources.md#data/01_raw/cog.zip">Code Officiel Géographique 2024</a>
+    <li><a href="sources.md#data/01_raw/insee/cog.zip">Code Officiel Géographique 2024</a>
         </li>
     </ul>
 
@@ -1838,7 +1980,7 @@ Cette production dépend des sources suivantes :
 Cette production dépend des sources suivantes :
 
 <ul>
-    <li><a href="sources.md#data/01_raw/cog.zip">Code Officiel Géographique 2024</a>
+    <li><a href="sources.md#data/01_raw/insee/cog.zip">Code Officiel Géographique 2024</a>
         </li>
     </ul>
 
@@ -1898,7 +2040,7 @@ Cette production dépend des sources suivantes :
 Cette production dépend des sources suivantes :
 
 <ul>
-    <li><a href="sources.md#data/01_raw/cog.zip">Code Officiel Géographique 2024</a>
+    <li><a href="sources.md#data/01_raw/insee/cog.zip">Code Officiel Géographique 2024</a>
         </li>
     </ul>
 
@@ -1958,7 +2100,7 @@ Cette production dépend des sources suivantes :
 Cette production dépend des sources suivantes :
 
 <ul>
-    <li><a href="sources.md#data/01_raw/cog.zip">Code Officiel Géographique 2024</a>
+    <li><a href="sources.md#data/01_raw/insee/cog.zip">Code Officiel Géographique 2024</a>
         </li>
     </ul>
 
@@ -2019,7 +2161,7 @@ Cette production dépend des sources suivantes :
 Cette production dépend des sources suivantes :
 
 <ul>
-    <li><a href="sources.md#data/01_raw/cog.zip">Code Officiel Géographique 2024</a>
+    <li><a href="sources.md#data/01_raw/insee/cog.zip">Code Officiel Géographique 2024</a>
         </li>
     </ul>
 
@@ -2079,7 +2221,7 @@ Cette production dépend des sources suivantes :
 Cette production dépend des sources suivantes :
 
 <ul>
-    <li><a href="sources.md#data/01_raw/cog.zip">Code Officiel Géographique 2024</a>
+    <li><a href="sources.md#data/01_raw/insee/cog.zip">Code Officiel Géographique 2024</a>
         </li>
     </ul>
 
@@ -2181,7 +2323,7 @@ Les types de modifications apportées sont les suivantes :
 Cette production dépend des sources suivantes :
 
 <ul>
-    <li><a href="sources.md#data/01_raw/cog.zip">Code Officiel Géographique 2024</a>
+    <li><a href="sources.md#data/01_raw/insee/cog.zip">Code Officiel Géographique 2024</a>
         </li>
     </ul>
 
@@ -2237,7 +2379,7 @@ Cette production dépend des sources suivantes :
 Cette production dépend des sources suivantes :
 
 <ul>
-    <li><a href="sources.md#data/01_raw/cog.zip">Code Officiel Géographique 2024</a>
+    <li><a href="sources.md#data/01_raw/insee/cog.zip">Code Officiel Géographique 2024</a>
         </li>
     </ul>
 
@@ -2368,6 +2510,101 @@ Cette production dépend des sources suivantes :
 
 <ul>
     <li><a href="sources.md#data/01_raw/epci.xlsx">Liste et composition des EPCI à fiscalité propre 2025</a>
+        </li>
+    </ul>
+
+### Liste des codes postaux
+<a name="data/03_main/codes_postaux.csv"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/03_main/codes_postaux.csv |
+| Format de fichier | text/csv |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/a2/44fbbc0192bd75eae1b9d38e0b8ceb |
+
+Ce fichier comporte une ligne par code postal et indique, pour chaque code postal,
+le code INSEE et le nom de la commune la plus peuplée dans le territoire délivré par
+le code postal.
+
+
+### Colonnes
+
+<table>
+<thead>
+  <tr>
+    <th>id</th>
+    <th>type</th>
+    <th>description</th>
+  </tr>
+</thead>
+<tbody>
+<tr>
+    <td><code>code_postal</code></td>
+    <td><code>str</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>code_commune_principale</code></td>
+    <td><code>code_commune</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>nom_commune_principale</code></td>
+    <td><code>str</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>population_commune_principale</code></td>
+    <td><code>entier</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>population_totale</code></td>
+    <td><code>entier</code></td>
+    <td>None</td>
+  </tr>
+
+</tbody>
+</table>
+
+### Sources
+
+Cette production dépend des sources suivantes :
+
+<ul>
+    <li><a href="productions.md#data/02_clean/codes_postaux.csv">Liste des associations codes postaux et codes communes</a>
+        <ul>
+    <li><a href="sources.md#data/01_raw/la_poste/base_officielle_codes_postaux.csv">Base officielle des codes postaux</a>
+        </li>
+    </ul>
+        </li>
+    <li><a href="productions.md#data/03_main/cog/communes.csv">Liste des communes</a>
+        <ul>
+    <li><a href="productions.md#data/02_clean/cog/communes.csv">Liste des communes, arrondissements municipaux, communes déléguées et communes associées</a>
+        <ul>
+    <li><a href="sources.md#data/01_raw/insee/cog.zip">Code Officiel Géographique 2024</a>
+        </li>
+    </ul>
+        </li>
+    <li><a href="productions.md#data/02_clean/population_municipale.csv">Population par commune de 1876 à 2022</a>
+        <ul>
+    <li><a href="sources.md#data/01_raw/insee/population_municipale.xlsx">Séries historiques de population par commune (1876 à 2022)</a>
+        </li>
+    </ul>
+        </li>
+    <li><a href="productions.md#data/02_clean/epci.csv">Liste des EPCI à fiscalité propres</a>
+        <ul>
+    <li><a href="sources.md#data/01_raw/epci.xlsx">Liste et composition des EPCI à fiscalité propre 2025</a>
+        </li>
+    </ul>
+        </li>
+    <li><a href="productions.md#data/02_clean/communes_epci.csv">communes_epci</a>
+        <ul>
+    <li><a href="sources.md#data/01_raw/epci.xlsx">Liste et composition des EPCI à fiscalité propre 2025</a>
+        </li>
+    </ul>
+        </li>
+    </ul>
         </li>
     </ul>
 
@@ -2604,7 +2841,7 @@ municipale
 Cette production dépend des sources suivantes :
 
 <ul>
-    <li><a href="sources.md#data/01_raw/population_municipale.xlsx">Séries historiques de population par commune (1876 à 2022)</a>
+    <li><a href="sources.md#data/01_raw/insee/population_municipale.xlsx">Séries historiques de population par commune (1876 à 2022)</a>
         </li>
     </ul>
 
@@ -2727,13 +2964,13 @@ Cette production dépend des sources suivantes :
 <ul>
     <li><a href="productions.md#data/02_clean/cog/communes.csv">Liste des communes, arrondissements municipaux, communes déléguées et communes associées</a>
         <ul>
-    <li><a href="sources.md#data/01_raw/cog.zip">Code Officiel Géographique 2024</a>
+    <li><a href="sources.md#data/01_raw/insee/cog.zip">Code Officiel Géographique 2024</a>
         </li>
     </ul>
         </li>
     <li><a href="productions.md#data/02_clean/population_municipale.csv">Population par commune de 1876 à 2022</a>
         <ul>
-    <li><a href="sources.md#data/01_raw/population_municipale.xlsx">Séries historiques de population par commune (1876 à 2022)</a>
+    <li><a href="sources.md#data/01_raw/insee/population_municipale.xlsx">Séries historiques de population par commune (1876 à 2022)</a>
         </li>
     </ul>
         </li>
@@ -6579,19 +6816,19 @@ Cette production dépend des sources suivantes :
         </li>
     <li><a href="productions.md#data/02_clean/cog/departements.csv">Liste des départements</a>
         <ul>
-    <li><a href="sources.md#data/01_raw/cog.zip">Code Officiel Géographique 2024</a>
+    <li><a href="sources.md#data/01_raw/insee/cog.zip">Code Officiel Géographique 2024</a>
         </li>
     </ul>
         </li>
     <li><a href="productions.md#data/02_clean/cog/communes.csv">Liste des communes, arrondissements municipaux, communes déléguées et communes associées</a>
         <ul>
-    <li><a href="sources.md#data/01_raw/cog.zip">Code Officiel Géographique 2024</a>
+    <li><a href="sources.md#data/01_raw/insee/cog.zip">Code Officiel Géographique 2024</a>
         </li>
     </ul>
         </li>
     <li><a href="productions.md#data/02_clean/cog/communes_com.csv">Liste des communes des collectivités d&#39;outremer</a>
         <ul>
-    <li><a href="sources.md#data/01_raw/cog.zip">Code Officiel Géographique 2024</a>
+    <li><a href="sources.md#data/01_raw/insee/cog.zip">Code Officiel Géographique 2024</a>
         </li>
     </ul>
         </li>

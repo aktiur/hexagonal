@@ -10,10 +10,10 @@
 - [GeoNames](#geonames)
   - [cities1000](#data/01_raw/geonames/cities1000.zip)
 - [INSEE](#insee)
-  - [Code Officiel Géographique 2024](#data/01_raw/cog.zip)
   - [Admin Express COG édition 2024 France entière](#data/01_raw/ign/admin_express/admin_express_cog.7z)
-  - [Circonscriptions législatives - Fond cartographique](#data/01_raw/insee_circonscriptions_legislatives.zip)
-  - [Séries historiques de population par commune (1876 à 2022)](#data/01_raw/population_municipale.xlsx)
+  - [Code Officiel Géographique 2024](#data/01_raw/insee/cog.zip)
+  - [Circonscriptions législatives - Fond cartographique](#data/01_raw/insee/insee_circonscriptions_legislatives.zip)
+  - [Séries historiques de population par commune (1876 à 2022)](#data/01_raw/insee/population_municipale.xlsx)
 - [LEGIS-2022](#legis-2022)
   - [Codage des nuances politiques des candidats aux élections législatives des 12 et 19 juin 2022](#data/01_raw/legis_2022/2022-legislatives-nuances.csv)
 - [La France insoumise](#la-france-insoumise)
@@ -22,6 +22,8 @@
   - [Liste des candidats du Nouveau Front populaire et de leur sensibilité par circonscription législative](#data/01_raw/lafranceinsoumise/2024-legislatives-nfp-sensibilites.csv)
   - [Nuançage LFI des candidatures aux législatives 2024](#data/01_raw/lafranceinsoumise/2024-legislatives-nuances.csv)
   - [Paramètres électoraux des différents scrutins de listes](#data/01_raw/lafranceinsoumise/scrutins_listes.csv)
+- [La Poste](#la-poste)
+  - [Base officielle des codes postaux](#data/01_raw/la_poste/base_officielle_codes_postaux.csv)
 - [Le Monde](#le-monde)
   - [Liste des candidats aux élections législatives 2022 et de leur nuance politique](#data/01_raw/le_monde/2022-legislatives-nuances.csv)
 - [Mairie de Paris](#mairie-de-paris)
@@ -170,12 +172,32 @@ The GeoNames geographical database covers all countries and contains over eleven
 ## INSEE
 <a name="insee"></a>
 
-### Code Officiel Géographique 2024
-<a name="data/01_raw/cog.zip"></a>
+### Admin Express COG édition 2024 France entière
+<a name="data/01_raw/ign/admin_express/admin_express_cog.7z"></a>
 
 | Propriété | Valeur |
 | --------- | ------ |
-| Chemin interne | data/01_raw/cog.zip |
+| Chemin interne | data/01_raw/ign/admin_express/admin_express_cog.7z |
+| Format de fichier | application/x-7z-compressed |
+| URL d&#39;information | https://geoservices.ign.fr/adminexpress |
+| Éditeur | INSEE |
+| URL d&#39;origine | https://data.geopf.fr/telechargement/download/ADMIN-EXPRESS-COG/ADMIN-EXPRESS-COG_3-2__SHP_WGS84G_FRA_2025-04-02/ADMIN-EXPRESS-COG_3-2__SHP_WGS84G_FRA_2025-04-02.7z |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/ae/a27feb6061e6aad3fc4b635eecbe1e |
+
+Fournit les contours géographiques correspondant au découpage administratif du territoire français.
+
+Il couvre l&#39;ensemble des départements français, y compris les départements et régions d&#39;outre-mer (DROM). Les
+collectivités d&#39;outre-mer (COM) ne sont pas couvertes par ce produit.
+
+Le produit ADMIN EXPRESS est décliné dans une édition « COG », appelé ADMIN EXPRESS COG, conforme au code officiel
+géographique publié chaque année par l’INSEE.
+
+### Code Officiel Géographique 2024
+<a name="data/01_raw/insee/cog.zip"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/insee/cog.zip |
 | Format de fichier | application/zip |
 | URL d&#39;information | https://www.insee.fr/fr/information/2560452 |
 | Éditeur | INSEE |
@@ -197,32 +219,12 @@ territoires étrangers sont présentés sur cette page. Un troisième nouveau
 fichier met à disposition la liste des couples code extension - territoire de
 rattachement (commune ou pays).
 
-### Admin Express COG édition 2024 France entière
-<a name="data/01_raw/ign/admin_express/admin_express_cog.7z"></a>
-
-| Propriété | Valeur |
-| --------- | ------ |
-| Chemin interne | data/01_raw/ign/admin_express/admin_express_cog.7z |
-| Format de fichier | application/x-7z-compressed |
-| URL d&#39;information | https://geoservices.ign.fr/adminexpress |
-| Éditeur | INSEE |
-| URL d&#39;origine | https://data.geopf.fr/telechargement/download/ADMIN-EXPRESS-COG/ADMIN-EXPRESS-COG_3-2__SHP_WGS84G_FRA_2025-04-02/ADMIN-EXPRESS-COG_3-2__SHP_WGS84G_FRA_2025-04-02.7z |
-| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/ae/a27feb6061e6aad3fc4b635eecbe1e |
-
-Fournit les contours géographiques correspondant au découpage administratif du territoire français.
-
-Il couvre l&#39;ensemble des départements français, y compris les départements et régions d&#39;outre-mer (DROM). Les
-collectivités d&#39;outre-mer (COM) ne sont pas couvertes par ce produit.
-
-Le produit ADMIN EXPRESS est décliné dans une édition « COG », appelé ADMIN EXPRESS COG, conforme au code officiel
-géographique publié chaque année par l’INSEE.
-
 ### Circonscriptions législatives - Fond cartographique
-<a name="data/01_raw/insee_circonscriptions_legislatives.zip"></a>
+<a name="data/01_raw/insee/insee_circonscriptions_legislatives.zip"></a>
 
 | Propriété | Valeur |
 | --------- | ------ |
-| Chemin interne | data/01_raw/insee_circonscriptions_legislatives.zip |
+| Chemin interne | data/01_raw/insee/insee_circonscriptions_legislatives.zip |
 | Format de fichier | application/zip |
 | URL d&#39;information | https://www.insee.fr/fr/statistiques/6441661?sommaire=6436478 |
 | Éditeur | INSEE |
@@ -235,11 +237,11 @@ l’Intérieur et les préfectures. Il est mis à disposition dans sa version al
 des contours simplifiés.
 
 ### Séries historiques de population par commune (1876 à 2022)
-<a name="data/01_raw/population_municipale.xlsx"></a>
+<a name="data/01_raw/insee/population_municipale.xlsx"></a>
 
 | Propriété | Valeur |
 | --------- | ------ |
-| Chemin interne | data/01_raw/population_municipale.xlsx |
+| Chemin interne | data/01_raw/insee/population_municipale.xlsx |
 | Format de fichier | application/vnd.openxmlformats-officedocument.spreadsheetml.sheet |
 | Éditeur | INSEE |
 | URL d&#39;origine | https://www.insee.fr/fr/statistiques/fichier/3698339/base-pop-historiques-1876-2022.xlsx |
@@ -339,6 +341,26 @@ campagne des législatives 2024 à des fins d&#39;analyse électorale.
 | URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/92/98d6138602e9e7d687e196d13f162d |
 
 
+
+
+
+## La Poste
+<a name="la-poste"></a>
+
+### Base officielle des codes postaux
+<a name="data/01_raw/la_poste/base_officielle_codes_postaux.csv"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/la_poste/base_officielle_codes_postaux.csv |
+| Format de fichier | text/csv |
+| Éditeur | La Poste |
+| URL d&#39;origine | https://datanova.laposte.fr/data-fair/api/v1/datasets/laposte-hexasmal/data-files/019HexaSmal.csv |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/70/7ebfeaea08c99a4ff7aa5b080be0c1 |
+
+La base officielle des codes postaux est un jeu de données qui fournit la correspondance
+entre les codes postaux et les codes INSEE des communes, de France (métropole et DOM),
+des COM, ainsi que de MONACO.
 
 
 

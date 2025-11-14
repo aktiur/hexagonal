@@ -1922,3 +1922,43 @@ stages:
       hash: md5
       md5: 40eb56c796908bacc792e7343cf7d554
       size: 160314
+  extraire_codes_postaux:
+    cmd: PYTHONPATH=src python -m hexagonal.codes_postaux.extraire 
+      data/01_raw/la_poste/base_officielle_codes_postaux.csv 
+      data/02_clean/codes_postaux.csv
+    deps:
+    - path: data/01_raw/la_poste/base_officielle_codes_postaux.csv
+      hash: md5
+      md5: 707ebfeaea08c99a4ff7aa5b080be0c1
+      size: 1555270
+    - path: src/hexagonal/codes_postaux/extraire.py
+      hash: md5
+      md5: 300e94084093ae34bb9018ff09ae1107
+      size: 728
+    outs:
+    - path: data/02_clean/codes_postaux.csv
+      hash: md5
+      md5: 7c02184bfb9341336c35bc439ee9942a
+      size: 1099107
+  qualifier_codes_postaux:
+    cmd: PYTHONPATH=src python -m hexagonal.codes_postaux.qualifier 
+      data/02_clean/codes_postaux.csv data/03_main/cog/communes.csv 
+      data/03_main/codes_postaux.csv
+    deps:
+    - path: data/02_clean/codes_postaux.csv
+      hash: md5
+      md5: 7c02184bfb9341336c35bc439ee9942a
+      size: 1099107
+    - path: data/03_main/cog/communes.csv
+      hash: md5
+      md5: 964988ff05af1c6f97d9bf42f72850f8
+      size: 4033972
+    - path: src/hexagonal/codes_postaux/qualifier.py
+      hash: md5
+      md5: 1969267fba5b36c00da45a344515e293
+      size: 1746
+    outs:
+    - path: data/03_main/codes_postaux.csv
+      hash: md5
+      md5: a244fbbc0192bd75eae1b9d38e0b8ceb
+      size: 218771

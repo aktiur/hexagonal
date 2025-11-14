@@ -1,0 +1,7 @@
+nom = "Base officielle des codes postaux"
+description = """
+La base officielle des codes postaux est un jeu de données qui fournit la correspondance
+entre les codes postaux et les codes INSEE des communes, de France (métropole et DOM),
+des COM, ainsi que de MONACO."""
+mimetype = "text/csv"
+editeur = "La Poste"

@@ -445,3 +445,27 @@ stages:
       ${raw}/natural_earth/ne_10m_admin_0_countries.zip
       ${clean}/geonames/cities1000.json.zst
       ${main}/cartographie/pays.json.zst
+
+  extraire_codes_postaux:
+    deps:
+      - ${raw}/la_poste/base_officielle_codes_postaux.csv
+      - ${src}/hexagonal/codes_postaux/extraire.py
+    outs:
+      - ${clean}/codes_postaux.csv
+    cmd: >-
+      ${python} hexagonal.codes_postaux.extraire
+      ${raw}/la_poste/base_officielle_codes_postaux.csv
+      ${clean}/codes_postaux.csv
+
+  qualifier_codes_postaux:
+    deps:
+      - ${clean}/codes_postaux.csv
+      - ${main}/cog/communes.csv
+      - ${src}/hexagonal/codes_postaux/qualifier.py
+    outs:
+      - ${main}/codes_postaux.csv
+    cmd: >-
+      ${python} hexagonal.codes_postaux.qualifier
+      ${clean}/codes_postaux.csv
+      ${main}/cog/communes.csv
+      ${main}/codes_postaux.csv

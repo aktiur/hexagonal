@@ -1,0 +1,28 @@
+nom = "Liste des codes postaux"
+description = """
+Ce fichier comporte une ligne par code postal et indique, pour chaque code postal,
+le code INSEE et le nom de la commune la plus peuplée dans le territoire délivré par
+le code postal.
+"""
+mimetype = "text/csv"
+section = "Découpage administratif"
+
+[colonnes.code_postal]
+type = "str"
+nullable = false
+
+[colonnes.code_commune_principale]
+type = "code_commune"
+nullable = false
+
+[colonnes.nom_commune_principale]
+type = "str"
+nullable = false
+
+[colonnes.population_commune_principale]
+type = "entier"
+nullable = false
+
+[colonnes.population_totale]
+type = "entier"
+nullable = false

@@ -1,0 +1,48 @@
+nom = "Liste des cantons"
+description = """
+La liste des cantons extraite du COG.
+
+Cette liste comprend non seulement les cantons en tant que tels, mais aussi les
+cantons-ou-villes et les cantons fictifs.
+
+A la différence du canton, le « Canton-ou-ville » (ou pseudo-canton) est un regroupement
+d'une ou plusieurs communes entières.
+
+Dans les agglomérations urbaines, chaque canton comprend en général une partie de la
+commune principale et éventuellement une ou plusieurs communes périphériques. Dans ce
+cas, l'Insee considère la commune principale, entière, comme un pseudo-canton unique et
+distinct.
+
+Pour la ou les communes périphériques, le pseudo-canton considéré est alors identique au
+vrai canton amputé de la fraction de la commune principale que comprend le vrai canton.
+"""
+mimetype = "text/csv"
+section = "Découpage administratif"
+
+[colonnes.code_canton]
+type = "str"
+nullable = false
+
+[colonnes.code_departement]
+type = "code_departement"
+nullable = false
+
+[colonnes.code_commune_bureau_centralisateur]
+type = "code_commune"
+nullable = false
+
+[colonnes.type_canton]
+type = "str"
+description = """
+Indique s'il s'agit d'un véritable canton, d'un canton-ville (ou pseudo-canton) ou d'un
+canton fictif.
+"""
+nullable = false
+
+[colonnes.type_nom_canton]
+type = "entier"
+nullable = false
+
+[colonnes.nom_canton]
+type = "str"
+nullable = false
