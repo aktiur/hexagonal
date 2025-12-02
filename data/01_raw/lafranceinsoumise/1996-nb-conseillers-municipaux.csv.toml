@@ -1,0 +1,7 @@
+nom = "Nombre de conseillers municipaux par commune — de 1996 à 2008"
+description = """
+Simple tabulation du nombre de conseillers municipaux selon la population de la commune
+fixé par l'article L2121-2 du Code électoral.
+"""
+mimetype = "text/csv"
+editeur = "La France insoumise"

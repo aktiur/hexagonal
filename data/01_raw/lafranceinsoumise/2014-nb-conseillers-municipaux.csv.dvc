@@ -1,0 +1,5 @@
+outs:
+- md5: b89885f27aca03b75606427c3a2a99a6
+  size: 199
+  hash: md5
+  path: 2014-nb-conseillers-municipaux.csv

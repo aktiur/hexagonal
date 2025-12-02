@@ -1,0 +1,5 @@
+outs:
+- md5: 5db4979d71c81390425a82ccc926d14f
+  size: 199
+  hash: md5
+  path: 1996-nb-conseillers-municipaux.csv
