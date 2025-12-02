@@ -33,6 +33,8 @@
 - [Données géographiques précises](#donnees-geographiques-precises)
   - [Contours précis des circonscriptions législatives en 2024](#data/03_main/geodata/circonscriptions_legislatives.json)
   - [Contours précis des communes de France](#data/03_main/geodata/communes.json)
+- [Données socio-économiques](#donnees-socio-economiques)
+  - [FILOSOFI — Revenu disponible 2021](#data/02_clean/filosofi/disponible.csv)
 - [Découpage administratif](#decoupage-administratif)
   - [Liste des associations codes postaux et codes communes](#data/02_clean/codes_postaux.csv)
   - [Liste des cantons](#data/02_clean/cog/cantons.csv)
@@ -1698,6 +1700,197 @@ Cette production dépend des sources suivantes :
 
 <ul>
     <li><a href="sources.md#data/01_raw/ign/admin_express/admin_express_cog.7z">Admin Express COG édition 2024 France entière</a>
+        </li>
+    </ul>
+
+
+
+## Données socio-économiques
+<a name="donnees-socio-economiques"></a>
+
+### FILOSOFI — Revenu disponible 2021
+<a name="data/02_clean/filosofi/disponible.csv"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/02_clean/filosofi/disponible.csv |
+| Format de fichier | text/csv |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/24/643f2edc90949593bcb3939ebf41ff |
+
+
+
+
+### Colonnes
+
+<table>
+<thead>
+  <tr>
+    <th>id</th>
+    <th>type</th>
+    <th>description</th>
+  </tr>
+</thead>
+<tbody>
+<tr>
+    <td><code>code_iris</code></td>
+    <td><code>code_iris</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>taux_pauvrete_60</code></td>
+    <td><code>str</code></td>
+    <td>Taux de pauvreté au seuil de 60 % du revenu disponible par unité de consommation médian métropolitain (%)</td>
+  </tr>
+<tr>
+    <td><code>taux_pauvrete_60_incertitude</code></td>
+    <td><code>str</code></td>
+    <td>Incertitude sur le taux de bas revenus</td>
+  </tr>
+<tr>
+    <td><code>quartile1</code></td>
+    <td><code>str</code></td>
+    <td>1ᵉʳ quartile du revenu disponible par unité de consommation (en euros)</td>
+  </tr>
+<tr>
+    <td><code>mediane</code></td>
+    <td><code>str</code></td>
+    <td>Médiane du revenu disponible par unité de consommation (en euros)</td>
+  </tr>
+<tr>
+    <td><code>quartile3</code></td>
+    <td><code>str</code></td>
+    <td>3ᵉ quartile du revenu disponible par unité de consommation (en euros)</td>
+  </tr>
+<tr>
+    <td><code>ecart_interquartile_mediane</code></td>
+    <td><code>str</code></td>
+    <td>Écart inter-quartile rapporté à la médiane</td>
+  </tr>
+<tr>
+    <td><code>decile1</code></td>
+    <td><code>str</code></td>
+    <td>1ᵉʳ décile du revenu disponible par unité de consommation (en euros)</td>
+  </tr>
+<tr>
+    <td><code>decile2</code></td>
+    <td><code>str</code></td>
+    <td>2ᵉ décile du revenu disponible par unité de consommation (en euros)</td>
+  </tr>
+<tr>
+    <td><code>decile3</code></td>
+    <td><code>str</code></td>
+    <td>3ᵉ décile du revenu disponible par unité de consommation (en euros)</td>
+  </tr>
+<tr>
+    <td><code>decile4</code></td>
+    <td><code>str</code></td>
+    <td>4ᵉ décile du revenu disponible par unité de consommation (en euros)</td>
+  </tr>
+<tr>
+    <td><code>decile6</code></td>
+    <td><code>str</code></td>
+    <td>6ᵉ décile du revenu disponible par unité de consommation (en euros)</td>
+  </tr>
+<tr>
+    <td><code>decile7</code></td>
+    <td><code>str</code></td>
+    <td>7ᵉ décile du revenu disponible par unité de consommation (en euros)</td>
+  </tr>
+<tr>
+    <td><code>decile8</code></td>
+    <td><code>str</code></td>
+    <td>8ᵉ décile du revenu disponible par unité de consommation (en euros)</td>
+  </tr>
+<tr>
+    <td><code>decile9</code></td>
+    <td><code>str</code></td>
+    <td>9ᵉ décile du revenu disponible par unité de consommation (en euros)</td>
+  </tr>
+<tr>
+    <td><code>rapport_interdecile_9_1</code></td>
+    <td><code>str</code></td>
+    <td>Rapport interdécile D9/D1 du revenu disponible par unité de consommation</td>
+  </tr>
+<tr>
+    <td><code>rapport_80_20</code></td>
+    <td><code>str</code></td>
+    <td>S80/S20 du revenu disponible par unité de consommation</td>
+  </tr>
+<tr>
+    <td><code>indice_gini</code></td>
+    <td><code>str</code></td>
+    <td>Indice de Gini du revenu disponible par unité de consommation</td>
+  </tr>
+<tr>
+    <td><code>part_revenus_activite</code></td>
+    <td><code>str</code></td>
+    <td>Part des revenus d’activité (%)</td>
+  </tr>
+<tr>
+    <td><code>part_salaires_traitements</code></td>
+    <td><code>str</code></td>
+    <td>dont part des salaires et traitements (%)</td>
+  </tr>
+<tr>
+    <td><code>part_indemnites_chomage</code></td>
+    <td><code>str</code></td>
+    <td>dont part des indemnités chômage (%)</td>
+  </tr>
+<tr>
+    <td><code>part_revenus_activites_non_salaries</code></td>
+    <td><code>str</code></td>
+    <td>dont part des revenus des activités non salariées (%)</td>
+  </tr>
+<tr>
+    <td><code>part_pensions_retraites_rentes</code></td>
+    <td><code>str</code></td>
+    <td>Part des pensions, retraites et rentes (%)</td>
+  </tr>
+<tr>
+    <td><code>part_revenus_patrimoine</code></td>
+    <td><code>str</code></td>
+    <td>Part des revenus du patrimoine et autres revenus (%)</td>
+  </tr>
+<tr>
+    <td><code>part_prestations_sociales</code></td>
+    <td><code>str</code></td>
+    <td>Part de l&#39;ensemble des prestations sociales (%)</td>
+  </tr>
+<tr>
+    <td><code>part_prestations_familiales</code></td>
+    <td><code>str</code></td>
+    <td>dont part des prestations familiales (%)</td>
+  </tr>
+<tr>
+    <td><code>part_minima_sociaux</code></td>
+    <td><code>str</code></td>
+    <td>dont part des minima sociaux (%)</td>
+  </tr>
+<tr>
+    <td><code>part_prestations_logements</code></td>
+    <td><code>str</code></td>
+    <td>dont part des prestations logement (%)</td>
+  </tr>
+<tr>
+    <td><code>part_impots</code></td>
+    <td><code>str</code></td>
+    <td>Part des impôts (%)</td>
+  </tr>
+<tr>
+    <td><code>note_precaution</code></td>
+    <td><code>str</code></td>
+    <td>Note de précaution</td>
+  </tr>
+
+</tbody>
+</table>
+
+### Sources
+
+Cette production dépend des sources suivantes :
+
+<ul>
+    <li><a href="sources.md#data/01_raw/insee/filosofi-disponible.zip">FILOSOFI 2021 — Revenu disponible par IRIS</a>
         </li>
     </ul>
 

@@ -1,0 +1,12 @@
+md5: 6bb4c82e9f7ddb5850a8ea40710f0735
+frozen: true
+deps:
+- checksum: '14952499893987112368909995486709429162'
+  hash: md5
+  path: 
+    https://www.insee.fr/fr/statistiques/fichier/8229323/BASE_TD_FILO_IRIS_2021_DISP_CSV.zip
+outs:
+- md5: ee7df5884307f58dd8fafcc3de9cc3cd
+  size: 913460
+  hash: md5
+  path: filosofi-disponible.zip

@@ -29,6 +29,7 @@ PRODUCTION_TYPES = [DatasetType.CLEAN, DatasetType.MAIN]
 class ColonneType(StrEnum):
     STR = "str"
     DATE = "date"
+    CODE_IRIS = "code_iris"
     CODE_COMMUNE = "code_commune"
     CODE_DEPARTEMENT = "code_departement"
     CODE_REGION = "code_region"
@@ -137,8 +138,6 @@ class Dataset:
             spec = load_spec(path)
         self.spec = spec
         self.dvc_file = dvc_file
-
-
 
 
 def load_all_specs():

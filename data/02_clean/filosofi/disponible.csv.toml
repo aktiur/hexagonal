@@ -1,0 +1,155 @@
+nom = "FILOSOFI — Revenu disponible 2021"
+description = """
+
+"""
+mimetype = "text/csv"
+section = "Données socio-économiques"
+
+[colonnes.code_iris]
+type = "code_iris"
+nullable = false
+
+[colonnes.taux_pauvrete_60]
+type = "str"
+description = "Taux de pauvreté au seuil de 60 % du revenu disponible par unité de consommation médian métropolitain (%)"
+nullable = true
+
+[colonnes.taux_pauvrete_60_incertitude]
+type = "str"
+description = "Incertitude sur le taux de bas revenus"
+nullable = true
+
+[colonnes.quartile1]
+type = "str"
+description = "1ᵉʳ quartile du revenu disponible par unité de consommation (en euros)"
+nullable = true
+
+[colonnes.mediane]
+type = "str"
+description = "Médiane du revenu disponible par unité de consommation (en euros)"
+nullable = true
+
+[colonnes.quartile3]
+type = "str"
+description = "3ᵉ quartile du revenu disponible par unité de consommation (en euros)"
+nullable = true
+
+[colonnes.ecart_interquartile_mediane]
+type = "str"
+description = "Écart inter-quartile rapporté à la médiane"
+nullable = true
+
+[colonnes.decile1]
+type = "str"
+description = "1ᵉʳ décile du revenu disponible par unité de consommation (en euros)"
+nullable = true
+
+[colonnes.decile2]
+type = "str"
+description = "2ᵉ décile du revenu disponible par unité de consommation (en euros)"
+nullable = true
+
+[colonnes.decile3]
+type = "str"
+description = "3ᵉ décile du revenu disponible par unité de consommation (en euros)"
+nullable = true
+
+[colonnes.decile4]
+type = "str"
+description = "4ᵉ décile du revenu disponible par unité de consommation (en euros)"
+nullable = true
+
+[colonnes.decile6]
+type = "str"
+description = "6ᵉ décile du revenu disponible par unité de consommation (en euros)"
+nullable = true
+
+[colonnes.decile7]
+type = "str"
+description = "7ᵉ décile du revenu disponible par unité de consommation (en euros)"
+nullable = true
+
+[colonnes.decile8]
+type = "str"
+description = "8ᵉ décile du revenu disponible par unité de consommation (en euros)"
+nullable = true
+
+[colonnes.decile9]
+type = "str"
+description = "9ᵉ décile du revenu disponible par unité de consommation (en euros)"
+nullable = true
+
+[colonnes.rapport_interdecile_9_1]
+type = "str"
+description = "Rapport interdécile D9/D1 du revenu disponible par unité de consommation"
+nullable = true
+
+[colonnes.rapport_80_20]
+type = "str"
+description = "S80/S20 du revenu disponible par unité de consommation"
+nullable = true
+
+[colonnes.indice_gini]
+type = "str"
+description = "Indice de Gini du revenu disponible par unité de consommation"
+nullable = true
+
+[colonnes.part_revenus_activite]
+type = "str"
+description = "Part des revenus d’activité (%)"
+nullable = true
+
+[colonnes.part_salaires_traitements]
+type = "str"
+description = "dont part des salaires et traitements (%)"
+nullable = true
+
+[colonnes.part_indemnites_chomage]
+type = "str"
+description = "dont part des indemnités chômage (%)"
+nullable = true
+
+[colonnes.part_revenus_activites_non_salaries]
+type = "str"
+description = "dont part des revenus des activités non salariées (%)"
+nullable = true
+
+[colonnes.part_pensions_retraites_rentes]
+type = "str"
+description = "Part des pensions, retraites et rentes (%)"
+nullable = true
+
+[colonnes.part_revenus_patrimoine]
+type = "str"
+description = "Part des revenus du patrimoine et autres revenus (%)"
+nullable = true
+
+[colonnes.part_prestations_sociales]
+type = "str"
+description = "Part de l'ensemble des prestations sociales (%)"
+nullable = true
+
+[colonnes.part_prestations_familiales]
+type = "str"
+description = "dont part des prestations familiales (%)"
+nullable = true
+
+[colonnes.part_minima_sociaux]
+type = "str"
+description = "dont part des minima sociaux (%)"
+nullable = true
+
+[colonnes.part_prestations_logements]
+type = "str"
+description = "dont part des prestations logement (%)"
+nullable = true
+
+[colonnes.part_impots]
+type = "str"
+description = "Part des impôts (%)"
+nullable = true
+
+[colonnes.note_precaution]
+type = "str"
+description = "Note de précaution"
+nullable = true

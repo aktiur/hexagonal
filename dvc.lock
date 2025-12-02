@@ -1975,3 +1975,21 @@ stages:
       hash: md5
       md5: 86fc5b983d70c4ae8f510328f1631acf
       size: 166952960
+  extraire_filosofi_disponible:
+    cmd: PYTHONPATH=src python -m hexagonal.filosofi.extraire 
+      data/01_raw/insee/filosofi-disponible.zip 
+      data/02_clean/filosofi/disponible.csv
+    deps:
+    - path: data/01_raw/insee/filosofi-disponible.zip
+      hash: md5
+      md5: ee7df5884307f58dd8fafcc3de9cc3cd
+      size: 913460
+    - path: src/hexagonal/filosofi/extraire.py
+      hash: md5
+      md5: f9cb43a741b2549005d94c8764da6393
+      size: 2370
+    outs:
+    - path: data/02_clean/filosofi/disponible.csv
+      hash: md5
+      md5: 24643f2edc90949593bcb3939ebf41ff
+      size: 2244049

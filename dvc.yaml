@@ -477,3 +477,14 @@ stages:
       - ${raw}/ign/iris-metropole.gpkg
     cmd: >-
       7z e ${raw}/ign/iris-metropole.7z -so -r "iris.gpkg" > "${raw}/ign/iris-metropole.gpkg"
+
+  extraire_filosofi_disponible:
+    deps:
+      - ${raw}/insee/filosofi-disponible.zip
+      - ${src}/hexagonal/filosofi/extraire.py
+    outs:
+      - ${clean}/filosofi/disponible.csv
+    cmd: >-
+      ${python} hexagonal.filosofi.extraire
+      ${raw}/insee/filosofi-disponible.zip
+      ${clean}/filosofi/disponible.csv

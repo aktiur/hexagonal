@@ -1,0 +1,7 @@
+nom = "FILOSOFI 2021 — Revenu disponible par IRIS"
+description = """
+Les données portent sur les IRIS des communes d’au moins 5000 habitants de la
+France métropolitaine, la Martinique et La Réunion.
+"""
+mimetype = "application/zip"
+editeur = "INSEE"

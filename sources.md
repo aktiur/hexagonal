@@ -9,14 +9,19 @@
   - [Liste et composition des EPCI à fiscalité propre 2025](#data/01_raw/epci.xlsx)
 - [GeoNames](#geonames)
   - [cities1000](#data/01_raw/geonames/cities1000.zip)
+- [IGN](#ign)
+  - [Contours IRIS 2025 — France métropolitaine](#data/01_raw/ign/iris-metropole.7z)
 - [INSEE](#insee)
   - [Admin Express COG édition 2024 France entière](#data/01_raw/ign/admin_express/admin_express_cog.7z)
   - [Code Officiel Géographique 2024](#data/01_raw/insee/cog.zip)
+  - [FILOSOFI 2021 — Revenu disponible par IRIS](#data/01_raw/insee/filosofi-disponible.zip)
   - [Circonscriptions législatives - Fond cartographique](#data/01_raw/insee/insee_circonscriptions_legislatives.zip)
   - [Séries historiques de population par commune (1876 à 2022)](#data/01_raw/insee/population_municipale.xlsx)
 - [LEGIS-2022](#legis-2022)
   - [Codage des nuances politiques des candidats aux élections législatives des 12 et 19 juin 2022](#data/01_raw/legis_2022/2022-legislatives-nuances.csv)
 - [La France insoumise](#la-france-insoumise)
+  - [Nombre de conseillers municipaux par commune — de 1996 à 2008](#data/01_raw/lafranceinsoumise/1996-nb-conseillers-municipaux.csv)
+  - [Nombre de conseillers municipaux par commune — depuis 2014](#data/01_raw/lafranceinsoumise/2014-nb-conseillers-municipaux.csv)
   - [Listes déposées pour l&#39;élection européenne 2024 en France](#data/01_raw/lafranceinsoumise/2024-europeenne-listes.csv)
   - [Nuançage précis des candidats aux législatives 2024](#data/01_raw/lafranceinsoumise/2024-legislatives-candidats.csv)
   - [Liste des candidats du Nouveau Front populaire et de leur sensibilité par circonscription législative](#data/01_raw/lafranceinsoumise/2024-legislatives-nfp-sensibilites.csv)
@@ -169,6 +174,27 @@ The GeoNames geographical database covers all countries and contains over eleven
 
 
 
+## IGN
+<a name="ign"></a>
+
+### Contours IRIS 2025 — France métropolitaine
+<a name="data/01_raw/ign/iris-metropole.7z"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/ign/iris-metropole.7z |
+| Format de fichier | application/x-7z-compressed |
+| Éditeur | IGN |
+| URL d&#39;origine | https://data.geopf.fr/telechargement/download/CONTOURS-IRIS/CONTOURS-IRIS_3-0__GPKG_LAMB93_FXX_2025-01-01/CONTOURS-IRIS_3-0__GPKG_LAMB93_FXX_2025-01-01.7z |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/11/fe71b58527e0d6a704509cd9a2435e |
+
+Coédition INSEE et IGN, Contours... IRIS® est un fond numérisé des îlots Iris définis
+par l&#39;INSEE pour les besoins des recensements sur l&#39;ensemble des communes de plus de
+10 000 habitants et la plupart des communes de 5 000 à 10 000 habitants.
+
+
+
+
 ## INSEE
 <a name="insee"></a>
 
@@ -218,6 +244,20 @@ territoires étrangers, liste des couples code - libellé de pays ou territoire
 territoires étrangers sont présentés sur cette page. Un troisième nouveau
 fichier met à disposition la liste des couples code extension - territoire de
 rattachement (commune ou pays).
+
+### FILOSOFI 2021 — Revenu disponible par IRIS
+<a name="data/01_raw/insee/filosofi-disponible.zip"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/insee/filosofi-disponible.zip |
+| Format de fichier | application/zip |
+| Éditeur | INSEE |
+| URL d&#39;origine | https://www.insee.fr/fr/statistiques/fichier/8229323/BASE_TD_FILO_IRIS_2021_DISP_CSV.zip |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/ee/7df5884307f58dd8fafcc3de9cc3cd |
+
+Les données portent sur les IRIS des communes d’au moins 5000 habitants de la
+France métropolitaine, la Martinique et La Réunion.
 
 ### Circonscriptions législatives - Fond cartographique
 <a name="data/01_raw/insee/insee_circonscriptions_legislatives.zip"></a>
@@ -273,6 +313,32 @@ Le projet LEGIS-2022 regroupe une trentaine de chercheurs en science politique s
 
 ## La France insoumise
 <a name="la-france-insoumise"></a>
+
+### Nombre de conseillers municipaux par commune — de 1996 à 2008
+<a name="data/01_raw/lafranceinsoumise/1996-nb-conseillers-municipaux.csv"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/lafranceinsoumise/1996-nb-conseillers-municipaux.csv |
+| Format de fichier | text/csv |
+| Éditeur | La France insoumise |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/5d/b4979d71c81390425a82ccc926d14f |
+
+Simple tabulation du nombre de conseillers municipaux selon la population de la commune
+fixé par l&#39;article L2121-2 du Code électoral.
+
+### Nombre de conseillers municipaux par commune — depuis 2014
+<a name="data/01_raw/lafranceinsoumise/2014-nb-conseillers-municipaux.csv"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/lafranceinsoumise/2014-nb-conseillers-municipaux.csv |
+| Format de fichier | text/csv |
+| Éditeur | La France insoumise |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/b8/9885f27aca03b75606427c3a2a99a6 |
+
+Simple tabulation du nombre de conseillers municipaux selon la population de la commune
+fixé par l&#39;article L2121-2 du Code électoral.
 
 ### Listes déposées pour l&#39;élection européenne 2024 en France
 <a name="data/01_raw/lafranceinsoumise/2024-europeenne-listes.csv"></a>
