@@ -1962,3 +1962,16 @@ stages:
       hash: md5
       md5: 1a0e0834a64acb4c3eb82f0068729c50
       size: 631927
+  extraire_contours_iris:
+    cmd: 7z e data/01_raw/ign/iris-metropole.7z -so -r "iris.gpkg" > 
+      "data/01_raw/ign/iris-metropole.gpkg"
+    deps:
+    - path: data/01_raw/ign/iris-metropole.7z
+      hash: md5
+      md5: 11fe71b58527e0d6a704509cd9a2435e
+      size: 42288062
+    outs:
+    - path: data/01_raw/ign/iris-metropole.gpkg
+      hash: md5
+      md5: 86fc5b983d70c4ae8f510328f1631acf
+      size: 166952960

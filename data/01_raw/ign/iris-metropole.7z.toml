@@ -1,0 +1,8 @@
+nom = "Contours IRIS 2025 — France métropolitaine"
+description = """
+Coédition INSEE et IGN, Contours... IRIS® est un fond numérisé des îlots Iris définis
+par l'INSEE pour les besoins des recensements sur l'ensemble des communes de plus de
+10 000 habitants et la plupart des communes de 5 000 à 10 000 habitants.
+"""
+mimetype = "application/x-7z-compressed"
+editeur = "IGN"

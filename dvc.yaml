@@ -469,3 +469,11 @@ stages:
       ${clean}/codes_postaux.csv
       ${main}/cog/communes.csv
       ${main}/codes_postaux.csv
+
+  extraire_contours_iris:
+    deps:
+      - ${raw}/ign/iris-metropole.7z
+    outs:
+      - ${raw}/ign/iris-metropole.gpkg
+    cmd: >-
+      7z e ${raw}/ign/iris-metropole.7z -so -r "iris.gpkg" > "${raw}/ign/iris-metropole.gpkg"

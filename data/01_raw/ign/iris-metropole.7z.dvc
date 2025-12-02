@@ -1,0 +1,13 @@
+md5: 86426d1cc66b61c3caecfd018a02151e
+frozen: true
+deps:
+- checksum: '53458530421726502567503384270766004660'
+  size: 42288062
+  hash: md5
+  path: 
+    https://data.geopf.fr/telechargement/download/CONTOURS-IRIS/CONTOURS-IRIS_3-0__GPKG_LAMB93_FXX_2025-01-01/CONTOURS-IRIS_3-0__GPKG_LAMB93_FXX_2025-01-01.7z
+outs:
+- md5: 11fe71b58527e0d6a704509cd9a2435e
+  size: 42288062
+  hash: md5
+  path: iris-metropole.7z
