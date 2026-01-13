@@ -109,26 +109,27 @@ def creer_liste(fiches, mandats, commissions, affiliations, adresses_electroniqu
 
 @click.command()
 @click.argument(
-    "dossier",
+    "source",
     type=click.Path(exists=True, readable=True, dir_okay=True, path_type=Path),
     required=True,
 )
 @click.argument(
     "destination",
-    type=click.Path(writable=True, dir_okay=False, path_type=Path),
+    type=click.Path(writable=True, dir_okay=True, path_type=Path),
     required=True,
 )
-def run(dossier, destination):
+def run(source, destination):
     deputes = creer_liste(
-        fiches=dossier / "fiches.csv",
-        mandats=dossier / "mandats.csv",
-        commissions=dossier / "commissions.csv",
-        affiliations=dossier / "affiliations.csv",
-        adresses_electroniques=dossier / "adresses_electroniques.csv",
+        fiches=source / "fiches.csv",
+        mandats=source / "mandats.csv",
+        commissions=source / "commissions.csv",
+        affiliations=source / "affiliations.csv",
+        adresses_electroniques=source / "adresses_electroniques.csv",
     )
 
-    destination.parent.mkdir(parents=True, exist_ok=True)
-    deputes.to_csv(destination)
+    destination.mkdir(parents=True, exist_ok=True)
+    deputes.to_csv(destination / "deputes.csv")
+    deputes[deputes["abreviation_groupe"] == "LFI-NFP"].to_csv(destination / "deputes_lfi.csv")
 
 
 if __name__ == "__main__":

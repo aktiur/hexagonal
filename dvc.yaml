@@ -213,10 +213,11 @@ stages:
       - ${clean}/assemblee_nationale/affiliations.csv
     outs:
       - ${main}/assemblee_nationale/deputes.csv
+      - ${main}/assemblee_nationale/deputes_lfi.csv
     cmd:
       ${python} hexagonal.assemblee_nationale.deputes
       ${clean}/assemblee_nationale
-      ${main}/assemblee_nationale/deputes.csv
+      ${main}/assemblee_nationale
 
   rne_nettoyer:
     foreach:

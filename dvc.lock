@@ -1890,8 +1890,7 @@ stages:
       size: 254351
   assemblee_nationale_deputes:
     cmd: PYTHONPATH=src python -m hexagonal.assemblee_nationale.deputes 
-      data/02_clean/assemblee_nationale 
-      data/03_main/assemblee_nationale/deputes.csv
+      data/02_clean/assemblee_nationale data/03_main/assemblee_nationale
     deps:
     - path: data/02_clean/assemblee_nationale/adresses_electroniques.csv
       hash: md5
@@ -1915,13 +1914,17 @@ stages:
       size: 410594
     - path: src/hexagonal/assemblee_nationale/deputes.py
       hash: md5
-      md5: 71ec8cc6c493e1914d690ad5cbbdda5c
-      size: 3963
+      md5: 4048586ff950126ac0622be50d1fe1e7
+      size: 4060
     outs:
     - path: data/03_main/assemblee_nationale/deputes.csv
       hash: md5
       md5: 9c41067bb16e3e25ec2bd1cd5ade9d94
       size: 160803
+    - path: data/03_main/assemblee_nationale/deputes_lfi.csv
+      hash: md5
+      md5: 4cfcd2f3f862284ec94065389550a088
+      size: 20170
   extraire_codes_postaux:
     cmd: PYTHONPATH=src python -m hexagonal.codes_postaux.extraire 
       data/01_raw/la_poste/base_officielle_codes_postaux.csv 

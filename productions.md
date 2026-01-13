@@ -14,6 +14,7 @@
   - [Liste des groupes parlementaires](#data/02_clean/assemblee_nationale/groupes.csv)
   - [Liste des mandats des député·es](#data/02_clean/assemblee_nationale/mandats.csv)
   - [Liste des députés en cours de mandat](#data/03_main/assemblee_nationale/deputes.csv)
+  - [deputes_lfi](#data/03_main/assemblee_nationale/deputes_lfi.csv)
 - [Cartographie](#cartographie)
   - [Villes de plus de 1000 habitants](#data/02_clean/geonames/cities1000.json.zst)
   - [Conteurs simplifiés des circonscriptions législatives de Guadeloupe](#data/03_main/cartographie/circonscriptions_guadeloupe.json)
@@ -439,7 +440,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/02_clean/assemblee_nationale/adresses_electroniques.csv |
 | Format de fichier | text/csv |
-| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/b5/bf9b932f5d356eee9df9462e4d4960 |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/8e/b43bac15d4605d76ae979b9511c452 |
 
 
 
@@ -505,7 +506,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/02_clean/assemblee_nationale/adresses_postales.csv |
 | Format de fichier | text/csv |
-| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/3b/2419e36a704ea03d71115a74ad3e3d |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/96/e7fd19220ec911e7ca95c3076473b0 |
 
 
 
@@ -591,7 +592,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/02_clean/assemblee_nationale/affiliations.csv |
 | Format de fichier | text/csv |
-| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/36/a17d9f5d80eb12a07b9532b83b461a |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/df/297e65c6c2603dbeb60aa32f56e54f |
 
 Ce fichier comporte une ligne pour chaque affiliation d&#39;un député à un groupe parlementaire, à partir de la
 XIème législature.
@@ -677,7 +678,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/02_clean/assemblee_nationale/commissions.csv |
 | Format de fichier | text/csv |
-| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/45/c16b87230e5e88e779c98b384823ea |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/d5/5b7c14909f91da0626fa9d48ca9047 |
 
 
 
@@ -758,7 +759,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/02_clean/assemblee_nationale/fiches.csv |
 | Format de fichier | text/csv |
-| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/09/45caaaaa27a68fad93799b1d3a3620 |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/f8/c96973b1fe1e86b6a1e754453003de |
 
 Données extraites des fiches « acteurs » de l&#39;open data de l&#39;Assemblée nationale. Chaque
 ligne correspond à une personne référencée par l&#39;Assemblée nationale. Parmi les
@@ -856,7 +857,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/02_clean/assemblee_nationale/groupes.csv |
 | Format de fichier | text/csv |
-| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/3c/3b5cdbb812161dee7ae3a72b59b05f |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/1c/7e51b7ff9442a33fe8908f9c7c3ced |
 
 
 
@@ -936,7 +937,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/02_clean/assemblee_nationale/mandats.csv |
 | Format de fichier | text/csv |
-| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/c4/d4adaba4b1e1f71406c74e4aff6bd2 |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/9b/e3a05270199387972516388bb20ea2 |
 
 Ce fichier liste l&#39;ensemble des mandats de député·es depuis la 12ème législature.
 
@@ -1045,7 +1046,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/03_main/assemblee_nationale/deputes.csv |
 | Format de fichier | text/csv |
-| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/40/eb56c796908bacc792e7343cf7d554 |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/9c/41067bb16e3e25ec2bd1cd5ade9d94 |
 
 
 
@@ -1064,12 +1065,12 @@ Cette production dépend des sources suivantes :
 <tr>
     <td><code>id_personne</code></td>
     <td><code>str</code></td>
-    <td></td>
+    <td>L&#39;identifiant de la personne dans le SI de l&#39;Assemblée nationale</td>
   </tr>
 <tr>
     <td><code>civilite</code></td>
     <td><code>str</code></td>
-    <td></td>
+    <td>M. ou Mme</td>
   </tr>
 <tr>
     <td><code>prenom</code></td>
@@ -1099,7 +1100,7 @@ Cette production dépend des sources suivantes :
 <tr>
     <td><code>legislatures</code></td>
     <td><code>str</code></td>
-    <td></td>
+    <td>Législatures pendant lesquelles cette personne a exercé la fonction de député·e</td>
   </tr>
 <tr>
     <td><code>profession</code></td>
@@ -1119,7 +1120,216 @@ Cette production dépend des sources suivantes :
 <tr>
     <td><code>id_mandat</code></td>
     <td><code>str</code></td>
+    <td>ID du mandat de député·e en cours</td>
+  </tr>
+<tr>
+    <td><code>circonscription</code></td>
+    <td><code>str</code></td>
     <td></td>
+  </tr>
+<tr>
+    <td><code>suppleante</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>date_debut</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>cause_debut_mandat</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>place</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>id_commission</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>commission</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>date_debut_commission</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>poste_commission</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>id_groupe</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>abreviation_groupe</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>date_debut_groupe</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>poste_groupe</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>email_an</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>email_autre</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>telephone_an</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>telephone_circonscription</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+
+</tbody>
+</table>
+
+### Sources
+
+Cette production dépend des sources suivantes :
+
+<ul>
+    <li><a href="productions.md#data/02_clean/assemblee_nationale/fiches.csv">Fiches personnes de l&#39;Assemblée nationale</a>
+        <ul>
+    <li><a href="sources.md#data/01_raw/assemblee-nationale.zip">Historique des députés</a>
+        </li>
+    </ul>
+        </li>
+    <li><a href="productions.md#data/02_clean/assemblee_nationale/adresses_electroniques.csv">Adresses électroniques des député·es</a>
+        <ul>
+    <li><a href="sources.md#data/01_raw/assemblee-nationale.zip">Historique des députés</a>
+        </li>
+    </ul>
+        </li>
+    <li><a href="productions.md#data/02_clean/assemblee_nationale/commissions.csv">Affiliations des député·es aux commissions permanentes de l&#39;Assemblée</a>
+        <ul>
+    <li><a href="sources.md#data/01_raw/assemblee-nationale.zip">Historique des députés</a>
+        </li>
+    </ul>
+        </li>
+    <li><a href="productions.md#data/02_clean/assemblee_nationale/mandats.csv">Liste des mandats des député·es</a>
+        <ul>
+    <li><a href="sources.md#data/01_raw/assemblee-nationale.zip">Historique des députés</a>
+        </li>
+    </ul>
+        </li>
+    <li><a href="productions.md#data/02_clean/assemblee_nationale/affiliations.csv">Affiliation des députés à un groupe parlementaire</a>
+        <ul>
+    <li><a href="sources.md#data/01_raw/assemblee-nationale.zip">Historique des députés</a>
+        </li>
+    </ul>
+        </li>
+    </ul>
+
+### deputes_lfi
+<a name="data/03_main/assemblee_nationale/deputes_lfi.csv"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/03_main/assemblee_nationale/deputes_lfi.csv |
+| Format de fichier | text/csv |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/4c/fcd2f3f862284ec94065389550a088 |
+
+
+
+
+### Colonnes
+
+<table>
+<thead>
+  <tr>
+    <th>id</th>
+    <th>type</th>
+    <th>description</th>
+  </tr>
+</thead>
+<tbody>
+<tr>
+    <td><code>id_personne</code></td>
+    <td><code>str</code></td>
+    <td>L&#39;identifiant de la personne dans le SI de l&#39;Assemblée nationale</td>
+  </tr>
+<tr>
+    <td><code>civilite</code></td>
+    <td><code>str</code></td>
+    <td>M. ou Mme</td>
+  </tr>
+<tr>
+    <td><code>prenom</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>nom</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>date_naissance</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>ville_naissance</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>departement_naissance</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>legislatures</code></td>
+    <td><code>str</code></td>
+    <td>Législatures pendant lesquelles cette personne a exercé la fonction de député·e</td>
+  </tr>
+<tr>
+    <td><code>profession</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>csp_agregee</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>csp</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>id_mandat</code></td>
+    <td><code>str</code></td>
+    <td>ID du mandat de député·e en cours</td>
   </tr>
 <tr>
     <td><code>circonscription</code></td>
