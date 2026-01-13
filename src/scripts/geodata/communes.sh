@@ -18,6 +18,7 @@ args+=( -rename-fields "code_canton=INSEE_CAN,code_departement=INSEE_DEP" )
 args+=( -rename-fields "code_region=INSEE_REG,siren_epci=SIREN_EPCI" )
 args+=( -rename-fields "nom=NOM,population=POPULATION" )
 args+=( -filter-fields "code_commune,code_arrondissement,code_canton,code_departement,code_region,siren_epci,nom,population" )
+args+=( -clean rewind )
 
 # on renomme la couche avant l'export en topojson
 args+=( -rename-layers "names=communes" )

@@ -2,7 +2,6 @@
 set -euo pipefail
 shopt -s nullglob
 
-. "$(dirname -- "${BASH_SOURCE[0]}")/zones_france.sh"
 
 SRC_TOPOLOGY="$1"
 DST_TOPOLOGY="$2"
