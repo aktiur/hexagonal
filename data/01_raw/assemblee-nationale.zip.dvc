@@ -1,13 +1,13 @@
-md5: d37e2c3e1dc6344264f07eb395d64f87
+md5: 008ec6473f4b93080dc0e4d666a9964b
 frozen: true
 deps:
-- checksum: '"ca2c73-63d25b8091198"'
-  size: 13249651
+- checksum: '"cc97b4-6483aff8dcb01"'
+  size: 13408180
   hash: md5
   path: 
     https://data.assemblee-nationale.fr/static/openData/repository/17/amo/tous_acteurs_mandats_organes_xi_legislature/AMO30_tous_acteurs_tous_mandats_tous_organes_historique.json.zip
 outs:
-- md5: 199712875f10e1705145f1334458aaaf
-  size: 13249651
+- md5: 20a8cc3e6f177ff2bdb72eb784e81c9c
+  size: 13408180
   hash: md5
   path: assemblee-nationale.zip
