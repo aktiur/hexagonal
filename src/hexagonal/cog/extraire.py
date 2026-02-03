@@ -90,6 +90,14 @@ spec_canton = {
     "nom_canton": "LIBELLE",
 }
 
+spec_arrondissement = {
+    "code_arrondissement": "ARR",
+    "code_departement": "DEP",
+    "code_commune_chef_lieu": "CHEFLIEU",
+    "type_nom": "TNCC",
+    "nom": "NCCENR",
+}
+
 spec_commune_historique = {
     "code_commune": "COM",
     "type_nom": "TNCC",
@@ -116,6 +124,7 @@ fichiers_cog = [
     (f"v_region_{ANNEE}", "regions", spec_region),
     (f"v_departement_{ANNEE}", "departements", spec_departement),
     (f"v_canton_{ANNEE}", "cantons", spec_canton),
+    (f"v_arrondissement_{ANNEE}", "arrondissements", spec_arrondissement),
     (f"v_commune_{ANNEE}", "communes", spec_commune),
     (f"v_commune_comer_{ANNEE}", "communes_com", spec_commune_com),
     (f"v_ctcd_{ANNEE}", "ctcd", spec_ctcd),

@@ -1012,9 +1012,13 @@ stages:
       size: 1943027
     - path: src/hexagonal/cog/extraire.py
       hash: md5
-      md5: 76467a6c6cacefa5fd8bed6add0927ca
-      size: 3941
+      md5: 1a596b071401831086d935c41b4198f9
+      size: 4195
     outs:
+    - path: data/02_clean/cog/arrondissements.csv
+      hash: md5
+      md5: 1fe4bddea6b6aa2524be8c03edadbd8f
+      size: 8849
     - path: data/02_clean/cog/cantons.csv
       hash: md5
       md5: 6f694185a95d77640c1b13b5d327bf3d
