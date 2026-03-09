@@ -38,6 +38,7 @@
   - [FILOSOFI — Revenu disponible 2021](#data/02_clean/filosofi/disponible.csv)
 - [Découpage administratif](#decoupage-administratif)
   - [Liste des associations codes postaux et codes communes](#data/02_clean/codes_postaux.csv)
+  - [Liste des arrondissements](#data/02_clean/cog/arrondissements.csv)
   - [Liste des cantons](#data/02_clean/cog/cantons.csv)
   - [Liste des collectivités d&#39;Outremer](#data/02_clean/cog/com.csv)
   - [Liste des communes, arrondissements municipaux, communes déléguées et communes associées](#data/02_clean/cog/communes.csv)
@@ -2166,6 +2167,68 @@ Cette production dépend des sources suivantes :
         </li>
     </ul>
 
+### Liste des arrondissements
+<a name="data/02_clean/cog/arrondissements.csv"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/02_clean/cog/arrondissements.csv |
+| Format de fichier | text/csv |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/1f/e4bddea6b6aa2524be8c03edadbd8f |
+
+La liste des arrondissemens français telle qu&#39;extraites du code officiel géographique
+(COG) de l&#39;INSEE.
+
+
+### Colonnes
+
+<table>
+<thead>
+  <tr>
+    <th>id</th>
+    <th>type</th>
+    <th>description</th>
+  </tr>
+</thead>
+<tbody>
+<tr>
+    <td><code>code_arrondissement</code></td>
+    <td><code>str</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>code_departement</code></td>
+    <td><code>code_departement</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>code_commune_chef_lieu</code></td>
+    <td><code>code_commune</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>type_nom</code></td>
+    <td><code>entier</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>nom</code></td>
+    <td><code>str</code></td>
+    <td>None</td>
+  </tr>
+
+</tbody>
+</table>
+
+### Sources
+
+Cette production dépend des sources suivantes :
+
+<ul>
+    <li><a href="sources.md#data/01_raw/insee/cog.zip">Code Officiel Géographique 2024</a>
+        </li>
+    </ul>
+
 ### Liste des cantons
 <a name="data/02_clean/cog/cantons.csv"></a>
 
@@ -2311,6 +2374,8 @@ Cette production dépend des sources suivantes :
 | Format de fichier | text/csv |
 | URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/5d/a5f7dacec0b0723fef714ddbd166b3 |
 
+La liste des communes, arrondissements municipaux, communes déléguées et communes
+associées telle qu&#39;extraites du code officiel géographique (COG) de l&#39;INSEE.
 
 
 ### Colonnes

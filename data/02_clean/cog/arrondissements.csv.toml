@@ -1,0 +1,27 @@
+nom = "Liste des arrondissements"
+description = """
+La liste des arrondissemens français telle qu'extraites du code officiel géographique
+(COG) de l'INSEE.
+"""
+mimetype = "text/csv"
+section = "Découpage administratif"
+
+[colonnes.code_arrondissement]
+type = "str"
+nullable = false
+
+[colonnes.code_departement]
+type = "code_departement"
+nullable = false
+
+[colonnes.code_commune_chef_lieu]
+type = "code_commune"
+nullable = false
+
+[colonnes.type_nom]
+type = "entier"
+nullable = false
+
+[colonnes.nom]
+type = "str"
+nullable = false

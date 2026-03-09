@@ -1,0 +1,13 @@
+frozen: true
+deps:
+- checksum: '"64999971-350f52"'
+  size: 3477330
+  hash: md5
+  path: 
+    https://www.data.gouv.fr/api/1/datasets/r/6faacf36-1897-43f5-bf39-af8b41a15d26
+outs:
+- md5: e0b88f800ff0063873e67398d5b6d4c8
+  size: 3477330
+  hash: md5
+  path: 2022-reu-bureaux.parquet
+md5: eec215781c6c22d6f7e34ab793a81c0d

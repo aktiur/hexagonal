@@ -1,5 +1,8 @@
 nom = "Liste des communes, arrondissements municipaux, communes déléguées et communes associées"
-description = ""
+description = """
+La liste des communes, arrondissements municipaux, communes déléguées et communes
+associées telle qu'extraites du code officiel géographique (COG) de l'INSEE.
+"""
 mimetype = "text/csv"
 section = "Découpage administratif"
 

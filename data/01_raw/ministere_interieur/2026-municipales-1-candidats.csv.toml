@@ -1,0 +1,6 @@
+nom = "Listes candidates au premier tour des élections municipales 2026"
+description = """
+La composition des listes candidates aux élections municipales 2026.
+"""
+mimetype = "text/csv"
+editeur = "Ministère de l'intérieur"

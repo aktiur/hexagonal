@@ -1,0 +1,6 @@
+nom = "Répertoire électoral unique — table des bureaux de vote"
+description = """
+Il s'agit de la table des bureaux de vote du REU.
+"""
+mimetype = "application/vnd.apache.parquet"
+editeur = "INSEE"

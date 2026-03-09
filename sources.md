@@ -13,6 +13,7 @@
   - [Contours IRIS 2025 — France métropolitaine](#data/01_raw/ign/iris-metropole.7z)
 - [INSEE](#insee)
   - [Admin Express COG édition 2024 France entière](#data/01_raw/ign/admin_express/admin_express_cog.7z)
+  - [Répertoire électoral unique — table des bureaux de vote](#data/01_raw/insee/2022-reu-bureaux.parquet)
   - [Code Officiel Géographique 2024](#data/01_raw/insee/cog.zip)
   - [FILOSOFI 2021 — Revenu disponible par IRIS](#data/01_raw/insee/filosofi-disponible.zip)
   - [Circonscriptions législatives - Fond cartographique](#data/01_raw/insee/insee_circonscriptions_legislatives.zip)
@@ -71,6 +72,7 @@
   - [Résultats du deuxième tour des élections législatives 2024 par bureau de vote](#data/01_raw/ministere_interieur/2024-legislatives-2-bureau_de_vote.csv)
   - [Liste des candidats au deuxième tour des élections législatives de 2024](#data/01_raw/ministere_interieur/2024-legislatives-2-candidats.csv)
   - [Résultats du deuxième tour des élections législatives 2024 par circonscription législative](#data/01_raw/ministere_interieur/2024-legislatives-2-circonscription.csv)
+  - [Listes candidates au premier tour des élections municipales 2026](#data/01_raw/ministere_interieur/2026-municipales-1-candidats.csv)
   - [Répertoire national des élus — conseillers d&#39;arrondissement de Paris, Marseille et Lyon](#data/01_raw/rne/conseillers_arrondissement.csv)
   - [Répertoire national des élus — membres des assemblées délibérantes des collectivites à statut particulier](#data/01_raw/rne/conseillers_csp.csv)
   - [Répertoire national des élus — conseillers départementaux](#data/01_raw/rne/conseillers_departementaux.csv)
@@ -217,6 +219,19 @@ collectivités d&#39;outre-mer (COM) ne sont pas couvertes par ce produit.
 
 Le produit ADMIN EXPRESS est décliné dans une édition « COG », appelé ADMIN EXPRESS COG, conforme au code officiel
 géographique publié chaque année par l’INSEE.
+
+### Répertoire électoral unique — table des bureaux de vote
+<a name="data/01_raw/insee/2022-reu-bureaux.parquet"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/insee/2022-reu-bureaux.parquet |
+| Format de fichier | application/vnd.apache.parquet |
+| Éditeur | INSEE |
+| URL d&#39;origine | https://www.data.gouv.fr/api/1/datasets/r/6faacf36-1897-43f5-bf39-af8b41a15d26 |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/e0/b88f800ff0063873e67398d5b6d4c8 |
+
+Il s&#39;agit de la table des bureaux de vote du REU.
 
 ### Code Officiel Géographique 2024
 <a name="data/01_raw/insee/cog.zip"></a>
@@ -929,6 +944,19 @@ et 16921.
 | URL d&#39;origine | https://www.data.gouv.fr/fr/datasets/r/41ed46cd-77c2-4ecc-b8eb-374aa953ca39 |
 | URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/52/32b0951ce8ca92573ea3b35d5d62a0 |
 
+
+### Listes candidates au premier tour des élections municipales 2026
+<a name="data/01_raw/ministere_interieur/2026-municipales-1-candidats.csv"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/ministere_interieur/2026-municipales-1-candidats.csv |
+| Format de fichier | text/csv |
+| Éditeur | Ministère de l&#39;intérieur |
+| URL d&#39;origine | https://www.data.gouv.fr/api/1/datasets/r/b929c2a4-18ec-4e8b-bc37-2ff346a867cd |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/38/5b875a17c6ca11bfb68f958c9ed9da |
+
+La composition des listes candidates aux élections municipales 2026.
 
 ### Répertoire national des élus — conseillers d&#39;arrondissement de Paris, Marseille et Lyon
 <a name="data/01_raw/rne/conseillers_arrondissement.csv"></a>
