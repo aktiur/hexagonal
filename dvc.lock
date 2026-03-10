@@ -1243,37 +1243,6 @@ stages:
       hash: md5
       md5: b14d19789e35e4f9fbf9a0d236867e48
       size: 137936
-  cog_qualifier@communes:
-    cmd: PYTHONPATH=src python -m hexagonal.cog.qualifier_communes 
-      data/02_clean/cog/communes.csv data/02_clean/population_municipale.csv 
-      data/02_clean/epci.csv data/02_clean/communes_epci.csv 
-      data/03_main/cog/communes.csv
-    deps:
-    - path: data/02_clean/cog/communes.csv
-      hash: md5
-      md5: 5da5f7dacec0b0723fef714ddbd166b3
-      size: 1702444
-    - path: data/02_clean/communes_epci.csv
-      hash: md5
-      md5: 155551ffcbed0b727e24f6ef0707e80c
-      size: 906684
-    - path: data/02_clean/epci.csv
-      hash: md5
-      md5: 915b0225e1c25acb4b4f4d8cc8fcdc72
-      size: 69758
-    - path: data/02_clean/population_municipale.csv
-      hash: md5
-      md5: c86bb28a31ffffc09704549b1cccc863
-      size: 5509375
-    - path: src/hexagonal/cog/qualifier_communes.py
-      hash: md5
-      md5: 682ebc9fbc0bdbd3f391fdeee7178c3f
-      size: 1548
-    outs:
-    - path: data/03_main/cog/communes.csv
-      hash: md5
-      md5: 964988ff05af1c6f97d9bf42f72850f8
-      size: 4033972
   population_nettoyer:
     cmd: PYTHONPATH=src python -m hexagonal.population.nettoyer 
       data/01_raw/insee/population_municipale.xlsx 
@@ -2000,3 +1969,34 @@ stages:
       hash: md5
       md5: 24643f2edc90949593bcb3939ebf41ff
       size: 2244049
+  qualifier_communes:
+    cmd: PYTHONPATH=src python -m hexagonal.cog.qualifier_communes 
+      data/02_clean/cog/communes.csv data/02_clean/population_municipale.csv 
+      data/02_clean/epci.csv data/02_clean/communes_epci.csv 
+      data/03_main/cog/communes.csv
+    deps:
+    - path: data/02_clean/cog/communes.csv
+      hash: md5
+      md5: 5da5f7dacec0b0723fef714ddbd166b3
+      size: 1702444
+    - path: data/02_clean/communes_epci.csv
+      hash: md5
+      md5: 155551ffcbed0b727e24f6ef0707e80c
+      size: 906684
+    - path: data/02_clean/epci.csv
+      hash: md5
+      md5: 915b0225e1c25acb4b4f4d8cc8fcdc72
+      size: 69758
+    - path: data/02_clean/population_municipale.csv
+      hash: md5
+      md5: c86bb28a31ffffc09704549b1cccc863
+      size: 5509375
+    - path: src/hexagonal/cog/qualifier_communes.py
+      hash: md5
+      md5: 682ebc9fbc0bdbd3f391fdeee7178c3f
+      size: 1548
+    outs:
+    - path: data/03_main/cog/communes.csv
+      hash: md5
+      md5: 964988ff05af1c6f97d9bf42f72850f8
+      size: 4033972

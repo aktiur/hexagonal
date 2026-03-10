@@ -335,25 +335,22 @@ stages:
       ${raw}/insee/population_municipale.xlsx
       ${clean}/population_municipale.csv
 
-  cog_qualifier:
-    foreach:
-      - communes
-    do:
-      deps:
-        - ${clean}/cog/${item}.csv
-        - ${clean}/population_municipale.csv
-        - ${clean}/epci.csv
-        - ${clean}/communes_epci.csv
-        - ${src}/hexagonal/cog/qualifier_communes.py
-      outs:
-        - ${main}/cog/${item}.csv
-      cmd: >-
-        ${python} hexagonal.cog.qualifier_communes
-        ${clean}/cog/${item}.csv
-        ${clean}/population_municipale.csv
-        ${clean}/epci.csv
-        ${clean}/communes_epci.csv
-        ${main}/cog/${item}.csv
+  qualifier_communes:
+    deps:
+      - ${clean}/cog/communes.csv
+      - ${clean}/population_municipale.csv
+      - ${clean}/epci.csv
+      - ${clean}/communes_epci.csv
+      - ${src}/hexagonal/cog/qualifier_communes.py
+    outs:
+      - ${main}/cog/communes.csv
+    cmd: >-
+      ${python} hexagonal.cog.qualifier_communes
+      ${clean}/cog/communes.csv
+      ${clean}/population_municipale.csv
+      ${clean}/epci.csv
+      ${clean}/communes_epci.csv
+      ${main}/cog/communes.csv
 
   communes_details:
     deps:
