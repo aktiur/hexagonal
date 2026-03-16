@@ -17,7 +17,7 @@
   - [Code Officiel Géographique 2024](#data/01_raw/insee/cog.zip)
   - [FILOSOFI 2021 — Revenu disponible par IRIS](#data/01_raw/insee/filosofi-disponible.zip)
   - [Circonscriptions législatives - Fond cartographique](#data/01_raw/insee/insee_circonscriptions_legislatives.zip)
-  - [Séries historiques de population par commune (1876 à 2022)](#data/01_raw/insee/population_municipale.xlsx)
+  - [Séries historiques de population par commune (1876 à 2023)](#data/01_raw/insee/population_municipale.xlsx)
 - [LEGIS-2022](#legis-2022)
   - [Codage des nuances politiques des candidats aux élections législatives des 12 et 19 juin 2022](#data/01_raw/legis_2022/2022-legislatives-nuances.csv)
 - [La France insoumise](#la-france-insoumise)
@@ -72,6 +72,7 @@
   - [Résultats du deuxième tour des élections législatives 2024 par bureau de vote](#data/01_raw/ministere_interieur/2024-legislatives-2-bureau_de_vote.csv)
   - [Liste des candidats au deuxième tour des élections législatives de 2024](#data/01_raw/ministere_interieur/2024-legislatives-2-candidats.csv)
   - [Résultats du deuxième tour des élections législatives 2024 par circonscription législative](#data/01_raw/ministere_interieur/2024-legislatives-2-circonscription.csv)
+  - [Listes candidates au premier tour des élections des conseils de secteurs de Paris, Lyon et Marseille](#data/01_raw/ministere_interieur/2026-municipales-1-candidats-plm.csv)
   - [Listes candidates au premier tour des élections municipales 2026](#data/01_raw/ministere_interieur/2026-municipales-1-candidats.csv)
   - [Répertoire national des élus — conseillers d&#39;arrondissement de Paris, Marseille et Lyon](#data/01_raw/rne/conseillers_arrondissement.csv)
   - [Répertoire national des élus — membres des assemblées délibérantes des collectivites à statut particulier](#data/01_raw/rne/conseillers_csp.csv)
@@ -291,7 +292,7 @@ et des éléments du code électoral, complétés d’informations fournies par 
 l’Intérieur et les préfectures. Il est mis à disposition dans sa version allégée, avec
 des contours simplifiés.
 
-### Séries historiques de population par commune (1876 à 2022)
+### Séries historiques de population par commune (1876 à 2023)
 <a name="data/01_raw/insee/population_municipale.xlsx"></a>
 
 | Propriété | Valeur |
@@ -299,8 +300,8 @@ des contours simplifiés.
 | Chemin interne | data/01_raw/insee/population_municipale.xlsx |
 | Format de fichier | application/vnd.openxmlformats-officedocument.spreadsheetml.sheet |
 | Éditeur | INSEE |
-| URL d&#39;origine | https://www.insee.fr/fr/statistiques/fichier/3698339/base-pop-historiques-1876-2022.xlsx |
-| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/d6/b7b360966185d728501adeaac33b53 |
+| URL d&#39;origine | https://www.insee.fr/fr/statistiques/fichier/3698339/base-pop-historiques-1876-2023.xlsx |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/77/82fadc89c8d1b15780da0ab8b43e84 |
 
 
 
@@ -943,6 +944,18 @@ et 16921.
 | Éditeur | Ministère de l&#39;intérieur |
 | URL d&#39;origine | https://www.data.gouv.fr/fr/datasets/r/41ed46cd-77c2-4ecc-b8eb-374aa953ca39 |
 | URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/52/32b0951ce8ca92573ea3b35d5d62a0 |
+
+
+### Listes candidates au premier tour des élections des conseils de secteurs de Paris, Lyon et Marseille
+<a name="data/01_raw/ministere_interieur/2026-municipales-1-candidats-plm.csv"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/ministere_interieur/2026-municipales-1-candidats-plm.csv |
+| Format de fichier | text/csv |
+| Éditeur | Ministère de l&#39;intérieur |
+| URL d&#39;origine | https://www.data.gouv.fr/api/1/datasets/r/d1709cba-f626-43a1-9c56-bc873c51fadc |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/56/af36aee19857b06d1c6ec356357e5c |
 
 
 ### Listes candidates au premier tour des élections municipales 2026

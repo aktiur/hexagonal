@@ -11,33 +11,33 @@ def qualifier_codes_postaux(codes_postaux, communes):
     communes = communes[communes["type_commune"] == TypeCommune.COMMUNE]
 
     codes_postaux = codes_postaux.merge(
-        communes[["code_commune", "nom", "population_municipale_2022"]],
+        communes[["code_commune", "nom", "population_municipale"]],
         on="code_commune",
     )
 
     par_code_postal = (
-        codes_postaux.sort_values(["code_postal", "population_municipale_2022"])
+        codes_postaux.sort_values(["code_postal", "population_municipale"])
         .drop_duplicates("code_postal", keep="last")
         .set_index("code_postal")
         .rename(
             columns={
                 "code_commune": "code_commune_principale",
                 "nom": "nom_commune_principale",
-                "population_municipale_2022": "population_commune_principale",
+                "population_municipale": "population_commune_principale",
             }
         )
     )
 
     par_code_postal["autres_communes"] = (
         codes_postaux.sort_values(
-            ["code_postal", "population_municipale_2022"], ascending=[True, False]
+            ["code_postal", "population_municipale"], ascending=[True, False]
         )
         .groupby("code_postal")["nom"]
         .agg(lambda g: ", ".join(g.iloc[1:]))
     )
 
     par_code_postal["population_totale"] = codes_postaux.groupby("code_postal")[
-        "population_municipale_2022"
+        "population_municipale"
     ].sum()
 
     return par_code_postal

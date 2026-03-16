@@ -52,7 +52,7 @@
   - [Liste des EPCI à fiscalité propres](#data/02_clean/epci.csv)
   - [Liste des codes postaux](#data/03_main/codes_postaux.csv)
 - [Démographie](#demographie)
-  - [Population par commune de 1876 à 2022](#data/02_clean/population_municipale.csv)
+  - [Population par commune de 1876 à 2023](#data/02_clean/population_municipale.csv)
 - [Organisation administrative](#organisation-administrative)
   - [Liste des communes](#data/03_main/cog/communes.csv)
 - [Répertoire national des élus](#repertoire-national-des-elus)
@@ -2988,7 +2988,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/03_main/codes_postaux.csv |
 | Format de fichier | text/csv |
-| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/1a/0e0834a64acb4c3eb82f0068729c50 |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/61/3a307c9f8f0e5614fab87bcf89cac1 |
 
 Ce fichier comporte une ligne par code postal et indique, pour chaque code postal,
 le code INSEE et le nom de la commune la plus peuplée dans le territoire délivré par
@@ -3059,9 +3059,9 @@ Cette production dépend des sources suivantes :
         </li>
     </ul>
         </li>
-    <li><a href="productions.md#data/02_clean/population_municipale.csv">Population par commune de 1876 à 2022</a>
+    <li><a href="productions.md#data/02_clean/population_municipale.csv">Population par commune de 1876 à 2023</a>
         <ul>
-    <li><a href="sources.md#data/01_raw/insee/population_municipale.xlsx">Séries historiques de population par commune (1876 à 2022)</a>
+    <li><a href="sources.md#data/01_raw/insee/population_municipale.xlsx">Séries historiques de population par commune (1876 à 2023)</a>
         </li>
     </ul>
         </li>
@@ -3086,14 +3086,14 @@ Cette production dépend des sources suivantes :
 ## Démographie
 <a name="demographie"></a>
 
-### Population par commune de 1876 à 2022
+### Population par commune de 1876 à 2023
 <a name="data/02_clean/population_municipale.csv"></a>
 
 | Propriété | Valeur |
 | --------- | ------ |
 | Chemin interne | data/02_clean/population_municipale.csv |
 | Format de fichier | text/csv |
-| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/c8/6bb28a31ffffc09704549b1cccc863 |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/6d/4683916de6c5b5356810666bc91887 |
 
 Pour chaque commune de France est indiquée la population pour chacun des recensements
 depuis celui de 1876.
@@ -3124,6 +3124,11 @@ municipale
     <td><code>code_commune</code></td>
     <td><code>code_commune</code></td>
     <td></td>
+  </tr>
+<tr>
+    <td><code>population_municipale_2023</code></td>
+    <td><code>str</code></td>
+    <td>None</td>
   </tr>
 <tr>
     <td><code>population_municipale_2022</code></td>
@@ -3314,7 +3319,7 @@ municipale
 Cette production dépend des sources suivantes :
 
 <ul>
-    <li><a href="sources.md#data/01_raw/insee/population_municipale.xlsx">Séries historiques de population par commune (1876 à 2022)</a>
+    <li><a href="sources.md#data/01_raw/insee/population_municipale.xlsx">Séries historiques de population par commune (1876 à 2023)</a>
         </li>
     </ul>
 
@@ -3330,7 +3335,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/03_main/cog/communes.csv |
 | Format de fichier | text/csv |
-| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/96/4988ff05af1c6f97d9bf42f72850f8 |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/44/bea53bf3aa841a0a979855a0179dca |
 
 
 
@@ -3422,9 +3427,9 @@ Cette production dépend des sources suivantes :
     <td></td>
   </tr>
 <tr>
-    <td><code>population_municipale_2022</code></td>
-    <td><code>entier</code></td>
-    <td></td>
+    <td><code>population_municipale</code></td>
+    <td><code>str</code></td>
+    <td>None</td>
   </tr>
 
 </tbody>
@@ -3441,9 +3446,9 @@ Cette production dépend des sources suivantes :
         </li>
     </ul>
         </li>
-    <li><a href="productions.md#data/02_clean/population_municipale.csv">Population par commune de 1876 à 2022</a>
+    <li><a href="productions.md#data/02_clean/population_municipale.csv">Population par commune de 1876 à 2023</a>
         <ul>
-    <li><a href="sources.md#data/01_raw/insee/population_municipale.xlsx">Séries historiques de population par commune (1876 à 2022)</a>
+    <li><a href="sources.md#data/01_raw/insee/population_municipale.xlsx">Séries historiques de population par commune (1876 à 2023)</a>
         </li>
     </ul>
         </li>

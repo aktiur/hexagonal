@@ -80,7 +80,6 @@ type = "str"
 description = ""
 nullable = false
 
-[colonnes.population_municipale_2022]
-type = "entier"
-description = ""
+[colonnes.population_municipale]
+type = "str"
 nullable = false

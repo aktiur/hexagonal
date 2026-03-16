@@ -1,4 +1,4 @@
-nom = "Population par commune de 1876 à 2022"
+nom = "Population par commune de 1876 à 2023"
 description = """
 Pour chaque commune de France est indiquée la population pour chacun des recensements
 depuis celui de 1876.
@@ -19,6 +19,10 @@ section = "Démographie"
 [colonnes.code_commune]
 type = "code_commune"
 description = ""
+nullable = false
+
+[colonnes.population_municipale_2023]
+type = "str"
 nullable = false
 
 [colonnes.population_municipale_2022]

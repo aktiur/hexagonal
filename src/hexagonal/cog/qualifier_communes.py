@@ -20,7 +20,7 @@ def run(chemin_communes, chemin_population, chemin_epci, chemin_communes_epci, d
     communes_epci = get_dataframe(chemin_communes_epci)
 
     communes = communes.merge(communes_epci, how="left")
-    communes = communes.merge(epci[["siren_epci", "nom_epci", "type_epci"]])
+    communes = communes.merge(epci[["siren_epci", "nom_epci", "type_epci"]], how="left")
 
     if "type_nom" in communes.columns:
         types_noms = communes["type_nom"].map(lambda i: TYPES_NOMS[i])
@@ -32,6 +32,7 @@ def run(chemin_communes, chemin_population, chemin_epci, chemin_communes_epci, d
         )
 
     population = get_dataframe(chemin_population).iloc[:, :2]
+    population.columns = ["code_commune", "population_municipale"]
     communes = communes.merge(population, how="left")
 
     dest.parent.mkdir(parents=True, exist_ok=True)
