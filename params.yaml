@@ -3,6 +3,10 @@ scrutins:
     encoding: latin1
     format: 2014
     delimiter: ";"
+  2014-municipales-bureau_de_vote:
+    encoding: latin1
+    format: 2014
+    delimiter: ";"
   2014-europeenne-bureau_de_vote:
     encoding: latin1
     format: 2014

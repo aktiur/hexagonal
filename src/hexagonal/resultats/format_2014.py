@@ -27,7 +27,7 @@ partie_bureau = [
 
 transforms: dict[str, str] = {
     "numero_tour": "int8",
-    "numero_panneau": "int8",
+    "numero_panneau": "int16",
     "nuance": "category",
     "inscrits": "int32",
     "votants": "int32",

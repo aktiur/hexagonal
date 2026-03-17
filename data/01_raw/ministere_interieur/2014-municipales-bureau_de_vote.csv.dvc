@@ -1,0 +1,13 @@
+md5: ecf819b9b9a192de8f69f5d70cb1ba7e
+frozen: true
+deps:
+- checksum: '"5605202d-2ab1d39"'
+  size: 44768569
+  hash: md5
+  path: 
+    https://www.data.gouv.fr/api/1/datasets/r/49c6f5cd-85b2-4582-a4bb-3208c839f626
+outs:
+- md5: 212aeda03c8c185fa160565218c2c35b
+  size: 44768569
+  hash: md5
+  path: 2014-municipales-bureau_de_vote.csv

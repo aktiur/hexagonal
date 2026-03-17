@@ -33,13 +33,13 @@ stages:
       size: 4800
     - path: src/hexagonal/resultats/format_2014.py
       hash: md5
-      md5: ac322a2b467cefbdecba4e8c04b55975
-      size: 3298
+      md5: 14cfaa6ffcbc33c34c87af84c0646524
+      size: 3299
     outs:
     - path: data/02_clean/elections/2012-presidentielle-bureau_de_vote.parquet
       hash: md5
-      md5: ed8efba9eaa22c8e680f04d518ed492a
-      size: 3162405
+      md5: 200d6320de048503f5c6c78c315f5adf
+      size: 3162415
   normaliser-format-elections@2014-europeenne-bureau_de_vote:
     cmd: PYTHONPATH=src python -m hexagonal.resultats.format_2014 
       data/01_raw/ministere_interieur/2014-europeenne-bureau_de_vote.csv 
@@ -55,13 +55,13 @@ stages:
       size: 4800
     - path: src/hexagonal/resultats/format_2014.py
       hash: md5
-      md5: ac322a2b467cefbdecba4e8c04b55975
-      size: 3298
+      md5: 14cfaa6ffcbc33c34c87af84c0646524
+      size: 3299
     outs:
     - path: data/02_clean/elections/2014-europeenne-bureau_de_vote.parquet
       hash: md5
-      md5: ea10f6dd86f5df7dcf8c5038a9081b5f
-      size: 3038652
+      md5: 6a3d57370dcfec8e5a3011e3dfc17879
+      size: 3038654
   normaliser-format-elections@2017-legislatives-1-bureau_de_vote:
     cmd: PYTHONPATH=src python -m hexagonal.resultats.format_2017 
       data/01_raw/ministere_interieur/2017-legislatives-1-bureau_de_vote.csv 
@@ -2023,3 +2023,25 @@ stages:
       hash: md5
       md5: aa65b0118ae3371070bee4c8d0af1d1c
       size: 3040255
+  normaliser-format-elections@2014-municipales-bureau_de_vote:
+    cmd: PYTHONPATH=src python -m hexagonal.resultats.format_2014 
+      data/01_raw/ministere_interieur/2014-municipales-bureau_de_vote.csv 
+      data/02_clean/elections/2014-municipales-bureau_de_vote.parquet latin1 ";"
+    deps:
+    - path: data/01_raw/ministere_interieur/2014-municipales-bureau_de_vote.csv
+      hash: md5
+      md5: 212aeda03c8c185fa160565218c2c35b
+      size: 44768569
+    - path: src/hexagonal/codes.py
+      hash: md5
+      md5: e27a9dabe689bc7989c28ebf2ba84ce6
+      size: 4800
+    - path: src/hexagonal/resultats/format_2014.py
+      hash: md5
+      md5: 14cfaa6ffcbc33c34c87af84c0646524
+      size: 3299
+    outs:
+    - path: data/02_clean/elections/2014-municipales-bureau_de_vote.parquet
+      hash: md5
+      md5: 541a1b8c3a0a3b83bd9cf11899c31984
+      size: 6988024
