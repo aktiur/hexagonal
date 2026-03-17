@@ -33,7 +33,7 @@ def run(chemin_communes, chemin_population, chemin_epci, chemin_communes_epci, d
 
     population = get_dataframe(chemin_population).iloc[:, :2]
     population.columns = ["code_commune", "population_municipale"]
-    communes = communes.merge(population, how="left")
+    communes = communes.merge(population, how="left").convert_dtypes()
 
     dest.parent.mkdir(parents=True, exist_ok=True)
     communes.to_csv(dest, index=False)

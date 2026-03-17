@@ -32,7 +32,7 @@ transforms: dict[str, str] = {
     "inscrits": "int32",
     "votants": "int32",
     "exprimes": "int32",
-    "voix": "int32",
+    "voix": "int16",
 }
 
 population = [
