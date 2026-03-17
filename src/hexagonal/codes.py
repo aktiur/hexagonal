@@ -33,7 +33,7 @@ CORRESPONDANCE_CODE_DEPARTEMENT["99"] = "ZZ"
 def normaliser_code_departement(departement: pd.Series) -> pd.Series:
     """Normalise une série de codes de département.
 
-    hexagonal reprend la convention du ministère de l'intérieur utilisée en 2024 pour la
+    Hexagonal reprend la convention du ministère de l'Intérieur utilisée en 2024 pour la
     codification des départements :
     - les départements de métropole ont un numéro de département sur 2 chiffres (avec un
       zéro initial pour les départements numérotés de 1 à 9)
@@ -44,11 +44,11 @@ def normaliser_code_departement(departement: pd.Series) -> pd.Series:
       française, de Nouvelle-Calédonie et de Wallis-et-Futuna)
     - Saint-Barthélémy et Saint-Martin reçoivent un code département commun de ZX
     - ZZ pour les français de l'étranger (plutôt que le 99 employé par l'INSEE, car
-      les codes « communes » utilisés par le ministère de l'intérieur ne correspondent
+      les codes « communes » utilisés par le ministère de l'Intérieur ne correspondent
       pas aux codes pays étrangers du COG)
 
 
-    Jusqu'en 2014, le ministère de l'intérieur n'utilisait pas les codes à trois
+    Jusqu'en 2024, le ministère de l'Intérieur n'utilisait pas les codes à trois
     chiffres de l'INSEE (par exemple 971 pour la Guadeloupe, 987 pour la Polynésie
     française, etc.) mais un code sur deux lettres (ZA pour la Guadeloupe, ZP pour la
     Polynésie française, etc.) Cela pose un problème particulier pour
@@ -69,7 +69,7 @@ def normaliser_code_departement(departement: pd.Series) -> pd.Series:
 def normaliser_code_circonscription(circonscription: pd.Series) -> pd.Series:
     """Normalise une série de codes de circonscription législative.
 
-    hexagonal reprend la convention du ministère de l'intérieur de 2024 pour la
+    hexagonal reprend la convention du ministère de l'Intérieur de 2024 pour la
     codification des départements, mais ajoute un tiret simple entre le numéro de
     département et le numéro de circonscription sur deux chiffres.
 

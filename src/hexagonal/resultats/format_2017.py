@@ -16,6 +16,7 @@ champs."""
 import csv
 import sys
 
+import numpy as np
 import pandas as pd
 
 from hexagonal.codes import (
@@ -118,6 +119,8 @@ repeated_headers = {
     "Sièges / Elu": None,
     "Sièges Secteur": None,
     "Sièges CC": None,
+    "Sièges au CC": None,
+    "Sièges au CM": None,
     "Sièges": None,
     "Elu": None,
 }
@@ -125,14 +128,14 @@ repeated_headers = {
 
 transforms = {
     "bureau_de_vote": "category",
-    "inscrits": "int32",
-    "votants": "int32",
-    "exprimes": "int32",
-    "blancs": "int32",
-    "voix": "int32",
+    "inscrits": "int",
+    "votants": "int",
+    "exprimes": "int",
+    "blancs": "int",
+    "voix": "int",
     "sexe": "category",
-    "numero_panneau": "int16",
-    "numero_liste": "int8",
+    "numero_panneau": "int",
+    "numero_liste": "int",
     "nuance": "category",
     "nom": "category",
     "prenom": "category",
@@ -221,7 +224,17 @@ def read_file(src, delimiter=";", encoding="utf-8"):
     for field, transform in transforms.items():
         try:
             if field in resultats.columns:
-                resultats[field] = resultats[field].astype(transform)
+                if transform == "int":
+                    resultats[field] = pd.to_numeric(
+                        resultats[field],
+                        errors="coerce",
+                        dtype_backend="numpy_nullable",
+                        downcast="unsigned",
+                    )
+                else:
+                    resultats[field] = (
+                        resultats[field].astype(transform)
+                    )
         except ValueError as e:
             print(f"global_fields: {common_fields!r}")
             print(f"repeated_fields: {candidate_specific_fields!r}")
