@@ -1,0 +1,13 @@
+md5: c98629beac265ec74455efccc4901ef5
+frozen: true
+deps:
+- checksum: '"69baed75-f4c9f"'
+  size: 1002655
+  hash: md5
+  path: 
+    https://www.data.gouv.fr/api/1/datasets/r/858a9e53-c7d6-43b5-8326-ffd6e4766a85
+outs:
+- md5: 37cd2da50c74348947581b21ee08428a
+  size: 1002655
+  hash: md5
+  path: 2026-metropolitaines-1-bureau_de_vote.csv

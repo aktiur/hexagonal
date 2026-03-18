@@ -1,0 +1,13 @@
+md5: 0d1e18b3fd3dc93fc6092f4588d25347
+frozen: true
+deps:
+- checksum: '"69b42acc-164f40"'
+  size: 1462080
+  hash: md5
+  path: 
+    https://www.data.gouv.fr/api/1/datasets/r/d1709cba-f626-43a1-9c56-bc873c51fadc
+outs:
+- md5: 203c62053ea483f9ee4dddfd0e4ba6de
+  size: 1462080
+  hash: md5
+  path: 2026-conseils-PLM-1-candidats.csv

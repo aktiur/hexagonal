@@ -1,0 +1,13 @@
+md5: f53caf73111fcdf7e80ec3ae23bdcf1f
+frozen: true
+deps:
+- checksum: '"69baf5ee-1817b"'
+  size: 98683
+  hash: md5
+  path: 
+    https://www.data.gouv.fr/api/1/datasets/r/29aa24e0-647d-450e-b09e-4f2a2a085642
+outs:
+- md5: cddf3c0396938fbad9f48a01fd6a6e16
+  size: 98683
+  hash: md5
+  path: 2026-metropolitaines-2-candidats.csv
