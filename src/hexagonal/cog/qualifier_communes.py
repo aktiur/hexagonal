@@ -33,7 +33,12 @@ def run(chemin_communes, chemin_population, chemin_epci, chemin_communes_epci, d
 
     population = get_dataframe(chemin_population).iloc[:, :2]
     population.columns = ["code_commune", "population_municipale"]
-    communes = communes.merge(population, how="left").convert_dtypes()
+    population = population.set_index("code_commune")["population_municipale"]
+
+    # il faut calculer manuellement la population de Paris
+    population.loc["75056"] = population[population.index.str.startswith("751")].sum()
+
+    communes = communes.join(population, how="left", on=["code_commune"]).convert_dtypes()
 
     dest.parent.mkdir(parents=True, exist_ok=True)
     communes.to_csv(dest, index=False)

@@ -22,7 +22,7 @@ description = ""
 nullable = false
 
 [colonnes.population_municipale_2023]
-type = "str"
+type = "entier"
 nullable = false
 
 [colonnes.population_municipale_2022]

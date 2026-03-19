@@ -1927,8 +1927,8 @@ stages:
       size: 1099107
     - path: data/03_main/cog/communes.csv
       hash: md5
-      md5: 76ed2f938e4da6f6e55d15efdd466f6c
-      size: 4159052
+      md5: 1d61d0aab4b6ee4503ac69dcdf6f8304
+      size: 4159059
     - path: src/hexagonal/codes_postaux/qualifier.py
       hash: md5
       md5: 242d5d65035b519298248e73df1bb054
@@ -1993,13 +1993,13 @@ stages:
       size: 5648044
     - path: src/hexagonal/cog/qualifier_communes.py
       hash: md5
-      md5: 73e5720795df40ee04e218edb407de9c
-      size: 1644
+      md5: e375ada3cc878169a0b09c0689705af8
+      size: 1891
     outs:
     - path: data/03_main/cog/communes.csv
       hash: md5
-      md5: 76ed2f938e4da6f6e55d15efdd466f6c
-      size: 4159052
+      md5: 1d61d0aab4b6ee4503ac69dcdf6f8304
+      size: 4159059
   normaliser-format-elections@2026-municipales-1-bureau_de_vote:
     cmd: PYTHONPATH=src python -m hexagonal.resultats.format_2017 
       data/01_raw/ministere_interieur/2026-municipales-1-bureau_de_vote.csv 
