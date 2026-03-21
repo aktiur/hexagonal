@@ -3,5 +3,5 @@ description = """
 
 """
 mimetype = "text/csv"
-editeur = "Ministère de l'intérieur"
 info_url = "https://www.data.gouv.fr/datasets/elections-municipales-2026-listes-candidates-au-premier-tour"
+editeur = "Ministère de l'intérieur"

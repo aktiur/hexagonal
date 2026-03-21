@@ -27,6 +27,7 @@
   - [Nuançage précis des candidats aux législatives 2024](#data/01_raw/lafranceinsoumise/2024-legislatives-candidats.csv)
   - [Liste des candidats du Nouveau Front populaire et de leur sensibilité par circonscription législative](#data/01_raw/lafranceinsoumise/2024-legislatives-nfp-sensibilites.csv)
   - [Nuançage LFI des candidatures aux législatives 2024](#data/01_raw/lafranceinsoumise/2024-legislatives-nuances.csv)
+  - [Anomalies dans les correspondances entre les candidats au 1er et 2e tour des élections municipales 2026](#data/01_raw/lafranceinsoumise/2026-municipales-anomalies-candidats.parquet)
   - [Paramètres électoraux des différents scrutins de listes](#data/01_raw/lafranceinsoumise/scrutins_listes.csv)
 - [La Poste](#la-poste)
   - [Base officielle des codes postaux](#data/01_raw/la_poste/base_officielle_codes_postaux.csv)
@@ -42,6 +43,7 @@
   - [Résultats du référendum de 2005 par bureau de vote](#data/01_raw/ministere_interieur/2005-referendum-bureau_de_vote.csv)
   - [Résultats des deux tours de l&#39;élection présidentielle de 2012](#data/01_raw/ministere_interieur/2012-presidentielle-bureau_de_vote.csv)
   - [Résultats de l&#39;élection européenne de 2014 par bureau de vote](#data/01_raw/ministere_interieur/2014-europeenne-bureau_de_vote.csv)
+  - [Résultats des élections municipales de 2014 par bureau de vote](#data/01_raw/ministere_interieur/2014-municipales-bureau_de_vote.csv)
   - [Résultats du premier tour des élections législatives de 2017 par bureau de vote](#data/01_raw/ministere_interieur/2017-legislatives-1-bureau_de_vote.csv)
   - [Résultats du deuxième tour des élections législatives de 2017 par bureau de vote](#data/01_raw/ministere_interieur/2017-legislatives-2-bureau_de_vote.csv)
   - [Résultats du premier tour de l&#39;élection présidentielle de 2017 par bureau de vote](#data/01_raw/ministere_interieur/2017-presidentielle-1-bureau_de_vote.csv)
@@ -72,8 +74,15 @@
   - [Résultats du deuxième tour des élections législatives 2024 par bureau de vote](#data/01_raw/ministere_interieur/2024-legislatives-2-bureau_de_vote.csv)
   - [Liste des candidats au deuxième tour des élections législatives de 2024](#data/01_raw/ministere_interieur/2024-legislatives-2-candidats.csv)
   - [Résultats du deuxième tour des élections législatives 2024 par circonscription législative](#data/01_raw/ministere_interieur/2024-legislatives-2-circonscription.csv)
-  - [Listes candidates au premier tour des élections des conseils de secteurs de Paris, Lyon et Marseille](#data/01_raw/ministere_interieur/2026-municipales-1-candidats-plm.csv)
+  - [Résultats du 1er tour des élections des conseillers d&#39;arrondissements de Paris, Lyon et Marseille en 2016](#data/01_raw/ministere_interieur/2026-conseils-PLM-1-bureau_de_vote.csv)
+  - [Listes candidates au premier tour des élections des conseils de secteurs de Paris, Lyon et Marseille](#data/01_raw/ministere_interieur/2026-conseils-PLM-1-candidats.csv)
+  - [Candidats au deuxième tour des élections des conseils de secteurs de Paris, Lyon et Marseille en 2026](#data/01_raw/ministere_interieur/2026-conseils-PLM-2-candidats.csv)
+  - [Résultats du 1er tour des élections des conseillers à la métropole de Lyon en 2026 par bureau de vote](#data/01_raw/ministere_interieur/2026-metropolitaines-1-bureau_de_vote.csv)
+  - [Candidats au 1er tour des élections des conseillers de la métropole de Lyon en 2026](#data/01_raw/ministere_interieur/2026-metropolitaines-1-candidats.csv)
+  - [Candidats au 2e tour des élections des conseillers de la métropole de Lyon en 2026](#data/01_raw/ministere_interieur/2026-metropolitaines-2-candidats.csv)
+  - [Résultats du 1er tour des élections municipales de 2026 par bureau de vote](#data/01_raw/ministere_interieur/2026-municipales-1-bureau_de_vote.csv)
   - [Listes candidates au premier tour des élections municipales 2026](#data/01_raw/ministere_interieur/2026-municipales-1-candidats.csv)
+  - [Candidats au 2e tour des élections municipales 2026](#data/01_raw/ministere_interieur/2026-municipales-2-candidats.csv)
   - [Répertoire national des élus — conseillers d&#39;arrondissement de Paris, Marseille et Lyon](#data/01_raw/rne/conseillers_arrondissement.csv)
   - [Répertoire national des élus — membres des assemblées délibérantes des collectivites à statut particulier](#data/01_raw/rne/conseillers_csp.csv)
   - [Répertoire national des élus — conseillers départementaux](#data/01_raw/rne/conseillers_departementaux.csv)
@@ -412,6 +421,37 @@ l&#39;accord.
 Ce fichier propose un nuançage réalisé par les équipes de la France insoumise pendant la
 campagne des législatives 2024 à des fins d&#39;analyse électorale.
 
+### Anomalies dans les correspondances entre les candidats au 1er et 2e tour des élections municipales 2026
+<a name="data/01_raw/lafranceinsoumise/2026-municipales-anomalies-candidats.parquet"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/lafranceinsoumise/2026-municipales-anomalies-candidats.parquet |
+| Format de fichier | application/vnd.apache.parquet |
+| Éditeur | La France insoumise |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/b7/547ef8eb2a2d764e7f572ca952bbbd |
+
+Tous les candidats au 2e tour ont nécessairement été candidats au 1er tour des élections
+municipales, potentiellement sur une liste différente en cas de fusion de liste.
+
+Toutefois, la mise en correspondance entre candidatures du 2e tour et candidatures du
+1er tour est rendue difficile par l&#39;existence d&#39;erreurs dans les listes de candidats
+mises à disposition par le ministère de l&#39;Intérieur (MIOM).
+
+Ce fichier comprend les correspondances pour certains des candidats dont les
+informations ne correspondent pas parfaitement entre 1er et 2e tour. La colonne
+`index_t2` donne le numéro d&#39;une ligne (numérotation à partir de 0) dans le fichier des
+candidats au 2e tour du MIOM, et la colonne `index_t1` donne le numéro de la ligne
+pour ce même candidat dans le fichier des candidats du 1er tour.
+
+Pour élaborer ce fichier, une recherche par trigramme des candidats de 2e tour parmi
+l&#39;ensemble des candidats de 1er tour sans correspondance exacte dans la liste des
+candidats du 2e tour. Dans les cas d&#39;homonymie ou d&#39;ambiguité, c&#39;est la comparaison des
+nuances de 1er et de 2e tour qui a permis l&#39;attribution.
+
+Pour le moment, cette analyse n&#39;a été mise en place que sur le seul cas des communes où
+une liste soutenue par la France insoumise est présente au 2e tour.
+
 ### Paramètres électoraux des différents scrutins de listes
 <a name="data/01_raw/lafranceinsoumise/scrutins_listes.csv"></a>
 
@@ -576,6 +616,21 @@ nuances politiques plus précises que celles du ministère de l’intérieur.
 | URL d&#39;origine | https://www.data.gouv.fr/fr/datasets/r/c5af18ce-b673-4019-a9c3-07ee6209668c |
 | URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/21/aecbfcb6e0caf8eb09a3b573170623 |
 
+
+### Résultats des élections municipales de 2014 par bureau de vote
+<a name="data/01_raw/ministere_interieur/2014-municipales-bureau_de_vote.csv"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/ministere_interieur/2014-municipales-bureau_de_vote.csv |
+| Format de fichier | text/csv |
+| URL d&#39;information | https://www.data.gouv.fr/datasets/elections-municipales-2014-resultats-par-bureaux-de-vote |
+| Éditeur | Ministère de l&#39;intérieur |
+| URL d&#39;origine | https://www.data.gouv.fr/api/1/datasets/r/49c6f5cd-85b2-4582-a4bb-3208c839f626 |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/21/2aeda03c8c185fa160565218c2c35b |
+
+Ce fichier comprend les résultats des deux tours de scrutin, pour l&#39;ensemble des
+communes de France
 
 ### Résultats du premier tour des élections législatives de 2017 par bureau de vote
 <a name="data/01_raw/ministere_interieur/2017-legislatives-1-bureau_de_vote.csv"></a>
@@ -946,16 +1001,100 @@ et 16921.
 | URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/52/32b0951ce8ca92573ea3b35d5d62a0 |
 
 
-### Listes candidates au premier tour des élections des conseils de secteurs de Paris, Lyon et Marseille
-<a name="data/01_raw/ministere_interieur/2026-municipales-1-candidats-plm.csv"></a>
+### Résultats du 1er tour des élections des conseillers d&#39;arrondissements de Paris, Lyon et Marseille en 2016
+<a name="data/01_raw/ministere_interieur/2026-conseils-PLM-1-bureau_de_vote.csv"></a>
 
 | Propriété | Valeur |
 | --------- | ------ |
-| Chemin interne | data/01_raw/ministere_interieur/2026-municipales-1-candidats-plm.csv |
+| Chemin interne | data/01_raw/ministere_interieur/2026-conseils-PLM-1-bureau_de_vote.csv |
+| Format de fichier | text/csv |
+| URL d&#39;information | https://www.data.gouv.fr/datasets/elections-municipales-2026-resultats-du-premier-tour |
+| Éditeur | Ministère de l&#39;intérieur |
+| URL d&#39;origine | https://www.data.gouv.fr/api/1/datasets/r/ce7bfb80-cb17-4024-b5b9-fbc011e7c7f0 |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/a1/6e1f0d4295eec78002c2a9b17d9456 |
+
+
+
+### Listes candidates au premier tour des élections des conseils de secteurs de Paris, Lyon et Marseille
+<a name="data/01_raw/ministere_interieur/2026-conseils-PLM-1-candidats.csv"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/ministere_interieur/2026-conseils-PLM-1-candidats.csv |
 | Format de fichier | text/csv |
 | Éditeur | Ministère de l&#39;intérieur |
 | URL d&#39;origine | https://www.data.gouv.fr/api/1/datasets/r/d1709cba-f626-43a1-9c56-bc873c51fadc |
-| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/56/af36aee19857b06d1c6ec356357e5c |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/20/3c62053ea483f9ee4dddfd0e4ba6de |
+
+
+### Candidats au deuxième tour des élections des conseils de secteurs de Paris, Lyon et Marseille en 2026
+<a name="data/01_raw/ministere_interieur/2026-conseils-PLM-2-candidats.csv"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/ministere_interieur/2026-conseils-PLM-2-candidats.csv |
+| Format de fichier | text/csv |
+| URL d&#39;information | https://www.data.gouv.fr/datasets/elections-municipales-2026-listes-candidates-au-second-tour |
+| Éditeur | Ministère de l&#39;intérieur |
+| URL d&#39;origine | https://www.data.gouv.fr/api/1/datasets/r/70ec1c11-3645-4583-9b44-d931d0968072 |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/24/91ff1718720a7e00d44204d1a6860e |
+
+
+
+### Résultats du 1er tour des élections des conseillers à la métropole de Lyon en 2026 par bureau de vote
+<a name="data/01_raw/ministere_interieur/2026-metropolitaines-1-bureau_de_vote.csv"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/ministere_interieur/2026-metropolitaines-1-bureau_de_vote.csv |
+| Format de fichier | text/csv |
+| URL d&#39;information | https://www.data.gouv.fr/datasets/elections-metropolitaines-de-lyon-2026-resultats-du-premier-tour |
+| Éditeur | Ministère de l&#39;intérieur |
+| URL d&#39;origine | https://www.data.gouv.fr/api/1/datasets/r/858a9e53-c7d6-43b5-8326-ffd6e4766a85 |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/37/cd2da50c74348947581b21ee08428a |
+
+
+
+### Candidats au 1er tour des élections des conseillers de la métropole de Lyon en 2026
+<a name="data/01_raw/ministere_interieur/2026-metropolitaines-1-candidats.csv"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/ministere_interieur/2026-metropolitaines-1-candidats.csv |
+| Format de fichier | text/csv |
+| URL d&#39;information | https://www.data.gouv.fr/datasets/elections-municipales-2026-listes-candidates-au-premier-tour |
+| Éditeur | Ministère de l&#39;intérieur |
+| URL d&#39;origine | https://www.data.gouv.fr/api/1/datasets/r/f02394ab-fb38-4060-bee6-72be6e30c196 |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/96/aa1e2a00bcfa1fc27f4a875b2ec4ac |
+
+
+
+### Candidats au 2e tour des élections des conseillers de la métropole de Lyon en 2026
+<a name="data/01_raw/ministere_interieur/2026-metropolitaines-2-candidats.csv"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/ministere_interieur/2026-metropolitaines-2-candidats.csv |
+| Format de fichier | text/csv |
+| URL d&#39;information | https://www.data.gouv.fr/datasets/elections-municipales-2026-listes-candidates-au-second-tour |
+| Éditeur | Ministère de l&#39;intérieur |
+| URL d&#39;origine | https://www.data.gouv.fr/api/1/datasets/r/29aa24e0-647d-450e-b09e-4f2a2a085642 |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/cd/df3c0396938fbad9f48a01fd6a6e16 |
+
+
+
+### Résultats du 1er tour des élections municipales de 2026 par bureau de vote
+<a name="data/01_raw/ministere_interieur/2026-municipales-1-bureau_de_vote.csv"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/ministere_interieur/2026-municipales-1-bureau_de_vote.csv |
+| Format de fichier | text/csv |
+| URL d&#39;information | https://www.data.gouv.fr/datasets/elections-municipales-2026-resultats-du-premier-tour |
+| Éditeur | Ministère de l&#39;intérieur |
+| URL d&#39;origine | https://www.data.gouv.fr/api/1/datasets/r/1428132c-ad5e-437e-a928-7c2a254e40eb |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/45/e6f0073482093fb92460bdba56d282 |
+
 
 
 ### Listes candidates au premier tour des élections municipales 2026
@@ -970,6 +1109,20 @@ et 16921.
 | URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/38/5b875a17c6ca11bfb68f958c9ed9da |
 
 La composition des listes candidates aux élections municipales 2026.
+
+### Candidats au 2e tour des élections municipales 2026
+<a name="data/01_raw/ministere_interieur/2026-municipales-2-candidats.csv"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/ministere_interieur/2026-municipales-2-candidats.csv |
+| Format de fichier | text/csv |
+| URL d&#39;information | https://www.data.gouv.fr/datasets/elections-municipales-2026-listes-candidates-au-second-tour |
+| Éditeur | Ministère de l&#39;intérieur |
+| URL d&#39;origine | https://www.data.gouv.fr/api/1/datasets/r/c7e8ced6-3d08-452e-af06-d553634b6d61 |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/b5/809b79ef133ac307bfd3e3a3658a8b |
+
+
 
 ### Répertoire national des élus — conseillers d&#39;arrondissement de Paris, Marseille et Lyon
 <a name="data/01_raw/rne/conseillers_arrondissement.csv"></a>

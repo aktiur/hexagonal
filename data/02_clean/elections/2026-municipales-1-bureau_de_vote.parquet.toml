@@ -3,6 +3,7 @@ description = """
 
 """
 mimetype = "application/vnd.apache.parquet"
+section = "Résultats électoraux"
 
 [colonnes.code_commune]
 type = "str"

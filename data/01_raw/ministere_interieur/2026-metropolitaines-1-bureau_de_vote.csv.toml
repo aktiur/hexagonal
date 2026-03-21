@@ -3,5 +3,5 @@ description = """
 
 """
 mimetype = "text/csv"
-editeur = "Ministère de l'intérieur"
 info_url = "https://www.data.gouv.fr/datasets/elections-metropolitaines-de-lyon-2026-resultats-du-premier-tour"
+editeur = "Ministère de l'intérieur"
