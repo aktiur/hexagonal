@@ -1,0 +1,5 @@
+outs:
+- md5: b7547ef8eb2a2d764e7f572ca952bbbd
+  size: 1895
+  hash: md5
+  path: 2026-municipales-anomalies-candidats.parquet

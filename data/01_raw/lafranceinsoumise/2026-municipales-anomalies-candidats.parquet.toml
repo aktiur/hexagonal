@@ -1,0 +1,25 @@
+nom = "Anomalies dans les correspondances entre les candidats au 1er et 2e tour des élections municipales 2026"
+description = """
+Tous les candidats au 2e tour ont nécessairement été candidats au 1er tour des élections
+municipales, potentiellement sur une liste différente en cas de fusion de liste.
+
+Toutefois, la mise en correspondance entre candidatures du 2e tour et candidatures du
+1er tour est rendue difficile par l'existence d'erreurs dans les listes de candidats
+mises à disposition par le ministère de l'Intérieur (MIOM).
+
+Ce fichier comprend les correspondances pour certains des candidats dont les
+informations ne correspondent pas parfaitement entre 1er et 2e tour. La colonne
+`index_t2` donne le numéro d'une ligne (numérotation à partir de 0) dans le fichier des
+candidats au 2e tour du MIOM, et la colonne `index_t1` donne le numéro de la ligne
+pour ce même candidat dans le fichier des candidats du 1er tour.
+
+Pour élaborer ce fichier, une recherche par trigramme des candidats de 2e tour parmi
+l'ensemble des candidats de 1er tour sans correspondance exacte dans la liste des
+candidats du 2e tour. Dans les cas d'homonymie ou d'ambiguité, c'est la comparaison des
+nuances de 1er et de 2e tour qui a permis l'attribution.
+
+Pour le moment, cette analyse n'a été mise en place que sur le seul cas des communes où
+une liste soutenue par la France insoumise est présente au 2e tour.
+"""
+mimetype = "application/vnd.apache.parquet"
+editeur = "La France insoumise"
