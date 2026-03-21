@@ -429,7 +429,7 @@ campagne des législatives 2024 à des fins d&#39;analyse électorale.
 | Chemin interne | data/01_raw/lafranceinsoumise/2026-municipales-anomalies-candidats.parquet |
 | Format de fichier | application/vnd.apache.parquet |
 | Éditeur | La France insoumise |
-| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/b7/547ef8eb2a2d764e7f572ca952bbbd |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/16/333ff368d3e0aeeeed47c61c8c97c6 |
 
 Tous les candidats au 2e tour ont nécessairement été candidats au 1er tour des élections
 municipales, potentiellement sur une liste différente en cas de fusion de liste.
@@ -439,10 +439,14 @@ Toutefois, la mise en correspondance entre candidatures du 2e tour et candidatur
 mises à disposition par le ministère de l&#39;Intérieur (MIOM).
 
 Ce fichier comprend les correspondances pour certains des candidats dont les
-informations ne correspondent pas parfaitement entre 1er et 2e tour. La colonne
-`index_t2` donne le numéro d&#39;une ligne (numérotation à partir de 0) dans le fichier des
-candidats au 2e tour du MIOM, et la colonne `index_t1` donne le numéro de la ligne
-pour ce même candidat dans le fichier des candidats du 1er tour.
+informations ne correspondent pas parfaitement entre 1er et 2e tour, identifiés par
+les colonnes suivantes :
+
+- `code_commune` identifie la commune
+- `numéro_panneau_t2` identifie la liste de second tour, et `ordre_t2` la position du
+  candidat sur cette liste au second tour
+- `numéro_panneau_t1` identifie la liste de premier tour, et `ordre_t1` la position du
+  candidat sur cette liste au premier tour.
 
 Pour élaborer ce fichier, une recherche par trigramme des candidats de 2e tour parmi
 l&#39;ensemble des candidats de 1er tour sans correspondance exacte dans la liste des
