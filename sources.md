@@ -27,6 +27,7 @@
   - [Nuançage précis des candidats aux législatives 2024](#data/01_raw/lafranceinsoumise/2024-legislatives-candidats.csv)
   - [Liste des candidats du Nouveau Front populaire et de leur sensibilité par circonscription législative](#data/01_raw/lafranceinsoumise/2024-legislatives-nfp-sensibilites.csv)
   - [Nuançage LFI des candidatures aux législatives 2024](#data/01_raw/lafranceinsoumise/2024-legislatives-nuances.csv)
+  - [Liste des listes soutenues par la France insoumise aux municipales de 2026](#data/01_raw/lafranceinsoumise/2026-municipales-1-listes-lfi.parquet)
   - [Anomalies dans les correspondances entre les candidats au 1er et 2e tour des élections municipales 2026](#data/01_raw/lafranceinsoumise/2026-municipales-anomalies-candidats.parquet)
   - [Paramètres électoraux des différents scrutins de listes](#data/01_raw/lafranceinsoumise/scrutins_listes.csv)
 - [La Poste](#la-poste)
@@ -420,6 +421,18 @@ l&#39;accord.
 
 Ce fichier propose un nuançage réalisé par les équipes de la France insoumise pendant la
 campagne des législatives 2024 à des fins d&#39;analyse électorale.
+
+### Liste des listes soutenues par la France insoumise aux municipales de 2026
+<a name="data/01_raw/lafranceinsoumise/2026-municipales-1-listes-lfi.parquet"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/lafranceinsoumise/2026-municipales-1-listes-lfi.parquet |
+| Format de fichier | application/vnd.apache.parquet |
+| Éditeur | La France insoumise |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/e7/541c0a4a08bfe993a2404883752256 |
+
+
 
 ### Anomalies dans les correspondances entre les candidats au 1er et 2e tour des élections municipales 2026
 <a name="data/01_raw/lafranceinsoumise/2026-municipales-anomalies-candidats.parquet"></a>

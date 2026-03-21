@@ -1,0 +1,5 @@
+outs:
+- md5: e7541c0a4a08bfe993a2404883752256
+  size: 16846
+  hash: md5
+  path: 2026-municipales-1-listes-lfi.parquet
