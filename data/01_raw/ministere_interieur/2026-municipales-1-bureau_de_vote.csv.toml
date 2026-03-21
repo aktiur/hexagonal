@@ -1,0 +1,7 @@
+nom = "Résultats du 1er tour des élections municipales de 2026 par bureau de vote"
+description = """
+
+"""
+mimetype = "text/csv"
+info_url = "https://www.data.gouv.fr/datasets/elections-municipales-2026-resultats-du-premier-tour"
+editeur = "Ministère de l'intérieur"

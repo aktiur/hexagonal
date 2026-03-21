@@ -1,0 +1,7 @@
+nom = "Candidats au 2e tour des élections des conseillers de la métropole de Lyon en 2026"
+description = """
+
+"""
+mimetype = "text/csv"
+info_url = "https://www.data.gouv.fr/datasets/elections-municipales-2026-listes-candidates-au-second-tour"
+editeur = "Ministère de l'intérieur"

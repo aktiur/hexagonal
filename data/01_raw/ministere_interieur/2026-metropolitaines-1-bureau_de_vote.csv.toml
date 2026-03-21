@@ -1,0 +1,7 @@
+nom = "Résultats du 1er tour des élections des conseillers à la métropole de Lyon en 2026 par bureau de vote"
+description = """
+
+"""
+mimetype = "text/csv"
+editeur = "Ministère de l'intérieur"
+info_url = "https://www.data.gouv.fr/datasets/elections-metropolitaines-de-lyon-2026-resultats-du-premier-tour"

@@ -1,0 +1,9 @@
+nom = "Résultats des élections municipales de 2014 par bureau de vote"
+description = """
+Ce fichier comprend les résultats des deux tours de scrutin, pour l'ensemble des
+communes de France
+"""
+mimetype = "text/csv"
+
+info_url = "https://www.data.gouv.fr/datasets/elections-municipales-2014-resultats-par-bureaux-de-vote"
+editeur = "Ministère de l'intérieur"

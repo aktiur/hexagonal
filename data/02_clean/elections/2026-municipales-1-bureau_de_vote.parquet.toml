@@ -1,0 +1,57 @@
+nom = "Résultats du 1er tour des élections municipales 2026 par bureau de vote"
+description = """
+
+"""
+mimetype = "application/vnd.apache.parquet"
+
+[colonnes.code_commune]
+type = "str"
+nullable = false
+
+[colonnes.bureau_de_vote]
+type = "str"
+nullable = false
+
+[colonnes.inscrits]
+type = "entier"
+nullable = false
+
+[colonnes.votants]
+type = "entier"
+nullable = false
+
+[colonnes.exprimes]
+type = "entier"
+nullable = false
+
+[colonnes.numero_panneau]
+type = "entier"
+nullable = false
+
+[colonnes.nuance]
+type = "str"
+nullable = false
+
+[colonnes.nom]
+type = "str"
+nullable = false
+
+[colonnes.prenom]
+type = "str"
+nullable = false
+
+[colonnes.sexe]
+type = "str"
+nullable = false
+
+[colonnes.liste_court]
+type = "str"
+nullable = false
+
+[colonnes.liste_long]
+type = "str"
+nullable = false
+
+[colonnes.voix]
+type = "entier"
+nullable = false

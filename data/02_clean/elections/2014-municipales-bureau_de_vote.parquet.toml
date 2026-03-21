@@ -1,0 +1,49 @@
+nom = "Résultats des élections municipales 2014 par bureau de vote"
+description = """
+
+"""
+mimetype = "application/vnd.apache.parquet"
+
+[colonnes.code_commune]
+type = "str"
+nullable = false
+
+[colonnes.bureau_de_vote]
+type = "str"
+nullable = false
+
+[colonnes.numero_tour]
+type = "entier"
+nullable = false
+
+[colonnes.inscrits]
+type = "entier"
+nullable = false
+
+[colonnes.votants]
+type = "entier"
+nullable = false
+
+[colonnes.exprimes]
+type = "entier"
+nullable = false
+
+[colonnes.numero_panneau]
+type = "entier"
+nullable = false
+
+[colonnes.nom]
+type = "str"
+nullable = false
+
+[colonnes.prenom]
+type = "str"
+nullable = false
+
+[colonnes.nuance]
+type = "str"
+nullable = false
+
+[colonnes.voix]
+type = "entier"
+nullable = false
