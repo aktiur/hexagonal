@@ -10,7 +10,6 @@ def rewrite_metadata():
 
     client = boto3.client("s3")
     for path, info in specs.items():
-        print(f"{path}… ", end="", flush=True)
         if info.mimetype:
             url = repo[path].s3_url
             assert url.startswith("s3://")
@@ -35,9 +34,7 @@ def rewrite_metadata():
                     ContentType=info.mimetype,  # do that part
                     ContentDisposition=f'attachment; filename="{path.name}"',
                 )
-                print("ok", flush=True)
-            else:
-                print("skip", flush=True)
+                print(f"{path}", end="", flush=True)
 
 
 if __name__ == "__main__":
