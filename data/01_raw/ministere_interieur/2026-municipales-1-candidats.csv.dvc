@@ -1,13 +1,13 @@
-md5: 686c682127349bfc8f72e15fe7e80b9f
+md5: 1f54805b6e860c617a0203d243f286ae
 frozen: true
 deps:
-- checksum: '"69a24dd8-89cfc0c"'
-  size: 144505868
+- checksum: '"69b42cb5-89d40d2"'
+  size: 144523474
   hash: md5
   path: 
     https://www.data.gouv.fr/api/1/datasets/r/b929c2a4-18ec-4e8b-bc37-2ff346a867cd
 outs:
-- md5: 385b875a17c6ca11bfb68f958c9ed9da
-  size: 144505868
+- md5: acac36f91c182b66f7df3fca056b9b34
+  size: 144523474
   hash: md5
   path: 2026-municipales-1-candidats.csv
