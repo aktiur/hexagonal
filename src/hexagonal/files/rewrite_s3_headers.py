@@ -34,7 +34,7 @@ def rewrite_metadata():
                     ContentType=info.mimetype,  # do that part
                     ContentDisposition=f'attachment; filename="{path.name}"',
                 )
-                print(f"{path}", end="", flush=True)
+                print(f"{path}", flush=True)
 
 
 if __name__ == "__main__":

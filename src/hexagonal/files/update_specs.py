@@ -29,6 +29,7 @@ PARQUET_TYPES = {
     "INT16": ColonneType.INT,
     "INT32": ColonneType.INT,
     "INT64": ColonneType.INT,
+    "BOOLEAN": ColonneType.BOOL,
 }
 
 

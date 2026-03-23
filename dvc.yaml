@@ -56,6 +56,21 @@ stages:
       outs:
         - ${clean}/elections/${key}.csv
 
+  2026-municipales-candidats:
+    foreach:
+      - 1
+      - 2
+    do:
+      deps:
+        - ${raw}/ministere_interieur/2026-municipales-${item}-candidats.csv
+        - ${src}/hexagonal/candidatures/municipales2026/clean.py
+      outs:
+        - ${clean}/elections/2026-municipales-${item}-candidats.parquet
+      cmd: >-
+        ${python} hexagonal.candidatures.municipales2026.clean
+        ${raw}/ministere_interieur/2026-municipales-${item}-candidats.csv
+        ${clean}/elections/2026-municipales-${item}-candidats.parquet
+
   2024-legislatives-candidats:
     foreach:
       - 1

@@ -2045,3 +2045,39 @@ stages:
       hash: md5
       md5: dac8987395366c54b212382cc79ee082
       size: 6988033
+  2026-municipales-candidats@1:
+    cmd: PYTHONPATH=src python -m hexagonal.candidatures.municipales2026.clean 
+      data/01_raw/ministere_interieur/2026-municipales-1-candidats.csv 
+      data/02_clean/elections/2026-municipales-1-candidats.parquet
+    deps:
+    - path: data/01_raw/ministere_interieur/2026-municipales-1-candidats.csv
+      hash: md5
+      md5: acac36f91c182b66f7df3fca056b9b34
+      size: 144523474
+    - path: src/hexagonal/candidatures/municipales2026/clean.py
+      hash: md5
+      md5: 93307c04093ef37ea49216905d07c828
+      size: 1215
+    outs:
+    - path: data/02_clean/elections/2026-municipales-1-candidats.parquet
+      hash: md5
+      md5: db4e9976004cdb35995df8f95b65089f
+      size: 7494062
+  2026-municipales-candidats@2:
+    cmd: PYTHONPATH=src python -m hexagonal.candidatures.municipales2026.clean 
+      data/01_raw/ministere_interieur/2026-municipales-2-candidats.csv 
+      data/02_clean/elections/2026-municipales-2-candidats.parquet
+    deps:
+    - path: data/01_raw/ministere_interieur/2026-municipales-2-candidats.csv
+      hash: md5
+      md5: 3a804f3bf8287dc2779008bd7b9cce7e
+      size: 21458847
+    - path: src/hexagonal/candidatures/municipales2026/clean.py
+      hash: md5
+      md5: 93307c04093ef37ea49216905d07c828
+      size: 1215
+    outs:
+    - path: data/02_clean/elections/2026-municipales-2-candidats.parquet
+      hash: md5
+      md5: 96b279ad784ba35f3758095eac2ae5d1
+      size: 1044744
