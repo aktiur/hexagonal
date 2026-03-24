@@ -103,6 +103,8 @@
   - [2026-municipales-2-bureau_de_vote](#data/02_clean/elections/2026-municipales-2-bureau_de_vote.parquet)
   - [Candidats au 2ème tour des municipales 2026](#data/02_clean/elections/2026-municipales-2-candidats.parquet)
   - [Liste des candidats aux élections législatives de 2024](#data/03_main/elections/2022-legislatives-1-candidats.csv)
+  - [Composition nominative des listes de second tour des municipales 2026 après fusion](#data/03_main/elections/2026-municipales-2-composition-listes-nominative.parquet)
+  - [Composition des listes de second tour des municipales 2026 après fusion](#data/03_main/elections/2026-municipales-2-composition-listes.parquet)
 - [Élections](#elections)
   - [Liste qualifiée des candidats au second tour des législatives 2022](#data/03_main/elections/2022-legislatives-2-candidats.csv)
   - [Parrainages enregistrées par le Conseil constitutionnel](#data/03_main/elections/2022-presidentielle-parrainages.csv)
@@ -7730,6 +7732,179 @@ Cette production dépend des sources suivantes :
     <li><a href="sources.md#data/01_raw/le_monde/2022-legislatives-nuances.csv">Liste des candidats aux élections législatives 2022 et de leur nuance politique</a>
         </li>
     <li><a href="sources.md#data/01_raw/legis_2022/2022-legislatives-nuances.csv">Codage des nuances politiques des candidats aux élections législatives des 12 et 19 juin 2022</a>
+        </li>
+    </ul>
+
+### Composition nominative des listes de second tour des municipales 2026 après fusion
+<a name="data/03_main/elections/2026-municipales-2-composition-listes-nominative.parquet"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/03_main/elections/2026-municipales-2-composition-listes-nominative.parquet |
+| Format de fichier | application/vnd.apache.parquet |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/da/25a78a4cecfdbd5de82bece6f2405c |
+
+Pour chacun des candidats au deuxième tour des élections municipales 2026, ce fichier
+indique dans quelle liste et à quel ordre il figure au deuxième tour, et dans quelle
+liste et à quel ordre il figurait au premier tour.
+
+
+### Colonnes
+
+<table>
+<thead>
+  <tr>
+    <th>id</th>
+    <th>type</th>
+    <th>description</th>
+  </tr>
+</thead>
+<tbody>
+<tr>
+    <td><code>code_commune</code></td>
+    <td><code>str</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>numero_panneau</code></td>
+    <td><code>entier</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>ordre</code></td>
+    <td><code>entier</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>numero_panneau_t1</code></td>
+    <td><code>entier</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>ordre_t1</code></td>
+    <td><code>entier</code></td>
+    <td>None</td>
+  </tr>
+
+</tbody>
+</table>
+
+### Sources
+
+Cette production dépend des sources suivantes :
+
+<ul>
+    <li><a href="productions.md#data/02_clean/elections/2026-municipales-1-candidats.parquet">Candidats au 1er tour des municipales 2026</a>
+        <ul>
+    <li><a href="sources.md#data/01_raw/ministere_interieur/2026-municipales-1-candidats.csv">Listes candidates au premier tour des élections municipales 2026</a>
+        </li>
+    </ul>
+        </li>
+    <li><a href="productions.md#data/02_clean/elections/2026-municipales-2-candidats.parquet">Candidats au 2ème tour des municipales 2026</a>
+        <ul>
+    <li><a href="sources.md#data/01_raw/ministere_interieur/2026-municipales-2-candidats.csv">Candidats au 2e tour des élections municipales 2026</a>
+        </li>
+    </ul>
+        </li>
+    <li><a href="productions.md#data/02_clean/elections/2026-municipales-1-bureau_de_vote.parquet">Résultats du 1er tour des élections municipales 2026 par bureau de vote</a>
+        <ul>
+    <li><a href="sources.md#data/01_raw/ministere_interieur/2026-municipales-1-bureau_de_vote.csv">Résultats du 1er tour des élections municipales de 2026 par bureau de vote</a>
+        </li>
+    </ul>
+        </li>
+    </ul>
+
+### Composition des listes de second tour des municipales 2026 après fusion
+<a name="data/03_main/elections/2026-municipales-2-composition-listes.parquet"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/03_main/elections/2026-municipales-2-composition-listes.parquet |
+| Format de fichier | application/vnd.apache.parquet |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/61/30103ea55c5603c87294bfb2ff17b1 |
+
+Ce fichier indique la composition des listes de second tour pour les municipales 2026 :
+pour chacune d&#39;entre elles, il est indiqué le nombre de candidats issus des différentes
+listes de premier tour.
+
+
+### Colonnes
+
+<table>
+<thead>
+  <tr>
+    <th>id</th>
+    <th>type</th>
+    <th>description</th>
+  </tr>
+</thead>
+<tbody>
+<tr>
+    <td><code>code_commune</code></td>
+    <td><code>str</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>numero_panneau</code></td>
+    <td><code>entier</code></td>
+    <td>Le numéro de panneau de la liste de second tour</td>
+  </tr>
+<tr>
+    <td><code>liste</code></td>
+    <td><code>str</code></td>
+    <td>Le nom de la liste de second tour</td>
+  </tr>
+<tr>
+    <td><code>nuance</code></td>
+    <td><code>str</code></td>
+    <td>La nuance attribuée à la liste de second tour</td>
+  </tr>
+<tr>
+    <td><code>numero_panneau_t1</code></td>
+    <td><code>entier</code></td>
+    <td>Le numéro de panneau de la liste de premier tour</td>
+  </tr>
+<tr>
+    <td><code>liste_t1</code></td>
+    <td><code>str</code></td>
+    <td>Le nom de la liste de premier tour</td>
+  </tr>
+<tr>
+    <td><code>nuance_t1</code></td>
+    <td><code>str</code></td>
+    <td>La nuance attribuée à la liste de premier tour</td>
+  </tr>
+<tr>
+    <td><code>nombre</code></td>
+    <td><code>entier</code></td>
+    <td>Le nombre de candidats de cette liste de premier tour présents dans cette liste de second tour</td>
+  </tr>
+
+</tbody>
+</table>
+
+### Sources
+
+Cette production dépend des sources suivantes :
+
+<ul>
+    <li><a href="productions.md#data/02_clean/elections/2026-municipales-1-candidats.parquet">Candidats au 1er tour des municipales 2026</a>
+        <ul>
+    <li><a href="sources.md#data/01_raw/ministere_interieur/2026-municipales-1-candidats.csv">Listes candidates au premier tour des élections municipales 2026</a>
+        </li>
+    </ul>
+        </li>
+    <li><a href="productions.md#data/02_clean/elections/2026-municipales-2-candidats.parquet">Candidats au 2ème tour des municipales 2026</a>
+        <ul>
+    <li><a href="sources.md#data/01_raw/ministere_interieur/2026-municipales-2-candidats.csv">Candidats au 2e tour des élections municipales 2026</a>
+        </li>
+    </ul>
+        </li>
+    <li><a href="productions.md#data/02_clean/elections/2026-municipales-1-bureau_de_vote.parquet">Résultats du 1er tour des élections municipales 2026 par bureau de vote</a>
+        <ul>
+    <li><a href="sources.md#data/01_raw/ministere_interieur/2026-municipales-1-bureau_de_vote.csv">Résultats du 1er tour des élections municipales de 2026 par bureau de vote</a>
+        </li>
+    </ul>
         </li>
     </ul>
 

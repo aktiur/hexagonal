@@ -2140,3 +2140,68 @@ stages:
       hash: md5
       md5: 95cb5d40b3cb8ac47b6c4d674db2dadd
       size: 648609
+  2026-municipales-correspondances-candidats:
+    cmd: PYTHONPATH=src python -m 
+      hexagonal.candidatures.municipales2026.correspondances_t2_t1 
+      data/02_clean/elections/2026-municipales-1-candidats.parquet 
+      data/02_clean/elections/2026-municipales-2-candidats.parquet 
+      data/02_clean/elections/2026-municipales-1-bureau_de_vote.parquet 
+      data/03_main/elections/2026-municipales-correspondances-candidats.parquet
+    deps:
+    - path: data/02_clean/elections/2026-municipales-1-bureau_de_vote.parquet
+      hash: md5
+      md5: 172bba57515b46d2efdda6dc18372042
+      size: 3040262
+    - path: data/02_clean/elections/2026-municipales-1-candidats.parquet
+      hash: md5
+      md5: 286bb10474b888719f75b514d949753c
+      size: 7487557
+    - path: data/02_clean/elections/2026-municipales-2-candidats.parquet
+      hash: md5
+      md5: 2cb737307e4559ff6381d181255bb20c
+      size: 1041327
+    - path: src/hexagonal/candidatures/municipales2026/correspondances_t2_t1.py
+      hash: md5
+      md5: 951bd93304af89d3c968293aa740eae2
+      size: 5051
+    outs:
+    - path: 
+        data/03_main/elections/2026-municipales-correspondances-candidats.parquet
+      hash: md5
+      md5: da25a78a4cecfdbd5de82bece6f2405c
+      size: 47387
+  2026-municipales-composition_listes_t2:
+    cmd: PYTHONPATH=src python -m 
+      hexagonal.candidatures.municipales2026.composition_listes_t2 
+      data/02_clean/elections/2026-municipales-1-candidats.parquet 
+      data/02_clean/elections/2026-municipales-2-candidats.parquet 
+      data/02_clean/elections/2026-municipales-1-bureau_de_vote.parquet 
+      data/03_main/elections/2026-municipales-2-composition-listes.parquet 
+      data/03_main/elections/2026-municipales-2-composition-listes-nominative.parquet
+    deps:
+    - path: data/02_clean/elections/2026-municipales-1-bureau_de_vote.parquet
+      hash: md5
+      md5: 172bba57515b46d2efdda6dc18372042
+      size: 3040262
+    - path: data/02_clean/elections/2026-municipales-1-candidats.parquet
+      hash: md5
+      md5: 286bb10474b888719f75b514d949753c
+      size: 7487557
+    - path: data/02_clean/elections/2026-municipales-2-candidats.parquet
+      hash: md5
+      md5: 2cb737307e4559ff6381d181255bb20c
+      size: 1041327
+    - path: src/hexagonal/candidatures/municipales2026/composition_listes_t2.py
+      hash: md5
+      md5: 9b8f4cd59e1c79c4a3663baae5be2612
+      size: 6062
+    outs:
+    - path: 
+        data/03_main/elections/2026-municipales-2-composition-listes-nominative.parquet
+      hash: md5
+      md5: da25a78a4cecfdbd5de82bece6f2405c
+      size: 47387
+    - path: data/03_main/elections/2026-municipales-2-composition-listes.parquet
+      hash: md5
+      md5: 6130103ea55c5603c87294bfb2ff17b1
+      size: 130032

@@ -1,0 +1,47 @@
+nom = "Composition des listes de second tour des municipales 2026 après fusion"
+description = """
+Ce fichier indique la composition des listes de second tour pour les municipales 2026 :
+pour chacune d'entre elles, il est indiqué le nombre de candidats issus des différentes
+listes de premier tour.
+"""
+mimetype = "application/vnd.apache.parquet"
+section = "Résultats électoraux"
+
+[colonnes.code_commune]
+type = "str"
+nullable = false
+
+[colonnes.numero_panneau]
+type = "entier"
+description = "Le numéro de panneau de la liste de second tour"
+nullable = false
+
+[colonnes.liste]
+type = "str"
+description = "Le nom de la liste de second tour"
+nullable = false
+
+[colonnes.nuance]
+type = "str"
+description = "La nuance attribuée à la liste de second tour"
+nullable = false
+
+[colonnes.numero_panneau_t1]
+type = "entier"
+description = "Le numéro de panneau de la liste de premier tour"
+nullable = false
+
+[colonnes.liste_t1]
+type = "str"
+description = "Le nom de la liste de premier tour"
+nullable = false
+
+[colonnes.nuance_t1]
+type = "str"
+description = "La nuance attribuée à la liste de premier tour"
+nullable = false
+
+[colonnes.nombre]
+type = "entier"
+description = "Le nombre de candidats de cette liste de premier tour présents dans cette liste de second tour"
+nullable = false

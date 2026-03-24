@@ -56,6 +56,23 @@ stages:
       outs:
         - ${clean}/elections/${key}.csv
 
+  2026-municipales-composition_listes_t2:
+    deps:
+      - ${clean}/elections/2026-municipales-1-candidats.parquet
+      - ${clean}/elections/2026-municipales-2-candidats.parquet
+      - ${clean}/elections/2026-municipales-1-bureau_de_vote.parquet
+      - ${src}/hexagonal/candidatures/municipales2026/composition_listes_t2.py
+    outs:
+      - ${main}/elections/2026-municipales-2-composition-listes.parquet
+      - ${main}/elections/2026-municipales-2-composition-listes-nominative.parquet
+    cmd: >-
+      ${python} hexagonal.candidatures.municipales2026.composition_listes_t2
+      ${clean}/elections/2026-municipales-1-candidats.parquet
+      ${clean}/elections/2026-municipales-2-candidats.parquet
+      ${clean}/elections/2026-municipales-1-bureau_de_vote.parquet
+      ${main}/elections/2026-municipales-2-composition-listes.parquet
+      ${main}/elections/2026-municipales-2-composition-listes-nominative.parquet
+
   2026-municipales-candidats:
     foreach:
       - 1
