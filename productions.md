@@ -75,6 +75,7 @@
   - [Résultats du premier tour des élections départementales de 2021 par bureau de vote](#data/02_clean/elections/2021-departementales-1-bureau_de_vote.parquet)
   - [Résultats du deuxième tour des élections départementales de 2021 par bureau de vote](#data/02_clean/elections/2021-departementales-2-bureau_de_vote.parquet)
   - [Résultats du premier tour des élections régionales de 2021 par bureau de vote](#data/02_clean/elections/2021-regionales-1-bureau_de_vote.parquet)
+  - [Liste des candidats aux régionales 2021](#data/02_clean/elections/2021-regionales-1-candidats.parquet)
   - [Résultats du deuxième tour des élections régionales de 2021 par bureau de vote](#data/02_clean/elections/2021-regionales-2-bureau_de_vote.parquet)
   - [Résultats du premier tour des élections législatives de 2022 par bureau de vote](#data/02_clean/elections/2022-legislatives-1-bureau_de_vote.parquet)
   - [Liste des candidats au premier tour des élections législatives 2022](#data/02_clean/elections/2022-legislatives-1-candidats.csv)
@@ -88,6 +89,7 @@
   - [Résultats du deuxième tour de l&#39;élection présidentielle 2022 par circonscription législative](#data/02_clean/elections/2022-presidentielle-2-circonscription.parquet)
   - [Parrainages validés pour la présidentielle de 2022](#data/02_clean/elections/2022-presidentielle-parrainages.csv)
   - [Résultats des élections européennes 2024 par bureau de vote](#data/02_clean/elections/2024-europeenne-bureau_de_vote.parquet)
+  - [2024-europeenne-candidats](#data/02_clean/elections/2024-europeenne-candidats.parquet)
   - [Résultats des élections européennes 2024 par circonscription législative](#data/02_clean/elections/2024-europeenne-circonscription.parquet)
   - [Résultats du premier tour des élections législatives 2024 par bureau de vote](#data/02_clean/elections/2024-legislatives-1-bureau_de_vote.parquet)
   - [Liste des candidats au premier tour des élections législatives 2024](#data/02_clean/elections/2024-legislatives-1-candidats.csv)
@@ -98,6 +100,7 @@
   - [Correspondance entre bureaux de vote et circonscription pendant les élections législatives 2024](#data/02_clean/elections/2024-legislatives-correspondances-bureau_de_vote-circonscription.csv)
   - [Résultats du 1er tour des élections municipales 2026 par bureau de vote](#data/02_clean/elections/2026-municipales-1-bureau_de_vote.parquet)
   - [Candidats au 1er tour des municipales 2026](#data/02_clean/elections/2026-municipales-1-candidats.parquet)
+  - [2026-municipales-2-bureau_de_vote](#data/02_clean/elections/2026-municipales-2-bureau_de_vote.parquet)
   - [Candidats au 2ème tour des municipales 2026](#data/02_clean/elections/2026-municipales-2-candidats.parquet)
   - [Liste des candidats aux élections législatives de 2024](#data/03_main/elections/2022-legislatives-1-candidats.csv)
 - [Élections](#elections)
@@ -5086,6 +5089,112 @@ Cette production dépend des sources suivantes :
         </li>
     </ul>
 
+### Liste des candidats aux régionales 2021
+<a name="data/02_clean/elections/2021-regionales-1-candidats.parquet"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/02_clean/elections/2021-regionales-1-candidats.parquet |
+| Format de fichier | application/vnd.apache.parquet |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/49/a2b850a0c129bbeabfce6d52dc37b9 |
+
+
+
+
+### Colonnes
+
+<table>
+<thead>
+  <tr>
+    <th>id</th>
+    <th>type</th>
+    <th>description</th>
+  </tr>
+</thead>
+<tbody>
+<tr>
+    <td><code>code_region</code></td>
+    <td><code>str</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>code_section_electorale</code></td>
+    <td><code>str</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>numero_panneau</code></td>
+    <td><code>entier</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>code_depot</code></td>
+    <td><code>entier</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>liste</code></td>
+    <td><code>str</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>nuance</code></td>
+    <td><code>str</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>ordre</code></td>
+    <td><code>entier</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>sexe</code></td>
+    <td><code>str</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>nom</code></td>
+    <td><code>str</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>prenom</code></td>
+    <td><code>str</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>nom_naissance</code></td>
+    <td><code>str</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>prenom_naissance</code></td>
+    <td><code>str</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>date_naissance</code></td>
+    <td><code>str</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>profession</code></td>
+    <td><code>str</code></td>
+    <td>None</td>
+  </tr>
+
+</tbody>
+</table>
+
+### Sources
+
+Cette production dépend des sources suivantes :
+
+<ul>
+    <li><a href="sources.md#data/01_raw/ministere_interieur/2021-regionales-1-candidats.csv">Liste des candidats aux élections régionales 2021</a>
+        </li>
+    </ul>
+
 ### Résultats du deuxième tour des élections régionales de 2021 par bureau de vote
 <a name="data/02_clean/elections/2021-regionales-2-bureau_de_vote.parquet"></a>
 
@@ -6262,6 +6371,92 @@ Cette production dépend des sources suivantes :
         </li>
     </ul>
 
+### 2024-europeenne-candidats
+<a name="data/02_clean/elections/2024-europeenne-candidats.parquet"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/02_clean/elections/2024-europeenne-candidats.parquet |
+| Format de fichier | application/vnd.apache.parquet |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/33/73d941c5b0413bd5f61b59cb667bed |
+
+
+
+
+### Colonnes
+
+<table>
+<thead>
+  <tr>
+    <th>id</th>
+    <th>type</th>
+    <th>description</th>
+  </tr>
+</thead>
+<tbody>
+<tr>
+    <td><code>numero_panneau</code></td>
+    <td><code>entier</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>liste</code></td>
+    <td><code>str</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>ordre</code></td>
+    <td><code>entier</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>sexe</code></td>
+    <td><code>str</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>nom</code></td>
+    <td><code>str</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>prenom</code></td>
+    <td><code>str</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>date_naissance</code></td>
+    <td><code>str</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>profession</code></td>
+    <td><code>str</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>code_personnalite</code></td>
+    <td><code>str</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>sortant</code></td>
+    <td><code>bool</code></td>
+    <td>None</td>
+  </tr>
+
+</tbody>
+</table>
+
+### Sources
+
+Cette production dépend des sources suivantes :
+
+<ul>
+    <li><a href="sources.md#data/01_raw/ministere_interieur/2024-europeenne-candidats.csv">2024-europeenne-candidats</a>
+        </li>
+    </ul>
+
 ### Résultats des élections européennes 2024 par circonscription législative
 <a name="data/02_clean/elections/2024-europeenne-circonscription.parquet"></a>
 
@@ -7091,7 +7286,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/02_clean/elections/2026-municipales-1-candidats.parquet |
 | Format de fichier | application/vnd.apache.parquet |
-| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/db/4e9976004cdb35995df8f95b65089f |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/28/6bb10474b888719f75b514d949753c |
 
 
 
@@ -7180,6 +7375,107 @@ Cette production dépend des sources suivantes :
         </li>
     </ul>
 
+### 2026-municipales-2-bureau_de_vote
+<a name="data/02_clean/elections/2026-municipales-2-bureau_de_vote.parquet"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/02_clean/elections/2026-municipales-2-bureau_de_vote.parquet |
+| Format de fichier | application/vnd.apache.parquet |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/95/cb5d40b3cb8ac47b6c4d674db2dadd |
+
+
+
+
+### Colonnes
+
+<table>
+<thead>
+  <tr>
+    <th>id</th>
+    <th>type</th>
+    <th>description</th>
+  </tr>
+</thead>
+<tbody>
+<tr>
+    <td><code>code_commune</code></td>
+    <td><code>str</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>bureau_de_vote</code></td>
+    <td><code>str</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>inscrits</code></td>
+    <td><code>entier</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>votants</code></td>
+    <td><code>entier</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>exprimes</code></td>
+    <td><code>entier</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>numero_panneau</code></td>
+    <td><code>entier</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>nuance</code></td>
+    <td><code>str</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>nom</code></td>
+    <td><code>str</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>prenom</code></td>
+    <td><code>str</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>sexe</code></td>
+    <td><code>str</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>liste_court</code></td>
+    <td><code>str</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>liste_long</code></td>
+    <td><code>str</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>voix</code></td>
+    <td><code>entier</code></td>
+    <td>None</td>
+  </tr>
+
+</tbody>
+</table>
+
+### Sources
+
+Cette production dépend des sources suivantes :
+
+<ul>
+    <li><a href="sources.md#data/01_raw/ministere_interieur/2026-municipales-2-bureau_de_vote.csv">2026-municipales-2-bureau_de_vote</a>
+        </li>
+    </ul>
+
 ### Candidats au 2ème tour des municipales 2026
 <a name="data/02_clean/elections/2026-municipales-2-candidats.parquet"></a>
 
@@ -7187,7 +7483,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/02_clean/elections/2026-municipales-2-candidats.parquet |
 | Format de fichier | application/vnd.apache.parquet |
-| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/96/b279ad784ba35f3758095eac2ae5d1 |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/2c/b737307e4559ff6381d181255bb20c |
 
 
 

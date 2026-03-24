@@ -40,7 +40,7 @@
   - [Secteurs des bureaux de vote parisiens en 2021](#data/01_raw/paris/2021-secteur-bureaux.json)
   - [Secteurs des bureaux de vote parisiens en 2022](#data/01_raw/paris/2022-secteur-bureaux.json)
   - [Secteurs des bureaux de vote parisiens en 2024](#data/01_raw/paris/2024-secteur-bureaux.json)
-- [Ministère de l&#39;intérieur](#ministere-de-l-interieur)
+- [Ministère de l&#39;Intérieur](#ministere-de-l-interieur)
   - [Résultats du référendum de 2005 par bureau de vote](#data/01_raw/ministere_interieur/2005-referendum-bureau_de_vote.csv)
   - [Résultats des deux tours de l&#39;élection présidentielle de 2012](#data/01_raw/ministere_interieur/2012-presidentielle-bureau_de_vote.csv)
   - [Résultats de l&#39;élection européenne de 2014 par bureau de vote](#data/01_raw/ministere_interieur/2014-europeenne-bureau_de_vote.csv)
@@ -55,6 +55,7 @@
   - [Résultats du premier tour des élections départementales de 2021 par bureau de vote](#data/01_raw/ministere_interieur/2021-departementales-1-bureau_de_vote.csv)
   - [Résultats du deuxième tour des élections départementales de 2021 par bureau de vote](#data/01_raw/ministere_interieur/2021-departementales-2-bureau_de_vote.csv)
   - [Résultats du premier tour des élections régionales de 2021 par bureau de vote](#data/01_raw/ministere_interieur/2021-regionales-1-bureau_de_vote.csv)
+  - [Liste des candidats aux élections régionales 2021](#data/01_raw/ministere_interieur/2021-regionales-1-candidats.csv)
   - [Résultats du deuxième tour des élections régionales de 2021 par bureau de vote](#data/01_raw/ministere_interieur/2021-regionales-2-bureau_de_vote.csv)
   - [Résultats du premier tour des élections législatives de 2022 par bureau de vote](#data/01_raw/ministere_interieur/2022-legislatives-1-bureau_de_vote.csv)
   - [Liste des candidats au premier tour des élections législatives 2022](#data/01_raw/ministere_interieur/2022-legislatives-1-candidats.csv)
@@ -77,12 +78,15 @@
   - [Résultats du deuxième tour des élections législatives 2024 par circonscription législative](#data/01_raw/ministere_interieur/2024-legislatives-2-circonscription.csv)
   - [Résultats du 1er tour des élections des conseillers d&#39;arrondissements de Paris, Lyon et Marseille en 2016](#data/01_raw/ministere_interieur/2026-conseils-PLM-1-bureau_de_vote.csv)
   - [Listes candidates au premier tour des élections des conseils de secteurs de Paris, Lyon et Marseille](#data/01_raw/ministere_interieur/2026-conseils-PLM-1-candidats.csv)
+  - [2026-conseils-PLM-2-bureau_de_vote](#data/01_raw/ministere_interieur/2026-conseils-PLM-2-bureau_de_vote.csv)
   - [Candidats au deuxième tour des élections des conseils de secteurs de Paris, Lyon et Marseille en 2026](#data/01_raw/ministere_interieur/2026-conseils-PLM-2-candidats.csv)
   - [Résultats du 1er tour des élections des conseillers à la métropole de Lyon en 2026 par bureau de vote](#data/01_raw/ministere_interieur/2026-metropolitaines-1-bureau_de_vote.csv)
   - [Candidats au 1er tour des élections des conseillers de la métropole de Lyon en 2026](#data/01_raw/ministere_interieur/2026-metropolitaines-1-candidats.csv)
+  - [2026-metropolitaines-2-bureau_de_vote](#data/01_raw/ministere_interieur/2026-metropolitaines-2-bureau_de_vote.csv)
   - [Candidats au 2e tour des élections des conseillers de la métropole de Lyon en 2026](#data/01_raw/ministere_interieur/2026-metropolitaines-2-candidats.csv)
   - [Résultats du 1er tour des élections municipales de 2026 par bureau de vote](#data/01_raw/ministere_interieur/2026-municipales-1-bureau_de_vote.csv)
   - [Listes candidates au premier tour des élections municipales 2026](#data/01_raw/ministere_interieur/2026-municipales-1-candidats.csv)
+  - [2026-municipales-2-bureau_de_vote](#data/01_raw/ministere_interieur/2026-municipales-2-bureau_de_vote.csv)
   - [Candidats au 2e tour des élections municipales 2026](#data/01_raw/ministere_interieur/2026-municipales-2-candidats.csv)
   - [Répertoire national des élus — conseillers d&#39;arrondissement de Paris, Marseille et Lyon](#data/01_raw/rne/conseillers_arrondissement.csv)
   - [Répertoire national des élus — membres des assemblées délibérantes des collectivites à statut particulier](#data/01_raw/rne/conseillers_csp.csv)
@@ -595,7 +599,7 @@ nuances politiques plus précises que celles du ministère de l’intérieur.
 
 
 
-## Ministère de l&#39;intérieur
+## Ministère de l&#39;Intérieur
 <a name="ministere-de-l-interieur"></a>
 
 ### Résultats du référendum de 2005 par bureau de vote
@@ -605,7 +609,7 @@ nuances politiques plus précises que celles du ministère de l’intérieur.
 | --------- | ------ |
 | Chemin interne | data/01_raw/ministere_interieur/2005-referendum-bureau_de_vote.csv |
 | Format de fichier | text/csv |
-| Éditeur | Ministère de l&#39;intérieur |
+| Éditeur | Ministère de l&#39;Intérieur |
 | URL d&#39;origine | https://www.data.gouv.fr/s/resources/referendum-de-2005-resultats-par-bureaux-de-vote/20150925-112918/RF05_BVot.txt |
 | URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/96/0334973bf05499070429ba154a833a |
 
@@ -617,7 +621,7 @@ nuances politiques plus précises que celles du ministère de l’intérieur.
 | --------- | ------ |
 | Chemin interne | data/01_raw/ministere_interieur/2012-presidentielle-bureau_de_vote.csv |
 | Format de fichier | text/csv |
-| Éditeur | Ministère de l&#39;intérieur |
+| Éditeur | Ministère de l&#39;Intérieur |
 | URL d&#39;origine | https://www.data.gouv.fr/fr/datasets/r/206b1668-2b31-46da-b957-9857f94fe85c |
 | URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/c1/2faa2e574d4844ed8686d17519a9e4 |
 
@@ -629,7 +633,7 @@ nuances politiques plus précises que celles du ministère de l’intérieur.
 | --------- | ------ |
 | Chemin interne | data/01_raw/ministere_interieur/2014-europeenne-bureau_de_vote.csv |
 | Format de fichier | text/csv |
-| Éditeur | Ministère de l&#39;intérieur |
+| Éditeur | Ministère de l&#39;Intérieur |
 | URL d&#39;origine | https://www.data.gouv.fr/fr/datasets/r/c5af18ce-b673-4019-a9c3-07ee6209668c |
 | URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/21/aecbfcb6e0caf8eb09a3b573170623 |
 
@@ -642,7 +646,7 @@ nuances politiques plus précises que celles du ministère de l’intérieur.
 | Chemin interne | data/01_raw/ministere_interieur/2014-municipales-bureau_de_vote.csv |
 | Format de fichier | text/csv |
 | URL d&#39;information | https://www.data.gouv.fr/datasets/elections-municipales-2014-resultats-par-bureaux-de-vote |
-| Éditeur | Ministère de l&#39;intérieur |
+| Éditeur | Ministère de l&#39;Intérieur |
 | URL d&#39;origine | https://www.data.gouv.fr/api/1/datasets/r/49c6f5cd-85b2-4582-a4bb-3208c839f626 |
 | URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/21/2aeda03c8c185fa160565218c2c35b |
 
@@ -656,7 +660,7 @@ communes de France
 | --------- | ------ |
 | Chemin interne | data/01_raw/ministere_interieur/2017-legislatives-1-bureau_de_vote.csv |
 | Format de fichier | text/csv |
-| Éditeur | Ministère de l&#39;intérieur |
+| Éditeur | Ministère de l&#39;Intérieur |
 | URL d&#39;origine | https://www.data.gouv.fr/fr/datasets/r/80cb1309-9147-4bae-b6e2-79877d549b50 |
 | URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/3e/aa57f0825abafeeb38dcf81d3f80aa |
 
@@ -668,7 +672,7 @@ communes de France
 | --------- | ------ |
 | Chemin interne | data/01_raw/ministere_interieur/2017-legislatives-2-bureau_de_vote.csv |
 | Format de fichier | text/csv |
-| Éditeur | Ministère de l&#39;intérieur |
+| Éditeur | Ministère de l&#39;Intérieur |
 | URL d&#39;origine | https://www.data.gouv.fr/fr/datasets/r/8eb61f3e-dfdf-496e-85af-2859cd7383c3 |
 | URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/f7/488f6de8dc80bc650c19c36aab6b4d |
 
@@ -681,7 +685,7 @@ communes de France
 | Chemin interne | data/01_raw/ministere_interieur/2017-presidentielle-1-bureau_de_vote.csv |
 | Format de fichier | text/csv |
 | URL d&#39;information | https://www.data.gouv.fr/fr/datasets/election-presidentielle-des-23-avril-et-7-mai-2017-resultats-definitifs-du-1er-tour-par-bureaux-de-vote/ |
-| Éditeur | Ministère de l&#39;intérieur |
+| Éditeur | Ministère de l&#39;Intérieur |
 | URL d&#39;origine | https://www.data.gouv.fr/fr/datasets/r/8fdb0926-ea9d-4fb4-a136-7767cd97e30b |
 | URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/1f/c04aa0a22b83172876987f6146b0ea |
 
@@ -694,7 +698,7 @@ communes de France
 | Chemin interne | data/01_raw/ministere_interieur/2017-presidentielle-2-bureau_de_vote.csv |
 | Format de fichier | text/csv |
 | URL d&#39;information | https://www.data.gouv.fr/fr/datasets/election-presidentielle-des-23-avril-et-7-mai-2017-resultats-definitifs-du-2nd-tour-par-bureaux-de-vote/ |
-| Éditeur | Ministère de l&#39;intérieur |
+| Éditeur | Ministère de l&#39;Intérieur |
 | URL d&#39;origine | https://www.data.gouv.fr/fr/datasets/r/2e3e44de-e584-4aa2-8148-670daf5617e1 |
 | URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/7f/2883a04e3243222ac800d1d73f01eb |
 
@@ -706,7 +710,7 @@ communes de France
 | --------- | ------ |
 | Chemin interne | data/01_raw/ministere_interieur/2019-europeenne-bureau_de_vote.csv |
 | Format de fichier | text/csv |
-| Éditeur | Ministère de l&#39;intérieur |
+| Éditeur | Ministère de l&#39;Intérieur |
 | URL d&#39;origine | https://www.data.gouv.fr/fr/datasets/r/77c4450b-7fa7-425c-84da-4f7bf4b97820 |
 | URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/41/122a5230f18ab9736f5a07828b1221 |
 
@@ -718,7 +722,7 @@ communes de France
 | --------- | ------ |
 | Chemin interne | data/01_raw/ministere_interieur/2020-municipales-1-bureau_de_vote_avant_correction.csv |
 | Format de fichier | text/csv |
-| Éditeur | Ministère de l&#39;intérieur |
+| Éditeur | Ministère de l&#39;Intérieur |
 | URL d&#39;origine | https://www.data.gouv.fr/fr/datasets/r/248f6f21-68ad-45f3-82f5-53fffabce5f3 |
 | URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/d5/ed37c4abd7a4952826ead2ca11a408 |
 
@@ -732,7 +736,7 @@ et 16921.
 | --------- | ------ |
 | Chemin interne | data/01_raw/ministere_interieur/2020-municipales-2-bureau_de_vote.csv |
 | Format de fichier | text/csv |
-| Éditeur | Ministère de l&#39;intérieur |
+| Éditeur | Ministère de l&#39;Intérieur |
 | URL d&#39;origine | https://www.data.gouv.fr/fr/datasets/r/7e641d2e-e017-43d4-9434-49d5acd44b4b |
 | URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/fa/88d768c4ce3098a7f883dd9e7b03e7 |
 
@@ -744,7 +748,7 @@ et 16921.
 | --------- | ------ |
 | Chemin interne | data/01_raw/ministere_interieur/2021-departementales-1-bureau_de_vote.csv |
 | Format de fichier | text/csv |
-| Éditeur | Ministère de l&#39;intérieur |
+| Éditeur | Ministère de l&#39;Intérieur |
 | URL d&#39;origine | https://www.data.gouv.fr/fr/datasets/r/57370a9b-7fa1-465c-a051-c984fc21321f |
 | URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/77/9c9e5cefb35ef7b91379a6a761a1a0 |
 
@@ -756,7 +760,7 @@ et 16921.
 | --------- | ------ |
 | Chemin interne | data/01_raw/ministere_interieur/2021-departementales-2-bureau_de_vote.csv |
 | Format de fichier | text/csv |
-| Éditeur | Ministère de l&#39;intérieur |
+| Éditeur | Ministère de l&#39;Intérieur |
 | URL d&#39;origine | https://www.data.gouv.fr/fr/datasets/r/b34b36d9-e416-4144-8384-d101b140afaf |
 | URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/bc/cfd795640a1f2684e1c1a921d065d0 |
 
@@ -768,9 +772,22 @@ et 16921.
 | --------- | ------ |
 | Chemin interne | data/01_raw/ministere_interieur/2021-regionales-1-bureau_de_vote.csv |
 | Format de fichier | text/csv |
-| Éditeur | Ministère de l&#39;intérieur |
+| Éditeur | Ministère de l&#39;Intérieur |
 | URL d&#39;origine | https://www.data.gouv.fr/fr/datasets/r/52c3e6f1-2faa-4295-9f76-5b0e9cb9f7b0 |
 | URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/b0/e0383c1c736cc49867f05c662ed50f |
+
+
+### Liste des candidats aux élections régionales 2021
+<a name="data/01_raw/ministere_interieur/2021-regionales-1-candidats.csv"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/ministere_interieur/2021-regionales-1-candidats.csv |
+| Format de fichier | text/csv |
+| Éditeur | Ministère de l&#39;Intérieur |
+| URL d&#39;origine | https://www.data.gouv.fr/api/1/datasets/r/ada7d31b-30f8-46bc-b839-0ae9e8671a83 |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/54/855862dbd39f6763aaf00ad32d9708 |
+
 
 
 ### Résultats du deuxième tour des élections régionales de 2021 par bureau de vote
@@ -780,7 +797,7 @@ et 16921.
 | --------- | ------ |
 | Chemin interne | data/01_raw/ministere_interieur/2021-regionales-2-bureau_de_vote.csv |
 | Format de fichier | text/csv |
-| Éditeur | Ministère de l&#39;intérieur |
+| Éditeur | Ministère de l&#39;Intérieur |
 | URL d&#39;origine | https://www.data.gouv.fr/fr/datasets/r/75221ab0-2066-4a11-bc42-b0f76d201dfe |
 | URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/43/6df1e7dcbe2ac545c537195e0a7299 |
 
@@ -792,7 +809,7 @@ et 16921.
 | --------- | ------ |
 | Chemin interne | data/01_raw/ministere_interieur/2022-legislatives-1-bureau_de_vote.csv |
 | Format de fichier | text/csv |
-| Éditeur | Ministère de l&#39;intérieur |
+| Éditeur | Ministère de l&#39;Intérieur |
 | URL d&#39;origine | https://www.data.gouv.fr/fr/datasets/r/a1f73b85-8194-44f4-a2b7-c343edb47d32 |
 | URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/ab/8e9e02c1253a44a9ec7547851842ad |
 
@@ -804,7 +821,7 @@ et 16921.
 | --------- | ------ |
 | Chemin interne | data/01_raw/ministere_interieur/2022-legislatives-1-candidats.csv |
 | Format de fichier | text/csv |
-| Éditeur | Ministère de l&#39;intérieur |
+| Éditeur | Ministère de l&#39;Intérieur |
 | URL d&#39;origine | https://www.data.gouv.fr/fr/datasets/r/c79af2f3-1733-4df3-be37-caebacbc1321 |
 | URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/f3/376d549226719ce0d499493996b753 |
 
@@ -816,7 +833,7 @@ et 16921.
 | --------- | ------ |
 | Chemin interne | data/01_raw/ministere_interieur/2022-legislatives-1-circonscription.csv |
 | Format de fichier | text/csv |
-| Éditeur | Ministère de l&#39;intérieur |
+| Éditeur | Ministère de l&#39;Intérieur |
 | URL d&#39;origine | https://www.data.gouv.fr/fr/datasets/r/114b13e8-7ff9-437f-9ec8-7a29258a80e3 |
 | URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/49/86d461320a1ab758e4af374464c09c |
 
@@ -828,7 +845,7 @@ et 16921.
 | --------- | ------ |
 | Chemin interne | data/01_raw/ministere_interieur/2022-legislatives-2-bureau_de_vote.csv |
 | Format de fichier | text/csv |
-| Éditeur | Ministère de l&#39;intérieur |
+| Éditeur | Ministère de l&#39;Intérieur |
 | URL d&#39;origine | https://www.data.gouv.fr/fr/datasets/r/cada247a-6528-44e7-8308-30c0c335a4b2 |
 | URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/02/e9bcfb3e506d7d4ada0a141315c61c |
 
@@ -840,7 +857,7 @@ et 16921.
 | --------- | ------ |
 | Chemin interne | data/01_raw/ministere_interieur/2022-legislatives-2-candidats.csv |
 | Format de fichier | text/csv |
-| Éditeur | Ministère de l&#39;intérieur |
+| Éditeur | Ministère de l&#39;Intérieur |
 | URL d&#39;origine | https://www.data.gouv.fr/fr/datasets/r/49172b79-a152-434d-b63a-bff926892b26 |
 | URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/6a/bd2abe7e78e547b7401d0f8938cd47 |
 
@@ -852,7 +869,7 @@ et 16921.
 | --------- | ------ |
 | Chemin interne | data/01_raw/ministere_interieur/2022-legislatives-2-circonscription.csv |
 | Format de fichier | text/csv |
-| Éditeur | Ministère de l&#39;intérieur |
+| Éditeur | Ministère de l&#39;Intérieur |
 | URL d&#39;origine | https://www.data.gouv.fr/fr/datasets/r/a84f1483-a191-4187-ad40-404105bb9bf0 |
 | URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/c8/27e0066aed7e3fa15557e785d1eb27 |
 
@@ -865,7 +882,7 @@ et 16921.
 | Chemin interne | data/01_raw/ministere_interieur/2022-presidentielle-1-bureau_de_vote.csv |
 | Format de fichier | text/csv |
 | URL d&#39;information | https://www.data.gouv.fr/fr/datasets/election-presidentielle-des-10-et-24-avril-2022-resultats-definitifs-du-1er-tour/ |
-| Éditeur | Ministère de l&#39;intérieur |
+| Éditeur | Ministère de l&#39;Intérieur |
 | URL d&#39;origine | https://www.data.gouv.fr/fr/datasets/r/79b5cac4-4957-486b-bbda-322d80868224 |
 | URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/86/3143ce55ac2e71541972bd68ff9365 |
 
@@ -878,7 +895,7 @@ et 16921.
 | Chemin interne | data/01_raw/ministere_interieur/2022-presidentielle-1-circonscription.csv |
 | Format de fichier | text/csv |
 | URL d&#39;information | https://www.data.gouv.fr/fr/datasets/election-presidentielle-des-10-et-24-avril-2022-resultats-definitifs-du-1er-tour/ |
-| Éditeur | Ministère de l&#39;intérieur |
+| Éditeur | Ministère de l&#39;Intérieur |
 | URL d&#39;origine | https://www.data.gouv.fr/fr/datasets/r/056c3d1e-87ef-42b2-ae9c-57ad9d81b563 |
 | URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/fb/5e45dd6a5ae43c93d3be0969d6c0d0 |
 
@@ -891,7 +908,7 @@ et 16921.
 | Chemin interne | data/01_raw/ministere_interieur/2022-presidentielle-2-bureau_de_vote.csv |
 | Format de fichier | text/csv |
 | URL d&#39;information | https://www.data.gouv.fr/fr/datasets/election-presidentielle-des-10-et-24-avril-2022-resultats-definitifs-du-2nd-tour/ |
-| Éditeur | Ministère de l&#39;intérieur |
+| Éditeur | Ministère de l&#39;Intérieur |
 | URL d&#39;origine | https://www.data.gouv.fr/fr/datasets/r/4dfd05a9-094e-4043-8a19-43b6b6bbe086 |
 | URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/c5/e0a26fe52ed824208649d15628b528 |
 
@@ -904,7 +921,7 @@ et 16921.
 | Chemin interne | data/01_raw/ministere_interieur/2022-presidentielle-2-circonscription.csv |
 | Format de fichier | text/csv |
 | URL d&#39;information | https://www.data.gouv.fr/fr/datasets/election-presidentielle-des-10-et-24-avril-2022-resultats-definitifs-du-2nd-tour/ |
-| Éditeur | Ministère de l&#39;intérieur |
+| Éditeur | Ministère de l&#39;Intérieur |
 | URL d&#39;origine | https://www.data.gouv.fr/fr/datasets/r/eefff73d-1b17-4695-8ec6-6671916e3af8 |
 | URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/29/2bc96162d5cde4d3cc7c98eeed4e00 |
 
@@ -916,7 +933,7 @@ et 16921.
 | --------- | ------ |
 | Chemin interne | data/01_raw/ministere_interieur/2024-europeenne-bureau_de_vote.csv |
 | Format de fichier | text/csv |
-| Éditeur | Ministère de l&#39;intérieur |
+| Éditeur | Ministère de l&#39;Intérieur |
 | URL d&#39;origine | https://www.data.gouv.fr/fr/datasets/r/cc1883d9-1265-4365-b754-fb6aef22d82e |
 | URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/b3/a9085acb27df6669ac04d5aca2e5da |
 
@@ -928,7 +945,7 @@ et 16921.
 | --------- | ------ |
 | Chemin interne | data/01_raw/ministere_interieur/2024-europeenne-candidats.csv |
 | Format de fichier | text/csv |
-| Éditeur | Ministère de l&#39;intérieur |
+| Éditeur | Ministère de l&#39;Intérieur |
 | URL d&#39;origine | https://static.data.gouv.fr/resources/elections-europeennes-du-9-juin-2024-candidatures-enregistrees/20240527-082635/candidats-eur-2024.csv |
 | URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/ef/5a04840f72551769af9dc38c021664 |
 
@@ -941,7 +958,7 @@ et 16921.
 | --------- | ------ |
 | Chemin interne | data/01_raw/ministere_interieur/2024-europeenne-circonscription.csv |
 | Format de fichier | text/csv |
-| Éditeur | Ministère de l&#39;intérieur |
+| Éditeur | Ministère de l&#39;Intérieur |
 | URL d&#39;origine | https://www.data.gouv.fr/fr/datasets/r/ee37cbef-3d2a-4efe-a395-530b85a63028 |
 | URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/8a/9a6ca76b17b2ce3600c400ce800187 |
 
@@ -953,7 +970,7 @@ et 16921.
 | --------- | ------ |
 | Chemin interne | data/01_raw/ministere_interieur/2024-legislatives-1-bureau_de_vote.csv |
 | Format de fichier | text/csv |
-| Éditeur | Ministère de l&#39;intérieur |
+| Éditeur | Ministère de l&#39;Intérieur |
 | URL d&#39;origine | https://www.data.gouv.fr/fr/datasets/r/6813fb28-7ec0-42ff-a528-2bc3d82d7dcd |
 | URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/92/547431feb455ad1065815e72c40d8e |
 
@@ -965,7 +982,7 @@ et 16921.
 | --------- | ------ |
 | Chemin interne | data/01_raw/ministere_interieur/2024-legislatives-1-candidats.csv |
 | Format de fichier | text/csv |
-| Éditeur | Ministère de l&#39;intérieur |
+| Éditeur | Ministère de l&#39;Intérieur |
 | URL d&#39;origine | https://www.data.gouv.fr/fr/datasets/r/cd5b39e6-5feb-4864-b274-3431ed81442c |
 | URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/c8/40bd309348cbe6cd728cc96bf550d0 |
 
@@ -977,7 +994,7 @@ et 16921.
 | --------- | ------ |
 | Chemin interne | data/01_raw/ministere_interieur/2024-legislatives-1-circonscription.csv |
 | Format de fichier | text/csv |
-| Éditeur | Ministère de l&#39;intérieur |
+| Éditeur | Ministère de l&#39;Intérieur |
 | URL d&#39;origine | https://www.data.gouv.fr/fr/datasets/r/5163f2e3-1362-4c35-89a0-1934bb74f2d9 |
 | URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/1d/424007d37d7cf2d24d799403d6af00 |
 
@@ -989,7 +1006,7 @@ et 16921.
 | --------- | ------ |
 | Chemin interne | data/01_raw/ministere_interieur/2024-legislatives-2-bureau_de_vote.csv |
 | Format de fichier | text/csv |
-| Éditeur | Ministère de l&#39;intérieur |
+| Éditeur | Ministère de l&#39;Intérieur |
 | URL d&#39;origine | https://www.data.gouv.fr/fr/datasets/r/ca974f04-cfd9-4da8-8554-4a868a09c6c2 |
 | URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/06/3dfce8aa81153f6b535b7ecdb49d6f |
 
@@ -1001,7 +1018,7 @@ et 16921.
 | --------- | ------ |
 | Chemin interne | data/01_raw/ministere_interieur/2024-legislatives-2-candidats.csv |
 | Format de fichier | text/csv |
-| Éditeur | Ministère de l&#39;intérieur |
+| Éditeur | Ministère de l&#39;Intérieur |
 | URL d&#39;origine | https://www.data.gouv.fr/fr/datasets/r/f04605b8-4c02-4496-8a26-2bc02b17f739 |
 | URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/c6/e6f33721554d0a1260d81775c0fd22 |
 
@@ -1013,7 +1030,7 @@ et 16921.
 | --------- | ------ |
 | Chemin interne | data/01_raw/ministere_interieur/2024-legislatives-2-circonscription.csv |
 | Format de fichier | text/csv |
-| Éditeur | Ministère de l&#39;intérieur |
+| Éditeur | Ministère de l&#39;Intérieur |
 | URL d&#39;origine | https://www.data.gouv.fr/fr/datasets/r/41ed46cd-77c2-4ecc-b8eb-374aa953ca39 |
 | URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/52/32b0951ce8ca92573ea3b35d5d62a0 |
 
@@ -1026,7 +1043,7 @@ et 16921.
 | Chemin interne | data/01_raw/ministere_interieur/2026-conseils-PLM-1-bureau_de_vote.csv |
 | Format de fichier | text/csv |
 | URL d&#39;information | https://www.data.gouv.fr/datasets/elections-municipales-2026-resultats-du-premier-tour |
-| Éditeur | Ministère de l&#39;intérieur |
+| Éditeur | Ministère de l&#39;Intérieur |
 | URL d&#39;origine | https://www.data.gouv.fr/api/1/datasets/r/ce7bfb80-cb17-4024-b5b9-fbc011e7c7f0 |
 | URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/a1/6e1f0d4295eec78002c2a9b17d9456 |
 
@@ -1039,9 +1056,22 @@ et 16921.
 | --------- | ------ |
 | Chemin interne | data/01_raw/ministere_interieur/2026-conseils-PLM-1-candidats.csv |
 | Format de fichier | text/csv |
-| Éditeur | Ministère de l&#39;intérieur |
+| Éditeur | Ministère de l&#39;Intérieur |
 | URL d&#39;origine | https://www.data.gouv.fr/api/1/datasets/r/d1709cba-f626-43a1-9c56-bc873c51fadc |
 | URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/20/3c62053ea483f9ee4dddfd0e4ba6de |
+
+
+### 2026-conseils-PLM-2-bureau_de_vote
+<a name="data/01_raw/ministere_interieur/2026-conseils-PLM-2-bureau_de_vote.csv"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/ministere_interieur/2026-conseils-PLM-2-bureau_de_vote.csv |
+| Format de fichier | text/csv |
+| Éditeur | Ministère de l&#39;Intérieur |
+| URL d&#39;origine | https://www.data.gouv.fr/api/1/datasets/r/46dd2684-8c2c-4942-a8e8-9e4e3e5a1c7a |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/a2/1ce070af20888598e308e30a3e2ae3 |
+
 
 
 ### Candidats au deuxième tour des élections des conseils de secteurs de Paris, Lyon et Marseille en 2026
@@ -1052,7 +1082,7 @@ et 16921.
 | Chemin interne | data/01_raw/ministere_interieur/2026-conseils-PLM-2-candidats.csv |
 | Format de fichier | text/csv |
 | URL d&#39;information | https://www.data.gouv.fr/datasets/elections-municipales-2026-listes-candidates-au-second-tour |
-| Éditeur | Ministère de l&#39;intérieur |
+| Éditeur | Ministère de l&#39;Intérieur |
 | URL d&#39;origine | https://www.data.gouv.fr/api/1/datasets/r/70ec1c11-3645-4583-9b44-d931d0968072 |
 | URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/24/91ff1718720a7e00d44204d1a6860e |
 
@@ -1066,7 +1096,7 @@ et 16921.
 | Chemin interne | data/01_raw/ministere_interieur/2026-metropolitaines-1-bureau_de_vote.csv |
 | Format de fichier | text/csv |
 | URL d&#39;information | https://www.data.gouv.fr/datasets/elections-metropolitaines-de-lyon-2026-resultats-du-premier-tour |
-| Éditeur | Ministère de l&#39;intérieur |
+| Éditeur | Ministère de l&#39;Intérieur |
 | URL d&#39;origine | https://www.data.gouv.fr/api/1/datasets/r/858a9e53-c7d6-43b5-8326-ffd6e4766a85 |
 | URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/37/cd2da50c74348947581b21ee08428a |
 
@@ -1080,9 +1110,22 @@ et 16921.
 | Chemin interne | data/01_raw/ministere_interieur/2026-metropolitaines-1-candidats.csv |
 | Format de fichier | text/csv |
 | URL d&#39;information | https://www.data.gouv.fr/datasets/elections-municipales-2026-listes-candidates-au-premier-tour |
-| Éditeur | Ministère de l&#39;intérieur |
+| Éditeur | Ministère de l&#39;Intérieur |
 | URL d&#39;origine | https://www.data.gouv.fr/api/1/datasets/r/f02394ab-fb38-4060-bee6-72be6e30c196 |
 | URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/96/aa1e2a00bcfa1fc27f4a875b2ec4ac |
+
+
+
+### 2026-metropolitaines-2-bureau_de_vote
+<a name="data/01_raw/ministere_interieur/2026-metropolitaines-2-bureau_de_vote.csv"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/ministere_interieur/2026-metropolitaines-2-bureau_de_vote.csv |
+| Format de fichier | text/csv |
+| Éditeur | Ministère de l&#39;Intérieur |
+| URL d&#39;origine | https://www.data.gouv.fr/api/1/datasets/r/7ace2f13-fc4c-4b9b-855d-03a7e9352852 |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/8b/9d743b720c37acd77f873b513fed87 |
 
 
 
@@ -1094,7 +1137,7 @@ et 16921.
 | Chemin interne | data/01_raw/ministere_interieur/2026-metropolitaines-2-candidats.csv |
 | Format de fichier | text/csv |
 | URL d&#39;information | https://www.data.gouv.fr/datasets/elections-municipales-2026-listes-candidates-au-second-tour |
-| Éditeur | Ministère de l&#39;intérieur |
+| Éditeur | Ministère de l&#39;Intérieur |
 | URL d&#39;origine | https://www.data.gouv.fr/api/1/datasets/r/29aa24e0-647d-450e-b09e-4f2a2a085642 |
 | URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/cd/df3c0396938fbad9f48a01fd6a6e16 |
 
@@ -1108,7 +1151,7 @@ et 16921.
 | Chemin interne | data/01_raw/ministere_interieur/2026-municipales-1-bureau_de_vote.csv |
 | Format de fichier | text/csv |
 | URL d&#39;information | https://www.data.gouv.fr/datasets/elections-municipales-2026-resultats-du-premier-tour |
-| Éditeur | Ministère de l&#39;intérieur |
+| Éditeur | Ministère de l&#39;Intérieur |
 | URL d&#39;origine | https://www.data.gouv.fr/api/1/datasets/r/1428132c-ad5e-437e-a928-7c2a254e40eb |
 | URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/d1/4d0da879d3123d0d558ff193085c29 |
 
@@ -1121,11 +1164,24 @@ et 16921.
 | --------- | ------ |
 | Chemin interne | data/01_raw/ministere_interieur/2026-municipales-1-candidats.csv |
 | Format de fichier | text/csv |
-| Éditeur | Ministère de l&#39;intérieur |
+| Éditeur | Ministère de l&#39;Intérieur |
 | URL d&#39;origine | https://www.data.gouv.fr/api/1/datasets/r/b929c2a4-18ec-4e8b-bc37-2ff346a867cd |
 | URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/ac/ac36f91c182b66f7df3fca056b9b34 |
 
 La composition des listes candidates aux élections municipales 2026.
+
+### 2026-municipales-2-bureau_de_vote
+<a name="data/01_raw/ministere_interieur/2026-municipales-2-bureau_de_vote.csv"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/ministere_interieur/2026-municipales-2-bureau_de_vote.csv |
+| Format de fichier | text/csv |
+| Éditeur | Ministère de l&#39;Intérieur |
+| URL d&#39;origine | https://www.data.gouv.fr/api/1/datasets/r/ac97f1d2-64b3-453e-90e6-485913aabd04 |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/ef/b72109f713454b10ca9bf87bb3387d |
+
+
 
 ### Candidats au 2e tour des élections municipales 2026
 <a name="data/01_raw/ministere_interieur/2026-municipales-2-candidats.csv"></a>
@@ -1135,7 +1191,7 @@ La composition des listes candidates aux élections municipales 2026.
 | Chemin interne | data/01_raw/ministere_interieur/2026-municipales-2-candidats.csv |
 | Format de fichier | text/csv |
 | URL d&#39;information | https://www.data.gouv.fr/datasets/elections-municipales-2026-listes-candidates-au-second-tour |
-| Éditeur | Ministère de l&#39;intérieur |
+| Éditeur | Ministère de l&#39;Intérieur |
 | URL d&#39;origine | https://www.data.gouv.fr/api/1/datasets/r/c7e8ced6-3d08-452e-af06-d553634b6d61 |
 | URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/3a/804f3bf8287dc2779008bd7b9cce7e |
 
@@ -1149,7 +1205,7 @@ La composition des listes candidates aux élections municipales 2026.
 | Chemin interne | data/01_raw/rne/conseillers_arrondissement.csv |
 | Format de fichier | text/csv |
 | URL d&#39;information | https://www.data.gouv.fr/fr/datasets/repertoire-national-des-elus-1/ |
-| Éditeur | Ministère de l&#39;intérieur |
+| Éditeur | Ministère de l&#39;Intérieur |
 | URL d&#39;origine | https://www.data.gouv.fr/fr/datasets/r/3b6b2281-b9d9-4959-ae9d-c2c166dff118 |
 | URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/2d/0a06f8637f8f6b47a2a48c929566cf |
 
@@ -1162,7 +1218,7 @@ La composition des listes candidates aux élections municipales 2026.
 | Chemin interne | data/01_raw/rne/conseillers_csp.csv |
 | Format de fichier | text/csv |
 | URL d&#39;information | https://www.data.gouv.fr/fr/datasets/repertoire-national-des-elus-1/ |
-| Éditeur | Ministère de l&#39;intérieur |
+| Éditeur | Ministère de l&#39;Intérieur |
 | URL d&#39;origine | https://www.data.gouv.fr/api/1/datasets/r/a595be27-cfab-4810-b9d4-22e193bffe35 |
 | URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/54/0af71e0cd1e893ad4828ca9cbb3e7e |
 
@@ -1175,7 +1231,7 @@ La composition des listes candidates aux élections municipales 2026.
 | Chemin interne | data/01_raw/rne/conseillers_departementaux.csv |
 | Format de fichier | text/csv |
 | URL d&#39;information | https://www.data.gouv.fr/fr/datasets/repertoire-national-des-elus-1/ |
-| Éditeur | Ministère de l&#39;intérieur |
+| Éditeur | Ministère de l&#39;Intérieur |
 | URL d&#39;origine | https://www.data.gouv.fr/fr/datasets/r/601ef073-d986-4582-8e1a-ed14dc857fba |
 | URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/c9/7b23f2a92eb0c41d0d263ca9430840 |
 
@@ -1188,7 +1244,7 @@ La composition des listes candidates aux élections municipales 2026.
 | Chemin interne | data/01_raw/rne/conseillers_epci.csv |
 | Format de fichier | text/csv |
 | URL d&#39;information | https://www.data.gouv.fr/fr/datasets/repertoire-national-des-elus-1/ |
-| Éditeur | Ministère de l&#39;intérieur |
+| Éditeur | Ministère de l&#39;Intérieur |
 | URL d&#39;origine | https://www.data.gouv.fr/fr/datasets/r/41d95d7d-b172-4636-ac44-32656367cdc7 |
 | URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/45/5077fa9839c32f7d76693370de3882 |
 
@@ -1201,7 +1257,7 @@ La composition des listes candidates aux élections municipales 2026.
 | Chemin interne | data/01_raw/rne/conseillers_municipaux.csv |
 | Format de fichier | text/csv |
 | URL d&#39;information | https://www.data.gouv.fr/fr/datasets/repertoire-national-des-elus-1/ |
-| Éditeur | Ministère de l&#39;intérieur |
+| Éditeur | Ministère de l&#39;Intérieur |
 | URL d&#39;origine | https://www.data.gouv.fr/fr/datasets/r/d5f400de-ae3f-4966-8cb6-a85c70c6c24a |
 | URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/2d/7b128d64f26618620da8e83159db4c |
 
@@ -1221,7 +1277,7 @@ Ce fichier comporte la liste des conseillers municipaux.
 | Chemin interne | data/01_raw/rne/conseillers_regionaux.csv |
 | Format de fichier | text/csv |
 | URL d&#39;information | https://www.data.gouv.fr/fr/datasets/repertoire-national-des-elus-1/ |
-| Éditeur | Ministère de l&#39;intérieur |
+| Éditeur | Ministère de l&#39;Intérieur |
 | URL d&#39;origine | https://www.data.gouv.fr/fr/datasets/r/430e13f9-834b-4411-a1a8-da0b4b6e715c |
 | URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/2f/e0945c9714d346bb2a7fdf1cffc7c3 |
 

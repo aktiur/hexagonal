@@ -940,64 +940,66 @@ name = "hexagonal"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [
+    { name = "boto3" },
     { name = "click" },
+    { name = "dvc" },
+    { name = "dvc-s3" },
+    { name = "fiona" },
     { name = "geopandas" },
+    { name = "glom" },
+    { name = "jinja2" },
+    { name = "json-stream" },
     { name = "lxml" },
+    { name = "openpyxl" },
     { name = "pandas" },
     { name = "polars" },
+    { name = "py7zr" },
     { name = "pyarrow" },
     { name = "pydantic" },
+    { name = "pyroaring" },
+    { name = "python-slugify", extra = ["unidecode"] },
     { name = "pyzstd" },
+    { name = "tomli-w" },
 ]
 
 [package.dev-dependencies]
 dev = [
-    { name = "boto3" },
-    { name = "dvc" },
-    { name = "dvc-s3" },
-    { name = "fiona" },
-    { name = "glom" },
     { name = "ipython" },
-    { name = "jinja2" },
-    { name = "json-stream" },
-    { name = "openpyxl" },
-    { name = "py7zr" },
     { name = "pyrefly" },
     { name = "pytest" },
-    { name = "python-slugify", extra = ["unidecode"] },
     { name = "ruff" },
-    { name = "tomli-w" },
 ]
 
 [package.metadata]
 requires-dist = [
+    { name = "boto3", specifier = ">=1.42.19" },
     { name = "click", specifier = ">=8.1.7" },
+    { name = "dvc", specifier = ">=3.55.2" },
+    { name = "dvc-s3", specifier = ">=3.2.0" },
+    { name = "fiona", specifier = ">=1.10.1" },
     { name = "geopandas", specifier = ">=1.0.1" },
+    { name = "glom", specifier = ">=24.11.0" },
+    { name = "jinja2", specifier = ">=3.1.4" },
+    { name = "json-stream", specifier = ">=2.3.2" },
     { name = "lxml", specifier = ">=6.0.0" },
+    { name = "openpyxl", specifier = ">=3.1.5" },
     { name = "pandas", specifier = ">=2.2.2" },
     { name = "polars", specifier = ">=1.38.1" },
+    { name = "py7zr", specifier = ">=0.22.0" },
     { name = "pyarrow", specifier = ">=20.0.0" },
     { name = "pydantic", specifier = ">=2.11.7" },
+    { name = "pyroaring", specifier = ">=1.0.4" },
+    { name = "python-slugify", extras = ["unidecode"], specifier = ">=8.0.4" },
     { name = "pyzstd", specifier = ">=0.16.2" },
+    { name = "tomli-w", specifier = ">=1.1.0" },
 ]
 
 [package.metadata.requires-dev]
 dev = [
-    { name = "boto3", specifier = ">=1.42.19" },
-    { name = "dvc", specifier = ">=3.55.2" },
-    { name = "dvc-s3", specifier = ">=3.2.0" },
-    { name = "fiona", specifier = ">=1.10.1" },
-    { name = "glom", specifier = ">=24.11.0" },
     { name = "ipython", specifier = ">=8.26.0" },
-    { name = "jinja2", specifier = ">=3.1.4" },
-    { name = "json-stream", specifier = ">=2.3.2" },
-    { name = "openpyxl", specifier = ">=3.1.5" },
-    { name = "py7zr", specifier = ">=0.22.0" },
     { name = "pyrefly", specifier = ">=0.56.0" },
     { name = "pytest", specifier = ">=8.3.4" },
-    { name = "python-slugify", extras = ["unidecode"], specifier = ">=8.0.4" },
     { name = "ruff", specifier = ">=0.8.4" },
-    { name = "tomli-w", specifier = ">=1.1.0" },
 ]
 
 [[package]]
@@ -1808,6 +1810,26 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/77/65/0530041ca4c7d3ffb3bdf630c8f1f39ae824e218c44ae3708383224dbe8e/pyrefly-0.57.0-py3-none-win32.whl", hash = "sha256:aa6e9d9e4c7e276409f99b83d964fa39c7ba567b5521244b6b1a1eaf6ec399b9", size = 11733252, upload-time = "2026-03-17T15:50:38.346Z" },
     { url = "https://files.pythonhosted.org/packages/0d/bc/29552836eb42a22568f06510206ec851a1f790f62e5a99ca5a8b32fcb79d/pyrefly-0.57.0-py3-none-win_amd64.whl", hash = "sha256:4169abc722fc9a957366c4fc8fdd7a927a5fb890ec0aae5178011e41c45a560e", size = 12536904, upload-time = "2026-03-17T15:50:41.141Z" },
     { url = "https://files.pythonhosted.org/packages/93/fd/47f9d6c5934f127e9e654f72e8281da3e3434e1624cd0c1f63cbe12eb084/pyrefly-0.57.0-py3-none-win_arm64.whl", hash = "sha256:19e2c14533c00ae6e63ac38c6000e32badde5f573ca5c1cd969ecab129de89ec", size = 12011735, upload-time = "2026-03-17T15:50:43.71Z" },
+]
+
+[[package]]
+name = "pyroaring"
+version = "1.0.4"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/fd/71/134bcaf93d8734051ecbc164dabe695645849249e0fb24209b2dd88e8147/pyroaring-1.0.4.tar.gz", hash = "sha256:99d4217bdfeedc91b82efcec940175a9f9a9137c6476faf7ce5d9c9dd889c8e6", size = 189155, upload-time = "2026-03-19T13:57:27.932Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/89/a7/9f4977405d3a3fa02cf575951f03a9cda4c01efbe27a19230addee06acc2/pyroaring-1.0.4-cp312-cp312-macosx_14_0_arm64.whl", hash = "sha256:924ee997ff1a0f2a184e39e153e9f77e0b928fe908d0aef63d03204c3ed90586", size = 322060, upload-time = "2026-03-19T13:56:04.94Z" },
+    { url = "https://files.pythonhosted.org/packages/eb/e9/32fd7125aea82a3d1d29b755edbc7bb531907638c68a5bcc767d20c2be4a/pyroaring-1.0.4-cp312-cp312-macosx_14_0_universal2.whl", hash = "sha256:b7a527279cc378e893a543a2271d71321b57d21733915a5a14e587532e29265a", size = 685716, upload-time = "2026-03-19T13:56:06.431Z" },
+    { url = "https://files.pythonhosted.org/packages/3d/b3/6b78bd9d743c053fb3b0485a6b1f487e6a658123f06013bee55610b02120/pyroaring-1.0.4-cp312-cp312-macosx_14_0_x86_64.whl", hash = "sha256:d73979e1a3a6de2b7039dd9a545afa23f3b33f8b6f90a825390a34253d097f96", size = 363373, upload-time = "2026-03-19T13:56:07.707Z" },
+    { url = "https://files.pythonhosted.org/packages/e7/ff/188c16cdd75d841e50d2779ff7b5d1c5c915a6f23006ef3ab3680f48faca/pyroaring-1.0.4-cp312-cp312-manylinux_2_24_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:dab3d8577b143c64c1c1659b4d1c69d7fec5baa0d0c0181cdddf6b84f43af00a", size = 1914865, upload-time = "2026-03-19T13:56:09.22Z" },
+    { url = "https://files.pythonhosted.org/packages/c8/12/ae7b4fa3682190597cbfb252be570358c5bc55f46f6b05db3fde66dfacc1/pyroaring-1.0.4-cp312-cp312-manylinux_2_24_armv7l.manylinux_2_31_armv7l.whl", hash = "sha256:dcc7d0133f46163b5390dd151e3305bd47289f7710c6e5444f38453d55b15d1c", size = 1742423, upload-time = "2026-03-19T13:56:10.422Z" },
+    { url = "https://files.pythonhosted.org/packages/f7/25/966ea0a9d857ac3f2af1eaebdbfd56e627507b890f8ff7752c32e8e57b57/pyroaring-1.0.4-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:5a8b8448c2f7af3b40f17dde23b6739f3b19cf8b24db6f817c549c870d50aae3", size = 2130698, upload-time = "2026-03-19T13:56:12.039Z" },
+    { url = "https://files.pythonhosted.org/packages/7a/31/0d0320925cf8bc1fcb53db182359bd673bf6b434f31c6cc69e4f5312c55f/pyroaring-1.0.4-cp312-cp312-musllinux_1_2_aarch64.whl", hash = "sha256:13ccc488cfe6a227945586090397f299fd40c1a0dc1ed25e8e58a4d068c1ed46", size = 2822746, upload-time = "2026-03-19T13:56:13.274Z" },
+    { url = "https://files.pythonhosted.org/packages/b9/98/a5f6d619098e307baf71b14a4df955914e8092f459d19daf80fbbd651fa1/pyroaring-1.0.4-cp312-cp312-musllinux_1_2_armv7l.whl", hash = "sha256:dd89ebb7496325fb1b3dbe290dad35bc4da8722b5e3afd2a71b1d6e8ad981725", size = 2657370, upload-time = "2026-03-19T13:56:14.848Z" },
+    { url = "https://files.pythonhosted.org/packages/9f/13/4d8beb31e4f648326b9b39c8f056fc1cb41422ef4e2be17cb15432c7fd40/pyroaring-1.0.4-cp312-cp312-musllinux_1_2_x86_64.whl", hash = "sha256:06b15bc8e0c272c3bee0c8adc29130178cd792ad99af64d7d7a1eb3069a1e0b8", size = 3088618, upload-time = "2026-03-19T13:56:16.625Z" },
+    { url = "https://files.pythonhosted.org/packages/ad/16/95e223db5e60a6def8abcc2a8ebc4c71df23148a602310973c9a6964e3c5/pyroaring-1.0.4-cp312-cp312-win32.whl", hash = "sha256:4dca094f1d0e18901fa3f6b8866fa14a0f9640b22f41f5fc278c20e15e70efee", size = 202455, upload-time = "2026-03-19T13:56:18.124Z" },
+    { url = "https://files.pythonhosted.org/packages/b9/2c/5e41a91822c3bbc735382939d354e2c10bae453b18fe5a133f7fdbb33ce9/pyroaring-1.0.4-cp312-cp312-win_amd64.whl", hash = "sha256:63ab0dcb24933fc9d4ca8c9fa0440f7e177183975990f756a42cddad22fd66db", size = 257479, upload-time = "2026-03-19T13:56:19.25Z" },
+    { url = "https://files.pythonhosted.org/packages/bd/d7/7bc58e807e7d6739f4f5c45964a35927e1ff7f591e3943372097d29a00a7/pyroaring-1.0.4-cp312-cp312-win_arm64.whl", hash = "sha256:226079645dd4098d3619ae5fc19bf9abfd2187a74aba94a8768443e637d406fa", size = 215516, upload-time = "2026-03-19T13:56:20.286Z" },
 ]
 
 [[package]]

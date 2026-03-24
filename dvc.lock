@@ -2056,13 +2056,13 @@ stages:
       size: 144523474
     - path: src/hexagonal/candidatures/municipales2026/clean.py
       hash: md5
-      md5: 93307c04093ef37ea49216905d07c828
-      size: 1215
+      md5: 9a8c0874c300efa9184ba2d35a540f37
+      size: 1262
     outs:
     - path: data/02_clean/elections/2026-municipales-1-candidats.parquet
       hash: md5
-      md5: db4e9976004cdb35995df8f95b65089f
-      size: 7494062
+      md5: 286bb10474b888719f75b514d949753c
+      size: 7487557
   2026-municipales-candidats@2:
     cmd: PYTHONPATH=src python -m hexagonal.candidatures.municipales2026.clean 
       data/01_raw/ministere_interieur/2026-municipales-2-candidats.csv 
@@ -2074,10 +2074,69 @@ stages:
       size: 21458847
     - path: src/hexagonal/candidatures/municipales2026/clean.py
       hash: md5
-      md5: 93307c04093ef37ea49216905d07c828
-      size: 1215
+      md5: 9a8c0874c300efa9184ba2d35a540f37
+      size: 1262
     outs:
     - path: data/02_clean/elections/2026-municipales-2-candidats.parquet
       hash: md5
-      md5: 96b279ad784ba35f3758095eac2ae5d1
-      size: 1044744
+      md5: 2cb737307e4559ff6381d181255bb20c
+      size: 1041327
+  2024-europeenne-candidats:
+    cmd: PYTHONPATH=src python -m hexagonal.candidatures.europeenne2024 
+      data/01_raw/ministere_interieur/2024-europeenne-candidats.csv 
+      data/02_clean/elections/2024-europeenne-candidats.parquet
+    deps:
+    - path: data/01_raw/ministere_interieur/2024-europeenne-candidats.csv
+      hash: md5
+      md5: ef5a04840f72551769af9dc38c021664
+      size: 433526
+    - path: src/hexagonal/candidatures/europeenne2024.py
+      hash: md5
+      md5: 0971c82b9f944a3c33619ccff244e77e
+      size: 1044
+    outs:
+    - path: data/02_clean/elections/2024-europeenne-candidats.parquet
+      hash: md5
+      md5: 3373d941c5b0413bd5f61b59cb667bed
+      size: 46638
+  2021-regionales-candidats:
+    cmd: PYTHONPATH=src python -m hexagonal.candidatures.regionales2021 
+      data/01_raw/ministere_interieur/2021-regionales-1-candidats.csv 
+      data/02_clean/elections/2021-regionales-1-candidats.parquet
+    deps:
+    - path: data/01_raw/ministere_interieur/2021-regionales-1-candidats.csv
+      hash: md5
+      md5: 54855862dbd39f6763aaf00ad32d9708
+      size: 3278579
+    - path: src/hexagonal/candidatures/regionales2021.py
+      hash: md5
+      md5: 6e0f97524198f8288c580abd63e7e513
+      size: 1457
+    outs:
+    - path: data/02_clean/elections/2021-regionales-1-candidats.parquet
+      hash: md5
+      md5: 49a2b850a0c129bbeabfce6d52dc37b9
+      size: 428048
+  normaliser-format-elections@2026-municipales-2-bureau_de_vote:
+    cmd: PYTHONPATH=src python -m hexagonal.resultats.format_2017 
+      data/01_raw/ministere_interieur/2026-municipales-2-bureau_de_vote.csv 
+      data/02_clean/elections/2026-municipales-2-bureau_de_vote.parquet utf8 ";"
+    deps:
+    - path: 
+        data/01_raw/ministere_interieur/2026-municipales-2-bureau_de_vote.csv
+      hash: md5
+      md5: efb72109f713454b10ca9bf87bb3387d
+      size: 10425980
+    - path: src/hexagonal/codes.py
+      hash: md5
+      md5: e27a9dabe689bc7989c28ebf2ba84ce6
+      size: 4800
+    - path: src/hexagonal/resultats/format_2017.py
+      hash: md5
+      md5: 00c742fadb5a1701ac9307eea6cd12c9
+      size: 8794
+    outs:
+    - path: data/02_clean/elections/2026-municipales-2-bureau_de_vote.parquet
+      hash: md5
+      md5: 95cb5d40b3cb8ac47b6c4d674db2dadd
+      size: 648609

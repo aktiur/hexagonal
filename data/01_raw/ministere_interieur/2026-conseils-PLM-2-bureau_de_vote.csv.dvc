@@ -1,0 +1,13 @@
+md5: ab1f218d9526d138b713eeebefabf06d
+frozen: true
+deps:
+- checksum: '"69c17fff-e86a5"'
+  size: 951973
+  hash: md5
+  path: 
+    https://www.data.gouv.fr/api/1/datasets/r/46dd2684-8c2c-4942-a8e8-9e4e3e5a1c7a
+outs:
+- md5: a21ce070af20888598e308e30a3e2ae3
+  size: 951973
+  hash: md5
+  path: 2026-conseils-PLM-2-bureau_de_vote.csv

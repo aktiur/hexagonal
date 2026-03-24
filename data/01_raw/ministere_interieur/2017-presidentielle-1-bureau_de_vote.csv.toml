@@ -2,4 +2,4 @@ nom = "Résultats du premier tour de l'élection présidentielle de 2017 par bur
 description = ""
 mimetype = "text/csv"
 info_url = "https://www.data.gouv.fr/fr/datasets/election-presidentielle-des-23-avril-et-7-mai-2017-resultats-definitifs-du-1er-tour-par-bureaux-de-vote/"
-editeur = "Ministère de l'intérieur"
+editeur = "Ministère de l'Intérieur"

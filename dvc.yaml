@@ -93,6 +93,17 @@ stages:
       outs:
         - ${main}/elections/2024-legislatives-${item}-candidats.csv
 
+  2024-europeenne-candidats:
+    deps:
+      - ${raw}/ministere_interieur/2024-europeenne-candidats.csv
+      - ${src}/hexagonal/candidatures/europeenne2024.py
+    outs:
+      - ${clean}/elections/2024-europeenne-candidats.parquet
+    cmd: >-
+      ${python} hexagonal.candidatures.europeenne2024
+      ${raw}/ministere_interieur/2024-europeenne-candidats.csv
+      ${clean}/elections/2024-europeenne-candidats.parquet
+
   2022-legislatives-candidats:
     foreach:
       - 1
@@ -114,6 +125,17 @@ stages:
         - ${src}/hexagonal/codes.py
       outs:
         - ${main}/elections/2022-legislatives-${item}-candidats.csv
+
+  2021-regionales-candidats:
+    deps:
+      - ${raw}/ministere_interieur/2021-regionales-1-candidats.csv
+      - ${src}/hexagonal/candidatures/regionales2021.py
+    outs:
+      - ${clean}/elections/2021-regionales-1-candidats.parquet
+    cmd: >-
+      ${python} hexagonal.candidatures.regionales2021
+      ${raw}/ministere_interieur/2021-regionales-1-candidats.csv
+      ${clean}/elections/2021-regionales-1-candidats.parquet
 
   parrainages_nettoyer:
     foreach:
@@ -280,7 +302,7 @@ stages:
       ${python} hexagonal.annuaire.nettoyer
       ${raw}/annuaire
       ${clean}/annuaire
-      
+
   cog_nettoyer:
     deps:
       - ${raw}/insee/cog.zip

@@ -4,4 +4,4 @@ Ce fichier comporte une anomalie : trois tabulations excédentaires aux lignes 1
 et 16921.
 """
 mimetype = "text/csv"
-editeur = "Ministère de l'intérieur"
+editeur = "Ministère de l'Intérieur"

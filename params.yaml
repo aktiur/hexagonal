@@ -115,6 +115,11 @@ scrutins:
     encoding: utf8
     format: 2017
     delimiter: ";"
+  2026-municipales-2-bureau_de_vote:
+    encoding: utf8
+    format: 2017
+    delimiter: ";"
+
 
 zones_carto:
   hexagone:

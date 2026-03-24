@@ -2,4 +2,4 @@ nom = "Résultats du premier tour de l'élection présidentielle 2022 par circon
 description = ""
 mimetype = "text/csv"
 info_url = "https://www.data.gouv.fr/fr/datasets/election-presidentielle-des-10-et-24-avril-2022-resultats-definitifs-du-1er-tour/"
-editeur = "Ministère de l'intérieur"
+editeur = "Ministère de l'Intérieur"

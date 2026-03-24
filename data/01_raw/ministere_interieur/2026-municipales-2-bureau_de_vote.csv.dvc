@@ -1,0 +1,13 @@
+md5: e0b42633405f4dea24d5ca47a5d54d14
+frozen: true
+deps:
+- checksum: '"69c17ffd-9f167c"'
+  size: 10425980
+  hash: md5
+  path: 
+    https://www.data.gouv.fr/api/1/datasets/r/ac97f1d2-64b3-453e-90e6-485913aabd04
+outs:
+- md5: efb72109f713454b10ca9bf87bb3387d
+  size: 10425980
+  hash: md5
+  path: 2026-municipales-2-bureau_de_vote.csv

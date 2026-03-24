@@ -1,0 +1,54 @@
+nom = "Candidats au 2ème tour des municipales 2026"
+description = """
+
+"""
+mimetype = "application/vnd.apache.parquet"
+section = "Résultats électoraux"
+
+[colonnes.code_commune]
+type = "str"
+nullable = false
+
+[colonnes.numero_panneau]
+type = "entier"
+nullable = false
+
+[colonnes.liste_court]
+type = "str"
+nullable = false
+
+[colonnes.liste]
+type = "str"
+nullable = false
+
+[colonnes.nuance]
+type = "str"
+nullable = false
+
+[colonnes.ordre]
+type = "entier"
+nullable = false
+
+[colonnes.sexe]
+type = "str"
+nullable = false
+
+[colonnes.nom]
+type = "str"
+nullable = false
+
+[colonnes.prenom]
+type = "str"
+nullable = false
+
+[colonnes.nationalite]
+type = "str"
+nullable = false
+
+[colonnes.code_personnalite]
+type = "str"
+nullable = false
+
+[colonnes.candidat_communautaire]
+type = "bool"
+nullable = false

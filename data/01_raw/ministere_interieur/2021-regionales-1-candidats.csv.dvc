@@ -1,0 +1,13 @@
+md5: f7d66c6b0e865d5ee5b5e2837fa04200
+frozen: true
+deps:
+- checksum: '"60a4e276-3206f3"'
+  size: 3278579
+  hash: md5
+  path: 
+    https://www.data.gouv.fr/api/1/datasets/r/ada7d31b-30f8-46bc-b839-0ae9e8671a83
+outs:
+- md5: 54855862dbd39f6763aaf00ad32d9708
+  size: 3278579
+  hash: md5
+  path: 2021-regionales-1-candidats.csv
