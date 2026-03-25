@@ -100,11 +100,14 @@
   - [Correspondance entre bureaux de vote et circonscription pendant les élections législatives 2024](#data/02_clean/elections/2024-legislatives-correspondances-bureau_de_vote-circonscription.csv)
   - [Résultats du 1er tour des élections municipales 2026 par bureau de vote](#data/02_clean/elections/2026-municipales-1-bureau_de_vote.parquet)
   - [Candidats au 1er tour des municipales 2026](#data/02_clean/elections/2026-municipales-1-candidats.parquet)
+  - [Nombre de sièges gagnées par liste candidate au premier tour des élections municipales 2026](#data/02_clean/elections/2026-municipales-1-sieges.parquet)
   - [2026-municipales-2-bureau_de_vote](#data/02_clean/elections/2026-municipales-2-bureau_de_vote.parquet)
   - [Candidats au 2ème tour des municipales 2026](#data/02_clean/elections/2026-municipales-2-candidats.parquet)
+  - [Nombre de sièges gagnées par liste candidate au deuxième tour des élections municipales 2026](#data/02_clean/elections/2026-municipales-2-sieges.parquet)
   - [Liste des candidats aux élections législatives de 2024](#data/03_main/elections/2022-legislatives-1-candidats.csv)
   - [Composition nominative des listes de second tour des municipales 2026 après fusion](#data/03_main/elections/2026-municipales-2-composition-listes-nominative.parquet)
   - [Composition des listes de second tour des municipales 2026 après fusion](#data/03_main/elections/2026-municipales-2-composition-listes.parquet)
+  - [Liste des personnes élues lors des municipales 2026](#data/03_main/elections/2026-municipales-elus.parquet)
 - [Élections](#elections)
   - [Liste qualifiée des candidats au second tour des législatives 2022](#data/03_main/elections/2022-legislatives-2-candidats.csv)
   - [Parrainages enregistrées par le Conseil constitutionnel](#data/03_main/elections/2022-presidentielle-parrainages.csv)
@@ -7377,6 +7380,79 @@ Cette production dépend des sources suivantes :
         </li>
     </ul>
 
+### Nombre de sièges gagnées par liste candidate au premier tour des élections municipales 2026
+<a name="data/02_clean/elections/2026-municipales-1-sieges.parquet"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/02_clean/elections/2026-municipales-1-sieges.parquet |
+| Format de fichier | application/vnd.apache.parquet |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/b7/c7c369faece6d23aa3be75749300ca |
+
+Ce fichier indique, pour chacune des listes candidates au premier tour des municipales
+2026 et ayant remporté au moins un élu le nombre d&#39;élus municipaux et d&#39;élus
+communautaires attribués à la liste.
+
+
+### Colonnes
+
+<table>
+<thead>
+  <tr>
+    <th>id</th>
+    <th>type</th>
+    <th>description</th>
+  </tr>
+</thead>
+<tbody>
+<tr>
+    <td><code>code_commune</code></td>
+    <td><code>str</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>numero_panneau</code></td>
+    <td><code>entier</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>nuance</code></td>
+    <td><code>str</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>liste_court</code></td>
+    <td><code>str</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>liste</code></td>
+    <td><code>str</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>elus_cm</code></td>
+    <td><code>entier</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>elus_cc</code></td>
+    <td><code>entier</code></td>
+    <td>None</td>
+  </tr>
+
+</tbody>
+</table>
+
+### Sources
+
+Cette production dépend des sources suivantes :
+
+<ul>
+    <li><a href="sources.md#data/01_raw/ministere_interieur/2026-municipales-1-commune.csv">Résultats du premier tour des municipales 2026 par commune</a>
+        </li>
+    </ul>
+
 ### 2026-municipales-2-bureau_de_vote
 <a name="data/02_clean/elections/2026-municipales-2-bureau_de_vote.parquet"></a>
 
@@ -7571,6 +7647,79 @@ Cette production dépend des sources suivantes :
 
 <ul>
     <li><a href="sources.md#data/01_raw/ministere_interieur/2026-municipales-2-candidats.csv">Candidats au 2e tour des élections municipales 2026</a>
+        </li>
+    </ul>
+
+### Nombre de sièges gagnées par liste candidate au deuxième tour des élections municipales 2026
+<a name="data/02_clean/elections/2026-municipales-2-sieges.parquet"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/02_clean/elections/2026-municipales-2-sieges.parquet |
+| Format de fichier | application/vnd.apache.parquet |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/2a/a964867d9c2b1639c6d1fe6ce4b059 |
+
+Ce fichier indique, pour chacune des listes candidates au deuxième tour des municipales
+2026 et ayant remporté au moins un élu le nombre d&#39;élus municipaux et d&#39;élus
+communautaires attribués à la liste.
+
+
+### Colonnes
+
+<table>
+<thead>
+  <tr>
+    <th>id</th>
+    <th>type</th>
+    <th>description</th>
+  </tr>
+</thead>
+<tbody>
+<tr>
+    <td><code>code_commune</code></td>
+    <td><code>str</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>numero_panneau</code></td>
+    <td><code>entier</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>nuance</code></td>
+    <td><code>str</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>liste_court</code></td>
+    <td><code>str</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>liste</code></td>
+    <td><code>str</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>elus_cm</code></td>
+    <td><code>entier</code></td>
+    <td>Nombre d&#39;élus municipaux attribués</td>
+  </tr>
+<tr>
+    <td><code>elus_cc</code></td>
+    <td><code>entier</code></td>
+    <td>Nombre d&#39;élus communautaires attribués</td>
+  </tr>
+
+</tbody>
+</table>
+
+### Sources
+
+Cette production dépend des sources suivantes :
+
+<ul>
+    <li><a href="sources.md#data/01_raw/ministere_interieur/2026-municipales-2-commune.csv">Résultats du deuxième tour des élections municipales 2026</a>
         </li>
     </ul>
 
@@ -7903,6 +8052,148 @@ Cette production dépend des sources suivantes :
     <li><a href="productions.md#data/02_clean/elections/2026-municipales-1-bureau_de_vote.parquet">Résultats du 1er tour des élections municipales 2026 par bureau de vote</a>
         <ul>
     <li><a href="sources.md#data/01_raw/ministere_interieur/2026-municipales-1-bureau_de_vote.csv">Résultats du 1er tour des élections municipales de 2026 par bureau de vote</a>
+        </li>
+    </ul>
+        </li>
+    </ul>
+
+### Liste des personnes élues lors des municipales 2026
+<a name="data/03_main/elections/2026-municipales-elus.parquet"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/03_main/elections/2026-municipales-elus.parquet |
+| Format de fichier | application/vnd.apache.parquet |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/e6/c7ad314cd26677a5739ac90c4e2b02 |
+
+Pour chaque personne élue à l&#39;issue des municipales 2026, ce fichier indique si la
+personne a été élue conseiller·ère municipal·e, conseiller·ère communautaire, et à
+quelles listes elle appartenait au premier tour, et le cas échéant, au deuxième tour.
+
+
+### Colonnes
+
+<table>
+<thead>
+  <tr>
+    <th>id</th>
+    <th>type</th>
+    <th>description</th>
+  </tr>
+</thead>
+<tbody>
+<tr>
+    <td><code>code_commune</code></td>
+    <td><code>str</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>nom</code></td>
+    <td><code>str</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>prenom</code></td>
+    <td><code>str</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>sexe</code></td>
+    <td><code>str</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>elu_cm</code></td>
+    <td><code>bool</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>elu_cc</code></td>
+    <td><code>entier</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>numero_panneau_t1</code></td>
+    <td><code>entier</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>liste_t1</code></td>
+    <td><code>str</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>nuance_t1</code></td>
+    <td><code>str</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>numero_panneau_t2</code></td>
+    <td><code>entier</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>liste_t2</code></td>
+    <td><code>str</code></td>
+    <td>None</td>
+  </tr>
+<tr>
+    <td><code>nuance_t2</code></td>
+    <td><code>str</code></td>
+    <td>None</td>
+  </tr>
+
+</tbody>
+</table>
+
+### Sources
+
+Cette production dépend des sources suivantes :
+
+<ul>
+    <li><a href="productions.md#data/02_clean/elections/2026-municipales-1-sieges.parquet">Nombre de sièges gagnées par liste candidate au premier tour des élections municipales 2026</a>
+        <ul>
+    <li><a href="sources.md#data/01_raw/ministere_interieur/2026-municipales-1-commune.csv">Résultats du premier tour des municipales 2026 par commune</a>
+        </li>
+    </ul>
+        </li>
+    <li><a href="productions.md#data/02_clean/elections/2026-municipales-2-sieges.parquet">Nombre de sièges gagnées par liste candidate au deuxième tour des élections municipales 2026</a>
+        <ul>
+    <li><a href="sources.md#data/01_raw/ministere_interieur/2026-municipales-2-commune.csv">Résultats du deuxième tour des élections municipales 2026</a>
+        </li>
+    </ul>
+        </li>
+    <li><a href="productions.md#data/02_clean/elections/2026-municipales-1-candidats.parquet">Candidats au 1er tour des municipales 2026</a>
+        <ul>
+    <li><a href="sources.md#data/01_raw/ministere_interieur/2026-municipales-1-candidats.csv">Listes candidates au premier tour des élections municipales 2026</a>
+        </li>
+    </ul>
+        </li>
+    <li><a href="productions.md#data/02_clean/elections/2026-municipales-2-candidats.parquet">Candidats au 2ème tour des municipales 2026</a>
+        <ul>
+    <li><a href="sources.md#data/01_raw/ministere_interieur/2026-municipales-2-candidats.csv">Candidats au 2e tour des élections municipales 2026</a>
+        </li>
+    </ul>
+        </li>
+    <li><a href="productions.md#data/03_main/elections/2026-municipales-2-composition-listes-nominative.parquet">Composition nominative des listes de second tour des municipales 2026 après fusion</a>
+        <ul>
+    <li><a href="productions.md#data/02_clean/elections/2026-municipales-1-candidats.parquet">Candidats au 1er tour des municipales 2026</a>
+        <ul>
+    <li><a href="sources.md#data/01_raw/ministere_interieur/2026-municipales-1-candidats.csv">Listes candidates au premier tour des élections municipales 2026</a>
+        </li>
+    </ul>
+        </li>
+    <li><a href="productions.md#data/02_clean/elections/2026-municipales-2-candidats.parquet">Candidats au 2ème tour des municipales 2026</a>
+        <ul>
+    <li><a href="sources.md#data/01_raw/ministere_interieur/2026-municipales-2-candidats.csv">Candidats au 2e tour des élections municipales 2026</a>
+        </li>
+    </ul>
+        </li>
+    <li><a href="productions.md#data/02_clean/elections/2026-municipales-1-bureau_de_vote.parquet">Résultats du 1er tour des élections municipales 2026 par bureau de vote</a>
+        <ul>
+    <li><a href="sources.md#data/01_raw/ministere_interieur/2026-municipales-1-bureau_de_vote.csv">Résultats du 1er tour des élections municipales de 2026 par bureau de vote</a>
+        </li>
+    </ul>
         </li>
     </ul>
         </li>

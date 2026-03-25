@@ -1,0 +1,13 @@
+md5: 75f693dbfe211cdcb878bdbeebbd4eec
+frozen: true
+deps:
+- checksum: '"69c17ff4-da399"'
+  size: 893849
+  hash: md5
+  path: 
+    https://www.data.gouv.fr/api/1/datasets/r/6ff67a28-01bf-459e-beca-dd7aa8132dc1
+outs:
+- md5: 231302f86f349fbb0367496935a4f2cd
+  size: 893849
+  hash: md5
+  path: 2026-municipales-2-commune.csv

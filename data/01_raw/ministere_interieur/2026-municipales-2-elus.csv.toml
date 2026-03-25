@@ -1,0 +1,6 @@
+nom = "Liste des personnes élues au deuxième tour des élections municipales 2026"
+description = """
+
+"""
+mimetype = "text/csv"
+editeur = "Ministère de l'Intérieur"

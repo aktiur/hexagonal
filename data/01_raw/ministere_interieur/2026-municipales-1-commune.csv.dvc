@@ -1,0 +1,13 @@
+md5: bdfe39c2739ac24df1eb8b387a06056a
+frozen: true
+deps:
+- checksum: '"69bd793c-dc14bc"'
+  size: 14423228
+  hash: md5
+  path: 
+    https://static.data.gouv.fr/resources/elections-municipales-2026-resultats-du-premier-tour/20260320-164339/municipales-2026-resultats-communes-2026-03-20.csv
+outs:
+- md5: 2cb5bbb05feecb434b47105b9d0ec3dc
+  size: 14423228
+  hash: md5
+  path: 2026-municipales-1-commune.csv

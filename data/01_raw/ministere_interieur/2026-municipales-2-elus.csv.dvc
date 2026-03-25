@@ -1,0 +1,13 @@
+md5: b3cda58fe13285fef0f84a0480fdee71
+frozen: true
+deps:
+- checksum: '"69c17ff2-3304e9"'
+  size: 3343593
+  hash: md5
+  path: 
+    https://www.data.gouv.fr/api/1/datasets/r/ddd5a822-0cb1-4ebd-9da3-193411ab4d30
+outs:
+- md5: d9e9ea0a05a9f48cb5046ee359ad3627
+  size: 3343593
+  hash: md5
+  path: 2026-municipales-2-elus.csv

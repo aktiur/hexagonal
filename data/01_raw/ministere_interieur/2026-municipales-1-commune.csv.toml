@@ -1,0 +1,6 @@
+nom = "Résultats du premier tour des municipales 2026 par commune"
+description = """
+
+"""
+mimetype = "text/csv"
+editeur = "Ministère de l'Intérieur"

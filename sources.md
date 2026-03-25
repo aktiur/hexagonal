@@ -86,8 +86,12 @@
   - [Candidats au 2e tour des élections des conseillers de la métropole de Lyon en 2026](#data/01_raw/ministere_interieur/2026-metropolitaines-2-candidats.csv)
   - [Résultats du 1er tour des élections municipales de 2026 par bureau de vote](#data/01_raw/ministere_interieur/2026-municipales-1-bureau_de_vote.csv)
   - [Listes candidates au premier tour des élections municipales 2026](#data/01_raw/ministere_interieur/2026-municipales-1-candidats.csv)
+  - [Résultats du premier tour des municipales 2026 par commune](#data/01_raw/ministere_interieur/2026-municipales-1-commune.csv)
+  - [Liste des personnes élues au premier tour des élections municipales 2026](#data/01_raw/ministere_interieur/2026-municipales-1-elus.csv)
   - [2026-municipales-2-bureau_de_vote](#data/01_raw/ministere_interieur/2026-municipales-2-bureau_de_vote.csv)
   - [Candidats au 2e tour des élections municipales 2026](#data/01_raw/ministere_interieur/2026-municipales-2-candidats.csv)
+  - [Résultats du deuxième tour des élections municipales 2026](#data/01_raw/ministere_interieur/2026-municipales-2-commune.csv)
+  - [Liste des personnes élues au deuxième tour des élections municipales 2026](#data/01_raw/ministere_interieur/2026-municipales-2-elus.csv)
   - [Répertoire national des élus — conseillers d&#39;arrondissement de Paris, Marseille et Lyon](#data/01_raw/rne/conseillers_arrondissement.csv)
   - [Répertoire national des élus — membres des assemblées délibérantes des collectivites à statut particulier](#data/01_raw/rne/conseillers_csp.csv)
   - [Répertoire national des élus — conseillers départementaux](#data/01_raw/rne/conseillers_departementaux.csv)
@@ -1170,6 +1174,32 @@ et 16921.
 
 La composition des listes candidates aux élections municipales 2026.
 
+### Résultats du premier tour des municipales 2026 par commune
+<a name="data/01_raw/ministere_interieur/2026-municipales-1-commune.csv"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/ministere_interieur/2026-municipales-1-commune.csv |
+| Format de fichier | text/csv |
+| Éditeur | Ministère de l&#39;Intérieur |
+| URL d&#39;origine | https://static.data.gouv.fr/resources/elections-municipales-2026-resultats-du-premier-tour/20260320-164339/municipales-2026-resultats-communes-2026-03-20.csv |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/2c/b5bbb05feecb434b47105b9d0ec3dc |
+
+
+
+### Liste des personnes élues au premier tour des élections municipales 2026
+<a name="data/01_raw/ministere_interieur/2026-municipales-1-elus.csv"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/ministere_interieur/2026-municipales-1-elus.csv |
+| Format de fichier | text/csv |
+| Éditeur | Ministère de l&#39;Intérieur |
+| URL d&#39;origine | https://www.data.gouv.fr/api/1/datasets/r/bc9bca84-beb4-4525-b79a-23ecca48d86e |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/fa/52c8775e73be6dab3cd4c7aca07c82 |
+
+
+
 ### 2026-municipales-2-bureau_de_vote
 <a name="data/01_raw/ministere_interieur/2026-municipales-2-bureau_de_vote.csv"></a>
 
@@ -1194,6 +1224,32 @@ La composition des listes candidates aux élections municipales 2026.
 | Éditeur | Ministère de l&#39;Intérieur |
 | URL d&#39;origine | https://www.data.gouv.fr/api/1/datasets/r/c7e8ced6-3d08-452e-af06-d553634b6d61 |
 | URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/3a/804f3bf8287dc2779008bd7b9cce7e |
+
+
+
+### Résultats du deuxième tour des élections municipales 2026
+<a name="data/01_raw/ministere_interieur/2026-municipales-2-commune.csv"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/ministere_interieur/2026-municipales-2-commune.csv |
+| Format de fichier | text/csv |
+| Éditeur | Ministère de l&#39;Intérieur |
+| URL d&#39;origine | https://www.data.gouv.fr/api/1/datasets/r/6ff67a28-01bf-459e-beca-dd7aa8132dc1 |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/23/1302f86f349fbb0367496935a4f2cd |
+
+
+
+### Liste des personnes élues au deuxième tour des élections municipales 2026
+<a name="data/01_raw/ministere_interieur/2026-municipales-2-elus.csv"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/ministere_interieur/2026-municipales-2-elus.csv |
+| Format de fichier | text/csv |
+| Éditeur | Ministère de l&#39;Intérieur |
+| URL d&#39;origine | https://www.data.gouv.fr/api/1/datasets/r/ddd5a822-0cb1-4ebd-9da3-193411ab4d30 |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/d9/e9ea0a05a9f48cb5046ee359ad3627 |
 
 
 
