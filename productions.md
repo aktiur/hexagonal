@@ -1957,7 +1957,7 @@ Cette production dépend des sources suivantes :
 <tr>
     <td><code>code_iris</code></td>
     <td><code>code_iris</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>taux_pauvrete_60</code></td>
@@ -2149,22 +2149,22 @@ quelles communes ils sont associés.
 <tr>
     <td><code>code_postal</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>code_commune</code></td>
     <td><code>code_commune</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>libelle_acheminement</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>ligne5</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 
 </tbody>
@@ -2206,27 +2206,27 @@ La liste des arrondissemens français telle qu&#39;extraites du code officiel g�
 <tr>
     <td><code>code_arrondissement</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>code_departement</code></td>
     <td><code>code_departement</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>code_commune_chef_lieu</code></td>
     <td><code>code_commune</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>type_nom</code></td>
     <td><code>entier</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>nom</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 
 </tbody>
@@ -2281,17 +2281,17 @@ vrai canton amputé de la fraction de la commune principale que comprend le vrai
 <tr>
     <td><code>code_canton</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>code_departement</code></td>
     <td><code>code_departement</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>code_commune_bureau_centralisateur</code></td>
     <td><code>code_commune</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>type_canton</code></td>
@@ -2303,12 +2303,12 @@ canton fictif.
 <tr>
     <td><code>type_nom_canton</code></td>
     <td><code>entier</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>nom_canton</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 
 </tbody>
@@ -3021,22 +3021,22 @@ le code postal.
 <tr>
     <td><code>code_postal</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>code_commune_principale</code></td>
     <td><code>code_commune</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>nom_commune_principale</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>population_commune_principale</code></td>
     <td><code>entier</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>autres_communes</code></td>
@@ -3046,7 +3046,7 @@ le code postal.
 <tr>
     <td><code>population_totale</code></td>
     <td><code>entier</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 
 </tbody>
@@ -3140,7 +3140,7 @@ municipale
 <tr>
     <td><code>population_municipale_2023</code></td>
     <td><code>entier</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>population_municipale_2022</code></td>
@@ -3441,7 +3441,7 @@ Cette production dépend des sources suivantes :
 <tr>
     <td><code>population_municipale</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 
 </tbody>
@@ -3963,7 +3963,7 @@ Cette production dépend des sources suivantes :
 <tr>
     <td><code>code_commune</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>bureau_de_vote</code></td>
@@ -4063,7 +4063,7 @@ Cette production dépend des sources suivantes :
 <tr>
     <td><code>code_commune</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>bureau_de_vote</code></td>
@@ -4154,57 +4154,57 @@ Cette production dépend des sources suivantes :
 <tr>
     <td><code>code_commune</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>bureau_de_vote</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>numero_tour</code></td>
     <td><code>entier</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>inscrits</code></td>
     <td><code>entier</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>votants</code></td>
     <td><code>entier</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>exprimes</code></td>
     <td><code>entier</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>numero_panneau</code></td>
     <td><code>entier</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>nom</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>prenom</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>nuance</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>voix</code></td>
     <td><code>entier</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 
 </tbody>
@@ -4244,7 +4244,7 @@ Cette production dépend des sources suivantes :
 <tr>
     <td><code>code_commune</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>bureau_de_vote</code></td>
@@ -4339,7 +4339,7 @@ Cette production dépend des sources suivantes :
 <tr>
     <td><code>code_commune</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>bureau_de_vote</code></td>
@@ -4434,7 +4434,7 @@ Cette production dépend des sources suivantes :
 <tr>
     <td><code>code_commune</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>bureau_de_vote</code></td>
@@ -4524,7 +4524,7 @@ Cette production dépend des sources suivantes :
 <tr>
     <td><code>code_commune</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>bureau_de_vote</code></td>
@@ -4614,7 +4614,7 @@ Cette production dépend des sources suivantes :
 <tr>
     <td><code>code_commune</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>bureau_de_vote</code></td>
@@ -4694,7 +4694,7 @@ Cette production dépend des sources suivantes :
 <tr>
     <td><code>code_commune</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>bureau_de_vote</code></td>
@@ -4789,7 +4789,7 @@ Cette production dépend des sources suivantes :
 <tr>
     <td><code>code_commune</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>bureau_de_vote</code></td>
@@ -4884,7 +4884,7 @@ Cette production dépend des sources suivantes :
 <tr>
     <td><code>code_commune</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>bureau_de_vote</code></td>
@@ -4959,7 +4959,7 @@ Cette production dépend des sources suivantes :
 <tr>
     <td><code>code_commune</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>bureau_de_vote</code></td>
@@ -5034,7 +5034,7 @@ Cette production dépend des sources suivantes :
 <tr>
     <td><code>code_commune</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>bureau_de_vote</code></td>
@@ -5120,72 +5120,72 @@ Cette production dépend des sources suivantes :
 <tr>
     <td><code>code_region</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>code_section_electorale</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>numero_panneau</code></td>
     <td><code>entier</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>code_depot</code></td>
     <td><code>entier</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>liste</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>nuance</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>ordre</code></td>
     <td><code>entier</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>sexe</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>nom</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>prenom</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>nom_naissance</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>prenom_naissance</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>date_naissance</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>profession</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 
 </tbody>
@@ -5225,7 +5225,7 @@ Cette production dépend des sources suivantes :
 <tr>
     <td><code>code_commune</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>bureau_de_vote</code></td>
@@ -5310,7 +5310,7 @@ Cette production dépend des sources suivantes :
 <tr>
     <td><code>code_commune</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>bureau_de_vote</code></td>
@@ -5605,7 +5605,7 @@ Cette production dépend des sources suivantes :
 <tr>
     <td><code>code_commune</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>bureau_de_vote</code></td>
@@ -5900,7 +5900,7 @@ Cette production dépend des sources suivantes :
 <tr>
     <td><code>code_commune</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>bureau_de_vote</code></td>
@@ -6070,7 +6070,7 @@ Cette production dépend des sources suivantes :
 <tr>
     <td><code>code_commune</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>bureau_de_vote</code></td>
@@ -6316,7 +6316,7 @@ Cette production dépend des sources suivantes :
 <tr>
     <td><code>code_commune</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>bureau_de_vote</code></td>
@@ -6402,52 +6402,52 @@ Cette production dépend des sources suivantes :
 <tr>
     <td><code>numero_panneau</code></td>
     <td><code>entier</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>liste</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>ordre</code></td>
     <td><code>entier</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>sexe</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>nom</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>prenom</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>date_naissance</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>profession</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>code_personnalite</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>sortant</code></td>
     <td><code>bool</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 
 </tbody>
@@ -6567,7 +6567,7 @@ Cette production dépend des sources suivantes :
 <tr>
     <td><code>code_commune</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>bureau_de_vote</code></td>
@@ -6857,7 +6857,7 @@ Cette production dépend des sources suivantes :
 <tr>
     <td><code>code_commune</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>bureau_de_vote</code></td>
@@ -7209,67 +7209,67 @@ Cette production dépend des sources suivantes :
 <tr>
     <td><code>code_commune</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>bureau_de_vote</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>inscrits</code></td>
     <td><code>entier</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>votants</code></td>
     <td><code>entier</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>exprimes</code></td>
     <td><code>entier</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>numero_panneau</code></td>
     <td><code>entier</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>nuance</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>nom</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>prenom</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>sexe</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>liste_court</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>liste_long</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>voix</code></td>
     <td><code>entier</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 
 </tbody>
@@ -7310,62 +7310,62 @@ Cette production dépend des sources suivantes :
 <tr>
     <td><code>code_commune</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>numero_panneau</code></td>
     <td><code>entier</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>liste_court</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>liste</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>nuance</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>ordre</code></td>
     <td><code>entier</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>sexe</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>nom</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>prenom</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>nationalite</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>code_personnalite</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>candidat_communautaire</code></td>
     <td><code>bool</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 
 </tbody>
@@ -7408,37 +7408,37 @@ communautaires attribués à la liste.
 <tr>
     <td><code>code_commune</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>numero_panneau</code></td>
     <td><code>entier</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>nuance</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>liste_court</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>liste</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>elus_cm</code></td>
     <td><code>entier</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>elus_cc</code></td>
     <td><code>entier</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 
 </tbody>
@@ -7479,67 +7479,67 @@ Cette production dépend des sources suivantes :
 <tr>
     <td><code>code_commune</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>bureau_de_vote</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>inscrits</code></td>
     <td><code>entier</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>votants</code></td>
     <td><code>entier</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>exprimes</code></td>
     <td><code>entier</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>numero_panneau</code></td>
     <td><code>entier</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>nuance</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>nom</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>prenom</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>sexe</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>liste_court</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>liste_long</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>voix</code></td>
     <td><code>entier</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 
 </tbody>
@@ -7580,62 +7580,62 @@ Cette production dépend des sources suivantes :
 <tr>
     <td><code>code_commune</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>numero_panneau</code></td>
     <td><code>entier</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>liste_court</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>liste</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>nuance</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>ordre</code></td>
     <td><code>entier</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>sexe</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>nom</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>prenom</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>nationalite</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>code_personnalite</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>candidat_communautaire</code></td>
     <td><code>bool</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 
 </tbody>
@@ -7678,27 +7678,27 @@ communautaires attribués à la liste.
 <tr>
     <td><code>code_commune</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>numero_panneau</code></td>
     <td><code>entier</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>nuance</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>liste_court</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>liste</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>elus_cm</code></td>
@@ -7912,27 +7912,27 @@ liste et à quel ordre il figurait au premier tour.
 <tr>
     <td><code>code_commune</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>numero_panneau</code></td>
     <td><code>entier</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>ordre</code></td>
     <td><code>entier</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>numero_panneau_t1</code></td>
     <td><code>entier</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>ordre_t1</code></td>
     <td><code>entier</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 
 </tbody>
@@ -7991,7 +7991,7 @@ listes de premier tour.
 <tr>
     <td><code>code_commune</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>numero_panneau</code></td>
@@ -8085,62 +8085,62 @@ quelles listes elle appartenait au premier tour, et le cas échéant, au deuxiè
 <tr>
     <td><code>code_commune</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>nom</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>prenom</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>sexe</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>elu_cm</code></td>
     <td><code>bool</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>elu_cc</code></td>
     <td><code>entier</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>numero_panneau_t1</code></td>
     <td><code>entier</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>liste_t1</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>nuance_t1</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>numero_panneau_t2</code></td>
     <td><code>entier</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>liste_t2</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>nuance_t2</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 
 </tbody>
@@ -8578,12 +8578,12 @@ Cette production dépend des sources suivantes :
 <tr>
     <td><code>alliance</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>parti</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 
 </tbody>
@@ -8724,12 +8724,12 @@ Cette production dépend des sources suivantes :
 <tr>
     <td><code>alliance</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 <tr>
     <td><code>parti</code></td>
     <td><code>str</code></td>
-    <td>None</td>
+    <td></td>
   </tr>
 
 </tbody>

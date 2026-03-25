@@ -40,7 +40,7 @@ def build(specs):
     productions_template = env.get_template("productions.md")
 
     sources = [f for f in specs.values() if isinstance(f, SourceSpec)]
-    editeurs = {}
+    editeurs: dict[str, list[dict]] = {}
     for source in sources:
         file = dvc_files[source.path]
         props = source.props()

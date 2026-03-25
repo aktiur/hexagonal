@@ -50,7 +50,7 @@
   <tr>
     <td><code>{{ id }}</code></td>
     <td><code>{{ c.type }}</code></td>
-    <td>{{ c.description }}</td>
+    <td>{{ c.description or "" }}</td>
   </tr>
 {% endfor %}
 </tbody>
