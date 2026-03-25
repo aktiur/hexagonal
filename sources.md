@@ -68,7 +68,7 @@
   - [Résultats du deuxième tour de l&#39;élection présidentielle 2022 par bureau de vote](#data/01_raw/ministere_interieur/2022-presidentielle-2-bureau_de_vote.csv)
   - [Résultats du deuxième tour de l&#39;élection présidentielle 2022 par circonscription législative](#data/01_raw/ministere_interieur/2022-presidentielle-2-circonscription.csv)
   - [Résultats des élections européennes 2024 par bureau de vote](#data/01_raw/ministere_interieur/2024-europeenne-bureau_de_vote.csv)
-  - [2024-europeenne-candidats](#data/01_raw/ministere_interieur/2024-europeenne-candidats.csv)
+  - [Composition des listes candidates à l&#39;élection européenne de 2024](#data/01_raw/ministere_interieur/2024-europeenne-candidats.csv)
   - [Résultats des élections européennes 2024 par circonscription législative](#data/01_raw/ministere_interieur/2024-europeenne-circonscription.csv)
   - [Résultats du premier tour des élections législatives 2024 par bureau de vote](#data/01_raw/ministere_interieur/2024-legislatives-1-bureau_de_vote.csv)
   - [Liste des candidats au premier tour des élections législatives 2024](#data/01_raw/ministere_interieur/2024-legislatives-1-candidats.csv)
@@ -88,7 +88,7 @@
   - [Listes candidates au premier tour des élections municipales 2026](#data/01_raw/ministere_interieur/2026-municipales-1-candidats.csv)
   - [Résultats du premier tour des municipales 2026 par commune](#data/01_raw/ministere_interieur/2026-municipales-1-commune.csv)
   - [Liste des personnes élues au premier tour des élections municipales 2026](#data/01_raw/ministere_interieur/2026-municipales-1-elus.csv)
-  - [2026-municipales-2-bureau_de_vote](#data/01_raw/ministere_interieur/2026-municipales-2-bureau_de_vote.csv)
+  - [Résultats du deuxième tour des élections municipales 2026 par bureau de vote](#data/01_raw/ministere_interieur/2026-municipales-2-bureau_de_vote.csv)
   - [Candidats au 2e tour des élections municipales 2026](#data/01_raw/ministere_interieur/2026-municipales-2-candidats.csv)
   - [Résultats du deuxième tour des élections municipales 2026](#data/01_raw/ministere_interieur/2026-municipales-2-commune.csv)
   - [Liste des personnes élues au deuxième tour des élections municipales 2026](#data/01_raw/ministere_interieur/2026-municipales-2-elus.csv)
@@ -942,7 +942,7 @@ et 16921.
 | URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/b3/a9085acb27df6669ac04d5aca2e5da |
 
 
-### 2024-europeenne-candidats
+### Composition des listes candidates à l&#39;élection européenne de 2024
 <a name="data/01_raw/ministere_interieur/2024-europeenne-candidats.csv"></a>
 
 | Propriété | Valeur |
@@ -1200,7 +1200,7 @@ La composition des listes candidates aux élections municipales 2026.
 
 
 
-### 2026-municipales-2-bureau_de_vote
+### Résultats du deuxième tour des élections municipales 2026 par bureau de vote
 <a name="data/01_raw/ministere_interieur/2026-municipales-2-bureau_de_vote.csv"></a>
 
 | Propriété | Valeur |

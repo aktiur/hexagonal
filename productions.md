@@ -89,7 +89,7 @@
   - [Résultats du deuxième tour de l&#39;élection présidentielle 2022 par circonscription législative](#data/02_clean/elections/2022-presidentielle-2-circonscription.parquet)
   - [Parrainages validés pour la présidentielle de 2022](#data/02_clean/elections/2022-presidentielle-parrainages.csv)
   - [Résultats des élections européennes 2024 par bureau de vote](#data/02_clean/elections/2024-europeenne-bureau_de_vote.parquet)
-  - [2024-europeenne-candidats](#data/02_clean/elections/2024-europeenne-candidats.parquet)
+  - [Composition des listes candidates à l&#39;élection européenne de 2024](#data/02_clean/elections/2024-europeenne-candidats.parquet)
   - [Résultats des élections européennes 2024 par circonscription législative](#data/02_clean/elections/2024-europeenne-circonscription.parquet)
   - [Résultats du premier tour des élections législatives 2024 par bureau de vote](#data/02_clean/elections/2024-legislatives-1-bureau_de_vote.parquet)
   - [Liste des candidats au premier tour des élections législatives 2024](#data/02_clean/elections/2024-legislatives-1-candidats.csv)
@@ -101,7 +101,7 @@
   - [Résultats du 1er tour des élections municipales 2026 par bureau de vote](#data/02_clean/elections/2026-municipales-1-bureau_de_vote.parquet)
   - [Candidats au 1er tour des municipales 2026](#data/02_clean/elections/2026-municipales-1-candidats.parquet)
   - [Nombre de sièges gagnées par liste candidate au premier tour des élections municipales 2026](#data/02_clean/elections/2026-municipales-1-sieges.parquet)
-  - [2026-municipales-2-bureau_de_vote](#data/02_clean/elections/2026-municipales-2-bureau_de_vote.parquet)
+  - [Résultats du deuxième tour des élections municipales 2026 par bureau de vote](#data/02_clean/elections/2026-municipales-2-bureau_de_vote.parquet)
   - [Candidats au 2ème tour des municipales 2026](#data/02_clean/elections/2026-municipales-2-candidats.parquet)
   - [Nombre de sièges gagnées par liste candidate au deuxième tour des élections municipales 2026](#data/02_clean/elections/2026-municipales-2-sieges.parquet)
   - [Liste des candidats aux élections législatives de 2024](#data/03_main/elections/2022-legislatives-1-candidats.csv)
@@ -6376,7 +6376,7 @@ Cette production dépend des sources suivantes :
         </li>
     </ul>
 
-### 2024-europeenne-candidats
+### Composition des listes candidates à l&#39;élection européenne de 2024
 <a name="data/02_clean/elections/2024-europeenne-candidats.parquet"></a>
 
 | Propriété | Valeur |
@@ -6458,7 +6458,7 @@ Cette production dépend des sources suivantes :
 Cette production dépend des sources suivantes :
 
 <ul>
-    <li><a href="sources.md#data/01_raw/ministere_interieur/2024-europeenne-candidats.csv">2024-europeenne-candidats</a>
+    <li><a href="sources.md#data/01_raw/ministere_interieur/2024-europeenne-candidats.csv">Composition des listes candidates à l&#39;élection européenne de 2024</a>
         </li>
     </ul>
 
@@ -7453,7 +7453,7 @@ Cette production dépend des sources suivantes :
         </li>
     </ul>
 
-### 2026-municipales-2-bureau_de_vote
+### Résultats du deuxième tour des élections municipales 2026 par bureau de vote
 <a name="data/02_clean/elections/2026-municipales-2-bureau_de_vote.parquet"></a>
 
 | Propriété | Valeur |
@@ -7550,7 +7550,7 @@ Cette production dépend des sources suivantes :
 Cette production dépend des sources suivantes :
 
 <ul>
-    <li><a href="sources.md#data/01_raw/ministere_interieur/2026-municipales-2-bureau_de_vote.csv">2026-municipales-2-bureau_de_vote</a>
+    <li><a href="sources.md#data/01_raw/ministere_interieur/2026-municipales-2-bureau_de_vote.csv">Résultats du deuxième tour des élections municipales 2026 par bureau de vote</a>
         </li>
     </ul>
 
