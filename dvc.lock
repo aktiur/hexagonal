@@ -2273,10 +2273,10 @@ stages:
       size: 47387
     - path: src/hexagonal/candidatures/municipales2026/elus.py
       hash: md5
-      md5: e0550332e27882e4f9dfc1f803afc036
-      size: 3859
+      md5: 4f575b2dbe634eed50b647d66e12f2a6
+      size: 3770
     outs:
     - path: data/03_main/elections/2026-municipales-elus.parquet
       hash: md5
-      md5: e6c7ad314cd26677a5739ac90c4e2b02
-      size: 4341987
+      md5: 1102824205509850828a991ef04fa268
+      size: 4372520

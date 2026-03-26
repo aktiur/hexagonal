@@ -1,4 +1,3 @@
-from amqp.spec import method
 import polars as pl
 import click
 
@@ -54,10 +53,7 @@ def main(
         )
         .with_columns(
             elu_cm=pl.col("ordre") <= pl.col("elus_cm"),
-            elu_cc=(
-                pl.col("ordre_cc").is_not_null()
-                & (pl.col("ordre_cc") & pl.col("elus_cc"))
-            ),
+            elu_cc=((pl.col("ordre_cc") <= pl.col("elus_cc")).fill_null(False)),
         )
         .select(
             "code_commune",
@@ -66,7 +62,7 @@ def main(
             "sexe",
             "elu_cm",
             "elu_cc",
-            pl.col("numero_panneau", "liste", "nuance").name.suffix("_t1"),
+            pl.col("numero_panneau", "liste", "nuance", "ordre").name.suffix("_t1"),
         )
     )
 
@@ -82,10 +78,7 @@ def main(
         )
         .with_columns(
             elu_cm=pl.col("ordre") <= pl.col("elus_cm"),
-            elu_cc=(
-                pl.col("ordre_cc").is_not_null()
-                & (pl.col("ordre_cc") & pl.col("elus_cc"))
-            ),
+            elu_cc=((pl.col("ordre_cc") <= pl.col("elus_cc")).fill_null(False)),
         )
         .join(
             composition_nominative,
@@ -107,12 +100,13 @@ def main(
             "numero_panneau_t1",
             "liste_t1",
             "nuance_t1",
-            pl.col("numero_panneau", "liste", "nuance").name.suffix("_t2"),
+            "ordre_t1",
+            pl.col("numero_panneau", "liste", "nuance", "ordre").name.suffix("_t2"),
         )
     )
 
     candidats = pl.concat([candidats_t2, candidats_t1], how="diagonal").sort(
-        ["code_commune", "numero_panneau_t1", "nom", "prenom"]
+        ["code_commune", "numero_panneau_t1", "ordre_t1"]
     )
 
     candidats.write_parquet(elus)
