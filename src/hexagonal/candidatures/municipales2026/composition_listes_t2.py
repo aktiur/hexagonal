@@ -1,7 +1,37 @@
+from functools import reduce
+
 import click
 import polars as pl
 
 from hexagonal.trigram_search import TrigramIndex
+
+
+def traitement_cas_special(cond, correction):
+    (code, numero, ordre), valeur = correction
+
+    return cond.when(
+        (pl.col("code_commune") == code)
+        & (pl.col("numero_panneau") == numero)
+        & (pl.col("ordre") == ordre)
+    ).then(pl.lit(valeur))
+
+
+def correction_numero_panneau(cas):
+    corrections = [(c[:3], c[3]) for c in cas]
+    return (
+        reduce(traitement_cas_special, corrections, pl)
+        .otherwise(pl.col("numero_panneau_t1"))
+        .alias("numero_panneau_t1")
+    )
+
+
+def correction_ordre(cas):
+    corrections = [(c[:3], c[4]) for c in cas]
+    return (
+        reduce(traitement_cas_special, corrections, pl)
+        .otherwise(pl.col("ordre_t1"))
+        .alias("ordre_t1")
+    )
 
 
 def normaliser(colonne):
@@ -31,6 +61,7 @@ def trouver_correspondances(candidatures_t1, candidatures_t2):
         suffix="_t1",
     )
 
+    # la deuxième condition permet d'éliminer les cas d'homonymie nom + prénom
     candidatures_correspondent = (
         pl.col("index_t1").is_not_null()
         & ~pl.struct("code_commune", "numero_panneau", "ordre").is_duplicated()
@@ -56,39 +87,32 @@ def trouver_correspondances(candidatures_t1, candidatures_t2):
         ~pl.col("index").is_in(jointure_simple["index_t1"].implode())
     ).with_columns(cle_comparaison)
 
-    indexes: dict[str, TrigramIndex[int]] = {}
+    candidatures_t2_restantes = candidatures_t2.filter(
+        ~pl.col("index").is_in(jointure_simple["index"].implode())
+    ).with_columns(cle_comparaison)
+
+    jointure_fuzzy = []
 
     for commune in communes_anomalies:
-        indexes[commune] = TrigramIndex(
-            candidatures_t1_restantes.filter(pl.col("code_commune") == commune)
-            .select("clé", "index")
-            .rows()
+        cs_t2 = candidatures_t2_restantes.filter(pl.col("code_commune") == commune)
+        cs_t1 = candidatures_t1_restantes.filter(pl.col("code_commune") == commune)
+
+        index = TrigramIndex(cs_t1.select("clé", "index").iter_rows())
+
+        matches = [index.search(cle)[0][1] for cle in cs_t2["clé"]]
+
+        jointure_fuzzy.append(
+            pl.DataFrame({"index_t2": cs_t2["index"], "index_t1": matches})
         )
 
-    def mapper(c):
-        results = indexes[c["code_commune"]].search(c["clé"], n=1)
-        if results:
-            return {"score": results[0][0], "index_t1": results[0][1]}
-        return None
-
-    rapprochements = (
-        candidatures_t2.filter(
-            ~pl.col("index").is_in(jointure_simple["index"].implode())
-        )
-        .with_columns(
-            match=pl.struct(pl.col("code_commune"), cle_comparaison).map_elements(
-                mapper,
-                return_dtype=pl.Struct({"score": pl.Float64, "index_t1": pl.Int64}),
-            ),
-        )
-        .unnest("match")
+    jointure_fuzzy = (
+        pl.concat(jointure_fuzzy)
         .join(
-            candidatures_t1_restantes,
-            left_on=["index_t1"],
+            candidatures_t2,
+            left_on=["index_t2"],
             right_on=["index"],
-            how="left",
-            suffix="_t1",
         )
+        .join(candidatures_t1, left_on=["index_t1"], right_on=["index"], suffix="_t1")
     )
 
     return pl.concat(
@@ -100,7 +124,7 @@ def trouver_correspondances(candidatures_t1, candidatures_t2):
                 "numero_panneau_t1",
                 "ordre_t1",
             ),
-            rapprochements.select(
+            jointure_fuzzy.select(
                 "code_commune",
                 "numero_panneau",
                 "ordre",
@@ -153,14 +177,17 @@ def main(
 
     correspondances = trouver_correspondances(candidatures_t1, candidatures_t2)
 
+    speciaux = [
+        # deux Fatima ALI avec le même nom dans la même liste à Tsingoni
+        ("97617", 5, 10, 5, 4),
+        ("97617", 5, 20, 5, 20),
+        # deux Isabelle LEFEBVRE, dans deux listes qui fusionnent ensemble
+        ("59009", 5, 13, 3, 6),
+    ]
+
     correspondances = correspondances.with_columns(
-        ordre_t1=pl.when(
-            (pl.col("code_commune") == "97617")
-            & (pl.col("numero_panneau") == 5)
-            & (pl.col("ordre") == 10)
-        )
-        .then(pl.lit(4))
-        .otherwise(pl.col("ordre_t1"))
+        correction_numero_panneau(speciaux),
+        correction_ordre(speciaux),
     )
 
     correspondances.write_parquet(composition_nominative)
@@ -181,6 +208,12 @@ def main(
         left_on=["code_commune", "numero_panneau_t1"],
         right_on=["code_commune", "numero_panneau"],
         suffix="_t1",
+    ).sort(
+        [
+            "code_commune",
+            "numero_panneau",
+            "numero_panneau_t1",
+        ]
     ).select(
         "code_commune",
         "numero_panneau",

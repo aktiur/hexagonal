@@ -4,67 +4,81 @@ import string
 from functools import reduce
 from typing import Iterable, NewType, Tuple
 
-from pyroaring import BitMap
+from pyroaring import BitMap, BitMap64
 
 Trigram = NewType("Trigram", str)
 
 
-class TrigramIndex[T]:
-    ALPHABET = f" {string.ascii_lowercase}{string.digits}"
-    B = len(ALPHABET)
+DEFAULT_ALPHABET = f" {string.ascii_lowercase}{string.digits}"
 
-    def __init__(self, words: Iterable[Tuple[str, T]] | None = None):
-        self.direct_index: dict[str, BitMap] = {}
-        self.inverted_index: dict[Trigram, set[str]] = {}
-        self.metadata: dict[str, T] = {}
+
+class TrigramIndex[T]:
+    def __init__(
+        self,
+        words: Iterable[Tuple[str, T]] | None = None,
+        *,
+        alphabet=DEFAULT_ALPHABET,
+        empty_character=" ",
+    ):
+        self._alphabet = alphabet
+        self._empty_character = empty_character
+
+        assert len(alphabet) ** 4 < 2**32, "Alphabet too large"
+
+        self._direct_index: dict[str, BitMap] = {}
+        self._inverted_index: dict[Trigram, set[str]] = {}
+        self._metadata: dict[str, T] = {}
 
         if words is not None:
             for word, metadata in words:
                 self.add(word, metadata)
 
-    @classmethod
-    def _trigram_number(cls, tri: Trigram):
+    def _trigram_number(self, tri: Trigram):
+        alphabet = self._alphabet
+        b = len(alphabet)
         return (
-            cls.ALPHABET.index(tri[0])
-            + cls.B * cls.ALPHABET.index(tri[1])
-            + cls.B**2 * cls.ALPHABET.index(tri[2])
+            alphabet.index(tri[0])
+            + b * alphabet.index(tri[1])
+            + b**2 * alphabet.index(tri[2])
         )
 
-    @staticmethod
-    def _trigrams(word):
+    def _trigrams(self, word):
+        e = self._empty_character
         return [
             Trigram(f"{a}{b}{c}")
-            for a, b, c in zip(f"  {word}", f" {word} ", f"{word}  ", strict=True)
+            for a, b, c in zip(
+                f"{e}{e}{word}", f"{e}{word}{e}", f"{word}{e}{e}", strict=True
+            )
         ]
 
     def add(self, word: str, metadata: T):
         trigrams = self._trigrams(word)
-        bm = self.direct_index[word] = BitMap()
+        bm = self._direct_index[word] = BitMap()
 
         if metadata is not None:
-            self.metadata[word] = metadata
+            self._metadata[word] = metadata
 
         for trigram in trigrams:
             i = self._trigram_number(trigram)
             bm.add(i)
-            self.inverted_index.setdefault(trigram, set()).add(word)
+            self._inverted_index.setdefault(trigram, set()).add(word)
 
     def search(self, word, n=1) -> list[Tuple[float, T]]:
         trigrams = self._trigrams(word)
 
         candidates = reduce(
             operator.or_,
-            (self.inverted_index.get(trigram, set()) for trigram in trigrams),
+            (self._inverted_index.get(trigram, set()) for trigram in trigrams),
         )
         bm = BitMap([self._trigram_number(trigram) for trigram in trigrams])
 
         heap: list[Tuple[float, T]] = []
 
         for c in candidates:
-            score = len(bm & self.direct_index[c]) / min(
-                len(bm), len(self.direct_index[c])
+            score = len(bm & self._direct_index[c]) / min(
+                len(bm), len(self._direct_index[c])
             )
-            m = self.metadata[c]
+            m = self._metadata[c]
 
             if len(heap) < n:
                 heap.append((score, m))
