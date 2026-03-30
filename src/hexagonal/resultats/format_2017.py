@@ -128,21 +128,13 @@ repeated_headers = {
 
 
 transforms = {
-    "bureau_de_vote": "category",
     "inscrits": "int",
     "votants": "int",
     "exprimes": "int",
     "blancs": "int",
     "voix": "int",
-    "sexe": "category",
     "numero_panneau": "int",
     "numero_liste": "int",
-    "nuance": "category",
-    "nom": "category",
-    "prenom": "category",
-    "liste_court": "category",
-    "liste_long": "category",
-    "tete_liste": "category",
 }
 
 identifiants = ["code_commune", "code_secteur", "bureau_de_vote", "circonscription"]
@@ -233,7 +225,9 @@ def read_file(src, delimiter=";", encoding="utf-8"):
                         downcast="unsigned",
                     )
                 else:
-                    resultats[field] = resultats[field].astype(transform)
+                    resultats[field] = (
+                        resultats[field].replace("", None).astype(transform)
+                    )
         except ValueError as e:
             print(f"global_fields: {common_fields!r}")
             print(f"repeated_fields: {candidate_specific_fields!r}")
