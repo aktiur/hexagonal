@@ -127,15 +127,17 @@ repeated_headers = {
 }
 
 
-transforms = {
-    "inscrits": "int",
-    "votants": "int",
-    "exprimes": "int",
-    "blancs": "int",
-    "voix": "int",
-    "numero_panneau": "int",
-    "numero_liste": "int",
-}
+champs_entiers = [
+    "inscrits",
+    "votants",
+    "exprimes",
+    "blancs",
+    "voix",
+    "numero_panneau",
+    "numero_liste",
+]
+
+champs_nuls_si_vide = ["nuance"]
 
 identifiants = ["code_commune", "code_secteur", "bureau_de_vote", "circonscription"]
 population = ["inscrits", "votants", "exprimes"]
@@ -214,24 +216,23 @@ def read_file(src, delimiter=";", encoding="utf-8"):
 
     resultats = pd.DataFrame(all_entries, columns=fields)
 
-    for field, transform in transforms.items():
-        try:
-            if field in resultats.columns:
-                if transform == "int":
-                    resultats[field] = pd.to_numeric(
-                        resultats[field],
-                        errors="coerce",
-                        dtype_backend="numpy_nullable",
-                        downcast="unsigned",
-                    )
-                else:
-                    resultats[field] = (
-                        resultats[field].replace("", None).astype(transform)
-                    )
-        except ValueError as e:
-            print(f"global_fields: {common_fields!r}")
-            print(f"repeated_fields: {candidate_specific_fields!r}")
-            raise ValueError(f"Echec transformation {transform} sur {field}") from e
+    for field in champs_entiers:
+        if field in resultats.columns:
+            try:
+                resultats[field] = pd.to_numeric(
+                    resultats[field],
+                    errors="coerce",
+                    dtype_backend="numpy_nullable",
+                    downcast="unsigned",
+                )
+            except ValueError as e:
+                print(f"global_fields: {common_fields!r}")
+                print(f"repeated_fields: {candidate_specific_fields!r}")
+                raise ValueError(f"Echec transformation entiers sur {field}") from e
+
+    for field in champs_nuls_si_vide:
+        if field in resultats.columns:
+            resultats[field] = resultats[field].replace("", None)
 
     return resultats
 
@@ -258,9 +259,7 @@ def clean_results(src, dest, delimiter=";", encoding="utf-8"):
         ].str.zfill(3)
 
     if "code_commune" in resultats.columns:
-        resultats["code_commune"] = normaliser_code_commune(
-            resultats["code_commune"]
-        ).astype("category")
+        resultats["code_commune"] = normaliser_code_commune(resultats["code_commune"])
 
     ids = [c for c in identifiants if c in resultats.columns]
 
