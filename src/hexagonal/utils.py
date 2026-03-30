@@ -1,11 +1,9 @@
 import csv
 import json
 import logging
-import os
 import re
 from collections import defaultdict
 from contextlib import contextmanager
-from typing import Iterable, Optional, TextIO, Union
 
 from glom import Iter, glom
 
@@ -19,9 +17,7 @@ FAUX = "F"
 
 
 @contextmanager
-def iterate_csv(
-    file: Union[str, bytes, os.PathLike, TextIO], encoding="utf-8", **csv_options
-):
+def iterate_csv(file, encoding="utf-8", **csv_options):
     should_close = False
 
     if isinstance(file, (str, bytes)):

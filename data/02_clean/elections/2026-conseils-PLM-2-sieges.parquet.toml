@@ -1,0 +1,34 @@
+nom = "Nombre de sièges gagnées par liste candidate au deuxième tour des élections des conseils de secteurs de Paris, Lyon et Marseille en 2026"
+description = """
+Ce fichier indique, pour chacune des listes candidates au deuxième tour des élections
+des conseils de secteurs de Paris, Lyon et Marseille en
+2026 et ayant remporté au moins un élu le nombre d'élus municipaux et d'élus
+communautaires attribués à la liste.
+"""
+mimetype = "application/vnd.apache.parquet"
+section = "Résultats électoraux"
+
+[colonnes.code_secteur]
+type = "str"
+description = "Le code du secteur (<code commune>SR<numéro de secteur>)"
+nullable = false
+
+[colonnes.numero_panneau]
+type = "entier"
+nullable = false
+
+[colonnes.nuance]
+type = "str"
+nullable = false
+
+[colonnes.liste_court]
+type = "str"
+nullable = false
+
+[colonnes.liste]
+type = "str"
+nullable = false
+
+[colonnes.elus_conseil]
+type = "entier"
+nullable = false

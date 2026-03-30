@@ -1,0 +1,13 @@
+md5: e29a9057857cae5b517da4ab7e4e81cd
+frozen: true
+deps:
+- checksum: '"69c17ff3-4da6"'
+  size: 19878
+  hash: md5
+  path: 
+    https://www.data.gouv.fr/api/1/datasets/r/966a28fb-8de6-4a6d-a32f-5595388e7a76
+outs:
+- md5: fecfdc8c0c668628f69a2143c089216e
+  size: 19878
+  hash: md5
+  path: 2026-conseils-PLM-2-secteur.csv

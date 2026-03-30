@@ -1,0 +1,6 @@
+nom = "Résultats du premier tour des élections des conseils de secteurs de Paris, Lyon et Marseille en 2026 par secteur"
+description = """
+
+"""
+mimetype = "application/vnd.apache.parquet"
+editeur = "Ministère de l'Intérieur"

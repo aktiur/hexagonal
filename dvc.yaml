@@ -67,6 +67,7 @@ stages:
       - ${main}/elections/2026-municipales-2-composition-listes-nominative.parquet
     cmd: >-
       ${python} hexagonal.candidatures.municipales2026.composition_listes_t2
+      --code code_commune
       ${clean}/elections/2026-municipales-1-candidats.parquet
       ${clean}/elections/2026-municipales-2-candidats.parquet
       ${clean}/elections/2026-municipales-1-bureau_de_vote.parquet
@@ -85,6 +86,7 @@ stages:
       - ${main}/elections/2026-municipales-elus.parquet
     cmd:
       ${python} hexagonal.candidatures.municipales2026.elus
+      municipales
       ${clean}/elections/2026-municipales-1-sieges.parquet
       ${clean}/elections/2026-municipales-2-sieges.parquet
       ${clean}/elections/2026-municipales-1-candidats.parquet
@@ -104,6 +106,7 @@ stages:
         - ${clean}/elections/2026-municipales-${item}-sieges.parquet
       cmd: >-
         ${python} hexagonal.candidatures.municipales2026.sieges
+        municipales
         ${raw}/ministere_interieur/2026-municipales-${item}-commune.csv
         ${clean}/elections/2026-municipales-${item}-sieges.parquet
 
@@ -119,8 +122,80 @@ stages:
         - ${clean}/elections/2026-municipales-${item}-candidats.parquet
       cmd: >-
         ${python} hexagonal.candidatures.municipales2026.clean
+        --code code_commune
+        --communautaire
         ${raw}/ministere_interieur/2026-municipales-${item}-candidats.csv
         ${clean}/elections/2026-municipales-${item}-candidats.parquet
+
+  2026-conseils-PLM-elus:
+    deps:
+      - ${clean}/elections/2026-conseils-PLM-1-sieges.parquet
+      - ${clean}/elections/2026-conseils-PLM-2-sieges.parquet
+      - ${clean}/elections/2026-conseils-PLM-1-candidats.parquet
+      - ${clean}/elections/2026-conseils-PLM-2-candidats.parquet
+      - ${main}/elections/2026-conseils-PLM-2-composition-listes-nominative.parquet
+      - ${src}/hexagonal/candidatures/municipales2026/elus.py
+    outs:
+      - ${main}/elections/2026-conseils-PLM-elus.parquet
+    cmd:
+      ${python} hexagonal.candidatures.municipales2026.elus
+      conseils-plm
+      ${clean}/elections/2026-conseils-PLM-1-sieges.parquet
+      ${clean}/elections/2026-conseils-PLM-2-sieges.parquet
+      ${clean}/elections/2026-conseils-PLM-1-candidats.parquet
+      ${clean}/elections/2026-conseils-PLM-2-candidats.parquet
+      ${main}/elections/2026-conseils-PLM-2-composition-listes-nominative.parquet
+      ${main}/elections/2026-conseils-PLM-elus.parquet
+
+  2026-conseils-PLM-composition_listes_t2:
+    deps:
+      - ${clean}/elections/2026-conseils-PLM-1-candidats.parquet
+      - ${clean}/elections/2026-conseils-PLM-2-candidats.parquet
+      - ${clean}/elections/2026-conseils-PLM-1-bureau_de_vote.parquet
+      - ${src}/hexagonal/candidatures/municipales2026/composition_listes_t2.py
+    outs:
+      - ${main}/elections/2026-conseils-PLM-2-composition-listes.parquet
+      - ${main}/elections/2026-conseils-PLM-2-composition-listes-nominative.parquet
+    cmd: >-
+      ${python} hexagonal.candidatures.municipales2026.composition_listes_t2
+      --code code_secteur
+      ${clean}/elections/2026-conseils-PLM-1-candidats.parquet
+      ${clean}/elections/2026-conseils-PLM-2-candidats.parquet
+      ${clean}/elections/2026-conseils-PLM-1-bureau_de_vote.parquet
+      ${main}/elections/2026-conseils-PLM-2-composition-listes.parquet
+      ${main}/elections/2026-conseils-PLM-2-composition-listes-nominative.parquet
+
+  2026-conseils-PLM-sieges:
+    foreach:
+      - 1
+      - 2
+    do:
+      deps:
+        - ${raw}/ministere_interieur/2026-conseils-PLM-${item}-secteur.csv
+        - ${src}/hexagonal/candidatures/municipales2026/sieges.py
+      outs:
+        - ${clean}/elections/2026-conseils-PLM-${item}-sieges.parquet
+      cmd: >-
+        ${python} hexagonal.candidatures.municipales2026.sieges
+        conseils-plm
+        ${raw}/ministere_interieur/2026-conseils-PLM-${item}-secteur.csv
+        ${clean}/elections/2026-conseils-PLM-${item}-sieges.parquet
+
+  2026-conseils-PLM-candidats:
+    foreach:
+      - 1
+      - 2
+    do:
+      deps:
+        - ${raw}/ministere_interieur/2026-conseils-PLM-${item}-candidats.csv
+        - ${src}/hexagonal/candidatures/municipales2026/clean.py
+      outs:
+        - ${clean}/elections/2026-conseils-PLM-${item}-candidats.parquet
+      cmd: >-
+        ${python} hexagonal.candidatures.municipales2026.clean
+        --code code_secteur
+        ${raw}/ministere_interieur/2026-conseils-PLM-${item}-candidats.csv
+        ${clean}/elections/2026-conseils-PLM-${item}-candidats.parquet
 
   2024-legislatives-candidats:
     foreach:

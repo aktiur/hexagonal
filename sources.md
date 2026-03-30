@@ -78,8 +78,10 @@
   - [Résultats du deuxième tour des élections législatives 2024 par circonscription législative](#data/01_raw/ministere_interieur/2024-legislatives-2-circonscription.csv)
   - [Résultats du 1er tour des élections des conseillers d&#39;arrondissements de Paris, Lyon et Marseille en 2016](#data/01_raw/ministere_interieur/2026-conseils-PLM-1-bureau_de_vote.csv)
   - [Listes candidates au premier tour des élections des conseils de secteurs de Paris, Lyon et Marseille](#data/01_raw/ministere_interieur/2026-conseils-PLM-1-candidats.csv)
+  - [Résultats du premier tour des élections des conseils de secteurs de Paris, Lyon et Marseille en 2026 par secteur](#data/01_raw/ministere_interieur/2026-conseils-PLM-1-secteur.csv)
   - [2026-conseils-PLM-2-bureau_de_vote](#data/01_raw/ministere_interieur/2026-conseils-PLM-2-bureau_de_vote.csv)
   - [Candidats au deuxième tour des élections des conseils de secteurs de Paris, Lyon et Marseille en 2026](#data/01_raw/ministere_interieur/2026-conseils-PLM-2-candidats.csv)
+  - [Résultats du deuxième tour des élections des conseils de secteurs de Paris, Lyon et Marseille en 2026 par secteur](#data/01_raw/ministere_interieur/2026-conseils-PLM-2-secteur.csv)
   - [Résultats du 1er tour des élections des conseillers à la métropole de Lyon en 2026 par bureau de vote](#data/01_raw/ministere_interieur/2026-metropolitaines-1-bureau_de_vote.csv)
   - [Candidats au 1er tour des élections des conseillers de la métropole de Lyon en 2026](#data/01_raw/ministere_interieur/2026-metropolitaines-1-candidats.csv)
   - [2026-metropolitaines-2-bureau_de_vote](#data/01_raw/ministere_interieur/2026-metropolitaines-2-bureau_de_vote.csv)
@@ -438,7 +440,7 @@ campagne des législatives 2024 à des fins d&#39;analyse électorale.
 | Chemin interne | data/01_raw/lafranceinsoumise/2026-municipales-1-listes-lfi.parquet |
 | Format de fichier | application/vnd.apache.parquet |
 | Éditeur | La France insoumise |
-| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/e7/541c0a4a08bfe993a2404883752256 |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/40/59dd9f17166dab7c55fc9697370d03 |
 
 
 
@@ -1065,6 +1067,19 @@ et 16921.
 | URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/20/3c62053ea483f9ee4dddfd0e4ba6de |
 
 
+### Résultats du premier tour des élections des conseils de secteurs de Paris, Lyon et Marseille en 2026 par secteur
+<a name="data/01_raw/ministere_interieur/2026-conseils-PLM-1-secteur.csv"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/ministere_interieur/2026-conseils-PLM-1-secteur.csv |
+| Format de fichier | application/vnd.apache.parquet |
+| Éditeur | Ministère de l&#39;Intérieur |
+| URL d&#39;origine | https://www.data.gouv.fr/api/1/datasets/r/46a6a820-f9fa-42ab-9486-f536568a1350 |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/38/407fbfe24efab4bf695bbe721fee94 |
+
+
+
 ### 2026-conseils-PLM-2-bureau_de_vote
 <a name="data/01_raw/ministere_interieur/2026-conseils-PLM-2-bureau_de_vote.csv"></a>
 
@@ -1089,6 +1104,19 @@ et 16921.
 | Éditeur | Ministère de l&#39;Intérieur |
 | URL d&#39;origine | https://www.data.gouv.fr/api/1/datasets/r/70ec1c11-3645-4583-9b44-d931d0968072 |
 | URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/24/91ff1718720a7e00d44204d1a6860e |
+
+
+
+### Résultats du deuxième tour des élections des conseils de secteurs de Paris, Lyon et Marseille en 2026 par secteur
+<a name="data/01_raw/ministere_interieur/2026-conseils-PLM-2-secteur.csv"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/ministere_interieur/2026-conseils-PLM-2-secteur.csv |
+| Format de fichier | application/vnd.apache.parquet |
+| Éditeur | Ministère de l&#39;Intérieur |
+| URL d&#39;origine | https://www.data.gouv.fr/api/1/datasets/r/966a28fb-8de6-4a6d-a32f-5595388e7a76 |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/fe/cfdc8c0c668628f69a2143c089216e |
 
 
 

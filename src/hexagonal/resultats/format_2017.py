@@ -16,7 +16,6 @@ champs."""
 import csv
 import sys
 
-import numpy as np
 import pandas as pd
 
 from hexagonal.codes import (
@@ -57,6 +56,8 @@ fixed_headers = {
     "Code commune": "code_commune",
     "Libellé de la commune": None,
     "Libellé commune": None,
+    "Code secteur": "code_secteur",
+    "Libellé secteur": None,
     "Code du b.vote": "bureau_de_vote",
     "Code B.Vote": "bureau_de_vote",
     "Code BV": "bureau_de_vote",
@@ -144,7 +145,7 @@ transforms = {
     "tete_liste": "category",
 }
 
-identifiants = ["code_commune", "bureau_de_vote", "circonscription"]
+identifiants = ["code_commune", "code_secteur", "bureau_de_vote", "circonscription"]
 population = ["inscrits", "votants", "exprimes"]
 par_candidat = [
     "numero_panneau",
@@ -232,9 +233,7 @@ def read_file(src, delimiter=";", encoding="utf-8"):
                         downcast="unsigned",
                     )
                 else:
-                    resultats[field] = (
-                        resultats[field].astype(transform)
-                    )
+                    resultats[field] = resultats[field].astype(transform)
         except ValueError as e:
             print(f"global_fields: {common_fields!r}")
             print(f"repeated_fields: {candidate_specific_fields!r}")
@@ -269,8 +268,10 @@ def clean_results(src, dest, delimiter=";", encoding="utf-8"):
             resultats["code_commune"]
         ).astype("category")
 
+    ids = [c for c in identifiants if c in resultats.columns]
+
     clean_columns = [
-        c for c in (identifiants + population + par_candidat) if c in resultats.columns
+        c for c in (ids + population + par_candidat) if c in resultats.columns
     ]
     resultats = resultats.loc[:, clean_columns]
     resultats.to_parquet(dest, index=False)

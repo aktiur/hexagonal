@@ -79,8 +79,8 @@ stages:
       size: 4800
     - path: src/hexagonal/resultats/format_2017.py
       hash: md5
-      md5: 00c742fadb5a1701ac9307eea6cd12c9
-      size: 8794
+      md5: 2662fe7dba5a79ecbef1a657daea1a50
+      size: 8863
     outs:
     - path: data/02_clean/elections/2017-legislatives-1-bureau_de_vote.parquet
       hash: md5
@@ -103,8 +103,8 @@ stages:
       size: 4800
     - path: src/hexagonal/resultats/format_2017.py
       hash: md5
-      md5: 00c742fadb5a1701ac9307eea6cd12c9
-      size: 8794
+      md5: 2662fe7dba5a79ecbef1a657daea1a50
+      size: 8863
     outs:
     - path: data/02_clean/elections/2017-legislatives-2-bureau_de_vote.parquet
       hash: md5
@@ -127,8 +127,8 @@ stages:
       size: 4800
     - path: src/hexagonal/resultats/format_2017.py
       hash: md5
-      md5: 00c742fadb5a1701ac9307eea6cd12c9
-      size: 8794
+      md5: 2662fe7dba5a79ecbef1a657daea1a50
+      size: 8863
     outs:
     - path: data/02_clean/elections/2017-presidentielle-1-bureau_de_vote.parquet
       hash: md5
@@ -151,8 +151,8 @@ stages:
       size: 4800
     - path: src/hexagonal/resultats/format_2017.py
       hash: md5
-      md5: 00c742fadb5a1701ac9307eea6cd12c9
-      size: 8794
+      md5: 2662fe7dba5a79ecbef1a657daea1a50
+      size: 8863
     outs:
     - path: data/02_clean/elections/2017-presidentielle-2-bureau_de_vote.parquet
       hash: md5
@@ -173,8 +173,8 @@ stages:
       size: 4800
     - path: src/hexagonal/resultats/format_2017.py
       hash: md5
-      md5: 00c742fadb5a1701ac9307eea6cd12c9
-      size: 8794
+      md5: 2662fe7dba5a79ecbef1a657daea1a50
+      size: 8863
     outs:
     - path: data/02_clean/elections/2019-europeenne-bureau_de_vote.parquet
       hash: md5
@@ -196,8 +196,8 @@ stages:
       size: 4800
     - path: src/hexagonal/resultats/format_2017.py
       hash: md5
-      md5: 00c742fadb5a1701ac9307eea6cd12c9
-      size: 8794
+      md5: 2662fe7dba5a79ecbef1a657daea1a50
+      size: 8863
     outs:
     - path: data/02_clean/elections/2020-municipales-1-bureau_de_vote.parquet
       hash: md5
@@ -220,8 +220,8 @@ stages:
       size: 4800
     - path: src/hexagonal/resultats/format_2017.py
       hash: md5
-      md5: 00c742fadb5a1701ac9307eea6cd12c9
-      size: 8794
+      md5: 2662fe7dba5a79ecbef1a657daea1a50
+      size: 8863
     outs:
     - path: data/02_clean/elections/2020-municipales-2-bureau_de_vote.parquet
       hash: md5
@@ -244,8 +244,8 @@ stages:
       size: 4800
     - path: src/hexagonal/resultats/format_2017.py
       hash: md5
-      md5: 00c742fadb5a1701ac9307eea6cd12c9
-      size: 8794
+      md5: 2662fe7dba5a79ecbef1a657daea1a50
+      size: 8863
     outs:
     - path: 
         data/02_clean/elections/2021-departementales-1-bureau_de_vote.parquet
@@ -269,8 +269,8 @@ stages:
       size: 4800
     - path: src/hexagonal/resultats/format_2017.py
       hash: md5
-      md5: 00c742fadb5a1701ac9307eea6cd12c9
-      size: 8794
+      md5: 2662fe7dba5a79ecbef1a657daea1a50
+      size: 8863
     outs:
     - path: 
         data/02_clean/elections/2021-departementales-2-bureau_de_vote.parquet
@@ -293,8 +293,8 @@ stages:
       size: 4800
     - path: src/hexagonal/resultats/format_2017.py
       hash: md5
-      md5: 00c742fadb5a1701ac9307eea6cd12c9
-      size: 8794
+      md5: 2662fe7dba5a79ecbef1a657daea1a50
+      size: 8863
     outs:
     - path: data/02_clean/elections/2021-regionales-1-bureau_de_vote.parquet
       hash: md5
@@ -316,8 +316,8 @@ stages:
       size: 4800
     - path: src/hexagonal/resultats/format_2017.py
       hash: md5
-      md5: 00c742fadb5a1701ac9307eea6cd12c9
-      size: 8794
+      md5: 2662fe7dba5a79ecbef1a657daea1a50
+      size: 8863
     outs:
     - path: data/02_clean/elections/2021-regionales-2-bureau_de_vote.parquet
       hash: md5
@@ -340,8 +340,8 @@ stages:
       size: 4800
     - path: src/hexagonal/resultats/format_2017.py
       hash: md5
-      md5: 00c742fadb5a1701ac9307eea6cd12c9
-      size: 8794
+      md5: 2662fe7dba5a79ecbef1a657daea1a50
+      size: 8863
     outs:
     - path: data/02_clean/elections/2022-presidentielle-1-bureau_de_vote.parquet
       hash: md5
@@ -364,8 +364,8 @@ stages:
       size: 4800
     - path: src/hexagonal/resultats/format_2017.py
       hash: md5
-      md5: 00c742fadb5a1701ac9307eea6cd12c9
-      size: 8794
+      md5: 2662fe7dba5a79ecbef1a657daea1a50
+      size: 8863
     outs:
     - path: 
         data/02_clean/elections/2022-presidentielle-1-circonscription.parquet
@@ -389,8 +389,8 @@ stages:
       size: 4800
     - path: src/hexagonal/resultats/format_2017.py
       hash: md5
-      md5: 00c742fadb5a1701ac9307eea6cd12c9
-      size: 8794
+      md5: 2662fe7dba5a79ecbef1a657daea1a50
+      size: 8863
     outs:
     - path: data/02_clean/elections/2022-presidentielle-2-bureau_de_vote.parquet
       hash: md5
@@ -413,8 +413,8 @@ stages:
       size: 4800
     - path: src/hexagonal/resultats/format_2017.py
       hash: md5
-      md5: 00c742fadb5a1701ac9307eea6cd12c9
-      size: 8794
+      md5: 2662fe7dba5a79ecbef1a657daea1a50
+      size: 8863
     outs:
     - path: 
         data/02_clean/elections/2022-presidentielle-2-circonscription.parquet
@@ -438,8 +438,8 @@ stages:
       size: 4800
     - path: src/hexagonal/resultats/format_2017.py
       hash: md5
-      md5: 00c742fadb5a1701ac9307eea6cd12c9
-      size: 8794
+      md5: 2662fe7dba5a79ecbef1a657daea1a50
+      size: 8863
     outs:
     - path: data/02_clean/elections/2022-legislatives-1-bureau_de_vote.parquet
       hash: md5
@@ -462,8 +462,8 @@ stages:
       size: 4800
     - path: src/hexagonal/resultats/format_2017.py
       hash: md5
-      md5: 00c742fadb5a1701ac9307eea6cd12c9
-      size: 8794
+      md5: 2662fe7dba5a79ecbef1a657daea1a50
+      size: 8863
     outs:
     - path: data/02_clean/elections/2022-legislatives-1-circonscription.parquet
       hash: md5
@@ -486,8 +486,8 @@ stages:
       size: 4800
     - path: src/hexagonal/resultats/format_2017.py
       hash: md5
-      md5: 00c742fadb5a1701ac9307eea6cd12c9
-      size: 8794
+      md5: 2662fe7dba5a79ecbef1a657daea1a50
+      size: 8863
     outs:
     - path: data/02_clean/elections/2022-legislatives-2-bureau_de_vote.parquet
       hash: md5
@@ -510,8 +510,8 @@ stages:
       size: 4800
     - path: src/hexagonal/resultats/format_2017.py
       hash: md5
-      md5: 00c742fadb5a1701ac9307eea6cd12c9
-      size: 8794
+      md5: 2662fe7dba5a79ecbef1a657daea1a50
+      size: 8863
     outs:
     - path: data/02_clean/elections/2022-legislatives-2-circonscription.parquet
       hash: md5
@@ -532,8 +532,8 @@ stages:
       size: 4800
     - path: src/hexagonal/resultats/format_2017.py
       hash: md5
-      md5: 00c742fadb5a1701ac9307eea6cd12c9
-      size: 8794
+      md5: 2662fe7dba5a79ecbef1a657daea1a50
+      size: 8863
     outs:
     - path: data/02_clean/elections/2024-europeenne-bureau_de_vote.parquet
       hash: md5
@@ -554,8 +554,8 @@ stages:
       size: 4800
     - path: src/hexagonal/resultats/format_2017.py
       hash: md5
-      md5: 00c742fadb5a1701ac9307eea6cd12c9
-      size: 8794
+      md5: 2662fe7dba5a79ecbef1a657daea1a50
+      size: 8863
     outs:
     - path: data/02_clean/elections/2024-europeenne-circonscription.parquet
       hash: md5
@@ -578,8 +578,8 @@ stages:
       size: 4800
     - path: src/hexagonal/resultats/format_2017.py
       hash: md5
-      md5: 00c742fadb5a1701ac9307eea6cd12c9
-      size: 8794
+      md5: 2662fe7dba5a79ecbef1a657daea1a50
+      size: 8863
     outs:
     - path: data/02_clean/elections/2024-legislatives-1-bureau_de_vote.parquet
       hash: md5
@@ -602,8 +602,8 @@ stages:
       size: 4800
     - path: src/hexagonal/resultats/format_2017.py
       hash: md5
-      md5: 00c742fadb5a1701ac9307eea6cd12c9
-      size: 8794
+      md5: 2662fe7dba5a79ecbef1a657daea1a50
+      size: 8863
     outs:
     - path: data/02_clean/elections/2024-legislatives-1-circonscription.parquet
       hash: md5
@@ -626,8 +626,8 @@ stages:
       size: 4800
     - path: src/hexagonal/resultats/format_2017.py
       hash: md5
-      md5: 00c742fadb5a1701ac9307eea6cd12c9
-      size: 8794
+      md5: 2662fe7dba5a79ecbef1a657daea1a50
+      size: 8863
     outs:
     - path: data/02_clean/elections/2024-legislatives-2-bureau_de_vote.parquet
       hash: md5
@@ -650,8 +650,8 @@ stages:
       size: 4800
     - path: src/hexagonal/resultats/format_2017.py
       hash: md5
-      md5: 00c742fadb5a1701ac9307eea6cd12c9
-      size: 8794
+      md5: 2662fe7dba5a79ecbef1a657daea1a50
+      size: 8863
     outs:
     - path: data/02_clean/elections/2024-legislatives-2-circonscription.parquet
       hash: md5
@@ -2016,8 +2016,8 @@ stages:
       size: 4800
     - path: src/hexagonal/resultats/format_2017.py
       hash: md5
-      md5: 00c742fadb5a1701ac9307eea6cd12c9
-      size: 8794
+      md5: 2662fe7dba5a79ecbef1a657daea1a50
+      size: 8863
     outs:
     - path: data/02_clean/elections/2026-municipales-1-bureau_de_vote.parquet
       hash: md5
@@ -2047,6 +2047,7 @@ stages:
       size: 6988033
   2026-municipales-candidats@1:
     cmd: PYTHONPATH=src python -m hexagonal.candidatures.municipales2026.clean 
+      --code code_commune --communautaire 
       data/01_raw/ministere_interieur/2026-municipales-1-candidats.csv 
       data/02_clean/elections/2026-municipales-1-candidats.parquet
     deps:
@@ -2056,8 +2057,8 @@ stages:
       size: 144523474
     - path: src/hexagonal/candidatures/municipales2026/clean.py
       hash: md5
-      md5: 9a8c0874c300efa9184ba2d35a540f37
-      size: 1262
+      md5: 2d7893bd00dffbe2a205f5acbb9bb136
+      size: 1429
     outs:
     - path: data/02_clean/elections/2026-municipales-1-candidats.parquet
       hash: md5
@@ -2065,6 +2066,7 @@ stages:
       size: 7487557
   2026-municipales-candidats@2:
     cmd: PYTHONPATH=src python -m hexagonal.candidatures.municipales2026.clean 
+      --code code_commune --communautaire 
       data/01_raw/ministere_interieur/2026-municipales-2-candidats.csv 
       data/02_clean/elections/2026-municipales-2-candidats.parquet
     deps:
@@ -2074,8 +2076,8 @@ stages:
       size: 21458847
     - path: src/hexagonal/candidatures/municipales2026/clean.py
       hash: md5
-      md5: 9a8c0874c300efa9184ba2d35a540f37
-      size: 1262
+      md5: 2d7893bd00dffbe2a205f5acbb9bb136
+      size: 1429
     outs:
     - path: data/02_clean/elections/2026-municipales-2-candidats.parquet
       hash: md5
@@ -2133,8 +2135,8 @@ stages:
       size: 4800
     - path: src/hexagonal/resultats/format_2017.py
       hash: md5
-      md5: 00c742fadb5a1701ac9307eea6cd12c9
-      size: 8794
+      md5: 2662fe7dba5a79ecbef1a657daea1a50
+      size: 8863
     outs:
     - path: data/02_clean/elections/2026-municipales-2-bureau_de_vote.parquet
       hash: md5
@@ -2172,8 +2174,8 @@ stages:
       size: 47387
   2026-municipales-composition_listes_t2:
     cmd: PYTHONPATH=src python -m 
-      hexagonal.candidatures.municipales2026.composition_listes_t2 
-      data/02_clean/elections/2026-municipales-1-candidats.parquet 
+      hexagonal.candidatures.municipales2026.composition_listes_t2 --code 
+      code_commune data/02_clean/elections/2026-municipales-1-candidats.parquet 
       data/02_clean/elections/2026-municipales-2-candidats.parquet 
       data/02_clean/elections/2026-municipales-1-bureau_de_vote.parquet 
       data/03_main/elections/2026-municipales-2-composition-listes.parquet 
@@ -2193,8 +2195,8 @@ stages:
       size: 1041327
     - path: src/hexagonal/candidatures/municipales2026/composition_listes_t2.py
       hash: md5
-      md5: 94c17f10a184d8afa3cb2ad9e45a4069
-      size: 7011
+      md5: 36c582b0303017fea6bd138ba0524c4e
+      size: 7081
     outs:
     - path: 
         data/03_main/elections/2026-municipales-2-composition-listes-nominative.parquet
@@ -2207,7 +2209,7 @@ stages:
       size: 130009
   2026-municipales-sieges@1:
     cmd: PYTHONPATH=src python -m hexagonal.candidatures.municipales2026.sieges 
-      data/01_raw/ministere_interieur/2026-municipales-1-commune.csv 
+      municipales data/01_raw/ministere_interieur/2026-municipales-1-commune.csv
       data/02_clean/elections/2026-municipales-1-sieges.parquet
     deps:
     - path: data/01_raw/ministere_interieur/2026-municipales-1-commune.csv
@@ -2216,16 +2218,16 @@ stages:
       size: 14423228
     - path: src/hexagonal/candidatures/municipales2026/sieges.py
       hash: md5
-      md5: bcd5c7ff42a54b8d5961cf9e7e1f1003
-      size: 1437
+      md5: 8e611be3a9447fdba6bb20ee3f0d9fe2
+      size: 2687
     outs:
     - path: data/02_clean/elections/2026-municipales-1-sieges.parquet
       hash: md5
-      md5: b7c7c369faece6d23aa3be75749300ca
-      size: 1044552
+      md5: 992202f8327c6ca39136ef20a3619d34
+      size: 1045143
   2026-municipales-sieges@2:
     cmd: PYTHONPATH=src python -m hexagonal.candidatures.municipales2026.sieges 
-      data/01_raw/ministere_interieur/2026-municipales-2-commune.csv 
+      municipales data/01_raw/ministere_interieur/2026-municipales-2-commune.csv
       data/02_clean/elections/2026-municipales-2-sieges.parquet
     deps:
     - path: data/01_raw/ministere_interieur/2026-municipales-2-commune.csv
@@ -2234,16 +2236,16 @@ stages:
       size: 893849
     - path: src/hexagonal/candidatures/municipales2026/sieges.py
       hash: md5
-      md5: bcd5c7ff42a54b8d5961cf9e7e1f1003
-      size: 1437
+      md5: 8e611be3a9447fdba6bb20ee3f0d9fe2
+      size: 2687
     outs:
     - path: data/02_clean/elections/2026-municipales-2-sieges.parquet
       hash: md5
-      md5: 2aa964867d9c2b1639c6d1fe6ce4b059
-      size: 118005
+      md5: 6b4b466d80cade26bbfe5f02e7566c8b
+      size: 118222
   2026-municipales-elus:
     cmd: PYTHONPATH=src python -m hexagonal.candidatures.municipales2026.elus 
-      data/02_clean/elections/2026-municipales-1-sieges.parquet 
+      municipales data/02_clean/elections/2026-municipales-1-sieges.parquet 
       data/02_clean/elections/2026-municipales-2-sieges.parquet 
       data/02_clean/elections/2026-municipales-1-candidats.parquet 
       data/02_clean/elections/2026-municipales-2-candidats.parquet 
@@ -2256,16 +2258,16 @@ stages:
       size: 7487557
     - path: data/02_clean/elections/2026-municipales-1-sieges.parquet
       hash: md5
-      md5: b7c7c369faece6d23aa3be75749300ca
-      size: 1044552
+      md5: 992202f8327c6ca39136ef20a3619d34
+      size: 1045143
     - path: data/02_clean/elections/2026-municipales-2-candidats.parquet
       hash: md5
       md5: 2cb737307e4559ff6381d181255bb20c
       size: 1041327
     - path: data/02_clean/elections/2026-municipales-2-sieges.parquet
       hash: md5
-      md5: 2aa964867d9c2b1639c6d1fe6ce4b059
-      size: 118005
+      md5: 6b4b466d80cade26bbfe5f02e7566c8b
+      size: 118222
     - path: 
         data/03_main/elections/2026-municipales-2-composition-listes-nominative.parquet
       hash: md5
@@ -2273,10 +2275,209 @@ stages:
       size: 47385
     - path: src/hexagonal/candidatures/municipales2026/elus.py
       hash: md5
-      md5: 0a73ffbaf6614527dab92c9b0abcd900
-      size: 3741
+      md5: 9bfbb1d6ad93cacf47a6a4919b56a6ab
+      size: 5379
     outs:
     - path: data/03_main/elections/2026-municipales-elus.parquet
       hash: md5
       md5: 1102824205509850828a991ef04fa268
       size: 4372520
+  normaliser-format-elections@2026-conseils-PLM-1-bureau_de_vote:
+    cmd: PYTHONPATH=src python -m hexagonal.resultats.format_2017 
+      data/01_raw/ministere_interieur/2026-conseils-PLM-1-bureau_de_vote.csv 
+      data/02_clean/elections/2026-conseils-PLM-1-bureau_de_vote.parquet utf8 
+      ";"
+    deps:
+    - path: 
+        data/01_raw/ministere_interieur/2026-conseils-PLM-1-bureau_de_vote.csv
+      hash: md5
+      md5: a16e1f0d4295eec78002c2a9b17d9456
+      size: 1548370
+    - path: src/hexagonal/codes.py
+      hash: md5
+      md5: e27a9dabe689bc7989c28ebf2ba84ce6
+      size: 4800
+    - path: src/hexagonal/resultats/format_2017.py
+      hash: md5
+      md5: 2662fe7dba5a79ecbef1a657daea1a50
+      size: 8863
+    outs:
+    - path: data/02_clean/elections/2026-conseils-PLM-1-bureau_de_vote.parquet
+      hash: md5
+      md5: 6ccf0bb21d202cd5b10c810516aa5d16
+      size: 84286
+  normaliser-format-elections@2026-conseils-PLM-2-bureau_de_vote:
+    cmd: PYTHONPATH=src python -m hexagonal.resultats.format_2017 
+      data/01_raw/ministere_interieur/2026-conseils-PLM-2-bureau_de_vote.csv 
+      data/02_clean/elections/2026-conseils-PLM-2-bureau_de_vote.parquet utf8 
+      ";"
+    deps:
+    - path: 
+        data/01_raw/ministere_interieur/2026-conseils-PLM-2-bureau_de_vote.csv
+      hash: md5
+      md5: a21ce070af20888598e308e30a3e2ae3
+      size: 951973
+    - path: src/hexagonal/codes.py
+      hash: md5
+      md5: e27a9dabe689bc7989c28ebf2ba84ce6
+      size: 4800
+    - path: src/hexagonal/resultats/format_2017.py
+      hash: md5
+      md5: 2662fe7dba5a79ecbef1a657daea1a50
+      size: 8863
+    outs:
+    - path: data/02_clean/elections/2026-conseils-PLM-2-bureau_de_vote.parquet
+      hash: md5
+      md5: f50512b349bdccd860dc57e35c6e1c4f
+      size: 62621
+  2026-conseils-PLM-candidats@1:
+    cmd: PYTHONPATH=src python -m hexagonal.candidatures.municipales2026.clean 
+      --code code_secteur 
+      data/01_raw/ministere_interieur/2026-conseils-PLM-1-candidats.csv 
+      data/02_clean/elections/2026-conseils-PLM-1-candidats.parquet
+    deps:
+    - path: data/01_raw/ministere_interieur/2026-conseils-PLM-1-candidats.csv
+      hash: md5
+      md5: 203c62053ea483f9ee4dddfd0e4ba6de
+      size: 1462080
+    - path: src/hexagonal/candidatures/municipales2026/clean.py
+      hash: md5
+      md5: 2d7893bd00dffbe2a205f5acbb9bb136
+      size: 1429
+    outs:
+    - path: data/02_clean/elections/2026-conseils-PLM-1-candidats.parquet
+      hash: md5
+      md5: 29cf92cc8fc9d5917778bd27d0352e5b
+      size: 73189
+  2026-conseils-PLM-candidats@2:
+    cmd: PYTHONPATH=src python -m hexagonal.candidatures.municipales2026.clean 
+      --code code_secteur 
+      data/01_raw/ministere_interieur/2026-conseils-PLM-2-candidats.csv 
+      data/02_clean/elections/2026-conseils-PLM-2-candidats.parquet
+    deps:
+    - path: data/01_raw/ministere_interieur/2026-conseils-PLM-2-candidats.csv
+      hash: md5
+      md5: 2491ff1718720a7e00d44204d1a6860e
+      size: 596958
+    - path: src/hexagonal/candidatures/municipales2026/clean.py
+      hash: md5
+      md5: 2d7893bd00dffbe2a205f5acbb9bb136
+      size: 1429
+    outs:
+    - path: data/02_clean/elections/2026-conseils-PLM-2-candidats.parquet
+      hash: md5
+      md5: dc240515e52910753f5991099d8929bd
+      size: 33136
+  2026-conseils-PLM-sieges@1:
+    cmd: PYTHONPATH=src python -m hexagonal.candidatures.municipales2026.sieges 
+      conseils-plm 
+      data/01_raw/ministere_interieur/2026-conseils-PLM-1-secteur.csv 
+      data/02_clean/elections/2026-conseils-PLM-1-sieges.parquet
+    deps:
+    - path: data/01_raw/ministere_interieur/2026-conseils-PLM-1-secteur.csv
+      hash: md5
+      md5: 38407fbfe24efab4bf695bbe721fee94
+      size: 33772
+    - path: src/hexagonal/candidatures/municipales2026/sieges.py
+      hash: md5
+      md5: 8e611be3a9447fdba6bb20ee3f0d9fe2
+      size: 2687
+    outs:
+    - path: data/02_clean/elections/2026-conseils-PLM-1-sieges.parquet
+      hash: md5
+      md5: 1a40b222f58617bd438cbd59fa91267e
+      size: 3592
+  2026-conseils-PLM-sieges@2:
+    cmd: PYTHONPATH=src python -m hexagonal.candidatures.municipales2026.sieges 
+      conseils-plm 
+      data/01_raw/ministere_interieur/2026-conseils-PLM-2-secteur.csv 
+      data/02_clean/elections/2026-conseils-PLM-2-sieges.parquet
+    deps:
+    - path: data/01_raw/ministere_interieur/2026-conseils-PLM-2-secteur.csv
+      hash: md5
+      md5: fecfdc8c0c668628f69a2143c089216e
+      size: 19878
+    - path: src/hexagonal/candidatures/municipales2026/sieges.py
+      hash: md5
+      md5: 8e611be3a9447fdba6bb20ee3f0d9fe2
+      size: 2687
+    outs:
+    - path: data/02_clean/elections/2026-conseils-PLM-2-sieges.parquet
+      hash: md5
+      md5: 44f6ee3669b8c820ea0bdc5bbed1bbce
+      size: 5827
+  2026-conseils-PLM-composition_listes_t2:
+    cmd: PYTHONPATH=src python -m 
+      hexagonal.candidatures.municipales2026.composition_listes_t2 --code 
+      code_secteur data/02_clean/elections/2026-conseils-PLM-1-candidats.parquet
+      data/02_clean/elections/2026-conseils-PLM-2-candidats.parquet 
+      data/02_clean/elections/2026-conseils-PLM-1-bureau_de_vote.parquet 
+      data/03_main/elections/2026-conseils-PLM-2-composition-listes.parquet 
+      data/03_main/elections/2026-conseils-PLM-2-composition-listes-nominative.parquet
+    deps:
+    - path: data/02_clean/elections/2026-conseils-PLM-1-bureau_de_vote.parquet
+      hash: md5
+      md5: 6ccf0bb21d202cd5b10c810516aa5d16
+      size: 84286
+    - path: data/02_clean/elections/2026-conseils-PLM-1-candidats.parquet
+      hash: md5
+      md5: 29cf92cc8fc9d5917778bd27d0352e5b
+      size: 73189
+    - path: data/02_clean/elections/2026-conseils-PLM-2-candidats.parquet
+      hash: md5
+      md5: dc240515e52910753f5991099d8929bd
+      size: 33136
+    - path: src/hexagonal/candidatures/municipales2026/composition_listes_t2.py
+      hash: md5
+      md5: 36c582b0303017fea6bd138ba0524c4e
+      size: 7081
+    outs:
+    - path: 
+        data/03_main/elections/2026-conseils-PLM-2-composition-listes-nominative.parquet
+      hash: md5
+      md5: bc33fd6da9418b1ece1c30d4dbd54639
+      size: 3906
+    - path: 
+        data/03_main/elections/2026-conseils-PLM-2-composition-listes.parquet
+      hash: md5
+      md5: a28a3dedad9a6e9b555141c270e9038b
+      size: 8024
+  2026-conseils-PLM-elus:
+    cmd: PYTHONPATH=src python -m hexagonal.candidatures.municipales2026.elus 
+      conseils-plm data/02_clean/elections/2026-conseils-PLM-1-sieges.parquet 
+      data/02_clean/elections/2026-conseils-PLM-2-sieges.parquet 
+      data/02_clean/elections/2026-conseils-PLM-1-candidats.parquet 
+      data/02_clean/elections/2026-conseils-PLM-2-candidats.parquet 
+      data/03_main/elections/2026-conseils-PLM-2-composition-listes-nominative.parquet
+      data/03_main/elections/2026-conseils-PLM-elus.parquet
+    deps:
+    - path: data/02_clean/elections/2026-conseils-PLM-1-candidats.parquet
+      hash: md5
+      md5: 29cf92cc8fc9d5917778bd27d0352e5b
+      size: 73189
+    - path: data/02_clean/elections/2026-conseils-PLM-1-sieges.parquet
+      hash: md5
+      md5: 1a40b222f58617bd438cbd59fa91267e
+      size: 3592
+    - path: data/02_clean/elections/2026-conseils-PLM-2-candidats.parquet
+      hash: md5
+      md5: dc240515e52910753f5991099d8929bd
+      size: 33136
+    - path: data/02_clean/elections/2026-conseils-PLM-2-sieges.parquet
+      hash: md5
+      md5: 44f6ee3669b8c820ea0bdc5bbed1bbce
+      size: 5827
+    - path: 
+        data/03_main/elections/2026-conseils-PLM-2-composition-listes-nominative.parquet
+      hash: md5
+      md5: bc33fd6da9418b1ece1c30d4dbd54639
+      size: 3906
+    - path: src/hexagonal/candidatures/municipales2026/elus.py
+      hash: md5
+      md5: 9bfbb1d6ad93cacf47a6a4919b56a6ab
+      size: 5379
+    outs:
+    - path: data/03_main/elections/2026-conseils-PLM-elus.parquet
+      hash: md5
+      md5: 9398cd22be89551468c2a41466f8320a
+      size: 21805

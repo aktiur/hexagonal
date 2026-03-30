@@ -98,6 +98,12 @@
   - [Liste des candidats au deuxième tour des élections législatives de 2024](#data/02_clean/elections/2024-legislatives-2-candidats.csv)
   - [Résultats du deuxième tour des élections législatives 2024 par circonscription législative](#data/02_clean/elections/2024-legislatives-2-circonscription.parquet)
   - [Correspondance entre bureaux de vote et circonscription pendant les élections législatives 2024](#data/02_clean/elections/2024-legislatives-correspondances-bureau_de_vote-circonscription.csv)
+  - [Résultats du premier tour des élections des conseils de secteurs de Paris, Lyon et Marseille en 2026 par bureau de vote](#data/02_clean/elections/2026-conseils-PLM-1-bureau_de_vote.parquet)
+  - [Candidats au premier tour des élections des conseils de secteurs de Paris, Lyon et Marseille en 2026](#data/02_clean/elections/2026-conseils-PLM-1-candidats.parquet)
+  - [Nombre de sièges gagnées par liste candidate au premier tour des élections des conseils de secteurs de Paris, Lyon et Marseille en 2026](#data/02_clean/elections/2026-conseils-PLM-1-sieges.parquet)
+  - [Résultats du deuxième tour des élections des conseils de secteurs de Paris, Lyon et Marseille en 2026 par bureau de vote](#data/02_clean/elections/2026-conseils-PLM-2-bureau_de_vote.parquet)
+  - [Candidats au deuxième tour des élections des conseils de secteurs de Paris, Lyon et Marseille en 2026](#data/02_clean/elections/2026-conseils-PLM-2-candidats.parquet)
+  - [Nombre de sièges gagnées par liste candidate au deuxième tour des élections des conseils de secteurs de Paris, Lyon et Marseille en 2026](#data/02_clean/elections/2026-conseils-PLM-2-sieges.parquet)
   - [Résultats du 1er tour des élections municipales 2026 par bureau de vote](#data/02_clean/elections/2026-municipales-1-bureau_de_vote.parquet)
   - [Candidats au 1er tour des municipales 2026](#data/02_clean/elections/2026-municipales-1-candidats.parquet)
   - [Nombre de sièges gagnées par liste candidate au premier tour des élections municipales 2026](#data/02_clean/elections/2026-municipales-1-sieges.parquet)
@@ -105,6 +111,9 @@
   - [Candidats au 2ème tour des municipales 2026](#data/02_clean/elections/2026-municipales-2-candidats.parquet)
   - [Nombre de sièges gagnées par liste candidate au deuxième tour des élections municipales 2026](#data/02_clean/elections/2026-municipales-2-sieges.parquet)
   - [Liste des candidats aux élections législatives de 2024](#data/03_main/elections/2022-legislatives-1-candidats.csv)
+  - [Composition nominative des listes de second tour des élections des conseils de secteurs de Paris, Lyon et Marseille en 2026 après fusion](#data/03_main/elections/2026-conseils-PLM-2-composition-listes-nominative.parquet)
+  - [Composition des listes de second tour des élections des conseils de secteurs de Paris, Lyon et Marseille en 2026 après fusion](#data/03_main/elections/2026-conseils-PLM-2-composition-listes.parquet)
+  - [Liste des personnes élues lors des élections des conseils de secteurs de Paris, Lyon et Marseille en 2026](#data/03_main/elections/2026-conseils-PLM-elus.parquet)
   - [Composition nominative des listes de second tour des municipales 2026 après fusion](#data/03_main/elections/2026-municipales-2-composition-listes-nominative.parquet)
   - [Composition des listes de second tour des municipales 2026 après fusion](#data/03_main/elections/2026-municipales-2-composition-listes.parquet)
   - [Liste des personnes élues lors des municipales 2026](#data/03_main/elections/2026-municipales-elus.parquet)
@@ -7183,6 +7192,528 @@ Cette production dépend des sources suivantes :
         </li>
     </ul>
 
+### Résultats du premier tour des élections des conseils de secteurs de Paris, Lyon et Marseille en 2026 par bureau de vote
+<a name="data/02_clean/elections/2026-conseils-PLM-1-bureau_de_vote.parquet"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/02_clean/elections/2026-conseils-PLM-1-bureau_de_vote.parquet |
+| Format de fichier | application/vnd.apache.parquet |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/6c/cf0bb21d202cd5b10c810516aa5d16 |
+
+
+
+
+### Colonnes
+
+<table>
+<thead>
+  <tr>
+    <th>id</th>
+    <th>type</th>
+    <th>description</th>
+  </tr>
+</thead>
+<tbody>
+<tr>
+    <td><code>code_secteur</code></td>
+    <td><code>str</code></td>
+    <td>Le code du secteur (&lt;code commune&gt;SR&lt;numéro de secteur&gt;)</td>
+  </tr>
+<tr>
+    <td><code>bureau_de_vote</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>inscrits</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>votants</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>exprimes</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>numero_panneau</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>nuance</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>nom</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>prenom</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>sexe</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>liste_court</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>liste_long</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>voix</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+
+</tbody>
+</table>
+
+### Sources
+
+Cette production dépend des sources suivantes :
+
+<ul>
+    <li><a href="sources.md#data/01_raw/ministere_interieur/2026-conseils-PLM-1-bureau_de_vote.csv">Résultats du 1er tour des élections des conseillers d&#39;arrondissements de Paris, Lyon et Marseille en 2016</a>
+        </li>
+    </ul>
+
+### Candidats au premier tour des élections des conseils de secteurs de Paris, Lyon et Marseille en 2026
+<a name="data/02_clean/elections/2026-conseils-PLM-1-candidats.parquet"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/02_clean/elections/2026-conseils-PLM-1-candidats.parquet |
+| Format de fichier | application/vnd.apache.parquet |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/29/cf92cc8fc9d5917778bd27d0352e5b |
+
+
+
+
+### Colonnes
+
+<table>
+<thead>
+  <tr>
+    <th>id</th>
+    <th>type</th>
+    <th>description</th>
+  </tr>
+</thead>
+<tbody>
+<tr>
+    <td><code>code_secteur</code></td>
+    <td><code>str</code></td>
+    <td>Le code du secteur (&lt;code commune&gt;SR&lt;numéro de secteur&gt;)</td>
+  </tr>
+<tr>
+    <td><code>numero_panneau</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>liste_court</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>liste</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>nuance</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>ordre</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>sexe</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>nom</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>prenom</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>nationalite</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>code_personnalite</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+
+</tbody>
+</table>
+
+### Sources
+
+Cette production dépend des sources suivantes :
+
+<ul>
+    <li><a href="sources.md#data/01_raw/ministere_interieur/2026-conseils-PLM-1-candidats.csv">Listes candidates au premier tour des élections des conseils de secteurs de Paris, Lyon et Marseille</a>
+        </li>
+    </ul>
+
+### Nombre de sièges gagnées par liste candidate au premier tour des élections des conseils de secteurs de Paris, Lyon et Marseille en 2026
+<a name="data/02_clean/elections/2026-conseils-PLM-1-sieges.parquet"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/02_clean/elections/2026-conseils-PLM-1-sieges.parquet |
+| Format de fichier | application/vnd.apache.parquet |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/1a/40b222f58617bd438cbd59fa91267e |
+
+Ce fichier indique, pour chacune des listes candidates au premier tour des élections
+des conseils de secteurs de Paris, Lyon et Marseille en
+2026 et ayant remporté au moins un élu le nombre d&#39;élus municipaux et d&#39;élus
+communautaires attribués à la liste.
+
+
+### Colonnes
+
+<table>
+<thead>
+  <tr>
+    <th>id</th>
+    <th>type</th>
+    <th>description</th>
+  </tr>
+</thead>
+<tbody>
+<tr>
+    <td><code>code_secteur</code></td>
+    <td><code>str</code></td>
+    <td>Le code du secteur (&lt;code commune&gt;SR&lt;numéro de secteur&gt;)</td>
+  </tr>
+<tr>
+    <td><code>numero_panneau</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>nuance</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>liste_court</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>liste</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>elus_conseil</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+
+</tbody>
+</table>
+
+### Sources
+
+Cette production dépend des sources suivantes :
+
+<ul>
+    <li><a href="sources.md#data/01_raw/ministere_interieur/2026-conseils-PLM-1-secteur.csv">Résultats du premier tour des élections des conseils de secteurs de Paris, Lyon et Marseille en 2026 par secteur</a>
+        </li>
+    </ul>
+
+### Résultats du deuxième tour des élections des conseils de secteurs de Paris, Lyon et Marseille en 2026 par bureau de vote
+<a name="data/02_clean/elections/2026-conseils-PLM-2-bureau_de_vote.parquet"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/02_clean/elections/2026-conseils-PLM-2-bureau_de_vote.parquet |
+| Format de fichier | application/vnd.apache.parquet |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/f5/0512b349bdccd860dc57e35c6e1c4f |
+
+
+
+
+### Colonnes
+
+<table>
+<thead>
+  <tr>
+    <th>id</th>
+    <th>type</th>
+    <th>description</th>
+  </tr>
+</thead>
+<tbody>
+<tr>
+    <td><code>code_secteur</code></td>
+    <td><code>str</code></td>
+    <td>Le code du secteur (&lt;code commune&gt;SR&lt;numéro de secteur&gt;)</td>
+  </tr>
+<tr>
+    <td><code>bureau_de_vote</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>inscrits</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>votants</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>exprimes</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>numero_panneau</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>nuance</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>nom</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>prenom</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>sexe</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>liste_court</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>liste_long</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>voix</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+
+</tbody>
+</table>
+
+### Sources
+
+Cette production dépend des sources suivantes :
+
+<ul>
+    <li><a href="sources.md#data/01_raw/ministere_interieur/2026-conseils-PLM-2-bureau_de_vote.csv">2026-conseils-PLM-2-bureau_de_vote</a>
+        </li>
+    </ul>
+
+### Candidats au deuxième tour des élections des conseils de secteurs de Paris, Lyon et Marseille en 2026
+<a name="data/02_clean/elections/2026-conseils-PLM-2-candidats.parquet"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/02_clean/elections/2026-conseils-PLM-2-candidats.parquet |
+| Format de fichier | application/vnd.apache.parquet |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/dc/240515e52910753f5991099d8929bd |
+
+
+
+
+### Colonnes
+
+<table>
+<thead>
+  <tr>
+    <th>id</th>
+    <th>type</th>
+    <th>description</th>
+  </tr>
+</thead>
+<tbody>
+<tr>
+    <td><code>code_secteur</code></td>
+    <td><code>str</code></td>
+    <td>Le code du secteur (&lt;code commune&gt;SR&lt;numéro de secteur&gt;)</td>
+  </tr>
+<tr>
+    <td><code>numero_panneau</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>liste_court</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>liste</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>nuance</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>ordre</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>sexe</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>nom</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>prenom</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>nationalite</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>code_personnalite</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+
+</tbody>
+</table>
+
+### Sources
+
+Cette production dépend des sources suivantes :
+
+<ul>
+    <li><a href="sources.md#data/01_raw/ministere_interieur/2026-conseils-PLM-2-candidats.csv">Candidats au deuxième tour des élections des conseils de secteurs de Paris, Lyon et Marseille en 2026</a>
+        </li>
+    </ul>
+
+### Nombre de sièges gagnées par liste candidate au deuxième tour des élections des conseils de secteurs de Paris, Lyon et Marseille en 2026
+<a name="data/02_clean/elections/2026-conseils-PLM-2-sieges.parquet"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/02_clean/elections/2026-conseils-PLM-2-sieges.parquet |
+| Format de fichier | application/vnd.apache.parquet |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/44/f6ee3669b8c820ea0bdc5bbed1bbce |
+
+Ce fichier indique, pour chacune des listes candidates au deuxième tour des élections
+des conseils de secteurs de Paris, Lyon et Marseille en
+2026 et ayant remporté au moins un élu le nombre d&#39;élus municipaux et d&#39;élus
+communautaires attribués à la liste.
+
+
+### Colonnes
+
+<table>
+<thead>
+  <tr>
+    <th>id</th>
+    <th>type</th>
+    <th>description</th>
+  </tr>
+</thead>
+<tbody>
+<tr>
+    <td><code>code_secteur</code></td>
+    <td><code>str</code></td>
+    <td>Le code du secteur (&lt;code commune&gt;SR&lt;numéro de secteur&gt;)</td>
+  </tr>
+<tr>
+    <td><code>numero_panneau</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>nuance</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>liste_court</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>liste</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>elus_conseil</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+
+</tbody>
+</table>
+
+### Sources
+
+Cette production dépend des sources suivantes :
+
+<ul>
+    <li><a href="sources.md#data/01_raw/ministere_interieur/2026-conseils-PLM-2-secteur.csv">Résultats du deuxième tour des élections des conseils de secteurs de Paris, Lyon et Marseille en 2026 par secteur</a>
+        </li>
+    </ul>
+
 ### Résultats du 1er tour des élections municipales 2026 par bureau de vote
 <a name="data/02_clean/elections/2026-municipales-1-bureau_de_vote.parquet"></a>
 
@@ -7387,7 +7918,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/02_clean/elections/2026-municipales-1-sieges.parquet |
 | Format de fichier | application/vnd.apache.parquet |
-| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/b7/c7c369faece6d23aa3be75749300ca |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/99/2202f8327c6ca39136ef20a3619d34 |
 
 Ce fichier indique, pour chacune des listes candidates au premier tour des municipales
 2026 et ayant remporté au moins un élu le nombre d&#39;élus municipaux et d&#39;élus
@@ -7657,7 +8188,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/02_clean/elections/2026-municipales-2-sieges.parquet |
 | Format de fichier | application/vnd.apache.parquet |
-| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/2a/a964867d9c2b1639c6d1fe6ce4b059 |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/6b/4b466d80cade26bbfe5f02e7566c8b |
 
 Ce fichier indique, pour chacune des listes candidates au deuxième tour des municipales
 2026 et ayant remporté au moins un élu le nombre d&#39;élus municipaux et d&#39;élus
@@ -7884,6 +8415,320 @@ Cette production dépend des sources suivantes :
         </li>
     </ul>
 
+### Composition nominative des listes de second tour des élections des conseils de secteurs de Paris, Lyon et Marseille en 2026 après fusion
+<a name="data/03_main/elections/2026-conseils-PLM-2-composition-listes-nominative.parquet"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/03_main/elections/2026-conseils-PLM-2-composition-listes-nominative.parquet |
+| Format de fichier | application/vnd.apache.parquet |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/bc/33fd6da9418b1ece1c30d4dbd54639 |
+
+Pour chacun des candidats au deuxième tour des élections 2026, ce fichier
+indique dans quelle liste et à quel ordre il figure au deuxième tour, et dans quelle
+liste et à quel ordre il figurait au premier tour.
+
+
+### Colonnes
+
+<table>
+<thead>
+  <tr>
+    <th>id</th>
+    <th>type</th>
+    <th>description</th>
+  </tr>
+</thead>
+<tbody>
+<tr>
+    <td><code>code_secteur</code></td>
+    <td><code>str</code></td>
+    <td>Le code du secteur (&lt;code commune&gt;SR&lt;numéro de secteur&gt;)</td>
+  </tr>
+<tr>
+    <td><code>numero_panneau</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>ordre</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>numero_panneau_t1</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>ordre_t1</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+
+</tbody>
+</table>
+
+### Sources
+
+Cette production dépend des sources suivantes :
+
+<ul>
+    <li><a href="productions.md#data/02_clean/elections/2026-conseils-PLM-1-candidats.parquet">Candidats au premier tour des élections des conseils de secteurs de Paris, Lyon et Marseille en 2026</a>
+        <ul>
+    <li><a href="sources.md#data/01_raw/ministere_interieur/2026-conseils-PLM-1-candidats.csv">Listes candidates au premier tour des élections des conseils de secteurs de Paris, Lyon et Marseille</a>
+        </li>
+    </ul>
+        </li>
+    <li><a href="productions.md#data/02_clean/elections/2026-conseils-PLM-2-candidats.parquet">Candidats au deuxième tour des élections des conseils de secteurs de Paris, Lyon et Marseille en 2026</a>
+        <ul>
+    <li><a href="sources.md#data/01_raw/ministere_interieur/2026-conseils-PLM-2-candidats.csv">Candidats au deuxième tour des élections des conseils de secteurs de Paris, Lyon et Marseille en 2026</a>
+        </li>
+    </ul>
+        </li>
+    <li><a href="productions.md#data/02_clean/elections/2026-conseils-PLM-1-bureau_de_vote.parquet">Résultats du premier tour des élections des conseils de secteurs de Paris, Lyon et Marseille en 2026 par bureau de vote</a>
+        <ul>
+    <li><a href="sources.md#data/01_raw/ministere_interieur/2026-conseils-PLM-1-bureau_de_vote.csv">Résultats du 1er tour des élections des conseillers d&#39;arrondissements de Paris, Lyon et Marseille en 2016</a>
+        </li>
+    </ul>
+        </li>
+    </ul>
+
+### Composition des listes de second tour des élections des conseils de secteurs de Paris, Lyon et Marseille en 2026 après fusion
+<a name="data/03_main/elections/2026-conseils-PLM-2-composition-listes.parquet"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/03_main/elections/2026-conseils-PLM-2-composition-listes.parquet |
+| Format de fichier | application/vnd.apache.parquet |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/a2/8a3dedad9a6e9b555141c270e9038b |
+
+Ce fichier indique la composition des listes de second tour pour les élections de conseils de secteur PLM en 2026 :
+pour chacune d&#39;entre elles, il est indiqué le nombre de candidats issus des différentes
+listes de premier tour.
+
+
+### Colonnes
+
+<table>
+<thead>
+  <tr>
+    <th>id</th>
+    <th>type</th>
+    <th>description</th>
+  </tr>
+</thead>
+<tbody>
+<tr>
+    <td><code>code_secteur</code></td>
+    <td><code>str</code></td>
+    <td>Le code du secteur (&lt;code commune&gt;SR&lt;numéro de secteur&gt;)</td>
+  </tr>
+<tr>
+    <td><code>numero_panneau</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>liste</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>nuance</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>numero_panneau_t1</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>liste_t1</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>nuance_t1</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>nombre</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+
+</tbody>
+</table>
+
+### Sources
+
+Cette production dépend des sources suivantes :
+
+<ul>
+    <li><a href="productions.md#data/02_clean/elections/2026-conseils-PLM-1-candidats.parquet">Candidats au premier tour des élections des conseils de secteurs de Paris, Lyon et Marseille en 2026</a>
+        <ul>
+    <li><a href="sources.md#data/01_raw/ministere_interieur/2026-conseils-PLM-1-candidats.csv">Listes candidates au premier tour des élections des conseils de secteurs de Paris, Lyon et Marseille</a>
+        </li>
+    </ul>
+        </li>
+    <li><a href="productions.md#data/02_clean/elections/2026-conseils-PLM-2-candidats.parquet">Candidats au deuxième tour des élections des conseils de secteurs de Paris, Lyon et Marseille en 2026</a>
+        <ul>
+    <li><a href="sources.md#data/01_raw/ministere_interieur/2026-conseils-PLM-2-candidats.csv">Candidats au deuxième tour des élections des conseils de secteurs de Paris, Lyon et Marseille en 2026</a>
+        </li>
+    </ul>
+        </li>
+    <li><a href="productions.md#data/02_clean/elections/2026-conseils-PLM-1-bureau_de_vote.parquet">Résultats du premier tour des élections des conseils de secteurs de Paris, Lyon et Marseille en 2026 par bureau de vote</a>
+        <ul>
+    <li><a href="sources.md#data/01_raw/ministere_interieur/2026-conseils-PLM-1-bureau_de_vote.csv">Résultats du 1er tour des élections des conseillers d&#39;arrondissements de Paris, Lyon et Marseille en 2016</a>
+        </li>
+    </ul>
+        </li>
+    </ul>
+
+### Liste des personnes élues lors des élections des conseils de secteurs de Paris, Lyon et Marseille en 2026
+<a name="data/03_main/elections/2026-conseils-PLM-elus.parquet"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/03_main/elections/2026-conseils-PLM-elus.parquet |
+| Format de fichier | application/vnd.apache.parquet |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/93/98cd22be89551468c2a41466f8320a |
+
+Pour chaque personne élue à l&#39;issue des municipales 2026 à
+quelles listes elle appartenait au premier tour, et le cas échéant, au deuxième tour.
+
+
+### Colonnes
+
+<table>
+<thead>
+  <tr>
+    <th>id</th>
+    <th>type</th>
+    <th>description</th>
+  </tr>
+</thead>
+<tbody>
+<tr>
+    <td><code>code_secteur</code></td>
+    <td><code>str</code></td>
+    <td>Le code du secteur (&lt;code commune&gt;SR&lt;numéro de secteur&gt;)</td>
+  </tr>
+<tr>
+    <td><code>nom</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>prenom</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>sexe</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>numero_panneau_t1</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>liste_t1</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>nuance_t1</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>ordre_t1</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>numero_panneau_t2</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>liste_t2</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>nuance_t2</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>ordre_t2</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+
+</tbody>
+</table>
+
+### Sources
+
+Cette production dépend des sources suivantes :
+
+<ul>
+    <li><a href="productions.md#data/02_clean/elections/2026-conseils-PLM-1-sieges.parquet">Nombre de sièges gagnées par liste candidate au premier tour des élections des conseils de secteurs de Paris, Lyon et Marseille en 2026</a>
+        <ul>
+    <li><a href="sources.md#data/01_raw/ministere_interieur/2026-conseils-PLM-1-secteur.csv">Résultats du premier tour des élections des conseils de secteurs de Paris, Lyon et Marseille en 2026 par secteur</a>
+        </li>
+    </ul>
+        </li>
+    <li><a href="productions.md#data/02_clean/elections/2026-conseils-PLM-2-sieges.parquet">Nombre de sièges gagnées par liste candidate au deuxième tour des élections des conseils de secteurs de Paris, Lyon et Marseille en 2026</a>
+        <ul>
+    <li><a href="sources.md#data/01_raw/ministere_interieur/2026-conseils-PLM-2-secteur.csv">Résultats du deuxième tour des élections des conseils de secteurs de Paris, Lyon et Marseille en 2026 par secteur</a>
+        </li>
+    </ul>
+        </li>
+    <li><a href="productions.md#data/02_clean/elections/2026-conseils-PLM-1-candidats.parquet">Candidats au premier tour des élections des conseils de secteurs de Paris, Lyon et Marseille en 2026</a>
+        <ul>
+    <li><a href="sources.md#data/01_raw/ministere_interieur/2026-conseils-PLM-1-candidats.csv">Listes candidates au premier tour des élections des conseils de secteurs de Paris, Lyon et Marseille</a>
+        </li>
+    </ul>
+        </li>
+    <li><a href="productions.md#data/02_clean/elections/2026-conseils-PLM-2-candidats.parquet">Candidats au deuxième tour des élections des conseils de secteurs de Paris, Lyon et Marseille en 2026</a>
+        <ul>
+    <li><a href="sources.md#data/01_raw/ministere_interieur/2026-conseils-PLM-2-candidats.csv">Candidats au deuxième tour des élections des conseils de secteurs de Paris, Lyon et Marseille en 2026</a>
+        </li>
+    </ul>
+        </li>
+    <li><a href="productions.md#data/03_main/elections/2026-conseils-PLM-2-composition-listes-nominative.parquet">Composition nominative des listes de second tour des élections des conseils de secteurs de Paris, Lyon et Marseille en 2026 après fusion</a>
+        <ul>
+    <li><a href="productions.md#data/02_clean/elections/2026-conseils-PLM-1-candidats.parquet">Candidats au premier tour des élections des conseils de secteurs de Paris, Lyon et Marseille en 2026</a>
+        <ul>
+    <li><a href="sources.md#data/01_raw/ministere_interieur/2026-conseils-PLM-1-candidats.csv">Listes candidates au premier tour des élections des conseils de secteurs de Paris, Lyon et Marseille</a>
+        </li>
+    </ul>
+        </li>
+    <li><a href="productions.md#data/02_clean/elections/2026-conseils-PLM-2-candidats.parquet">Candidats au deuxième tour des élections des conseils de secteurs de Paris, Lyon et Marseille en 2026</a>
+        <ul>
+    <li><a href="sources.md#data/01_raw/ministere_interieur/2026-conseils-PLM-2-candidats.csv">Candidats au deuxième tour des élections des conseils de secteurs de Paris, Lyon et Marseille en 2026</a>
+        </li>
+    </ul>
+        </li>
+    <li><a href="productions.md#data/02_clean/elections/2026-conseils-PLM-1-bureau_de_vote.parquet">Résultats du premier tour des élections des conseils de secteurs de Paris, Lyon et Marseille en 2026 par bureau de vote</a>
+        <ul>
+    <li><a href="sources.md#data/01_raw/ministere_interieur/2026-conseils-PLM-1-bureau_de_vote.csv">Résultats du 1er tour des élections des conseillers d&#39;arrondissements de Paris, Lyon et Marseille en 2016</a>
+        </li>
+    </ul>
+        </li>
+    </ul>
+        </li>
+    </ul>
+
 ### Composition nominative des listes de second tour des municipales 2026 après fusion
 <a name="data/03_main/elections/2026-municipales-2-composition-listes-nominative.parquet"></a>
 
@@ -7891,7 +8736,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/03_main/elections/2026-municipales-2-composition-listes-nominative.parquet |
 | Format de fichier | application/vnd.apache.parquet |
-| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/da/25a78a4cecfdbd5de82bece6f2405c |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/f2/707280718de1e9b08f7ff399a6a568 |
 
 Pour chacun des candidats au deuxième tour des élections municipales 2026, ce fichier
 indique dans quelle liste et à quel ordre il figure au deuxième tour, et dans quelle
@@ -7970,7 +8815,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/03_main/elections/2026-municipales-2-composition-listes.parquet |
 | Format de fichier | application/vnd.apache.parquet |
-| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/61/30103ea55c5603c87294bfb2ff17b1 |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/eb/0d1fb67fecb957ab3fdbba86122ba9 |
 
 Ce fichier indique la composition des listes de second tour pour les municipales 2026 :
 pour chacune d&#39;entre elles, il est indiqué le nombre de candidats issus des différentes
@@ -8064,7 +8909,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/03_main/elections/2026-municipales-elus.parquet |
 | Format de fichier | application/vnd.apache.parquet |
-| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/e6/c7ad314cd26677a5739ac90c4e2b02 |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/11/02824205509850828a991ef04fa268 |
 
 Pour chaque personne élue à l&#39;issue des municipales 2026, ce fichier indique si la
 personne a été élue conseiller·ère municipal·e, conseiller·ère communautaire, et à
@@ -8109,7 +8954,7 @@ quelles listes elle appartenait au premier tour, et le cas échéant, au deuxiè
   </tr>
 <tr>
     <td><code>elu_cc</code></td>
-    <td><code>entier</code></td>
+    <td><code>bool</code></td>
     <td></td>
   </tr>
 <tr>
@@ -8128,6 +8973,11 @@ quelles listes elle appartenait au premier tour, et le cas échéant, au deuxiè
     <td></td>
   </tr>
 <tr>
+    <td><code>ordre_t1</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+<tr>
     <td><code>numero_panneau_t2</code></td>
     <td><code>entier</code></td>
     <td></td>
@@ -8140,6 +8990,11 @@ quelles listes elle appartenait au premier tour, et le cas échéant, au deuxiè
 <tr>
     <td><code>nuance_t2</code></td>
     <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>ordre_t2</code></td>
+    <td><code>entier</code></td>
     <td></td>
   </tr>
 

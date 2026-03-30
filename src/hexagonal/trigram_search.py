@@ -4,7 +4,7 @@ import string
 from functools import reduce
 from typing import Iterable, NewType, Tuple
 
-from pyroaring import BitMap, BitMap64
+from pyroaring import BitMap
 
 Trigram = NewType("Trigram", str)
 
