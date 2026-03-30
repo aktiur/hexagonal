@@ -2481,3 +2481,47 @@ stages:
       hash: md5
       md5: 9398cd22be89551468c2a41466f8320a
       size: 21805
+  normaliser-format-elections@2026-municipales-1-commune:
+    cmd: PYTHONPATH=src python -m hexagonal.resultats.format_2017 
+      data/01_raw/ministere_interieur/2026-municipales-1-commune.csv 
+      data/02_clean/elections/2026-municipales-1-commune.parquet utf8 ";"
+    deps:
+    - path: data/01_raw/ministere_interieur/2026-municipales-1-commune.csv
+      hash: md5
+      md5: 2cb5bbb05feecb434b47105b9d0ec3dc
+      size: 14423228
+    - path: src/hexagonal/codes.py
+      hash: md5
+      md5: e27a9dabe689bc7989c28ebf2ba84ce6
+      size: 4800
+    - path: src/hexagonal/resultats/format_2017.py
+      hash: md5
+      md5: 2662fe7dba5a79ecbef1a657daea1a50
+      size: 8863
+    outs:
+    - path: data/02_clean/elections/2026-municipales-1-commune.parquet
+      hash: md5
+      md5: 156f6a587c868e29fa2caa0c76f951a4
+      size: 2226308
+  normaliser-format-elections@2026-municipales-2-commune:
+    cmd: PYTHONPATH=src python -m hexagonal.resultats.format_2017 
+      data/01_raw/ministere_interieur/2026-municipales-2-commune.csv 
+      data/02_clean/elections/2026-municipales-2-commune.parquet utf8 ";"
+    deps:
+    - path: data/01_raw/ministere_interieur/2026-municipales-2-commune.csv
+      hash: md5
+      md5: 231302f86f349fbb0367496935a4f2cd
+      size: 893849
+    - path: src/hexagonal/codes.py
+      hash: md5
+      md5: e27a9dabe689bc7989c28ebf2ba84ce6
+      size: 4800
+    - path: src/hexagonal/resultats/format_2017.py
+      hash: md5
+      md5: 2662fe7dba5a79ecbef1a657daea1a50
+      size: 8863
+    outs:
+    - path: data/02_clean/elections/2026-municipales-2-commune.parquet
+      hash: md5
+      md5: f8e1d31da8690205c7170ad743bb843f
+      size: 276173

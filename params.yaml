@@ -119,6 +119,14 @@ scrutins:
     encoding: utf8
     format: 2017
     delimiter: ";"
+  2026-municipales-1-commune:
+    encoding: utf8
+    format: 2017
+    delimiter: ";"
+  2026-municipales-2-commune:
+    encoding: utf8
+    format: 2017
+    delimiter: ";"
   2026-conseils-PLM-1-bureau_de_vote:
     encoding: utf8
     format: 2017

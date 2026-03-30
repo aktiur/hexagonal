@@ -106,9 +106,11 @@
   - [Nombre de sièges gagnées par liste candidate au deuxième tour des élections des conseils de secteurs de Paris, Lyon et Marseille en 2026](#data/02_clean/elections/2026-conseils-PLM-2-sieges.parquet)
   - [Résultats du 1er tour des élections municipales 2026 par bureau de vote](#data/02_clean/elections/2026-municipales-1-bureau_de_vote.parquet)
   - [Candidats au 1er tour des municipales 2026](#data/02_clean/elections/2026-municipales-1-candidats.parquet)
+  - [Résultats du premier tour des élections municipales 2026](#data/02_clean/elections/2026-municipales-1-commune.parquet)
   - [Nombre de sièges gagnées par liste candidate au premier tour des élections municipales 2026](#data/02_clean/elections/2026-municipales-1-sieges.parquet)
   - [Résultats du deuxième tour des élections municipales 2026 par bureau de vote](#data/02_clean/elections/2026-municipales-2-bureau_de_vote.parquet)
   - [Candidats au 2ème tour des municipales 2026](#data/02_clean/elections/2026-municipales-2-candidats.parquet)
+  - [Résultats du deuxième tour des élections municipales 2026](#data/02_clean/elections/2026-municipales-2-commune.parquet)
   - [Nombre de sièges gagnées par liste candidate au deuxième tour des élections municipales 2026](#data/02_clean/elections/2026-municipales-2-sieges.parquet)
   - [Liste des candidats aux élections législatives de 2024](#data/03_main/elections/2022-legislatives-1-candidats.csv)
   - [Composition nominative des listes de second tour des élections des conseils de secteurs de Paris, Lyon et Marseille en 2026 après fusion](#data/03_main/elections/2026-conseils-PLM-2-composition-listes-nominative.parquet)
@@ -4235,7 +4237,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/02_clean/elections/2017-legislatives-1-bureau_de_vote.parquet |
 | Format de fichier | application/vnd.apache.parquet |
-| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/53/2535a623c0eb15410751b4ea13f146 |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/b1/d00a6aa4ab3881bd4e4e202acbebe9 |
 
 
 
@@ -4330,7 +4332,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/02_clean/elections/2017-legislatives-2-bureau_de_vote.parquet |
 | Format de fichier | application/vnd.apache.parquet |
-| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/65/8582aa241157ce06ae0684a0fc3453 |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/85/13bddea7b8cfdd37ba63e05810d427 |
 
 
 
@@ -4425,7 +4427,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/02_clean/elections/2017-presidentielle-1-bureau_de_vote.parquet |
 | Format de fichier | application/vnd.apache.parquet |
-| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/ba/c59f822b1c3c22d4d2337d80b10fb1 |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/ed/ea9149c3d048a194d6176d22088c96 |
 
 
 
@@ -4515,7 +4517,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/02_clean/elections/2017-presidentielle-2-bureau_de_vote.parquet |
 | Format de fichier | application/vnd.apache.parquet |
-| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/a9/1c45cbdd3ca58c414343b6a4e14206 |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/3b/a28fe0f10d4e5e5d9195c46b6b0c45 |
 
 
 
@@ -4605,7 +4607,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/02_clean/elections/2019-europeenne-bureau_de_vote.parquet |
 | Format de fichier | application/vnd.apache.parquet |
-| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/7d/3ce99abb21692597982abc2157adab |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/06/3f1ec23e68fb93c9ae5379ec76fde9 |
 
 
 
@@ -4685,7 +4687,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/02_clean/elections/2020-municipales-1-bureau_de_vote.parquet |
 | Format de fichier | application/vnd.apache.parquet |
-| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/3c/d1679605adf95b0a3b01f871252467 |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/0b/b4f06435ecf49e200b69aa3c8016b4 |
 
 
 
@@ -4780,7 +4782,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/02_clean/elections/2020-municipales-2-bureau_de_vote.parquet |
 | Format de fichier | application/vnd.apache.parquet |
-| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/c9/b9dcd09390f8d9e596423f2ac09953 |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/c1/7c3d994a6b1169ce49ad5dbe3c3c31 |
 
 
 
@@ -4875,7 +4877,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/02_clean/elections/2021-departementales-1-bureau_de_vote.parquet |
 | Format de fichier | application/vnd.apache.parquet |
-| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/9f/2d014515c45970a168df2deb5957ed |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/9d/6c984dff5dd936a9dfe40013c11558 |
 
 
 
@@ -4950,7 +4952,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/02_clean/elections/2021-departementales-2-bureau_de_vote.parquet |
 | Format de fichier | application/vnd.apache.parquet |
-| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/6a/64b71c562d4d028b936c7ce20e51ca |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/5d/41ee72d5c3668d428c564b6d107d39 |
 
 
 
@@ -5025,7 +5027,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/02_clean/elections/2021-regionales-1-bureau_de_vote.parquet |
 | Format de fichier | application/vnd.apache.parquet |
-| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/c0/4f07af14e5f4cf18a5e1c8b22b228a |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/1b/cb78333b480dc2c753f22b2082ab3c |
 
 
 
@@ -5216,7 +5218,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/02_clean/elections/2021-regionales-2-bureau_de_vote.parquet |
 | Format de fichier | application/vnd.apache.parquet |
-| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/70/5d1b1ec939edc53288457a07a9150c |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/29/0b8e3bf010ac173acb469624abb5e1 |
 
 
 
@@ -5301,7 +5303,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/02_clean/elections/2022-legislatives-1-bureau_de_vote.parquet |
 | Format de fichier | application/vnd.apache.parquet |
-| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/14/2fb1cbc154ef0f3f8e96d99802a311 |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/e2/3a9e27fb23921f557a0a1fb5eb43f7 |
 
 
 
@@ -5511,7 +5513,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/02_clean/elections/2022-legislatives-1-circonscription.parquet |
 | Format de fichier | application/vnd.apache.parquet |
-| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/17/c6c20f31e42f4963066df83ab9e2dc |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/02/14123bb4eb375803bf70438ab85afc |
 
 
 
@@ -5596,7 +5598,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/02_clean/elections/2022-legislatives-2-bureau_de_vote.parquet |
 | Format de fichier | application/vnd.apache.parquet |
-| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/3d/9f03edd2930ea823f72030a45d7914 |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/e6/56819ee5ae322f2703392f208e25b5 |
 
 
 
@@ -5806,7 +5808,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/02_clean/elections/2022-legislatives-2-circonscription.parquet |
 | Format de fichier | application/vnd.apache.parquet |
-| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/32/255e667b020f592dfd959bde313027 |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/a2/774029c0a3345b06fe476a1dd7bc74 |
 
 
 
@@ -5891,7 +5893,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/02_clean/elections/2022-presidentielle-1-bureau_de_vote.parquet |
 | Format de fichier | application/vnd.apache.parquet |
-| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/39/07cc060484adfc9fc1d41e28a7602d |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/cf/3411530cdbfbea9d14621b3b4ce99c |
 
 
 
@@ -5981,7 +5983,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/02_clean/elections/2022-presidentielle-1-circonscription.parquet |
 | Format de fichier | application/vnd.apache.parquet |
-| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/e2/c0abcf0547ab19c1533e1bb069dc68 |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/00/bef904818f5fea71ac4925122fc315 |
 
 
 
@@ -6061,7 +6063,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/02_clean/elections/2022-presidentielle-2-bureau_de_vote.parquet |
 | Format de fichier | application/vnd.apache.parquet |
-| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/3d/0293298ea3d49620c5fe6d876260dc |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/88/c2e14c9b0d1e395e9616be0901fae7 |
 
 
 
@@ -6151,7 +6153,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/02_clean/elections/2022-presidentielle-2-circonscription.parquet |
 | Format de fichier | application/vnd.apache.parquet |
-| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/40/8ae0d0e677a5888013d808e9e1d109 |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/2f/9c07bd9d8a24ba910076bb7323a990 |
 
 
 
@@ -6307,7 +6309,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/02_clean/elections/2024-europeenne-bureau_de_vote.parquet |
 | Format de fichier | application/vnd.apache.parquet |
-| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/95/3fd6bfa5bdbd60ca1dfedf745f5807 |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/c7/b6968e3103b91ead7421520b9e5d06 |
 
 
 
@@ -6478,7 +6480,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/02_clean/elections/2024-europeenne-circonscription.parquet |
 | Format de fichier | application/vnd.apache.parquet |
-| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/8d/0dffd0a13e5beadb34666adf1b6013 |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/9b/8051a260481c95ebb859b58bc14c70 |
 
 
 
@@ -6558,7 +6560,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/02_clean/elections/2024-legislatives-1-bureau_de_vote.parquet |
 | Format de fichier | application/vnd.apache.parquet |
-| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/1e/d1244a4693895e6399f231f267d8d6 |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/32/4fb848ce771f3e9058102953200c72 |
 
 
 
@@ -6763,7 +6765,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/02_clean/elections/2024-legislatives-1-circonscription.parquet |
 | Format de fichier | application/vnd.apache.parquet |
-| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/9b/632d0bba66817190334668e038bc05 |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/14/4c1cc3f1df4b355ba3ecead9b7138a |
 
 
 
@@ -6848,7 +6850,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/02_clean/elections/2024-legislatives-2-bureau_de_vote.parquet |
 | Format de fichier | application/vnd.apache.parquet |
-| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/6d/b9306e7f76e275015708ba139500bf |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/67/125c7b52c9d39a8367b503687470ee |
 
 
 
@@ -7053,7 +7055,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/02_clean/elections/2024-legislatives-2-circonscription.parquet |
 | Format de fichier | application/vnd.apache.parquet |
-| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/0d/8b4ca60d7457ea956afefc25cb9f62 |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/eb/487240478218e0aa55f743a76187fb |
 
 
 
@@ -7199,7 +7201,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/02_clean/elections/2026-conseils-PLM-1-bureau_de_vote.parquet |
 | Format de fichier | application/vnd.apache.parquet |
-| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/6c/cf0bb21d202cd5b10c810516aa5d16 |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/c2/753f7da777ea86b6728782f08552c1 |
 
 
 
@@ -7460,7 +7462,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/02_clean/elections/2026-conseils-PLM-2-bureau_de_vote.parquet |
 | Format de fichier | application/vnd.apache.parquet |
-| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/f5/0512b349bdccd860dc57e35c6e1c4f |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/8c/a0f7b63b3a1fc0d758e599d64d546b |
 
 
 
@@ -7721,7 +7723,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/02_clean/elections/2026-municipales-1-bureau_de_vote.parquet |
 | Format de fichier | application/vnd.apache.parquet |
-| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/17/2bba57515b46d2efdda6dc18372042 |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/14/047a952fdd0a2a07eac4115fb0e222 |
 
 
 
@@ -7911,6 +7913,102 @@ Cette production dépend des sources suivantes :
         </li>
     </ul>
 
+### Résultats du premier tour des élections municipales 2026
+<a name="data/02_clean/elections/2026-municipales-1-commune.parquet"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/02_clean/elections/2026-municipales-1-commune.parquet |
+| Format de fichier | application/vnd.apache.parquet |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/37/12d3cdd728ef3328e0ccd36b77e7c4 |
+
+
+
+
+### Colonnes
+
+<table>
+<thead>
+  <tr>
+    <th>id</th>
+    <th>type</th>
+    <th>description</th>
+  </tr>
+</thead>
+<tbody>
+<tr>
+    <td><code>code_commune</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>inscrits</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>votants</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>exprimes</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>numero_panneau</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>nuance</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>nom</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>prenom</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>sexe</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>liste_court</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>liste_long</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>voix</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+
+</tbody>
+</table>
+
+### Sources
+
+Cette production dépend des sources suivantes :
+
+<ul>
+    <li><a href="sources.md#data/01_raw/ministere_interieur/2026-municipales-1-commune.csv">Résultats du premier tour des municipales 2026 par commune</a>
+        </li>
+    </ul>
+
 ### Nombre de sièges gagnées par liste candidate au premier tour des élections municipales 2026
 <a name="data/02_clean/elections/2026-municipales-1-sieges.parquet"></a>
 
@@ -7991,7 +8089,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/02_clean/elections/2026-municipales-2-bureau_de_vote.parquet |
 | Format de fichier | application/vnd.apache.parquet |
-| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/95/cb5d40b3cb8ac47b6c4d674db2dadd |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/fd/3506c5b3806fbc6906abf27cdc3322 |
 
 
 
@@ -8178,6 +8276,102 @@ Cette production dépend des sources suivantes :
 
 <ul>
     <li><a href="sources.md#data/01_raw/ministere_interieur/2026-municipales-2-candidats.csv">Candidats au 2e tour des élections municipales 2026</a>
+        </li>
+    </ul>
+
+### Résultats du deuxième tour des élections municipales 2026
+<a name="data/02_clean/elections/2026-municipales-2-commune.parquet"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/02_clean/elections/2026-municipales-2-commune.parquet |
+| Format de fichier | application/vnd.apache.parquet |
+| URL de téléchargement | https://hexagonal-data.s3.eu-west-3.amazonaws.com/cache/files/md5/3a/716a8ad6d895c9ffd65db8e5dea997 |
+
+
+
+
+### Colonnes
+
+<table>
+<thead>
+  <tr>
+    <th>id</th>
+    <th>type</th>
+    <th>description</th>
+  </tr>
+</thead>
+<tbody>
+<tr>
+    <td><code>code_commune</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>inscrits</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>votants</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>exprimes</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>numero_panneau</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>nuance</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>nom</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>prenom</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>sexe</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>liste_court</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>liste_long</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>voix</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+
+</tbody>
+</table>
+
+### Sources
+
+Cette production dépend des sources suivantes :
+
+<ul>
+    <li><a href="sources.md#data/01_raw/ministere_interieur/2026-municipales-2-commune.csv">Résultats du deuxième tour des élections municipales 2026</a>
         </li>
     </ul>
 
